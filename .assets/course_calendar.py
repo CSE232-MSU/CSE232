@@ -195,12 +195,15 @@ class Calendar:
                 day = self[date_str]
 
                 if i == 0:
-                    html += '<td align="center">{:02d}: {:02d}/{:02d}</td>\n'.format(week_n, day.month, day.day)
+                    html += '<td align="center">{:02d}: {:02d}/{:02d}</td>\n'.format(
+                        week_n, day.month, day.day)
                     continue
                 if day.href:
-                    html += '<td align="center" title="{}"><a href="{}">{}</a></td>\n'.format(day.hover, day.href, day.text)
+                    html += '<td align="center" title="{}"><a href="{}">{}</a></td>\n'.format(
+                        day.hover, day.href, day.text)
                 else:
-                    html += '<td align="center" title="{}">{}</td>\n'.format(day.hover, day.text)
+                    html += '<td align="center" title="{}">{}</td>\n'.format(
+                        day.hover, day.text)
 
                 date += timedelta(1)
 

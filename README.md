@@ -22,6 +22,7 @@ Resources:
 <div align="center"><b>Semester Progress (0%)</b></div>
 <div align="center">⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜</div>
 &nbsp;
+
 <div align="center">
 <table>
 <thead>
@@ -38,164 +39,164 @@ Resources:
 </thead>
 <tbody>
 <tr>
-<td align="center">01: 08/30</td>
-<td align="center" title="Sunday, August 30th"></td>
-<td align="center" title="Monday, August 31st"></td>
-<td align="center" title="Tuesday, September 1st"></td>
-<td align="center" title="Wednesday, September 2nd"></td>
-<td align="center" title="Thursday, September 3rd"></td>
-<td align="center" title="Friday, September 4th">Lab 01</td>
-<td align="center" title="Saturday, September 5th"></td>
+<td align="center">01: 01/11</td>
+<td align="center" title="Monday, January 11th"></td>
+<td align="center" title="Tuesday, January 12th"></td>
+<td align="center" title="Wednesday, January 13th"></td>
+<td align="center" title="Thursday, January 14th"></td>
+<td align="center" title="Friday, January 15th"></td>
+<td align="center" title="Saturday, January 16th"></td>
+<td align="center" title="Sunday, January 17th"></td>
 </tr>
 <tr>
-<td align="center">02: 09/06</td>
-<td align="center" title="Sunday, September 6th"></td>
-<td align="center" title="Monday, September 7th"></td>
-<td align="center" title="Tuesday, September 8th"></td>
-<td align="center" title="Wednesday, September 9th"></td>
-<td align="center" title="Thursday, September 10th"></td>
-<td align="center" title="Friday, September 11th">Lab 02</td>
-<td align="center" title="Saturday, September 12th"></td>
+<td align="center">02: 01/18</td>
+<td align="center" title="Monday, January 18th"></td>
+<td align="center" title="Tuesday, January 19th"></td>
+<td align="center" title="Wednesday, January 20th"></td>
+<td align="center" title="Thursday, January 21st"></td>
+<td align="center" title="Friday, January 22nd"></td>
+<td align="center" title="Saturday, January 23rd"></td>
+<td align="center" title="Sunday, January 24th"></td>
 </tr>
 <tr>
-<td align="center">03: 09/13</td>
-<td align="center" title="Sunday, September 13th"></td>
-<td align="center" title="Monday, September 14th">Project 01</td>
-<td align="center" title="Tuesday, September 15th"></td>
-<td align="center" title="Wednesday, September 16th"></td>
-<td align="center" title="Thursday, September 17th"></td>
-<td align="center" title="Friday, September 18th">Lab 03</td>
-<td align="center" title="Saturday, September 19th"></td>
+<td align="center">03: 01/25</td>
+<td align="center" title="Monday, January 25th"></td>
+<td align="center" title="Tuesday, January 26th"></td>
+<td align="center" title="Wednesday, January 27th"></td>
+<td align="center" title="Thursday, January 28th"></td>
+<td align="center" title="Friday, January 29th"></td>
+<td align="center" title="Saturday, January 30th"></td>
+<td align="center" title="Sunday, January 31st"></td>
 </tr>
 <tr>
-<td align="center">04: 09/20</td>
-<td align="center" title="Sunday, September 20th"></td>
-<td align="center" title="Monday, September 21st">Project 02</td>
-<td align="center" title="Tuesday, September 22nd"></td>
-<td align="center" title="Wednesday, September 23rd"></td>
-<td align="center" title="Thursday, September 24th"></td>
-<td align="center" title="Friday, September 25th">Lab 04</td>
-<td align="center" title="Saturday, September 26th"></td>
+<td align="center">04: 02/01</td>
+<td align="center" title="Monday, February 1st"></td>
+<td align="center" title="Tuesday, February 2nd"></td>
+<td align="center" title="Wednesday, February 3rd"></td>
+<td align="center" title="Thursday, February 4th"></td>
+<td align="center" title="Friday, February 5th"></td>
+<td align="center" title="Saturday, February 6th"></td>
+<td align="center" title="Sunday, February 7th"></td>
 </tr>
 <tr>
-<td align="center">05: 09/27</td>
-<td align="center" title="Sunday, September 27th"></td>
-<td align="center" title="Monday, September 28th">Project 03</td>
-<td align="center" title="Tuesday, September 29th"></td>
-<td align="center" title="Wednesday, September 30th"></td>
-<td align="center" title="Thursday, October 1st"></td>
-<td align="center" title="Friday, October 2nd">Lab 05</td>
-<td align="center" title="Saturday, October 3rd"></td>
+<td align="center">05: 02/08</td>
+<td align="center" title="Monday, February 8th"></td>
+<td align="center" title="Tuesday, February 9th"></td>
+<td align="center" title="Wednesday, February 10th"></td>
+<td align="center" title="Thursday, February 11th"></td>
+<td align="center" title="Friday, February 12th"></td>
+<td align="center" title="Saturday, February 13th"></td>
+<td align="center" title="Sunday, February 14th"></td>
 </tr>
 <tr>
-<td align="center">06: 10/04</td>
-<td align="center" title="Sunday, October 4th"></td>
-<td align="center" title="Monday, October 5th"></td>
-<td align="center" title="Tuesday, October 6th"></td>
-<td align="center" title="Wednesday, October 7th"></td>
-<td align="center" title="Thursday, October 8th"></td>
-<td align="center" title="Friday, October 9th">Lab 06</td>
-<td align="center" title="Saturday, October 10th"></td>
+<td align="center">06: 02/15</td>
+<td align="center" title="Monday, February 15th"></td>
+<td align="center" title="Tuesday, February 16th"></td>
+<td align="center" title="Wednesday, February 17th"></td>
+<td align="center" title="Thursday, February 18th"></td>
+<td align="center" title="Friday, February 19th"></td>
+<td align="center" title="Saturday, February 20th"></td>
+<td align="center" title="Sunday, February 21st"></td>
 </tr>
 <tr>
-<td align="center">07: 10/11</td>
-<td align="center" title="Sunday, October 11th"></td>
-<td align="center" title="Monday, October 12th">Project 04</td>
-<td align="center" title="Tuesday, October 13th"></td>
-<td align="center" title="Wednesday, October 14th"></td>
-<td align="center" title="Thursday, October 15th"></td>
-<td align="center" title="Friday, October 16th">Lab 07</td>
-<td align="center" title="Saturday, October 17th"></td>
+<td align="center">07: 02/22</td>
+<td align="center" title="Monday, February 22nd"></td>
+<td align="center" title="Tuesday, February 23rd"></td>
+<td align="center" title="Wednesday, February 24th"></td>
+<td align="center" title="Thursday, February 25th"></td>
+<td align="center" title="Friday, February 26th"></td>
+<td align="center" title="Saturday, February 27th"></td>
+<td align="center" title="Sunday, February 28th"></td>
 </tr>
 <tr>
-<td align="center">08: 10/18</td>
-<td align="center" title="Sunday, October 18th"></td>
-<td align="center" title="Monday, October 19th">Project 05</td>
-<td align="center" title="Tuesday, October 20th"></td>
-<td align="center" title="Wednesday, October 21st"></td>
-<td align="center" title="Thursday, October 22nd"></td>
-<td align="center" title="Friday, October 23rd">Lab 08</td>
-<td align="center" title="Saturday, October 24th"></td>
+<td align="center">08: 03/01</td>
+<td align="center" title="Monday, March 1st"></td>
+<td align="center" title="Tuesday, March 2nd"></td>
+<td align="center" title="Wednesday, March 3rd"></td>
+<td align="center" title="Thursday, March 4th"></td>
+<td align="center" title="Friday, March 5th"></td>
+<td align="center" title="Saturday, March 6th"></td>
+<td align="center" title="Sunday, March 7th"></td>
 </tr>
 <tr>
-<td align="center">09: 10/25</td>
-<td align="center" title="Sunday, October 25th"></td>
-<td align="center" title="Monday, October 26th">Project 06</td>
-<td align="center" title="Tuesday, October 27th"></td>
-<td align="center" title="Wednesday, October 28th"></td>
-<td align="center" title="Thursday, October 29th"></td>
-<td align="center" title="Friday, October 30th">Lab 09</td>
-<td align="center" title="Saturday, October 31st"></td>
+<td align="center">09: 03/08</td>
+<td align="center" title="Monday, March 8th"></td>
+<td align="center" title="Tuesday, March 9th"></td>
+<td align="center" title="Wednesday, March 10th"></td>
+<td align="center" title="Thursday, March 11th"></td>
+<td align="center" title="Friday, March 12th"></td>
+<td align="center" title="Saturday, March 13th"></td>
+<td align="center" title="Sunday, March 14th"></td>
 </tr>
 <tr>
-<td align="center">10: 11/01</td>
-<td align="center" title="Sunday, November 1st"></td>
-<td align="center" title="Monday, November 2nd">Project 07</td>
-<td align="center" title="Tuesday, November 3rd"></td>
-<td align="center" title="Wednesday, November 4th"></td>
-<td align="center" title="Thursday, November 5th"></td>
-<td align="center" title="Friday, November 6th">Lab 10</td>
-<td align="center" title="Saturday, November 7th"></td>
+<td align="center">10: 03/15</td>
+<td align="center" title="Monday, March 15th"></td>
+<td align="center" title="Tuesday, March 16th"></td>
+<td align="center" title="Wednesday, March 17th"></td>
+<td align="center" title="Thursday, March 18th"></td>
+<td align="center" title="Friday, March 19th"></td>
+<td align="center" title="Saturday, March 20th"></td>
+<td align="center" title="Sunday, March 21st"></td>
 </tr>
 <tr>
-<td align="center">11: 11/08</td>
-<td align="center" title="Sunday, November 8th"></td>
-<td align="center" title="Monday, November 9th"></td>
-<td align="center" title="Tuesday, November 10th"></td>
-<td align="center" title="Wednesday, November 11th"></td>
-<td align="center" title="Thursday, November 12th"></td>
-<td align="center" title="Friday, November 13th">Lab 11</td>
-<td align="center" title="Saturday, November 14th"></td>
+<td align="center">11: 03/22</td>
+<td align="center" title="Monday, March 22nd"></td>
+<td align="center" title="Tuesday, March 23rd"></td>
+<td align="center" title="Wednesday, March 24th"></td>
+<td align="center" title="Thursday, March 25th"></td>
+<td align="center" title="Friday, March 26th"></td>
+<td align="center" title="Saturday, March 27th"></td>
+<td align="center" title="Sunday, March 28th"></td>
 </tr>
 <tr>
-<td align="center">12: 11/15</td>
-<td align="center" title="Sunday, November 15th"></td>
-<td align="center" title="Monday, November 16th">Project 08</td>
-<td align="center" title="Tuesday, November 17th"></td>
-<td align="center" title="Wednesday, November 18th"></td>
-<td align="center" title="Thursday, November 19th"></td>
-<td align="center" title="Friday, November 20th">Lab 12</td>
-<td align="center" title="Saturday, November 21st"></td>
+<td align="center">12: 03/29</td>
+<td align="center" title="Monday, March 29th"></td>
+<td align="center" title="Tuesday, March 30th"></td>
+<td align="center" title="Wednesday, March 31st"></td>
+<td align="center" title="Thursday, April 1st"></td>
+<td align="center" title="Friday, April 2nd"></td>
+<td align="center" title="Saturday, April 3rd"></td>
+<td align="center" title="Sunday, April 4th"></td>
 </tr>
 <tr>
-<td align="center">13: 11/22</td>
-<td align="center" title="Sunday, November 22nd"></td>
-<td align="center" title="Monday, November 23rd">Project 09</td>
-<td align="center" title="Tuesday, November 24th"></td>
-<td align="center" title="Wednesday, November 25th"></td>
-<td align="center" title="Thursday, November 26th"></td>
-<td align="center" title="Friday, November 27th"></td>
-<td align="center" title="Saturday, November 28th"></td>
+<td align="center">13: 04/05</td>
+<td align="center" title="Monday, April 5th"></td>
+<td align="center" title="Tuesday, April 6th"></td>
+<td align="center" title="Wednesday, April 7th"></td>
+<td align="center" title="Thursday, April 8th"></td>
+<td align="center" title="Friday, April 9th"></td>
+<td align="center" title="Saturday, April 10th"></td>
+<td align="center" title="Sunday, April 11th"></td>
 </tr>
 <tr>
-<td align="center">14: 11/29</td>
-<td align="center" title="Sunday, November 29th"></td>
-<td align="center" title="Monday, November 30th">Project 10</td>
-<td align="center" title="Tuesday, December 1st"></td>
-<td align="center" title="Wednesday, December 2nd"></td>
-<td align="center" title="Thursday, December 3rd"></td>
-<td align="center" title="Friday, December 4th">Lab 13</td>
-<td align="center" title="Saturday, December 5th"></td>
+<td align="center">14: 04/12</td>
+<td align="center" title="Monday, April 12th"></td>
+<td align="center" title="Tuesday, April 13th"></td>
+<td align="center" title="Wednesday, April 14th"></td>
+<td align="center" title="Thursday, April 15th"></td>
+<td align="center" title="Friday, April 16th"></td>
+<td align="center" title="Saturday, April 17th"></td>
+<td align="center" title="Sunday, April 18th"></td>
 </tr>
 <tr>
-<td align="center">15: 12/06</td>
-<td align="center" title="Sunday, December 6th"></td>
-<td align="center" title="Monday, December 7th">Project 11</td>
-<td align="center" title="Tuesday, December 8th"></td>
-<td align="center" title="Wednesday, December 9th"></td>
-<td align="center" title="Thursday, December 10th"></td>
-<td align="center" title="Friday, December 11th"></td>
-<td align="center" title="Saturday, December 12th"></td>
+<td align="center">15: 04/19</td>
+<td align="center" title="Monday, April 19th"></td>
+<td align="center" title="Tuesday, April 20th"></td>
+<td align="center" title="Wednesday, April 21st"></td>
+<td align="center" title="Thursday, April 22nd"></td>
+<td align="center" title="Friday, April 23rd"></td>
+<td align="center" title="Saturday, April 24th"></td>
+<td align="center" title="Sunday, April 25th"></td>
 </tr>
 <tr>
-<td align="center">16: 12/13</td>
-<td align="center" title="Sunday, December 13th"></td>
-<td align="center" title="Monday, December 14th"></td>
-<td align="center" title="Tuesday, December 15th"></td>
-<td align="center" title="Wednesday, December 16th"></td>
-<td align="center" title="Thursday, December 17th"></td>
-<td align="center" title="Friday, December 18th"></td>
-<td align="center" title="Saturday, December 19th"></td>
+<td align="center">16: 04/26</td>
+<td align="center" title="Monday, April 26th"></td>
+<td align="center" title="Tuesday, April 27th"></td>
+<td align="center" title="Wednesday, April 28th"></td>
+<td align="center" title="Thursday, April 29th"></td>
+<td align="center" title="Friday, April 30th"></td>
+<td align="center" title="Saturday, May 1st"></td>
+<td align="center" title="Sunday, May 2nd"></td>
 </tr>
 </tbody>
 </table>

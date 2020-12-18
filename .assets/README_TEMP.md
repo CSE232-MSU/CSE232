@@ -20,5 +20,5 @@ Resources:
 - [UNIX Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 
 &progress&
-&nbsp;
+
 &calendar&

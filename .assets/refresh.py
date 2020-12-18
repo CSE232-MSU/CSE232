@@ -1,15 +1,25 @@
+'''
+Refreshes the master README.md file with the current calendar and
+progress bar.
+
+Author: Braedyn Lettinga
+Website: https://github.com/braedynl/
+'''
+
 from course_calendar import Calendar
 from progress_bar import generate_bar_html
 
 readme_temp = open('.assets/README_TEMP.md', 'r').read()
 
-calendar = Calendar('8/30/2020', 16)
+### 🠗 CHANGE AS NECESSARY 🠗 ###
+STARTING_DATE = '1/11/2021'
+ENDING_DATE = '4/23/2021'
 
-calendar.set_event_series('Lab {:02d}', 13, 7, '9/4/2020', ['11/27/2020'])
-calendar.set_event_series('Project {:02d}', 11, 7, '9/14/2020', ['10/5/2020', '11/9/2020'])
+calendar = Calendar(STARTING_DATE, 16)
 
+### 🠗 DO NOT CHANGE 🠗 ###
 calendar_html = calendar.generate_calendar_html()
-progress_bar_html = generate_bar_html('1/11/2021', '4/23/2021')
+progress_bar_html = generate_bar_html(STARTING_DATE, ENDING_DATE)
 
 readme_temp = readme_temp.replace('&progress&', progress_bar_html).replace('&calendar&', calendar_html)
 
