@@ -10,8 +10,6 @@ from datetime import datetime
 
 import git
 from pytz import timezone
-from os import listdir
-from os.path import isfile, join
 
 from course_calendar import Calendar
 from progress_bar import generate_bar_html
