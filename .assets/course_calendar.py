@@ -8,14 +8,11 @@ apply styling to every tag. Hopefully you can imagine why a script is
 necessary for this, now.
 
 Author: Braedyn Lettinga
-Website: https://github.com/braedynl/
 '''
-
-from __future__ import annotations
 
 import re
 from datetime import datetime, timedelta
-from typing import List, Tuple, Union
+from typing import List
 
 
 def ordinal_suffix(n: int) -> str:
@@ -72,8 +69,11 @@ class Calendar:
         if weeks < 1:
             raise ValueError('weeks must be >= 1')
 
-        self.start_datetime_obj = datetime.strptime(
-            self.__fix_date(start_date), '%m/%d/%Y')
+        self.start_datetime_obj = datetime.strptime(self.__fix_date(start_date), '%m/%d/%Y')
+
+        if self.start_datetime_obj.weekday() != 6:
+            raise ValueError('starting date must be a Sunday')
+
         self.calendar = {}
 
         date = self.start_datetime_obj

@@ -3,7 +3,6 @@ Refreshes the master README.md file with the current calendar and
 progress bar.
 
 Author: Braedyn Lettinga
-Website: https://github.com/braedynl/
 '''
 
 from course_calendar import Calendar
@@ -12,7 +11,7 @@ from progress_bar import generate_bar_html
 readme_temp = open('.assets/README_TEMP.md', 'r').read()
 
 ### 🠗 CHANGE AS NECESSARY 🠗 ###
-STARTING_DATE = '1/11/2021'
+STARTING_DATE = '12/27/2020'  # (starting date must be a Sunday)
 ENDING_DATE = '4/23/2021'
 
 calendar = Calendar(STARTING_DATE, 16)

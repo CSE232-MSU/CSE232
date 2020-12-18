@@ -4,7 +4,6 @@ based on a given starting and end date. The progress
 is based on the date at which the script is being ran.
 
 Author: Braedyn Lettinga
-Website: https://github.com/braedynl/
 '''
 
 from datetime import datetime, timedelta
