@@ -10,6 +10,8 @@ from datetime import datetime
 
 import git
 from pytz import timezone
+from os import listdir
+from os.path import isfile, join
 
 from course_calendar import Calendar
 from progress_bar import generate_bar_html
@@ -18,9 +20,9 @@ from progress_bar import generate_bar_html
 def commit_readme(commit_message: str) -> None:
     repo = git.Repo()
     origin = repo.remote('origin')
+    origin.pull()
 
-    repo.index.add(['README.md'])
-
+    repo.index.add(['.assets/course_calendar.py', '.assets/progress_bar.py', '.assets/README_TEMP.md', '.assets/refresh.py'])
     repo.index.commit(commit_message)
     origin.push()
 
