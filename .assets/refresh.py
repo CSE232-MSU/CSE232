@@ -3,10 +3,16 @@ Refreshes the master README.md file with the current calendar and
 progress bar.
 
 Author: Braedyn Lettinga
+Dependencies: gitpython
 '''
+
+import git
 
 from course_calendar import Calendar
 from progress_bar import generate_bar_html
+
+repo = git.Repo()
+origin = repo.remote('origin')
 
 readme_temp = open('.assets/README_TEMP.md', 'r').read()
 
@@ -25,3 +31,9 @@ readme_temp = readme_temp.replace('&progress&', progress_bar_html).replace('&cal
 readme = open('README.md', 'w+', encoding="utf-8")
 print(readme_temp, file=readme)
 readme.close()
+
+changed_files = [ item.a_path for item in repo.index.diff(None) ]
+repo.index.add(changed_files)
+
+repo.index.commit('gitpython test commit')
+origin.push()
