@@ -149,7 +149,7 @@ class Calendar:
             should be skipped.
         `href_format`
             A string that should expect one, integer format() argument, alike: "https://www.example{:02d}.com".
-            Used as an href attribute to the 'a' tag in the calendar HTML processed by export_html().
+            Used as an href attribute to the 'a' tag in the calendar HTML processed by generate_calendar_html().
         """
         date = self[start_date].datetime_obj
         skip_dates = [self.__fix_date(skip_date) for skip_date in skip_dates]
@@ -171,21 +171,16 @@ class Calendar:
             i += 1
             date += timedelta(every)
 
-    def export_html(self, file_name: str = '.assets/calendar.html') -> None:
+    def generate_calendar_html(self) -> str:
         """
-        Exports the calendar to an HTML table.
-
-        Parameters
-        ----------
-        `file_name`
-            Name of the output HTML file, must end in '.html'
+        Exports the calendar to an HTML table as a string.
         """
-        fp = open(file_name, 'w+')
+        html = ''
 
-        print('<div align="center">\n<table>\n<thead>\n<tr>', file=fp)
+        html += '<div align="center">\n<table>\n<thead>\n<tr>\n'
         for header in ['Week', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']:
-            print('<th align="center">{}</th>'.format(header), file=fp)
-        print('</tr>\n</thead>\n<tbody>', file=fp)
+            html += '<th align="center">{}</th>\n'.format(header)
+        html += '</tr>\n</thead>\n<tbody>\n'
 
         week_n = 1
         date = self.start_datetime_obj
@@ -193,32 +188,25 @@ class Calendar:
 
         while date < stop_date:
 
-            print('<tr>', file=fp)
+            html += '<tr>\n'
 
             for i in range(8):
                 date_str = date.strftime('%m/%d/%Y')
                 day = self[date_str]
 
                 if i == 0:
-                    print('<td align="center">{:02d}: {:02d}/{:02d}</td>'.format(
-                        week_n, day.month, day.day), file=fp)
+                    html += '<td align="center">{:02d}: {:02d}/{:02d}</td>\n'.format(week_n, day.month, day.day)
                     continue
                 if day.href:
-                    print('<td align="center" title="{}"><a href="{}">{}</a></td>'.format(
-                        day.hover, day.href, day.text), file=fp)
+                    html += '<td align="center" title="{}"><a href="{}">{}</a></td>\n'.format(day.hover, day.href, day.text)
                 else:
-                    print(
-                        '<td align="center" title="{}">{}</td>'.format(day.hover, day.text), file=fp)
+                    html += '<td align="center" title="{}">{}</td>\n'.format(day.hover, day.text)
 
                 date += timedelta(1)
 
-            print('</tr>', file=fp)
+            html += '</tr>\n'
             week_n += 1
 
-        print('</tbody>\n</table>\n</div>', file=fp)
+        html += '</tbody>\n</table>\n</div>\n'
 
-        fp.close()
-
-
-if __name__ == "__main__":
-    pass
+        return html
