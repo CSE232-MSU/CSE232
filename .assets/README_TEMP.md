@@ -19,6 +19,4 @@ Resources:
 - [OnlineGDB](https://www.onlinegdb.com/)
 - [UNIX Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 
-&progress&
-
 &calendar&
