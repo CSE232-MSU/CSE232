@@ -8,7 +8,7 @@ Often, you want to be able to view files in the terminal (instead of opening the
 
 ### `cat`
 
-The command, `cat`, is short for "concatenate", which means to link things together. The `cat` program is often used to link the output from one program to the input of another. But. another useful trait of `cat` is to output the contents of a file to the terminal. Invoking the `cat` program is quite simple:
+The command, `cat`, is short for "concatenate", which means to link things together. The `cat` program is often used to link the output from one program to the input of another. But, another useful trait of `cat` is to output the contents of a file to the terminal. Invoking the `cat` program is quite simple:
 
 ```bash
 cat some_file_name.txt

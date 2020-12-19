@@ -109,7 +109,7 @@ The typical workflow is something like:
 
 - Edit your code using your favorite editor, then save it (ensuring that the file has a `.cpp` suffix).
 - In your terminal, enter, `g++ -std=c++17 -Wall {your file's name}.cpp`.
-- If there errors (and there *will* be errors), read the error messags and re-edit your code. Repeat until it compiles.
+- If there are errors (and there *will* be errors), read the error messags and re-edit your code. Repeat until it compiles.
 - Once your code compiles, enter `a.out` in the terminal to run the compiled executable, and observe the (hopefully correct) output for testing.
 
 You repeat the process of edit, compile, run until you get the desired result.

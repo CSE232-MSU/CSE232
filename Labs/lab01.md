@@ -10,7 +10,7 @@ Log into Mimir and open the IDE. Use the terminal in Mimir's IDE to follow along
 
 The first command you need to learn is one of the simplest, `pwd`. At the terminal, type the command `pwd` and hit enter.
 
-`pwd` is short for "print working directory". It outputs the path of the working directory and the directory your terminal currently has open. If you get lost, (and it is easy to do with only the text-based terminal for navigation), `pwd` can show you where you are.
+`pwd` is short for "print working directory". It outputs the path of the working directory i.e., the directory your terminal currently has open. If you get lost, (and it is easy to do with only the text-based terminal for navigation), `pwd` can show you where you are.
 
 ### `ls`
 
@@ -52,7 +52,7 @@ cd ~
 
 **Note**: on most systems, running `cd` with no arguments also takes you to the home folder.
 
-Sometimes you want to go the the parent folder of your working directory. In the example above, we moved from the folder "lab01_new_horizons" to its subfolder "lab01". Trying to get back by running...
+Sometimes you want to go the parent folder of your working directory. In the example above, we moved from the folder "lab01_new_horizons" to its subfolder "lab01". Trying to get back by running...
 
 ```bash
 cd lab01_new_horizons
