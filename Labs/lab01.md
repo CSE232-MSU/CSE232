@@ -52,7 +52,7 @@ cd ~
 
 **Note**: on most systems, running `cd` with no arguments also takes you to the home folder.
 
-Sometimes you want to go the the parent folder of your working directory. In the example above, we moved from the folder "lab01_new_horizons" to its subfolder "lab01". Trying to get back by running...
+Sometimes you want to go the parent folder of your working directory. In the example above, we moved from the folder "lab01_new_horizons" to its subfolder "lab01". Trying to get back by running...
 
 ```bash
 cd lab01_new_horizons
