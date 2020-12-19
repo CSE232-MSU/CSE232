@@ -24,11 +24,7 @@ Napier used letters to represent powers of two. The position of these letters is
 
 <img src="https://render.githubusercontent.com/render/math?math=a = 1, b = 2, c = 4, d = 8, e = 16, f = 32, ..., z=335554432">
 
-&nbsp;
-
 <img src="https://render.githubusercontent.com/render/math?math=acf \rightarrow 1 %2B 4 %2B 32 = 37">
-
-&nbsp;
 
 <img src="https://render.githubusercontent.com/render/math?math=caf \rightarrow 4 %2B 1 %2B 32 = 37">
 
