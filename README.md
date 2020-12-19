@@ -25,6 +25,8 @@ It should be assumed that all assignments are due by 10:00 PM EST on their respe
 
 Links to lecture videos, projects and other materials will be made available as relevant dates approach. Content that is written for future weeks may change without notice until the date arrives.
 
+You can hover over the calendar cell to see its precise date.
+
 <div align="center">
 <table>
 <thead>
