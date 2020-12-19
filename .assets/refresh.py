@@ -22,6 +22,29 @@ def ordinal_suffix(n: int) -> str:
     return {1: "st", 2: "nd", 3: "rd"}.get(n % 10 * (n % 100 not in [11, 12, 13]), "th")
 
 
+def fix_date_str(date: str) -> str:
+    """
+    Tests if a given date string is in the correct format, and corrects 
+    for padding zeroes if they are missing.
+
+    Parameters
+    ----------
+    `date`
+        A date string in the format '%m/%d/%Y'. May be missing padding
+        zeroes.
+
+    Returns
+    -------
+    `str`
+        The corrected date string
+    """
+    if not re.match(r'\d{1,2}/\d{1,2}/\d{4}', date):
+        raise ValueError(
+            'invalid date string; must be in format "%m/%d/%Y" (padding zeroes may be omitted)')
+    month, day, year = date.split('/')
+    return '{:02d}/{:02d}/{}'.format(int(month), int(day), year)
+
+
 class Day:
     """
     Struct wrapper of the datetime object. Holds abstractions of date information
@@ -35,7 +58,8 @@ class Day:
         self.year = datetime_obj.year
         self.date = datetime_obj.strftime('%m/%d/%Y')
         self.weekday = datetime_obj.strftime('%A').lower()
-        self.hover = datetime_obj.strftime('%A, %B %d{}'.format(ordinal_suffix(self.day))).replace(' 0', ' ')
+        self.hover = datetime_obj.strftime('%A, %B %d{}'.format(
+            ordinal_suffix(self.day))).replace(' 0', ' ')
         self.week = week
         self.text = text
         self.href = href
@@ -68,7 +92,7 @@ class Calendar:
         if weeks < 1:
             raise ValueError('weeks must be >= 1')
 
-        self.start_datetime_obj = datetime.strptime(self.__fix_date(start_date), '%m/%d/%Y')
+        self.start_datetime_obj = datetime.strptime(start_date, '%m/%d/%Y')
 
         if self.start_datetime_obj.weekday() != 6:
             raise ValueError('starting date must be a Sunday')
@@ -97,34 +121,13 @@ class Calendar:
         """
         Retrieves the `Day` instance associated with a given date string.
         """
-        return self.calendar[self.__fix_date(date)]
+        return self.calendar[fix_date_str(date)]
 
     def __contains__(self, date: str) -> bool:
         """
         Tests if a `Day` instance with a given date string is in the calendar.
         """
-        return self.__fix_date(date) in self.calendar
-
-    def __fix_date(self, date: str) -> str:
-        """
-        Tests if a given date string is in the correct format, and corrects 
-        for padding zeroes if they are missing.
-
-        Parameters
-        ----------
-        `date`
-            A date string in the format '%m/%d/%Y'
-
-        Returns
-        -------
-        `str`
-            The corrected date string
-        """
-        if not re.match(r'\d{1,2}/\d{1,2}/\d{4}', date):
-            raise ValueError(
-                'invalid date string; must be in format "%m/%d/%Y"')
-        month, day, year = date.split('/')
-        return '{:02d}/{:02d}/{}'.format(int(month), int(day), year)
+        return fix_date_str(date) in self.calendar
 
     def set_event_series(self, text_format: str, n: int, every: int, start_date: str, skip_dates: List[str] = [], href_format: str = None) -> None:
         """
@@ -151,7 +154,7 @@ class Calendar:
             Used as an href attribute to the 'a' tag in the calendar HTML processed by generate_calendar_html().
         """
         date = self[start_date].datetime_obj
-        skip_dates = [self.__fix_date(skip_date) for skip_date in skip_dates]
+        skip_dates = [fix_date_str(skip_date) for skip_date in skip_dates]
         i = 1
 
         while i <= n:
@@ -216,13 +219,13 @@ class Calendar:
 
 if __name__ == "__main__":
 
-    ### 🠗 CHANGE AS NECESSARY 🠗 ###
-    STARTING_DATE = '12/27/2020'  # (starting date must be a Sunday)
+    ### 🠗 CHANGE AS NECESSARY BELOW 🠗 ###
+    STARTING_DATE = '12/27/2020'  
     WEEKS = 16
 
     calendar = Calendar(start_date=STARTING_DATE, weeks=WEEKS)
 
-    ### 🠗 DO NOT CHANGE 🠗 ###
+    ### 🠗 DO NOT CHANGE BELOW 🠗 ###
     calendar_html = calendar.generate_calendar_html()
 
     template = open('.assets/README_TEMP.md', 'r').read()

@@ -21,11 +21,11 @@ Resources:
 
 ## Course Schedule
 
-It should be assumed that all assignments are due by 10:00 PM EST on their respective due dates. Due dates subject to change, but if a change is made, an announcement will be made on Piazza.
+It should be assumed that all assignments are due by 10:00 PM EST on their respective due dates. Due dates are subject to change, but if a change is made, an announcement will be made on Piazza.
 
-Links to lecture videos, projects and other materials will be made available as relevant dates approach. Content that is written for future weeks may change without notice until the date arrives.
+Links to lecture videos, projects, and other materials will be made available as relevant dates approach. Content that is written for future weeks may change without notice until the date arrives.
 
-You can hover over the calendar cell to see its precise date.
+You can hover over a calendar cell to see its precise date (sorry mobile users).
 
 <div align="center">
 <table>
