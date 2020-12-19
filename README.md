@@ -19,10 +19,6 @@ Resources:
 - [OnlineGDB](https://www.onlinegdb.com/)
 - [UNIX Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 
-<div align="center"><b>Semester Progress (0%)</b></div>
-<div align="center">⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜</div>
-&nbsp;
-
 <div align="center">
 <table>
 <thead>
