@@ -98,7 +98,7 @@ The New Horizons spacecraft, launched January 19th 2006, is the first earth spac
 
 For this lab, you will use the `cin` and `cout` streams, along with some simple mathematics for calculating New Horizon's distance from the Sun. The important part of the assignment is to learn the skills needed to access the class web site, access a project description, and create a new program in C++.
 
-### Your Task
+### Program Specifications
 
 Your program will prompt the user for an integer number (a number without decimal points) that indicates the number of days _after_ 12/30/2016, starting at a distance 37.33 AU from the Sun. You will calculate the distance of New Horizons from the Sun using the numbers from 12/30/2016 (assume velocity is constant) _plus_ the user provided number of days, and report:
 
@@ -165,7 +165,7 @@ The operations on these numbers are: + (sum), - (difference), * (product), / (di
 
 If an integer is divided by another integer, the result is an integer. Thus the result of `6/4` is `1`. In contrast, `6.0/4` is `1.5`. That is, the `/` operator results in the **integer quotient if using integers, and floats if using floats**. The result of `6 % 4` is the integer remainder of the division, thus `2` (6 divided by 4 is 1, with a remainder of 2). There is no equivalent for `%` in floating point math.
 
-### Questions for you to consider
+### Things to think about
 
-1. What happens when you try to divide by zero when you run your program?
-2. What happens when `std::cin` obtains a letter instead of a number?
+- What happens when you try to divide by zero when you run your program?
+- What happens when `std::cin` obtains a letter instead of a number?

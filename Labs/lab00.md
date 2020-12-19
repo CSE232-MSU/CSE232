@@ -139,7 +139,7 @@ Click the "Open IDE" button to go to Mimir's IDE. It should open a separate tab 
 
 ![](../.assets/images/mimir_ide_start.png)
 
-## The Programming Portion
+## Coding Assignment
 
 Lab 00 consists of two (hopefully simple) tasks. Correcting a typo in the file "hello_world.cpp" and creating a new file called "academic_dishonesty.cpp".
 
