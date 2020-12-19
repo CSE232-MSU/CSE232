@@ -34,11 +34,7 @@ Napier used letters to represent powers of two. The position of these letters is
 
 For easier reading, the letters are typically sorted. Napier allowed for redundant occurrences of letters, though he acknowledged that there is a normal form that has no repeats. He described this as the _extended_ (repeated) vs. _abbreviated_ (no repeats) form. To create the abbreviated form, any pair of letters can be reduced to a single occurrence of the next "higher letter". For example:
 
-___
-
 <img src="https://render.githubusercontent.com/render/math?math=abbccd \rightarrow acccd \rightarrow acdd \rightarrow ace \rightarrow 1 %2B 4 %2B 16 = 21">
-
-___
 
 (extended form) → (reduce 2b's to c) → (reduce 2d's to e) → (abbreviated form) → 1 + 4 + 16 = 21
 
