@@ -88,10 +88,6 @@ rm -r a_folder
 
 ## Coding Assignment
 
-### Assignment Overview
-
-The aim of this assignment is practice the use of while-loops and conditional statements. You are going to write a program that prompts the user for an integer, and then determines the **additive persistence** and corresponding **additive root**. You will continue prompting the user for an integer until they enter a negative number, which indicates that they are finished.
-
 ### Background
 
 There are many properties of numbers that one can investigate. The ancient Greeks were fascinated by the properties of integers, even ascribing them mystical properties.
