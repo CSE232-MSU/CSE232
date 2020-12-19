@@ -22,8 +22,6 @@ Location arithmetic is a way to represent numbers as binary values, using a nota
 
 Napier used letters to represent powers of two. The position of these letters is unimportant, allowing for multiple representations of the same number. For example, in location arithmetic:
 
-___
-
 <img src="https://render.githubusercontent.com/render/math?math=a = 1, b = 2, c = 4, d = 8, e = 16, f = 32, ..., z=335554432">
 
 &nbsp;
@@ -33,8 +31,6 @@ ___
 &nbsp;
 
 <img src="https://render.githubusercontent.com/render/math?math=caf \rightarrow 4 %2B 1 %2B 32 = 37">
-
-___
 
 For easier reading, the letters are typically sorted. Napier allowed for redundant occurrences of letters, though he acknowledged that there is a normal form that has no repeats. He described this as the _extended_ (repeated) vs. _abbreviated_ (no repeats) form. To create the abbreviated form, any pair of letters can be reduced to a single occurrence of the next "higher letter". For example:
 
