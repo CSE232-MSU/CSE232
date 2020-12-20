@@ -1,35 +1,40 @@
 # Lab 07 - Templates and 2D Vectors
 
-## Lab Assignment
+(There is no Unix tutorial this week)
 
-### The Problem
+## Coding Assignment
 
-We are going to work on two things:
+We are going to get practice with two concepts:
+1.  Templated code
+2.  Two-dimensional vectors
 
-1.  Writing templated code
-2.  2D vectors
+### Background
 
-### 2D vector as a matrix
-
-You remember matrices don't you? We are going to do some simple manipulation of a matrix, namely: adding two matrices and multiplying a matrix by a scalar.
+You remember matrices, don't you? We are going to do some simple manipulation of a matrix, namely: adding two matrices, and multiplying a matrix by a scalar.
 
 #### Matrix
 
-A **matrix** is a 2 dimensional (rows and columns) data structure. It has a shape indicated by the number of rows and the number of columns. Though I suppose a matrix could have uneven sized rows, this doesn't usually happen in practice so a matrix is always rectangular, potentially square (based on its shape).
+A _matrix_ is a two-dimensional data structure. It has a _shape_ indicated by the number of rows, and the number of columns. It's important to note that the number of columns *might not always equal* the number of rows. When the number of rows *does* match the number of columns, it's referred to as a _square matrix_.
 
-![](lab07/matrix.png)
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctextbf%7BA%7D+%3D+%5Cbegin%7Bpmatrix%7D1+%26+2+%26+3%5C%5C4+%26+5+%26+6%5C%5C7+%26+8+%26+9%5Cend%7Bpmatrix%7D" 
+alt="\textbf{A} = \begin{pmatrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{pmatrix}">
 
-#### Matrix operations
+This matrix, A, has three rows and three columns -- making it a square matrix.
+
+#### Matrix Operations
 
 We will perform two operations on our matrices, yielding a new matrix as a result.
 
-The first is **scalar multiplication**. Regardless of the size or shape, if the matrix is not empty we multiply the scalar value by every entry in the matrix, yielding a new matrix. We do this for every entry in the matrix.
+The first is _scalar multiplication_. Regardless of the size or shape, if the matrix is not empty, we multiply the scalar value by every entry in the matrix, yielding a new matrix.
 
-![](lab07/multiply.png)
+<img src="../.assets/images/matrix_mul.svg">
 
-The second is **addition**. The shape of the two matrices **_must be the same_** for addition to go forward. If the shapes are the same and they are both not empty, we add the same row/col element of each argument matrix into the same row/col element of a new matrix, yielding the new matrix. We do this for every element in the two matrices.
+Where λ is some scalar (any number).
 
-![](lab07/add.png)
+The second is _matrix addition_. The shape of two matrices _must be the same_ for addition to go forward. If the shapes are the same, and they are both not empty, we add each row/column value of one matrix to each row/column value of the second matrix in each respective location, yielding a new matrix. We do this for every value between the two matrices.
+
+<img src="../.assets/images/matrix_add.svg">
 
 ### Requirements
 
