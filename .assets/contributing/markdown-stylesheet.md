@@ -2,6 +2,8 @@
 
 If you are planning on contributing to the repository with a new Markdown file, please adhere to the following style rules for sake of consistency and cleanliness.
 
+GitHub recently released a dark mode for active users -- we are working under the assumption that the students __do not__ have a GitHub account, and so they will most likely see the website in its light mode (i.e., black text on white background).
+
 Jump to section...
 - [Naming](#1-naming)
 - [Header Usage](#2-header-usage)
@@ -64,6 +66,8 @@ No language should be specified when creating example output to the terminal (ot
 
 In examples of terminal _usage_, use `bash` as the language.
 
+__Only use in-line code styling (`like this`) for code, and nothing else.__ File names should be represented in plaintext, like this.cpp. Unix commands may be represented as in-line code.
+
 ### 5. Lists
 
 Nested, unordered lists are okay. __Nested, ordered lists are not okay.__ Why? Because it looks disgusting. Example:
@@ -93,6 +97,8 @@ GitHub's Markdown renderer does not inherently support LaTeX. There is, however,
 Use LaTeX when describing mathematical expressions. Note that, if you are writing the Markdown with a preview given by your text editor, your view may be different from what GitHub will render it as. Edit as necessary once you've pushed your Markdown to the repository.
 
 Of course, since this is a hack-y way of rendering LaTeX in GitHub Markdown, it comes with one caveat: you must use `%2B` to represent the `+` symbol. The reasons for why is explained in the gist.
+
+__Note__: students that are using GitHub's dark mode, or have some sort of dark mode extension on their browser, may not be able to see the LaTeX expressions (because they're rendered in a black font, and would presumably be on a black/very dark background).
 
 ### 9. Spelling and Grammar
 
