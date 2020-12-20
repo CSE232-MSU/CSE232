@@ -1,6 +1,6 @@
 # Lab 00 - Getting Started
 
-This lab is designed to make sure that you can access all the class resources. In particular: the class website, Piazza, and mimir. Also, you should be able to compile, and run a simple C++ program. Ensure that you complete this lab, so that you can do all the work necessary for this course.
+This lab is designed to make sure that you can access all the class resources. In particular: the class website, Piazza, and Mimir. Also, you should be able to compile, and run a simple C++ program. Ensure that you complete this lab, so that you can do all the work necessary for this course.
 
 ## Class resources
 
