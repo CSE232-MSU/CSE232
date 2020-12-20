@@ -115,7 +115,7 @@ __Under no circumstances should you share any part of an assignment solution wit
 
 Plagiarism (unsourced use of other's intellectual property) is not allowed. However, citing and using other's works is generally fine (please ask if uncertain) as long as the material wasn't made specifically for solving the assignments in this class. The use of material or code from a student that previously took the course is an explicit instance of academic dishonesty. Intellectual collaboration with other students in the class is allowed, but each student should write (and not share) their own code. If a student submits code that they don't understand, such is also an act of academic dishonesty.
 
-There is one exception to the above policy: labs. The lab assignments are intended to be solved collaboratively, and you are allowed to share your solutions with other students. However, you may only share with your partner to allow everyone the opprotunity to solve the assignment. Please refrain from making public posts about lab solutions while the lab is currently active, so that other students have the opportunity to think through it.
+There is one exception to the above policy: labs. The lab assignments are intended to be solved collaboratively, and you are allowed to share your solutions with other students. However, you may only share with your partner to allow everyone the opportunity to solve the assignment. Please refrain from making public posts about lab solutions while the lab is currently active, so that other students have the opportunity to think through it.
 
 ### Examples
 
