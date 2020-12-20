@@ -68,6 +68,8 @@ In examples of terminal _usage_, use `bash` as the language.
 
 __Only use in-line code styling (`like this`) for code, and nothing else.__ File names should be represented in plaintext, like this.cpp. Unix commands may be represented as in-line code.
 
+In regards to C++ code, specifically, have variable and class names represented like `this` (i.e., normally), and represent functions with empty parentheses at the end like `this()`. Most students will likely be following the "lower and under" convention for variable and function names, and the "CamelCase" convention for class names. So, placing the parentheses at the end can distinguish between a reference to some variable and some function.
+
 ### 5. Lists
 
 Nested, unordered lists are okay. __Nested, ordered lists are not okay.__ Why? Because it looks disgusting. Example:
