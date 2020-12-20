@@ -78,9 +78,9 @@ Because the font used by GitHub is not a [monospaced font](https://en.wikipedia.
 
 ### 6. Links
 
-Use in-line links as much as possible, [like this](). Only show the entire URL if needed to stress the URL's importance.
+Use in-line links as much as possible, [like this](https://github.com/braedynl/CSE232/blob/main/.assets/contributing/markdown-stylesheet.md#6-links). Only show the entire URL if needed to stress the URL's importance.
 
-It's usually best to wrap the entire sentence in the in-link for better visibility.
+It's usually best to wrap the entire sentence in the in-line link for better visibility.
 
 ### 7. Images and Tables
 
