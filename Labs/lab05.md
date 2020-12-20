@@ -1,217 +1,299 @@
 # Lab 05 - Styling
 
-# Assignment Overview
+## Assignment Overview
 
-The aim of this lab is:
+The aim of this lab is to:
 
-*   do a code review to learn the Google Code style rules
+- ...do a code review to learn the Google Code style rules
 
-*   learn to debug your C++ programs using <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> (the GNU Project Debugger). The purpose of a debugger is to allow you to see what is going on inside your C++ program while it runs. In addition, you can use <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> to see what your program was doing at the moment it crashed.
+- ...learn to debug your C++ programs using `gdb` (the GNU Project Debugger). The purpose of a debugger is to allow you to see what is going on inside your C++ program while it runs. In addition, you can use `gdb` to see what your program was doing at the moment it crashed.
 
-# Code Review
+## Code Review
 
-## <font color="#000000"><font face="Times">Code Style</font></font>
+Although the compiler can often compile very ugly source code, the primary reader of your code won't be computers, but other humans (including yourself). And in much the same way that well-formatted essays are better at conveying information, well-formed code is easier to understand and debug. However, what does well-formed mean?
 
-<font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Although the compiler can often compile very ugly source code, the primary reader of your code won't be computers, but other humans (including yourself). And in much the same way that well formatted essays are better at conveying information, well-formed code is easier to understand and debug. However, what does well-formed mean?</font></font></font>
+### Conventions
 
-### <font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Conventions</font></font></font>
+Although there are a few different conventions for what exactly defines well-formed code, the important thing is to be consistent. For this assignment, we will be evaluating your homework solution with respect to the [Google Style Guide](https://google.github.io/styleguide/cppguide.html). The point of this part of the lab is to evaluate (and improve) code by using a consistent style. 
 
-<span style="font-variant:
-normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Although there are a few different conventions for what exactly defines well-formed code, the important thing is to be consistent. For this assignment, we will be evaluating your homework solution with respect to the [Google Style Guide](https://google.github.io/styleguide/cppguide.html). The point of this part of the lab is to evaluate (and improve) code by using a consistent style. Warning, much of the code we have shown in videos and examples may not conform to Google's standards.</span></span></span></font></font></font></span>
+**Warning**: much of the code we have shown in videos and examples may not conform to Google's standards.
 
-<font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Exchange your most recent homework assignment's first problem's solution with your partner. You will be editing their solution to either make if conform to the following rules or to add comments noting violations of the rules. Not all of the style guide will make sense given your incomplete mastery of C++, but we'll be focusing on the content you can apply.</font></font></font>
+Exchange your most recent homework assignment's first problem's solution with your partner. You will be editing their solution to either make it conform to the following rules, or to add comments noting violations of the rules. Not all of the style guide will make sense given your incomplete mastery of C++, but we'll be focusing on the content you can apply.
 
-### <font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Rules</font></font></font>
+### Rules
 
-#### <font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Naming</font></font></font>
+#### Naming
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">General Naming Rules</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#General_Naming_Rules)
+- [General Naming Rules](https://google.github.io/styleguide/cppguide.html#General_Naming_Rules)
+- [Variable Names](https://google.github.io/styleguide/cppguide.html#Variable_Names)
+- [Function Names](https://google.github.io/styleguide/cppguide.html#Function_Names)
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Variable Names</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Variable_Names)
+#### Comments
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Function Names</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Function_Names)
+- [Comments](https://google.github.io/styleguide/cppguide.html#Comments)
+- [Function Comments](https://google.github.io/styleguide/cppguide.html#Function_Comments)
+- [Implementation Comments](https://google.github.io/styleguide/cppguide.html#Implementation_Comments)
 
-#### <font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Comments</font></font></font>
+#### Formatting
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Comments</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Comments)
+- [Line Length](https://google.github.io/styleguide/cppguide.html#Line_Length)
+- [Spaces vs. Tabs](https://google.github.io/styleguide/cppguide.html#Spaces_vs._Tabs)
+- [Function Calls](https://google.github.io/styleguide/cppguide.html#Function_Calls)
+- [Horizontal Whitespace](https://google.github.io/styleguide/cppguide.html#Horizontal_Whitespace)
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Function Comments</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Function_Comments)
+#### Functions
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Implementation Comments</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Implementation_Comments)
+- [Parameter Ordering](https://google.github.io/styleguide/cppguide.html#Function_Parameter_Ordering)
+- [Write Short Functions](https://google.github.io/styleguide/cppguide.html#Write_Short_Functions)
+- [Reference Arguments](https://google.github.io/styleguide/cppguide.html#Reference_Arguments)
+- [Horizontal Whitespace](https://google.github.io/styleguide/cppguide.html#Horizontal_Whitespace)
 
-#### <font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Formatting</font></font></font>
+### Parting Words
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Line Length</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Line_Length)
+Use common sense, and **be consistent**.
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Spaces vs. Tabs</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Spaces_vs._Tabs)
+If you are editing code, take a few minutes to look at the code around you and determine its style. If there are spaces around `if` clauses, you should add them, too. If there are comments with little boxes of stars around them, make your comments have little boxes of stars around them, too.
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Function Calls</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Function_Calls)
+The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you are saying, rather than on how you are saying it. We present global style rules here so people know the vocabulary. But, local style is also important. If code you add to a file looks drastically different from the existing code around it, the discontinuity throws readers out of their rhythm when they go to read it. Try to avoid this.
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Horizontal Whitespace</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Horizontal_Whitespace)
+Okay, enough writing about writing code; the code itself is much more interesting. Have fun!
 
-#### <font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Functions</font></font></font>
+## Debugging with `gdb`
 
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Parameter Ordering</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Function_Parameter_Ordering)
-
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Write Short Functions</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Write_Short_Functions)
-
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Reference Arguments</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Reference_Arguments)
-
-*   [<span style="font-variant: normal"><font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">Horizontal Whitespace</span></span></span></font></font></font></span>](https://google.github.io/styleguide/cppguide.html#Horizontal_Whitespace)
-
-#### <font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Parting Words (copied from the end of the Google Style Guide)</font></font></font>
-
-<font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">Use common sense and BE CONSISTENT.</font></font></font>
-
-<font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">If you are editing code, take a few minutes to look at the code around you and determine its style. If they use spaces around their if clauses, you should, too. If their comments have little boxes of stars around them, make your comments have little boxes of stars around them too.</font></font></font>
-
-<font color="#000000"><font face="Times"><font size="3" style="font-size: 12pt">The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you are saying, rather than on how you are saying it. We present global style rules here so people know the vocabulary. But local style is also important. If code you add to a file looks drastically different from the existing code around it, the discontinuity throws readers out of their rhythm when they go to read it. Try to avoid this.</font></font></font>
-
-<font size="3" style="font-size: 12pt"><span style="font-variant: normal"><font color="#000000"><font face="Times"><span style="letter-spacing: normal"><span style="font-style: normal"><span style="font-weight: normal">OK, enough writing about writing code; the code itself is much more interesting. Have fun!</span></span></span></font></font></span></font>
-
-# GDB and Debugging
-
-Here are some of the useful actions that <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> can perform:
-
-*   Start your program and step through it line by line
-
-*   Make your program stop on specified conditions
-
-*   Show the values of variables used by your program
-
-*   Examine the contents of any frame on the call stack
-
-*   Set breakpoints that will stop your program when it reaches a certain point. Then you can step through part of the execution using step and next, and type continue to resume regular execution.
-
-You will find the example programs you will debug during this lab in the [lab directory](./lab05/).
-
-# Setting up gdb for use with C++
-
-Before we start using <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font>, we need to download a GDB init file (which will be called <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">.gdbinit</font></font>) that does two things. First, it allows us to print C++ Standard Library containers and data members from within <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font>. Second, it allows us to debug our programs while treating the C++ constructs as the “bottom level”; in other words, when we debug a piece of a program that includes a vector, we don't want the debugger to go all the way into the code that defines the vector.
-
-You will find this file, called <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdbinit</font></font> in the lab directory; save it to your home directory. Once saved in your home directory, please rename the file to <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">.gdbinit</font></font>. Note that the initial dot means the file is hidden; so once you rename it, it will not be visible by default in the graphical file manager.
-
-Finally, debugging in Mimir is problematic. The system is setup for testing code and much of the underlying mechanisim confuses the debugger. Please do your work on mobaxterm.
-
-# Getting started with gdb
-
-C and C++ programs compiled with the GNU compiler and the <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">-g</font></font> option can be debugged using GNU's debugger <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> (actually, you can use <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> on code that is not compiled with <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">-g</font></font>, but unless you like trying to figure out how assembly code sequences map to your source code I wouldn't recommend doing so). Also, do not compile with an optimization flag (i.e. don't use <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">-O2</font></font>), or <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> will have a hard time mapping optimized machine code to your source code. For example:
-
-<pre class="western">$ g++ -std=c++17 -ggdb3 -Wall myprog.cpp
-</pre>
-
-To start <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font>, invoke <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> on the executable file. For example:
-
-<pre class="western">$ gdb a.out
-</pre>
-
-If your program terminates with an error, then the operating system will often dump a core file that contains information about the state of the program when it crashed. <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> can be used to examine the contents of a core file:
-
-<pre class="western">$ gdb core a.out
-</pre>
-
-One good way to get started when you are trying to track down a bug, is to set breakpoints at the start of every function. In this way, you will quickly be able to determine which function has the problem. Then you can restart the program and step through the offending function line-by-line until you locate the problem exactly.
-
-# Common gdb Commands
-
-<pre class="western">gdb also understands abbreviations of commands, so you can just type up to 
-the unique part of a command name ("cont" for "continue", or "p" for "print")
-
-**help**                  List classes of all gdb commands
-help <topic>          Shows help available for topic or command
-
-**bt**                 Shows stack: sequence of function calls executed so far
-(or backtrace)        (good for pinpointing location of a program crash)
-(or where)
-
-**up**                   move up the stack
-**down**                 move down the stack
-
-**run**                   Starts program at the beginning
-  run command line args
-
-**break**
-  break <line>          Sets breakpoint at line number <line>
-  break <func-name>     Sets breakpoint at beginning of function <func-name>
-    break main            Sets breakpoint at beginning of program
-
-**continue**              Continues execution from breakpoint
-
-**condition** <bp-num> <exp>   Sets breakpoint number <bp-num> to break only if
-                           conditional expression <exp> is true
-**info** break            Shows current breakpoints
-disable [breakpoints] [bnums ...]  Disable one or more breakpoints
-enable [breakpoints] [bnums ...]   Enable one or more breakpoints 
-clear <line>          Clears breakpoint at line number <line>
-clear <func-name>     Clears breakpoint at beginning of function <func-name>
-delete <bp-num>       Deletes breakpoint number <bp-num>
-delete                Deletes all breakpoints
-
-**step** (or s)           Executes next line of program (steping into functions)
-  step <count>          Executes next <count> lines of program
-next (or n)           Like step, but treats a function call as a single
-  next <count>            instruction
-until <line>          Executes program until line number <line>
-
-**list**                  Lists next few lines of program
-  list <line>           Lists lines around line number <line> of program
-  list <start> <end>    Lists line numbers <start> through <end>
-  list <func-name>      Lists lines at beginning of function <func-name>
-
-**print** <exp> (or inspect <exp>  Displays the value of expression <exp>
-
- To print in different formats:
-   print/x  <exp> print the value of the expression in hexidecimal  
-                      (e.g. print/x 123   displays 0x7b)
-   print/t  <exp> print the value of the expression in binary 
-                      (e.g. print/t 123   displays  1111011)
-   print/d  <exp> print the value of the expression as unsigned int format 
-                      (e.g. print/d 0x1c displays 28)
-   print/c  <exp> print the ascii value of the expression 
-                      (e.g. print/c 99  displays 'c')
-   print   (int)<exp> print the value of the expression as signed int format 
-                      (e.g. print (int)'c' displays 99)
-
- To represent different formats in the expression (the default is int):
-   0x suffix for hex: 0x1c   
-   0b suffix for binary: 0b101      
-       (e.g. print 0b101   displays 5,   print 0b101 + 3   displays 8) 
-   you can also re-cast expressions using C-style syntax  (int)'c'
-
- You can also use register values and values stored in memory locations 
-   in expressions:
-   print $eax    # print the value stored in the eax register
-   print *(int *)0x8ff4bc10  # print the int value stored at 
-                               memory address 0x8ff4bc10
-
-**quit**                  Quits gdb
-</pre>
-
-# info commands for examining runtime and debugger state
-
-<font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> has a large set of info X commands for displaying information about different types of runtime state and about debugger state. Here is how to list all the info commands in help, and a description of what a few of the info commands do:
-
-<pre class="western">(gdb) help status           # lists a bunch of info X commands
-
-(gdb) info frame            # list information about the current stack frame
-(gdb) info locals           # list local variable values of current stack frame
-(gdb) info args             # list argument values of current stack frame
-(gdb) info registers        # list register values
-(gdb) info breakpoints      # list status of all breakpoints</pre>
-
-# Sample gdb session
-
-Below is output from two runs of gdb on programs from the lab directory. You will follow along by entering the commands on your own computer. Be sure you understand each step, and ask your TA if you don't understand why something is being done.
-
-Before you do the debugging, just run the a.out and see what happens.
-
-## Run 1: badString.cpp
-
-### Looking at fn2
-
-<pre class="western">**$ g++ -std=c++17 -ggdb3 -Wall badString.cpp      #-- compile program with -ggdb3 flag**
-
-**$ gdb a.out                                  #-- invoke gdb with the executable**
+Here are some of the useful actions that `gdb` can perform:
+
+- Start your program and step through it line by line
+- Make your program stop on specified conditions
+- Show the values of variables used by your program
+- Examine the contents of any frame on the call stack
+- Set breakpoints that will stop your program when it reaches a certain point. Then you can step through part of the execution using `step` and `next`, and type `continue` to resume regular execution.
+
+Here are the example programs to debug for this lab:
+
+```c++
+// badString.cpp
+
+#include<iostream>
+using std::cin; using std::cout; using std::endl;
+#include<string>
+using std::string;
+
+/*
+  find the smallest (by ASCII value) character
+  in the parameter str and return that char
+*/
+char fn2(string str){
+  char ch = str[0];
+  for (auto i = str.size(); i>=0; --i){
+    cout << ch << endl;
+    if (str[i] < ch)
+      ch = str[i];
+  }
+  return ch;
+}
+
+/*
+  make a substring of the parameter str
+  of size 3, consisting of:
+  - the smallest chararter as found by fn2
+  - the character in front of the smallest
+  - the character in back of the smallest.
+  Thus fn1("cdeaxyz") --> "eax"
+*/
+string fn1(string str){
+  char ch = fn2(str);
+  unsigned int indx = str.find(ch);
+  return str.substr(indx-1, 3);
+}
+
+int main (){
+  string my_string = "abcdefg";
+  cout << fn2(my_string) << endl;  
+  cout << fn1(my_string) << endl;
+
+}
+```
+
+```c++
+// badProg.cpp
+
+#include <vector>
+using std::vector;
+#include <string>
+using std::string; using std::to_string;
+#include <iostream>
+using std::cout; using std::endl;
+
+int find_and_return_max(vector<int> vector1, int max) {
+    if (vector1.size() == 0)
+        return -1;
+    max = vector1[0];
+    for (auto i = vector1.begin(); i != vector1.end(); ++i) {
+        if (max < *i) {
+            max = *i;
+        }
+    }
+    return 0;
+}
+
+int main() {
+    vector<int> myvec = {17, 21, 44, 2, 60};
+    int max = myvec[0];
+    if (find_and_return_max(myvec, max) != 0) {
+        cout << "strange error" << endl;
+        return -1;
+    }
+    cout << "max value in the vector is " << to_string(max) << endl;
+    return 0;
+}
+```
+
+```c++
+// segfaulter.cpp
+
+#include <iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+
+int initfunc(vector<int> myvec, int len) {
+    int i;
+    for (i=1; i <= len; i++) {
+        myvec[i] = i;
+    }
+    return 0;
+}
+
+int func(vector<int> myvec, int len, int max) {
+    int i;
+    max = myvec[0];
+    for (i=1; i <= len; i++) {
+        if(max < myvec[i]) { 
+            max = myvec[i];
+        }
+    }
+    return 0;
+}
+
+int main() {
+    vector<int> vec;
+    int max = 6;
+
+    if (initfunc(vec, 100) != 0) {
+        cout << "init error" << endl;
+        return -1;
+    }
+
+    if (func(vec, 100, max) != 0) {
+        cout << "func error" << endl;
+        return -1;
+    }
+
+    cout << "max value in the array is " << max << endl;
+    return 0;
+}
+```
+
+## Setting up `gdb`
+
+Before we start using `gdb`, we need to download a GDB init file that does two things. First, it allows us to print C++ Standard Library containers and data members from within `gdb`. Second, it allows us to debug our programs while treating the C++ constructs as the "bottom level"; in other words, when we debug a piece of a program that includes a vector, we don't want the debugger to go all the way into the code that defines the vector.
+
+[Link to gdbinit file](../.assets/extra/gdbinit)
+
+Download this file, and save it to your home directory. Once saved in your home directory, please rename the file to .gdbinit. Note that the initial dot means the file is hidden, so once you rename it, it will not be visible in the graphical file manager.
+
+## Getting Started with `gdb`
+
+C/C++ programs compiled with the GNU compiler and the `-g` flag can be debugged using GNU's debugger (actually, you can use `gdb` on code that is not compiled with the `-g` flag, but, unless you like trying to figure out how assembly code sequences map to your source code, I wouldn't recommend doing so).
+
+First, you'll want to compile your code using this flag:
+
+```bash
+g++ -std=c++17 -g -Wall myprog.cpp
+```
+
+Then, to start `gdb`, invoke it on the executable file:
+
+```bash
+gdb a.out
+```
+
+If your program terminates with an error, then the operating system will often dump a core file that contains information about the state of the program when it crashed. `gdb` can be used to examine the contents of a core file:
+
+```bash
+gdb core a.out
+```
+
+One good way to get started when you are trying to track down a bug, is to set breakpoints at the start of every function. In this way, you'll be able to determine which function has the problem, then you can restart the program and step through the offending function line-by-line until you find the exact location of the bug within that function.
+
+## Common `gdb` Commands
+
+Words surrounded by angled-brackets (like `<this>`) represent parameters to the command, for which you'd supply some argument based on what the command expects.
+
+___
+
+- `help` - List classes of all `gdb` commands
+    - `help <topic>` - Shows help available for topic or command
+- `bt` - Shows stack; the sequence of function calls executed so far (good for pinpointing location of a program crash)
+- `up` - Move up the stack
+- `down` - Move down the stack
+- `run` - Runs program from the beginning
+- `break`
+    - `break <line>` - Sets breakpoint at line number `<line>`
+    - `break <func-name>` - Sets breakpoint at beginning of function `<func-name>`
+    - `break main` - Sets breakpoint at beginning of program
+- `continue` - Continues execution until next breakpoint
+- `condition <bp-num> <exp>` - Sets breakpoint number `<bp-num>` to break only if
+conditional expression, `<exp>`, is true
+- `info break` - Shows current breakpoints
+- `clear`
+    - `clear <line>` - Clears breakpoint at line number `<line>`
+    - `clear <func-name>` - Clears breakpoint at beginning of function `<func-name>`
+- `delete` - Deletes all breakpoints
+    - `delete <bp-num>` - Deletes breakpoint number `<bp-num>`
+- `step` - Executes next line of program (steps into functions)
+    - `step <count>` - Executes next `<count>` lines of program
+- `next` - Executes next line of program (does not step into functions)
+    - `next <count>` - Executes next `<count>` lines of program
+- `until <line>` - Executes program until line number `<line>`
+- `list` - Lists next few lines of program
+    - `list <line>` - Lists lines around line number `<line>` of program
+    - `list <start> <end>` - Lists line numbers `<start>` through `<end>`
+    - `list <func-name>` - Lists lines at beginning of function `<func-name>`
+- `print <exp>` - Displays the value of expression `<exp>`
+- `quit` - Quit debugging
+
+___
+
+`gdb` also understands abbreviations of commands, so you can just type up to 
+the unique part of a command name ("`cont`" for "`continue`", or "`p`" for "`print`")
+
+## `info` Commands
+
+`gdb` has a large set of `info X` commands for displaying information about particular runtime/debugger states. Here is how to list all the info commands in `help`, and a description of what a few of the info commands do:
+
+```
+(gdb) help status           # lists a bunch of info X commands
+
+(gdb) info frame            # lists information about the current stack frame
+(gdb) info locals           # lists local variable values of current stack frame
+(gdb) info args             # lists argument values of current stack frame
+(gdb) info registers        # lists register values
+(gdb) info breakpoints      # lists status of all breakpoints
+```
+
+## Sample `gdb` Sessions
+
+Below is the output from two runs of `gdb` on badString.cpp. You will follow along by entering the commands on your own computer. Be sure you understand each step, and ask your TA if you don't understand why something is being done.
+
+Before debugging, run the a.out executable to see what happens.
+
+(Comments are denoted by a `#` symbol, and are not part of the actual execution)
+
+```
+$ g++ -std=c++17 -g -Wall badString.cpp     # compile program with -g flag
+
+$ gdb a.out                                 # invoke gdb with the executable
 
 GNU gdb (Debian 7.7.1+dfsg-5) 7.7.1
 Copyright (C) 2014 Free Software Foundation, Inc.
@@ -223,21 +305,20 @@ This GDB was configured as "x86_64-linux-gnu".
 ...
 Reading symbols from a.out...done.
 
-**(gdb) break main                           #-- set a breakpoint at the beginning**
-                                               **of the main and the two functions**
+
+(gdb) break main                            # set a breakpoint at main()
 Breakpoint 1 at 0x400d87: file badString.cpp, line 35.
 
-**(gdb) break fn2**
+(gdb) break fn2                             # set a breakpoint at fn2()
 Breakpoint 2 at 0x400c72: file badString.cpp, line 11.
 
-**(gdb) run                                  #-- run the program**
+(gdb) run                                   # run the program
 Starting program: /user/yourname/cse232_201701/Lab05/a.out 
 
-Breakpoint 1, main () at badString.cpp:35  # **first executable line in main** 
+Breakpoint 1, main () at badString.cpp:35   # hit breakpoint at line 35 
 35	  string my_string = "abcdefg";
 
-**(gdb) list                                 #-- list the source code near the** 
-                                               **break point**
+(gdb) list                                  # display code in this area
 30	  unsigned int indx = str.find(ch);
 31	  return str.substr(indx-1, 3);
 32	}
@@ -249,7 +330,7 @@ Breakpoint 1, main () at badString.cpp:35  # **first executable line in main**
 38
 39	}
 
-**(gdb) list 15                             #-- list source code around line 15**
+(gdb) list 15                               # display code around line 15
 10	char fn2(string str){
 11	  char ch = str[0];
 12	  for (auto i = str.size(); i>=0; --i){
@@ -261,7 +342,7 @@ Breakpoint 1, main () at badString.cpp:35  # **first executable line in main**
 18	}
 19
 
-**(gdb) list                                 #-- list the next few lines of code**
+(gdb) list                                  # display next few lines
 20	/*
 21	  make a substring of the parameter str
 22	  of size 3, consisting of:
@@ -273,108 +354,97 @@ Breakpoint 1, main () at badString.cpp:35  # **first executable line in main**
 28	string fn1(string str){
 29	  char ch = fn2(str);
 
-**(gdb) next                                 #-- execute the next instruction**
+(gdb) next                                  # execute the next instruction
 36	  cout << fn1(my_string) << endl;
 
-**(gdb)                                      #-- hitting Enter executes the** 
-                                               **previous command** 
-                                               **(next in this case)**
-Breakpoint 2, fn2 (str="abcdefg") at badString.cpp:11 **# breakdpoint for fn2**
+(gdb)                                       # hitting Enter executes the previous command
+Breakpoint 2, fn2 (str="abcdefg") at badString.cpp:11
 11	  char ch = str[0];
 
-**#-- also you can use the up and down arrows to scroll through previous commands**
-
-**(gdb) print str                            #-- print str in fn2**
+(gdb) print str                             # print str in fn2
 $1 = "abcdefg"
 
-**(gdb) p ch                                 #-- p is short for the print command**
-$2 = 0 '\000'                              # **ch in fn2 is not initialized**
+(gdb) p ch                                  # p is short for the print command
+$2 = 0 '\000'                               # ch in fn2 is not initialized
 
-**(gdb) print my_string				# my_string in main, not fn2**
+(gdb) print my_string				        # my_string in main, not fn2
 No symbol "my_string" in current context.
 
-**(gdb) bt                              # bt == backtrace. Where in the call stack**
-##0  fn2 (str="abcdefg") at badString.cpp:11
-#1  0x0000000000400e39 in main () at badString.cpp:36
-
-To explain, activity goes from top to bottom. We are presently (#0) in
-fn2\. That was called by main (#1). We we have 2 functions running: we
-are presently in fn2, which was called by main
-
-**(gdb) up**
-#1  0x0000000000400e39 in main () at badString.cpp:36
-36	  cout << fn2(my_string) << endl;      **# can look at** **main** **stuff now**
-
-**(gdb) print my_string**
-$3 = “abcdefg”                            **# my_string is defined in main**
-
-**(gdb) down** 
+(gdb) bt                                    # bt = "backtrace", shows call stack
 #0  fn2 (str="abcdefg") at badString.cpp:11
-11	  char ch = str[0];                  **# back to fn2, where we are running**
+#1  0x0000000000400e39 in main () at badString.cpp:36
+```
+
+Activity goes from top to bottom in the call stack. We are currently in `fn2()` (#0), which was called by `main()` (#1). Thus we have 2 functions running.
+
+```
+(gdb) up                                    # go up the call stack
+#1  0x0000000000400e39 in main () at badString.cpp:36
+36	  cout << fn2(my_string) << endl;       # now we're back in main()
+
+(gdb) print my_string
+$3 = "abcdefg"                              # my_string is defined in main()
+
+(gdb) down                                  # down the call stack                              
+#0  fn2 (str="abcdefg") at badString.cpp:11
+11	  char ch = str[0];                     # back to fn2(), where we are running
 
 (gdb) next 
 12 for (auto i = str.size(); i>=0; --i){
 
-**(gdb) n                            # n is next** 
+(gdb) n                                     # "n" is short for "next"          
 13	    cout << ch << endl;
-**(gdb) n                            # just stepping through the loop**
+(gdb) n                                     # just stepping through the loop
 a
 14	    if (str[i] < ch)
-**(gdb) n**
+(gdb) n
 15	      ch = str[i];
-**(gdb) n**
-12	  for (auto i = str.size(); i>=0; --i){  **# back to the top of the loop**
-**(gdb) print ch                                 # how’d we do? WTH?**
-$4 = 0 '\000'                        
-**(gdb) print str[i]					# WTH?**
+(gdb) n
+12	  for (auto i = str.size(); i>=0; --i){ # back to the top of the loop
+(gdb) print ch
+$4 = 0 '\000'                               # what is this?                       
+(gdb) print str[i]
 $5 = (const char &) @0x60205f: 0 '\000'
-**(gdb) print i**
+(gdb) print i
 $6 = 7
-![](Red_star.svg)
+```
 
-So what’s the problem here? In we executed Line 15 above but ch has a strange character in it. Tell your TA the problem.
+⭐ So, what's the problem here? We executed Line 15 above, but, `ch` has a strange character in it. Describe the problem to your TA.
 
-**(gdb) cont                                 #-- continue the execution**
-Stop stepping through the loop, just run it until we hit a breakpoint or an error
+```
+(gdb) cont                                  # continue the execution
 
-Program received signal SIGSEGV, Segmentation fault.  **# oopsie poopsie**
+Program received signal SIGSEGV, Segmentation fault.
 0x0000000000400d19 in fn2 (str="abcdefg") at badString.cpp:14
 14	    if (str[i] < ch)
 
-**(gdb) bt**
+(gdb) bt
 #0  0x0000000000400d19 in fn2 (str="abcdefg") at badString.cpp:14
 #1  0x0000000000400e39 in main () at badString.cpp:36
 
-**(gdb) print ch**
-$7 = -128 '\200'              **# there are no negative chars, so that’s bad**
+(gdb) print ch
+$7 = -128 '\200'                            # there are no negative chars, so that's bad
 
-**(gdb) print i**
-$8 = 18446744073709547431 **# ok, that is REALLY bad**
+(gdb) print i
+$8 = 18446744073709547431                   # ok, that is REALLY bad
+```
 
-![](Red_star.svg)
+⭐ So, what's the problem, again? Describe what happened to your TA.
 
-So what’s the problem again? Show your TA.
+Read the `fn2()` code and fix it to run as it should. Make a new version called `fn2_fixed()`.
 
-To Do: Read the fn2 code and fix it to run as it should. Make a new version called fn2_fixed. Look at the comments.
-</pre>
+The following is a debugging session for `fn1()`. I'm not explaining any of it, just showing some stuff. Notice that I set a breakpoint I wanted to change, and searched the docs to find the command to do that (`clear`).
 
-### Looking at fn1
+Also, the lines numbers are now off because you have a `fn2_fixed()` in the code to get it to run.
 
-<pre class="western" style="font-weight: normal">  
-
-Here is some debugging for fn1\. I’m not explaining any of it, just
-showing some stuff. Notice I set a break point I wanted to change,
-searched the docs to find it. Command is **clear** 
-
-Also, the lines numbers are now off because you have a “fn2_fixed” in the code to get it to run.
-
-**(gdb) break main**
+```
+(gdb) break main
 Breakpoint 1 at 0x400e0f: file badString.cpp, line 40.
-**(gdb) break fn2_fixed**
+(gdb) break fn2_fixed
 Breakpoint 2 at 0x400c72: file badString.cpp, line 20.
-**(gdb) unbreak fn2_fixed**
+(gdb) unbreak fn2_fixed
 Undefined command: "unbreak".  Try "help".
-**(gdb) help break**
+(gdb) help break
 Set breakpoint at specified line or function.
 break [PROBE_MODIFIER] [LOCATION] [thread THREADNUM] [if CONDITION]
 PROBE_MODIFIER shall be present if the command is to be placed in a
@@ -395,7 +465,7 @@ heir
 conditions are different.
 
 Do "help breakpoints" for info on other commands dealing with breakpoints.
-**(gdb) help breakpoints**
+(gdb) help breakpoints
 Making program stop at certain points.
 
 List of commands:
@@ -420,19 +490,19 @@ clear -- Clear breakpoint at specified line or function
 commands -- Set commands to be executed when a breakpoint is hit
 ---Type <return> to continue, or q <return> to quit---q
 Quit
-**(gdb) clear**
+(gdb) clear
 No source file specified.
-**(gdb) clear fn2_fixed**
+(gdb) clear fn2_fixed
 Deleted breakpoint 2
-**(gdb) break fn1**
+(gdb) break fn1
 Breakpoint 3 at 0x400d8f: file badString.cpp, line 35.
 Breakpoint 1, main () at badString.cpp:41
 warning: Source file is more recent than executable.
-**(gdb) run**
+(gdb) run
 41	  string my_string = "abcdefg";
-**(gdb) n**
+(gdb) n
 42	  cout << fn2_fixed(my_string) << endl;
-**(gdb) continue**
+(gdb) continue
 Continuing.
 terminate called after throwing an instance of 'std::out_of_range'
   what():  basic_string::substr: __pos (which is 18446744073709551615) > this->size() (which is 7)
@@ -441,30 +511,30 @@ Program received signal SIGABRT, Aborted.
 0x00007ffff7244067 in __GI_raise (sig=sig@entry=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:56
 56	../nptl/sysdeps/unix/sysv/linux/raise.c: No such file or directory.
 
-**(gdb) bt**
+(gdb) bt
 #0  0x0000000000400e45 in fn1 (str="abcdefg") at badString.cpp:37
 #1  0x0000000000400f0f in main () at badString.cpp:43
 
-**(gdb) up 9**
+(gdb) up 9
 #9  0x0000000000400f0f in main () at badString.cpp:43
 43	  cout << fn1(my_string) << endl;
 
-**(gdb) down 1**
+(gdb) down 1
 #8  0x0000000000400e45 in fn1 (str="abcdefg") at badString.cpp:37
 37	  return str.substr(indx-1, 3);
 
-(**gdb) print indx**
+(gdb) print indx
 $1 = 0
-![](Red_star.svg)
+```
 
-So what’s wrong? Can you fix it? Show your TA</pre>
+⭐ What went wrong here? Can you fix it? Show your TA.
 
-# Keyboard shortcuts in gdb
+## Keyboard Shortcuts
 
-gdb supports **command line completion**; by typing in a prefix you can hit <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">TAB</font></font> and <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> will try to complete the command line for you.
+`gdb` supports command line completion; by typing in a prefix, you can hit TAB and `gdb` will try to complete the command line for you.
 
-Also, you can give just the **unique prefix** of a command as the command and <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> will execute it. For example, rather than entering the command <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">print x</font></font>, you can just enter <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">p x</font></font> to print out the value of <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">x</font></font>.
+Also, you can just give the unique prefix of a command and `gdb` will execute it. For example, rather than entering the command, `print x`, you can enter `p x` to print out the value of `x`.
 
-The **up and down arrow keys** can be used to scroll through previous command lines, so you do not need to re-type them each time.
+The up and down arrow keys can be used to scroll through previous command lines, so you do not need to re-type them each time.
 
-If you just hit <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">RETURN</font></font> at the <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> prompt, <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">gdb</font></font> will execute the **most recent previous command** again. This is particularly useful if you are stepping through the execution, then you don't have to type next each time you want to execute the next instruction, you can just type it one time and then hit <font face="Liberation Mono, monospace"><font size="2" style="font-size: 10pt">RETURN</font></font>.
+If you hit RETURN at the `gdb` prompt, `gdb` will execute the most recent command again. This is particularly useful if you are stepping through the execution -- you don't have to type `next` each time you want to execute the `next` instruction -- you can type it one time, and then hit RETURN for as long as you'd like.
