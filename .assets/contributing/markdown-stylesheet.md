@@ -90,13 +90,23 @@ It's usually best to wrap the entire sentence in the in-line link for better vis
 
 Center them.
 
+You'll have to wrap the image/table in a `<div>` tag, using the (outdated) `align` attribute. Example:
+
+```html
+<div align="center">
+    <img src="hello.png">
+</div>
+```
+
+Note that GitHub won't center the image/table in its preview, but it will be centered once committed.
+
 ### 8. LaTeX
 
 GitHub's Markdown renderer does not inherently support LaTeX. There is, however, a hack-y way of creating LaTeX expressions in GitHub Markdown [as described in this gist](https://gist.github.com/a-rodin/fef3f543412d6e1ec5b6cf55bf197d7b).
+ 
+[You can use this LaTeX to image converter that exploits the weird GitHub quirk (what I've been using for the most part).](https://tex-image-link-generator.herokuapp.com/) I have noticed that this tool struggles with representing matrices, however.
 
 Use LaTeX when describing mathematical expressions. Note that, if you are writing the Markdown with a preview given by your text editor, your view may be different from what GitHub will render it as. Edit as necessary once you've pushed your Markdown to the repository.
-
-Of course, since this is a hack-y way of rendering LaTeX in GitHub Markdown, it comes with one caveat: you must use `%2B` to represent the `+` symbol. The reasons for why is explained in the gist.
 
 __Note__: students that are using GitHub's dark mode, or have some sort of dark mode extension on their browser, may not be able to see the LaTeX expressions (because they're rendered in a black font, and would presumably be on a black/very dark background).
 
