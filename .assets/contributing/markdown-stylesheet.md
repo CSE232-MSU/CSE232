@@ -127,3 +127,9 @@ Both halves of the assignment can have a multitude of H3 subsections. The coding
 If a visualization of some concept is necessary, you may insert a graphic taken from the internet. Please notify me (Braedyn), however, because I will make a version of that graphic in a way that cooperates better with GitHub's Markdown styling. The graphic taken from the internet will be a placeholder.
 
 On a similar note, if the problem requires a lot of mathematical prerequisite, one should use LaTeX (discussed above) to express any and all formulae because it looks better than plaintext.
+
+#### Checkpoints
+
+Use the star emoji (⭐) to represent checkpoints of the lab assignment (where the student must verify with the TA that they're on the right track).
+
+The star can be typed as `:star:` in the Markdown document for it to render as its proper emoji on the GitHub page (so you don't need to go to some website to copy-and-paste).
