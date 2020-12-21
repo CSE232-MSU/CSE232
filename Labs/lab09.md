@@ -102,27 +102,37 @@ The `MathVector` constructor has two declarations:
 
 You are to _implement_ the following functions in your math_vector.cpp file:
 
-### `string vec_to_str(const MathVector &v)`
-
-_This is not a member function, it is a generic function_.
+```c++
+string vec_to_str(const MathVector &v)
+```
 
 Takes a `MathVector` instance and returns a `string` representation of the `MathVector` in the format "`x:y`".
 
-### `MathVector add(const MathVector &other)`
+_This is not a member function, it is a generic function_.
+
+```c++
+MathVector add(const MathVector &other)
+```
 
 Takes a second operand `MathVector` instance, `other`, and adds them to produce a new `MathVector` instance.
 
 ⭐ Show the TA your functioning `add()` method before moving on.
 
-### `MathVector mult(long a)`
+```c++
+MathVector mult(long a)
+```
 
 Multiplies the `MathVector` instance by a scalar, `a`. Returns the resultant `MathVector` instance.
 
-### `long mult(const MathVector &other)`
+```c++
+long mult(const MathVector &other)
+```
 
 Takes the dot product between the two `MathVector` instances. Returns the resultant `long`.
 
-### `double magnitude()`
+```c++
+double magnitude()
+```
 
 Takes the magnitude of the `MathVector` instance. Returns `double`.
 
