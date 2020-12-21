@@ -69,7 +69,7 @@ The basic idea is to draw a series of trapezoids that approximate the area under
 First, remember how to calculate the area of a trapezoid?
 
 <div align="center">
-    <img src="../.assets/images/trapezoid.svg" width="50%">
+    <img src="../.assets/images/trapezoid.svg" width="60%">
 </div>
 
 <div align="center">
@@ -90,13 +90,13 @@ alt="h">, add the parallel distances, divide by 2, and multiply everything by <i
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+h" 
 alt="h">.
 
-Now, if we were to place some trapezoid underneath a given curve by rotating it 90 degrees, such that the parallel sides now hit the curve...
+Now, if we were to place some trapezoid underneath a given curve by rotating it 90 degrees, such that the parallel sides are now bounded between the x-axis and the curve...
 
 <div align="center">
     <img src="../.assets/images/trapezoidal_rule_init.png">
 </div>
 
-We find that the parallel sides now become the distance from the x-axis to the curve (those black points at the tips of the trapezoid hitting the curve, which we'll call <img src=
+We find that the parallel sides now become the distance from the x-axis to the curve (those black points at the top of the trapezoid, which we'll call <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+y_1" 
 alt="y_1"> and <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+y_2" 
@@ -130,19 +130,39 @@ alt="b">:
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%5Capprox+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_i%29+%2B+f%28x_i+%2B+%5CDelta+x%29%29" 
-alt="\int_{a}^{b} f(x) \approx \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_i + \Delta x))">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%5Capprox+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28%5Cfrac%7By_i+%2B+y_%7Bi+%2B+1%7D%7D%7B2%7D+%5CDelta+x%29" 
+alt="\int_{a}^{b} f(x) \approx \sum_{i=1}^{n} (\frac{y_i + y_{i + 1}}{2} \Delta x)">
+</div>
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_i%29+%2B+f%28x_%7Bi+%2B+1%7D%29%29" 
+alt="= \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_{i + 1}))">
+</div>
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D+%5Cfrac%7B%5CDelta+x%7D%7B2%7D%5B%28f%28x_1%29+%2B+f%28x_2%29%29+%2B+%28f%28x_2%29+%2B+f%28x_3%29%29+%2B+...+%2B+%28f%28x_n%29+%2B+f%28x_%7Bn%2B1%7D%29%29%5D" 
+alt="= \frac{\Delta x}{2}[(f(x_1) + f(x_2)) + (f(x_2) + f(x_3)) + ... + (f(x_n) + f(x_{n+1}))]">
 </div>
 
 &nbsp;
 
 Where <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" 
-alt="n"> is the number of trapezoids, and <img src=
+alt="n"> is the number of trapezoids, <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x+%3D+%5Cfrac%7Bb+-+a%7D%7Bn%7D" 
-alt="\Delta x = \frac{b - a}{n}">.
+alt="\Delta x = \frac{b - a}{n}">, and <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_1+%3D+a" 
+alt="x_1 = a">, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_2+%3D+a+%2B+%5CDelta+x" 
+alt="x_2 = a + \Delta x">, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_3+%3D+a+%2B+2%5CDelta+x" 
+alt="x_3 = a + 2\Delta x">, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_4+%3D+a+%2B+3%5CDelta+x" 
+alt="x_4 = a + 3\Delta x">, ...
 
-(The formula here is a derivation of the one shown in the animation -- put into terms that make it easier to program. Can you see how it's equivalent to the one in the animation? 🤔)
+The formula here is an equivalence to the one shown in the animation -- put into terms that make it easier to program. Can you see how it's equivalent to the one in the animation? 🤔
 
 ### Program Specifications
 
@@ -168,7 +188,7 @@ double integral(double x)
 
 Takes an input, `x`, and returns the substitution into the equation <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+-2x%5E3+%2B+%5Cfrac%7B5%7D%7B2%7D+x%5E2+%2B+3x" 
-alt="-2x^3 + \frac{5}{2} x^2 + 3x">. This is the symbolically-manipulated, "actual" integral of `fn()`. We'll be using the returns of this function to compare with our approximations.
+alt="-2x^3 + \frac{5}{2} x^2 + 3x">. This is the symbolically-manipulated, "actual" integral function of `fn()`. We'll be using the returns of this function to compare with our approximations.
 
 ⭐ Please show the TA your `fn()` and `integral()` functions before moving on.
 
@@ -220,30 +240,28 @@ Trap count:16, estimate:3.4961, exact:3.5000, tolerance:0.0100
 
 ### Assignment Notes
 
-1. Where should the summation begin from? Well, remember that we're integrating *from* <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+a" 
-alt="a"> to <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+b" 
-alt="b"> -- these guys are points on the x-axis!
-2. Where do you obtain the next <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x" 
-alt="x"> in the summation series? Remember that all of the trapezoids are of equal width. That width is represented by the variable we derived earlier, <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x" 
-alt="\Delta x">. If we have <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_1+%3D+%5Clambda" 
-alt="x_1 = \lambda">, then <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_2+%3D+%5Clambda+%2B+%5CDelta+x" 
-alt="x_2 = \lambda + \Delta x">.
-3. Summations in mathematics are inclusively bounded, meaning that the formula we derived earlier is iterating from 1 to <img src=
+1. Summations in mathematics are inclusively bounded, meaning that the formula we derived earlier is iterating from 1 to <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" 
 alt="n"> with the 1 _and_ <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" 
 alt="n"> being an eventual substitution for the subscript, <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+i" 
-alt="i">. Be careful with how you're modeling the summation (make sure you're iterating *exactly* `n` times).
+alt="i">. Be careful with how you're modeling the summation -- make sure you're iterating *exactly* `n` times (it's really easy to accidentally iterate `n - 1` or `n + 1` times).
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%5Capprox+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_i%29+%2B+f%28x_i+%2B+%5CDelta+x%29%29" 
-alt="\int_{a}^{b} f(x) \approx \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_i + \Delta x))">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_i%29+%2B+f%28x_%7Bi+%2B+1%7D%29%29" 
+alt="= \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_{i + 1}))">
 </div>
+
+&nbsp;
+
+2. Calculate <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x" 
+alt="\Delta x"> at the beginning of `trapezoid()` to act as a constant. Then, sum together the series, and multiply that sum by <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Cfrac%7B%5CDelta+x%7D%7B2%7D" 
+alt="\frac{\Delta x}{2}"> afterwards. It'll be helpful to have <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x" 
+alt="\Delta x"> sitting around to obtain each <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_i" 
+alt="x_i">.
