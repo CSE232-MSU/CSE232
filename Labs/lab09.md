@@ -102,6 +102,8 @@ The `MathVector` constructor has two declarations:
 
 You are to _implement_ the following functions in your math_vector.cpp file:
 
+&nbsp;
+
 ```c++
 string vec_to_str(const MathVector &v)
 ```
@@ -109,6 +111,8 @@ string vec_to_str(const MathVector &v)
 Takes a `MathVector` instance and returns a `string` representation of the `MathVector` in the format "`x:y`".
 
 _This is not a member function, it is a generic function_.
+
+&nbsp;
 
 ```c++
 MathVector add(const MathVector &other)
@@ -118,17 +122,23 @@ Takes a second operand `MathVector` instance, `other`, and adds them to produce 
 
 ⭐ Show the TA your functioning `add()` method before moving on.
 
+&nbsp;
+
 ```c++
 MathVector mult(long a)
 ```
 
 Multiplies the `MathVector` instance by a scalar, `a`. Returns the resultant `MathVector` instance.
 
+&nbsp;
+
 ```c++
 long mult(const MathVector &other)
 ```
 
 Takes the dot product between the two `MathVector` instances. Returns the resultant `long`.
+
+&nbsp;
 
 ```c++
 double magnitude()
@@ -137,6 +147,8 @@ double magnitude()
 Takes the magnitude of the `MathVector` instance. Returns `double`.
 
 ⭐ Show the TA your completed `MathVector` class.
+
+&nbsp;
 
 ### Assignment Notes
 
