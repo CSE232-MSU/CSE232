@@ -265,3 +265,10 @@ alt="\frac{\Delta x}{2}"> afterwards. It'll be helpful to have <img src=
 alt="\Delta x"> sitting around to obtain each <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_i" 
 alt="x_i">.
+3. How do you obtain the exact area again? Remember that:
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%3D+F%28b%29+-+F%28a%29" 
+alt="\int_{a}^{b} f(x) = F(b) - F(a)">
+</div>
