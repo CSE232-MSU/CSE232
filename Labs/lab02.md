@@ -39,10 +39,10 @@ This copies the directory, "other", into a directory called "other2":
 cp -r other other2
 ```
 
-1. Save this [lab02_folder.zip](../.assets/extra/lab02_folder.zip) file to your My Documents folder.
-2. Right click the zipped file in My Documents and select "Extract Here". You should now have a folder called "lab02_folder".
+1. Save this [lab02.zip](../.assets/extra/lab02.zip) file to your My Documents folder.
+2. Right click the zipped file in My Documents and select "Extract Here". You should now have a folder called "lab02".
 3. Change directories to My Documents (`cd ~/My_Documents`).
-4. `cd` to the folder named "lab02_folder", then to the subfolder named "b_folder", then to the folder named "start".
+4. `cd` to the folder named "lab02", then to the subfolder named "b_folder", then to the folder named "start".
 5. If you run `ls`, you should see a folder named "other" and a file named "f.txt".
 6. Copy the file named "f.txt" to the file "f2.txt".
 7. Copy the folder named "a_folder" to the working directory. The "a_folder" is in the same folder as "b_folder".

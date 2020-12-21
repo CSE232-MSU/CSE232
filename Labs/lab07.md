@@ -22,11 +22,13 @@ A _matrix_ is a two-dimensional data structure. It has a _shape_ indicated by th
 alt="\textbf{A} = \begin{pmatrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{pmatrix}">
 </div>
 
-This matrix, A, has three rows and three columns -- making it a square matrix.
+This matrix, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cmathbf%7BA%7D" 
+alt="\mathbf{A}">, has three rows and three columns -- making it a square matrix.
 
 #### Matrix Operations
 
-We will perform two operations on our matrices, yielding a new matrix as a result.
+We will perform two operations on our matrices, both of which yield a new matrix as a result.
 
 The first is _scalar multiplication_. Regardless of the size or shape, if the matrix is not empty, we multiply the scalar value by every entry in the matrix, yielding a new matrix.
 
@@ -34,7 +36,9 @@ The first is _scalar multiplication_. Regardless of the size or shape, if the ma
 <img src="../.assets/images/matrix_mul.svg">
 </div>
 
-Where λ is some scalar (any number).
+Where <img src=
+"https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Clambda" 
+alt="\lambda"> is some scalar (i.e., any number).
 
 The second is _matrix addition_. The shape of two matrices _must be the same_ for addition to go forward. If the shapes are the same, and they are both not empty, we add each row/column value of one matrix to each row/column value of the second matrix in each respective location, yielding a new matrix. We do this for every value between the two matrices.
 
@@ -42,46 +46,50 @@ The second is _matrix addition_. The shape of two matrices _must be the same_ fo
 <img src="../.assets/images/matrix_add.svg">
 </div>
 
-### Requirements
+(In these depictions, you'll notice that they begin enumerating the row/column indices from 1. Remember that we, programmers, always start indices from 0)
 
-We provide a skeleton file ([lab07.cpp](lab07/lab07.cpp)) that you can modify for the requirements of this lab. You can insert the required functions into this file for the lab. We will use a `vector<vector<T>>` as the underlying representation of our matrix meaning that the type of the elements of the matrix will be templated. Thus all of our functions must be templated.
+### Program Specifications
 
-In the file provided, we provide two using definitions to make things a little easier, to wit:
+We provide some starter code ([in this .zip file](../.assets/extra/lab07.cpp)) that you can modify for the requirements of this lab. We will use a `vector<vector<T>>` type as the underlying representation of our matrix, meaning that the type of the elements of the matrix will be templated. Thus, all of our functions must be templated, as well.
 
-<pre>template<typename T>
+In the starter code, we provide two definitions to make things a little easier:
+
+```c++
+template<typename T>
 using matrix_row = vector<T>;
 
 template<typename T>
-using matrix = vector<matrix_row<T>>;</pre>
+using matrix = vector<matrix_row<T>>;
+```
 
-Thus you can declare a new matrix with the `matrix` type, and if you need to you can declare an individual row as a `matrix_row` type. These types are used in the main program.
+With these definitions, you can declare a new matrix with the `matrix` type, and declare matrix rows as the `matrix_row` type.
 
-### Function Declarations
+The functions are described in the starter code, you can read more about them there.
 
-The functions are clearly described in the skeleton file provided, read them there.
+⭐ Show your TA when you can successfully handle case 1.
 
-![](Red_star.svg) Show your TA when you can successfully handle `Case 1`.
+⭐ Show your TA when you can successfully handle all of the cases.
 
-![](Red_star.svg) Show your TA when you can successfully handle all the cases.
+### Assignment Notes
 
-### Hints
+1.  Start out by solving case 1 and commenting out the rest of the `main()` code. When you've solved it, bring back case 2, solve case 2, and so on.
+2.  You can make a temporary row (of type `matrix_row`) and `push_back()` values on to that. You can then `push_back()` the row onto a matrix (of type `matrix`). You can reuse the row in your loop, but remember to `clear()` it first.
+3.  Make sure the printing of the matrix is nicely aligned, as shown in the output below:
 
-1.  Start out by solving `Case 1` and commenting out the rest of the main code. When you've solved that then include back `Case 2` (so now working on `Case 1` and `Case 2`) and so on.
-2.  You can make a temporary row (of type `matrix_row`) and `push_back` values on to that. You can then `push_back` the row onto a matrix (of type `matrix`). You can reuse the row in the your loop, but remember to `.clear()` it first.
-3.  Make sure the printing of the matrix is nicely aligned (column and row) as shown in the output below:
+```
+Case 1
+ 0  2  4
+ 6  8 10
+12 14 16
 
-    <pre>Case 1
-      0  2  4
-      6  8 10
-     12 14 16
+Case 2
+could not add
 
-    Case 2
-    could not add
-    Case 3
-        1.14    4.56
-         7.6   12.92
-        15.2     -19
+Case 3
+1.14    4.56
+ 7.6   12.92
+15.2     -19
 
-    Case 4
-    could not multiply
-    </pre>
+Case 4
+could not multiply
+```
