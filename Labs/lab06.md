@@ -172,21 +172,19 @@ Of course, the simpler solution is to make use of the (not-yet-standardized) `#p
 
 Make a new folder in your lab 6 directory called "splitter", and add three new files to it: main.cpp, functions.cpp and functions.hpp.
 
-### `vector<string> split(const string &s, char sep=' ')`
+&nbsp;
 
-The `split()` function should take in a `string` and return a `vector<string>` of the individual elements in the string that are separated by a given separator character (default of `' '`). 
+```c++
+vector<string> split(const string &s, char sep=' ')
+```
 
-Examples: 
+The `split()` function should take in a `string` and return a `vector<string>` of the individual elements in the string that are separated by a given separator character (default of `' '`). Examples: 
 
 `split("hello mom and dad")` should return `{"hello", "mom", "and", "dad"}`
 
 `split("1,2,3,4", ',')` should return `{"1", "2", "3", "4"}`
 
-Open functions.hpp, and store the function declaration of `split()` there. The declaration should be:
-
-```c++
-vector<string> split(const string &s, char sep=' ');
-```
+Open functions.hpp, and store the function declaration of `split()` there. The declaration should be the snippet of code above **with a semicolon at the end, don't forget!**.
 
 As discussed in lecture, default parameter values **go in the header file only**. The default does not occur in the definition if it occurred in the declaration.
 
@@ -198,23 +196,23 @@ You can compile functions.cpp (not build, at least not yet) to see if functions.
 
 ⭐ Show your TA the object file generated after compiling the functions.cpp file.
 
-### `void print_vector(ostream &out, const vector<string> &v)`
+&nbsp;
+
+```c++
+void print_vector(ostream &out, const vector<string> &v)
+```
 
 This function prints all the elements of `v` to the output stream, `out`. Note that `out` and `v` are passed by reference.
 
-Store the function in functions.cpp, and put its declaration in functions.hpp. It should look like this:
-
-```c++
-void print_vector(ostream &out, const vector<string> &v);
-```
+Store the function in functions.cpp, and put its declaration in functions.hpp like you did for `split()`. **Don't forget the semicolon!**
 
 Compile the function (not build, compile) to make sure it follows the rules.
 
 **Note**: `ostream` is a category of all possible output streams (streams like `cout` and `ostringstream`). This function should be invoked with a specific `ostream` (either `cout` or `ostringstream`).
 
-### `main()`
+&nbsp;
 
-The `main()` function should go in main.cpp.
+Your `main()` function should go in main.cpp.
 
 In main.cpp, be sure to `#include "functions.hpp"` (note the quotes). This makes all of the functions in functions.hpp available to main.cpp. 
 
@@ -224,20 +222,16 @@ Write a `main()` function that:
 3. Splits the string using the `split()` function (which returns a `vector<string>`, remember)
 4. Prints the vector using the `print_vector()` function
 
-Compile (not build) main.cpp to see that it follows the rules.
-
-### Building the Executable
-
-Now, build the project with the output executable name: "main".
+Compile (not build) main.cpp to see that it follows the rules. If you've successfully compiled it, build the project with the output executable name as "main" to test everything.
 
 ⭐ Demonstrate a working "main" executable to your TA.
 
+&nbsp;
+
 ### Assignment Notes
 
-There are a couple ways to do the `split()` function...
-
-- Using `getline()`
-    - `getline()` takes a delimiter character as a third argument. In combination with an input string stream, you can use `getline()` to split the string and `push_back()` each element onto the vector.
+1. Consider using the `getline()` function for your implementation of `split()`.
+    - `getline()` takes a delimiter character as a third argument. In combination with an input string stream, you can use `getline()` to split the string and `push_back()` each element onto the vector. 
     - Example: a call to `getline(stream, line, delim)` gets the string from `stream` (could be an `istream`, `ifstream`, `istringstream`, etc.) up to the end of `line`, or the `delim` character.
 
-Default parameter values needs to be set at **declaration time**, which means that the default value for a function parameter should be in the header file (where the declaration is). If it is in the declaration, it should not be in the definition.
+2. Default parameter values needs to be set at **declaration time**, which means that the default value for a function parameter should be in the header file (where the declaration is). If it is in the declaration, it should not be in the definition.
