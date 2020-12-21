@@ -6,7 +6,7 @@
 
 ### `cp`
 
-The `cp` command "copies" files from one location to another. The `cp` command is used with two arguments:
+The `cp` command "copies" files from one location to another. It's used with two arguments:
 
 1. The source file, the file you want to copy
 2. The destination file, where you want your copy to be placed
@@ -56,7 +56,7 @@ cp -r other other2
 
 ### `mv`
 
-The `mv` command is short for "move" and is identical to `cp`, except the original source doesn't exist after if is moved to the destination. `mv` does not need the `-r` flag to move folders, it is happy to move folders just like files. Example:
+The `mv` command is short for "move" and is identical to `cp`, except the original source doesn't exist after it has been moved to the destination. `mv` does not need the `-r` flag to move folders, it is happy to move folders just like files. Example:
 
 ```bash
 mv other other2
