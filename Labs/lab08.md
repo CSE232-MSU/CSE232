@@ -1,22 +1,28 @@
 # Lab 08 - Structs
 
-## Wildcards and Filenames
+## Wildcards
 
-When compiling multiple file C++ projects, it is often annoying to have to specify each individual cpp file to the compiler. Example:
+When compiling multiple C++ files, it's pretty annoying to have to specify each .cpp file to the compiler.
 
-<pre>g++ -std=c++17 -Wall -g main.cpp stack.cpp disk.cpp io.cpp</pre>
+```bash
+g++ -std=c++17 -Wall -g main.cpp stack.cpp disk.cpp io.cpp
+```
 
-BASH gives an alternative way to select files that match a particular pattern. Notice that the above files were all the files in the folder that ended with '.cpp'. You can use a wildcard (the asterisk '*') to denote all of those files at once. Example:
+Recall our discussion in Lab 06 -- bash gives an alternative method to select files that match a particular pattern. Notice that the above files were all the files in the folder that ended with '.cpp'. You can use a _wildcard_ (the asterisk, `*`) to denote all of those files at once. Example:
 
-<pre>g++ -std=c++17 -Wall -g *.cpp</pre>
+```bash
+g++ -std=c++17 -Wall -g *.cpp
+```
 
-The `*.cpp` expands to all of the files that end with '.cpp'.
+The `*` symbol roughly translates to "all", where, when combined with the '.cpp' extension, it becomes "all files that end in '.cpp'".
 
-This is often useful when you want to do things to multiple files. Lets say you have a folder named `headers` that you want to move all the '.h' files to. You can do so with:
+This can be used in other contexts beyond compilation. Let's say you have a folder named "headers", where you want to move all of your '.h' files to. You can do so with:
 
-<pre>mv *.h headers/</pre>
+```bash
+mv *.h headers/
+```
 
-![](Red_star.svg) Show your TA what happens when you use wildcards to open multiple '.cpp' files with the `gedit` command.
+⭐ Show your TA what happens when you use wildcards to open multiple '.cpp' files with the `gedit` command.
 
 ## Debugging Code with an IDE (Visual Studio 2019)
 
@@ -82,7 +88,7 @@ While you should remember the issues with the code from Lab05, I encourage you t
 
 ![](Red_star.svg) Show your TA the Autos and Call Stack windows and explain what they are showing.
 
-## Programming Assignment
+## Coding Assignment
 
 This lab will have you apply generic algorithms to various programming problems.
 

@@ -27,7 +27,7 @@ All lectures are distributed via pre-recorded videos available each week on the 
 
 ### Laboratory Sessions
 
-Synchronous lab sessions will be conducted through Zoom (you will recieve an invite from your TA). Attendance at scheduled laboratory sessions is *mandatory*. Repeatedly missing laboratory sessions will reduce your final grade (see below).
+Synchronous lab sessions will be conducted through Zoom (you will recieve an invitation from your TA). Attendance at scheduled laboratory sessions is *mandatory*. Repeatedly missing laboratory sessions will reduce your final grade (see below).
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistant to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
 
