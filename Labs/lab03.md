@@ -130,8 +130,8 @@ alt="b">:
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%5Capprox+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_%7Bi-1%7D%29+%2B+f%28x_i%29%29" 
-alt="\int_{a}^{b} f(x) \approx \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_{i-1}) + f(x_i))">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%5Capprox+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_i%29+%2B+f%28x_i+%2B+%5CDelta+x%29%29" 
+alt="\int_{a}^{b} f(x) \approx \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_i + \Delta x))">
 </div>
 
 &nbsp;
@@ -141,6 +141,8 @@ Where <img src=
 alt="n"> is the number of trapezoids, and <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x+%3D+%5Cfrac%7Bb+-+a%7D%7Bn%7D" 
 alt="\Delta x = \frac{b - a}{n}">.
+
+(The formula here is a derivation of the one shown in the animation -- put into terms that make it easier to program. Can you see how it's equivalent to the one in the animation? 🤔)
 
 ### Program Specifications
 
@@ -200,7 +202,7 @@ All floating point values should have 4 decimal places of precision when display
 
 **Hint**: You might want to consider a do-while statement and the `std::abs()` function (from the `<cmath>` header) in your `main()`.
 
-### Example Output
+Example output from the `main()`:
 
 ```
 Lower Range: 0
@@ -215,3 +217,33 @@ Trap count:16, estimate:3.4961, exact:3.5000, tolerance:0.0100
 ```
 
 ⭐ Please show the TA your working program.
+
+### Assignment Notes
+
+1. Where should the summation begin from? Well, remember that we're integrating *from* <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+a" 
+alt="a"> to <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+b" 
+alt="b"> -- these guys are points on the x-axis!
+2. Where do you obtain the next <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x" 
+alt="x"> in the summation series? Remember that all of the trapezoids are of equal width. That width is represented by the variable we derived earlier, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x" 
+alt="\Delta x">. If we have <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_1+%3D+%5Clambda" 
+alt="x_1 = \lambda">, then <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_2+%3D+%5Clambda+%2B+%5CDelta+x" 
+alt="x_2 = \lambda + \Delta x">.
+3. Summations in mathematics are inclusively bounded, meaning that the formula we derived earlier is iterating from 1 to <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" 
+alt="n"> with the 1 _and_ <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" 
+alt="n"> being an eventual substitution for the subscript, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+i" 
+alt="i">. Be careful with how you're modeling the summation (make sure you're iterating *exactly* `n` times).
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%5Capprox+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_i%29+%2B+f%28x_i+%2B+%5CDelta+x%29%29" 
+alt="\int_{a}^{b} f(x) \approx \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_i + \Delta x))">
+</div>
