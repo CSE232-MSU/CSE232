@@ -11,7 +11,7 @@ The `cp` command "copies" files from one location to another. It's used with two
 1. The source file, the file you want to copy
 2. The destination file, where you want your copy to be placed
 
-You can copy files that are in your working directory or in another directory by specifing a path. Examples:
+You can copy files that are in your working directory or in another directory by specifying a path. Examples:
 
 This copies a.txt into a file called b.txt:
 
