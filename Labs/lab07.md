@@ -139,3 +139,5 @@ Case 3
 Case 4
 could not multiply
 ```
+
+4. How can you iterate through the elements of a matrix without knowing its type? You can use the templated type, `T`, or `auto`, remember.
