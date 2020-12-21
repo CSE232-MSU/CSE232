@@ -69,7 +69,7 @@ The basic idea is to draw a series of trapezoids that approximate the area under
 First, remember how to calculate the area of a trapezoid?
 
 <div align="center">
-    <img src="../.assets/images/trapezoid.svg" width="60%">
+    <img src="../.assets/images/trapezoid.svg" width="50%">
 </div>
 
 <div align="center">
