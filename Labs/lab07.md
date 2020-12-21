@@ -22,9 +22,11 @@ A _matrix_ is a two-dimensional data structure. It has a _shape_ indicated by th
 alt="\textbf{A} = \begin{pmatrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{pmatrix}">
 </div>
 
+&nbsp;
+
 This matrix, <img src=
-"https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Cmathbf%7BA%7D" 
-alt="\mathbf{A}">, has three rows and three columns -- making it a square matrix.
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Ctextbf%7BA%7D" 
+alt="\textbf{A}">, has three rows and three columns -- making it a square matrix.
 
 #### Matrix Operations
 
@@ -36,9 +38,11 @@ The first is _scalar multiplication_. Regardless of the size or shape, if the ma
 <img src="../.assets/images/matrix_mul.svg">
 </div>
 
+&nbsp;
+
 Where <img src=
-"https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%5Clambda" 
-alt="\lambda"> is some scalar (i.e., any number).
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Ctextbf%7B%5Clambda%7D" 
+alt="\textbf{\lambda}"> is some scalar (i.e., any number).
 
 The second is _matrix addition_. The shape of two matrices _must be the same_ for addition to go forward. If the shapes are the same, and they are both not empty, we add each row/column value of one matrix to each row/column value of the second matrix in each respective location, yielding a new matrix. We do this for every value between the two matrices.
 
@@ -46,11 +50,15 @@ The second is _matrix addition_. The shape of two matrices _must be the same_ fo
 <img src="../.assets/images/matrix_add.svg">
 </div>
 
-(In these depictions, you'll notice that they begin enumerating the row/column indices from 1. Remember that we, programmers, always start indices from 0)
+&nbsp;
+
+In these depictions, you'll notice that they begin enumerating the row/column indices from 1. Remember that we, programmers, always start indices from 0.
 
 ### Program Specifications
 
-We provide some starter code ([in this .zip file](../.assets/extra/lab07.cpp)) that you can modify for the requirements of this lab. We will use a `vector<vector<T>>` type as the underlying representation of our matrix, meaning that the type of the elements of the matrix will be templated. Thus, all of our functions must be templated, as well.
+[Download the starter code provided here.](../.assets/extra/lab07.cpp)
+
+We will use a `vector<vector<T>>` type as the underlying representation of our matrix, meaning that the type of the elements of the matrix will be templated. Thus, all of our functions must be templated, as well.
 
 In the starter code, we provide two definitions to make things a little easier:
 
@@ -64,11 +72,49 @@ using matrix = vector<matrix_row<T>>;
 
 With these definitions, you can declare a new matrix with the `matrix` type, and declare matrix rows as the `matrix_row` type.
 
-The functions are described in the starter code, you can read more about them there.
+Implement the following functions:
 
-⭐ Show your TA when you can successfully handle case 1.
+&nbsp;
+
+```c++
+template<typename T>
+string matrix_to_str(const matrix<T> &m1, size_t width=3)
+```
+
+Converts the matrix, `m1`, to a `string` representation. The `width` argument should be used to set the width between elements within the rows of the matrix (use `std::setw()`), defaulted to 3.
+
+&nbsp;
+
+```c++
+template<typename T>
+bool same_size(const matrix<T> &m1, const matrix<T> &m2)
+```
+
+Tests if two matrices, `m1` and `m2`, are of the same size/shape.
+
+&nbsp;
+
+```c++
+template<typename T>
+matrix<T> add(const matrix<T> &m1, const matrix<T> &m2)
+```
+
+Adds matrices, `m1` and `m2`, to compose a new matrix. `m1` and `m2` must be identically shaped for addition to occur. If they are _not_ the same shape, return an empty matrix.
+
+⭐ Show your TA when you can successfully handle case 1 (which tests the three functions above).
+
+&nbsp;
+
+```c++
+template<typename T>
+matrix<T> scalar_multiply(const matrix<T> &m, const T &val)
+```
+
+Multiplies a matrix, `m`, by the scalar value, `val`, to return a new matrix. If `m` is an empty matrix, return an empty matrix.
 
 ⭐ Show your TA when you can successfully handle all of the cases.
+
+&nbsp;
 
 ### Assignment Notes
 
