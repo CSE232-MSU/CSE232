@@ -34,17 +34,15 @@ For the following examples, let:
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Ba%7D+%3D+%28x_1%2C+y_1%29" 
-alt="\vec{a} = (x_1, y_1)">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%3D+%28x_1%2C+y_1%29" 
+alt="\vec{v} = (x_1, y_1)">
 </div>
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bb%7D+%3D+%28x_2%2C+y_2%29" 
-alt="\vec{b} = (x_2, y_2)">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bw%7D+%3D+%28x_2%2C+y_2%29" 
+alt="\vec{w} = (x_2, y_2)">
 </div>
-
-(The arrows above the variable names signify that these are vectors, rather than coordinate pairs)
 
 #### Vector Addition
 
@@ -52,8 +50,8 @@ The addition of two vectors returns a new vector whose components are the sums o
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Ba%7D+%2B+%5Cvec%7Bb%7D+%3D+%28x_1+%2B+x_2%2C+y_1+%2B+y_2%29" 
-alt="\vec{a} + \vec{b} = (x_1 + x_2, y_1 + y_2)">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%2B+%5Cvec%7Bw%7D+%3D+%28x_1+%2B+x_2%2C+y_1+%2B+y_2%29" 
+alt="\vec{v} + \vec{w} = (x_1 + x_2, y_1 + y_2)">
 </div>
 
 #### Vector Multiplication
@@ -64,16 +62,16 @@ When a vector is multiplied by a scalar (i.e., any number), it becomes _scalar m
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Clambda+%5Cvec%7Ba%7D+%3D+%28%5Clambda+x_1%2C+%5Clambda+y_1%29" 
-alt="\lambda \vec{a} = (\lambda x_1, \lambda y_1)">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Clambda+%5Cvec%7Bv%7D+%3D+%28%5Clambda+x_1%2C+%5Clambda+y_1%29" 
+alt="\lambda \vec{v} = (\lambda x_1, \lambda y_1)">
 </div>
 
 When two vectors are multiplied together, the components are multiplied parallely and summed to return a scalar value (_not_ a new vector). This is called the _dot product_ (there is also a _cross product_, but we won't be doing that for today).
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Ba%7D+%5Ccdot+%5Cvec%7Bb%7D+%3D+x_1+x_2+%2B+y_1+y_2" 
-alt="\vec{a} \cdot \vec{b} = x_1 x_2 + y_1 y_2">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%5Ccdot+%5Cvec%7Bw%7D+%3D+x_1+x_2+%2B+y_1+y_2" 
+alt="\vec{v} \cdot \vec{w} = x_1 x_2 + y_1 y_2">
 </div>
 
 #### Vector Magnitude
@@ -82,8 +80,8 @@ A vector's _magnitude_ (AKA its length) can be calculated using a simplified ver
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctext%7Bmag%7D%28%5Cvec%7Ba%7D%29+%3D+%5Csqrt%7Bx_1%5E2+%2B+y_1%5E2%7D" 
-alt="\text{mag}(\vec{a}) = \sqrt{x_1^2 + y_1^2}">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctext%7Bmagnitude%7D%28%5Cvec%7Bv%7D%29+%3D+%5Csqrt%7Bx_1%5E2+%2B+y_1%5E2%7D" 
+alt="\text{magnitude}(\vec{v}) = \sqrt{x_1^2 + y_1^2}">
 </div>
 
 ### Program Specifications
