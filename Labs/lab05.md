@@ -1,12 +1,10 @@
 # Lab 05 - Styling
 
-## Assignment Overview
-
 The aim of this lab is to:
 
-- ...do a code review to learn the Google Code style rules
+- Do a code review to learn the Google Code style rules
 
-- ...learn to debug your C++ programs using `gdb` (the GNU Project Debugger). The purpose of a debugger is to allow you to see what is going on inside your C++ program while it runs. In addition, you can use `gdb` to see what your program was doing at the moment it crashed.
+- Learn to debug your C++ programs using `gdb` (the GNU Project Debugger). The purpose of a debugger is to allow you to see what is going on inside your C++ program while it runs. In addition, you can use `gdb` to see what your program was doing at the moment it crashed.
 
 ## Code Review
 
@@ -48,8 +46,6 @@ Exchange your most recent homework assignment's first problem's solution with yo
 - [Reference Arguments](https://google.github.io/styleguide/cppguide.html#Reference_Arguments)
 - [Horizontal Whitespace](https://google.github.io/styleguide/cppguide.html#Horizontal_Whitespace)
 
-### Parting Words
-
 Use common sense, and **be consistent**.
 
 If you are editing code, take a few minutes to look at the code around you and determine its style. If there are spaces around `if` clauses, you should add them, too. If there are comments with little boxes of stars around them, make your comments have little boxes of stars around them, too.
@@ -68,139 +64,15 @@ Here are some of the useful actions that `gdb` can perform:
 - Examine the contents of any frame on the call stack
 - Set breakpoints that will stop your program when it reaches a certain point. Then you can step through part of the execution using `step` and `next`, and type `continue` to resume regular execution.
 
-Here are the example programs to debug for this lab:
-
-```c++
-// badString.cpp
-
-#include<iostream>
-using std::cin; using std::cout; using std::endl;
-#include<string>
-using std::string;
-
-/*
-  find the smallest (by ASCII value) character
-  in the parameter str and return that char
-*/
-char fn2(string str){
-  char ch = str[0];
-  for (auto i = str.size(); i>=0; --i){
-    cout << ch << endl;
-    if (str[i] < ch)
-      ch = str[i];
-  }
-  return ch;
-}
-
-/*
-  make a substring of the parameter str
-  of size 3, consisting of:
-  - the smallest chararter as found by fn2
-  - the character in front of the smallest
-  - the character in back of the smallest.
-  Thus fn1("cdeaxyz") --> "eax"
-*/
-string fn1(string str){
-  char ch = fn2(str);
-  unsigned int indx = str.find(ch);
-  return str.substr(indx-1, 3);
-}
-
-int main (){
-  string my_string = "abcdefg";
-  cout << fn2(my_string) << endl;  
-  cout << fn1(my_string) << endl;
-
-}
-```
-
-```c++
-// badProg.cpp
-
-#include <vector>
-using std::vector;
-#include <string>
-using std::string; using std::to_string;
-#include <iostream>
-using std::cout; using std::endl;
-
-int find_and_return_max(vector<int> vector1, int max) {
-    if (vector1.size() == 0)
-        return -1;
-    max = vector1[0];
-    for (auto i = vector1.begin(); i != vector1.end(); ++i) {
-        if (max < *i) {
-            max = *i;
-        }
-    }
-    return 0;
-}
-
-int main() {
-    vector<int> myvec = {17, 21, 44, 2, 60};
-    int max = myvec[0];
-    if (find_and_return_max(myvec, max) != 0) {
-        cout << "strange error" << endl;
-        return -1;
-    }
-    cout << "max value in the vector is " << to_string(max) << endl;
-    return 0;
-}
-```
-
-```c++
-// segfaulter.cpp
-
-#include <iostream>
-using std::cout; using std::endl;
-#include <vector>
-using std::vector;
-
-int initfunc(vector<int> myvec, int len) {
-    int i;
-    for (i=1; i <= len; i++) {
-        myvec[i] = i;
-    }
-    return 0;
-}
-
-int func(vector<int> myvec, int len, int max) {
-    int i;
-    max = myvec[0];
-    for (i=1; i <= len; i++) {
-        if(max < myvec[i]) { 
-            max = myvec[i];
-        }
-    }
-    return 0;
-}
-
-int main() {
-    vector<int> vec;
-    int max = 6;
-
-    if (initfunc(vec, 100) != 0) {
-        cout << "init error" << endl;
-        return -1;
-    }
-
-    if (func(vec, 100, max) != 0) {
-        cout << "func error" << endl;
-        return -1;
-    }
-
-    cout << "max value in the array is " << max << endl;
-    return 0;
-}
-```
+[Download the code contained within this .zip file here.](../.assets/downloads/lab05.zip)
 
 ## Setting up `gdb`
 
-Before we start using `gdb`, we need to download a GDB init file that does two things. First, it allows us to print C++ Standard Library containers and data members from within `gdb`. Second, it allows us to debug our programs while treating the C++ constructs as the "bottom level"; in other words, when we debug a piece of a program that includes a vector, we don't want the debugger to go all the way into the code that defines the vector.
+Before we start using `gdb`, we need to activate a GDB init file. It does two things: firstly, it allows us to print C++ Standard Library containers and data members from within `gdb`, and secondly, it allows us to debug our programs while treating the C++ constructs as the "bottom level"; in other words, when we debug a piece of a program that includes a vector, we don't want the debugger to go all the way into the code that defines the vector.
 
-[Link to gdbinit file](../.assets/extra/gdbinit)
+The GDB init file should be contained within the .zip file you just downloaded from the above link.
 
-Download this file, and save it to your home directory. Once saved in your home directory, please rename the file to .gdbinit. Note that the initial dot means the file is hidden, so once you rename it, it will not be visible in the graphical file manager.
+Save the GDB init file to your home directory. Once saved, please rename the file to ".gdbinit". Note that the dot prefix makes the file hidden, so once you rename it, it will not be visible in the graphical file manager.
 
 ## Getting Started with `gdb`
 
@@ -367,7 +239,7 @@ $1 = "abcdefg"
 (gdb) p ch                                  # p is short for the print command
 $2 = 0 '\000'                               # ch in fn2 is not initialized
 
-(gdb) print my_string				        # my_string in main, not fn2
+(gdb) print my_string                       # my_string in main, not fn2
 No symbol "my_string" in current context.
 
 (gdb) bt                                    # bt = "backtrace", shows call stack
@@ -380,14 +252,14 @@ Activity goes from top to bottom in the call stack. We are currently in `fn2()` 
 ```
 (gdb) up                                    # go up the call stack
 #1  0x0000000000400e39 in main () at badString.cpp:36
-36	  cout << fn2(my_string) << endl;       # now we're back in main()
+36    cout << fn2(my_string) << endl;       # now we're back in main()
 
 (gdb) print my_string
 $3 = "abcdefg"                              # my_string is defined in main()
 
 (gdb) down                                  # down the call stack                              
 #0  fn2 (str="abcdefg") at badString.cpp:11
-11	  char ch = str[0];                     # back to fn2(), where we are running
+11    char ch = str[0];                     # back to fn2(), where we are running
 
 (gdb) next 
 12 for (auto i = str.size(); i>=0; --i){
