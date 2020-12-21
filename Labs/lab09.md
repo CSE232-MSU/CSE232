@@ -66,6 +66,8 @@ When a vector is multiplied by a scalar (i.e., any number), it becomes _scalar m
 alt="\lambda \vec{v} = (\lambda x_1, \lambda y_1)">
 </div>
 
+&nbsp;
+
 When two vectors are multiplied together, the components are multiplied parallely and summed to return a scalar value (_not_ a new vector). This is called the _dot product_ (there is also a _cross product_, but we won't be doing that for today).
 
 <div align="center">
