@@ -1,6 +1,6 @@
 # Lab 06 - Vectors and Multi-File Compilation
 
-## Miscellaneous Bash
+## Miscellaneous Bash Stuff
 
 ### Command Completion
 
@@ -18,7 +18,7 @@ cp file_02 file_01
 
 I recommend making use of TAB completion. We, humans, are prone to making typos, where our computer friends are not.
 
-### History
+### `history`
 
 The terminal remembers each command you type into it in its history. When you execute the `history` command, the terminal will report each command run with a number. Example:
 
@@ -32,13 +32,13 @@ The terminal remembers each command you type into it in its history. When you ex
   501  history
 ```
 
-You can run a command again by noting its number. For instance, `!500` will run the `cp file_02 file_01` command again.
+You can run a command from your history by noting its number. For instance, `!500` will run the `cp file_02 file_01` command again.
 
-You can also use the `!!` command to run the latest command again.
+You can also use the `!!` command to re-execute the latest command.
 
 ### Configuration (.bashrc and .bash_profile)
 
-Sometimes, there are bash commands you always want to run before you get to work. Perhaps, you want your terminal to configure some settings, or tell you how much disk space you have left. To make this easier, there are two config files that bash looks for (in your HOME directory).
+Sometimes, there are bash commands you always want to run before you get to work. Perhaps, you want your terminal to configure some settings, or tell you how much disk space you have left. To make this easier, there are two config files that bash looks for (in your home directory).
 
 .bashrc is a bash script that runs everytime you invoke the `bash` command (example: `bash my_script.sh`) and when you login. .bash_profile is a script that runs when you login to your user account. Both of these are used to execute bash commands that set up your environment.
 
@@ -58,9 +58,9 @@ In the bash and tcsh shells, it outputs something like:
 /soft/linux/bin:/bin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/cpssbin:/soft/linux/bin:/usr/X11R6/bin:/usr/local/bin:
 ```
 
-This means that if I try to run `say_hello Josh`, it looks in `/soft/linux/bin` for an executable called `say_hello`, and if it can't find it, it then looks in `/bin`, then in `/usr/sbin`, and so on before giving up.
+This means that if I try to run `say_hello Josh`, it looks in `/soft/linux/bin` for an executable called `say_hello`, and if it can't find it, it then looks in `/bin`, then in `/usr/sbin`, and so on before giving up (the `:` character delimits the paths).
 
-Sometimes it is useful to add other directories to this path (often for programs you want to call from the command line). You can do so by adding the directory to your PATH. 
+Sometimes it is useful to add other directories to this path (often for programs you want to call from the command line).
 
 If I want to add the folder "`~/joshs_programs/`" to my PATH, because it has useful programs to run at the command line, I can add them like this:
 
