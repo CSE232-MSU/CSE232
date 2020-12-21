@@ -2,9 +2,7 @@
 
 ## Pagers and Help
 
-### Pagers
-
-Often, you want to be able to view files in the terminal (instead of opening them in a text editor like Atom or gedit). There are a few ways to view files from the terminal.
+Often, you want to be able to view files in the terminal (instead of opening them in a text editor like Atom or gedit). There are a few ways to view files from the terminal -- these commands are referred to as _pagers_.
 
 ### `cat`
 
@@ -26,9 +24,7 @@ less some_file_name.txt
 
 To go the the next page, push the F key (forward) on your keyboard. To go back a page, push the B key (backwards). To quit the pager and return to the command line, push Q (use your imagination for why it is the Q key).
 
-### Help
-
-There are a few programs intended to provide documentation. However, they are often difficult to understand, especially for a beginner. You invoke them by typing the `help` command, and the name of the program you want information about. They may open up a pager if the entry is long.
+There are a few programs intended to provide documentation. However, they are often difficult to understand for a beginner. You invoke them by typing the `help` command, and the name of the program you want information about. They can open up a pager if the entry is long.
 
 ### `help`
 
@@ -72,79 +68,137 @@ The basic idea is to draw a series of trapezoids that approximate the area under
 
 First, remember how to calculate the area of a trapezoid?
 
-<center>
+<div align="center">
+    <img src="../.assets/images/trapezoid.svg" width="50%">
+</div>
 
-![](../.assets/images/trap_image.jpg)
+<div align="center">
+    <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+A_%7B%5Ctext%7Btrapezoid%7D%7D%3D+%5Cfrac%7Ba+%2B+b%7D%7B2%7Dh" 
+alt="A_{\text{trapezoid}}= \frac{a + b}{2}h">
+</div>
 
-</center>
+&nbsp;
 
-One measures the length of the parallel sides (`b1` and `b2`), then the distance between the parallel sides (`h`). Add the parallel distances, multiply those values by `h`, and divide by 2.
+We measure the length of the parallel sides, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+a" 
+alt="a"> and <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+b" 
+alt="b">, then the distance between those parallel sides, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+h" 
+alt="h">, add the parallel distances, divide by 2, and multiply everything by <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+h" 
+alt="h">.
 
-Let's rotate that trapezoid 90 degrees counter-clockwise. Now, the `b1` length is `f(a)`, the `b2` length is `f(b)`, and the height, `h`, is `b - a`.
+Now, if we were to place some trapezoid underneath a given curve by rotating it 90 degrees, such that the parallel sides now hit the curve...
 
-<center>
+<div align="center">
+    <img src="../.assets/images/trapezoidal_rule_init.png">
+</div>
 
-![](../.assets/images/area_curve.jpg)
+We find that the parallel sides now become the distance from the x-axis to the curve (those black points at the tips of the trapezoid hitting the curve, which we'll call <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+y_1" 
+alt="y_1"> and <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+y_2" 
+alt="y_2">), and the height now becomes the distance between the two parallel sides (which we'll rename to <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x+%3D+h" 
+alt="\Delta x = h">).
 
-</center>
+<div align="center">
+    <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+A_%7B%5Ctext%7Btrapezoid%7D%7D+%3D+%5Cfrac%7By_1+%2B+y_2%7D%7B2%7D+%5CDelta+x" 
+alt="A_{\text{trapezoid}} = \frac{y_1 + y_2}{2} \Delta x">
+</div>
 
-Given the above, the area becomes: 
+&nbsp;
 
-`((b - a) * (f(a) + f(b))) / 2`
+If we keep adding trapezoids, we can eventually get an approximation for the entire region beneath the curve by summing the areas. And, if we _minimize_ the distance between the two parallel sides, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x" 
+alt="\Delta x">, for each trapezoid, we can end up with a pretty accurate approximation for the _integral_ of the function this curve is modeling.
 
-For two trapezoids next to each other with heights `f(a)`, `f(b)`, and `f(c)`, with `f(b)` as the common side used by the two trapezoids, we obtain the formula:
+<div align="center">
+    <img src="../.assets/images/trapezoidal_rule.gif">
+</div>
 
-`(((b - a) * (f(a) + f(b))) / 2) + (((c - b) * (f(b) + f(c))) / 2)`
+Thus, for a definite integral of a function, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+f" 
+alt="f">, bounded between two points on the x-axis, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+a" 
+alt="a"> and <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+b" 
+alt="b">:
 
-In general, for some definite integral:
-1.  over the region `a` to `b`,
-2.  with `n` equally spaced trapezoids (`n + 1` points on the x-axis),
-3.  and grid spacing of `h = ((b - a) / n)`:
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%5Capprox+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_%7Bi-1%7D%29+%2B+f%28x_i%29%29" 
+alt="\int_{a}^{b} f(x) \approx \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_{i-1}) + f(x_i))">
+</div>
 
-<center>
+&nbsp;
 
-![](../.assets/images/formula_1.svg) 
-![](../.assets/images/formula_2.svg)
-
-</center>
+Where <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" 
+alt="n"> is the number of trapezoids, and <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x+%3D+%5Cfrac%7Bb+-+a%7D%7Bn%7D" 
+alt="\Delta x = \frac{b - a}{n}">.
 
 ### Program Specifications
 
 There is a Mimir assignment associated with this lab for testing purposes.
 
-1.  Write three helper functions:
-    1.  A function named `fn()` (with signature `double fn(double x)`) to integrate over. We'll use -6x^2 + 5x + 3 for this assignment.
-        1.  Takes a single `double` argument, parameterized as the value, `x`.
-        2.  Returns type `double`, which is simply the result of substituting `x` into the formula
-    2.  A function named `integral()` (with signature `double integral(double x)`), which is the actual integral of `fn`, -2x^3 + (5/2)x^2 + 3x
-        1.  Takes a single `double` argument, parameterized as the value, `x`.
-        2.  Returns type `double`, which is simply the result of substituting `x` into the formula
+You are to write three functions:
+    
+&nbsp;
 
-    ⭐ Please show the TA your `fn()` and `integral()` functions before moving on.
+```c++
+double fn(double x)
+```
 
-    3.  A function name `trapezoid()` (with signature `double trapezoid (double a, double b, long n)`).
-        1.  Takes three parameters:
-            1.  The two definite points of the integral, `a` and `b`, as `double`.
-            2.  The number of trapezoids, `n`, a `long`.
-        2.  Calculates the area under the curve represented by the function `fn()`, given the provided number of trapezoids over the interval `a` to `b`.
-        3.  Returns the sum of the area of the trapezoids as type `double`.
-2.  A `main()` function that does the following:
-    1.  Takes in four values from the user (`std::cin`), in order:
-        1.  A lower range of x, `a`
-        2.  A higher range of x, `b`
-        3.  A float `tolerance` value
-        4.  An initial guess at the number, `n` (the number of trapezoids)
-    2.  You run a loop that measures the difference between the actual value of the integration (you have the `integral()` function so you can calculate the exact value between `a` and `b`) and the estimated value from `trapezoid()`
-        1.  If the difference is within `tolerance`, report to the user:
-            1.  `n`
-            2.  The estimate value
-            3.  The exact value
-            4.  The `tolerance`
-        2.  If the difference is not within `tolerance`, _double_ the value of `n` and re-run. Continue the doubling and re-running until the estimate of the `trapezoid()` function is within `tolerance` of the actual value from `integral()`.
+Takes an input, `x`, and returns the substitution into the equation <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+-6x%5E2+%2B+5x+%2B+3" 
+alt="-6x^2 + 5x + 3">. We'll be using this as our function to integrate over.
 
-All flointing point output should have 4 decimal places of precision.
+&nbsp;
 
-**Hint**: You might want to consider a do-while statement and the `std::abs` function (from the `cmath` library) in your `main()`.
+```c++
+double integral(double x)
+```
+
+Takes an input, `x`, and returns the substitution into the equation <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+-2x%5E3+%2B+%5Cfrac%7B5%7D%7B2%7D+x%5E2+%2B+3x" 
+alt="-2x^3 + \frac{5}{2} x^2 + 3x">. This is the symbolically-manipulated, "actual" integral of `fn()`. We'll be using the returns of this function to compare with our approximations.
+
+⭐ Please show the TA your `fn()` and `integral()` functions before moving on.
+
+&nbsp;
+
+```c++
+double trapezoid(double a, double b, long n)
+```
+
+Takes three parameters: the two definite points of the integral, `a` and `b`, and the number of trapezoids, `n`. This function calculates the area under the curve (represented by `fn()`) given the provided number of trapezoids over the interval from `a` to `b`. It then returns the sum of the area of trapezoids, i.e., our integral approximation.
+
+&nbsp;
+
+The `main()` function should take four values from the user of the program in this exact order (using `std::cin`):
+1.  The lower boundary of the definite integral, `a`
+2.  The upper boundary of the definite integral, `b`
+3.  A floating point `tolerance` value
+4.  The number of trapezoids to initially use in the approximation, `n`
+
+You'll want to run a loop that measures the difference between the actual value of the integration (using `integral()`) and the estimated value (from `trapezoid()`).
+
+If the difference is within `tolerance`, report to the user:
+1.  `n`
+2.  The estimate value
+3.  The exact value
+4.  The `tolerance`
+
+If the difference is _not_ within `tolerance`, _double_ the value of `n` and re-run. Continue the doubling and re-running until the estimate of the `trapezoid()` function is within `tolerance` of the actual value from `integral()`.
+
+All floating point values should have 4 decimal places of precision when displayed.
+
+**Hint**: You might want to consider a do-while statement and the `std::abs()` function (from the `<cmath>` header) in your `main()`.
 
 ### Example Output
 

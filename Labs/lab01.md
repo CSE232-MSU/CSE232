@@ -105,14 +105,14 @@ Your program will prompt the user for an integer number (a number without decima
 - Distance in kilometers (1 AU = 149,598,000 km) on a line by itself
 - Distance in miles (1 AU = 92,955,800 mile) on a line by itself
 - Round trip time for radio communication in hours. Radio waves travel at the speed of light, listed at 299,792,458 meters/second, on a line by itself
-- Provide 2 decimal points of accuracy using `std::fixed` and `std::setprecision` (the latter requiring `#include <iomanip>`, you would use them as follows):
+- Provide 2 decimal points of accuracy using `std::fixed` and `std::setprecision`. Both are contained within the `<iomanip>` header, and you can use them as follows:
 
 ```c++
 std::cout << std::fixed;
 std::cout << std::setprecision(2);
 ```
 
-⭐ Please show your TA your working program. Be sure to use `clang-format` on it first.
+⭐ Please show the TA your working program.
 
 ### Assignment Notes
 
@@ -163,9 +163,9 @@ The number 10 times 2 is 20
 
 The operations on these numbers are: + (sum), - (difference), * (product), / (division) and % (modulus, integer only). The last two deserve special comment.
 
-If an integer is divided by another integer, the result is an integer. Thus the result of `6/4` is `1`. In contrast, `6.0/4` is `1.5`. That is, the `/` operator results in the **integer quotient if using integers, and floats if using floats**. The result of `6 % 4` is the integer remainder of the division, thus `2` (6 divided by 4 is 1, with a remainder of 2). There is no equivalent for `%` in floating point math.
+If an integer is divided by another integer, the result is an integer. Thus the result of `6 / 4` is `1`. In contrast, `6.0 / 4` is `1.5`. That is, the `/` operator results in the **integer quotient if using integers, and floats if using floats**. The result of `6 % 4` is the integer remainder of the division, thus `2` (6 divided by 4 is 1, with a remainder of 2). There is no equivalent for `%` in floating point math.
 
-### Things to think about
+### Things to Think About
 
 - What happens when you try to divide by zero when you run your program?
 - What happens when `std::cin` obtains a letter instead of a number?

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   width="292"
+   height="172"
+   id="svg1314">
+  <defs
+     id="defs1316" />
+  <g
+     id="layer1">
+    <polygon
+       points="27.046,86.615 16.416,150.396 271.534,150.396 186.495,22.836 37.676,22.836 27.046,86.615 "
+       transform="translate(2.2627,-1.61032)"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10"
+       id="polygon1352" />
+    <line
+       stroke-miterlimit="10"
+       x1="39.938656"
+       y1="148.78568"
+       x2="39.938656"
+       y2="21.225683"
+       id="line1354"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10;stroke-dasharray:5.1024, 3.0614" />
+    <polyline
+       transform="translate(2.2627,-1.61032)"
+       stroke-miterlimit="10"
+       points="50.432,150.396 50.432,137.64   37.676,137.64 "
+       id="polyline1356"
+       style="fill:none;stroke:#000000;stroke-width:1.5;stroke-miterlimit:10" />
+    <text
+       x="111.69387"
+       y="8.3300829"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman"
+       id="text1358">a</text>
+    <text
+       x="143.24808"
+       y="169.69238"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman"
+       id="text1360">b</text>
+    <text
+       x="52.693356"
+       y="89.079582"
+       style="font-size:14px;font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman"
+       id="text1362">h</text>
+    <text
+       x="2.2626593"
+       y="156.81349"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman"
+       id="text1364">A</text>
+    <text
+       x="281.05566"
+       y="158.79349"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman"
+       id="text1366">B</text>
+    <text
+       x="190.79486"
+       y="13.965383"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman"
+       id="text1368">C</text>
+    <text
+       x="27.381769"
+       y="15.485883"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Times New Roman"
+       id="text1370">D</text>
+  </g>
+</svg>
