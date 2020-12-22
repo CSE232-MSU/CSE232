@@ -46,16 +46,50 @@ A total of 1000 points can be accrued over the course of the semester. There wil
 
 __To be eligible for a non-zero course grade, you must earn at least 50% (150 points) of the total points available on all exams.__
 
-| Points | GPA |
-| :---: | :---: |
-| 900-1000 | 4.0 |
-| 850-899 | 3.5 |
-| 800-849 | 3.0 |
-| 750-799 | 2.5 |
-| 700-749 | 2.0 |
-| 650-699 | 1.5 |
-| 600-649 | 1.0 |
-| 0-599 | 0.0 |
+<div align="center">
+    <table>
+        <thead>
+            <tr>
+                <th>Points</th>
+                <th>GPA</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>900-1000</td>
+                <td>4.0</td>
+            </tr>
+            <tr>
+                <td>850-899</td>
+                <td>3.5</td>
+            </tr>
+            <tr>
+                <td>800-849</td>
+                <td>3.0</td>
+            </tr>
+            <tr>
+                <td>750-799</td>
+                <td>2.5</td>
+            </tr>
+            <tr>
+                <td>700-749</td>
+                <td>2.0</td>
+            </tr>
+            <tr>
+                <td>650-699</td>
+                <td>1.5</td>
+            </tr>
+            <tr>
+                <td>600-649</td>
+                <td>1.0</td>
+            </tr>
+            <tr>
+                <td>0-599</td>
+                <td>0.0</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 ### Exams
 
