@@ -128,7 +128,7 @@ Use an H1 for the top-most header, with the format "Lab XX - Some Title". The re
 
 #### The Two Halves
 
-(Almost) every lab has two portions: the Unix tutorial, and the coding segment. Denote the Unix tutorial with an H2 header and a descriptive title. The coding segment should _always_ by denoted by an H2 header as well, but with the text "Coding Assignment".
+(Almost) every lab has two portions: the Unix tutorial, and the coding segment. Denote the Unix tutorial with an H2 header and a descriptive title. The coding segment should _always_ be denoted by an H2 header as well, but with the text "Coding Assignment".
 
 Both halves of the assignment can have a multitude of H3 subsections. The coding segment should have the following H3 subsections in most circumstances, however:
 - Background
