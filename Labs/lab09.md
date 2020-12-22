@@ -26,7 +26,9 @@ alt="(0, 0)">, with the head of the vector meeting at coordinates <img src=
 "https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28x%2C+y%29" 
 alt="(x, y)">.
 
-![](../.assets/images/vectors.png)
+<div align="center">
+    <img src="../.assets/images/vectors.png" width="100%">
+</div>
 
 Below are some of the operations that can be performed on a vector, all of which you'll ultimately implement for your `MathVector` `struct`.
 
