@@ -115,7 +115,7 @@ Submitting an assignment to Mimir merely saves it. At the deadline for an assign
 
 ### Re-Grades
 
-Requests for re-grading can go in either direction; we are often generous when we first grade something, so please be sure that we did make a mistake before you submit your request. On the other hand, our goal is for you to understand the course material, so we will always be willing to explain to you any portion that you are stuck on. All requests for regrades must come within one week of the return of the graded item. Thereafter, no requests will be considered, so be sure to review your returned assignments promptly.
+We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.
 
 ### Honors
 
