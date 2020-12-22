@@ -56,6 +56,8 @@ The addition of two vectors returns a new vector whose components are the sums o
 alt="\vec{v} + \vec{w} = (x_1 + x_2, y_1 + y_2)">
 </div>
 
+&nbsp;
+
 #### Vector Multiplication
 
 Vector multiplication can be done in _many_ ways depending on the second operand. We'll focus on, and implement two of these.
@@ -78,6 +80,8 @@ When two vectors are multiplied together, the components are multiplied parallel
 alt="\vec{v} \cdot \vec{w} = x_1 x_2 + y_1 y_2">
 </div>
 
+&nbsp;
+
 #### Vector Magnitude
 
 A vector's _magnitude_ (AKA its length) can be calculated using a simplified version of the euclidean distance formula. This, again, does not return a new vector -- it returns a scalar value.
@@ -87,6 +91,8 @@ A vector's _magnitude_ (AKA its length) can be calculated using a simplified ver
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctext%7Bmagnitude%7D%28%5Cvec%7Bv%7D%29+%3D+%5Csqrt%7Bx_1%5E2+%2B+y_1%5E2%7D" 
 alt="\text{magnitude}(\vec{v}) = \sqrt{x_1^2 + y_1^2}">
 </div>
+
+&nbsp;
 
 ### Program Specifications
 
@@ -149,9 +155,3 @@ double magnitude()
 Takes the magnitude of the `MathVector` instance. Returns `double`.
 
 ⭐ Show the TA your completed `MathVector` class.
-
-&nbsp;
-
-### Assignment Notes
-
-1. You can find a `sqrt()` function inside the `<cmath>` header.
