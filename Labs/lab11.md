@@ -123,26 +123,6 @@ Node & operator[](size_t index)
 
 This method is an override for the `[]` operator. On a call, such as `sl[3]`, the argument, 3, is assigned to the parameter, `index`. The return value is a _reference_ to a `Node` so that the `Node` can be modified (i.e., can show up on either side of an assignment operator). 
 
-You'll have to search the list (starting from the `head_` pointer) for the `index`-th `Node`. Then, return a reference to that `Node`, or throw an `out_of_range` exception if you've traversed to the end of the list. Since we haven't covered how exceptions work in classes, you can use the following code (make sure to ask about it in the lecture):
-
-```c++
-#include <stdexcept>
-using std::out_of_range;  // standard error for a bad index
-
-...
-if (badindex)
-    throw out_of_range("index out of range");
-```
-
-Again, modify the 'main.cpp' file to test your code. Be sure to include an `out_of_range` catch test. Example:
-
-```c++
-try {
-    result = my_list[999];
-} catch (out_of_range err) {
-    cout << "Error, message follows: ";
-    cout << err.what() << endl;
-}
-```
+You'll have to search the list (starting from the `head_` pointer) for the `index`-th `Node`. Then, return a reference to that `Node`, or throw an `out_of_range` exception if you've traversed to the end of the list.
 
 ⭐ Show the TA your completed `SingleLink` class. Include example functionality for *all* of the methods.  

@@ -1,4 +1,4 @@
-# Lab 05 - Styling
+# Lab 05 - Styling and Debugging
 
 The aim of this lab is to:
 

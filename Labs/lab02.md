@@ -70,7 +70,7 @@ The `mv` command is often used to rename directories and folders.
 
 The `rm` command is short for "remove". 
 
-**WARNING: files deleted with `rm` are gone forever. They don't go to the Recycle Bin. Please be careful with `rm`.**
+**Warning**: files deleted with `rm` are gone forever. They don't go to the Recycle Bin. Please be careful with `rm`.
 
 The `rm` command takes one argument: the file or folder you wish to delete. Like `cp`, if you wish to delete a folder, you need to supply the `-r` flag. Example:
 
