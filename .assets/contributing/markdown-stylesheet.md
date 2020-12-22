@@ -40,13 +40,13 @@ H5 and H6: don't even bother.
 
 Italicization should be used when a word/phrase is being stressed within the sentence, or if the word/phrase is a new term that the student should be aware of for the rest of the document. I consider this different from when a word/phrase is deemed important for the student to know in the context of the course. If something is important to know for the _course_, you should bolden it.
 
-As described above, bold text should be used when describing something that is important for the student to remember for future coursework. Bold text should also be used to highlight asides or warnings, alike:
+Bold text should also be used to highlight asides or warnings, alike:
 
 **Note**: this is an example note.
 
 **Warning**: this is an example warning.
 
-Do not bolden _and_ italicize a word/phrase. It looks bad.
+Do not bolden _and_ italicize a word/phrase -- it looks bad.
 
 ### 4. Example Code
 
