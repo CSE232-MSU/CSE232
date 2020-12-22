@@ -4,7 +4,7 @@
 
 ### Command Completion
 
-One common mistake in typing in any programming language are small typos that break your program or instruction. One way to avoid them is to use an autocompletion feature so you don't have to type out a full name or variable. When you hit the TAB key, the terminal attempts to fill the rest of the command/file name you are typing. If there isn't a unique match (for instance, you are typing: `cp fi` and then hit TAB when there are files with the names "file_01" and "file_02" present), it will fill in as much as it can (in this case "`cp file_0`"). If you hit TAB again, the terminal will present the potential options that it can autofill with. You can specify more characters until a unique match is found.
+A common mistake when writing in any programming language is that of typos. One way to avoid them is to use an autocompletion feature so you don't have to type out a full name or variable. When you hit the TAB key, the terminal attempts to fill the rest of the command/file name you are typing. If there isn't a unique match (for instance, you are typing: `cp fi` and then hit TAB when there are files with the names "file_01" and "file_02" present), it will fill in as much as it can (in this case "`cp file_0`"). If you hit TAB again, the terminal will present the potential options that it can autofill with. You can specify more characters until a unique match is found.
 
 Example:
 
@@ -38,11 +38,9 @@ You can also use the `!!` command to re-execute the latest command.
 
 ### Configuration (.bashrc and .bash_profile)
 
-Sometimes, there are bash commands you always want to run before you get to work. Perhaps, you want your terminal to configure some settings, or tell you how much disk space you have left. To make this easier, there are two config files that bash looks for (in your home directory).
+Sometimes, there are bash commands you always want to run before you get to work. Perhaps, you want your terminal to configure some settings, or tell you how much disk space is left on the computer. To make this easier, there are two config files that bash looks for (in your home directory).
 
 .bashrc is a bash script that runs everytime you invoke the `bash` command (example: `bash my_script.sh`) and when you login. .bash_profile is a script that runs when you login to your user account. Both of these are used to execute bash commands that set up your environment.
-
-### `$PATH`
 
 Your PATH is a list of directories that bash (or tcsh, which is the default on the lab computers) looks in when trying to run a command. Bash looks through every folder in the list (in order), trying to find a program named identically to your command input.
 
@@ -93,11 +91,11 @@ If we are going to define a function in one file, and use that function in a sep
 - The type it returns,
 - And the types of the parameters
 
-The _name_ of each parameter is unimportant. It can be given, changed in the main function, or left-out. All that matters is each parameter's _type_.
+The _name_ of each parameter is unimportant. It can be given, changed in the main file, or left-out. All that matters is each parameter's _type_.
 
-If we tell the main function this information, that is enough for the C++ compiler to check that the function is being used correctly in the main file, and by "correctly", I mean that the main file is using all of the _types_ correctly in calling the function, even though it does not yet have the actual function _code_.
+If we tell the main file this information, that is enough for the C++ compiler to check that the function is being used correctly, and by "correctly", I mean that the main file is using all of the _types_ correctly in calling the function, even though it does not yet have the actual function _code_.
 
-Providing this information is the job of a **header file**. Header files are typically written with a .hpp extension, and are used to indicate the type information for C++ elements (functions, classes, or some other C++ thing). This header file is used by the compiler to ensure that, whoever is using this function, they are at least using the types correctly. Thus, without the function itself, we can know that we followed the compiler rules and used the correct types.
+Providing this information is the job of a **header file**. Header files are typically written with a ".hpp" or ".h" extension, and are used to indicate the type information for C++ elements (functions, classes, or some other C++ thing). This header file is used by the compiler to ensure that, whoever is using this function, they are at least using the types correctly. Thus, without the function itself, we can know that we followed the compiler rules and used the correct types.
 
 ### Example
 
@@ -127,7 +125,7 @@ It's nice that the previous command compiles all of the files, but if you have t
 g++ -std=c++17 -Wall file1.cpp file2.cpp file3.cpp -o namedExecutable.exe
 ```
 
-Something important to note, is that __we never compile header files__. All a .hpp file provides is a list of declarations to be used by other files. It is never compiled and would not show up in the list of files to compile (shown above).
+Something important to note, is that __we never compile header files__. All a header file provides is a list of declarations to be used by other files.
 
 ⭐ Show the TA that you downloaded the three files, compiled them, and successfully ran the executable.
 
