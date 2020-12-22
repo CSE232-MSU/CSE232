@@ -2,11 +2,6 @@
 Contains a Calendar and Day class used to generate an HTML calendar table
 for the master README.md file.
 
-"Why not use CSS?" -- GitHub disables the connection between HTML and CSS
-files when generating Markdown to prevent phishing attacks. So, one must
-apply styling to every tag individually. Hopefully you can imagine why a 
-script like this is necessary ;)
-
 Author: Braedyn Lettinga
 '''
 
