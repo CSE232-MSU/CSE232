@@ -54,7 +54,7 @@ __To be eligible for a non-zero course grade, you must earn at least 50% (150 po
                 <th>GPA</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody align="center">
             <tr>
                 <td>900-1000</td>
                 <td>4.0</td>
