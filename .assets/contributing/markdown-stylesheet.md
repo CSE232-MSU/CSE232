@@ -100,7 +100,9 @@ You'll have to wrap the image/table in a `<div>` tag, using the (outdated) `alig
 </div>
 ```
 
-Note that GitHub won't center the image/table in its preview, but it will be centered once committed.
+In order to center an image/table in GitHub Markdown, you must express it as in-line HTML. Wrapping the `<div>` tag around the Markdown-equivalent expression doesn't work for some reason.
+
+Also note that GitHub won't center the image/table in its preview, but it will be centered once committed.
 
 ### 8. LaTeX
 
