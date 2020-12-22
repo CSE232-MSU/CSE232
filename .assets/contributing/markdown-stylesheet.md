@@ -142,7 +142,7 @@ Both halves of the assignment can have a multitude of H3 subsections. The coding
 
 #### Graphics
 
-If a visualization of some concept is necessary, you may insert a graphic taken from the internet. Please notify me (Braedyn), however, because I will make a version of that graphic in a way that cooperates better with GitHub's Markdown styling. The graphic taken from the internet will be a placeholder.
+If a visualization of some concept is necessary, you may insert a graphic taken from the internet. Chances are, it's gonna look bad or out-of-place in the Markdown. So, please notify me (Braedyn) and I will make the graphic from scratch, where the one that you grabbed from the internet will act as a placeholder.
 
 On a similar note, if the problem requires a lot of mathematical prerequisite, one should use LaTeX (discussed above) to express any and all formulae because it looks better than plaintext.
 
