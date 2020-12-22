@@ -13,7 +13,7 @@ Today, we're going to practice pointer manipulation in the context of a singly-l
 In a nutshell: a singly-linked list is a data structure for implementing a generic array of elements, where each node has data, and a pointer to the next node. The list structure typically has pointers to the list's first node and last node. A singly-linked list's first node is typically called the _head_, and the last node the _tail_.
 
 <div align="center">
-    <img src="../.assets/images/linked_list.png">
+    <img src="../.assets/images/linked_list.svg">
 </div>
 
 Linked above is a header file containing the definition for a singly-linked list class named `SingleLink`, and a definition for a linked list node class named `Node`.
@@ -118,7 +118,7 @@ Again, I recommend modifying 'main.cpp' for testing.
 &nbsp;
 
 ```c++
-Node & SingleLink::operator[](size_t index)
+Node & operator[](size_t index)
 ```
 
 This method is an override for the `[]` operator. On a call, such as `sl[3]`, the argument, 3, is assigned to the parameter, `index`. The return value is a _reference_ to a `Node` so that the `Node` can be modified (i.e., can show up on either side of an assignment operator). 
