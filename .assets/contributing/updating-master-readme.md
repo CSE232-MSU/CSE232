@@ -260,7 +260,7 @@ Example:
 ```python
 calendar = Calendar(start_date='12/27/2020', weeks=16)
 
-calendar['2/15/2020'].text = "Assignment 1"
+calendar['2/15/2021'].text = "Assignment 1"
 ```
 
 Output calendar HTML:
@@ -451,8 +451,8 @@ Example:
 ```python
 calendar = Calendar(start_date='12/27/2020', weeks=16)
 
-calendar['2/15/2020'].text = "Assignment 1"
-calendar['2/15/2020'].href = "https://www.github.com/"
+calendar['2/15/2021'].text = "Assignment 1"
+calendar['2/15/2021'].href = "https://www.github.com/"
 ```
 
 Output calendar HTML:
