@@ -54,7 +54,9 @@ info ls
 
 Many programs will give you a bit of documentation about themselves (like what arguments they accept) if you invoke the program with the `-h` flag. Example:
 
-<pre>python -h</pre>
+```bash
+python -h
+```
 
 ⭐ Please show your TA the `man` entry for the program, `git`, then demonstrate paging forward and backward in the entry.
 
