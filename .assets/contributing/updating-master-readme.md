@@ -10,21 +10,21 @@ GitHub Markdown disables the `style` attribute on all HTML tags.
 
 ## Updating Non-Calendar Things
 
-In the .assets/ folder, you'll find a file named [README_TEMP.md](../README_TEMP.md). This is a "template" of the master README that is used by the Python script in the same folder, [refresh.py](../refresh.py).
+In the .assets/ folder, you'll find a file named [README_TEMP.md](../README_TEMP.md). This is a "template" of the master README that is used by the Python script in the same folder, [update_readme.py](../update_readme.py).
 
-refresh.py cares about one thing, and _only_ one thing: "&calendar&".
+update_readme.py cares about one thing, and _only_ one thing: "&calendar&".
 
-What is "&calendar&"? It's an encoded "variable" in the template that refresh.py finds, and replaces with the calendar's HTML (which refresh.py generates). **You are free to edit the template however you like, but do not touch the &calendar& string whatsoever**.
+What is "&calendar&"? It's an encoded "variable" in the template that update_readme.py finds, and replaces with the calendar's HTML (which update_readme.py generates). **You are free to edit the template however you like, but do not touch the &calendar& string whatsoever**.
 
-After you've gone ahead and made your edits, run the refresh.py script once, and commit your changes. Congratulations, you've edited the master README!
+After you've gone ahead and made your edits, run the update_readme.py script once, and commit your changes. Congratulations, you've edited the master README!
 
 ## Updating Calendar Things
 
-In the .assets/ folder is a Python script called [refresh.py](../refresh.py). It contains two classes: `Calendar`, and `Day`. The `Day` class acts like a C-style `struct`, where the `Calendar` is essentially a dictionary of `Day` instances.
+In the .assets/ folder is a Python script called [update_readme.py](../update_readme.py). It contains two classes: `Calendar`, and `Day`. The `Day` class acts like a C-style `struct`, where the `Calendar` is essentially a dictionary of `Day` instances.
 
 You can make *any* arrangement of calendar events given the three functions I'll be describing below.
 
-At the bottom of refresh.py is a chunk of code left for anyone to fill-out:
+At the bottom of update_readme.py is a chunk of code left for anyone to fill-out:
 
 ```python
 if __name__ == "__main__":
@@ -34,6 +34,7 @@ if __name__ == "__main__":
     WEEKS = 16
 
     calendar = Calendar(start_date=STARTING_DATE, weeks=WEEKS)
+
 
     ### ⬇️ DO NOT CHANGE BELOW ⬇️ ###
     calendar_html = calendar.generate_calendar_html()
@@ -865,6 +866,6 @@ Output calendar HTML:
 
 ### Comitting
 
-Comitting to the repository is fairly straightforward once you've filled out your desired calendar at the bottom of refresh.py. Simply run the script, and you're done! The master README file will be changed with your updates to the `calendar` variable.
+Comitting to the repository is fairly straightforward once you've filled out your desired calendar at the bottom of update_readme.py. Simply run the script, and you're done! The master README file will be changed with your updates to the `calendar` variable.
 
 If you go to see the changes, and made some sort of mistake on the output calendar, you can discard your changes in whatever git manager you're using, and re-write your calendar logic as necessary. Simply run the script again until you end up with your desired calendar.
