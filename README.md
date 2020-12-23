@@ -3,6 +3,7 @@
 Continuation of object-centered design and implementation in C++. Building programs from modules. Data abstractions and classes to implement abstract data types. Static and dynamic memory allocation. Data structure implementation and algorithm efficiency. Lists, tables, stacks, and queues. Templates and generic programming.
 
 General:
+- [Announcements](#announcements)
 - [Course Schedule](#course-schedule)
 - [Help Room Schedule](#help-room-schedule)
 - [Past Exams](https://cse.msu.edu/~cse232/Exam_Content/)
@@ -21,6 +22,16 @@ Resources:
 - [OnlineGDB](https://www.onlinegdb.com/)
 - [UNIX Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 - [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=2olsGf6JIkU)
+
+## Announcements
+
+Posted: 1/10/20
+
+<blockquote>
+<p>Welcome to CSE232!</p>
+<p>Please go through <a href="Labs/lab00.md">Lab 00</a> to get started with the course. It'll have you set up Mimir, Visual Studio Code, and a C++ compiler. We expect that you'll have all of these resources available by your first class meeting.</p>
+<p>— Braedyn Lettinga</p>
+</blockquote>
 
 ## Course Schedule
 
@@ -223,3 +234,11 @@ If you would like a one-on-one meeting with an instructor, please make a private
 ||09:00 - 11:00AM|09:00 - 11:00AM|09:00 - 11:00AM|09:00 - 11:00AM|09:00 - 11:00AM|
 ||03:00 - 05:00PM|03:00 - 05:00PM|03:00 - 05:00PM|03:00 - 05:00PM|||
 |07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|
+
+&nbsp;
+
+___
+
+<div align="center">
+    <p>© Michigan State University</p>
+</div>
