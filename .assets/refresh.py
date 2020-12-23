@@ -54,7 +54,7 @@ class Day:
         self.year = datetime_obj.year
         self.date = datetime_obj.strftime('%m/%d/%Y')
         self.weekday = datetime_obj.strftime('%A').lower()
-        self.hover = datetime_obj.strftime('%A, %B %d{} %Y'.format(
+        self.hover = datetime_obj.strftime('%A, %B %d{} %Y (%m/%d/%Y)'.format(
             ordinal_suffix(self.day))).replace(' 0', ' ')
         self.text = text
         self.href = href
