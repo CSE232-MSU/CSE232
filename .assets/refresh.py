@@ -5,6 +5,7 @@ for the master README.md file.
 Author: Braedyn Lettinga
 '''
 
+import os
 import re
 from datetime import datetime, timedelta
 from typing import List
@@ -149,14 +150,12 @@ class Calendar:
             Used as an href attribute to the 'a' tag in the calendar HTML processed by generate_calendar_html().
         """
         date = self[start_date].datetime_obj
+        date_str = date.strftime('%m/%d/%Y')
         skip_dates = [fix_date_str(skip_date) for skip_date in skip_dates]
         i = 1
 
-        while i <= n:
-            date_str = date.strftime('%m/%d/%Y')
-
-            if date_str not in self:
-                break
+        while (i <= n) and (date_str in self):
+            
             if date_str in skip_dates:
                 date += timedelta(every)
                 continue
@@ -167,6 +166,7 @@ class Calendar:
 
             i += 1
             date += timedelta(every)
+            date_str = date.strftime('%m/%d/%Y')
 
     def generate_calendar_html(self) -> str:
         """
@@ -214,18 +214,20 @@ class Calendar:
 
 if __name__ == "__main__":
 
-    ### 🠗 CHANGE AS NECESSARY BELOW 🠗 ###
+    ### ⬇️ CHANGE AS NECESSARY BELOW ⬇️ ###
     STARTING_DATE = '12/27/2020'  
     WEEKS = 16
 
     calendar = Calendar(start_date=STARTING_DATE, weeks=WEEKS)
 
-    ### 🠗 DO NOT CHANGE BELOW 🠗 ###
+    ### ⬇️ DO NOT CHANGE BELOW ⬇️ ###
     calendar_html = calendar.generate_calendar_html()
 
-    template = open('.assets/README_TEMP.md', 'r').read()
+    os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
+    template = open('README_TEMP.md', 'r').read()
     template = template.replace('&calendar&', calendar_html)
 
-    readme = open('README.md', 'w+', encoding="utf-8")
+    readme = open('../README.md', 'w+', encoding="utf-8")
     print(template, file=readme)
     readme.close()

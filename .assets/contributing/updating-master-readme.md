@@ -29,24 +29,26 @@ At the bottom of refresh.py is a chunk of code left for anyone to fill-out:
 ```python
 if __name__ == "__main__":
 
-    ### 🠗 CHANGE AS NECESSARY BELOW 🠗 ###
+    ### ⬇️ CHANGE AS NECESSARY BELOW ⬇️ ###
     STARTING_DATE = '12/27/2020'  
     WEEKS = 16
 
     calendar = Calendar(start_date=STARTING_DATE, weeks=WEEKS)
 
-    ### 🠗 DO NOT CHANGE BELOW 🠗 ###
+    ### ⬇️ DO NOT CHANGE BELOW ⬇️ ###
     calendar_html = calendar.generate_calendar_html()
 
-    template = open('.assets/README_TEMP.md', 'r').read()
+    os.chdir(os.path.dirname(os.path.realpath(__file__)))
+
+    template = open('README_TEMP.md', 'r').read()
     template = template.replace('&calendar&', calendar_html)
 
-    readme = open('README.md', 'w+', encoding="utf-8")
+    readme = open('../README.md', 'w+', encoding="utf-8")
     print(template, file=readme)
     readme.close()
 ```
 
-You'll want to make your changes to the calendar above the `### 🠗 DO NOT CHANGE BELOW 🠗 ###` comment. But, of course, how can you change it?
+You'll want to make your changes to the calendar above the `### ⬇️ DO NOT CHANGE BELOW ⬇️ ###` comment. But, of course, how can you change it?
 
 &nbsp;
 

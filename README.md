@@ -216,7 +216,7 @@ Help Room is conducted through Zoom. You can find the session details and instru
 
 Please direct any and all written communication to Piazza (you can post anonymously if that's something you'd prefer). Emails may not be responded to.
 
-If you would like a private meeting with an instructor, please make a private Piazza post detailing your request and availability.
+If you would like a one-on-one meeting with an instructor, please make a private Piazza post detailing your request and availability.
 
 | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
 | :---:  | :---:  | :---:   | :---:     | :---:    | :---:  | :---:    |
