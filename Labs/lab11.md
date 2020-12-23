@@ -8,7 +8,7 @@ Today, we're going to practice pointer manipulation in the context of a singly-l
 
 ### Background
 
-[Download the starter code provided here.](../.assets/downloads/lab11.zip)
+[Download the starter code provided here.](https://github.com/braedynl/CSE232/raw/main/.assets/downloads/lab11.zip)
 
 In a nutshell: a singly-linked list is a data structure for implementing a generic array of elements, where each node has data, and a pointer to the next node. The list structure typically has pointers to the list's first node and last node. A singly-linked list's first node is typically called the _head_, and the last node the _tail_.
 

@@ -43,9 +43,9 @@ int main() {
 
 Today, we're going to work on making our own classes with private data members and accessors. More specifically, we'll be building a `Table` class, which will act as an abstraction of two-dimensional vectors (i.e., matrices).
 
-[Download the starter code provided here.](../.assets/downloads/lab10.zip)
-
 ### Program Specifications
+
+[Download the starter code provided here.](https://github.com/braedynl/CSE232/raw/main/.assets/downloads/lab10.zip)
 
 The header for the Table class has the following private elements:
 

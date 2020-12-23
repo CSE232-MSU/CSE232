@@ -107,7 +107,7 @@ If you don't remember, you can make an empty folder by using the `mkdir` command
 mkdir lab6
 ```
 
-[Download, and extract the files in this .zip folder linked here](../.assets/extra/lab06.zip). Copy these files into your lab6 folder.
+[Download, and extract the files in this .zip folder linked here](https://github.com/braedynl/CSE232/raw/main/.assets/downloads/lab06.zip). Copy these files into your lab6 folder.
 
 Navigate your terminal to the "lab6" folder, then, compile your three files with the following command:
 
