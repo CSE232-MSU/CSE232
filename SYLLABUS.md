@@ -191,6 +191,6 @@ All students are expected to be responsible users of the computer system and lab
 
 ___
 
-Written by: Dr. Joshua Nahum, Braedyn Lettinga
-
-© Michigan State University
+<div align="center">
+    <p>© Michigan State University</p>
+</div>
