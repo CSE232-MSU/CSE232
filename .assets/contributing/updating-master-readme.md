@@ -20,7 +20,7 @@ After you've gone ahead and made your edits, run the refresh.py script once, and
 
 ## Updating Calendar Things
 
-In the .assets/ folder is a Python script called [refresh.py](../refresh.py). It contains two classes: `Calendar`, and `Day`. The `Day` class acts like a C++ `struct`, where the `Calendar` is essentially a dictionary of `Day` instances.
+In the .assets/ folder is a Python script called [refresh.py](../refresh.py). It contains two classes: `Calendar`, and `Day`. The `Day` class acts like a C-style `struct`, where the `Calendar` is essentially a dictionary of `Day` instances.
 
 You can make *any* arrangement of calendar events given the three functions I'll be describing below.
 
