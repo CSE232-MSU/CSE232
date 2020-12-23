@@ -9,14 +9,14 @@ presentations, etc.)
 Author: Braedyn Lettinga
 '''
 
-import os 
+import os
 from zipfile import ZipFile, ZIP_DEFLATED
 
 os.chdir(os.path.dirname(os.path.realpath(__file__)))
 os.chdir('../Lectures')
 
 for week_folder in os.listdir():
-    if '.' not in week_folder:
+    if os.path.isdir(week_folder) and not week_folder.startswith('.'):
 
         week_num = week_folder[-2:]
         zip_file = ZipFile('../.assets/downloads/week{}.zip'.format(week_num), 'w')
