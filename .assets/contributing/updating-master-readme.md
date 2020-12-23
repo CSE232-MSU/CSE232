@@ -48,6 +48,8 @@ if __name__ == "__main__":
     readme.close()
 ```
 
+(Note that this may have changed slightly since when this document was written -- refer to comments in the script)
+
 You'll want to make your changes to the calendar above the `### ⬇️ DO NOT CHANGE BELOW ⬇️ ###` comment. But, of course, how can you change it?
 
 &nbsp;
@@ -643,22 +645,26 @@ Output calendar HTML:
 ### Adding a Series of Events
 
 ```python
-def set_event_series(self, text_format: str, n: int, every: int, start_date: str, skip_dates: List[str] = [], href_format: str = None) -> None:
+def set_event_series(self, text_format: str, end: int, every: int, start_date: str, skip_dates: List[str] = [], href_format: str = None, start: int = 1, step: int = 1) -> None:
 ```
 
 Obviously, setting individual days can be a pain if you have a multitude of assignments to place. This method function can help with that problem.
 
 `text_format` takes a string that should expect one, integer `.format()` argument alike: `"Project {:02d}"`.
 
-`n` is the number of occurrences in the event series. If `text_format="Project {:02d}"` and `n=10`, for example, then `"Project 01"`, `"Project 02"`, ..., `"Project 10"` will be placed onto the calendar.
+`end` is the number of occurrences in the event series to end on. If `text_format="Project {:02d}"` and `end=10`, for example, then `"Project 01"`, `"Project 02"`, ..., `"Project 10"` will be placed onto the calendar.
 
-`every` is the number of days between events in the series (it's often that you'll want weekly assignments, and so you'd provide `every=7`).
+`every` is the number of days between events in the series. It's often that you'll want weekly assignments, and so you'd provide `every=7`, for example.
 
 `start_date` is a date-string in the format `"%m/%d/%Y"` for which will be the first occurrence of the event series. The rest of the series will begin enumerating from this date.
 
 `skip_dates` is a list of date-strings in the format `"%m/%d/%Y"` to skip during the enumeration.
 
-`href_format` takes a string that should expect one, integer `.format()` argument alike: `"https://www.somewebsite.com/{:02d}/"`. These strings should be URLs, and is convenient if you have links associated with each event enumerated in a parallel way to the `text_format` argument.
+`href_format` takes a string that should expect one, integer `.format()` argument alike: `"https://www.somewebsite.com/{:02d}/"`. These strings should be URLs, and is convenient if you have links associated with each event enumerated in a parallel manner to the `text_format` argument.
+
+`start` is the first number of the series to begin from. Default is 1.
+
+`step` is the interval between enumerations in the series. Default is 1.
 
 Example:
 
@@ -667,7 +673,7 @@ calendar = Calendar(start_date='12/27/2020', weeks=16)
 
 calendar.set_event_series(
     text_format="Project {:02d}",  # Project XX
-    n=11,                          # 1, 2, ..., 11
+    end=11,                        # 1, 2, ..., 11
     every=7,                       # every week
     start_date='1/8/2021',         # from 1/8/2021 (a Friday)
     skip_dates=['2/19/2021']       # skip 2/19/2021

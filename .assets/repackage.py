@@ -1,3 +1,14 @@
+'''
+Re-packages all of the lecture files into their
+respective .zip files.
+
+Run this script on a local machine to update the .zip
+files if you made changes to any of them (the scripts,
+presentations, etc.)
+
+Author: Braedyn Lettinga
+'''
+
 import os 
 from zipfile import ZipFile, ZIP_DEFLATED
 

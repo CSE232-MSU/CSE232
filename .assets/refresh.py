@@ -2,6 +2,11 @@
 Contains a Calendar and Day class used to generate an HTML calendar table
 for the master README.md file.
 
+Run this script on a local machine to update the master README.md file with
+changes to the template (which is in this folder; .assets/README_TEMP.md).
+
+You can make changes to the course schedule at the bottom of this script.
+
 Author: Braedyn Lettinga
 '''
 
