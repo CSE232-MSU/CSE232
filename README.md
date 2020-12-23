@@ -28,7 +28,7 @@ Resources:
 Posted: 1/10/20
 
 <blockquote>
-<p>Welcome to CSE232!</p>
+<p>Welcome to CSE232! 🎉</p>
 <p>Please go through <a href="Labs/lab00.md">Lab 00</a> to get started with the course. It'll have you set up Mimir, Visual Studio Code, and a C++ compiler. We expect that you'll have all of these resources available by your first class meeting.</p>
 <p>— Braedyn Lettinga</p>
 </blockquote>
@@ -234,8 +234,6 @@ If you would like a one-on-one meeting with an instructor, please make a private
 ||09:00 - 11:00AM|09:00 - 11:00AM|09:00 - 11:00AM|09:00 - 11:00AM|09:00 - 11:00AM|
 ||03:00 - 05:00PM|03:00 - 05:00PM|03:00 - 05:00PM|03:00 - 05:00PM|||
 |07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|07:00 - 09:00PM|
-
-&nbsp;
 
 ___
 
