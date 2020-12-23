@@ -47,16 +47,15 @@ class Day:
     used for the Calendar class to represent a single day entry.
     """
 
-    def __init__(self, datetime_obj: datetime, week: int, text: str = '', href: str = ''):
+    def __init__(self, datetime_obj: datetime, text: str = '', href: str = ''):
         self.datetime_obj = datetime_obj
         self.day = datetime_obj.day
         self.month = datetime_obj.month
         self.year = datetime_obj.year
         self.date = datetime_obj.strftime('%m/%d/%Y')
         self.weekday = datetime_obj.strftime('%A').lower()
-        self.hover = datetime_obj.strftime('%A, %B %d{}'.format(
+        self.hover = datetime_obj.strftime('%A, %B %d{} %Y'.format(
             ordinal_suffix(self.day))).replace(' 0', ' ')
-        self.week = week
         self.text = text
         self.href = href
 
@@ -96,9 +95,9 @@ class Calendar:
         self.calendar = {}
 
         date = self.start_datetime_obj
-        for week in range(1, weeks + 1):
+        for _ in range(0, weeks):
             for _ in range(7):
-                self.calendar[date.strftime('%m/%d/%Y')] = Day(date, week)
+                self.calendar[date.strftime('%m/%d/%Y')] = Day(date)
                 date += timedelta(1)
 
     def __str__(self) -> str:
@@ -125,17 +124,18 @@ class Calendar:
         """
         return fix_date_str(date) in self.calendar
 
-    def set_event_series(self, text_format: str, n: int, every: int, start_date: str, skip_dates: List[str] = [], href_format: str = None) -> None:
+    def set_event_series(self, text_format: str, end: int, every: int, start_date: str, skip_dates: List[str] = [], 
+                         href_format: str = None, start: int = 1, step: int = 1) -> None:
         """
-        Sets a series of calendar events enumerated from 1 to `n` (inclusively).
+        Sets a series of calendar events enumerated from `start` to `end` (inclusively) in `step` intervals.
 
         Parameters
         ----------
         `text_format`
             A string that should expect one, integer format() argument alike: "Project {:02d}".
             Used as the displayed text of the calendar cell.
-        `n`
-            The number of events in the series. If text_format="Project {:02d}" and n=10,
+        `end`
+            The number of events in the series. If text_format="Project {:02d}" and end=10,
             "Project 01", "Project 02", ..., "Project 10", will be inserted into the calendar.
         `every`
             The number of days to skip between event entries.
@@ -148,23 +148,26 @@ class Calendar:
         `href_format`
             A string that should expect one, integer format() argument, alike: "https://www.example{:02d}.com".
             Used as an href attribute to the 'a' tag in the calendar HTML processed by generate_calendar_html().
+        `start`
+            Optional argument to begin enumeration from a different number, defaulted to 1.
+        `step`
+            Optional argument to skip enumerations by a particular step amount.
         """
         date = self[start_date].datetime_obj
         date_str = date.strftime('%m/%d/%Y')
         skip_dates = [fix_date_str(skip_date) for skip_date in skip_dates]
-        i = 1
 
-        while (i <= n) and (date_str in self):
+        while (start <= end) and (date_str in self):
             
             if date_str in skip_dates:
                 date += timedelta(every)
                 continue
 
-            self[date_str].text = text_format.format(i)
+            self[date_str].text = text_format.format(start)
             if href_format:
-                self[date_str].href = href_format.format(i)
+                self[date_str].href = href_format.format(start)
 
-            i += 1
+            start += step
             date += timedelta(every)
             date_str = date.strftime('%m/%d/%Y')
 
@@ -179,7 +182,7 @@ class Calendar:
             html += '<th align="center">{}</th>\n'.format(header)
         html += '</tr>\n</thead>\n<tbody>\n'
 
-        week_n = 1
+        week_n = 0
         date = self.start_datetime_obj
         stop_date = self.start_datetime_obj + timedelta(len(self.calendar))
 
@@ -215,10 +218,21 @@ class Calendar:
 if __name__ == "__main__":
 
     ### ⬇️ CHANGE AS NECESSARY BELOW ⬇️ ###
-    STARTING_DATE = '12/27/2020'  
+    STARTING_DATE = '1/10/2021'  
     WEEKS = 16
 
     calendar = Calendar(start_date=STARTING_DATE, weeks=WEEKS)
+
+    calendar.set_event_series(
+        text_format='Week {:02d} Lectures',
+        end=14,
+        every=7,
+        start_date='1/10/2021',
+        skip_dates=[],
+        href_format='https://github.com/braedynl/CSE232/tree/main/Lectures/Week%20{:02d}',
+        start=0,
+        step=1
+    )
 
     ### ⬇️ DO NOT CHANGE BELOW ⬇️ ###
     calendar_html = calendar.generate_calendar_html()
