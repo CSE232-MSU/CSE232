@@ -1,5 +1,7 @@
 # Lab 04 - Strings
 
+**Warning**: Parts of this lab cannot be seen with GitHub dark mode or a dark mode browser extension enabled.
+
 ## Standard Input, Output and Pipes
 
 ### I/O Redirection

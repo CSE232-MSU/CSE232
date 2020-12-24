@@ -1,5 +1,7 @@
 # Lab 09 - Classes
 
+**Warning**: Parts of this lab cannot be seen with GitHub dark mode or a dark mode browser extension enabled.
+
 ## Remote Access
 
 Often, you'll want to be able to connect to, and run programs on computers that you don't have a keyboard attached to. You _already_ do this when connecting to a network over the internet. The primary means that you use to connect to computers at the command line is a tool called "SSH". SSH allows you to authenticate (usually via your username and password) to a remote computer so you can access its command line.

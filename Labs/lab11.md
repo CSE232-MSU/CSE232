@@ -1,6 +1,6 @@
 # Lab 11 - Pointer Manipulation
 
-(There is no Unix tutorial this week)
+There is no Unix tutorial this week
 
 ## Coding Assignment
 

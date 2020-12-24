@@ -1,5 +1,7 @@
 # Lab 03 - Functions
 
+**Warning**: Parts of this lab cannot be seen with GitHub dark mode or a dark mode browser extension enabled.
+
 ## Pagers and Help
 
 Often, you want to be able to view files in the terminal (instead of opening them in a text editor like Atom or gedit). There are a few ways to view files from the terminal -- these commands are referred to as _pagers_.

@@ -1,6 +1,8 @@
 # Lab 07 - Templates and 2D Vectors
 
-(There is no Unix tutorial this week)
+**Warning**: Parts of this lab cannot be seen with GitHub dark mode or a dark mode browser extension enabled.
+
+There is no Unix tutorial this week
 
 ## Coding Assignment
 
