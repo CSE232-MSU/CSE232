@@ -1,8 +1,6 @@
 # Using C++ in VSCode - MacOS
 
-The following tutorial assumes you are running on MacOS version 10.13 (High Sierra) or later. You can check your MacOS version by clicking the Apple logo at the top-left, and selecting "About This Mac".
-
-Please update your system if you are not running version 10.13 or later.
+The following tutorial assumes you are running on MacOS version 10.13 (High Sierra) or later, _but_ it's possible that this tutorial may still work on older versions -- we simply have no way of testing. You can check your MacOS version by clicking the Apple logo at the top-left, and selecting "About This Mac".
 
 If you encounter any trouble during this tutorial, please ask about your problem on Piazza, or come to Help Room.
 
@@ -25,7 +23,19 @@ Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
 ```
 
-Your version numbers may vary.
+If the return came back as something akin to:
+
+```
+zsh: command not found: clang
+```
+
+...type the following command, and test the first command to see if it works after running to continue with this tutorial:
+
+```bash
+xcode-select --install
+```
+
+You may be prompted a few times. In which case, accept/install any requests by the operating system.
 
 In most of our lectures and labs, we'll be referring to a different compiler, [GCC](https://en.wikipedia.org/wiki/GNU_Compiler_Collection), because a majority of students run Windows, and thus will have to install GCC as opposed to Clang.
 
@@ -115,11 +125,16 @@ You will be typing those two commands hundreds, if not _thousands_ of times in t
 
 ## Debugging C++ in VSCode
 
-You should be familiar with some sort of IDE debugger from your previous programming class (CSE231 or an equivalent prerequisite). [If you aren't, please read through this tutorial]() (it's in Python, but the same core principles apply).
+You should be familiar with an IDE debugger from your previous programming class (CSE231 or an equivalent prerequisite). [If you aren't, please read through this tutorial]() (it's in Python, but the same core principles apply).
 
 1. In the CSE232 folder, create a subfolder named ".vscode", and create two files within it: "tasks.json", and "launch.json", as shown in the file explorer on the left-side here:
 
 <img src="../.assets/images/vscode-installation-macos/7.png">
+
+<div align="center">
+  <p>*The dot prefix in ".vscode" makes it a hidden folder. Meaning that, you probably won't be able to see it in Finder unless you input COMMAND + SHIFT + . on your keyboard.</p>
+  <p>*".json" is the extension for "JavaScript Object Notation". VSCode uses .json files as a kind of configuration file type. It is not something that will be taught in this course, though you may feel free to look into it and other VSCode settings on your own time.</p>
+</div>
 
 2. Copy-and-paste the following code into your tasks.json file, and save it (COMMAND + S):
 
