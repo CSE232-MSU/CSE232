@@ -25,7 +25,7 @@ Resources:
 
 ## Announcements
 
-<img src=".assets/images/new.svg" width="50px">
+<img src=".assets/images/new-tag.svg" height="20px"> <img src=".assets/images/logistics-tag.svg" height="20px">
 
 <blockquote>
 <p>Welcome to CSE232! 🎉</p>
