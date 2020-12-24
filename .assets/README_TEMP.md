@@ -16,11 +16,11 @@ Essential Sites:
 - [Piazza]()
 
 Resources:
-- [STL Algorithms Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14)
 - [cplusplus](https://cplusplus.com/reference/)
 - [cppreference](https://en.cppreference.com/w/)
 - [OnlineGDB](https://www.onlinegdb.com/)
-- [UNIX Tutorial](https://www.tutorialspoint.com/unix/index.htm)
+- [STL Algorithms Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14)
+- [Unix Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 - [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=2olsGf6JIkU)
 
 ## Announcements
