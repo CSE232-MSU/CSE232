@@ -25,12 +25,12 @@ Resources:
 
 ## Announcements
 
-Posted: 1/10/20
+<img src="images/new.svg" width="50px">
 
 <blockquote>
-<p>Welcome to CSE232! 🎉</p>
+<p>Welcome to CSE232! ðŸŽ‰</p>
 <p>Please go through <a href="Labs/lab00.md">Lab 00</a> to get started with the course. It'll have you set up Mimir, Visual Studio Code, and a C++ compiler. We expect that you'll have all of these resources available by your first class meeting.</p>
-<p>— Braedyn Lettinga</p>
+<p>â€” Braedyn Lettinga, 1/10/20</p>
 </blockquote>
 
 ## Course Schedule
@@ -238,5 +238,6 @@ If you would like a one-on-one meeting with an instructor, please make a private
 ___
 
 <div align="center">
-    <p>© Michigan State University</p>
+    <p>Â© Michigan State University</p>
 </div>
+
