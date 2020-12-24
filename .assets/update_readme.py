@@ -244,7 +244,7 @@ if __name__ == "__main__":
 
     os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
-    template = open('README_TEMP.md', 'r').read()
+    template = open('README_TEMP.md', 'r', encoding="utf-8").read()
     template = template.replace('&calendar&', calendar_html)
 
     readme = open('../README.md', 'w+', encoding="utf-8")
