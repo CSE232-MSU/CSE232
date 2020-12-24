@@ -51,21 +51,15 @@ g++ --version
     <p>*Your welcome page may look slightly different</p>
 </div>
 
-&nbsp;
-
 4. Click the "Open Folder" button, and navigate the explorer to the CSE232 folder you created in step 2.
 
 5. The top of the sidebar should now display the name of the folder you opened, which is presumably empty (unless you have files there). You can right-click inside this sidebar for many more options:
 
 <img src="../.assets/images/vscode-installation-macos/2.png">
 
-&nbsp;
-
 6. Create a file named "helloworld.cpp". ".cpp" is the file extension used to denote a C++ file. Make sure that all of your files have this extension when you're coding in C++ for this class. You should now have something like this:
 
 <img src="../.assets/images/vscode-installation-macos/3.png">
-
-&nbsp;
 
 7. After creating helloworld.cpp, you may have been prompted to install some sort of C++ "extension". Follow this prompt if it appears. If you did not get prompted, navigate to the left-most sidebar, and click the icon represented by four squares. It should open-up some sort of "Extensions Marketplace" with a search bar at the top. Search "C++", and the top result should be an extension named "C/C++" made by Microsoft. Click this extension when you find it, and your resulting interface should look like this:
 
@@ -74,8 +68,6 @@ g++ --version
 <div align="center">
     <p>*I have the extension already installed in this screenshot, which is why I have an "Uninstall" button near the top.</p>
 </div>
-
-&nbsp;
 
 8. Click the "Install" button near the name of the extension. If, after installing, it says "Reload Required", click the button that says so.
 
@@ -95,9 +87,7 @@ int main() {
 
 <div align="center">
     <p>*You can also open the integrated terminal by dragging from the top of the blue bar at the bottom of the window.</p>
-</div> 
-
-&nbsp;
+</div>
 
 11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. To compile our helloworld.cpp program, type the following command into the terminal:
 
@@ -115,8 +105,6 @@ g++ helloworld.cpp -Wall -std=c++17
 
 <img src="../.assets/images/vscode-installation-macos/6.png">
 
-&nbsp;
-
 <div align="center">
 <p>Congratulations! You just made your first program in C++.</p>
 </div>
@@ -133,14 +121,10 @@ You should be familiar with some sort of IDE debugger from your previous program
 
 <img src="../.assets/images/vscode-installation-macos/7.png">
 
-&nbsp;
-
 2. Copy-and-paste the following code into your tasks.json file, and save it (COMMAND + S):
 
 ```json
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558
-  // for the documentation about the tasks.json format
   "version": "2.0.0",
   "tasks": [
     {
@@ -170,15 +154,10 @@ You should be familiar with some sort of IDE debugger from your previous program
 
 <img src="../.assets/images/vscode-installation-macos/8.png">
 
-&nbsp;
-
 3. Copy-and-paste the following code into your launch.json file and save it (COMMAND + S):
 
 ```json
 {
-  // Use IntelliSense to learn about possible attributes.
-  // Hover to view descriptions of existing attributes.
-  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
     {
@@ -199,8 +178,6 @@ You should be familiar with some sort of IDE debugger from your previous program
 ```
 
 <img src="../.assets/images/vscode-installation-macos/9.png">
-
-&nbsp;
 
 4. Open and replace the contents of helloworld.cpp for this more complex version:
 
@@ -227,13 +204,9 @@ int main()
 
 <img src="../.assets/images/vscode-installation-macos/10.png">
 
-&nbsp;
-
 6. Run the file with the debugger by hitting the green play button at the top-left, or by hitting F5 on your keyboard (you may need to use a key-combination; FN + F5). VSCode will automatically set a breakpoint at the beginning of your `main()` function. If you set your own breakpoint (by clicking slightly to the left of a line number), the automatically placed breakpoint will be skipped.
 
 <img src="../.assets/images/vscode-installation-macos/11.png">
-
-&nbsp;
 
 Your terminal should populate with commands that were automatically executed by the .json files I had you create. If your VSCode interface looks like mine in the screenshot above, then everything is working properly. Congrats!
 
@@ -258,8 +231,6 @@ The rectangle of dots on the left-side of the panel is a drag-point, where you c
 After defining the `msg` variable by stepping through, you can click its dropdown inside the debugger menu to see its contents denoted by index.
 
 <img src="../.assets/images/vscode-installation-macos/12.png">
-
-&nbsp;
 
 The `vector` type is C++'s version of arrays/lists. You'll learn more about them during Week 06 😉
 
