@@ -25,7 +25,7 @@ Resources:
 
 ## Announcements
 
-Posted: 1/10/20
+Posted: 1/10/20 - <font color="green">New!</font>
 
 <blockquote>
 <p>Welcome to CSE232! 🎉</p>
