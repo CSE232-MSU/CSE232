@@ -113,6 +113,8 @@ A homework assignment will be due every Monday and Thursday at 10 PM. Each homew
 
 Submitting an assignment to Mimir merely saves it. At the deadline for an assignment, your work is automatically saved and graded. So be sure you aren't in the middle of typing something when the assignment closes.
 
+All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation, the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
+
 ### Re-Grades
 
 We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.

@@ -133,7 +133,6 @@ You should be familiar with an IDE debugger from your previous programming class
 
 <div align="center">
   <p>*The dot prefix in ".vscode" makes it a hidden folder. Meaning that, you probably won't be able to see it in Finder unless you input COMMAND + SHIFT + . on your keyboard.</p>
-  <p>*".json" is the extension for "JavaScript Object Notation". VSCode uses .json files as a kind of configuration file type. It is not something that will be taught in this course, though you may feel free to look into it and other VSCode settings on your own time.</p>
 </div>
 
 2. Copy-and-paste the following code into your tasks.json file, and save it (COMMAND + S):
