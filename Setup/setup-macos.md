@@ -71,7 +71,7 @@ g++ --version
 
 <img src="../.assets/images/vscode-installation-macos/3.png">
 
-7. After creating helloworld.cpp, you may have been prompted to install some sort of C++ "extension". Follow this prompt if it appears. If you did not get prompted, navigate to the left-most sidebar, and click the icon represented by four squares. It should open-up some sort of "Extensions Marketplace" with a search bar at the top. Search "C++", and the top result should be an extension named "C/C++" made by Microsoft. Click this extension when you find it, and your resulting interface should look like this:
+7. After creating helloworld.cpp, you may have been prompted to install some sort of C++ "extension". Install the extension that's prompted if it appears. If you did not get prompted, navigate to the left-most sidebar, and click the icon represented by four squares. It should open-up some sort of "Extensions Marketplace" with a search bar at the top. Search "C++", and the top result should be an extension named "C/C++" made by Microsoft. Click this extension when you find it, and your resulting interface should look like this:
 
 <img src="../.assets/images/vscode-installation-macos/4.png">
 

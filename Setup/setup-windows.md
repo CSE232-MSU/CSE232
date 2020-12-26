@@ -24,13 +24,13 @@ We recommend that you install MinGW (Minimalist GNU for Windows), a software pac
 <img src="../.assets/images/vscode-installation-windows/2.png">
 </div>
 
-4. On the Installation Folder screen, __do not change the destination folder that is set by default__. Copy the destination folder's path, and keep it on your clipboard for later.
+4. On the Installation Folder screen, __do not change the destination folder that is set by default__. You can disable the "Create shortcuts in Start Menu" option if you wish, and simply click Next to begin the installation.
 
 <div align="center">
 <img src="../.assets/images/vscode-installation-windows/3.png">
 </div>
 
-5. Click the Next button to begin the installation, and wait until it is finished before closing the window.
+5. Wait for the installation to finish before closing the window.
 
 6. Type into your Windows search bar: "Edit the system environment variables". You should see an application of the same name appear in the results. Open it once it appears.
 
@@ -48,7 +48,7 @@ We recommend that you install MinGW (Minimalist GNU for Windows), a software pac
 <img src="../.assets/images/vscode-installation-windows/6.png">
 </div>
 
-9. Click the "New" button near the top-right of the window to add an environment variable. __Paste the path you copied earlier into the newly-opened entry with "\mingw64\bin" appended to it.__ The entire path will look something like this (if not identical):
+9. Click the "New" button near the top-right of the window to add an environment variable. Copy-and-paste the following path into the newly-opened entry, and hit ENTER/RETURN to finish it.  
 
 ```
 C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin
@@ -80,7 +80,7 @@ Now we have to install VSCode and get it to cooperate with the compiler we just 
 
 3. Open VSCode, and you should be presented with a Welcome page. Near the top-left of the window, you should see an icon of files stacked onto one another. Click on this icon to open the integrated file explorer as shown here:
 
-<img src="../.assets/images/vscode-installation-macos/1.png">
+<img src="../.assets/images/vscode-installation-windows/9.png">
 
 <div align="center">
     <p>*Your welcome page may look slightly different</p>
@@ -88,17 +88,17 @@ Now we have to install VSCode and get it to cooperate with the compiler we just 
 
 4. Click the "Open Folder" button, and navigate the explorer to the CSE232 folder you created in step 2.
 
-5. The top of the sidebar should now display the name of the folder you opened, which is presumably empty (unless you have files there). You can right-click inside the folder for many of the options you'd typically have in Finder:
+5. The top of the sidebar should now display the name of the folder you opened, which is presumably empty (unless you have files there). You can right-click inside the folder for many of the options you'd typically have in File Explorer:
 
-<img src="../.assets/images/vscode-installation-macos/2.png">
+<img src="../.assets/images/vscode-installation-windows/10.png">
 
 6. Create a file named "helloworld.cpp". ".cpp" is the file extension used to denote a C++ file. Make sure that all of your files have this extension when you're coding in C++ for this class. You should now have something like this:
 
-<img src="../.assets/images/vscode-installation-macos/3.png">
+<img src="../.assets/images/vscode-installation-windows/11.png">
 
-7. After creating helloworld.cpp, you may have been prompted to install some sort of C++ "extension". Follow this prompt if it appears. If you did not get prompted, navigate to the left-most sidebar, and click the icon represented by four squares. It should open-up some sort of "Extensions Marketplace" with a search bar at the top. Search "C++", and the top result should be an extension named "C/C++" made by Microsoft. Click this extension when you find it, and your resulting interface should look like this:
+7. After creating helloworld.cpp, you may have been prompted to install some sort of C++ "extension". Install the extension that's prompted if it appears. If you did not get prompted, navigate to the left-most sidebar, and click the icon represented by four squares. It should open-up some sort of "Extensions Marketplace" with a search bar at the top. Search "C++", and the top result should be an extension named "C/C++" made by Microsoft. Click this extension when you find it, and your resulting interface should look like this:
 
-<img src="../.assets/images/vscode-installation-macos/4.png">
+<img src="../.assets/images/vscode-installation-windows/12.png">
 
 <div align="center">
     <p>*I have the extension already installed in this screenshot, which is why I have an "Uninstall" button near the top.</p>
@@ -118,11 +118,19 @@ int main() {
 
 10. On your keyboard, use the key-combination: CONTROL + \` (this is the backtick character, if you're unfamiliar. It should be to the left of the "1" key on most keyboards). This brings up VSCode's integrated terminal:
 
-<img src="../.assets/images/vscode-installation-macos/5.png">
+<img src="../.assets/images/vscode-installation-windows/13.png">
 
 <div align="center">
     <p>*You can also open the integrated terminal by dragging from the top of the blue bar at the bottom of the window.</p>
 </div>
+
+**Optional Step**: VSCode will probably set your default shell as Windows Powershell when you first begin using it. If you're comfortable with Windows Powershell, feel free to keep it as is. If you want to switch your shell to CMD (command prompt), you can select from the "Select Default Shell" option in the dropdown near the top-right of the terminal window:
+
+<div align="center">
+  <img src="../.assets/images/vscode-installation-windows/shell-select.png">
+</div>
+
+A second menu will appear at the top. Select "CMD" from that menu, then close and reopen VSCode to see your terminal open in command prompt. 
 
 11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. To compile our helloworld.cpp program, type the following command into the terminal:
 
@@ -130,21 +138,25 @@ int main() {
 g++ helloworld.cpp -Wall -std=c++17
 ```
 
-12. This produces a file named "a.out" -- you should see it appear in the file explorer. To run your compiled program, type into the terminal:
+12. This produces a file named "a.exe" -- you should see it appear in the file explorer. To run your compiled program, type into the terminal:
 
 ```bash
-./a.out
+./a.exe
 ```
+
+(If you're using command prompt as your shell, you can simply type `a.exe`, or even just `a` as an alternative)
 
 13. You should now see "Hello world" displayed to the console!
 
-<img src="../.assets/images/vscode-installation-macos/6.png">
+<img src="../.assets/images/vscode-installation-windows/14.png">
 
 <div align="center">
 <p>Congratulations! You just made your first program in C++.</p>
 </div>
 
-It's important to note that **you must compile your program and run a.out every time you want to test your code**. It's a bit annoying compared to, say, running Python code. But, such is the nature of low-level languages.
+During most lectures and labs, you'll commonly hear us, instructors, refer to the output executable as "a.out". This is the default name given to the executable on Unix-based systems. Since you're on Windows, it'll be renamed to "a.exe", which you can simply think of as your version of "a.out".
+
+It's important to note that **you must compile your program and run a.exe every time you want to test your code**. It's a bit annoying compared to, say, running Python code. But, such is the nature of low-level languages.
 
 You will be typing those two commands hundreds, if not _thousands_ of times in this course. Keep them in your notes, or memorize them (you'll likely have them memorized within a few days of practice).
 
@@ -154,69 +166,66 @@ You should be familiar with an IDE debugger from your previous programming class
 
 1. In the CSE232 folder, create a subfolder named ".vscode", and create two files within it: "tasks.json", and "launch.json", as shown in the file explorer on the left-side here:
 
-<img src="../.assets/images/vscode-installation-macos/7.png">
+<img src="../.assets/images/vscode-installation-windows/15.png">
 
-<div align="center">
-  <p>*The dot prefix in ".vscode" makes it a hidden folder. Meaning that, you probably won't be able to see it in Finder unless you input COMMAND + SHIFT + . on your keyboard.</p>
-</div>
-
-2. Copy-and-paste the following code into your tasks.json file, and save it (COMMAND + S):
+2. Copy-and-paste the following code into your tasks.json file, and save it (CTRL + S):
 
 ```json
 {
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "type": "shell",
-      "label": "clang++ build active file",
-      "command": "/usr/bin/clang++",
-      "args": [
-        "-std=c++17",
-        "-stdlib=libc++",
-        "-g",
-        "${file}",
-        "-o",
-        "${fileDirname}/${fileBasenameNoExtension}"
-      ],
-      "options": {
-        "cwd": "${workspaceFolder}"
-      },
-      "problemMatcher": ["$gcc"],
-      "group": {
-        "kind": "build",
-        "isDefault": true
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "type": "shell",
+        "label": "C/C++: g++.exe build active file",
+        "command": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\g++.exe",
+        "args": ["-g", "${file}", "-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"],
+        "options": {
+          "cwd": "${workspaceFolder}"
+        },
+        "problemMatcher": ["$gcc"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        },
       }
-    }
-  ]
-}
+    ]
+  }
 ```
 
-<img src="../.assets/images/vscode-installation-macos/8.png">
+<img src="../.assets/images/vscode-installation-windows/16.png">
 
-3. Copy-and-paste the following code into your launch.json file and save it (COMMAND + S):
+3. Copy-and-paste the following code into your launch.json file and save it (CTRL + S):
 
 ```json
 {
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": "clang++ - Build and debug active file",
-      "type": "cppdbg",
-      "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}",
-      "args": [],
-      "stopAtEntry": true,
-      "cwd": "${workspaceFolder}",
-      "environment": [],
-      "externalConsole": false,
-      "MIMode": "lldb",
-      "preLaunchTask": "clang++ build active file"
-    }
-  ]
-}
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "g++.exe - Build and debug active file",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceFolder}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "miDebuggerPath": "C:\\Program Files\\mingw-w64\\x86_64-8.1.0-posix-seh-rt_v6-rev0\\mingw64\\bin\\gdb.exe",
+        "setupCommands": [
+          {
+            "description": "Enable pretty-printing for gdb",
+            "text": "-enable-pretty-printing",
+            "ignoreFailures": true
+          }
+        ],
+        "preLaunchTask": "C/C++: g++.exe build active file",
+      },
+    ]
+  }
 ```
 
-<img src="../.assets/images/vscode-installation-macos/9.png">
+<img src="../.assets/images/vscode-installation-windows/17.png">
 
 4. Open and replace the contents of helloworld.cpp for this more complex version:
 
@@ -241,11 +250,15 @@ int main()
 
 5. You should see an icon on the left sidebar that looks like a play button with a bug on it -- this is the debugger menu, go ahead and open it. Like most IDE debuggers, it has a menu showing your currently active variables, watched variables, call stack, and currently active breakpoints.
 
-<img src="../.assets/images/vscode-installation-macos/10.png">
+<img src="../.assets/images/vscode-installation-windows/18.png">
 
-6. Run the file with the debugger by hitting the green play button at the top-left, or by hitting F5 on your keyboard (you may need to use a key-combination; FN + F5). VSCode will automatically set a breakpoint at the beginning of your `main()` function. If you set your own breakpoint (by clicking slightly to the left of a line number), the automatically placed breakpoint will be skipped.
+6. Run the file with the debugger by hitting the green play button at the top-left, or by hitting F5 on your keyboard (you may need to use a key-combination; FN + F5). VSCode will automatically set a breakpoint at the beginning of your `main()` function.
 
-<img src="../.assets/images/vscode-installation-macos/11.png">
+<img src="../.assets/images/vscode-installation-windows/19.png">
+
+<div align="center">
+  <p>*You can disable the automatic breakpoint by setting the <code>"stopAtEntry"</code> value in launch.json to <code>false</code>.</p>
+</div>
 
 Your terminal should populate with commands that were automatically executed by the .json files I had you create. If your VSCode interface looks like mine in the screenshot above, then everything is working properly. Congrats!
 
@@ -267,9 +280,11 @@ It includes your standard debugging options. In order from left to right:
 
 The rectangle of dots on the left-side of the panel is a drag-point, where you can click and hold to drag the panel elsewhere in the window.
 
-After defining the `msg` variable by stepping through, you can click its dropdown inside the debugger menu to see its contents denoted by index.
+**Important**: use **Step Over** to execute lines that are not invoking functions you built yourself, and use **Step Into** when a line *is* invoking a function you built yourself. If you step into lines that are running code from the Standard Template Library (STL), you'll be going through *a lot* of code that is unnecessary for you to see.
 
-<img src="../.assets/images/vscode-installation-macos/12.png">
+After defining the `msg` variable by stepping through (with **Step Over**), you can click its dropdown inside the debugger menu to see its contents denoted by index (again, use **Step Over** when a line isn't invoking one of *your own* functions):
+
+<img src="../.assets/images/vscode-installation-windows/20.png">
 
 The `vector` type is C++'s version of arrays/lists. You'll learn more about them during Week 06 😉
 
