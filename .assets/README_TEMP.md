@@ -16,16 +16,17 @@ Essential Sites:
 - [Piazza]()
 
 Resources:
+- [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=2olsGf6JIkU)
 - [cplusplus](https://cplusplus.com/reference/)
 - [cppreference](https://en.cppreference.com/w/)
+- [Debugging Guide](DEBUGGING_GUIDE.md)
 - [OnlineGDB](https://www.onlinegdb.com/)
 - [STL Algorithms Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14)
 - [Unix Tutorial](https://www.tutorialspoint.com/unix/index.htm)
-- [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=2olsGf6JIkU)
 
 ## Announcements
 
-<img src=".assets/images/new-tag.svg" width="50px"> <img src=".assets/images/logistics-tag.svg" width="50px">
+<img src=".assets/images/new-tag.svg" height="20px"> <img src=".assets/images/logistics-tag.svg" height="20px">
 
 <blockquote>
 <p>Welcome to CSE232! 🎉</p>
