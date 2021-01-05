@@ -30,13 +30,13 @@ def fix_date_str(date: str) -> str:
 
     Parameters
     ----------
-    `date`
+    date
         A date string in the format '%m/%d/%Y'. May be missing padding
         zeroes.
 
     Returns
     -------
-    `str`
+    str
         The corrected date string
     """
     if not re.match(r'\d{1,2}/\d{1,2}/\d{4}', date):
@@ -71,22 +71,22 @@ class Calendar:
 
     Attributes
     ----------
-    `start_datetime_obj`
+    start_datetime_obj
         datetime instance of the starting date.
-    `calendar`
+    calendar
         dict instance that holds the calendar data.
     """
 
     def __init__(self, start_date: str, weeks: int):
         """
-        Creates a `Calendar` instance.
+        Creates a Calendar instance.
 
         Parameters
         ----------
-        `start_date`
+        start_date
             A date string in the format '%m/%d/%Y' that represents the first
             date for which the calendar should begin from. Must be a Sunday.
-        `weeks`
+        weeks
             Number of weeks that should be represented in the calendar.
         """
         if weeks < 1:
@@ -119,43 +119,43 @@ class Calendar:
 
     def __getitem__(self, date: str) -> Day:
         """
-        Retrieves the `Day` instance associated with a given date string.
+        Retrieves the Day instance associated with a given date string.
         """
         return self.calendar[fix_date_str(date)]
 
     def __contains__(self, date: str) -> bool:
         """
-        Tests if a `Day` instance with a given date string is in the calendar.
+        Tests if a Day instance with a given date string is in the calendar.
         """
         return fix_date_str(date) in self.calendar
 
     def set_event_series(self, text_format: str, end: int, every: int, start_date: str, skip_dates: List[str] = [], 
                          href_format: str = None, start: int = 1, step: int = 1) -> None:
         """
-        Sets a series of calendar events enumerated from `start` to `end` (inclusively) in `step` intervals.
+        Sets a series of calendar events enumerated from start to end (inclusively) in step intervals.
 
         Parameters
         ----------
-        `text_format`
+        text_format
             A string that should expect one, integer format() argument alike: "Project {:02d}".
             Used as the displayed text of the calendar cell.
-        `end`
+        end
             The number of events in the series. If text_format="Project {:02d}" and end=10,
             "Project 01", "Project 02", ..., "Project 10", will be inserted into the calendar.
-        `every`
+        every
             The number of days to skip between event entries.
-        `start_date`
+        start_date
             A date string in the format '%m/%d/%Y' that represents the first occurrence of the event.
             Subsequent event entries will begin enumerating from this date.
-        `skip_dates`
+        skip_dates
             A list of date strings in the format '%m/%d/%Y' that indicate which dates in the series
             should be skipped.
-        `href_format`
+        href_format
             A string that should expect one, integer format() argument, alike: "https://www.example{:02d}.com".
             Used as an href attribute to the 'a' tag in the calendar HTML processed by generate_calendar_html().
-        `start`
+        start
             Optional argument to begin enumeration from a different number, defaulted to 1.
-        `step`
+        step
             Optional argument to skip enumerations by a particular step amount.
         """
         date = self[start_date].datetime_obj
