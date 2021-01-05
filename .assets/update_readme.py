@@ -64,6 +64,15 @@ class Day:
         self.text = text
         self.href = href
 
+class Lecture:
+    """
+    Struct that holds a lecture's calendar text and href.
+    """
+
+    def __init__(self, text: str = '', href: str = ''):
+        self.text = text
+        self.href = href
+
 
 class Calendar:
     """
@@ -98,12 +107,14 @@ class Calendar:
             raise ValueError('starting date must be a Sunday')
 
         self.calendar = {}
+        self.lectures = {}
 
         date = self.start_datetime_obj
-        for _ in range(weeks):
+        for week_n in range(weeks):
             for _ in range(7):
                 self.calendar[date.strftime('%m/%d/%Y')] = Day(date)
                 date += timedelta(1)
+            self.lectures[week_n] = Lecture()
 
     def __str__(self) -> str:
         """
@@ -172,6 +183,26 @@ class Calendar:
             date += timedelta(every)
             date_str = date.strftime('%m/%d/%Y')
 
+    def set_lecture_series(self, text_format: str, href_format: str, start: int, end: int) -> None:
+        """
+        Sets a series of weekly lectures enumerated from `start` to `end` inclusively.
+
+        Parameters
+        ----------
+        text_format
+            A string that should expect one, integer format() argument alike: "Week {:02d} Lectures".
+            Used as the displayed text of the calendar cell.
+        href_format
+            A string that should expect one, integer format() argument, alike: "https://www.example{:02d}.com".
+            Used as an href attribute to the 'a' tag in the calendar HTML processed by generate_calendar_html().
+        start
+            Starting week number.
+        end
+            Ending week number.
+        """
+        for week_n in range(start, end + 1):
+            self.lectures[week_n] = Lecture(text_format.format(week_n), href_format.format(week_n))
+
     def generate_calendar_html(self) -> str:
         """
         Exports the calendar to an HTML table as a string.
@@ -179,7 +210,7 @@ class Calendar:
         html = ''
 
         html += '<div align="center">\n<table>\n<thead>\n<tr>\n'
-        for header in ['Week', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']:
+        for header in ['Week', 'Lectures', 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']:
             html += '<th align="center">{}</th>\n'.format(header)
         html += '</tr>\n</thead>\n<tbody>\n'
 
@@ -191,13 +222,17 @@ class Calendar:
 
             html += '<tr>\n'
 
-            for i in range(8):
+            for i in range(9):
                 date_str = date.strftime('%m/%d/%Y')
                 day = self[date_str]
 
                 if i == 0:
                     html += '<td align="center">{:02d}: {:02d}/{:02d}</td>\n'.format(
                         week_n, day.month, day.day)
+                    continue
+                if i == 1:
+                    lecture = self.lectures[week_n]
+                    html += '<td align="center"><a href="{}">{}</a></td>\n'.format(lecture.href, lecture.text)
                     continue
                 if day.href:
                     html += '<td align="center" title="{}"><a href="{}">{}</a></td>\n'.format(
@@ -224,15 +259,11 @@ if __name__ == "__main__":
 
     calendar = Calendar(start_date=STARTING_DATE, weeks=WEEKS)
 
-    calendar.set_event_series(
-        text_format='Week {:02d} Lectures',
-        end=14,
-        every=7,
-        start_date='1/10/2021',
-        skip_dates=[],
-        href_format='https://cse232-msu.github.io/CSE232/schedule/week{:02d}/',
+    calendar.set_lecture_series(
+        text_format='Week {:02d}',
+        href_format= 'https://cse232-msu.github.io/CSE232/schedule/week{:02d}/',
         start=0,
-        step=1
+        end=14
     )
 
     ### ⬇️ DO NOT CHANGE BELOW ⬇️ ###
