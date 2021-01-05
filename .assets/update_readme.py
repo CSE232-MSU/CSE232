@@ -223,7 +223,7 @@ class Calendar:
 if __name__ == "__main__":
 
     ### ⬇️ CHANGE AS NECESSARY BELOW ⬇️ ###
-    STARTING_DATE = '1/10/2021'  
+    STARTING_DATE = '1/10/2021'
     WEEKS = 16
 
     calendar = Calendar(start_date=STARTING_DATE, weeks=WEEKS)
@@ -234,7 +234,7 @@ if __name__ == "__main__":
         every=7,
         start_date='1/10/2021',
         skip_dates=[],
-        href_format='https://github.com/braedynl/CSE232/tree/main/Lectures/Week%20{:02d}',
+        href_format='https://braedynl.github.io/CSE232/schedule/week{:02d}/',
         start=0,
         step=1
     )
