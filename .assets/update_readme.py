@@ -100,7 +100,7 @@ class Calendar:
         self.calendar = {}
 
         date = self.start_datetime_obj
-        for _ in range(0, weeks):
+        for _ in range(weeks):
             for _ in range(7):
                 self.calendar[date.strftime('%m/%d/%Y')] = Day(date)
                 date += timedelta(1)
@@ -111,11 +111,7 @@ class Calendar:
         """
         return str(self.calendar)
 
-    def __repr__(self) -> str:
-        """
-        Represents the calendar as a string.
-        """
-        return str(self)
+    __repr__ = __str__
 
     def __getitem__(self, date: str) -> Day:
         """
@@ -156,7 +152,7 @@ class Calendar:
         start
             Optional argument to begin enumeration from a different number, defaulted to 1.
         step
-            Optional argument to skip enumerations by a particular step amount.
+            Optional argument to skip enumerations by a particular step amount, defaulted to 1.
         """
         date = self[start_date].datetime_obj
         date_str = date.strftime('%m/%d/%Y')
@@ -234,7 +230,7 @@ if __name__ == "__main__":
         every=7,
         start_date='1/10/2021',
         skip_dates=[],
-        href_format='https://braedynl.github.io/CSE232/schedule/week{:02d}/',
+        href_format='https://cse232-msu.github.io/CSE232/schedule/week{:02d}/',
         start=0,
         step=1
     )

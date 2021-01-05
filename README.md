@@ -3,7 +3,6 @@
 Continuation of object-centered design and implementation in C++. Building programs from modules. Data abstractions and classes to implement abstract data types. Static and dynamic memory allocation. Data structure implementation and algorithm efficiency. Lists, tables, stacks, and queues. Templates and generic programming.
 
 General:
-- [Announcements](#announcements)
 - [Course Schedule](#course-schedule)
 - [Help Room Schedule](#help-room-schedule)
 - [Past Exams](https://cse.msu.edu/~cse232/Exam_Content/)
@@ -23,16 +22,6 @@ Resources:
 - [OnlineGDB](https://www.onlinegdb.com/)
 - [STL Algorithms Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14)
 - [Unix Tutorial](https://www.tutorialspoint.com/unix/index.htm)
-
-## Announcements
-
-<img src=".assets/images/new-tag.svg" height="20px"> <img src=".assets/images/logistics-tag.svg" height="20px">
-
-<blockquote>
-<p>Welcome to CSE232! 🎉</p>
-<p>Please go through <a href="Labs/lab00.md">Lab 00</a> to get started with the course. It'll have you set up Mimir, Visual Studio Code, and a C++ compiler. We expect that you'll have all of these resources available by your first class meeting.</p>
-<p>— Braedyn Lettinga, 1/10/20</p>
-</blockquote>
 
 ## Course Schedule
 
@@ -59,7 +48,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 <tbody>
 <tr>
 <td align="center">00: 01/10</td>
-<td align="center" title="Sunday, January 10th 2021 (01/10/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week00/">Week 00 Lectures</a></td>
+<td align="center" title="Sunday, January 10th 2021 (01/10/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week00/">Week 00 Lectures</a></td>
 <td align="center" title="Monday, January 11th 2021 (01/11/2021)"></td>
 <td align="center" title="Tuesday, January 12th 2021 (01/12/2021)"></td>
 <td align="center" title="Wednesday, January 13th 2021 (01/13/2021)"></td>
@@ -69,7 +58,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">01: 01/17</td>
-<td align="center" title="Sunday, January 17th 2021 (01/17/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week01/">Week 01 Lectures</a></td>
+<td align="center" title="Sunday, January 17th 2021 (01/17/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week01/">Week 01 Lectures</a></td>
 <td align="center" title="Monday, January 18th 2021 (01/18/2021)"></td>
 <td align="center" title="Tuesday, January 19th 2021 (01/19/2021)"></td>
 <td align="center" title="Wednesday, January 20th 2021 (01/20/2021)"></td>
@@ -79,7 +68,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">02: 01/24</td>
-<td align="center" title="Sunday, January 24th 2021 (01/24/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week02/">Week 02 Lectures</a></td>
+<td align="center" title="Sunday, January 24th 2021 (01/24/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week02/">Week 02 Lectures</a></td>
 <td align="center" title="Monday, January 25th 2021 (01/25/2021)"></td>
 <td align="center" title="Tuesday, January 26th 2021 (01/26/2021)"></td>
 <td align="center" title="Wednesday, January 27th 2021 (01/27/2021)"></td>
@@ -89,7 +78,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">03: 01/31</td>
-<td align="center" title="Sunday, January 31st 2021 (01/31/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week03/">Week 03 Lectures</a></td>
+<td align="center" title="Sunday, January 31st 2021 (01/31/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week03/">Week 03 Lectures</a></td>
 <td align="center" title="Monday, February 1st 2021 (02/01/2021)"></td>
 <td align="center" title="Tuesday, February 2nd 2021 (02/02/2021)"></td>
 <td align="center" title="Wednesday, February 3rd 2021 (02/03/2021)"></td>
@@ -99,7 +88,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">04: 02/07</td>
-<td align="center" title="Sunday, February 7th 2021 (02/07/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week04/">Week 04 Lectures</a></td>
+<td align="center" title="Sunday, February 7th 2021 (02/07/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week04/">Week 04 Lectures</a></td>
 <td align="center" title="Monday, February 8th 2021 (02/08/2021)"></td>
 <td align="center" title="Tuesday, February 9th 2021 (02/09/2021)"></td>
 <td align="center" title="Wednesday, February 10th 2021 (02/10/2021)"></td>
@@ -109,7 +98,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">05: 02/14</td>
-<td align="center" title="Sunday, February 14th 2021 (02/14/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week05/">Week 05 Lectures</a></td>
+<td align="center" title="Sunday, February 14th 2021 (02/14/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week05/">Week 05 Lectures</a></td>
 <td align="center" title="Monday, February 15th 2021 (02/15/2021)"></td>
 <td align="center" title="Tuesday, February 16th 2021 (02/16/2021)"></td>
 <td align="center" title="Wednesday, February 17th 2021 (02/17/2021)"></td>
@@ -119,7 +108,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">06: 02/21</td>
-<td align="center" title="Sunday, February 21st 2021 (02/21/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week06/">Week 06 Lectures</a></td>
+<td align="center" title="Sunday, February 21st 2021 (02/21/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week06/">Week 06 Lectures</a></td>
 <td align="center" title="Monday, February 22nd 2021 (02/22/2021)"></td>
 <td align="center" title="Tuesday, February 23rd 2021 (02/23/2021)"></td>
 <td align="center" title="Wednesday, February 24th 2021 (02/24/2021)"></td>
@@ -129,7 +118,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">07: 02/28</td>
-<td align="center" title="Sunday, February 28th 2021 (02/28/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week07/">Week 07 Lectures</a></td>
+<td align="center" title="Sunday, February 28th 2021 (02/28/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week07/">Week 07 Lectures</a></td>
 <td align="center" title="Monday, March 1st 2021 (03/01/2021)"></td>
 <td align="center" title="Tuesday, March 2nd 2021 (03/02/2021)"></td>
 <td align="center" title="Wednesday, March 3rd 2021 (03/03/2021)"></td>
@@ -139,7 +128,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">08: 03/07</td>
-<td align="center" title="Sunday, March 7th 2021 (03/07/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week08/">Week 08 Lectures</a></td>
+<td align="center" title="Sunday, March 7th 2021 (03/07/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week08/">Week 08 Lectures</a></td>
 <td align="center" title="Monday, March 8th 2021 (03/08/2021)"></td>
 <td align="center" title="Tuesday, March 9th 2021 (03/09/2021)"></td>
 <td align="center" title="Wednesday, March 10th 2021 (03/10/2021)"></td>
@@ -149,7 +138,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">09: 03/14</td>
-<td align="center" title="Sunday, March 14th 2021 (03/14/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week09/">Week 09 Lectures</a></td>
+<td align="center" title="Sunday, March 14th 2021 (03/14/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week09/">Week 09 Lectures</a></td>
 <td align="center" title="Monday, March 15th 2021 (03/15/2021)"></td>
 <td align="center" title="Tuesday, March 16th 2021 (03/16/2021)"></td>
 <td align="center" title="Wednesday, March 17th 2021 (03/17/2021)"></td>
@@ -159,7 +148,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">10: 03/21</td>
-<td align="center" title="Sunday, March 21st 2021 (03/21/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week10/">Week 10 Lectures</a></td>
+<td align="center" title="Sunday, March 21st 2021 (03/21/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week10/">Week 10 Lectures</a></td>
 <td align="center" title="Monday, March 22nd 2021 (03/22/2021)"></td>
 <td align="center" title="Tuesday, March 23rd 2021 (03/23/2021)"></td>
 <td align="center" title="Wednesday, March 24th 2021 (03/24/2021)"></td>
@@ -169,7 +158,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">11: 03/28</td>
-<td align="center" title="Sunday, March 28th 2021 (03/28/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week11/">Week 11 Lectures</a></td>
+<td align="center" title="Sunday, March 28th 2021 (03/28/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week11/">Week 11 Lectures</a></td>
 <td align="center" title="Monday, March 29th 2021 (03/29/2021)"></td>
 <td align="center" title="Tuesday, March 30th 2021 (03/30/2021)"></td>
 <td align="center" title="Wednesday, March 31st 2021 (03/31/2021)"></td>
@@ -179,7 +168,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">12: 04/04</td>
-<td align="center" title="Sunday, April 4th 2021 (04/04/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week12/">Week 12 Lectures</a></td>
+<td align="center" title="Sunday, April 4th 2021 (04/04/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week12/">Week 12 Lectures</a></td>
 <td align="center" title="Monday, April 5th 2021 (04/05/2021)"></td>
 <td align="center" title="Tuesday, April 6th 2021 (04/06/2021)"></td>
 <td align="center" title="Wednesday, April 7th 2021 (04/07/2021)"></td>
@@ -189,7 +178,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">13: 04/11</td>
-<td align="center" title="Sunday, April 11th 2021 (04/11/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week13/">Week 13 Lectures</a></td>
+<td align="center" title="Sunday, April 11th 2021 (04/11/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week13/">Week 13 Lectures</a></td>
 <td align="center" title="Monday, April 12th 2021 (04/12/2021)"></td>
 <td align="center" title="Tuesday, April 13th 2021 (04/13/2021)"></td>
 <td align="center" title="Wednesday, April 14th 2021 (04/14/2021)"></td>
@@ -199,7 +188,7 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 </tr>
 <tr>
 <td align="center">14: 04/18</td>
-<td align="center" title="Sunday, April 18th 2021 (04/18/2021)"><a href="https://braedynl.github.io/CSE232/schedule/week14/">Week 14 Lectures</a></td>
+<td align="center" title="Sunday, April 18th 2021 (04/18/2021)"><a href="https://cse232-msu.github.io/CSE232/schedule/week14/">Week 14 Lectures</a></td>
 <td align="center" title="Monday, April 19th 2021 (04/19/2021)"></td>
 <td align="center" title="Tuesday, April 20th 2021 (04/20/2021)"></td>
 <td align="center" title="Wednesday, April 21st 2021 (04/21/2021)"></td>

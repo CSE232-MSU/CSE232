@@ -3,7 +3,6 @@
 Continuation of object-centered design and implementation in C++. Building programs from modules. Data abstractions and classes to implement abstract data types. Static and dynamic memory allocation. Data structure implementation and algorithm efficiency. Lists, tables, stacks, and queues. Templates and generic programming.
 
 General:
-- [Announcements](#announcements)
 - [Course Schedule](#course-schedule)
 - [Help Room Schedule](#help-room-schedule)
 - [Past Exams](https://cse.msu.edu/~cse232/Exam_Content/)
@@ -23,16 +22,6 @@ Resources:
 - [OnlineGDB](https://www.onlinegdb.com/)
 - [STL Algorithms Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14)
 - [Unix Tutorial](https://www.tutorialspoint.com/unix/index.htm)
-
-## Announcements
-
-<img src=".assets/images/new-tag.svg" height="20px"> <img src=".assets/images/logistics-tag.svg" height="20px">
-
-<blockquote>
-<p>Welcome to CSE232! 🎉</p>
-<p>Please go through <a href="Labs/lab00.md">Lab 00</a> to get started with the course. It'll have you set up Mimir, Visual Studio Code, and a C++ compiler. We expect that you'll have all of these resources available by your first class meeting.</p>
-<p>— Braedyn Lettinga, 1/10/20</p>
-</blockquote>
 
 ## Course Schedule
 

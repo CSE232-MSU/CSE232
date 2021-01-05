@@ -4,7 +4,7 @@ This lab is designed to get you acquainted with the class resources and recommen
 
 ## Class Resources
 
-Course Website: https://github.com/braedynl/CSE232
+Course Website: https://github.com/CSE232-MSU/CSE232
 
 Piazza: 
 
