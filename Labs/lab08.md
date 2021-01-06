@@ -30,7 +30,7 @@ This lab will have you apply generic algorithms to various programming problems.
 
 ### Program Specifications
 
-[Download the starter code provided here](https://github.com/braedynl/CSE232/raw/main/.assets/downloads/lab08.zip).
+[Download the starter code provided here](../.assets/downloads/lab08.zip).
 
 Write definitions for the four functions described below. You are to not use any loops (for-loops or while-loops). Instead, you must use generic algorithms from the `<algorithm>` and `<numeric>` headers.
 

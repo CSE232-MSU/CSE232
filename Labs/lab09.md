@@ -98,7 +98,7 @@ alt="\text{magnitude}(\vec{v}) = \sqrt{x_1^2 + y_1^2}">
 
 ### Program Specifications
 
-[Download the starter code provided here](https://github.com/braedynl/CSE232/raw/main/.assets/downloads/lab09.zip).
+[Download the starter code provided here](../.assets/downloads/lab09.zip).
 
 Your task is to create an implementation file (named "math_vector.cpp") that provides the algorithm for all of the member functions shown below (and inside the header file).
 

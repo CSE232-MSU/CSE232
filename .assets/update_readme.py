@@ -40,8 +40,7 @@ def fix_date_str(date: str) -> str:
         The corrected date string
     """
     if not re.match(r'\d{1,2}/\d{1,2}/\d{4}', date):
-        raise ValueError(
-            'invalid date string; must be in format "%m/%d/%Y" (padding zeroes may be omitted)')
+        raise ValueError('invalid date string; must be in format "%m/%d/%Y" (padding zeroes may be omitted)')
     month, day, year = date.split('/')
     return '{:02d}/{:02d}/{}'.format(int(month), int(day), year)
 
@@ -59,8 +58,7 @@ class Day:
         self.year = datetime_obj.year
         self.date = datetime_obj.strftime('%m/%d/%Y')
         self.weekday = datetime_obj.strftime('%A').lower()
-        self.hover = datetime_obj.strftime('%A, %B %d{} %Y (%m/%d/%Y)'.format(
-            ordinal_suffix(self.day))).replace(' 0', ' ')
+        self.hover = datetime_obj.strftime('%A, %B %d{} %Y (%m/%d/%Y)'.format(ordinal_suffix(self.day))).replace(' 0', ' ')
         self.text = text
         self.href = href
 
@@ -227,19 +225,16 @@ class Calendar:
                 day = self[date_str]
 
                 if i == 0:
-                    html += '<td align="center">{:02d}: {:02d}/{:02d}</td>\n'.format(
-                        week_n, day.month, day.day)
+                    html += '<td align="center">{:02d}: {:02d}/{:02d}</td>\n'.format(week_n, day.month, day.day)
                     continue
                 if i == 1:
                     lecture = self.lectures[week_n]
                     html += '<td align="center"><a href="{}">{}</a></td>\n'.format(lecture.href, lecture.text)
                     continue
                 if day.href:
-                    html += '<td align="center" title="{}"><a href="{}">{}</a></td>\n'.format(
-                        day.hover, day.href, day.text)
+                    html += '<td align="center" title="{}"><a href="{}">{}</a></td>\n'.format(day.hover, day.href, day.text)
                 else:
-                    html += '<td align="center" title="{}">{}</td>\n'.format(
-                        day.hover, day.text)
+                    html += '<td align="center" title="{}">{}</td>\n'.format(day.hover, day.text)
 
                 date += timedelta(1)
 
@@ -259,6 +254,8 @@ if __name__ == "__main__":
 
     calendar = Calendar(start_date=STARTING_DATE, weeks=WEEKS)
 
+    # (Dr. Nahum wanted a column of the calendar dedicated to lectures,
+    # a new method function and data member had to be added to compensate)
     calendar.set_lecture_series(
         text_format='Week {:02d}',
         href_format= 'https://cse232-msu.github.io/CSE232/schedule/week{:02d}/',

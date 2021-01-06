@@ -2,9 +2,11 @@
 
 GitHub's Markdown renderer is beautiful, but, deep within that beauty, there's a dark and ugly secret. Want to know what it is?
 
-GitHub Markdown disables the `style` attribute on all HTML tags.
+<div align="center">
+    <p>GitHub Markdown disables the style attribute on all HTML tags.</p>
+</div>
 
-[The reason for why is described here](https://stackoverflow.com/questions/20598628/do-style-tags-work-in-markdown), but, we don't care about reasons, we care about _work-arounds_. Let's talk about how to update that damn course schedule, and how to update the master README in general.
+[The reason for why is described here](https://stackoverflow.com/questions/20598628/do-style-tags-work-in-markdown), but, we don't care about reasons, we care about _work-arounds_. Let's talk about how to update the course schedule, and how to update the master README in general.
 
 **Important**: changes to the master README file will be overwritten, i.e., they don't matter, and they will not remain if you update the README "officially", as described below.
 
@@ -16,7 +18,7 @@ update_readme.py cares about one thing, and _only_ one thing: "&calendar&".
 
 What is "&calendar&"? It's an encoded "variable" in the template that update_readme.py finds, and replaces with the calendar's HTML (which update_readme.py generates). **You are free to edit the template however you like, but do not touch the &calendar& string whatsoever**.
 
-After you've gone ahead and made your edits, run the update_readme.py script once, and commit your changes. Congratulations, you've edited the master README!
+After you've gone ahead and made your edits, run the update_readme.py script once on a local machine, and commit your changes. Congratulations, you've edited the master README!
 
 ## Updating Calendar Things
 

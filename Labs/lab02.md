@@ -39,7 +39,7 @@ This copies the directory, "other", into a directory called "other2":
 cp -r other other2
 ```
 
-1. [Save this lab02.zip file to your My Documents folder.](https://github.com/braedynl/CSE232/raw/main/.assets/downloads/lab02.zip)
+1. [Save this lab02.zip file to your My Documents folder.](../.assets/downloads/lab02.zip)
 2. Right click the zipped file in My Documents and select "Extract Here". You should now have a folder called "lab02".
 3. Change directories to My Documents (`cd ~/My_Documents`).
 4. `cd` to the folder named "lab02", then to the subfolder named "b_folder", then to the folder named "start".

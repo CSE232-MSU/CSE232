@@ -58,7 +58,7 @@ In these depictions, you'll notice that they begin enumerating the row/column in
 
 ### Program Specifications
 
-[Download the starter code provided here.](https://github.com/braedynl/CSE232/raw/main/.assets/downloads/lab07.zip)
+[Download the starter code provided here.](../.assets/downloads/lab07.zip)
 
 We will use a `vector<vector<T>>` type as the underlying representation of our matrix, meaning that the type of the elements of the matrix will be templated. Thus, all of our functions must be templated, as well.
 
