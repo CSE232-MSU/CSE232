@@ -12,7 +12,7 @@ General:
 Essential Sites:
 - [D2L](https://d2l.msu.edu/d2l/loginh/)
 - [Mimir](https://class.mimir.io/)
-- [Piazza]()
+- [Piazza](https://piazza.com/class/kjkc4swnt8e184)
 
 Resources:
 - [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=2olsGf6JIkU)

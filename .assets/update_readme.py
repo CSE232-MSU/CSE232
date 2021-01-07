@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 '''
 Contains a Calendar and Day class used to generate an HTML calendar table
 for the master README.md file.
