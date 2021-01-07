@@ -33,6 +33,11 @@ You can hover over a calendar cell to see its precise date (sorry mobile users).
 
 &calendar&
 
+| Week              | Lecture       | Lab           | Notes     | 
+| :---:             | :---:         | :---:         | :---:     |
+| 00: 2021-01-11    | [Week 0](https://cse232-msu.github.io/CSE232/schedule/week00/)  | [Lab00](https://github.com/CSE232-MSU/CSE232/blob/main/Labs/lab00.md)  | Due to the special nature of this week, there are no assignments due until next week. |               |
+| 01: 2021-01-18    | [Week 1](https://cse232-msu.github.io/CSE232/schedule/week01/)  | [Lab01](https://github.com/CSE232-MSU/CSE232/blob/main/Labs/lab01.md)  | HW 00 (not worth actual points) is "due" on Monday, HW 01 is due on Thursday |   
+
 ## Help Room Schedule
 
 Help Room is conducted through Zoom. You can find the session details and instructions on how to join on Piazza.
