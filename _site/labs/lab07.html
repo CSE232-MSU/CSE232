@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 07</title>
+    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
+    <style>
+        body {
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+        }
+        body::-webkit-scrollbar {
+            width: 0!important;
+        }
+    </style>
+</head>
+<body class="py-2">
+    <div class="markdown-body mx-auto" style="max-width: 1000px;">
+        <nav class="UnderlineNav mb-3" aria-label="Foo bar">
+    <div class="UnderlineNav-body">
+        
+            <a class="UnderlineNav-item" href="/CSE232/index.html" >
+                Home
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/syllabus.html" >
+                Syllabus
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/lectures.html" >
+                Lectures
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/labs.html" >
+                Labs
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/setup.html" >
+                Setup
+            </a>
+        
+    </div>
+    <div class="UnderlineNav-actions">
+        <a class="btn btn-sm" href="https://piazza.com/" role="button" target="_blank">Piazza</a>
+        <a class="btn btn-sm mr-2" href="https://class.mimir.io/" role="button" target="_blank">Mimir</a>
+    </div>
+</nav>
+        <div class="border rounded-2 px-5 py-2 anim-fade-in">
+            <h1 id="lab-07---templates-and-2d-vectors">Lab 07 - Templates and 2D Vectors</h1>
+
+<p>There is no Unix tutorial this week</p>
+
+<h2 id="coding-assignment">Coding Assignment</h2>
+
+<p>We are going to get practice with two concepts:</p>
+<ol>
+  <li>Templated code</li>
+  <li>Two-dimensional vectors</li>
+</ol>
+
+<h3 id="background">Background</h3>
+
+<p>You remember matrices, don’t you? We are going to do some simple manipulation of a matrix, namely: adding two matrices, and multiplying a matrix by a scalar.</p>
+
+<h4 id="matrix">Matrix</h4>
+
+<p>A <em>matrix</em> is a two-dimensional data structure. It has a <em>shape</em> indicated by the number of rows, and the number of columns. It’s important to note that the number of columns <em>might not always equal</em> the number of rows. When the number of rows <em>does</em> match the number of columns, it’s referred to as a <em>square matrix</em>.</p>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctextbf%7BA%7D+%3D+%5Cbegin%7Bpmatrix%7D1+%26+2+%26+3%5C%5C4+%26+5+%26+6%5C%5C7+%26+8+%26+9%5Cend%7Bpmatrix%7D" alt="\textbf{A} = \begin{pmatrix}1 &amp; 2 &amp; 3\\4 &amp; 5 &amp; 6\\7 &amp; 8 &amp; 9\end{pmatrix}" />
+</div>
+
+<p> </p>
+
+<p>This matrix, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Ctextbf%7BA%7D" alt="\textbf{A}" />, has three rows and three columns – making it a square matrix.</p>
+
+<h4 id="matrix-operations">Matrix Operations</h4>
+
+<p>We will perform two operations on our matrices, both of which yield a new matrix as a result.</p>
+
+<p>The first is <em>scalar multiplication</em>. Regardless of the size or shape, if the matrix is not empty, we multiply the scalar value by every entry in the matrix, yielding a new matrix.</p>
+
+<div align="center">
+<img src="../assets/images/matrix_mul.svg" />
+</div>
+
+<p> </p>
+
+<p>Where <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Ctextbf%7B%5Clambda%7D" alt="\textbf{\lambda}" /> is some scalar (i.e., any number).</p>
+
+<p>The second is <em>matrix addition</em>. The shape of two matrices <em>must be the same</em> for addition to go forward. If the shapes are the same, and they are both not empty, we add each row/column value of one matrix to each row/column value of the second matrix in each respective location, yielding a new matrix. We do this for every value between the two matrices.</p>
+
+<div align="center">
+<img src="../assets/images/matrix_add.svg" />
+</div>
+
+<p> </p>
+
+<p>In these depictions, you’ll notice that they begin enumerating the row/column indices from 1. Remember that we, programmers, always start indices from 0.</p>
+
+<h3 id="program-specifications">Program Specifications</h3>
+
+<p><a href="../assets/downloads/lab07.zip">Download the starter code provided here.</a></p>
+
+<p>We will use a <code class="language-plaintext highlighter-rouge">vector&lt;vector&lt;T&gt;&gt;</code> type as the underlying representation of our matrix, meaning that the type of the elements of the matrix will be templated. Thus, all of our functions must be templated, as well.</p>
+
+<p>In the starter code, we provide two definitions to make things a little easier:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span>
+<span class="k">using</span> <span class="n">matrix_row</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="p">;</span>
+
+<span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span>
+<span class="k">using</span> <span class="n">matrix</span> <span class="o">=</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">matrix_row</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>With these definitions, you can declare a new matrix with the <code class="language-plaintext highlighter-rouge">matrix</code> type, and declare matrix rows as the <code class="language-plaintext highlighter-rouge">matrix_row</code> type.</p>
+
+<p>Implement the following functions:</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span>
+<span class="n">string</span> <span class="n">matrix_to_str</span><span class="p">(</span><span class="k">const</span> <span class="n">matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m1</span><span class="p">,</span> <span class="kt">size_t</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Converts the matrix, <code class="language-plaintext highlighter-rouge">m1</code>, to a <code class="language-plaintext highlighter-rouge">string</code> representation. The <code class="language-plaintext highlighter-rouge">width</code> argument should be used to set the width between elements within the rows of the matrix (use <code class="language-plaintext highlighter-rouge">std::setw()</code>), defaulted to 3.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span>
+<span class="kt">bool</span> <span class="n">same_size</span><span class="p">(</span><span class="k">const</span> <span class="n">matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m1</span><span class="p">,</span> <span class="k">const</span> <span class="n">matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Tests if two matrices, <code class="language-plaintext highlighter-rouge">m1</code> and <code class="language-plaintext highlighter-rouge">m2</code>, are of the same size/shape.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span>
+<span class="n">matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">add</span><span class="p">(</span><span class="k">const</span> <span class="n">matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m1</span><span class="p">,</span> <span class="k">const</span> <span class="n">matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Adds matrices, <code class="language-plaintext highlighter-rouge">m1</code> and <code class="language-plaintext highlighter-rouge">m2</code>, to compose a new matrix. <code class="language-plaintext highlighter-rouge">m1</code> and <code class="language-plaintext highlighter-rouge">m2</code> must be identically shaped for addition to occur. If they are <em>not</em> the same shape, return an empty matrix.</p>
+
+<p>⭐ Show your TA when you can successfully handle case 1 (which tests the three functions above).</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">template</span><span class="o">&lt;</span><span class="k">typename</span> <span class="nc">T</span><span class="p">&gt;</span>
+<span class="n">matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">scalar_multiply</span><span class="p">(</span><span class="k">const</span> <span class="n">matrix</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">m</span><span class="p">,</span> <span class="k">const</span> <span class="n">T</span> <span class="o">&amp;</span><span class="n">val</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Multiplies a matrix, <code class="language-plaintext highlighter-rouge">m</code>, by the scalar value, <code class="language-plaintext highlighter-rouge">val</code>, to return a new matrix. If <code class="language-plaintext highlighter-rouge">m</code> is an empty matrix, return an empty matrix.</p>
+
+<p>⭐ Show your TA when you can successfully handle all of the cases.</p>
+
+<p> </p>
+
+<h3 id="assignment-notes">Assignment Notes</h3>
+
+<ol>
+  <li>Start out by solving case 1 and commenting out the rest of the <code class="language-plaintext highlighter-rouge">main()</code> code. When you’ve solved it, bring back case 2, solve case 2, and so on.</li>
+  <li>You can make a temporary row (of type <code class="language-plaintext highlighter-rouge">matrix_row</code>) and <code class="language-plaintext highlighter-rouge">push_back()</code> values on to that. You can then <code class="language-plaintext highlighter-rouge">push_back()</code> the row onto a matrix (of type <code class="language-plaintext highlighter-rouge">matrix</code>). You can reuse the row in your loop, but remember to <code class="language-plaintext highlighter-rouge">clear()</code> it first.</li>
+  <li>Make sure the printing of the matrix is nicely aligned, as shown in the output below:</li>
+</ol>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Case 1
+ 0  2  4
+ 6  8 10
+12 14 16
+
+Case 2
+could not add
+
+Case 3
+1.14    4.56
+ 7.6   12.92
+15.2     -19
+
+Case 4
+could not multiply
+</code></pre></div></div>
+
+        </div>
+    </div>
+</body>
+</html>

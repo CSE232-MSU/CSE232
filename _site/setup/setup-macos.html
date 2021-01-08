@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacOS Setup</title>
+    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
+    <style>
+        body {
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+        }
+        body::-webkit-scrollbar {
+            width: 0!important;
+        }
+    </style>
+</head>
+<body class="py-2">
+    <div class="markdown-body mx-auto" style="max-width: 1000px;">
+        <nav class="UnderlineNav mb-3" aria-label="Foo bar">
+    <div class="UnderlineNav-body">
+        
+            <a class="UnderlineNav-item" href="/CSE232/index.html" >
+                Home
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/syllabus.html" >
+                Syllabus
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/lectures.html" >
+                Lectures
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/labs.html" >
+                Labs
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/setup.html" >
+                Setup
+            </a>
+        
+    </div>
+    <div class="UnderlineNav-actions">
+        <a class="btn btn-sm" href="https://piazza.com/" role="button" target="_blank">Piazza</a>
+        <a class="btn btn-sm mr-2" href="https://class.mimir.io/" role="button" target="_blank">Mimir</a>
+    </div>
+</nav>
+        <div class="border rounded-2 px-5 py-2 anim-fade-in">
+            <h1 id="using-c-in-vscode---macos">Using C++ in VSCode - MacOS</h1>
+
+<p>The following tutorial assumes you are running on MacOS version 10.13 (High Sierra) or later, <em>but</em> it’s possible that this tutorial may still work on older versions – we simply have no way of testing. You can check your MacOS version by clicking the Apple logo at the top-left, and selecting “About This Mac”.</p>
+
+<p>If you encounter any trouble during this tutorial, please ask about your problem on Piazza, or come to Help Room.</p>
+
+<h2 id="getting-a-compiler">Getting a Compiler</h2>
+
+<p>MacOS is based on a Unix operating system, meaning that you should already have a C/C++ compiler installed, namely <a href="https://en.wikipedia.org/wiki/Clang">Clang</a>.</p>
+
+<p>To test that you have Clang installed, open Terminal and type the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>clang <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>You should see some output along the lines of:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Apple clang version 11.0.3 (clang-1103.0.32.59)
+Target: x86_64-apple-darwin20.2.0
+Thread model: posix
+InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+</code></pre></div></div>
+
+<p>If the return came back as something akin to:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>zsh: command not found: clang
+</code></pre></div></div>
+
+<p>…type the following command, and test the first command to see if it works after running to continue with this tutorial:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>xcode-select <span class="nt">--install</span>
+</code></pre></div></div>
+
+<p>You may be prompted a few times. In which case, accept/install any requests by the operating system.</p>
+
+<p>In most of our lectures and labs, we’ll be referring to a different compiler, <a href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection">GCC</a>, because a majority of students run Windows, and thus will have to install GCC as opposed to Clang.</p>
+
+<p>Despite this difference in compiler, you’ll still be able to follow along with the course smoothly. In fact, MacOS assigns an alias (an alternate name) to the <code class="language-plaintext highlighter-rouge">clang</code> command you just used with what GCC users will be typing, <code class="language-plaintext highlighter-rouge">g++</code>. You can type this command into Terminal:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">--version</span>
+</code></pre></div></div>
+
+<p>…and still see the Clang version be displayed. You probably won’t use the <code class="language-plaintext highlighter-rouge">clang</code> command again from this point onwards.</p>
+
+<h2 id="preparing-vscode-for-c">Preparing VSCode for C++</h2>
+
+<ol>
+  <li>
+    <p><a href="https://code.visualstudio.com/">Download and install the Stable version of Visual Studio Code (VSCode) here.</a></p>
+  </li>
+  <li>
+    <p>We recommend creating a folder somewhere on your computer dedicated to CSE232 content. Place this folder wherever you please.</p>
+  </li>
+  <li>
+    <p>Open VSCode, and you should be presented with a Welcome page. Near the top-left of the window, you should see an icon of files stacked onto one another. Click on this icon to open the integrated file explorer as shown here:</p>
+  </li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/1.png" /></p>
+
+<div align="center">
+    <p>*Your welcome page may look slightly different</p>
+</div>
+
+<ol>
+  <li>
+    <p>Click the “Open Folder” button, and navigate the explorer to the CSE232 folder you created in step 2.</p>
+  </li>
+  <li>
+    <p>The top of the sidebar should now display the name of the folder you opened, which is presumably empty (unless you have files there). You can right-click inside the folder for many of the options you’d typically have in Finder:</p>
+  </li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/2.png" /></p>
+
+<ol>
+  <li>Create a file named “helloworld.cpp”. “.cpp” is the file extension used to denote a C++ file. Make sure that all of your files have this extension when you’re coding in C++ for this class. You should now have something like this:</li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/3.png" /></p>
+
+<ol>
+  <li>After creating helloworld.cpp, you may have been prompted to install some sort of C++ “extension”. Install the extension that’s prompted if it appears. If you did not get prompted, navigate to the left-most sidebar, and click the icon represented by four squares. It should open-up some sort of “Extensions Marketplace” with a search bar at the top. Search “C++”, and the top result should be an extension named “C/C++” made by Microsoft. Click this extension when you find it, and your resulting interface should look like this:</li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/4.png" /></p>
+
+<div align="center">
+    <p>*I have the extension already installed in this screenshot, which is why I have an "Uninstall" button near the top.</p>
+</div>
+
+<ol>
+  <li>
+    <p>Click the “Install” button near the name of the extension. If, after installing, it says “Reload Required”, click the button that says so.</p>
+  </li>
+  <li>
+    <p>Go back to your helloworld.cpp file/integrated file explorer from the left-most sidebar (the top icon; the files stacked onto one another, remember) and type/copy-paste the following code into your helloworld.cpp file:</p>
+  </li>
+</ol>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello world"</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>On your keyboard, use the key-combination: CONTROL + ` (this is the backtick character, if you’re unfamiliar. It should be to the left of the “1” key on most keyboards). This brings up VSCode’s integrated terminal:</li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/5.png" /></p>
+
+<div align="center">
+    <p>*You can also open the integrated terminal by dragging from the top of the blue bar at the bottom of the window.</p>
+</div>
+
+<ol>
+  <li>The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you’ll need to be comfortable with it for future classes. To compile our helloworld.cpp program, type the following command into the terminal:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ helloworld.cpp <span class="nt">-Wall</span> <span class="nt">-std</span><span class="o">=</span>c++17
+</code></pre></div></div>
+
+<ol>
+  <li>This produces a file named “a.out” – you should see it appear in the file explorer. To run your compiled program, type into the terminal:</li>
+</ol>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>./a.out
+</code></pre></div></div>
+
+<ol>
+  <li>You should now see “Hello world” displayed to the console!</li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/6.png" /></p>
+
+<div align="center">
+<p>Congratulations! You just made your first program in C++.</p>
+</div>
+
+<p>It’s important to note that <strong>you must compile your program and run a.out every time you want to test your code</strong>. It’s a bit annoying compared to, say, running Python code. But, such is the nature of low-level languages.</p>
+
+<p>You will be typing those two commands hundreds, if not <em>thousands</em> of times in this course. Keep them in your notes, or memorize them (you’ll likely have them memorized within a few days of practice).</p>
+
+<h2 id="debugging-c-in-vscode">Debugging C++ in VSCode</h2>
+
+<p>You should be familiar with an IDE debugger from your previous programming class (CSE231 or an equivalent prerequisite). <a href="../DEBUGGING_GUIDE.md">If you aren’t, please read through this tutorial</a> (it’s in Python, but the same core principles apply).</p>
+
+<ol>
+  <li>In the CSE232 folder, create a subfolder named “.vscode”, and create two files within it: “tasks.json”, and “launch.json”, as shown in the file explorer on the left-side here:</li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/7.png" /></p>
+
+<div align="center">
+  <p>*The dot prefix in ".vscode" makes it a hidden folder. Meaning that, you probably won't be able to see it in Finder unless you input COMMAND + SHIFT + . on your keyboard.</p>
+</div>
+
+<ol>
+  <li>Copy-and-paste the following code into your tasks.json file, and save it (COMMAND + S):</li>
+</ol>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2.0.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"tasks"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"shell"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"label"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clang++ build active file"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"/usr/bin/clang++"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="s2">"-std=c++17"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"-stdlib=libc++"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"-g"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"${file}"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"-o"</span><span class="p">,</span><span class="w">
+        </span><span class="s2">"${fileDirname}/${fileBasenameNoExtension}"</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"options"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"cwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"problemMatcher"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"$gcc"</span><span class="p">],</span><span class="w">
+      </span><span class="nl">"group"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"build"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isDefault"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="../assets/images/vscode-installation-macos/8.png" /></p>
+
+<ol>
+  <li>Copy-and-paste the following code into your launch.json file and save it (COMMAND + S):</li>
+</ol>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0.2.0"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"configurations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clang++ - Build and debug active file"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"cppdbg"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"request"</span><span class="p">:</span><span class="w"> </span><span class="s2">"launch"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"program"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${fileDirname}/${fileBasenameNoExtension}"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nl">"stopAtEntry"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"cwd"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${workspaceFolder}"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"environment"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+      </span><span class="nl">"externalConsole"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"MIMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"lldb"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"preLaunchTask"</span><span class="p">:</span><span class="w"> </span><span class="s2">"clang++ build active file"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><img src="../assets/images/vscode-installation-macos/9.png" /></p>
+
+<ol>
+  <li>Open and replace the contents of helloworld.cpp for this more complex version:</li>
+</ol>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;string&gt;
+</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">msg</span> <span class="p">{</span><span class="s">"Hello"</span><span class="p">,</span> <span class="s">"C++"</span><span class="p">,</span> <span class="s">"World"</span><span class="p">,</span> <span class="s">"from"</span><span class="p">,</span> <span class="s">"VS Code"</span><span class="p">,</span> <span class="s">"and the C++ extension!"</span><span class="p">};</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="k">const</span> <span class="n">string</span><span class="o">&amp;</span> <span class="n">word</span> <span class="o">:</span> <span class="n">msg</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">word</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<ol>
+  <li>You should see an icon on the left sidebar that looks like a play button with a bug on it – this is the debugger menu, go ahead and open it. Like most IDE debuggers, it has a menu showing your currently active variables, watched variables, call stack, and currently active breakpoints.</li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/10.png" /></p>
+
+<ol>
+  <li>Run the file with the debugger by hitting the green play button at the top-left, or by hitting F5 on your keyboard (you may need to use a key-combination; FN + F5). VSCode will automatically set a breakpoint at the beginning of your <code class="language-plaintext highlighter-rouge">main()</code> function. If you set your own breakpoint (by clicking slightly to the left of a line number), the automatically placed breakpoint will be skipped.</li>
+</ol>
+
+<p><img src="../assets/images/vscode-installation-macos/11.png" /></p>
+
+<p>Your terminal should populate with commands that were automatically executed by the .json files I had you create. If your VSCode interface looks like mine in the screenshot above, then everything is working properly. Congrats!</p>
+
+<p>The yellow-highlighted line shows the next line to be ran, as you could probably imagine.</p>
+
+<p>At the top is the Debugger Control Panel:</p>
+
+<div align="center">
+    <img src="../assets/images/vscode-installation-macos/control-panel.png" />
+</div>
+
+<p>It includes your standard debugging options. In order from left to right:</p>
+<ol>
+  <li><strong>Continue</strong> - Runs the program up until the next breakpoint.</li>
+  <li><strong>Step Over</strong> - Runs a line without stepping into a function call.</li>
+  <li><strong>Step Into</strong> - Runs a line and steps into a function call.</li>
+  <li><strong>Step Out</strong> - Steps out of a function call.</li>
+  <li><strong>Restart</strong> - Re-executes the program with the debugger active.</li>
+  <li><strong>Stop</strong> - Exits the debugger.</li>
+</ol>
+
+<p>The rectangle of dots on the left-side of the panel is a drag-point, where you can click and hold to drag the panel elsewhere in the window.</p>
+
+<p>After defining the <code class="language-plaintext highlighter-rouge">msg</code> variable by stepping through, you can click its dropdown inside the debugger menu to see its contents denoted by index.</p>
+
+<p><img src="../assets/images/vscode-installation-macos/12.png" /></p>
+
+<p>The <code class="language-plaintext highlighter-rouge">vector</code> type is C++’s version of arrays/lists. You’ll learn more about them during Week 06 😉</p>
+
+<p>If you’ve done everything here without a hitch, head on back to <a href="../labs/lab00.html">Lab 00</a> for the rest of the CSE232 setup. You’re almost done!</p>
+
+        </div>
+    </div>
+</body>
+</html>

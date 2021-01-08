@@ -1,0 +1,46 @@
+I"Ñ<h1 id="week-01">Week 01</h1>
+
+<p><a href="https://docs.google.com/presentation/d/1Re4t95lPLtviMKWBjjV7VSWe13lNZ0UyWxy92ZU4W58/edit?usp=sharing">Lecture slides (Types)</a></p>
+
+<h3 id="names-and-types">Names and Types</h3>
+
+<p><a href="week01/01.2-IO.cpp">01.2-IO.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Dm4wWJBlQew" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="fundamental-types">Fundamental Types</h3>
+
+<p><a href="week01/02.1-numericValues.cpp">02.1-numericValues.cpp</a></p>
+
+<p><a href="week01/02.2-initialization.cpp">02.2-initialization.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2tPP0PvtI7g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="expressions">Expressions</h3>
+
+<p><a href="week01/02.3-integerOps.cpp">02.3-integerOps.cpp</a></p>
+
+<p><a href="week01/02.4-sideEffects.cpp">02.4-sideEffects.cpp</a></p>
+
+<p><a href="week01/02.5-increment.cpp">02.5-increment.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aVdtPmZ2AFE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="boolean-and-io-ops">Boolean and IO Ops</h3>
+
+<p><a href="week01/02.6-boolOps.cpp">02.6-boolOps.cpp</a></p>
+
+<p><a href="week01/02.7-relationalOps.cpp">02.7-relationalOps.cpp</a></p>
+
+<p><a href="week01/02.7-relationalOps.cpp">02.8-floatFormatting.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rZCwHchCF1w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+:ET

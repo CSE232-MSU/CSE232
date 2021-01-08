@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 02</title>
+    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
+    <style>
+        body {
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+        }
+        body::-webkit-scrollbar {
+            width: 0!important;
+        }
+    </style>
+</head>
+<body class="py-2">
+    <div class="markdown-body mx-auto" style="max-width: 1000px;">
+        <nav class="UnderlineNav mb-3" aria-label="Foo bar">
+    <div class="UnderlineNav-body">
+        
+            <a class="UnderlineNav-item" href="/CSE232/index.html" >
+                Home
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/syllabus.html" >
+                Syllabus
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/lectures.html" >
+                Lectures
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/labs.html" >
+                Labs
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/setup.html" >
+                Setup
+            </a>
+        
+    </div>
+    <div class="UnderlineNav-actions">
+        <a class="btn btn-sm" href="https://piazza.com/" role="button" target="_blank">Piazza</a>
+        <a class="btn btn-sm mr-2" href="https://class.mimir.io/" role="button" target="_blank">Mimir</a>
+    </div>
+</nav>
+        <div class="border rounded-2 px-5 py-2 anim-fade-in">
+            <h1 id="lab-02---types-and-math">Lab 02 - Types and Math</h1>
+
+<h2 id="copying-moving-and-deleting-files-in-the-terminal">Copying, Moving and Deleting Files in the Terminal</h2>
+
+<p><strong>Disclaimer</strong>: the terminal is a very powerful tool. And with great power, comes great responsibility (Uncle Ben). Be aware that mistakes at the terminal can break computers and delete important files without warning, so be sure your work is always backed up.</p>
+
+<h3 id="cp"><code class="language-plaintext highlighter-rouge">cp</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">cp</code> command “copies” files from one location to another. It’s used with two arguments:</p>
+
+<ol>
+  <li>The source file, the file you want to copy</li>
+  <li>The destination file, where you want your copy to be placed</li>
+</ol>
+
+<p>You can copy files that are in your working directory or in another directory by specifying a path. Examples:</p>
+
+<p>This copies a.txt into a file called b.txt:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp </span>a.txt b.txt
+</code></pre></div></div>
+
+<p>This copies c.txt (which is in the parent folder) to a file called c.txt (which is in the grandparent folder):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ../c.txt ../../c.txt
+</code></pre></div></div>
+
+<p>This copies the d.txt file in my Downloads folder to the current directory. If you specify a directory as a destination, it will create a file with the same name there.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ~/Downloads/d.txt <span class="nb">.</span>
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">cp</code> can also copy directories if you use the <code class="language-plaintext highlighter-rouge">-r</code> flag. The “r” stands for “recursive”, meaning to copy the directory and all sub-directories of it, recursively. Example:</p>
+
+<p>This copies the directory, “other”, into a directory called “other2”:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> <span class="nt">-r</span> other other2
+</code></pre></div></div>
+
+<ol>
+  <li><a href="../assets/downloads/lab02.zip">Save this lab02.zip file to your My Documents folder.</a></li>
+  <li>Right click the zipped file in My Documents and select “Extract Here”. You should now have a folder called “lab02”.</li>
+  <li>Change directories to My Documents (<code class="language-plaintext highlighter-rouge">cd ~/My_Documents</code>).</li>
+  <li><code class="language-plaintext highlighter-rouge">cd</code> to the folder named “lab02”, then to the subfolder named “b_folder”, then to the folder named “start”.</li>
+  <li>If you run <code class="language-plaintext highlighter-rouge">ls</code>, you should see a folder named “other” and a file named “f.txt”.</li>
+  <li>Copy the file named “f.txt” to the file “f2.txt”.</li>
+  <li>Copy the folder named “a_folder” to the working directory. The “a_folder” is in the same folder as “b_folder”.</li>
+</ol>
+
+<p>⭐ Please show your TA the output from <code class="language-plaintext highlighter-rouge">ls</code>. There should be four items in the folder named “start”:</p>
+
+<ul>
+  <li>f.txt</li>
+  <li>f2.txt</li>
+  <li>other/</li>
+  <li>a_folder/</li>
+</ul>
+
+<h3 id="mv"><code class="language-plaintext highlighter-rouge">mv</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">mv</code> command is short for “move” and is identical to <code class="language-plaintext highlighter-rouge">cp</code>, except the original source doesn’t exist after it has been moved to the destination. <code class="language-plaintext highlighter-rouge">mv</code> does not need the <code class="language-plaintext highlighter-rouge">-r</code> flag to move folders, it is happy to move folders just like files. Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv </span>other other2
+</code></pre></div></div>
+
+<p>Run the above command, and confirm the the “other” folder no longer exists, and that there’s now an “other2” folder present. Be sure your working directory is the “start” folder.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">mv</code> command is often used to rename directories and folders.</p>
+
+<h3 id="rm"><code class="language-plaintext highlighter-rouge">rm</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">rm</code> command is short for “remove”.</p>
+
+<p><strong>Warning</strong>: files deleted with <code class="language-plaintext highlighter-rouge">rm</code> are gone forever. They don’t go to the Recycle Bin. Please be careful with <code class="language-plaintext highlighter-rouge">rm</code>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">rm</code> command takes one argument: the file or folder you wish to delete. Like <code class="language-plaintext highlighter-rouge">cp</code>, if you wish to delete a folder, you need to supply the <code class="language-plaintext highlighter-rouge">-r</code> flag. Example:</p>
+
+<p>Deletes the file, f.txt:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm </span>f.txt
+</code></pre></div></div>
+
+<p>Deletes the a_folder, and everything within it:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-r</span> a_folder
+</code></pre></div></div>
+
+<h2 id="coding-assignment">Coding Assignment</h2>
+
+<h3 id="background">Background</h3>
+
+<p>There are many properties of numbers that one can investigate. The ancient Greeks were fascinated by the properties of integers, even ascribing them mystical properties.</p>
+
+<p>One such property is an integer’s <em>additive persistence</em>, and its resulting <em>additive root</em> (<a href="http://mathworld.wolfram.com/AdditivePersistence.html">see this page for more information</a>). Additive persistence is a property of the sum of the digits of an integer. The sum of the digits is found, and then the summation of digits is performed, creating a new sum. This process repeats until a single integer digit is reached. Consider the following example:</p>
+
+<ol>
+  <li>The beginning integer is 1234</li>
+  <li>The sum of its digits is 1+2+3+4 = 10</li>
+  <li>The integer is now 10</li>
+  <li>The sum of its digits is 1+0 = 1</li>
+  <li>The integer is now 1. When the value reaches a single digit, we are finished. This final integer is the additive root.</li>
+</ol>
+
+<p>The number of cycles is the additive persistence. The integer, 1234, has an additive persistence of 2 (first sum was 10, then the second sum was 1). The final digit reached is called the integer’s additive root. The integer, 1234, has an additive root of 1.</p>
+
+<h3 id="program-specifications">Program Specifications</h3>
+
+<p>Accept a series of integers from standard input (<code class="language-plaintext highlighter-rouge">cin</code>). The program ends under one of the following circumstances (meaning that we repeat this entire process – use a loop):</p>
+<ol>
+  <li>If the next gathered integer is a negative number</li>
+  <li>If all the integers from the file have been processed (EOF encountered, i.e., <code class="language-plaintext highlighter-rouge">cin</code> returns <code class="language-plaintext highlighter-rouge">false</code>)</li>
+</ol>
+
+<p>If the given integer is a single digit, report its additive persistence as 0, and its additive root as itself on a single line as two space-separated numbers</p>
+
+<p>For each multi-digit, non-negative integer, output on a single line the two space-separated numbers:</p>
+<ol>
+  <li>The integer’s additive persistence</li>
+  <li>The integer’s additive root</li>
+</ol>
+
+<p>⭐ Please show the TA your working program.</p>
+
+<h3 id="assignment-notes">Assignment Notes</h3>
+
+<p>How do you get started on a program like this?</p>
+
+<ol>
+  <li>Break the problem down into parts. Here are some obvious ones:
+    <ul>
+      <li>Gather input from the file, and check for negative numbers (the quit condition)</li>
+      <li>Check if the input is between 0 and 9 (that’s a special case, as indicated above)</li>
+      <li>Otherwise, write a loop that calculates the persistence (track the count through this loop)</li>
+      <li>Inside that loop, write another loop that can sum the digits of an integer until it reaches a single digit</li>
+    </ul>
+  </li>
+  <li>How do you get the digits of an integer? Look at using a combination of the division (<code class="language-plaintext highlighter-rouge">/</code>) and modulus (<code class="language-plaintext highlighter-rouge">%</code>) operators.</li>
+  <li>I would add some “diagnostic output” so you can be sure things are working as they should. For each pass through the loop of the additive persistence, print each new integer created. You can always fix it to give the exact, required output later.</li>
+</ol>
+
+<h3 id="want-to-do-more">Want to do more?</h3>
+
+<p>There is also a multiplicative persistence. Put that in your loop and calculate it for each number.</p>
+
+<p>The <em>multiplicative persistence</em> (<a href="http://mathworld.wolfram.com/MultiplicativePersistence.html">see this page for more information</a>) and resulting <em>multiplicative root</em> are determined the same way, only multiplying the digits of an integer instead of adding. For example:</p>
+
+<ol>
+  <li>The beginning integer is 1234</li>
+  <li>The product of its digits is 1*2*3*4 = 24</li>
+  <li>The integer is now 24</li>
+  <li>The product of its digits is 2*4 = 8</li>
+  <li>The integer is now 1. When the value reaches a single digit, we are finished. This final integer is the multiplicative root</li>
+</ol>
+
+<p>As before, the number of cycles is the multiplicative persistence. The final digit reached is called the integer’s multiplicative root. The integer, 1234, has an multiplicative persistence of 2, and a multiplicative root of 8.</p>
+
+<h3 id="things-to-think-about">Things to Think About</h3>
+
+<ul>
+  <li>What type should the numeric values be (<code class="language-plaintext highlighter-rouge">int</code>? <code class="language-plaintext highlighter-rouge">long</code>?) and why?</li>
+  <li>What is the largest <code class="language-plaintext highlighter-rouge">long</code> you can have?</li>
+  <li>What happens when you enter a number that is too large? For example, the smallest number with an additive persistence of 4 is 19999999999999999999999. Can you make your calculation with that number?</li>
+</ul>
+
+        </div>
+    </div>
+</body>
+</html>

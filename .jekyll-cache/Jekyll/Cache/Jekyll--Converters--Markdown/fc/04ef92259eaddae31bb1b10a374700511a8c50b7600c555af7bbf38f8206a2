@@ -1,0 +1,48 @@
+I"2<h1 id="week-09">Week 09</h1>
+
+<p><a href="https://docs.google.com/presentation/d/1WHKZfLmcJ1lbd-94K6ExglMLiRdk_kR-a210tfGpLBY/edit?usp=sharing">Lecture slides (Classes)</a></p>
+
+<h3 id="classes">Classes</h3>
+
+<p><a href="week09/15.1-clock.cpp">15.1-clock.cpp</a></p>
+
+<p><a href="week09/15.1-clock.h">15.1-clock.h</a></p>
+
+<p><a href="week09/15.1-main.cpp">15.1-main.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/G9L6IIGCeOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="class-attributes">Class Attributes</h3>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/9DSz6Q7WTWE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="member-functions">Member Functions</h3>
+
+<p><a href="week09/15.2-clock.cpp">15.2-clock.cpp</a></p>
+
+<p><a href="week09/15.2-clock.h">15.2-clock.h</a></p>
+
+<p><a href="week09/15.2-main.cpp">15.2-main.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6OOiJTIMEuI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="the-this-pointer">The “this” Pointer</h3>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/s2EPT3TEqV4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="iterating-over-maps">Iterating Over Maps</h3>
+
+<p><a href="week09/range_based_loop_map.cpp">range_based_loop_map.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4AHW0EWZ5so" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+:ET

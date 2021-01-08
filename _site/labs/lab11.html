@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 11</title>
+    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
+    <style>
+        body {
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+        }
+        body::-webkit-scrollbar {
+            width: 0!important;
+        }
+    </style>
+</head>
+<body class="py-2">
+    <div class="markdown-body mx-auto" style="max-width: 1000px;">
+        <nav class="UnderlineNav mb-3" aria-label="Foo bar">
+    <div class="UnderlineNav-body">
+        
+            <a class="UnderlineNav-item" href="/CSE232/index.html" >
+                Home
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/syllabus.html" >
+                Syllabus
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/lectures.html" >
+                Lectures
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/labs.html" >
+                Labs
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232/setup.html" >
+                Setup
+            </a>
+        
+    </div>
+    <div class="UnderlineNav-actions">
+        <a class="btn btn-sm" href="https://piazza.com/" role="button" target="_blank">Piazza</a>
+        <a class="btn btn-sm mr-2" href="https://class.mimir.io/" role="button" target="_blank">Mimir</a>
+    </div>
+</nav>
+        <div class="border rounded-2 px-5 py-2 anim-fade-in">
+            <h1 id="lab-11---pointer-manipulation">Lab 11 - Pointer Manipulation</h1>
+
+<p>There is no Unix tutorial this week</p>
+
+<h2 id="coding-assignment">Coding Assignment</h2>
+
+<p>Today, we’re going to practice pointer manipulation in the context of a singly-linked list. <a href="https://en.wikipedia.org/wiki/Linked_list">You can find more information regarding linked lists here.</a></p>
+
+<h3 id="background">Background</h3>
+
+<p><a href="../assets/downloads/lab11.zip">Download the starter code provided here.</a></p>
+
+<p>In a nutshell: a singly-linked list is a data structure for implementing a generic array of elements, where each node has data, and a pointer to the next node. The list structure typically has pointers to the list’s first node and last node. A singly-linked list’s first node is typically called the <em>head</em>, and the last node the <em>tail</em>.</p>
+
+<div align="center">
+    <img src="../assets/images/linked_list.svg" />
+</div>
+
+<p>Linked above is a header file containing the definition for a singly-linked list class named <code class="language-plaintext highlighter-rouge">SingleLink</code>, and a definition for a linked list node class named <code class="language-plaintext highlighter-rouge">Node</code>.</p>
+
+<p>Below is the interface for the two classes as it stands right now:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">Node</span> <span class="p">{</span>
+    <span class="nl">public:</span>
+        <span class="kt">int</span> <span class="n">data_</span><span class="p">;</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">next_</span><span class="p">;</span>
+    
+        <span class="n">Node</span><span class="p">()</span> <span class="o">:</span> <span class="n">data_</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="n">next_</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">)</span> <span class="p">{};</span>
+        <span class="n">Node</span><span class="p">(</span><span class="kt">int</span> <span class="n">d</span><span class="p">)</span> <span class="o">:</span> <span class="n">data_</span><span class="p">(</span><span class="n">d</span><span class="p">),</span> <span class="n">next_</span><span class="p">(</span><span class="nb">nullptr</span><span class="p">)</span> <span class="p">{};</span>
+<span class="p">};</span>
+</code></pre></div></div>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">Node</code> has two private members, <code class="language-plaintext highlighter-rouge">Node* next_</code> and <code class="language-plaintext highlighter-rouge">int data_</code>.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">next_</code> is a pointer to another instance of type <code class="language-plaintext highlighter-rouge">Node</code>; the “chain” that makes up the structure of the entire list.</li>
+      <li><code class="language-plaintext highlighter-rouge">data_</code> is the value held by the <code class="language-plaintext highlighter-rouge">Node</code>. For the purposes of today’s lab, it’ll only be allowed to hold integers.</li>
+    </ul>
+  </li>
+  <li>It has two constructors, a default that initializes <code class="language-plaintext highlighter-rouge">data_</code> to 0, and a one-parameter variant that initializes <code class="language-plaintext highlighter-rouge">data_</code> to the incoming argument.</li>
+</ul>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SingleLink</span> <span class="p">{</span>
+    <span class="nl">private:</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">head_</span><span class="p">;</span>
+        <span class="n">Node</span> <span class="o">*</span><span class="n">tail_</span><span class="p">;</span>
+
+    <span class="nl">public:</span>
+        <span class="n">SingleLink</span><span class="p">();</span>         
+        <span class="n">SingleLink</span><span class="p">(</span><span class="kt">int</span> <span class="n">dat</span><span class="p">);</span>    
+        <span class="kt">void</span> <span class="n">append_back</span><span class="p">(</span><span class="kt">int</span><span class="p">);</span>
+
+        <span class="k">friend</span> <span class="n">std</span><span class="o">::</span><span class="n">ostream</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="n">SingleLink</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">);</span>
+        <span class="kt">bool</span> <span class="n">del</span><span class="p">(</span><span class="kt">int</span> <span class="n">val</span><span class="p">);</span>
+        <span class="n">Node</span><span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">);</span>
+        
+        <span class="c1">// Rule of three stuff</span>
+        <span class="o">~</span><span class="n">SingleLink</span><span class="p">();</span>
+        <span class="n">SingleLink</span><span class="p">(</span><span class="k">const</span> <span class="n">SingleLink</span> <span class="o">&amp;</span><span class="p">);</span>
+        <span class="n">SingleLink</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="n">SingleLink</span><span class="p">);</span>
+<span class="p">};</span>
+</code></pre></div></div>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">SingleLink</code> has two private members, <code class="language-plaintext highlighter-rouge">Node* head_</code> and <code class="language-plaintext highlighter-rouge">Node* tail_</code>, which are pointers to the first and last node of the list, respectively.
+    <ul>
+      <li>If the list is ever empty, <code class="language-plaintext highlighter-rouge">head_</code> and <code class="language-plaintext highlighter-rouge">tail_</code> should point to <code class="language-plaintext highlighter-rouge">nullptr</code>.</li>
+      <li>If the list ever has one <code class="language-plaintext highlighter-rouge">Node</code>, both the <code class="language-plaintext highlighter-rouge">head_</code> and <code class="language-plaintext highlighter-rouge">tail_</code> should point to that one <code class="language-plaintext highlighter-rouge">Node</code>.</li>
+    </ul>
+  </li>
+  <li><code class="language-plaintext highlighter-rouge">SingleLink</code> has two constructors; a default with no arguments, and a one-parameter variant that should add a <code class="language-plaintext highlighter-rouge">Node</code> with data, <code class="language-plaintext highlighter-rouge">dat</code>, to the list.
+    <ul>
+      <li>If the one-parameter variant is invoked, the head and tail pointers will need to be adjusted to point to this new <code class="language-plaintext highlighter-rouge">Node</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="whats-missing">What’s missing?</h3>
+
+<p>Pretty much everything. But, this is an opportunity to get more practice with pointers, and get a feel for how to program something you’ll be becoming much more familiar with in CSE 331. You probably won’t finish all of it, but work through from the beginning and see how far you can get!</p>
+
+<h3 id="program-specifications">Program Specifications</h3>
+
+<p>Download and extract the starter code’s .zip file into your working directory (see top of Background). Next, create a ‘singlelink.cpp’ implementation file. You are <em>only</em> going to be modifying the implementation file and main.cpp. If you submit to Mimir, only the implementation file is needed for submission.</p>
+
+<p>None of the Rule of Three functions have been implemented. If you have the time, it would be good if you implemented those.</p>
+
+<p>Before jumping into the methods, I would make the default and one-parameter constructors.</p>
+
+<p>Listed below are the methods you’ll want to implement. I recommend designing these methods in the order they appear down this list.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">append_back</span><span class="p">(</span><span class="kt">int</span> <span class="n">dat</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Method function; creates a new <code class="language-plaintext highlighter-rouge">Node</code> instance with <code class="language-plaintext highlighter-rouge">data_=dat</code> and appends it to the end of the list.</p>
+
+<p>Make sure you use dynamic allocation (the <code class="language-plaintext highlighter-rouge">new</code> keyword) so that the <code class="language-plaintext highlighter-rouge">Node</code> you create isn’t deleted when it falls out of scope.</p>
+
+<p>Also make sure that you’re re-routing the <code class="language-plaintext highlighter-rouge">head_</code> and <code class="language-plaintext highlighter-rouge">tail_</code> pointers correctly (what happens when this is the first <code class="language-plaintext highlighter-rouge">Node</code> being appended vs. when it’s the second <code class="language-plaintext highlighter-rouge">Node</code> being appended?)</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">ostream</span> <span class="o">&amp;</span> <span class="k">operator</span><span class="o">&lt;&lt;</span><span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="n">SingleLink</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Friend function; pushes the <code class="language-plaintext highlighter-rouge">data_</code> member of each <code class="language-plaintext highlighter-rouge">Node</code> instance in the list to the output stream, <code class="language-plaintext highlighter-rouge">out</code>, and returns <code class="language-plaintext highlighter-rouge">ostream &amp;</code>.</p>
+
+<p>I recommend modifying ‘main.cpp’ to show that your method works before moving on. Call the <code class="language-plaintext highlighter-rouge">append_back()</code> method with, say, integers <code class="language-plaintext highlighter-rouge">{1, 2, 4, 8}</code>, and then use <code class="language-plaintext highlighter-rouge">cout</code> to print them.</p>
+
+<p> </p>
+
+<p>The next task on our list is the <code class="language-plaintext highlighter-rouge">del()</code> method (we can’t call it <code class="language-plaintext highlighter-rouge">delete()</code>, since <code class="language-plaintext highlighter-rouge">delete</code> is a keyword ☹️). <code class="language-plaintext highlighter-rouge">del()</code> should remove a particular value from the list. Before you write any code, identify all of the cases your list might have to deal with. Type them as comments under the <code class="language-plaintext highlighter-rouge">del()</code> method.</p>
+
+<p>⭐ Show the TA your working <code class="language-plaintext highlighter-rouge">append_back()</code> and <code class="language-plaintext highlighter-rouge">operator&lt;&lt;()</code> functions. And, show your TA all of the cases <code class="language-plaintext highlighter-rouge">del()</code> must account for before moving on.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">bool</span> <span class="n">del</span><span class="p">(</span><span class="kt">int</span> <span class="n">val</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Searches through the list for the first <code class="language-plaintext highlighter-rouge">Node</code> that has the same <code class="language-plaintext highlighter-rouge">data_</code> value as <code class="language-plaintext highlighter-rouge">val</code>. If found, deletes the <code class="language-plaintext highlighter-rouge">Node</code> and returns <code class="language-plaintext highlighter-rouge">true</code>, otherwise returns <code class="language-plaintext highlighter-rouge">false</code>.</p>
+
+<p>Again, I recommend modifying ‘main.cpp’ for testing.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Node</span> <span class="o">&amp;</span> <span class="k">operator</span><span class="p">[](</span><span class="kt">size_t</span> <span class="n">index</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This method is an override for the <code class="language-plaintext highlighter-rouge">[]</code> operator. On a call, such as <code class="language-plaintext highlighter-rouge">sl[3]</code>, the argument, 3, is assigned to the parameter, <code class="language-plaintext highlighter-rouge">index</code>. The return value is a <em>reference</em> to a <code class="language-plaintext highlighter-rouge">Node</code> so that the <code class="language-plaintext highlighter-rouge">Node</code> can be modified (i.e., can show up on either side of an assignment operator).</p>
+
+<p>You’ll have to search the list (starting from the <code class="language-plaintext highlighter-rouge">head_</code> pointer) for the <code class="language-plaintext highlighter-rouge">index</code>-th <code class="language-plaintext highlighter-rouge">Node</code>. Then, return a reference to that <code class="language-plaintext highlighter-rouge">Node</code>, or throw an <code class="language-plaintext highlighter-rouge">out_of_range</code> exception if you’ve traversed to the end of the list.</p>
+
+<p>⭐ Show the TA your completed <code class="language-plaintext highlighter-rouge">SingleLink</code> class. Include example functionality for <em>all</em> of the methods.</p>
+
+        </div>
+    </div>
+</body>
+</html>
