@@ -1,3 +1,7 @@
+---
+title: Lab 10
+---
+
 # Lab 10 - More on Classes
 
 ## Compiler Options
@@ -45,7 +49,7 @@ Today, we're going to work on making our own classes with private data members a
 
 ### Program Specifications
 
-[Download the starter code provided here.](../.assets/downloads/lab10.zip)
+[Download the starter code provided here.](../assets/downloads/lab10.zip)
 
 The header for the Table class has the following private elements:
 

@@ -1,3 +1,7 @@
+---
+title: Lab 05
+---
+
 # Lab 05 - Styling and Debugging
 
 The aim of this lab is to:
@@ -64,7 +68,7 @@ Here are some of the useful actions that `gdb` can perform:
 - Examine the contents of any frame on the call stack
 - Set breakpoints that will stop your program when it reaches a certain point. Then you can step through part of the execution using `step` and `next`, and type `continue` to resume regular execution.
 
-[Download the code contained within this .zip file here.](../.assets/downloads/lab05.zip)
+[Download the code contained within this .zip file here.](../assets/downloads/lab05.zip)
 
 ## Setting up `gdb`
 

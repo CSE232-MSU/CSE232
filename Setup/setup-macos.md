@@ -1,3 +1,7 @@
+---
+title: MacOS Setup
+---
+
 # Using C++ in VSCode - MacOS
 
 The following tutorial assumes you are running on MacOS version 10.13 (High Sierra) or later, _but_ it's possible that this tutorial may still work on older versions -- we simply have no way of testing. You can check your MacOS version by clicking the Apple logo at the top-left, and selecting "About This Mac".
@@ -55,7 +59,7 @@ g++ --version
 
 3. Open VSCode, and you should be presented with a Welcome page. Near the top-left of the window, you should see an icon of files stacked onto one another. Click on this icon to open the integrated file explorer as shown here:
 
-<img src="../.assets/images/vscode-installation-macos/1.png">
+<img src="../assets/images/vscode-installation-macos/1.png">
 
 <div align="center">
     <p>*Your welcome page may look slightly different</p>
@@ -65,15 +69,15 @@ g++ --version
 
 5. The top of the sidebar should now display the name of the folder you opened, which is presumably empty (unless you have files there). You can right-click inside the folder for many of the options you'd typically have in Finder:
 
-<img src="../.assets/images/vscode-installation-macos/2.png">
+<img src="../assets/images/vscode-installation-macos/2.png">
 
 6. Create a file named "helloworld.cpp". ".cpp" is the file extension used to denote a C++ file. Make sure that all of your files have this extension when you're coding in C++ for this class. You should now have something like this:
 
-<img src="../.assets/images/vscode-installation-macos/3.png">
+<img src="../assets/images/vscode-installation-macos/3.png">
 
 7. After creating helloworld.cpp, you may have been prompted to install some sort of C++ "extension". Install the extension that's prompted if it appears. If you did not get prompted, navigate to the left-most sidebar, and click the icon represented by four squares. It should open-up some sort of "Extensions Marketplace" with a search bar at the top. Search "C++", and the top result should be an extension named "C/C++" made by Microsoft. Click this extension when you find it, and your resulting interface should look like this:
 
-<img src="../.assets/images/vscode-installation-macos/4.png">
+<img src="../assets/images/vscode-installation-macos/4.png">
 
 <div align="center">
     <p>*I have the extension already installed in this screenshot, which is why I have an "Uninstall" button near the top.</p>
@@ -93,7 +97,7 @@ int main() {
 
 10. On your keyboard, use the key-combination: CONTROL + \` (this is the backtick character, if you're unfamiliar. It should be to the left of the "1" key on most keyboards). This brings up VSCode's integrated terminal:
 
-<img src="../.assets/images/vscode-installation-macos/5.png">
+<img src="../assets/images/vscode-installation-macos/5.png">
 
 <div align="center">
     <p>*You can also open the integrated terminal by dragging from the top of the blue bar at the bottom of the window.</p>
@@ -113,7 +117,7 @@ g++ helloworld.cpp -Wall -std=c++17
 
 13. You should now see "Hello world" displayed to the console!
 
-<img src="../.assets/images/vscode-installation-macos/6.png">
+<img src="../assets/images/vscode-installation-macos/6.png">
 
 <div align="center">
 <p>Congratulations! You just made your first program in C++.</p>
@@ -129,7 +133,7 @@ You should be familiar with an IDE debugger from your previous programming class
 
 1. In the CSE232 folder, create a subfolder named ".vscode", and create two files within it: "tasks.json", and "launch.json", as shown in the file explorer on the left-side here:
 
-<img src="../.assets/images/vscode-installation-macos/7.png">
+<img src="../assets/images/vscode-installation-macos/7.png">
 
 <div align="center">
   <p>*The dot prefix in ".vscode" makes it a hidden folder. Meaning that, you probably won't be able to see it in Finder unless you input COMMAND + SHIFT + . on your keyboard.</p>
@@ -166,7 +170,7 @@ You should be familiar with an IDE debugger from your previous programming class
 }
 ```
 
-<img src="../.assets/images/vscode-installation-macos/8.png">
+<img src="../assets/images/vscode-installation-macos/8.png">
 
 3. Copy-and-paste the following code into your launch.json file and save it (COMMAND + S):
 
@@ -191,7 +195,7 @@ You should be familiar with an IDE debugger from your previous programming class
 }
 ```
 
-<img src="../.assets/images/vscode-installation-macos/9.png">
+<img src="../assets/images/vscode-installation-macos/9.png">
 
 4. Open and replace the contents of helloworld.cpp for this more complex version:
 
@@ -216,11 +220,11 @@ int main()
 
 5. You should see an icon on the left sidebar that looks like a play button with a bug on it -- this is the debugger menu, go ahead and open it. Like most IDE debuggers, it has a menu showing your currently active variables, watched variables, call stack, and currently active breakpoints.
 
-<img src="../.assets/images/vscode-installation-macos/10.png">
+<img src="../assets/images/vscode-installation-macos/10.png">
 
 6. Run the file with the debugger by hitting the green play button at the top-left, or by hitting F5 on your keyboard (you may need to use a key-combination; FN + F5). VSCode will automatically set a breakpoint at the beginning of your `main()` function. If you set your own breakpoint (by clicking slightly to the left of a line number), the automatically placed breakpoint will be skipped.
 
-<img src="../.assets/images/vscode-installation-macos/11.png">
+<img src="../assets/images/vscode-installation-macos/11.png">
 
 Your terminal should populate with commands that were automatically executed by the .json files I had you create. If your VSCode interface looks like mine in the screenshot above, then everything is working properly. Congrats!
 
@@ -229,7 +233,7 @@ The yellow-highlighted line shows the next line to be ran, as you could probably
 At the top is the Debugger Control Panel:
 
 <div align="center">
-    <img src="../.assets/images/vscode-installation-macos/control-panel.png">
+    <img src="../assets/images/vscode-installation-macos/control-panel.png">
 </div>
 
 It includes your standard debugging options. In order from left to right:
@@ -244,8 +248,8 @@ The rectangle of dots on the left-side of the panel is a drag-point, where you c
 
 After defining the `msg` variable by stepping through, you can click its dropdown inside the debugger menu to see its contents denoted by index.
 
-<img src="../.assets/images/vscode-installation-macos/12.png">
+<img src="../assets/images/vscode-installation-macos/12.png">
 
 The `vector` type is C++'s version of arrays/lists. You'll learn more about them during Week 06 😉
 
-If you've done everything here without a hitch, head on back to [Lab 00](../Labs/lab00.md) for the rest of the CSE232 setup. You're almost done!
+If you've done everything here without a hitch, head on back to [Lab 00](../labs/lab00.html) for the rest of the CSE232 setup. You're almost done!

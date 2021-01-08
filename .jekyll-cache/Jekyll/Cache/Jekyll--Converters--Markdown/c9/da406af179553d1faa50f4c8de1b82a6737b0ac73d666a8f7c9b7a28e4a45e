@@ -1,0 +1,13 @@
+I"î<h1 id="setup">Setup</h1>
+
+<p>We recommend that you use Visual Studio Code (VSCode) for this course. You are free to use other code editors, but you are responsible for knowing how to work with it. We supply tutorials on the installation process here (dependent on your operating system):</p>
+<ul>
+  <li><a href="setup/setup-windows.html">Windows</a></li>
+  <li><a href="setup/setup-macos.html">MacOS</a></li>
+  <li><a href="setup/setup-linux.html">Linux</a></li>
+</ul>
+
+<p>This tutorial is meant to be completed alongside <a href="labs/lab00.html">Lab 00</a>. Please go through the lab if you havenâ€™t already.</p>
+
+<p>Never learned how to use an IDE debugger? We have you covered! <a href="debugging_guide.html">You can find a guide here</a>.</p>
+:ET

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 04</title>
+    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
+    <style>
+        body {
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+        }
+        body::-webkit-scrollbar {
+            width: 0!important;
+        }
+    </style>
+</head>
+<body class="py-2">
+    <div class="markdown-body mx-auto" style="max-width: 1000px;">
+        <nav class="UnderlineNav mb-3" aria-label="Foo bar">
+    <div class="UnderlineNav-body">
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/index.html" >
+                Home
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/syllabus.html" >
+                Syllabus
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/lectures.html" >
+                Lectures
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/labs.html" >
+                Labs
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/setup.html" >
+                Setup
+            </a>
+        
+    </div>
+    <div class="UnderlineNav-actions">
+        <a class="btn btn-sm" href="https://piazza.com/" role="button" target="_blank">Piazza</a>
+        <a class="btn btn-sm mr-2" href="https://class.mimir.io/" role="button" target="_blank">Mimir</a>
+    </div>
+</nav>
+        <div class="border rounded-2 px-5 py-2 anim-fade-in">
+            <h1 id="lab-04---strings">Lab 04 - Strings</h1>
+
+<h2 id="standard-input-output-and-pipes">Standard Input, Output and Pipes</h2>
+
+<h3 id="io-redirection">I/O Redirection</h3>
+
+<p>Please read through this page: <a href="http://linuxcommand.org/lc3_lts0070.php">http://linuxcommand.org/lc3_lts0070.php</a></p>
+
+<p>⭐ Please show the TA your sorted filenames (using <code class="language-plaintext highlighter-rouge">ls</code>, <code class="language-plaintext highlighter-rouge">sort</code> and I/O redirection).</p>
+
+<h2 id="coding-assignment">Coding Assignment</h2>
+
+<h3 id="background">Background</h3>
+
+<p>John Napier was a Scottish mathematician who lived in the late 16th and early 17th centuries. He is known for a number of mathematical inventions, one of which is termed <em>location arithmetic</em>.</p>
+
+<p>Location arithmetic is a way to represent numbers as binary values, using a notation that is not positional, but representational. <a href="http://en.wikipedia.org/wiki/Location_arithmetic">You can read a detailed description here</a>, but these are the basics:</p>
+
+<p>Napier used letters to represent powers of two. The position of these letters is unimportant, allowing for multiple representations of the same number. For example, in location arithmetic:</p>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+a+%3D+1%2C+b+%3D+2%2C+c+%3D+4%2C+d+%3D+8%2C+e+%3D+16%2C+f+%3D+32%2C+..." alt="a = 1, b = 2, c = 4, d = 8, e = 16, f = 32, ..." />
+</div>
+
+<p>And thus:</p>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+acf+%3D+1+%2B+4+%2B+32+%3D+37" alt="acf = 1 + 4 + 32 = 37" />
+</div>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+caf+%3D+4+%2B+1+%2B+32+%3D+37" alt="caf = 4 + 1 + 32 = 37" />
+</div>
+
+<p> </p>
+
+<p>For easier reading, the letters are typically sorted. Napier allowed for redundant occurrences of letters, though he acknowledged that there is a normal form that has no repeats. He described this as the <em>extended</em> (repeated) vs. <em>abbreviated</em> (no repeats) form. To create the abbreviated form, any pair of letters can be reduced to a single occurrence of the next “higher letter”. For example:</p>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+abbccd+%5Crightarrow+acccd+%5Crightarrow+acdd+%5Crightarrow+ace+%3D+1+%2B+4+%2B+16+%3D+21" alt="abbccd \rightarrow acccd \rightarrow acdd \rightarrow ace = 1 + 4 + 16 = 21" />
+</div>
+
+<p> </p>
+
+<p>(extended form) → (reduce 2b’s to c) → (reduce 2d’s to e) → (abbreviated form) → 1 + 4 + 16 = 21</p>
+
+<h3 id="program-specifications">Program Specifications</h3>
+
+<p>Your job is to write functions that can convert back and forth between location and decimal representations, as well as some support functions for the process.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">long</span> <span class="n">loc_to_dec</span><span class="p">(</span><span class="n">string</span> <span class="n">loc</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Converts a location arithmetic string to an integer.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">abbreviate</span><span class="p">(</span><span class="n">string</span> <span class="n">loc</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Takes a location string and reduces it to its abbreviated form. We want you to experiment with string manipulation so <em>you may not convert it to an integer first</em>. You must do the abbreviation directly.</p>
+
+<p>⭐ Please show the TA your working <code class="language-plaintext highlighter-rouge">abbreviate()</code> function before moving on.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">dec_to_loc</span><span class="p">(</span><span class="kt">long</span> <span class="n">dec</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Converts an integer to an <em>abbreviated</em> location string.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">long</span> <span class="n">add_loc</span><span class="p">(</span><span class="n">string</span> <span class="n">loc1</span><span class="p">,</span> <span class="n">string</span> <span class="n">loc2</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Takes two location strings, adds them, and provides the integer result. For this function, think about following these steps:</p>
+<ol>
+  <li>Combine the strings</li>
+  <li>Reduce the combination string using your <code class="language-plaintext highlighter-rouge">abbreviate()</code> function</li>
+  <li>Convert the result using your <code class="language-plaintext highlighter-rouge">loc_to_dec()</code> function</li>
+</ol>
+
+<p> </p>
+
+<p>Write a <code class="language-plaintext highlighter-rouge">main()</code> function that shows off your work.</p>
+<ol>
+  <li>Prompt for two elements: a location string, and an integer.</li>
+  <li>Using <code class="language-plaintext highlighter-rouge">loc_to_dec()</code>, print the location string and the resulting integer.</li>
+  <li>Using <code class="language-plaintext highlighter-rouge">abbreviate()</code>, print the location string and its reduced form.</li>
+  <li>Using <code class="language-plaintext highlighter-rouge">dec_to_loc()</code>, print the integer and its location string.</li>
+  <li>Prompt for two more location strings.</li>
+  <li>Using <code class="language-plaintext highlighter-rouge">add_loc()</code>, add the two location strings and print the result.</li>
+</ol>
+
+<p>Example interation with the final program:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Give me a location string:
+abbccd
+Give me an integer:
+37
+abbccd to dec: 21
+abbccd abbreviated: ace
+37 to loc: acf
+Give me two more location strings:
+abc
+bcd
+Sum of abc and bcd is: 21
+</code></pre></div></div>
+
+<p>⭐ Please show the TA your completed program.</p>
+
+<p> </p>
+
+<h3 id="assignment-notes">Assignment Notes</h3>
+
+<p>We haven’t covered sorting just yet, but C++ makes it pretty easy. Here is an example:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">;</span> <span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+<span class="cp">#include &lt;string&gt;
+</span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
+<span class="cp">#include &lt;algorithm&gt;  // make sure to import &lt;algorithm&gt;!
+</span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">my_str</span> <span class="o">=</span> <span class="s">"aebcd"</span><span class="p">;</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"my_str before sorting: "</span> <span class="o">&lt;&lt;</span> <span class="n">my_str</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+
+    <span class="n">sort</span><span class="p">(</span><span class="n">my_str</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">my_str</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"my_str after sorting: "</span> <span class="o">&lt;&lt;</span> <span class="n">my_str</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my_str before sorting: aebcd
+my_str after sorting: abcde
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">std::sort()</code> sorts the individual elements (instances of type <code class="language-plaintext highlighter-rouge">char</code>, in this case) of a collection given two points, <code class="language-plaintext highlighter-rouge">my_str.begin()</code>, and <code class="language-plaintext highlighter-rouge">my_str.end()</code>. We’ll be talking more about what these methods do later on in the course. <strong>Note that <code class="language-plaintext highlighter-rouge">std::sort()</code> changes the string in-place!</strong></p>
+
+<p>Hints on approaching these functions:</p>
+
+<ol>
+  <li>You could define a constant for each letter of the alphabet, but that’d be a pain. The smallest character of a location string is <code class="language-plaintext highlighter-rouge">'a'</code>, which represents 2^0 power (i.e., 1). The difference between any letter and <code class="language-plaintext highlighter-rouge">'a'</code> is the power of 2 that letter represents. For example:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">'a'-'a'</code> = 0, which in location arithmetic is 2^0 = 1</li>
+      <li><code class="language-plaintext highlighter-rouge">'c'-'a'</code> = 2, which in location arithmetic is 2^2 = 4</li>
+      <li><code class="language-plaintext highlighter-rouge">'h'-'a'</code> = 7, which in location arithmetic is 2^7 = 128</li>
+    </ul>
+  </li>
+  <li>The function, <code class="language-plaintext highlighter-rouge">dec_to_loc()</code>, is really nothing more than creating a “long string” and using <code class="language-plaintext highlighter-rouge">abbreviate()</code> to clean it up.</li>
+  <li>The function, <code class="language-plaintext highlighter-rouge">add_loc()</code>, is nothing more than a concatenation of the two strings, a call to <code class="language-plaintext highlighter-rouge">abbreviate()</code>, followed by a call to <code class="language-plaintext highlighter-rouge">loc_to_dec()</code>.</li>
+  <li>Your functions might make use of:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">.substr()</code> - The <code class="language-plaintext highlighter-rouge">.substr()</code> method takes two parameters: a position, and a length. It returns the substring specified within that range. The length defaults to the end of the string (or, if the value is beyond the length of the string, it defaults to the end).</li>
+      <li><code class="language-plaintext highlighter-rouge">.erase()</code> - The <code class="language-plaintext highlighter-rouge">.erase()</code> method takes two parameters: a position, and a length (just like <code class="language-plaintext highlighter-rouge">.substr()</code>). It removes all characters within the specified range.</li>
+      <li><code class="language-plaintext highlighter-rouge">.push_back()</code> - The <code class="language-plaintext highlighter-rouge">.push_back()</code> method appends a given <code class="language-plaintext highlighter-rouge">char</code> to the end of the string.</li>
+      <li><code class="language-plaintext highlighter-rouge">static_cast&lt;char&gt;</code> - If you do addition/subtraction on a character, you need to cast it to a <code class="language-plaintext highlighter-rouge">char</code> for the “printable” version.</li>
+      <li>Indexing via the <code class="language-plaintext highlighter-rouge">[]</code> operator.</li>
+    </ul>
+  </li>
+</ol>
+
+        </div>
+    </div>
+</body>
+</html>

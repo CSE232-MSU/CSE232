@@ -1,0 +1,36 @@
+I"o<h1 id="week-02">Week 02</h1>
+
+<p><a href="https://docs.google.com/presentation/d/1kM_bXpzac7l1jiXedfSXEFp8KNmiXzKuk1KCu7HZbug/edit?usp=sharing">Lecture slides (Control Conditionals)</a></p>
+
+<h3 id="control-conditionals">Control Conditionals</h3>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uxAoS6Mwc1Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="repetition">Repetition</h3>
+
+<p><a href="week02/03.2-while.cpp">03.2-while.cpp</a></p>
+
+<p><a href="week02/03.3-for.cpp">03.3-for.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dig-DcJ7juk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="non-local-exits">Non-Local Exits</h3>
+
+<p><a href="week02/03.4-breakContinue.cpp">03.4-breakContinue.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5LyHds1ULjA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="the-switch-statement">The Switch Statement</h3>
+
+<p><a href="week02/03.6-switch.cpp">03.6-switch.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DdSvGeJZAyo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+:ET

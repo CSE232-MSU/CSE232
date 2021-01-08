@@ -1,3 +1,7 @@
+---
+title: Lab 01
+---
+
 # Lab 01 - Input and Output
 
 ## Directory Navigation in the Terminal

@@ -1,0 +1,91 @@
+I"�<h1 id="cse232---introduction-to-programming-ii">CSE232 - Introduction to Programming II</h1>
+
+<p>Continuation of object-centered design and implementation in C++. Building programs from modules. Data abstractions and classes to implement abstract data types. Static and dynamic memory allocation. Data structure implementation and algorithm efficiency. Lists, tables, stacks, and queues. Templates and generic programming.</p>
+
+<p>General:</p>
+<ul>
+  <li><a href="#course-schedule">Course Schedule</a></li>
+  <li><a href="#help-room-schedule">Help Room Schedule</a></li>
+  <li><a href="https://cse.msu.edu/~cse232/Exam_Content/">Past Exams</a></li>
+  <li><a href="">Section Instructors</a></li>
+  <li><a href="syllabus.html">Syllabus</a></li>
+</ul>
+
+<p>Essential Sites:</p>
+<ul>
+  <li><a href="https://d2l.msu.edu/d2l/loginh/">D2L</a></li>
+  <li><a href="https://class.mimir.io/">Mimir</a></li>
+  <li><a href="https://piazza.com/class/kjkc4swnt8e184">Piazza</a></li>
+</ul>
+
+<p>Resources:</p>
+<ul>
+  <li><a href="https://www.youtube.com/watch?v=2olsGf6JIkU">105 STL Algorithms in Less Than an Hour</a></li>
+  <li><a href="https://cplusplus.com/reference/">cplusplus</a></li>
+  <li><a href="https://en.cppreference.com/w/">cppreference</a></li>
+  <li><a href="debugging_guide.html">Debugging Guide</a></li>
+  <li><a href="https://www.onlinegdb.com/">OnlineGDB</a></li>
+  <li><a href="https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14">STL Algorithms Cheatsheet</a></li>
+  <li><a href="https://www.tutorialspoint.com/unix/index.htm">Unix Tutorial</a></li>
+</ul>
+
+<h2 id="course-schedule">Course Schedule</h2>
+
+<p>It should be assumed that all assignments are due by 10:00 PM EST on their respective due dates. Due dates are subject to change, but if a change is made, an announcement will be made on Piazza.</p>
+
+<p>Links to lecture videos, projects, and other materials will be made available as relevant dates approach. Content that is written for future weeks may change without notice until the date arrives.</p>
+
+<iframe src="https://calendar.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FDetroit&amp;src=anFtcGxzdGcwczFqa2FnZDV1dWZldmxqMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;color=%238E24AA&amp;showCalendars=0&amp;showTabs=0&amp;showPrint=0&amp;showDate=1&amp;showTitle=0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+
+<h2 id="help-room-schedule">Help Room Schedule</h2>
+
+<p>Help Room is conducted through Zoom. You can find the session details and instructions on how to join on Piazza.</p>
+
+<p>Please direct any and all written communication to Piazza (you can post anonymously if that’s something you’d prefer). Emails may not be responded to.</p>
+
+<p>If you would like a one-on-one meeting with an instructor, please make a private Piazza post detailing your request and availability.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">Sunday</th>
+      <th style="text-align: center">Monday</th>
+      <th style="text-align: center">Tuesday</th>
+      <th style="text-align: center">Wednesday</th>
+      <th style="text-align: center">Thursday</th>
+      <th style="text-align: center">Friday</th>
+      <th style="text-align: center">Saturday</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">09:00-11:00AM</td>
+      <td style="text-align: center">09:00-11:00AM</td>
+      <td style="text-align: center">09:00-11:00AM</td>
+      <td style="text-align: center">09:00-11:00AM</td>
+      <td style="text-align: center">09:00-11:00AM</td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center">03:00-05:00PM</td>
+      <td style="text-align: center">03:00-05:00PM</td>
+      <td style="text-align: center">03:00-05:00PM</td>
+      <td style="text-align: center">03:00-05:00PM</td>
+      <td style="text-align: center"> </td>
+      <td style="text-align: center"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: center">07:00-09:00PM</td>
+      <td style="text-align: center">07:00-09:00PM</td>
+      <td style="text-align: center">07:00-09:00PM</td>
+      <td style="text-align: center">07:00-09:00PM</td>
+      <td style="text-align: center">07:00-09:00PM</td>
+      <td style="text-align: center">07:00-09:00PM</td>
+      <td style="text-align: center">07:00-09:00PM</td>
+    </tr>
+  </tbody>
+</table>
+
+:ET

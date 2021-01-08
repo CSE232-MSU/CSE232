@@ -1,0 +1,233 @@
+I"�W<h1 id="lab-06---vectors-and-multi-file-compilation">Lab 06 - Vectors and Multi-File Compilation</h1>
+
+<h2 id="miscellaneous-bash-stuff">Miscellaneous Bash Stuff</h2>
+
+<h3 id="command-completion">Command Completion</h3>
+
+<p>A common mistake when writing in any programming language is that of typos. One way to avoid them is to use an autocompletion feature so you don’t have to type out a full name or variable. When you hit the TAB key, the terminal attempts to fill the rest of the command/file name you are typing. If there isn’t a unique match (for instance, you are typing: <code class="language-plaintext highlighter-rouge">cp fi</code> and then hit TAB when there are files with the names “file_01” and “file_02” present), it will fill in as much as it can (in this case “<code class="language-plaintext highlighter-rouge">cp file_0</code>”). If you hit TAB again, the terminal will present the potential options that it can autofill with. You can specify more characters until a unique match is found.</p>
+
+<p>Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp </span>f                <span class="c"># hit TAB</span>
+<span class="nb">cp </span>file_0           <span class="c"># hit TAB</span>
+<span class="nb">cp </span>file_02 f        <span class="c"># hit TAB</span>
+<span class="nb">cp </span>file_02 file_0   <span class="c"># hit TAB</span>
+<span class="nb">cp </span>file_02 file_01  
+</code></pre></div></div>
+
+<p>I recommend making use of TAB completion. We, humans, are prone to making typos, where our computer friends are not.</p>
+
+<h3 id="history"><code class="language-plaintext highlighter-rouge">history</code></h3>
+
+<p>The terminal remembers each command you type into it in its history. When you execute the <code class="language-plaintext highlighter-rouge">history</code> command, the terminal will report each command run with a number. Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  495  <span class="nb">ls
+  </span>496  <span class="nb">cd</span> ../../
+  497  <span class="nb">ls
+  </span>498  <span class="nb">ls
+  </span>499  <span class="nb">cd</span> ..
+  500  <span class="nb">cp </span>file_02 file_01
+  501  <span class="nb">history</span>
+</code></pre></div></div>
+
+<p>You can run a command from your history by noting its number. For instance, <code class="language-plaintext highlighter-rouge">!500</code> will run the <code class="language-plaintext highlighter-rouge">cp file_02 file_01</code> command again.</p>
+
+<p>You can also use the <code class="language-plaintext highlighter-rouge">!!</code> command to re-execute the latest command.</p>
+
+<h3 id="configuration-bashrc-and-bash_profile">Configuration (.bashrc and .bash_profile)</h3>
+
+<p>Sometimes, there are bash commands you always want to run before you get to work. Perhaps, you want your terminal to configure some settings, or tell you how much disk space is left on the computer. To make this easier, there are two config files that bash looks for (in your home directory).</p>
+
+<p>.bashrc is a bash script that runs everytime you invoke the <code class="language-plaintext highlighter-rouge">bash</code> command (example: <code class="language-plaintext highlighter-rouge">bash my_script.sh</code>) and when you login. .bash_profile is a script that runs when you login to your user account. Both of these are used to execute bash commands that set up your environment.</p>
+
+<p>Your PATH is a list of directories that bash (or tcsh, which is the default on the lab computers) looks in when trying to run a command. Bash looks through every folder in the list (in order), trying to find a program named identically to your command input.</p>
+
+<p>You can see your path by <code class="language-plaintext highlighter-rouge">echo</code>‘ing it to the screen with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">echo</span> <span class="nv">$PATH</span>
+</code></pre></div></div>
+
+<p>In the bash and tcsh shells, it outputs something like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/soft/linux/bin:/bin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/cpssbin:/soft/linux/bin:/usr/X11R6/bin:/usr/local/bin:
+</code></pre></div></div>
+
+<p>This means that if I try to run <code class="language-plaintext highlighter-rouge">say_hello Josh</code>, it looks in <code class="language-plaintext highlighter-rouge">/soft/linux/bin</code> for an executable called <code class="language-plaintext highlighter-rouge">say_hello</code>, and if it can’t find it, it then looks in <code class="language-plaintext highlighter-rouge">/bin</code>, then in <code class="language-plaintext highlighter-rouge">/usr/sbin</code>, and so on before giving up (the <code class="language-plaintext highlighter-rouge">:</code> character delimits the paths).</p>
+
+<p>Sometimes it is useful to add other directories to this path (often for programs you want to call from the command line).</p>
+
+<p>If I want to add the folder “<code class="language-plaintext highlighter-rouge">~/joshs_programs/</code>” to my PATH, because it has useful programs to run at the command line, I can add them like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:~/joshs_programs      <span class="c"># for bash</span>
+</code></pre></div></div>
+
+<pre><code class="language-tcsh">setenv PATH $PATH\:~/joshs_programs     # for tcsh (on lab computers)
+</code></pre>
+
+<p>However, this change to the PATH will only last as long as your terminal session lasts (when you log out, it’ll be gone). You’ll want to add that line to your .bashrc or .bash_profile (or .tcshrc) config file if you want that in your path for future sessions.</p>
+
+<p>⭐ Add the Desktop to your PATH and <code class="language-plaintext highlighter-rouge">echo</code> your PATH for the TA.</p>
+
+<h2 id="multi-file-compilation">Multi-File Compilation</h2>
+
+<p>Imagine that you’ve written a really useful function. You would like to package that function individually so you can use it in other programs. The hard way to accomplish that would be to copy that function into every new program where you might want to use it. A better idea would be to place that function in its own separate file, and then compile any new program and your trusty function into one executable. That would be lovely!</p>
+
+<p>Remember this picture?</p>
+
+<div align="center">
+<img src="../assets/images/compiler_parts.png" />
+</div>
+
+<p><code class="language-plaintext highlighter-rouge">g++</code> (the underlying compiler) does all of these steps rather invisibly. To take advantage of it, we’ll need multiple files.</p>
+
+<h3 id="header-files">Header Files</h3>
+
+<p>If we are going to define a function in one file, and use that function in a separate main file, we are going to have to find a way to inform the main file about the <em>types</em> of that function. That is, we have to tell the main file:</p>
+<ul>
+  <li>The function’s name,</li>
+  <li>The type it returns,</li>
+  <li>And the types of the parameters</li>
+</ul>
+
+<p>The <em>name</em> of each parameter is unimportant. It can be given, changed in the main file, or left-out. All that matters is each parameter’s <em>type</em>.</p>
+
+<p>If we tell the main file this information, that is enough for the C++ compiler to check that the function is being used correctly, and by “correctly”, I mean that the main file is using all of the <em>types</em> correctly in calling the function, even though it does not yet have the actual function <em>code</em>.</p>
+
+<p>Providing this information is the job of a <strong>header file</strong>. Header files are typically written with a “.hpp” or “.h” extension, and are used to indicate the type information for C++ elements (functions, classes, or some other C++ thing). This header file is used by the compiler to ensure that, whoever is using this function, they are at least using the types correctly. Thus, without the function itself, we can know that we followed the compiler rules and used the correct types.</p>
+
+<h3 id="example">Example</h3>
+
+<p>Make a new folder somewhere, and call it “lab6” (either with your File Explorer or the command line).</p>
+
+<p>If you don’t remember, you can make an empty folder by using the <code class="language-plaintext highlighter-rouge">mkdir</code> command (on Unix):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mkdir </span>lab6
+</code></pre></div></div>
+
+<p><a href="../assets/downloads/lab06.zip">Download, and extract the files in this .zip folder linked here</a>. Copy these files into your lab6 folder.</p>
+
+<p>Navigate your terminal to the “lab6” folder, then, compile your three files with the following command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-std</span><span class="o">=</span>c++17 <span class="nt">-Wall</span>  <span class="k">*</span>.cpp
+</code></pre></div></div>
+
+<p>This command will compile all (<code class="language-plaintext highlighter-rouge">*</code> means all, <code class="language-plaintext highlighter-rouge">*.cpp</code> means all files ending in .cpp) the .cpp files and build an executable.</p>
+
+<h3 id="some-warnings">Some Warnings</h3>
+
+<p>It’s nice that the previous command compiles all of the files, but if you have too many files (like from different projects, or from things you were working on temporarily, etc.) it won’t work. Instead, you can do it with a list of files. You can even name your executable using the <code class="language-plaintext highlighter-rouge">-o</code> flag, to be something other than the standard “a.out”.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-std</span><span class="o">=</span>c++17 <span class="nt">-Wall</span> file1.cpp file2.cpp file3.cpp <span class="nt">-o</span> namedExecutable.exe
+</code></pre></div></div>
+
+<p>Something important to note, is that <strong>we never compile header files</strong>. All a header file provides is a list of declarations to be used by other files.</p>
+
+<p>⭐ Show the TA that you downloaded the three files, compiled them, and successfully ran the executable.</p>
+
+<h3 id="the-files">The Files</h3>
+
+<p>extra.cpp defines the function, <code class="language-plaintext highlighter-rouge">extra()</code>, which will be used in the main.cpp program.</p>
+
+<p>extra.hpp is the header file. Notice that it only provides the declaration of the function. In the declaration, the names of the parameters are not required, only their types. <strong>Note that the function declaration ends in a semicolon, don’t forget!</strong> There are some weird <code class="language-plaintext highlighter-rouge">#</code> statements, as you probably noticed. We’ll get to those in a bit.</p>
+
+<p>main.cpp is the main program. Notice that it has the following statement in it:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include "extra.hpp"
+</span></code></pre></div></div>
+
+<p>This means that the main program is <em>including</em> the declaration of the function so that the compiler may check the type use of <code class="language-plaintext highlighter-rouge">extra()</code> by main.cpp. Notice the quotes; when the <code class="language-plaintext highlighter-rouge">#include</code> expression uses quotes, it is assumed that the .hpp file is in the same directory as the other files. Include statements with angled-brackets (<code class="language-plaintext highlighter-rouge">&lt;&gt;</code>) denote the “standard include place” to the compiler. Since it is our own include file, we need to use quotes for it.</p>
+
+<h3 id="the--symbol">The <code class="language-plaintext highlighter-rouge">#</code> Symbol</h3>
+
+<p>Anything beginning with <code class="language-plaintext highlighter-rouge">#</code> is part of the pre-processor. This controls aspects of how the compilation goes. In this case, we are trying to prevent a multiple definition error. What if we wanted to use <code class="language-plaintext highlighter-rouge">extra()</code> in more than one file? Your expectation is that every file that wants to use <code class="language-plaintext highlighter-rouge">extra()</code> should include the extra.hpp file for compilation to work, and you would be correct… sort of. Remember that you cannot declare a variable more than once, and the same goes for a function – you should only declare it once. In making one executable from many files, it is possible that, by including extra.hpp in multiple files, we would declare the <code class="language-plaintext highlighter-rouge">extra()</code> function multiple times for this single executable, and C++ would complain. However, it would be weird to have to do this in some kind of order where only one file included extra.hpp, and the rest would have to assume it is available.</p>
+
+<p>The way around this involves the pre-processor. Basically, there are three statements we care about:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#ifndef SOME_VARIABLE_NAME
+#define SOME_VARIABLE_NAME
+</span>
+<span class="cm">/*
+put all *declarations* here
+*/</span>
+
+<span class="cp">#endif
+</span></code></pre></div></div>
+
+<p>This means: “if the pre-processor variable we indicate (<code class="language-plaintext highlighter-rouge">SOME_VARIABLE_NAME</code>) is not defined (<code class="language-plaintext highlighter-rouge">#ifndef</code>), go ahead and define it (<code class="language-plaintext highlighter-rouge">#define</code>) for this compilation and do everything else up to the <code class="language-plaintext highlighter-rouge">#endif</code>, (i.e., include these declarations in the compilation). If the variable is already defined, skip everything up to the <code class="language-plaintext highlighter-rouge">#endif</code> (i.e., skip the declarations).”</p>
+
+<p>Thus, whichever file pulls in the header file first, defines the pre-processor variable and declares the function for the entire compilation. If some other file also includes the header file later in the compilation, the pre-processor variable is already defined, so the declarations are not included.</p>
+
+<p>Of course, the simpler solution is to make use of the (not-yet-standardized) <code class="language-plaintext highlighter-rouge">#pragma once</code>. It is your call.</p>
+
+<h2 id="coding-assignment">Coding Assignment</h2>
+
+<p>Make a new folder in your lab 6 directory called “splitter”, and add three new files to it: main.cpp, functions.cpp and functions.hpp.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="n">split</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">s</span><span class="p">,</span> <span class="kt">char</span> <span class="n">sep</span><span class="o">=</span><span class="sc">' '</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">split()</code> function should take in a <code class="language-plaintext highlighter-rouge">string</code> and return a <code class="language-plaintext highlighter-rouge">vector&lt;string&gt;</code> of the individual elements in the string that are separated by a given separator character (default of <code class="language-plaintext highlighter-rouge">' '</code>). Examples:</p>
+
+<p><code class="language-plaintext highlighter-rouge">split("hello mom and dad")</code> should return <code class="language-plaintext highlighter-rouge">{"hello", "mom", "and", "dad"}</code></p>
+
+<p><code class="language-plaintext highlighter-rouge">split("1,2,3,4", ',')</code> should return <code class="language-plaintext highlighter-rouge">{"1", "2", "3", "4"}</code></p>
+
+<p>Open functions.hpp, and store the function declaration of <code class="language-plaintext highlighter-rouge">split()</code> there. The declaration should be the snippet of code above <strong>with a semicolon at the end, don’t forget!</strong>.</p>
+
+<p>As discussed in lecture, default parameter values <strong>go in the header file only</strong>. The default does not occur in the definition if it occurred in the declaration.</p>
+
+<p>This header file should wrap all declarations using the <code class="language-plaintext highlighter-rouge">#ifndef</code>, <code class="language-plaintext highlighter-rouge">#define</code>, and <code class="language-plaintext highlighter-rouge">#endif</code> pre-processor statements, as discussed above. Make up your own variable name.</p>
+
+<p>Open functions.cpp, and write the definition of the function, <code class="language-plaintext highlighter-rouge">split()</code>, there. Make sure it follows the declaration in functions.hpp. The parameter names do not matter, but the types do. Make sure the function signature matches for both the declaration <em>and</em> definition.</p>
+
+<p>You can compile functions.cpp (not build, at least not yet) to see if functions.cpp file is well-formed for C++. It will not build an executable, but instead a .o (object) file. The object file is the result of compilation before building an executable – an in-between stage.</p>
+
+<p>⭐ Show your TA the object file generated after compiling the functions.cpp file.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">print_vector</span><span class="p">(</span><span class="n">ostream</span> <span class="o">&amp;</span><span class="n">out</span><span class="p">,</span> <span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>This function prints all the elements of <code class="language-plaintext highlighter-rouge">v</code> to the output stream, <code class="language-plaintext highlighter-rouge">out</code>. Note that <code class="language-plaintext highlighter-rouge">out</code> and <code class="language-plaintext highlighter-rouge">v</code> are passed by reference.</p>
+
+<p>Store the function in functions.cpp, and put its declaration in functions.hpp like you did for <code class="language-plaintext highlighter-rouge">split()</code>. <strong>Don’t forget the semicolon!</strong></p>
+
+<p>Compile the function (not build, compile) to make sure it follows the rules.</p>
+
+<p><strong>Note</strong>: <code class="language-plaintext highlighter-rouge">ostream</code> is a category of all possible output streams (streams like <code class="language-plaintext highlighter-rouge">cout</code> and <code class="language-plaintext highlighter-rouge">ostringstream</code>). This function should be invoked with a specific <code class="language-plaintext highlighter-rouge">ostream</code> (either <code class="language-plaintext highlighter-rouge">cout</code> or <code class="language-plaintext highlighter-rouge">ostringstream</code>).</p>
+
+<p> </p>
+
+<p>Your <code class="language-plaintext highlighter-rouge">main()</code> function should go in main.cpp.</p>
+
+<p>In main.cpp, be sure to <code class="language-plaintext highlighter-rouge">#include "functions.hpp"</code> (note the quotes). This makes all of the functions in functions.hpp available to main.cpp.</p>
+
+<p>Write a <code class="language-plaintext highlighter-rouge">main()</code> function that:</p>
+<ol>
+  <li>Prompts for a string to be split</li>
+  <li>Prompts for the single character to split the string with</li>
+  <li>Splits the string using the <code class="language-plaintext highlighter-rouge">split()</code> function (which returns a <code class="language-plaintext highlighter-rouge">vector&lt;string&gt;</code>, remember)</li>
+  <li>Prints the vector using the <code class="language-plaintext highlighter-rouge">print_vector()</code> function</li>
+</ol>
+
+<p>Compile (not build) main.cpp to see that it follows the rules. If you’ve successfully compiled it, build the project with the output executable name as “main” to test everything.</p>
+
+<p>⭐ Demonstrate a working “main” executable to your TA.</p>
+
+<p> </p>
+
+<h3 id="assignment-notes">Assignment Notes</h3>
+
+<ol>
+  <li>Consider using the <code class="language-plaintext highlighter-rouge">getline()</code> function for your implementation of <code class="language-plaintext highlighter-rouge">split()</code>.
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">getline()</code> takes a delimiter character as a third argument. In combination with an input string stream, you can use <code class="language-plaintext highlighter-rouge">getline()</code> to split the string and <code class="language-plaintext highlighter-rouge">push_back()</code> each element onto the vector.</li>
+      <li>Example: a call to <code class="language-plaintext highlighter-rouge">getline(stream, line, delim)</code> gets the string from <code class="language-plaintext highlighter-rouge">stream</code> (could be an <code class="language-plaintext highlighter-rouge">istream</code>, <code class="language-plaintext highlighter-rouge">ifstream</code>, <code class="language-plaintext highlighter-rouge">istringstream</code>, etc.) up to the end of <code class="language-plaintext highlighter-rouge">line</code>, or the <code class="language-plaintext highlighter-rouge">delim</code> character.</li>
+    </ul>
+  </li>
+  <li>Default parameter values needs to be set at <strong>declaration time</strong>, which means that the default value for a function parameter should be in the header file (where the declaration is). If it is in the declaration, it should not be in the definition.</li>
+</ol>
+:ET
