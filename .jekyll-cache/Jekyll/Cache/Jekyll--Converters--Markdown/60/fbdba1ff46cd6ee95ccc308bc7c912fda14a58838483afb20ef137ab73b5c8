@@ -1,0 +1,67 @@
+I"�<h1 id="lab-08---structs">Lab 08 - Structs</h1>
+
+<h2 id="wildcards">Wildcards</h2>
+
+<p>When compiling multiple C++ files, it’s pretty annoying to have to specify each .cpp file to the compiler.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-std</span><span class="o">=</span>c++17 <span class="nt">-Wall</span> <span class="nt">-g</span> main.cpp stack.cpp disk.cpp io.cpp
+</code></pre></div></div>
+
+<p>Recall our discussion in Lab 06 – bash gives an alternative method to select files that match a particular pattern. Notice that the above files were all the files in the folder that ended with ‘.cpp’. You can use a <em>wildcard</em> (the asterisk, <code class="language-plaintext highlighter-rouge">*</code>) to denote all of those files at once. Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-std</span><span class="o">=</span>c++17 <span class="nt">-Wall</span> <span class="nt">-g</span> <span class="k">*</span>.cpp
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">*</code> symbol roughly translates to “all”, where, when combined with the ‘.cpp’ extension, it becomes “all files that end in ‘.cpp’”.</p>
+
+<p>This can be used in other contexts beyond compilation. Let’s say you have a folder named “headers”, where you want to move all of your ‘.h’ files to. You can do so with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv</span> <span class="k">*</span>.h headers/
+</code></pre></div></div>
+
+<p>⭐ Show your TA what happens when you use wildcards to open multiple ‘.cpp’ files with the <code class="language-plaintext highlighter-rouge">gedit</code> command.</p>
+
+<h2 id="coding-assignment">Coding Assignment</h2>
+
+<p>This lab will have you apply generic algorithms to various programming problems.</p>
+
+<h3 id="program-specifications">Program Specifications</h3>
+
+<p><a href="../assets/downloads/lab08.zip">Download the starter code provided here</a>.</p>
+
+<p>Write definitions for the four functions described below. You are to not use any loops (for-loops or while-loops). Instead, you must use generic algorithms from the <code class="language-plaintext highlighter-rouge">&lt;algorithm&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;numeric&gt;</code> headers.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">ShiftRange</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Given a vector of ints, <code class="language-plaintext highlighter-rouge">v</code>, sorts the vector and moves all elements within the range [<code class="language-plaintext highlighter-rouge">left</code>, <code class="language-plaintext highlighter-rouge">right</code>] to the end of the vector.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">PassOrFail</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Given a vector, <code class="language-plaintext highlighter-rouge">v</code>, where each element of the vector is a (name, grade) pair, sorts the vector by name and partitions the first half of the vector as pairs who passed, and the second half of the vector as pairs who failed.</p>
+
+<p>A pair “passes” if the grade is greater than or equal to 600 points.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">Fibonacci</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Generates the first <code class="language-plaintext highlighter-rouge">n</code> Fibonacci numbers.</p>
+
+<p> </p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">BinaryToInt</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">binary_str</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Converts a binary string (base 2) to an <code class="language-plaintext highlighter-rouge">int</code> (base 10).</p>
+
+<p> </p>
+
+<p>⭐ Show the TA your completed set of functions.</p>
+:ET

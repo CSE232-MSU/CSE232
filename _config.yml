@@ -1,0 +1,29 @@
+baseurl: "/CSE232-JEKYLL"
+url: "https://braedynl.github.io"
+permalink: /:title
+
+collections:
+    labs:
+        output: true
+    setup:
+        output: true
+    lectures:
+        output: true
+
+defaults:
+    - scope:
+        path: ""
+      values:
+        layout: "default"
+    - scope:
+        path: "labs/"
+      values:
+        layout: "default"
+    - scope:
+        path: "setup/"
+      values:
+        layout: "default"
+    - scope:
+        path: "lectures/"
+      values:
+        layout: "default"

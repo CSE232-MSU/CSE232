@@ -1,3 +1,7 @@
+---
+title: Lab 06
+---
+
 # Lab 06 - Vectors and Multi-File Compilation
 
 ## Miscellaneous Bash Stuff
@@ -80,7 +84,9 @@ Imagine that you've written a really useful function. You would like to package 
 
 Remember this picture?
 
-![](../.assets/images/compiler_parts.png)
+<div align="center">
+<img src="../assets/images/compiler_parts.png">
+</div>
 
 `g++` (the underlying compiler) does all of these steps rather invisibly. To take advantage of it, we'll need multiple files.
 
@@ -107,7 +113,7 @@ If you don't remember, you can make an empty folder by using the `mkdir` command
 mkdir lab6
 ```
 
-[Download, and extract the files in this .zip folder linked here](../.assets/downloads/lab06.zip). Copy these files into your lab6 folder.
+[Download, and extract the files in this .zip folder linked here](../assets/downloads/lab06.zip). Copy these files into your lab6 folder.
 
 Navigate your terminal to the "lab6" folder, then, compile your three files with the following command:
 

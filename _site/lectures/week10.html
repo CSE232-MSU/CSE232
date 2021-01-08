@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10</title>
+    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
+    <style>
+        body {
+            overflow: -moz-scrollbars-none;
+            -ms-overflow-style: none;
+        }
+        body::-webkit-scrollbar {
+            width: 0!important;
+        }
+    </style>
+</head>
+<body class="py-2">
+    <div class="markdown-body mx-auto" style="max-width: 1000px;">
+        <nav class="UnderlineNav mb-3" aria-label="Foo bar">
+    <div class="UnderlineNav-body">
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/index.html" >
+                Home
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/syllabus.html" >
+                Syllabus
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/lectures.html" >
+                Lectures
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/labs.html" >
+                Labs
+            </a>
+        
+            <a class="UnderlineNav-item" href="/CSE232-JEKYLL/setup.html" >
+                Setup
+            </a>
+        
+    </div>
+    <div class="UnderlineNav-actions">
+        <a class="btn btn-sm" href="https://piazza.com/" role="button" target="_blank">Piazza</a>
+        <a class="btn btn-sm mr-2" href="https://class.mimir.io/" role="button" target="_blank">Mimir</a>
+    </div>
+</nav>
+        <div class="border rounded-2 px-5 py-2 anim-fade-in">
+            <h1 id="week-10">Week 10</h1>
+
+<p><a href="https://docs.google.com/presentation/d/1PfZqsP_MKAbGhYNzW_awN_9YSy7i7ZO-D_Za3e3FbNE/edit?usp=sharing">Lecture slides (Classes Part 2)</a></p>
+
+<h3 id="constructors">Constructors</h3>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SbW_2g6DH20" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p><strong>Note</strong>: correction; the default constructor does <em>not</em> initialize variables.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">struct</span> <span class="nc">S</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">S</span> <span class="n">s</span><span class="p">;</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">s</span><span class="p">.</span><span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>  <span class="c1">// this is undefined behaviour, 'i' has not been initialized</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h3 id="synthetic-default-constructor-and-initializer-lists">Synthetic Default Constructor and Initializer Lists</h3>
+
+<p><a href="week10/16.1-clock.cpp">16.1-clock.cpp</a></p>
+
+<p><a href="week10/16.1-clock.h">16.1-clock.h</a></p>
+
+<p><a href="week10/16.1-main.cpp">16.1-main.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/4PFaSl2tLhY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="converting-constructor">Converting Constructor</h3>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sJ6u9XP9Y_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<p><strong>Note</strong>: correction; constructors with default parameters work in the same way as functions with default parameters. <code class="language-plaintext highlighter-rouge">Clock("11:11:PM")</code> will invoke the string conversion constructor, not the three-argument constructor because the three-argument constructor requires that its first argument is an <code class="language-plaintext highlighter-rouge">int</code> (not a <code class="language-plaintext highlighter-rouge">string</code>).</p>
+
+<h3 id="code-walkthrough">Code Walkthrough</h3>
+
+<p><a href="week10/16.2-clock.cpp">16.2-clock.cpp</a></p>
+
+<p><a href="week10/16.2-clock.h">16.2-clock.h</a></p>
+
+<p><a href="week10/16.2-main.cpp">16.2-main.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lnT8fZXtdAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+        </div>
+    </div>
+</body>
+</html>

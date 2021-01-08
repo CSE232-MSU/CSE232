@@ -1,0 +1,10 @@
+- name: Home
+  link: /index.html
+- name: Syllabus
+  link: /syllabus.html
+- name: Lectures
+  link: /lectures.html
+- name: Labs
+  link: /labs.html
+- name: Setup
+  link: /setup.html

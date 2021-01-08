@@ -1,0 +1,13 @@
+<nav class="UnderlineNav mb-3" aria-label="Foo bar">
+    <div class="UnderlineNav-body">
+        {% for item in site.data.navigation %}
+            <a class="UnderlineNav-item" href="{{ item.link | prepend:site.baseurl }}" {% if page.title == item.name %}aria-current="page"{% endif %}>
+                {{ item.name }}
+            </a>
+        {% endfor %}
+    </div>
+    <div class="UnderlineNav-actions">
+        <a class="btn btn-sm" href="https://piazza.com/" role="button" target="_blank">Piazza</a>
+        <a class="btn btn-sm mr-2" href="https://class.mimir.io/" role="button" target="_blank">Mimir</a>
+    </div>
+</nav>

@@ -1,0 +1,38 @@
+I"+<h1 id="week-14">Week 14</h1>
+
+<p><a href="https://docs.google.com/presentation/d/1tRjcdxZeWRBTDfCcu6OxjN_zJZvkbPj63RmugEUlXTs/edit?usp=sharing">Lecture slides (Closing)</a></p>
+
+<h3 id="recursion">Recursion</h3>
+
+<p><a href="week14/22.1-recur.cpp">22.1-recur.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3KaAZM7tvPQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="more-recursion">More Recursion</h3>
+
+<p><a href="week14/22.2-permutation.cpp">22.2-permutation.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/zsk3yTa64zU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="what-weve-learned">What We’ve Learned</h3>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mW1zkjkHznM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="what-we-didnt-teach-you-yet">What We Didn’t Teach You Yet</h3>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/t5ZKi4Z8etc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="where-to-go-from-here">Where To Go From Here</h3>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BtQkl0WbqGQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+:ET

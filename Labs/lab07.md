@@ -1,6 +1,8 @@
-# Lab 07 - Templates and 2D Vectors
+---
+title: Lab 07
+---
 
-**Warning**: Parts of this lab cannot be seen with GitHub dark mode or a dark mode browser extension enabled.
+# Lab 07 - Templates and 2D Vectors
 
 There is no Unix tutorial this week
 
@@ -37,7 +39,7 @@ We will perform two operations on our matrices, both of which yield a new matrix
 The first is _scalar multiplication_. Regardless of the size or shape, if the matrix is not empty, we multiply the scalar value by every entry in the matrix, yielding a new matrix.
 
 <div align="center">
-<img src="../.assets/images/matrix_mul.svg">
+<img src="../assets/images/matrix_mul.svg">
 </div>
 
 &nbsp;
@@ -49,7 +51,7 @@ alt="\textbf{\lambda}"> is some scalar (i.e., any number).
 The second is _matrix addition_. The shape of two matrices _must be the same_ for addition to go forward. If the shapes are the same, and they are both not empty, we add each row/column value of one matrix to each row/column value of the second matrix in each respective location, yielding a new matrix. We do this for every value between the two matrices.
 
 <div align="center">
-<img src="../.assets/images/matrix_add.svg">
+<img src="../assets/images/matrix_add.svg">
 </div>
 
 &nbsp;
@@ -58,7 +60,7 @@ In these depictions, you'll notice that they begin enumerating the row/column in
 
 ### Program Specifications
 
-[Download the starter code provided here.](../.assets/downloads/lab07.zip)
+[Download the starter code provided here.](../assets/downloads/lab07.zip)
 
 We will use a `vector<vector<T>>` type as the underlying representation of our matrix, meaning that the type of the elements of the matrix will be templated. Thus, all of our functions must be templated, as well.
 

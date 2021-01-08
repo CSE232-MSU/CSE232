@@ -1,6 +1,8 @@
-# Lab 09 - Classes
+---
+title: Lab 09
+---
 
-**Warning**: Parts of this lab cannot be seen with GitHub dark mode or a dark mode browser extension enabled.
+# Lab 09 - Classes
 
 ## Remote Access
 
@@ -29,7 +31,7 @@ alt="(0, 0)">, with the head of the vector meeting at coordinates <img src=
 alt="(x, y)">.
 
 <div align="center">
-    <img src="../.assets/images/vectors.png" width="100%">
+    <img src="../assets/images/vectors.png" width="100%">
 </div>
 
 Below are some of the operations that can be performed on a vector, all of which you'll ultimately implement for your `MathVector` `struct`.
@@ -98,7 +100,7 @@ alt="\text{magnitude}(\vec{v}) = \sqrt{x_1^2 + y_1^2}">
 
 ### Program Specifications
 
-[Download the starter code provided here](../.assets/downloads/lab09.zip).
+[Download the starter code provided here](../assets/downloads/lab09.zip).
 
 Your task is to create an implementation file (named "math_vector.cpp") that provides the algorithm for all of the member functions shown below (and inside the header file).
 

@@ -1,10 +1,14 @@
+---
+title: Lab 00
+---
+
 # Lab 00 - Getting Started
 
 This lab is designed to get you acquainted with the class resources and recommended code editor. It's important that you complete this lab before your first in-class meeting. If you have any questions about this lab, please ask the instructors on Piazza. 
 
 ## Class Resources
 
-Course Website: https://github.com/CSE232-MSU/CSE232
+Course Website:
 
 Piazza: 
 
@@ -17,9 +21,9 @@ Please ensure that you can access all of the CSE232 resources listed here.
 For this class, we recommend using Visual Studio Code (or VSCode). **You are free to use other code editors, but, you are responsible for knowing how to work with it**. 
 
 We have thoroughly-documented tutorials on how to setup a C++ VSCode environment, with an active debugger as well:
-- [Windows Tutorial](../Setup/setup-windows.md)
-- [MacOS Tutorial](../Setup/setup-macos.md)
-- [Linux Tutorial](../Setup/setup-linux.md)
+- [Windows Tutorial](../setup/setup-windows.html)
+- [MacOS Tutorial](../setup/setup-macos.html)
+- [Linux Tutorial](../setup/setup-linux.html)
 
 Please come back to this page when you have VSCode ready to go.
 
@@ -118,7 +122,7 @@ You should have already recieved an invitation to Mimir for this class. If you h
 In the Live Coursework section, find and click the link to the Lab 00 assignment (obviously we aren't in Spring 2018, but you get the idea):
 
 <div align="center">
-    <img src="../.assets/images/mimir_start.png">
+    <img src="../assets/images/mimir_start.png">
 </div>
 
 Once you've clicked the assignment, you'll be brought to the assignment's Submission page. On that page, you'll have the project's description, and a link to upload your assignment.
@@ -131,7 +135,7 @@ At the top-right are three important buttons:
 Click the "Open IDE" button to go to Mimir's IDE. It should open a separate tab that looks like this:
 
 <div align="center">
-    <img src="../.assets/images/mimir_ide_start.png">
+    <img src="../assets/images/mimir_ide_start.png">
 </div>
 
 ### The Unix Terminal

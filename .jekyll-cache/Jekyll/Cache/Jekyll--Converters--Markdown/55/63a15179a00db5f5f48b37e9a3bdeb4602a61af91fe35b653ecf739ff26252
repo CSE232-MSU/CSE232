@@ -1,0 +1,56 @@
+I"©	<h1 id="week-12">Week 12</h1>
+
+<p><a href="https://docs.google.com/presentation/d/1tW-3ualuhvgOg-Arkr0eFkMaB9PTdeVTWEHVGem96M0/edit?usp=sharing">Lecture slides (Arrays)</a></p>
+
+<h3 id="arrays">Arrays</h3>
+
+<p><a href="week12/18.1-array.cpp">18.1-array.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_U4oKd6Wups" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="arrays-and-pointers">Arrays and Pointers</h3>
+
+<p><a href="week12/18.2-aryptrs.cpp">18.2-aryptrs.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8COR5EhiXps" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="arrays-and-functions">Arrays and Functions</h3>
+
+<p><a href="week12/18.3-aryFunctions.cpp">18.3-aryFunctions.cpp</a></p>
+
+<p><a href="week12/18.4-template.cpp">18.4-template.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5oU7wgNLpok" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="dynamic-memory">Dynamic Memory</h3>
+
+<p><a href="week12/18.5-dynamic.cpp">18.5-dynamic.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nkWTAHJZ70c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="leaking-memory">Leaking Memory</h3>
+
+<p><a href="week12/18.7-leaker.cpp">18.7-leaker.cpp</a></p>
+
+<p><a href="week12/18.8-scope.cpp">18.8-scope.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/07S6x_ggTlY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+
+<h3 id="growing-arrays">Growing Arrays</h3>
+
+<p><a href="week12/growing_array.cpp">growing_array.cpp</a></p>
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/avcEibtxxG4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+:ET

@@ -1,6 +1,8 @@
-# Lab 04 - Strings
+---
+title: Lab 04
+---
 
-**Warning**: Parts of this lab cannot be seen with GitHub dark mode or a dark mode browser extension enabled.
+# Lab 04 - Strings
 
 ## Standard Input, Output and Pipes
 

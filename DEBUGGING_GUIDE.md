@@ -1,3 +1,7 @@
+---
+title: Debugging Guide
+---
+
 # Debugging Guide
 
 If you weren't taught how to use a debugger in your previous programming class, or you just need a refresher, you've come to the right place -- this is a debugging guide. I'm using Visual Studio Code with Python in this demonstration, but, the same principles will apply to most other code editors, and all other languages.
@@ -15,7 +19,7 @@ No matter the programming language, the **control** of the program will always a
 For an example, let's take this simple Python program that calculates the average value of a list of random integers:
 
 <div align="center">
-    <img src=".assets/images/debugging-guide/debugging-code.png">
+    <img src="assets/images/debugging-guide/debugging-code.png">
 </div>
 
 The first series of steps we would expect to take, here, would be the defining of imports and functions, correct? Otherwise, we wouldn't be able to call `average()` or `randint()` in `main()` as we're doing right now.
@@ -23,13 +27,13 @@ The first series of steps we would expect to take, here, would be the defining o
 And, you'd be correct in this assumption. This is why we always put imports at the top, with function definitions following it.
 
 <div align="center">
-    <img src=".assets/images/debugging-guide/debugging-code-1.png">
+    <img src="assets/images/debugging-guide/debugging-code-1.png">
 </div>
 
 The red line, here, shows the control flowing from the top of the script to the furthest point it can go down. We import `randint()`, define our two user-made functions, and then we call `main()` in the global namespace -- meaning that we now jump *into* `main()` to run its code.
 
 <div align="center">
-    <img src=".assets/images/debugging-guide/debugging-code-2.png">
+    <img src="assets/images/debugging-guide/debugging-code-2.png">
 </div>
 
 The `main()` function then has a multitude of steps to get through. We define a list, and append five random integers to it. Control is still flowing as far down as it can, but the for-loop will bring control back up for five iterations.
@@ -39,7 +43,7 @@ We then continue down to line 15, where we call the `average()` function. Like `
 If we generalize a bit, this is what we should expect:
 
 <div align="center">
-    <img src=".assets/images/debugging-guide/debugging-code-3.png">
+    <img src="assets/images/debugging-guide/debugging-code-3.png">
 </div>
 
 `main()` is called from the global namespace, we run `main()`'s code until it hits `average()`, `average()` returns back a value to `main()`, where we then run the rest of `main()`'s code until we return back to the global namespace.
@@ -92,25 +96,25 @@ On most code editors, you can set a breakpoint by clicking directly to the left 
 
 Since we know that control will ultimately reach the `main()` function, let's place a breakpoint on its first line.
 
-<img src=".assets\images\debugging-guide\1.png">
+<img src="assets/images/debugging-guide/1.png">
 
 To run our program with the debugger enabled, you can hit F5 (on VSCode) to see that our program halts at the breakpoint we just set, represented by the yellow highlight.
 
-<img src=".assets\images\debugging-guide\2.png">
+<img src="assets/images/debugging-guide/2.png">
 
 This yellow highlight also represents the next line to be ran by command of the programmer. But, how do we give commands?
 
 At the top, you'll see that a tiny control panel appears when the debugger is active:
 
 <div align="center">
-    <img src=".assets\images\vscode-installation-macos\control-panel.png">
+    <img src="assets/images/vscode-installation-macos/control-panel.png">
 </div>
 
 These options are the "commands" described in the [Terminology](#terminology) section. We have, in order: Continue, Step Over, Step Into, Step Out, Restart, and Stop.
 
 Try hitting the Step Over button slowly until you reach line 15 (but don't execute the line just yet), paying attention to the VARIABLES panel on the left side.
 
-<img src=".assets\images\debugging-guide\3.png">
+<img src="assets/images/debugging-guide/3.png">
 
 Hopefully you saw `li` slowly expand with new random integers every time you stepped. After control has flowed beyond the for-loop, you can click `li` in the VARIABLES panel to see the list's content, conveniently denoted by index.
 
@@ -118,13 +122,13 @@ This is one of the most powerful features of the debugger -- being able to see y
 
 Moving on, then, we have a few options on line 15. We could Step Over again, which would bring us to line 16, or we could Step *Into* to see how our `average()` function is running -- let's hit Step Into once.
 
-<img src=".assets\images\debugging-guide\4.png">
+<img src="assets/images/debugging-guide/4.png">
 
 We're now inside `average()`, with the `avg = 0` expression being the next line to run. Now, what's going to happen here?
 
 We should expect that lines 5-6 are going to go through every element of the list, adding each to the variable, `avg`. Since we know what's going to happen here, and we're confident that this code will run properly, let's place another breakpoint at line 7 and hit Continue to *skip* the amount of steps taken on lines 5-6.
 
-<img src=".assets\images\debugging-guide\5.png">
+<img src="assets/images/debugging-guide/5.png">
 
 This is the main purpose of the Continue command -- skipping sections of code that we know are going to run properly. What would happen if we *didn't* set a breakpoint at line 7? 
 
@@ -132,11 +136,11 @@ Well, we'd calculate the average, return back to `main()`, print the average, an
 
 Up next, we see that `avg` is going to be divided through by the length of `li`, and returned back to the caller. If we're confident that the rest of this function is going to do its job properly, let's hit Step Out to execute the rest of the function we're in and return back to `main()`.
 
-<img src=".assets\images\debugging-guide\6.png">
+<img src="assets/images/debugging-guide/6.png">
 
 You can see in the VARIABLES panel that VSCode tells us the return value from our function (3.8, in my case), and if we Step Over once...
 
-<img src=".assets\images\debugging-guide\7.png">
+<img src="assets/images/debugging-guide/7.png">
 
 ...our `avg` variable in `main()` obtains that value, since we assigned it to the call of `average()`. Pretty neat!
 
