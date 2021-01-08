@@ -1,5 +1,5 @@
-baseurl: "/CSE232-JEKYLL"
-url: "https://braedynl.github.io"
+baseurl: "/CSE232"
+url: "https://cse232-msu.github.io"
 permalink: /:title
 
 collections:
