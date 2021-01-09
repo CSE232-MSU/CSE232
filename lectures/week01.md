@@ -42,7 +42,7 @@ title: Week 01
 
 [02.7-relationalOps.cpp](week01/02.7-relationalOps.cpp)
 
-[02.8-floatFormatting.cpp](week01/02.7-relationalOps.cpp)
+[02.8-floatFormatting.cpp](week01/02.8-floatFormatting.cpp)
 
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/rZCwHchCF1w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
