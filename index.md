@@ -49,7 +49,7 @@ Links to lecture videos, projects, and other materials will be made available as
     </thead>
     <tbody>
         <tr>
-            <td>00: 2021-1-10</td>
+            <td>00: 2021-01-10</td>
             <td>Week 00</td>
             <td>Lab 00</td>
             <td></td>
@@ -58,7 +58,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>01: 2021-1-17</td>
+            <td>01: 2021-01-17</td>
             <td>Week 01</td>
             <td>Lab 01</td>
             <td>Homework 00<sup>*</sup></td>
@@ -67,7 +67,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 01</td>
         </tr>
         <tr>
-            <td>02: 2021-1-24</td>
+            <td>02: 2021-01-24</td>
             <td>Week 02</td>
             <td>Lab 02</td>
             <td>Homework 02</td>
@@ -76,7 +76,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 03</td>
         </tr>
         <tr>
-            <td>03: 2021-1-31</td>
+            <td>03: 2021-01-31</td>
             <td>Week 03</td>
             <td>Lab 03</td>
             <td>Homework 04</td>
@@ -85,7 +85,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 05</td>
         </tr>
         <tr>
-            <td>04: 2021-2-7</td>
+            <td>04: 2021-02-07</td>
             <td>Week 04</td>
             <td>Lab 04</td>
             <td>Homework 06</td>
@@ -94,7 +94,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 07</td>
         </tr>
         <tr>
-            <td>05: 2021-2-14</td>
+            <td>05: 2021-02-14</td>
             <td>Week 05</td>
             <td>Lab 05</td>
             <td>Homework 08</td>
@@ -103,7 +103,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 09</td>
         </tr>
         <tr>
-            <td>06: 2021-2-21</td>
+            <td>06: 2021-02-21</td>
             <td>Week 06</td>
             <td>Lab 06</td>
             <td>Homework 10</td>
@@ -112,7 +112,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Project 01</td>
         </tr>
         <tr>
-            <td>07: 2021-2-28</td>
+            <td>07: 2021-02-28</td>
             <td>Week 07</td>
             <td>Lab 07</td>
             <td>Homework 11</td>
@@ -121,7 +121,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>08: 2021-3-7</td>
+            <td>08: 2021-03-07</td>
             <td>Week 08</td>
             <td>Lab 08</td>
             <td>Midterm Exam A<sup>+</sup> / Homework 12</td>
@@ -130,7 +130,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 13</td>
         </tr>
         <tr>
-            <td>09: 2021-3-14</td>
+            <td>09: 2021-03-14</td>
             <td>Week 09</td>
             <td>Lab 09</td>
             <td>Homework 14</td>
@@ -139,7 +139,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 15</td>
         </tr>
         <tr>
-            <td>10: 2021-3-21</td>
+            <td>10: 2021-03-21</td>
             <td>Week 10</td>
             <td>Lab 10</td>
             <td>Homework 16</td>
@@ -148,7 +148,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Project 02</td>
         </tr>
         <tr>
-            <td>11: 2021-3-28</td>
+            <td>11: 2021-03-28</td>
             <td>Week 11</td>
             <td>Lab 11</td>
             <td>Homework 17</td>
@@ -157,7 +157,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 18</td>
         </tr>
         <tr>
-            <td>12: 2021-4-4</td>
+            <td>12: 2021-04-04</td>
             <td>Week 12</td>
             <td></td>
             <td>Homework 19</td>
@@ -166,7 +166,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 20</td>
         </tr>
         <tr>
-            <td>13: 2021-4-11</td>
+            <td>13: 2021-04-11</td>
             <td>Week 13</td>
             <td></td>
             <td>Homework 21</td>
@@ -175,7 +175,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Project 03</td>
         </tr>
         <tr>
-            <td>14: 2021-4-18</td>
+            <td>14: 2021-04-18</td>
             <td>Week 14</td>
             <td></td>
             <td>Homework 22</td>
@@ -184,7 +184,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>15: 2021-4-25</td>
+            <td>15: 2021-04-25</td>
             <td></td>
             <td></td>
             <td></td>
