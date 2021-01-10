@@ -108,7 +108,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab07.html">Lab 07</a></td>
             <td>Homework 11</td>
             <td>No Thursday Homework</td>
-            <td>2020-03-02 and 2020-03-02 are Wellness Days (No Lab or Help Room)</td>
+            <td>2020-03-02 and 2020-03-03 are Wellness Days (No Lab or Help Room)</td>
         </tr>
         <tr>
             <td>08: 2021-03-07</td>
@@ -132,7 +132,6 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab10.html">Lab 10</a></td>
             <td>Homework 16</td>
             <td>Project 02</td>
-            <td></td>
             <td></td>
         </tr>
         <tr>
