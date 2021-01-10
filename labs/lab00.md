@@ -16,7 +16,7 @@ Mimir: [https://class.mimir.io/](https://class.mimir.io/)
 
 Please ensure that you can access all of the CSE232 resources listed here.
 
-**Note**: you may have to access our Mimir classroom via the link on the CSE232 D2L page. This is the only time you'll be using D2L.
+**Note**: You will have to access our Mimir classroom via the link on the CSE232 D2L page to join this course on Mimir. This is the only time you'll be using D2L as all grades and assignments are on Mimir.
 
 ## Writing in C++
 
