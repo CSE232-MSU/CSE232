@@ -50,7 +50,7 @@ Links to lecture videos, projects, and other materials will be made available as
     <tbody>
         <tr>
             <td>00: 2021-01-10</td>
-            <td>[Week 00](https://cse232-msu.github.io/CSE232/lectures/week00.html)</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week00.html">Week 00</a></td>
             <td>Lab 00</td>
             <td></td>
             <td></td>
