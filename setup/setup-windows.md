@@ -22,36 +22,42 @@ We recommend that you install MinGW (Minimalist GNU for Windows), a software pac
 <img src="../assets/images/vscode-installation-windows/1.png">
 </div>
 
+{:start="3"}
 3. On the Settings screen, select "x86_64" under the Architecture dropdown menu. __Do not change any of the other settings.__
 
 <div align="center">
 <img src="../assets/images/vscode-installation-windows/2.png">
 </div>
 
+{:start="4"}
 4. On the Installation Folder screen, __do not change the destination folder that is set by default__. You can disable the "Create shortcuts in Start Menu" option if you wish, and simply click Next to begin the installation.
 
 <div align="center">
 <img src="../assets/images/vscode-installation-windows/3.png">
 </div>
 
+{:start="5"}
 5. Wait for the installation to finish before closing the window.
 
 6. Type into your Windows search bar: "Edit the system environment variables". You should see an application of the same name appear in the results. Open it once it appears.
 
 <img src="../assets/images/vscode-installation-windows/4.png">
 
+{:start="7"}
 7. A window named "System Properties" should appear. Select the "Environment Variables" button at the bottom.
 
 <div align="center">
 <img src="../assets/images/vscode-installation-windows/5.png">
 </div>
 
+{:start="8"}
 8. On the Environment Variables window, select the "Path" Variable under "User variables for X", and click the "Edit..." button below it.
 
 <div align="center">
 <img src="../assets/images/vscode-installation-windows/6.png">
 </div>
 
+{:start="9"}
 9. Click the "New" button near the top-right of the window to add an environment variable. Copy-and-paste the following path into the newly-opened entry, and hit ENTER/RETURN to finish it.  
 
 ```
@@ -62,6 +68,7 @@ C:\Program Files\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin
 <img src="../assets/images/vscode-installation-windows/7.png">
 </div>
 
+{:start="10"}
 10. __Click "OK" to exit every window we've opened thus far.__
 
 11. Verify that the compiler is now installed by opening a Command Prompt (you can go to your Windows search bar again, and type "cmd"), and typing the command, `g++ --version`, at the prompt. You should see a message alike the one in this screenshot:
@@ -90,16 +97,19 @@ Now we have to install VSCode and get it to cooperate with the compiler we just 
     <p>*Your welcome page may look slightly different</p>
 </div>
 
+{:start="4"}
 4. Click the "Open Folder" button, and navigate the explorer to the CSE232 folder you created in step 2.
 
 5. The top of the sidebar should now display the name of the folder you opened, which is presumably empty (unless you have files there). You can right-click inside the folder for many of the options you'd typically have in File Explorer:
 
 <img src="../assets/images/vscode-installation-windows/10.png">
 
+{:start="6"}
 6. Create a file named "helloworld.cpp". ".cpp" is the file extension used to denote a C++ file. Make sure that all of your files have this extension when you're coding in C++ for this class. You should now have something like this:
 
 <img src="../assets/images/vscode-installation-windows/11.png">
 
+{:start="7"}
 7. After creating helloworld.cpp, you may have been prompted to install some sort of C++ "extension". Install the extension that's prompted if it appears. If you did not get prompted, navigate to the left-most sidebar, and click the icon represented by four squares. It should open-up some sort of "Extensions Marketplace" with a search bar at the top. Search "C++", and the top result should be an extension named "C/C++" made by Microsoft. Click this extension when you find it, and your resulting interface should look like this:
 
 <img src="../assets/images/vscode-installation-windows/12.png">
@@ -108,6 +118,7 @@ Now we have to install VSCode and get it to cooperate with the compiler we just 
     <p>*I have the extension already installed in this screenshot, which is why I have an "Uninstall" button near the top.</p>
 </div>
 
+{:start="8"}
 8. Click the "Install" button near the name of the extension. If, after installing, it says "Reload Required", click the button that says so.
 
 9. Go back to your helloworld.cpp file/integrated file explorer from the left-most sidebar (the top icon; the files stacked onto one another, remember) and type/copy-paste the following code into your helloworld.cpp file:
@@ -120,6 +131,7 @@ int main() {
 }
 ```
 
+{:start="10"}
 10. On your keyboard, use the key-combination: CONTROL + \` (this is the backtick character, if you're unfamiliar. It should be to the left of the "1" key on most keyboards). This brings up VSCode's integrated terminal:
 
 <img src="../assets/images/vscode-installation-windows/13.png">
@@ -136,12 +148,14 @@ int main() {
 
 A second menu will appear at the top. Select "CMD" from that menu, then close and reopen VSCode to see your terminal open in command prompt. 
 
+{:start="11"}
 11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. To compile our helloworld.cpp program, type the following command into the terminal:
 
 ```bash
 g++ helloworld.cpp -Wall -std=c++17
 ```
 
+{:start="12"}
 12. This produces a file named "a.exe" -- you should see it appear in the file explorer. To run your compiled program, type into the terminal:
 
 ```bash
@@ -150,6 +164,7 @@ g++ helloworld.cpp -Wall -std=c++17
 
 (If you're using command prompt as your shell, you can simply type `a.exe`, or even just `a` as an alternative)
 
+{:start="13"}
 13. You should now see "Hello world" displayed to the console!
 
 <img src="../assets/images/vscode-installation-windows/14.png">
@@ -172,6 +187,7 @@ You should be familiar with an IDE debugger from your previous programming class
 
 <img src="../assets/images/vscode-installation-windows/15.png">
 
+{:start="2"}
 2. Copy-and-paste the following code into your tasks.json file, and save it (CTRL + S):
 
 ```json
@@ -198,6 +214,7 @@ You should be familiar with an IDE debugger from your previous programming class
 
 <img src="../assets/images/vscode-installation-windows/16.png">
 
+{:start="3"}
 3. Copy-and-paste the following code into your launch.json file and save it (CTRL + S):
 
 ```json
@@ -231,6 +248,7 @@ You should be familiar with an IDE debugger from your previous programming class
 
 <img src="../assets/images/vscode-installation-windows/17.png">
 
+{:start="4"}
 4. Open and replace the contents of helloworld.cpp for this more complex version:
 
 ```c++
@@ -252,10 +270,12 @@ int main()
 }
 ```
 
+{:start="5"}
 5. You should see an icon on the left sidebar that looks like a play button with a bug on it -- this is the debugger menu, go ahead and open it. Like most IDE debuggers, it has a menu showing your currently active variables, watched variables, call stack, and currently active breakpoints.
 
 <img src="../assets/images/vscode-installation-windows/18.png">
 
+{:start="6"}
 6. Run the file with the debugger by hitting the green play button at the top-left, or by hitting F5 on your keyboard (you may need to use a key-combination; FN + F5). VSCode will automatically set a breakpoint at the beginning of your `main()` function.
 
 <img src="../assets/images/vscode-installation-windows/19.png">
