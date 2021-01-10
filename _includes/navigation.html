@@ -1,4 +1,4 @@
-<nav class="UnderlineNav mb-3" aria-label="Foo bar">
+<nav class="UnderlineNav mx-auto mb-3" aria-label="Foo bar" style="max-width: 1000px;">
     <div class="UnderlineNav-body">
         {% for item in site.data.navigation %}
             <a class="UnderlineNav-item" href="{{ item.link | prepend:site.baseurl }}" {% if page.title == item.name %}aria-current="page"{% endif %}>

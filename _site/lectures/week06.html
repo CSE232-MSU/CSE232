@@ -16,8 +16,7 @@
     </style>
 </head>
 <body class="py-2">
-    <div class="markdown-body mx-auto" style="max-width: 1000px;">
-        <nav class="UnderlineNav mb-3" aria-label="Foo bar">
+    <nav class="UnderlineNav mx-auto mb-3" aria-label="Foo bar" style="max-width: 1000px;">
     <div class="UnderlineNav-body">
         
             <a class="UnderlineNav-item" href="/CSE232/" >
@@ -46,67 +45,78 @@
         <a class="btn btn-sm mr-2" href="https://class.mimir.io/" role="button" target="_blank">Mimir</a>
     </div>
 </nav>
+    <div class="markdown-body mx-auto" style="max-width: 1000px;">
         <div class="border rounded-2 px-5 py-2 anim-fade-in">
-            <h1 id="week-06">Week 06</h1>
-
-<p><a href="https://docs.google.com/presentation/d/1N1ajnLs6HaTrm4-4HN2-XCEtO8mszlv-xau0Fyqo8YM/edit?usp=sharing">Lecture slides (Vectors)</a></p>
-
-<p><a href="https://docs.google.com/presentation/d/1xGb8cJtcwnxHDfxJWAbb7kcYIOU6LZ2SOp1zojxw44c/edit?usp=sharing">Lecture slides (Exceptions and String Stream)</a></p>
-
-<h3 id="vectors">Vectors</h3>
-
-<p><a href="week06/10.1-vector.cpp">10.1-vector.cpp</a></p>
-
-<p><a href="week06/10.2-moreVector.cpp">10.2-moreVector.cpp</a></p>
-
-<p><a href="week06/10.3-sieve.cpp">10.3-sieve.cpp</a></p>
-
-<p><a href="week06/10.4-split.cpp">10.4-split.cpp</a></p>
-
+            <h1>Week 06</h1>
+<p><a href="https://docs.google.com/presentation/d/1N1ajnLs6HaTrm4-4HN2-XCEtO8mszlv-xau0Fyqo8YM/edit?usp=sharing" target="_blank">Lecture Slides (Vectors)</a></p>
+<p><a href="https://docs.google.com/presentation/d/1xGb8cJtcwnxHDfxJWAbb7kcYIOU6LZ2SOp1zojxw44c/edit?usp=sharing" target="_blank">Lecture Slides (Exceptions and String Stream)</a></p>
+<h3>Vectors</h3>
 <div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VzZFKoL_qxk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/VzZFKoL_qxk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<details class="details-reset details-overlay">
+<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
+<div class="SelectMenu" style="left: calc(50vw - 320px);">
+<div class="SelectMenu-modal" style="width: 640px;">
+<div class="SelectMenu-list">
+<a class="SelectMenu-item" role="menuitem" href="week06/10.1-vector.cpp" target="_blank">10.1-vector.cpp</a>
+<a class="SelectMenu-item" role="menuitem" href="week06/10.2-moreVector.cpp" target="_blank">10.2-moreVector.cpp</a>
+<a class="SelectMenu-item" role="menuitem" href="week06/10.3-sieve.cpp" target="_blank">10.3-sieve.cpp</a>
+<a class="SelectMenu-item" role="menuitem" href="week06/10.4-split.cpp" target="_blank">10.4-split.cpp</a>
 </div>
-
-<p><strong>Note</strong>: minor correction; calling the <code class="language-plaintext highlighter-rouge">vector</code> constructor with one <code class="language-plaintext highlighter-rouge">int</code> argument (n) will create a vector of size n with each element default initialized (0 for numbers, empty for strings, etc.). So <code class="language-plaintext highlighter-rouge">std::vector&lt;int&gt; vec(5);</code> will result in a vector of 5 ones.</p>
-
-<p>Secondly, the capacity of a vector is only guarenteed to be equal or greater than the size. Its exact value (at constructor or later) is determined by the memory allocation used in a particular C++ implementation.</p>
-
-<h3 id="2d-vectors">2D Vectors</h3>
-
-<p><a href="week06/10.5-2d.cpp">10.5-2d.cpp</a></p>
-
-<div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/K7K153h3rWA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-
-<h3 id="range-based-for-loops">Range Based For Loops</h3>
-
-<div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/k5vOH8SmNOQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-
-<h3 id="exceptions">Exceptions</h3>
-
-<p><a href="week06/11.1-assert.cpp">11.1-assert.cpp</a></p>
-
-<p><a href="week06/11.2-try-substr.cpp">11.2-try-substr.cpp</a></p>
-
-<p><a href="week06/11.3-stol.cpp">11.3-stol.cpp</a></p>
-
-<div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/L3_oy_LZ9_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</details>
 </div>
-
-<h3 id="string-streams">String Streams</h3>
-
-<p><a href="week06/11.5-sstream.cpp">11.5-sstream.cpp</a></p>
-
-<p><a href="week06/11.6-istringstream.cpp">11.6-istringstream.cpp</a></p>
-
-<p><a href="week06/11.7-ostringstream.cpp">11.7-ostringstream.cpp</a></p>
-
+<p>Minor correction; calling the vector constructor with one int argument (n) will create a vector of size n with each element default initialized (0 for numbers, empty for strings, etc.). So <code>std::vector<int> vec(5);</code> will result in a vector of 5 ones. Secondly, the capacity of a vector is only guarenteed to be equal or greater than the size. Its exact value (at constructor or later) is determined by the memory allocation used in a particular C++ implementation.</p>
+<h3>2D Vectors</h3>
 <div align="center">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/LFvD_Bl_4Rg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/K7K153h3rWA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<details class="details-reset details-overlay">
+<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
+<div class="SelectMenu" style="left: calc(50vw - 320px);">
+<div class="SelectMenu-modal" style="width: 640px;">
+<div class="SelectMenu-list">
+<a class="SelectMenu-item" role="menuitem" href="week06/10.5-2d.cpp" target="_blank">10.5-2d.cpp</a>
+</div>
+</div>
+</div>
+</details>
+</div>
+<h3>Range Based For Loops</h3>
+<div align="center">
+<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/k5vOH8SmNOQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</div>
+<h3>Exceptions</h3>
+<div align="center">
+<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/L3_oy_LZ9_M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<details class="details-reset details-overlay">
+<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
+<div class="SelectMenu" style="left: calc(50vw - 320px);">
+<div class="SelectMenu-modal" style="width: 640px;">
+<div class="SelectMenu-list">
+<a class="SelectMenu-item" role="menuitem" href="week06/11.1-assert.cpp" target="_blank">11.1-assert.cpp</a>
+<a class="SelectMenu-item" role="menuitem" href="week06/11.2-try-substr.cpp" target="_blank">11.2-try-substr.cpp</a>
+<a class="SelectMenu-item" role="menuitem" href="week06/11.3-stol.cpp" target="_blank">11.3-stol.cpp</a>
+</div>
+</div>
+</div>
+</details>
+</div>
+<h3>String Streams</h3>
+<div align="center">
+<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/LFvD_Bl_4Rg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<details class="details-reset details-overlay">
+<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
+<div class="SelectMenu" style="left: calc(50vw - 320px);">
+<div class="SelectMenu-modal" style="width: 640px;">
+<div class="SelectMenu-list">
+<a class="SelectMenu-item" role="menuitem" href="week06/11.5-sstream.cpp" target="_blank">11.5-sstream.cpp</a>
+<a class="SelectMenu-item" role="menuitem" href="week06/11.6-istringstream.cpp" target="_blank">11.6-istringstream.cpp</a>
+<a class="SelectMenu-item" role="menuitem" href="week06/11.7-ostringstream.cpp" target="_blank">11.7-ostringstream.cpp</a>
+</div>
+</div>
+</div>
+</details>
 </div>
 
         </div>
