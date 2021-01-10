@@ -13,10 +13,21 @@
         body::-webkit-scrollbar {
             width: 0!important;
         }
+        #course-calendar {
+            text-align: center;
+            width: 100%;
+        }
+        #course-calendar td {
+            width: calc(100% / 7);
+            height: 60px;
+        }
+        #course-calendar td:first-child {
+            font-weight: 600;
+        }
     </style>
 </head>
 <body class="py-2">
-    <nav class="UnderlineNav mx-auto mb-3" aria-label="Foo bar" style="max-width: 1000px;">
+    <nav class="UnderlineNav mx-auto mb-3 position-sticky top-0 bg-white" aria-label="Foo bar" style="max-width: 1000px; z-index: 999;">
     <div class="UnderlineNav-body">
         
             <a class="UnderlineNav-item" href="/CSE232/" >

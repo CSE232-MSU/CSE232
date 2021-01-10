@@ -13,10 +13,21 @@
         body::-webkit-scrollbar {
             width: 0!important;
         }
+        #course-calendar {
+            text-align: center;
+            width: 100%;
+        }
+        #course-calendar td {
+            width: calc(100% / 7);
+            height: 60px;
+        }
+        #course-calendar td:first-child {
+            font-weight: 600;
+        }
     </style>
 </head>
 <body class="py-2">
-    <nav class="UnderlineNav mx-auto mb-3" aria-label="Foo bar" style="max-width: 1000px;">
+    <nav class="UnderlineNav mx-auto mb-3 position-sticky top-0 bg-white" aria-label="Foo bar" style="max-width: 1000px; z-index: 999;">
     <div class="UnderlineNav-body">
         
             <a class="UnderlineNav-item" href="/CSE232/" >
@@ -96,7 +107,7 @@
 </div>
 </details>
 </div>
-<p>In this course, you should never be using any unsigned types! We are only covering them because they are a part of the C++ language (and some less modern code may use them). Any time you encounter an unsigned type, you should immediately cast it to a signed type.</p>
+<p>You should never be using unsigned types in this course! We are only covering them because they are a part of the C++ language (and some less modern code may use them). Any time you encounter an unsigned type, you should immediately cast it to a signed type.</p>
 <h3>Chars</h3>
 <div align="center">
 <iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/39FBf3QzyJ8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
