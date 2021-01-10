@@ -22,7 +22,8 @@ The focus of the course will be twofold:
 
 - Recommended (but not required) textbook:
     - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
-- You must have a device capable of running Zoom.
+- You must have a desktop or labptop device capable of running Zoom and screensharing.
+- You must have a phone or tablet capable of running Zoom with a camera that can show your workspace while taking exams.
 - You must have a consistent internet connection for streaming video through Zoom, and watching lecture videos.
 
 ### Lectures
@@ -31,9 +32,11 @@ All lectures are distributed via pre-recorded videos available each week on the 
 
 ### Laboratory Sessions
 
-Synchronous lab sessions will be conducted through Zoom (you will recieve an invitation from your TA). Attendance at scheduled laboratory sessions is *mandatory*. Repeatedly missing laboratory sessions will reduce your final grade (see below).
+Synchronous lab sessions will be conducted through Zoom (Zoom links will be provided on Piazza). Attendance at scheduled laboratory sessions is *mandatory*. Repeatedly missing laboratory sessions will reduce your final grade (see below).
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistant to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
+
+If your lab falls on a day when the university isn't holding classes, you will be given credit for the lab. However, you are responsible for reading the lab and being confortable with the content covered even if you aren't required to complete it (lab content will appear on homework assignments and exams).  
 
 __Section 730__: students in the online section will need to be assigned a synchronous Zoom lab section to attend. If no lab section is suitable, please contact the instructor ASAP. 
 
@@ -48,7 +51,7 @@ All class announcements will be made through Piazza, as well as direct messages 
 
 A total of 1000 points can be accrued over the course of the semester. There will be no extra credit.
 
-__To be eligible for a non-zero course grade, you must earn at least 50% (150 points) of the total points available on all exams.__
+__To be eligible for a non-zero course grade, you must earn at least 50% (150 points) of the summed points available on both exams.__
 
 <div align="center">
     <table>
@@ -101,9 +104,9 @@ There will be a midterm and a final exam. The midterm is worth 100 points, and t
 
 ### Projects
 
-There will be 3 projects over the course of the semester, contributing a total of 250 points to your final grade. Projects are due at 10 PM on Wednesdays. The projects will include the design and implementation of solutions using C++. Project submission and grading will be done via Mimir.
+There will be 3 projects over the course of the semester, contributing a total of 300 points to your final grade. Each project will be due at 10 PM on a Thursday. The projects will include the design and implementation of solutions using C++. Project submission and grading will be done via Mimir.
 
-All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation, the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
+All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
 
 ### Labs
 
@@ -113,7 +116,7 @@ For example, if a student was previously earning a 4.0, but missed 4 labs, then 
 
 ### Homework
 
-A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 30 points. There will be 17 assignments given, but the two lowest-scoring assignments will be dropped. Thus, you can earn a total of 450 points from the homework assignments.
+A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 20 points. There will be 22 assignments given, but only the top 20 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 400 points from the homework assignments.
 
 Submitting an assignment to Mimir merely saves it. At the deadline for an assignment, your work is automatically saved and graded. So be sure you aren't in the middle of typing something when the assignment closes.
 
