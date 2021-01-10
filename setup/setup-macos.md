@@ -65,6 +65,7 @@ g++ --version
     <p>*Your welcome page may look slightly different</p>
 </div>
 
+{:start="4"}
 4. Click the "Open Folder" button, and navigate the explorer to the CSE232 folder you created in step 2.
 
 5. The top of the sidebar should now display the name of the folder you opened, which is presumably empty (unless you have files there). You can right-click inside the folder for many of the options you'd typically have in Finder:
