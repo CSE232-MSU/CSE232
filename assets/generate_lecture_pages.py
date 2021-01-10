@@ -3,7 +3,7 @@ import json
 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
-data = json.load(open('../_data/lectures.jsonc', 'r'))
+data = json.load(open('lectures.json', 'r'))
 
 for week_title, week_data in data.items():
     week_fname = week_title.strip().replace(' ', '').lower()

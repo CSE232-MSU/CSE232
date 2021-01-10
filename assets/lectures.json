@@ -107,7 +107,7 @@
             "The Unsigned Type": {
                 "video": "https://www.youtube.com/watch?v=pAVDso7_Das",
                 "code": ["05.5-unsigned.cpp"],
-                "comments": "In this course, you should never be using any unsigned types! We are only covering them because they are a part of the C++ language (and some less modern code may use them). Any time you encounter an unsigned type, you should immediately cast it to a signed type."
+                "comments": "You should never be using unsigned types in this course! We are only covering them because they are a part of the C++ language (and some less modern code may use them). Any time you encounter an unsigned type, you should immediately cast it to a signed type."
             },
             "Chars": {
                 "video": "https://www.youtube.com/watch?v=39FBf3QzyJ8",
