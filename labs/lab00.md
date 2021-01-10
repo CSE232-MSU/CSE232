@@ -8,13 +8,15 @@ This lab is designed to get you acquainted with the class resources and recommen
 
 ## Class Resources
 
-Course Website:
+Course Website: [https://cse232-msu.github.io/CSE232/](https://cse232-msu.github.io/CSE232/)
 
-Piazza: 
+Piazza: [https://piazza.com/class/kjkc4swnt8e184](https://piazza.com/class/kjkc4swnt8e184)
 
-Mimir: 
+Mimir: [https://class.mimir.io/](https://class.mimir.io/)
 
 Please ensure that you can access all of the CSE232 resources listed here.
+
+**Note**: you may have to access our Mimir classroom via the link on the CSE232 D2L page. This is the only time you'll be using D2L.
 
 ## Writing in C++
 
@@ -98,8 +100,6 @@ a.exe
 
 If all has gone according to plan, running the program should result in "Hello world" being printed to the command line.
 
-⭐ These star emojis are checkpoints where you should stop and check in with your lab TA. If you are in an in-person lab, this would mean raising your hand and having the TA look over your work. If you are in a virtual Zoom lab, you should now click the "Request Assistance" button from your breakout room to summon your TA.
-
 The typical workflow is something like:
 
 - Edit your code using your favorite editor, then save it (ensuring that the file has a ".cpp" suffix).
@@ -176,11 +176,9 @@ Modify academic_dishonesty.cpp to print out the following message _exactly_ (ins
 "My name is Josh Nahum. I read the syllabus and I understand the consequences of academic dishonesty."
 ```
 
-The file needs to have the exact message above, but the name `Josh Nahum` should be changed to have *your* name instead (using only alphabetical characters and spaces). By submitting this assignment, you are confirming that you read the [syllabus](../SYLLABUS.md) and understand the consequences of academic dishonesty.
+The file needs to have the exact message above, but the name `Josh Nahum` should be changed to have *your* name instead (using only alphabetical characters and spaces). By submitting this assignment, you are confirming that you read the [syllabus](../syllabus.html) and understand the consequences of academic dishonesty.
 
 Submit the assignment -- you should pass all of the tests. Congratulations!
-
-⭐ Demonstrate to your TA that you are passing all of the tests.
 
 ## Collaboration on Labs
 
