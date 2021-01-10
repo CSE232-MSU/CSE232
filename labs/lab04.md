@@ -136,8 +136,10 @@ We haven't covered sorting just yet, but C++ makes it pretty easy. Here is an ex
 using std::cout; using std::endl;
 #include <string>
 using std::string;
-#include <algorithm>  // make sure to import <algorithm>!
+#include <algorithm>
 using std::sort;
+
+// make sure to include <algorithm>!
 
 int main() {
     string my_str = "aebcd";
