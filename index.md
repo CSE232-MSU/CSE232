@@ -40,7 +40,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <th>Week</th>
             <th>Lectures</th>
-            <th>Lab</th>
+            <th>Labs</th>
             <th>Monday</th>
             <th>Tuesday</th>
             <th>Wednesday</th>
@@ -50,7 +50,7 @@ Links to lecture videos, projects, and other materials will be made available as
     <tbody>
         <tr>
             <td>00: 2021-01-10</td>
-            <td>Week 00</td>
+            <td>[Week 00](https://cse232-msu.github.io/CSE232/lectures/week00.html)</td>
             <td>Lab 00</td>
             <td></td>
             <td></td>
@@ -159,7 +159,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>12: 2021-04-04</td>
             <td>Week 12</td>
-            <td></td>
+            <td>Lab 12</td>
             <td>Homework 19</td>
             <td></td>
             <td></td>
@@ -168,7 +168,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>13: 2021-04-11</td>
             <td>Week 13</td>
-            <td></td>
+            <td>Lab 13</td>
             <td>Homework 21</td>
             <td></td>
             <td></td>
@@ -177,7 +177,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>14: 2021-04-18</td>
             <td>Week 14</td>
-            <td></td>
+            <td>Lab 14</td>
             <td>Homework 22</td>
             <td></td>
             <td>Last Day of Classes</td>
