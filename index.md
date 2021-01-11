@@ -60,7 +60,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab01.html">Lab 01</a></td>
             <td>Homework 00<sup>*</sup></td>
             <td>Homework 01</td>
-            <td>Monday is MLK Day (No Labs or Help Room). Help room and labs begin on Tuesday.</td>
+            <td>Monday is MLK Day. Help room and labs begin on Tuesday.</td>
         </tr>
         <tr>
             <td>02: 2021-01-25</td>
