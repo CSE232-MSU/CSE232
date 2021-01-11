@@ -89,13 +89,13 @@ By default, `g++` will create an executable named **a.out** (or **a.exe**, depen
 To execute/run the program, type:
 
 ```bash
-a.out
+./a.out
 ```
 
 or, if you have an a.exe file:
 
 ```bash
-a.exe
+./a.exe
 ```
 
 If all has gone according to plan, running the program should result in "Hello world" being printed to the command line.
@@ -105,7 +105,7 @@ The typical workflow is something like:
 - Edit your code using your favorite editor, then save it (ensuring that the file has a ".cpp" suffix).
 - In your terminal, enter `g++ {your file's name}.cpp -std=c++17 -Wall`.
 - If there are errors (and there *will* be errors), read the messages and edit your code. Repeat until it compiles.
-- Once your code compiles, enter `a.out`/`a.exe` into the terminal to run the compiled executable, and observe the (hopefully correct) output for testing.
+- Once your code compiles, run the `a.out`/`a.exe` executable, and observe the (hopefully correct) output for testing.
 
 You repeat this process of edit-compile-run until you get the desired result.
 
