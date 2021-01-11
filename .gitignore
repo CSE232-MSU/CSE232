@@ -1,2 +1,6 @@
+# hidden files/folders
 .*
 !/.gitignore
+
+# local server data
+/_site/

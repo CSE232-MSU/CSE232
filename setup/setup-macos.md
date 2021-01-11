@@ -137,7 +137,7 @@ You will be typing those two commands hundreds, if not _thousands_ of times in t
 
 ## Debugging C++ in VSCode
 
-You should be familiar with an IDE debugger from your previous programming class (CSE231 or an equivalent prerequisite). [If you aren't, please read through this tutorial](../DEBUGGING_GUIDE.md) (it's in Python, but the same core principles apply).
+You should be familiar with an IDE debugger from your previous programming class (CSE231 or an equivalent prerequisite). [If you aren't, please read through this tutorial](../debugging_guide.html) (it's in Python, but the same core principles apply).
 
 1. In the CSE232 folder, create a subfolder named ".vscode", and create two files within it: "tasks.json", and "launch.json", as shown in the file explorer on the left-side here:
 
