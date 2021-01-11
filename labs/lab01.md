@@ -1,175 +1,197 @@
 ---
-title: Lab 01
+title: Lab - Getting Started
 ---
 
-# Lab 01 - Input and Output
+# Lab - Getting Started
 
-## Directory Navigation in the Terminal
+This lab is designed to get you acquainted with the class resources and recommended code editor. It's important that you complete this lab before your first in-class meeting. If you have any questions about this lab, please ask the instructors on Piazza. 
 
-At the beginning of most labs, there will be a section on new skills to make you more proficent at the command line. Many tasks can only be performed at the terminal (or are easier to perform at the terminal), so becoming comfortable there is important. Many of the classes after this one will expect at least a basic familiarity of the command line, so pay special attention to these sections.
+## Class Resources
 
-Log into Mimir and open the IDE. Use the terminal in Mimir's IDE to follow along.
+Course Website: [https://cse232-msu.github.io/CSE232/](https://cse232-msu.github.io/CSE232/)
 
-### `pwd`
+Piazza: [https://piazza.com/class/kjkc4swnt8e184](https://piazza.com/class/kjkc4swnt8e184)
 
-The first command you need to learn is one of the simplest, `pwd`. At the terminal, type the command `pwd` and hit enter.
+Mimir: [https://class.mimir.io/](https://class.mimir.io/)
 
-`pwd` is short for "print working directory". It outputs the path of the working directory i.e., the directory your terminal currently has open. If you get lost, (and it is easy to do with only the text-based terminal for navigation), `pwd` can show you where you are.
+Please ensure that you can access all of the CSE232 resources listed here.
 
-### `ls`
+**Note**: You will have to access our Mimir classroom via the link on the CSE232 D2L page to join this course on Mimir. This is the only time you'll be using D2L as all grades and assignments are on Mimir.
 
-The `ls` command outputs the names of all of the folders and files in the working directory. `ls` is short for "list" (as in "list" the contents).
+## Writing in C++
 
-Folder names end with a `/`, file names do not. Some terminals also add colorized output to `ls` to denote different types of files. For instance, Mimir's terminal has folders in blue, and files in white.
+For this class, we recommend using Visual Studio Code (or VSCode). **You are free to use other code editors, but, you are responsible for knowing how to work with it**. 
 
-### `cd`
+We have thoroughly-documented tutorials on how to setup a C++ VSCode environment, with an active debugger as well:
+- [Windows Tutorial](../setup/setup-windows.html)
+- [MacOS Tutorial](../setup/setup-macos.html)
+- [Linux Tutorial](../setup/setup-linux.html)
 
-The `cd` command is short for "change directory". It allows you to change your working directory to a different folder.
+Please come back to this page when you have VSCode ready to go.
 
-Lets say you run `pwd` and you get the output of:
+### Code Editors
 
-```bash
-/home/joshua/cse_232__summer_2017/lab01_new_horizons
+- [Visual Studio Code](https://code.visualstudio.com/) is a modern programmer's editor. It is very flexible, has many options, and can be used cross-platform. If you want to be a programmer, this is a good one to learn.
+- [Xcode](https://developer.apple.com/xcode/) is another, very modern code editor that's exclusive to MacOS. I've not used it myself, but I've heard great things about it.
+- [Emacs](https://www.gnu.org/software/emacs/) is a very old, very configurable, editor. The joke is that emacs is an operating system disguised as an editor.
+- [gedit](https://gedit.en.softonic.com/) is a straightforward editor. It is not very configurable but does a good job at just being an editor. If all else fails, I would pick gedit.
+- [Vim](https://www.vim.org/download.php) is also very old, but comes as standard in many Linux operating systems as a default editor. I wouldn't start here, but learning the basics of Vim is something every programmer should do.
+
+## Working with C++
+
+### About C++
+
+From Wikipedia:
+
+> C++ is a general-purpose programming language. It has imperative, object-oriented and generic programming features, while also providing facilities for low-level memory manipulation.
+
+Languages come in various "levels", from "low" (meaning very close to the CPU they might run on) to "high" (meaning very far from the CPU they might run on). Python is a great example of a high-level language. C++ is like an intermediate language; it doesn't give you all the help you might recieve from Python, but it gives you much more help than, say, Assembly.
+
+It is important to remember that C++ is a compiled language. That means that you must pass your code through another piece of software, called a **compiler**, that translates your C++ into (nearly) machine-ready code. Note that Python has no requirement, as there is always an **interpreter** available for running Python code.
+
+The greatest strength of C++ is its potential for creating fast executables and robust libraries. A programmer can control low-level aspects of how data is stored, how information is passed, and how memory is managed. When used wisely, this control can lead to a more streamlined result -- this is the point of the class. You are in charge of how your code runs because you, the programmer, are responsible for most aspects of how your code runs. This is a double-edged sword, as being responsible gives you more opportunities to screw up.
+
+One of the problems with C++ is that parts of the syntax have grown cryptic. There may be *many* ways of expressing the same thing. An experienced and knowledgeable developer can use this flexibility to pick the best alternative and improve the result. Yet, both novice and experienced programmers can easily choose the wrong alternative, leading to less-efficient, and possibly flawed, software. Be careful!
+
+### Compiler Differences
+
+The VSCode installation tutorials above are split by operating system for one fundamental reason: MacOS users will be compiling their code with Clang, and Windows users will be compiling their code with GCC. C++ compilers are just like any other program -- depending on versions and vendors, compilers can have differing behavior. Thus, we have a "Rule of Compiling" for this class...
+
+**The Rule of Compiling**: no matter how you develop your code, the only compiler that matters is the one on Mimir, i.e., the one that will be testing your code. If it compiles and runs there, great. If not, then it is up to you to get it to compile there.
+
+## Editing and Compiling C++
+
+The first program you run in any new language is the "Hello world" program. This program does nothing but print the statement "Hello world". It is a tradition because it does little except focus on the mechanics of writing your first program and running it. You can look at the wikibooks [Hello world](https://en.wikibooks.org/wiki/Computer_Programming/Hello_world) page for more than 200 language interpretations.
+
+In C++, Hello world is fairly easy, but clearly more work than in Python!
+
+```c++
+#include <iostream>
+
+int main() {
+    std::cout << "Hello world" << std::endl;
+}
 ```
 
-Your current working directory is named "lab01_new_horizons". If you run `ls`, you would get:
+Write or copy-paste this code into a file named "lab00.cpp" to follow along.
 
-```bash
-lab01/
+To compile our Hello world program, type the following into terminal:
+
+```cmd
+g++ lab00.cpp -std=c++17 -Wall
 ```
 
-This means that there is only one thing in this folder, a subfolder called "lab01". If you wanted to do things in that subfolder, you would use the `cd` command like so:
+`g++` is the GNU C++ compiler. In the above line, we have added a `-std=c++17` flag to ensure that the code is compiled using the newer C++17 standard (by default, most C++ compilers use the C++98 standard, which does not include all of the features/extensions that we will be using in this class).
+Although our Hello world program does not contain any C++17 extensions, it is a good idea to get into the habit of including this flag. The `-Wall` flag is useful for finding errors, it's an abbreviation for "warnings, all".
+
+By default, `g++` will create an executable named **a.out** (or **a.exe**, depending on the compiler). If your compilation was successful, you should see this newly created file in your current directory.
+
+To execute/run the program, type:
 
 ```bash
-cd lab01
+a.out
 ```
 
-Now you are in the folder named "lab01", you can confirm such with `pwd` and `ls`.
-
-### Special Directory Names
-
-There are a few "special" directory names that you need to know. The first is the home directory. This directory's name is usually the username of the account, and it contains all of the user's files and folders. Inside the home folder is the "Desktop" folder (for all the things on your desktop), the "Downloads" folder and other folders as well (like "Music", "Videos", "Applications", etc.). The home folder is often specified using the tilde symbol (`~`). So if you want to `cd` to your home folder, run:
+or, if you have an a.exe file:
 
 ```bash
-cd ~
+a.exe
 ```
 
-**Note**: on most systems, running `cd` with no arguments also takes you to the home folder.
+If all has gone according to plan, running the program should result in "Hello world" being printed to the command line.
 
-Sometimes you want to go the parent folder of your working directory. In the example above, we moved from the folder "lab01_new_horizons" to its subfolder "lab01". Trying to get back by running...
+The typical workflow is something like:
 
-```bash
-cd lab01_new_horizons
-```
+- Edit your code using your favorite editor, then save it (ensuring that the file has a ".cpp" suffix).
+- In your terminal, enter `g++ {your file's name}.cpp -std=c++17 -Wall`.
+- If there are errors (and there *will* be errors), read the messages and edit your code. Repeat until it compiles.
+- Once your code compiles, enter `a.out`/`a.exe` into the terminal to run the compiled executable, and observe the (hopefully correct) output for testing.
 
-...would fail because there is no folder named "lab01_new_horizons" in "lab01".
+You repeat this process of edit-compile-run until you get the desired result.
 
-The way to go to the parent directory (in this case, "lab01_new_horizons"), you need to run:
+## Mimir
 
-```bash
-cd ..
-```
+For some labs, and **all projects**, we will be using Mimir. Mimir provides a convienent way to write, test, and submit code. Most assignments will have an associated Mimir page like this one. Follow the directions below to submit your Lab 00 assignment for automatic grading.
 
-The `..` is a strange way to symbolize the parent directory. In fact, `.` denotes the working directory, a fact that will be useful to know in later labs.
+### Accessing Mimir
 
-The last "special" directory is the root directory. The root directory is the directory that is the ultimate parent of all the other directories on the computer. It is denoted by a single `/` symbol. In fact, you can specify any folder on the computer by starting with the root directory and working your way to the directory you actually want. So the path `/home/joshua/cse_232__summer_2017/lab01_new_horizons` specifies that the folder I want is:
+Joining Mimir is **required** for this course. You have to join since it is the only way you can turn in your work. In the long run, I think you will appreciate having the ability to test your code before turning it in.
 
-- In the root folder (the starting `/`)
-- In the folder named "home"
-- In the folder named "joshua"
-- In the folder named "cse_232__summer_2017"
-- And it is named "lab01_new_horizons"
+You should have already recieved an invitation to Mimir for this class. If you have not yet received it, **please inform your TA**.
 
-**Video description**: https://www.youtube.com/watch?v=zx4kBG90uBg
+In the Live Coursework section, find and click the link to the Lab 00 assignment (obviously we aren't in Spring 2018, but you get the idea):
 
-⭐ Please show your TA that you can use the commands: `pwd`, `ls` and `cd`.
+<div align="center">
+    <img src="../assets/images/mimir_start.png">
+</div>
 
-### Formatting your code
+Once you've clicked the assignment, you'll be brought to the assignment's Submission page. On that page, you'll have the project's description, and a link to upload your assignment.
 
-The C++ compiler is extremely permissive as to the format of the code it accepts. However, our brains have a harder time parsing poorly formatted code. We will be covering how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html), but for this course, all that is needed is to log into chuck.egr.msu.edu to use the tool.
+At the top-right are three important buttons:
+- **Submit** - this is the button you'll want to use to upload your code
+- **Download Starter Code** - this gives you a .zip file of the code we want you to edit
+- **Open IDE** - this opens Mimir's terminal and editor
 
-Let's say you have a file named "project.cpp". To use `clang-format` to auto-format your code, run:
+Click the "Open IDE" button to go to Mimir's IDE. It should open a separate tab that looks like this:
 
-`clang-format --style=Google -i project.cpp`
+<div align="center">
+    <img src="../assets/images/mimir_ide_start.png">
+</div>
 
-The above line will format the project.cpp file according to the Google Style Guide (more on that later).
+### The Unix Terminal
+
+In future labs, there will be short sections dedicated to learning more about the terminal. Windows users pretty much *have* to follow with the Mimir IDE in this circumstance, where MacOS/Linux users can follow along using their local terminal if they so choose.
+
+The Mimir IDE can also be used to write C/C++ code. We'll be coding here today just so there's a bit of exposure to the Mimir IDE interface, and in case some students were unable to get a local code editor running on their machines.
 
 ## Coding Assignment
 
-### Background
+Lab 00 consists of two (hopefully simple) tasks. Correcting a typo in the file "hello_world.cpp" and creating a new file called "academic_dishonesty.cpp".
 
-The New Horizons spacecraft, launched January 19th 2006, is the first earth spacecraft to have made contact with the planet, Pluto. On January 1st, 2019 it was scheduled to make contact with the first Kuiper belt object, KBO-2014-KU69. The [NASA update page](http://pluto.jhuapl.edu/Mission/Where-is-New-Horizons/index.php) reported it at a distance of 37.33 Astronomical Units (AU) from the Sun, traveling away at 14.33 km/sec (8.90 mi/sec) on 12/30/2016.
+### hello_world.cpp
 
-For this lab, you will use the `cin` and `cout` streams, along with some simple mathematics for calculating New Horizon's distance from the Sun. The important part of the assignment is to learn the skills needed to access the class web site, access a project description, and create a new program in C++.
+I tried to write a "hello_world.cpp" file to show you how easy it is, but I made a typo. Take a look at the "hello_world.cpp" file. It should already be open, but it is located in a folder with the class' name -> lab00__hello_world -> lab00.
 
-### Program Specifications
+Please correct my spelling of "Hello", then save the file.
 
-Your program will prompt the user for an integer number (a number without decimal points) that indicates the number of days _after_ 12/30/2016, starting at a distance 37.33 AU from the Sun. You will calculate the distance of New Horizons from the Sun using the numbers from 12/30/2016 (assume velocity is constant) _plus_ the user provided number of days, and report:
+Right-click on the **parent** of the folder named "lab00", and select "Submit folder contents". Be sure to select the correct assignment as well.
 
-- Distance in kilometers (1 AU = 149,598,000 km) on a line by itself
-- Distance in miles (1 AU = 92,955,800 mile) on a line by itself
-- Round trip time for radio communication in hours. Radio waves travel at the speed of light, listed at 299,792,458 meters/second, on a line by itself
-- Provide 2 decimal points of accuracy using `std::fixed` and `std::setprecision`. Both are contained within the `<iomanip>` header, and you can use them as follows:
+Now you can go to your submissions page (the other Mimir tab), and confirm that you are passing the tests regarding hello_world.cpp.
 
-```c++
-std::cout << std::fixed;
-std::cout << std::setprecision(2);
-```
+### academic_dishonesty.cpp
 
-⭐ Please show the TA your working program.
+The next part of the assignment involves making a new file called "academic_dishonesty.cpp".
 
-### Assignment Notes
+Right-click on the folder named "lab00" and create a new file named "academic_dishonesty.cpp". Make sure the name is _exactly_ what is indicated.
 
-There is a Mimir assignment for this lab that you can use to test your program.
+**Note**: you may need to right-click on the folder tree and select "refresh" for your newly created file to exist.
 
-There are some rounding issues here, so be careful! To make the kilometer/mile calculations, use the constants (speed and distance) provided. To make the round trip calculation, use your distance in km and the speed of light constant provided. You'll get slightly different answers if you try to convert the two distances or the two speeds.
+Copy the contents of hello_world.cpp into this new file.
 
-You will need to work with the `cin` and `cout` streams and their operators `>>` (for `cin`) and `<<` (for `cout`). You will also need to declare the appropriate variables: `int` (a 64 bit integer) for values like days, and `double` for calculation values.
+Submit the assignment again like we did before. You should pass all but the last test -- we'll need to fix that.
 
-`cout` takes either variable values or strings (between `" "`) and outputs them to the console. You can use multiple `<<` operators on the same cout stream, usually ending with `endl`. 
-
-Assuming the variable, `int_var`, has the value 23...
-
-```c++
-std::cout << "This is a string: " << int_var << " the end"
-          << std::endl;
-```
-
-...this small program would output:
+Modify academic_dishonesty.cpp to print out the following message _exactly_ (instead of `"Hello world"`):
 
 ```
-This is a string: 23 the end
+"My name is Josh Nahum. I read the syllabus and I understand the consequences of academic dishonesty."
 ```
 
-`cin` will take an input value from the command line into a variable of _a particular type_. It does so until it hits a space (space separated values) or an end of a line. For example:
+The file needs to have the exact message above, but the name `Josh Nahum` should be changed to have *your* name instead (using only alphabetical characters and spaces). By submitting this assignment, you are confirming that you read the [syllabus](../syllabus.html) and understand the consequences of academic dishonesty.
 
-```c++
-std::cin >> int_var;
-```
+Submit the assignment -- you should pass all of the tests. Congratulations!
 
-If you enter an integer value to the command line, it will be read into the variable with no conversion required.
+## Collaboration on Labs
 
-```c++
-int multiplier, number;
+Everyone should be in pairs (or trios) for future labs. Pair programming is a common and productive method of software developement used in the industry. It is also very useful in educational settings. 
 
-std::cin >> number;
-std::cin >> multiplier;
+Traditionally, there are two roles:
+- "Driver" - this role is the only one allowed to touch the mouse and keyboard. They do all of the coding.
+- "Navigator" - this role is tasked with looking over the code that was written, suggesting edits/fixes, looks for bugs, and so on. Generally, they are in charge of the "big picture" stuff, how code should be structured, coming up with names and algorithms, etc.
 
-std::cout << "The number " << number << " times "<< multiplier
-          << " is " << number * multiplier << std::endl;
-```
+If you are in a trio, I recommend having the Navigator role be broken into the "Observer" (who actively watches and comments on what the Driver is doing) and the "Guide" (who keeps open useful documents and plans out the pseudocode for future parts).
 
-With inputs 10 and 2 respectively, we get:
+Depending on how your TA is managing the lab, these roles will often be swapped periodically (at the TA's call) to ensure everyone participates in both roles equally.
 
-```
-The number 10 times 2 is 20
-```
+There are many ways to collaborate even if you are working together virtually. The simplest is to have the Driver share their screen and have the other roles watch and comment verbally as needed. When a different driver is needed, the current code can be shared in the Zoom chat (via file upload) with the new driver. Alternatively, if you are using VSCode as your editor, the [Live Share extension](https://visualstudio.microsoft.com/services/live-share/) allows you to invite others to join your editor session (like Google Docs).
 
-The operations on these numbers are: + (sum), - (difference), * (product), / (division) and % (modulus, integer only). The last two deserve special comment.
-
-If an integer is divided by another integer, the result is an integer. Thus the result of `6 / 4` is `1`. In contrast, `6.0 / 4` is `1.5`. That is, the `/` operator results in the **integer quotient if using integers, and floats if using floats**. The result of `6 % 4` is the integer remainder of the division, thus `2` (6 divided by 4 is 1, with a remainder of 2). There is no equivalent for `%` in floating point math.
-
-### Things to Think About
-
-- What happens when you try to divide by zero when you run your program?
-- What happens when `std::cin` obtains a letter instead of a number?
+In future labs, you will be compelled to work with a partner. So, I recommend figuring out who you are comfortable with right now.

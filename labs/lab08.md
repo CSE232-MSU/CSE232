@@ -1,77 +1,145 @@
 ---
-title: Lab 08
+title: Lab - Templates and 2D Vectors
 ---
 
-# Lab 08 - Structs
+# Lab - Templates and 2D Vectors
 
-## Wildcards
-
-When compiling multiple C++ files, it's pretty annoying to have to specify each .cpp file to the compiler.
-
-```bash
-g++ -std=c++17 -Wall -g main.cpp stack.cpp disk.cpp io.cpp
-```
-
-Recall our discussion in Lab 06 -- bash gives an alternative method to select files that match a particular pattern. Notice that the above files were all the files in the folder that ended with '.cpp'. You can use a _wildcard_ (the asterisk, `*`) to denote all of those files at once. Example:
-
-```bash
-g++ -std=c++17 -Wall -g *.cpp
-```
-
-The `*` symbol roughly translates to "all", where, when combined with the '.cpp' extension, it becomes "all files that end in '.cpp'".
-
-This can be used in other contexts beyond compilation. Let's say you have a folder named "headers", where you want to move all of your '.h' files to. You can do so with:
-
-```bash
-mv *.h headers/
-```
-
-⭐ Show your TA what happens when you use wildcards to open multiple '.cpp' files with the `gedit` command.
+There is no Unix tutorial this week
 
 ## Coding Assignment
 
-This lab will have you apply generic algorithms to various programming problems.
+We are going to get practice with two concepts:
+1.  Templated code
+2.  Two-dimensional vectors
+
+### Background
+
+You remember matrices, don't you? We are going to do some simple manipulation of a matrix, namely: adding two matrices, and multiplying a matrix by a scalar.
+
+#### Matrix
+
+A _matrix_ is a two-dimensional data structure. It has a _shape_ indicated by the number of rows, and the number of columns. It's important to note that the number of columns *might not always equal* the number of rows. When the number of rows *does* match the number of columns, it's referred to as a _square matrix_.
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctextbf%7BA%7D+%3D+%5Cbegin%7Bpmatrix%7D1+%26+2+%26+3%5C%5C4+%26+5+%26+6%5C%5C7+%26+8+%26+9%5Cend%7Bpmatrix%7D" 
+alt="\textbf{A} = \begin{pmatrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{pmatrix}">
+</div>
+
+&nbsp;
+
+This matrix, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Ctextbf%7BA%7D" 
+alt="\textbf{A}">, has three rows and three columns -- making it a square matrix.
+
+#### Matrix Operations
+
+We will perform two operations on our matrices, both of which yield a new matrix as a result.
+
+The first is _scalar multiplication_. Regardless of the size or shape, if the matrix is not empty, we multiply the scalar value by every entry in the matrix, yielding a new matrix.
+
+<div align="center">
+<img src="../assets/images/matrix_mul.svg">
+</div>
+
+&nbsp;
+
+Where <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Ctextbf%7B%5Clambda%7D" 
+alt="\textbf{\lambda}"> is some scalar (i.e., any number).
+
+The second is _matrix addition_. The shape of two matrices _must be the same_ for addition to go forward. If the shapes are the same, and they are both not empty, we add each row/column value of one matrix to each row/column value of the second matrix in each respective location, yielding a new matrix. We do this for every value between the two matrices.
+
+<div align="center">
+<img src="../assets/images/matrix_add.svg">
+</div>
+
+&nbsp;
+
+In these depictions, you'll notice that they begin enumerating the row/column indices from 1. Remember that we, programmers, always start indices from 0.
 
 ### Program Specifications
 
-[Download the starter code provided here](../assets/downloads/lab08.zip).
+[Download the starter code provided here.](../assets/downloads/lab_matrices.zip)
 
-Write definitions for the four functions described below. You are to not use any loops (for-loops or while-loops). Instead, you must use generic algorithms from the `<algorithm>` and `<numeric>` headers.
+We will use a `vector<vector<T>>` type as the underlying representation of our matrix, meaning that the type of the elements of the matrix will be templated. Thus, all of our functions must be templated, as well.
+
+In the starter code, we provide two definitions to make things a little easier:
+
+```c++
+template<typename T>
+using matrix_row = vector<T>;
+
+template<typename T>
+using matrix = vector<matrix_row<T>>;
+```
+
+With these definitions, you can declare a new matrix with the `matrix` type, and declare matrix rows as the `matrix_row` type.
+
+Implement the following functions:
 
 &nbsp;
 
 ```c++
-void ShiftRange(vector<int> &v, int left, int right)
+template<typename T>
+string matrix_to_str(const matrix<T> &m1, size_t width=3)
 ```
 
-Given a vector of ints, `v`, sorts the vector and moves all elements within the range [`left`, `right`] to the end of the vector.
+Converts the matrix, `m1`, to a `string` representation. The `width` argument should be used to set the width between elements within the rows of the matrix (use `std::setw()`), defaulted to 3.
 
 &nbsp;
 
 ```c++
-void PassOrFail(vector<pair<string, int>> &v)
+template<typename T>
+bool same_size(const matrix<T> &m1, const matrix<T> &m2)
 ```
 
-Given a vector, `v`, where each element of the vector is a (name, grade) pair, sorts the vector by name and partitions the first half of the vector as pairs who passed, and the second half of the vector as pairs who failed.
-
-A pair "passes" if the grade is greater than or equal to 600 points.
+Tests if two matrices, `m1` and `m2`, are of the same size/shape.
 
 &nbsp;
 
 ```c++
-vector<int> Fibonacci(int n)
+template<typename T>
+matrix<T> add(const matrix<T> &m1, const matrix<T> &m2)
 ```
 
-Generates the first `n` Fibonacci numbers.
+Adds matrices, `m1` and `m2`, to compose a new matrix. `m1` and `m2` must be identically shaped for addition to occur. If they are _not_ the same shape, return an empty matrix.
+
+⭐ Show your TA when you can successfully handle case 1 (which tests the three functions above).
 
 &nbsp;
 
 ```c++
-int BinaryToInt(const string &binary_str)
+template<typename T>
+matrix<T> scalar_multiply(const matrix<T> &m, const T &val)
 ```
 
-Converts a binary string (base 2) to an `int` (base 10).
+Multiplies a matrix, `m`, by the scalar value, `val`, to return a new matrix. If `m` is an empty matrix, return an empty matrix.
+
+⭐ Show your TA when you can successfully handle all of the cases.
 
 &nbsp;
 
-⭐ Show the TA your completed set of functions. 
+### Assignment Notes
+
+1.  Start out by solving case 1 and commenting out the rest of the `main()` code. When you've solved it, bring back case 2, solve case 2, and so on.
+2.  You can make a temporary row (of type `matrix_row`) and `push_back()` values on to that. You can then `push_back()` the row onto a matrix (of type `matrix`). You can reuse the row in your loop, but remember to `clear()` it first.
+3.  Make sure the printing of the matrix is nicely aligned, as shown in the output below:
+
+```
+Case 1
+ 0  2  4
+ 6  8 10
+12 14 16
+
+Case 2
+could not add
+
+Case 3
+1.14    4.56
+ 7.6   12.92
+15.2     -19
+
+Case 4
+could not multiply
+```

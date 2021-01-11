@@ -1,138 +1,163 @@
 ---
-title: Lab 10
+title: Lab - Classes
 ---
 
-# Lab 10 - More on Classes
+# Lab - Classes
 
-## Compiler Options
+## Remote Access
 
-`g++` is a very complicated (but powerful) program. Technically, it is just an alias (alternate name) for `gcc`, which is the GNU C Compiler. `g++` (and `gcc`) have many options for determining how it should compile your program.
+Often, you'll want to be able to connect to, and run programs on computers that you don't have a keyboard attached to. You _already_ do this when connecting to a network over the internet. The primary means that you use to connect to computers at the command line is a tool called "SSH". SSH allows you to authenticate (usually via your username and password) to a remote computer so you can access its command line.
 
-[The full list of options can be found here](https://gcc.gnu.org/onlinedocs/gcc-7.1.0/gcc/Invoking-GCC.html#Invoking-GCC), but I'll be pointing out the most important ones.
+The `scp` command allows you to copy files to and from your local computer with a remote one.
 
-Here are the flags you should already be comfortable with:
+The remote computer that you all have access to is called "chuck.egr.msu.edu", and your authentication credentials are your MSU NetID, and EGR password (_not_ your CSE password). Note that, because this class has transitioned away from using DECS servers to Mimir, you may be unable to access the Chuck server. Certain countries are firewalled as well, unfortunately.
 
-*   `-c` - This flag instructs the compiler to compile all your .cpp files, but not link them together (see Week 01).
-*   `-o filename` - This flag instructs the compiler to make a file named `filename` with the executable compiled program (instead of the default `a.out`).
-*   `-Wall` - This flag instructs the compiler to warn about as many potential erroneous code elements as possible (useful for beginners).
-*   `-std=c++17` - This instructs the compiler to use a particular version of the C++ language (you can use 11, 14, etc. in the place of 17).
-*   `-g` - This flag instructs your compiler to include debugging information in the compiled program for use by `gdb`.
+[Read this tutorial from The New Stack](https://thenewstack.io/linux-lesson-copy-files-over-your-network-with-scp/).
 
-And here are some new ones:
-
-*   `-O1` - This flag enables various code optimizations that allow your program to run faster, without a large increase in time to compile.
-*   `-O2` - This flag enables various code optimizations that allow your program to run faster, but may increase the time needed to compile.
-*   `-O3` - This flag is similar to `-O2`, but with even more extreme optimizations and possibly very long compilations.
-*   `-Ofast` - This flag is allows optimizations that aren't necessarily allowed by the standards set forth by the C++ language committee. This is where experimental optimizations are used by those who want speed at all costs.
-*   `-Os` - This flag instructs the compiler to optimize for size instead of speed. It is often useful if you need to run your program on embedded computers with limited memory.
-*   `-Wextra` - This flag instructs the compiler to add additional warnings for bad code (even more than `-Wall`).
-*   `-Wpedantic` - This flag instructs the compiler to add additional warnings for code that doesn't comply with the strict C++ language definition (useful if you want your code to be compiled by other compilers).
-
-⭐ Copy-and-paste the following code into a file, and show your TA the output when you compile it with more warnings than what `-Wall` checks for.
-
-```c++
-#include <iostream>
-using std::cout; using std::endl;
-
-int add(int a, int b, int c) {
-    return a + b;
-}
-
-int main() {
-    cout << add(1, 2, 4) << endl;
-}
-```
+⭐ Show your TA the hypothetical command you would run to copy a file, named 'test.png', on your laptop's Downloads folder to your CSE account's Desktop.
 
 ## Coding Assignment
 
-Today, we're going to work on making our own classes with private data members and accessors. More specifically, we'll be building a `Table` class, which will act as an abstraction of two-dimensional vectors (i.e., matrices).
+We are going to work on making our own data structures using a C++ `struct`. More specifically, we are going to create some sample member functions for a two-dimensional, euclidean vector, represented as a `struct` named `MathVector`.
+
+### Background
+
+A vector can be thought of as an arrow that has some varying magnitude and direction. It is usually represented by an <img src=
+"https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28x%2C+y%29" 
+alt="(x, y)"> pair (referred to as the _components_), where the starting point of the vector is assumed to be at <img src=
+"https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%280%2C+0%29" 
+alt="(0, 0)">, with the head of the vector meeting at coordinates <img src=
+"https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28x%2C+y%29" 
+alt="(x, y)">.
+
+<div align="center">
+    <img src="../assets/images/vectors.png" width="100%">
+</div>
+
+Below are some of the operations that can be performed on a vector, all of which you'll ultimately implement for your `MathVector` `struct`.
+
+For the following examples, let:
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%3D+%28x_1%2C+y_1%29" 
+alt="\vec{v} = (x_1, y_1)">
+</div>
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bw%7D+%3D+%28x_2%2C+y_2%29" 
+alt="\vec{w} = (x_2, y_2)">
+</div>
+
+#### Vector Addition
+
+The addition of two vectors returns a new vector whose components are the sums of the operand vectors' components applied parallely.
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%2B+%5Cvec%7Bw%7D+%3D+%28x_1+%2B+x_2%2C+y_1+%2B+y_2%29" 
+alt="\vec{v} + \vec{w} = (x_1 + x_2, y_1 + y_2)">
+</div>
+
+&nbsp;
+
+#### Vector Multiplication
+
+Vector multiplication can be done in _many_ ways depending on the second operand. We'll focus on, and implement two of these.
+
+When a vector is multiplied by a scalar (i.e., any number), it becomes _scalar multiplication_, where the scalar is simply multiplied against every component of the vector to compose a new vector.
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Clambda+%5Cvec%7Bv%7D+%3D+%28%5Clambda+x_1%2C+%5Clambda+y_1%29" 
+alt="\lambda \vec{v} = (\lambda x_1, \lambda y_1)">
+</div>
+
+&nbsp;
+
+When two vectors are multiplied together, the components are multiplied parallely and summed to return a scalar value (_not_ a new vector). This is called the _dot product_ (there is also a _cross product_, but we won't be doing that for today).
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%5Ccdot+%5Cvec%7Bw%7D+%3D+x_1+x_2+%2B+y_1+y_2" 
+alt="\vec{v} \cdot \vec{w} = x_1 x_2 + y_1 y_2">
+</div>
+
+&nbsp;
+
+#### Vector Magnitude
+
+A vector's _magnitude_ (AKA its length) can be calculated using a simplified version of the euclidean distance formula. This, again, does not return a new vector -- it returns a scalar value.
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctext%7Bmagnitude%7D%28%5Cvec%7Bv%7D%29+%3D+%5Csqrt%7Bx_1%5E2+%2B+y_1%5E2%7D" 
+alt="\text{magnitude}(\vec{v}) = \sqrt{x_1^2 + y_1^2}">
+</div>
+
+&nbsp;
 
 ### Program Specifications
 
-[Download the starter code provided here.](../assets/downloads/lab10.zip)
+[Download the starter code provided here](../assets/downloads/lab_classes.zip).
 
-The header for the Table class has the following private elements:
+Your task is to create an implementation file (named "math_vector.cpp") that provides the algorithm for all of the member functions shown below (and inside the header file).
 
-```c++
-private:
-    vector<vector<long>> t_;    // 2D vector of long
-    long width_;                // how wide is t_ (how many columns)
-    long height_;               // how high is t_ (how many rows)
-```
+Note that some of the work has been done for you. Here is what has been completed so far:
 
-You are to implement the following methods:
+`MathVector` has two data members:
+- `long x`, represents the x component of the vector
+- `long y`, represents the y component of the vector
 
-&nbsp;
+The `MathVector` constructor has two declarations:
+- A `default` constructor that initializes the data members, `x` and `y`, to 0.
+- A two-parameter constructor that takes an input x and y component and assigns them to the `x` and `y` data members, respectively.
 
-```c++
-Table(long width, long height, long val=0)
-```
-
-Constructs a `Table` instance that is of shape `width` by `height`, where each element is filled by `val` (which is defaulted to 0). 
-
-Remember that `t_` is a `vector<vector<long>>`. You can only `push_back()` instances of `vector<long>` onto `t_`, and only instances of `long` onto `vector<long>`.
+You are to _implement_ the following functions in your math_vector.cpp file:
 
 &nbsp;
 
 ```c++
-void fill_random(long lo, long hi, unsigned int seed=0)
+string vec_to_str(const MathVector &v)
 ```
 
-Sets every element of `t_` to a random number of type `long` bounded between `lo` and `hi` inclusively. `seed` sets the random number seed, which defaults to 0. [Use the technique described here](https://diego.assencio.com/?index=6890b8c50169ef45b74db135063c227c) with a uniform distribution drawn from the MT19937 random number generator.
+Takes a `MathVector` instance and returns a `string` representation of the `MathVector` in the format "`x:y`".
 
-⭐ Show the TA when your `Table` class can execute the `fill_random()` method.
+_This is not a member function, it is a generic function_.
 
 &nbsp;
 
 ```c++
-bool set_value(unsigned int row_num, unsigned int col_num, long val)
+MathVector add(const MathVector &other)
 ```
 
-Sets a particular element at location (`row_num`, `col_num`) to `val`. If `row_num` or `col_num` are out-of-range of the available `t_` indices, `set_value()` should return `false`. Otherwise, return `true` to signify a successful value set.
+Takes a second operand `MathVector` instance, `other`, and adds them to produce a new `MathVector` instance.
+
+⭐ Show the TA your functioning `add()` method before moving on.
 
 &nbsp;
 
 ```c++
-long get_value(unsigned int row_num, unsigned int col_num) const
+MathVector mult(long a)
 ```
 
-Returns the value at location (`row_num`, `col_num`) of `t_` if those two indices exist. If the indices are out-of-range of the available `t_` indices, throw an `out_of_range` error.
+Multiplies the `MathVector` instance by a scalar, `a`. Returns the resultant `MathVector` instance.
 
 &nbsp;
 
 ```c++
-void print_table(ostream &out)
+long mult(const MathVector &other)
 ```
 
-Prints the contents of `t_` in a "nice way" (as a square with rows and columns) to the `ostream` reference provided.
+Takes the dot product between the two `MathVector` instances. Returns the resultant `long`.
 
 &nbsp;
 
-The output of the main file should ultimately look like:
-
-```
-0,0,0,0,0,
-0,0,0,0,0,
-0,0,0,0,0,
-0,0,0,0,0,
-0,0,0,0,0,
-
-2,10,1,6,6,
-1,7,5,9,10,
-5,7,10,4,3,
-5,8,7,6,3,
-2,6,6,2,2,
-
-Result:false
-
-6
-Correct!
-
-100,10,1,6,6,
-1,100,5,9,10,
-5,7,100,4,3,
-5,8,7,100,3,
-2,6,6,2,100,
+```c++
+double magnitude()
 ```
 
-⭐ Show the TA your completed `Table` class.
+Takes the magnitude of the `MathVector` instance. Returns `double`.
+
+⭐ Show the TA your completed `MathVector` class.

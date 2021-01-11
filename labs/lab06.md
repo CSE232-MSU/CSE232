@@ -1,241 +1,416 @@
 ---
-title: Lab 06
+title: Lab- Styling and Debugging
 ---
 
-# Lab 06 - Vectors and Multi-File Compilation
+# Lab- Styling and Debugging
 
-## Miscellaneous Bash Stuff
+The aim of this lab is to:
 
-### Command Completion
+- Do a code review to learn the Google Code style rules
 
-A common mistake when writing in any programming language is that of typos. One way to avoid them is to use an autocompletion feature so you don't have to type out a full name or variable. When you hit the TAB key, the terminal attempts to fill the rest of the command/file name you are typing. If there isn't a unique match (for instance, you are typing: `cp fi` and then hit TAB when there are files with the names "file_01" and "file_02" present), it will fill in as much as it can (in this case "`cp file_0`"). If you hit TAB again, the terminal will present the potential options that it can autofill with. You can specify more characters until a unique match is found.
+- Learn to debug your C++ programs using `gdb` (the GNU Project Debugger). The purpose of a debugger is to allow you to see what is going on inside your C++ program while it runs. In addition, you can use `gdb` to see what your program was doing at the moment it crashed.
 
-Example:
+## Code Review
 
-```bash
-cp f                # hit TAB
-cp file_0           # hit TAB
-cp file_02 f        # hit TAB
-cp file_02 file_0   # hit TAB
-cp file_02 file_01  
-```
+Although the compiler can often compile very ugly source code, the primary reader of your code won't be computers, but other humans (including yourself). And in much the same way that well-formatted essays are better at conveying information, well-formed code is easier to understand and debug. However, what does well-formed mean?
 
-I recommend making use of TAB completion. We, humans, are prone to making typos, where our computer friends are not.
+### Conventions
 
-### `history`
+Although there are a few different conventions for what exactly defines well-formed code, the important thing is to be consistent. For this assignment, we will be evaluating your homework solution with respect to the [Google Style Guide](https://google.github.io/styleguide/cppguide.html). The point of this part of the lab is to evaluate (and improve) code by using a consistent style. 
 
-The terminal remembers each command you type into it in its history. When you execute the `history` command, the terminal will report each command run with a number. Example:
+**Warning**: much of the code we have shown in videos and examples may not conform to Google's standards.
 
-```bash
-  495  ls
-  496  cd ../../
-  497  ls
-  498  ls
-  499  cd ..
-  500  cp file_02 file_01
-  501  history
-```
+Exchange your most recent homework assignment's first problem's solution with your partner. You will be editing their solution to either make it conform to the following rules, or to add comments noting violations of the rules. Not all of the style guide will make sense given your incomplete mastery of C++, but we'll be focusing on the content you can apply.
 
-You can run a command from your history by noting its number. For instance, `!500` will run the `cp file_02 file_01` command again.
+### Rules
 
-You can also use the `!!` command to re-execute the latest command.
+#### Naming
 
-### Configuration (.bashrc and .bash_profile)
+- [General Naming Rules](https://google.github.io/styleguide/cppguide.html#General_Naming_Rules)
+- [Variable Names](https://google.github.io/styleguide/cppguide.html#Variable_Names)
+- [Function Names](https://google.github.io/styleguide/cppguide.html#Function_Names)
 
-Sometimes, there are bash commands you always want to run before you get to work. Perhaps, you want your terminal to configure some settings, or tell you how much disk space is left on the computer. To make this easier, there are two config files that bash looks for (in your home directory).
+#### Comments
 
-.bashrc is a bash script that runs everytime you invoke the `bash` command (example: `bash my_script.sh`) and when you login. .bash_profile is a script that runs when you login to your user account. Both of these are used to execute bash commands that set up your environment.
+- [Comments](https://google.github.io/styleguide/cppguide.html#Comments)
+- [Function Comments](https://google.github.io/styleguide/cppguide.html#Function_Comments)
+- [Implementation Comments](https://google.github.io/styleguide/cppguide.html#Implementation_Comments)
 
-Your PATH is a list of directories that bash (or tcsh, which is the default on the lab computers) looks in when trying to run a command. Bash looks through every folder in the list (in order), trying to find a program named identically to your command input.
+#### Formatting
 
-You can see your path by `echo`'ing it to the screen with:
+- [Line Length](https://google.github.io/styleguide/cppguide.html#Line_Length)
+- [Spaces vs. Tabs](https://google.github.io/styleguide/cppguide.html#Spaces_vs._Tabs)
+- [Function Calls](https://google.github.io/styleguide/cppguide.html#Function_Calls)
+- [Horizontal Whitespace](https://google.github.io/styleguide/cppguide.html#Horizontal_Whitespace)
 
-```bash
-echo $PATH
-```
+#### Functions
 
-In the bash and tcsh shells, it outputs something like:
+- [Parameter Ordering](https://google.github.io/styleguide/cppguide.html#Function_Parameter_Ordering)
+- [Write Short Functions](https://google.github.io/styleguide/cppguide.html#Write_Short_Functions)
+- [Reference Arguments](https://google.github.io/styleguide/cppguide.html#Reference_Arguments)
+- [Horizontal Whitespace](https://google.github.io/styleguide/cppguide.html#Horizontal_Whitespace)
 
-```
-/soft/linux/bin:/bin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/cpssbin:/soft/linux/bin:/usr/X11R6/bin:/usr/local/bin:
-```
+Use common sense, and **be consistent**.
 
-This means that if I try to run `say_hello Josh`, it looks in `/soft/linux/bin` for an executable called `say_hello`, and if it can't find it, it then looks in `/bin`, then in `/usr/sbin`, and so on before giving up (the `:` character delimits the paths).
+If you are editing code, take a few minutes to look at the code around you and determine its style. If there are spaces around `if` clauses, you should add them, too. If there are comments with little boxes of stars around them, make your comments have little boxes of stars around them, too.
 
-Sometimes it is useful to add other directories to this path (often for programs you want to call from the command line).
+The point of having style guidelines is to have a common vocabulary of coding so people can concentrate on what you are saying, rather than on how you are saying it. We present global style rules here so people know the vocabulary. But, local style is also important. If code you add to a file looks drastically different from the existing code around it, the discontinuity throws readers out of their rhythm when they go to read it. Try to avoid this.
 
-If I want to add the folder "`~/joshs_programs/`" to my PATH, because it has useful programs to run at the command line, I can add them like this:
+Okay, enough writing about writing code; the code itself is much more interesting. Have fun!
 
-```bash
-export PATH=$PATH:~/joshs_programs      # for bash
-```
+## Debugging with `gdb`
 
-```tcsh
-setenv PATH $PATH\:~/joshs_programs     # for tcsh (on lab computers)
-```
+Here are some of the useful actions that `gdb` can perform:
 
-However, this change to the PATH will only last as long as your terminal session lasts (when you log out, it'll be gone). You'll want to add that line to your .bashrc or .bash_profile (or .tcshrc) config file if you want that in your path for future sessions.
+- Start your program and step through it line by line
+- Make your program stop on specified conditions
+- Show the values of variables used by your program
+- Examine the contents of any frame on the call stack
+- Set breakpoints that will stop your program when it reaches a certain point. Then you can step through part of the execution using `step` and `next`, and type `continue` to resume regular execution.
 
-⭐ Add the Desktop to your PATH and `echo` your PATH for the TA.
+[Download the code contained within this .zip file here.](../assets/downloads/lab_gdb.zip)
 
-## Multi-File Compilation
+## Setting up `gdb`
 
-Imagine that you've written a really useful function. You would like to package that function individually so you can use it in other programs. The hard way to accomplish that would be to copy that function into every new program where you might want to use it. A better idea would be to place that function in its own separate file, and then compile any new program and your trusty function into one executable. That would be lovely!
+Before we start using `gdb`, we need to activate a GDB init file. It does two things: firstly, it allows us to print C++ Standard Library containers and data members from within `gdb`, and secondly, it allows us to debug our programs while treating the C++ constructs as the "bottom level"; in other words, when we debug a piece of a program that includes a vector, we don't want the debugger to go all the way into the code that defines the vector.
 
-Remember this picture?
+The GDB init file should be contained within the .zip file you just downloaded from the above link.
 
-<div align="center">
-<img src="../assets/images/compiler_parts.png">
-</div>
+Save the GDB init file to your home directory. Once saved, please rename the file to ".gdbinit". Note that the dot prefix makes the file hidden, so once you rename it, it will not be visible in the graphical file manager.
 
-`g++` (the underlying compiler) does all of these steps rather invisibly. To take advantage of it, we'll need multiple files.
+## Getting Started with `gdb`
 
-### Header Files
+C/C++ programs compiled with the GNU compiler and the `-g` flag can be debugged using GNU's debugger (actually, you can use `gdb` on code that is not compiled with the `-g` flag, but, unless you like trying to figure out how assembly code sequences map to your source code, I wouldn't recommend doing so).
 
-If we are going to define a function in one file, and use that function in a separate main file, we are going to have to find a way to inform the main file about the _types_ of that function. That is, we have to tell the main file:
-- The function's name,
-- The type it returns,
-- And the types of the parameters
-
-The _name_ of each parameter is unimportant. It can be given, changed in the main file, or left-out. All that matters is each parameter's _type_.
-
-If we tell the main file this information, that is enough for the C++ compiler to check that the function is being used correctly, and by "correctly", I mean that the main file is using all of the _types_ correctly in calling the function, even though it does not yet have the actual function _code_.
-
-Providing this information is the job of a **header file**. Header files are typically written with a ".hpp" or ".h" extension, and are used to indicate the type information for C++ elements (functions, classes, or some other C++ thing). This header file is used by the compiler to ensure that, whoever is using this function, they are at least using the types correctly. Thus, without the function itself, we can know that we followed the compiler rules and used the correct types.
-
-### Example
-
-Make a new folder somewhere, and call it "lab6" (either with your File Explorer or the command line).
-
-If you don't remember, you can make an empty folder by using the `mkdir` command (on Unix):
+First, you'll want to compile your code using this flag:
 
 ```bash
-mkdir lab6
+g++ -std=c++17 -g -Wall myprog.cpp
 ```
 
-[Download, and extract the files in this .zip folder linked here](../assets/downloads/lab06.zip). Copy these files into your lab6 folder.
-
-Navigate your terminal to the "lab6" folder, then, compile your three files with the following command:
+Then, to start `gdb`, invoke it on the executable file:
 
 ```bash
-g++ -std=c++17 -Wall  *.cpp
+gdb a.out
 ```
 
-This command will compile all (`*` means all, `*.cpp` means all files ending in .cpp) the .cpp files and build an executable.
-
-### Some Warnings
-
-It's nice that the previous command compiles all of the files, but if you have too many files (like from different projects, or from things you were working on temporarily, etc.) it won't work. Instead, you can do it with a list of files. You can even name your executable using the `-o` flag, to be something other than the standard "a.out".
+If your program terminates with an error, then the operating system will often dump a core file that contains information about the state of the program when it crashed. `gdb` can be used to examine the contents of a core file:
 
 ```bash
-g++ -std=c++17 -Wall file1.cpp file2.cpp file3.cpp -o namedExecutable.exe
+gdb core a.out
 ```
 
-Something important to note, is that __we never compile header files__. All a header file provides is a list of declarations to be used by other files.
+One good way to get started when you are trying to track down a bug, is to set breakpoints at the start of every function. In this way, you'll be able to determine which function has the problem, then you can restart the program and step through the offending function line-by-line until you find the exact location of the bug within that function.
 
-⭐ Show the TA that you downloaded the three files, compiled them, and successfully ran the executable.
+## Common `gdb` Commands
 
-### The Files
+Words surrounded by angled-brackets (like `<this>`) represent parameters to the command, for which you'd supply some argument based on what the command expects.
 
-extra.cpp defines the function, `extra()`, which will be used in the main.cpp program.
+___
 
-extra.hpp is the header file. Notice that it only provides the declaration of the function. In the declaration, the names of the parameters are not required, only their types. **Note that the function declaration ends in a semicolon, don't forget!** There are some weird `#` statements, as you probably noticed. We'll get to those in a bit.
+- `help` - List classes of all `gdb` commands
+    - `help <topic>` - Shows help available for topic or command
+- `bt` - Shows stack; the sequence of function calls executed so far (good for pinpointing location of a program crash)
+- `up` - Move up the stack
+- `down` - Move down the stack
+- `run` - Runs program from the beginning
+- `break`
+    - `break <line>` - Sets breakpoint at line number `<line>`
+    - `break <func-name>` - Sets breakpoint at beginning of function `<func-name>`
+    - `break main` - Sets breakpoint at beginning of program
+- `continue` - Continues execution until next breakpoint
+- `condition <bp-num> <exp>` - Sets breakpoint number `<bp-num>` to break only if
+conditional expression, `<exp>`, is true
+- `info break` - Shows current breakpoints
+- `clear`
+    - `clear <line>` - Clears breakpoint at line number `<line>`
+    - `clear <func-name>` - Clears breakpoint at beginning of function `<func-name>`
+- `delete` - Deletes all breakpoints
+    - `delete <bp-num>` - Deletes breakpoint number `<bp-num>`
+- `step` - Executes next line of program (steps into functions)
+    - `step <count>` - Executes next `<count>` lines of program
+- `next` - Executes next line of program (does not step into functions)
+    - `next <count>` - Executes next `<count>` lines of program
+- `until <line>` - Executes program until line number `<line>`
+- `list` - Lists next few lines of program
+    - `list <line>` - Lists lines around line number `<line>` of program
+    - `list <start> <end>` - Lists line numbers `<start>` through `<end>`
+    - `list <func-name>` - Lists lines at beginning of function `<func-name>`
+- `print <exp>` - Displays the value of expression `<exp>`
+- `quit` - Quit debugging
 
-main.cpp is the main program. Notice that it has the following statement in it:
+___
 
-```c++
-#include "extra.hpp"
+`gdb` also understands abbreviations of commands, so you can just type up to 
+the unique part of a command name ("`cont`" for "`continue`", or "`p`" for "`print`")
+
+## `info` Commands
+
+`gdb` has a large set of `info X` commands for displaying information about particular runtime/debugger states. Here is how to list all the info commands in `help`, and a description of what a few of the info commands do:
+
+```
+(gdb) help status           # lists a bunch of info X commands
+
+(gdb) info frame            # lists information about the current stack frame
+(gdb) info locals           # lists local variable values of current stack frame
+(gdb) info args             # lists argument values of current stack frame
+(gdb) info registers        # lists register values
+(gdb) info breakpoints      # lists status of all breakpoints
 ```
 
-This means that the main program is _including_ the declaration of the function so that the compiler may check the type use of `extra()` by main.cpp. Notice the quotes; when the `#include` expression uses quotes, it is assumed that the .hpp file is in the same directory as the other files. Include statements with angled-brackets (`<>`) denote the "standard include place" to the compiler. Since it is our own include file, we need to use quotes for it.
+## Sample `gdb` Sessions
 
-### The `#` Symbol
+Below is the output from two runs of `gdb` on badString.cpp. You will follow along by entering the commands on your own computer. Be sure you understand each step, and ask your TA if you don't understand why something is being done.
 
-Anything beginning with `#` is part of the pre-processor. This controls aspects of how the compilation goes. In this case, we are trying to prevent a multiple definition error. What if we wanted to use `extra()` in more than one file? Your expectation is that every file that wants to use `extra()` should include the extra.hpp file for compilation to work, and you would be correct... sort of. Remember that you cannot declare a variable more than once, and the same goes for a function -- you should only declare it once. In making one executable from many files, it is possible that, by including extra.hpp in multiple files, we would declare the `extra()` function multiple times for this single executable, and C++ would complain. However, it would be weird to have to do this in some kind of order where only one file included extra.hpp, and the rest would have to assume it is available.
+Before debugging, run the a.out executable to see what happens.
 
-The way around this involves the pre-processor. Basically, there are three statements we care about:
+(Comments are denoted by a `#` symbol, and are not part of the actual execution)
 
-```c++
-#ifndef SOME_VARIABLE_NAME
-#define SOME_VARIABLE_NAME
+```
+$ g++ -std=c++17 -g -Wall badString.cpp     # compile program with -g flag
 
-/*
-put all *declarations* here
-*/
+$ gdb a.out                                 # invoke gdb with the executable
 
-#endif
+GNU gdb (Debian 7.7.1+dfsg-5) 7.7.1
+Copyright (C) 2014 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+...
+Reading symbols from a.out...done.
+
+
+(gdb) break main                            # set a breakpoint at main()
+Breakpoint 1 at 0x400d87: file badString.cpp, line 35.
+
+(gdb) break fn2                             # set a breakpoint at fn2()
+Breakpoint 2 at 0x400c72: file badString.cpp, line 11.
+
+(gdb) run                                   # run the program
+Starting program: /user/yourname/cse232_201701/Lab05/a.out 
+
+Breakpoint 1, main () at badString.cpp:35   # hit breakpoint at line 35 
+35	  string my_string = "abcdefg";
+
+(gdb) list                                  # display code in this area
+30	  unsigned int indx = str.find(ch);
+31	  return str.substr(indx-1, 3);
+32	}
+33
+34	int main (){
+35	  string my_string = "abcdefg";
+36	  cout << fn2(my_string) << endl;
+37	  cout << fn1(my_string) << endl;
+38
+39	}
+
+(gdb) list 15                               # display code around line 15
+10	char fn2(string str){
+11	  char ch = str[0];
+12	  for (auto i = str.size(); i>=0; --i){
+13	    cout << ch << endl;
+14	    if (str[i] < ch)
+15	      ch = str[i];
+16	  }
+17	  return ch;
+18	}
+19
+
+(gdb) list                                  # display next few lines
+20	/*
+21	  make a substring of the parameter str
+22	  of size 3, consisting of:
+23	  - the smallest chararter as found by fn2
+24	  - the character in front of the smallest
+25	  - the character in back of the smallest.
+26	  Thus fn1("cdeaxyz") --> "eax"
+27	*/
+28	string fn1(string str){
+29	  char ch = fn2(str);
+
+(gdb) next                                  # execute the next instruction
+36	  cout << fn1(my_string) << endl;
+
+(gdb)                                       # hitting Enter executes the previous command
+Breakpoint 2, fn2 (str="abcdefg") at badString.cpp:11
+11	  char ch = str[0];
+
+(gdb) print str                             # print str in fn2
+$1 = "abcdefg"
+
+(gdb) p ch                                  # p is short for the print command
+$2 = 0 '\000'                               # ch in fn2 is not initialized
+
+(gdb) print my_string                       # my_string in main, not fn2
+No symbol "my_string" in current context.
+
+(gdb) bt                                    # bt = "backtrace", shows call stack
+#0  fn2 (str="abcdefg") at badString.cpp:11
+#1  0x0000000000400e39 in main () at badString.cpp:36
 ```
 
-This means: "if the pre-processor variable we indicate (`SOME_VARIABLE_NAME`) is not defined (`#ifndef`), go ahead and define it (`#define`) for this compilation and do everything else up to the `#endif`, (i.e., include these declarations in the compilation). If the variable is already defined, skip everything up to the `#endif` (i.e., skip the declarations)."
+Activity goes from top to bottom in the call stack. We are currently in `fn2()` (#0), which was called by `main()` (#1). Thus we have 2 functions running.
 
-Thus, whichever file pulls in the header file first, defines the pre-processor variable and declares the function for the entire compilation. If some other file also includes the header file later in the compilation, the pre-processor variable is already defined, so the declarations are not included.
+```
+(gdb) up                                    # go up the call stack
+#1  0x0000000000400e39 in main () at badString.cpp:36
+36    cout << fn2(my_string) << endl;       # now we're back in main()
 
-Of course, the simpler solution is to make use of the (not-yet-standardized) `#pragma once`. It is your call.
+(gdb) print my_string
+$3 = "abcdefg"                              # my_string is defined in main()
 
-## Coding Assignment
+(gdb) down                                  # down the call stack                              
+#0  fn2 (str="abcdefg") at badString.cpp:11
+11    char ch = str[0];                     # back to fn2(), where we are running
 
-Make a new folder in your lab 6 directory called "splitter", and add three new files to it: main.cpp, functions.cpp and functions.hpp.
+(gdb) next 
+12 for (auto i = str.size(); i>=0; --i){
 
-&nbsp;
-
-```c++
-vector<string> split(const string &s, char sep=' ')
+(gdb) n                                     # "n" is short for "next"          
+13	    cout << ch << endl;
+(gdb) n                                     # just stepping through the loop
+a
+14	    if (str[i] < ch)
+(gdb) n
+15	      ch = str[i];
+(gdb) n
+12	  for (auto i = str.size(); i>=0; --i){ # back to the top of the loop
+(gdb) print ch
+$4 = 0 '\000'                               # what is this?                       
+(gdb) print str[i]
+$5 = (const char &) @0x60205f: 0 '\000'
+(gdb) print i
+$6 = 7
 ```
 
-The `split()` function should take in a `string` and return a `vector<string>` of the individual elements in the string that are separated by a given separator character (default of `' '`). Examples: 
+⭐ So, what's the problem here? We executed Line 15 above, but, `ch` has a strange character in it. Describe the problem to your TA.
 
-`split("hello mom and dad")` should return `{"hello", "mom", "and", "dad"}`
+```
+(gdb) cont                                  # continue the execution
 
-`split("1,2,3,4", ',')` should return `{"1", "2", "3", "4"}`
+Program received signal SIGSEGV, Segmentation fault.
+0x0000000000400d19 in fn2 (str="abcdefg") at badString.cpp:14
+14	    if (str[i] < ch)
 
-Open functions.hpp, and store the function declaration of `split()` there. The declaration should be the snippet of code above **with a semicolon at the end, don't forget!**.
+(gdb) bt
+#0  0x0000000000400d19 in fn2 (str="abcdefg") at badString.cpp:14
+#1  0x0000000000400e39 in main () at badString.cpp:36
 
-As discussed in lecture, default parameter values **go in the header file only**. The default does not occur in the definition if it occurred in the declaration.
+(gdb) print ch
+$7 = -128 '\200'                            # there are no negative chars, so that's bad
 
-This header file should wrap all declarations using the `#ifndef`, `#define`, and `#endif` pre-processor statements, as discussed above. Make up your own variable name.
-
-Open functions.cpp, and write the definition of the function, `split()`, there. Make sure it follows the declaration in functions.hpp. The parameter names do not matter, but the types do. Make sure the function signature matches for both the declaration _and_ definition.
-
-You can compile functions.cpp (not build, at least not yet) to see if functions.cpp file is well-formed for C++. It will not build an executable, but instead a .o (object) file. The object file is the result of compilation before building an executable -- an in-between stage.
-
-⭐ Show your TA the object file generated after compiling the functions.cpp file.
-
-&nbsp;
-
-```c++
-void print_vector(ostream &out, const vector<string> &v)
+(gdb) print i
+$8 = 18446744073709547431                   # ok, that is REALLY bad
 ```
 
-This function prints all the elements of `v` to the output stream, `out`. Note that `out` and `v` are passed by reference.
+⭐ So, what's the problem, again? Describe what happened to your TA.
 
-Store the function in functions.cpp, and put its declaration in functions.hpp like you did for `split()`. **Don't forget the semicolon!**
+Read the `fn2()` code and fix it to run as it should. Make a new version called `fn2_fixed()`.
 
-Compile the function (not build, compile) to make sure it follows the rules.
+The following is a debugging session for `fn1()`. I'm not explaining any of it, just showing some stuff. Notice that I set a breakpoint I wanted to change, and searched the docs to find the command to do that (`clear`).
 
-**Note**: `ostream` is a category of all possible output streams (streams like `cout` and `ostringstream`). This function should be invoked with a specific `ostream` (either `cout` or `ostringstream`).
+Also, the lines numbers are now off because you have a `fn2_fixed()` in the code to get it to run.
 
-&nbsp;
+```
+(gdb) break main
+Breakpoint 1 at 0x400e0f: file badString.cpp, line 40.
+(gdb) break fn2_fixed
+Breakpoint 2 at 0x400c72: file badString.cpp, line 20.
+(gdb) unbreak fn2_fixed
+Undefined command: "unbreak".  Try "help".
+(gdb) help break
+Set breakpoint at specified line or function.
+break [PROBE_MODIFIER] [LOCATION] [thread THREADNUM] [if CONDITION]
+PROBE_MODIFIER shall be present if the command is to be placed in a
+probe point.  Accepted values are `-probe' (for a generic, automatically
+guessed probe type) or `-probe-stap' (for a SystemTap probe).
+LOCATION may be a line number, function name, or "*" and an address.
+If a line number is specified, break at start of code for that line.
+If a function is specified, break at start of code for that function.
+If an address is specified, break at that exact address.
+With no LOCATION, uses current execution address of the selected
+stack frame.  This is useful for breaking on return to a stack frame.
 
-Your `main()` function should go in main.cpp.
+THREADNUM is the number from "info threads".
+CONDITION is a boolean expression.
 
-In main.cpp, be sure to `#include "functions.hpp"` (note the quotes). This makes all of the functions in functions.hpp available to main.cpp. 
+Multiple breakpoints at one place are permitted, and useful if t---Type <return> to continue, or q <return> to quit---
+heir
+conditions are different.
 
-Write a `main()` function that:
-1. Prompts for a string to be split
-2. Prompts for the single character to split the string with
-3. Splits the string using the `split()` function (which returns a `vector<string>`, remember)
-4. Prints the vector using the `print_vector()` function
+Do "help breakpoints" for info on other commands dealing with breakpoints.
+(gdb) help breakpoints
+Making program stop at certain points.
 
-Compile (not build) main.cpp to see that it follows the rules. If you've successfully compiled it, build the project with the output executable name as "main" to test everything.
+List of commands:
 
-⭐ Demonstrate a working "main" executable to your TA.
+awatch -- Set a watchpoint for an expression
+break -- Set breakpoint at specified line or function
+break-range -- Set a breakpoint for an address range
+catch -- Set catchpoints to catch events
+catch assert -- Catch failed Ada assertions
+catch catch -- Catch an exception
+catch exception -- Catch Ada exceptions
+catch exec -- Catch calls to exec
+catch fork -- Catch calls to fork
+catch load -- Catch loads of shared libraries
+catch rethrow -- Catch an exception
+catch signal -- Catch signals by their names and/or numbers
+catch syscall -- Catch system calls by their names and/or numbers
+catch throw -- Catch an exception
+catch unload -- Catch unloads of shared libraries
+catch vfork -- Catch calls to vfork
+clear -- Clear breakpoint at specified line or function
+commands -- Set commands to be executed when a breakpoint is hit
+---Type <return> to continue, or q <return> to quit---q
+Quit
+(gdb) clear
+No source file specified.
+(gdb) clear fn2_fixed
+Deleted breakpoint 2
+(gdb) break fn1
+Breakpoint 3 at 0x400d8f: file badString.cpp, line 35.
+Breakpoint 1, main () at badString.cpp:41
+warning: Source file is more recent than executable.
+(gdb) run
+41	  string my_string = "abcdefg";
+(gdb) n
+42	  cout << fn2_fixed(my_string) << endl;
+(gdb) continue
+Continuing.
+terminate called after throwing an instance of 'std::out_of_range'
+  what():  basic_string::substr: __pos (which is 18446744073709551615) > this->size() (which is 7)
 
-&nbsp;
+Program received signal SIGABRT, Aborted.
+0x00007ffff7244067 in __GI_raise (sig=sig@entry=6) at ../nptl/sysdeps/unix/sysv/linux/raise.c:56
+56	../nptl/sysdeps/unix/sysv/linux/raise.c: No such file or directory.
 
-### Assignment Notes
+(gdb) bt
+#0  0x0000000000400e45 in fn1 (str="abcdefg") at badString.cpp:37
+#1  0x0000000000400f0f in main () at badString.cpp:43
 
-1. Consider using the `getline()` function for your implementation of `split()`.
-    - `getline()` takes a delimiter character as a third argument. In combination with an input string stream, you can use `getline()` to split the string and `push_back()` each element onto the vector. 
-    - Example: a call to `getline(stream, line, delim)` gets the string from `stream` (could be an `istream`, `ifstream`, `istringstream`, etc.) up to the end of `line`, or the `delim` character.
+(gdb) up 9
+#9  0x0000000000400f0f in main () at badString.cpp:43
+43	  cout << fn1(my_string) << endl;
 
-2. Default parameter values needs to be set at **declaration time**, which means that the default value for a function parameter should be in the header file (where the declaration is). If it is in the declaration, it should not be in the definition.
+(gdb) down 1
+#8  0x0000000000400e45 in fn1 (str="abcdefg") at badString.cpp:37
+37	  return str.substr(indx-1, 3);
+
+(gdb) print indx
+$1 = 0
+```
+
+⭐ What went wrong here? Can you fix it? Show your TA.
+
+## Keyboard Shortcuts
+
+`gdb` supports command line completion; by typing in a prefix, you can hit TAB and `gdb` will try to complete the command line for you.
+
+Also, you can just give the unique prefix of a command and `gdb` will execute it. For example, rather than entering the command, `print x`, you can enter `p x` to print out the value of `x`.
+
+The up and down arrow keys can be used to scroll through previous command lines, so you do not need to re-type them each time.
+
+If you hit RETURN at the `gdb` prompt, `gdb` will execute the most recent command again. This is particularly useful if you are stepping through the execution -- you don't have to type `next` each time you want to execute the `next` instruction -- you can type it one time, and then hit RETURN for as long as you'd like.

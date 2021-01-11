@@ -1,153 +1,175 @@
 ---
-title: Lab 02
+title: Lab - Input and Output
 ---
 
-# Lab 02 - Types and Math
+# Lab - Input and Output
 
-## Copying, Moving and Deleting Files in the Terminal
+## Directory Navigation in the Terminal
 
-**Disclaimer**: the terminal is a very powerful tool. And with great power, comes great responsibility (Uncle Ben). Be aware that mistakes at the terminal can break computers and delete important files without warning, so be sure your work is always backed up.
+At the beginning of most labs, there will be a section on new skills to make you more proficent at the command line. Many tasks can only be performed at the terminal (or are easier to perform at the terminal), so becoming comfortable there is important. Many of the classes after this one will expect at least a basic familiarity of the command line, so pay special attention to these sections.
 
-### `cp`
+Log into Mimir and open the IDE. Use the terminal in Mimir's IDE to follow along.
 
-The `cp` command "copies" files from one location to another. It's used with two arguments:
+### `pwd`
 
-1. The source file, the file you want to copy
-2. The destination file, where you want your copy to be placed
+The first command you need to learn is one of the simplest, `pwd`. At the terminal, type the command `pwd` and hit enter.
 
-You can copy files that are in your working directory or in another directory by specifying a path. Examples:
+`pwd` is short for "print working directory". It outputs the path of the working directory i.e., the directory your terminal currently has open. If you get lost, (and it is easy to do with only the text-based terminal for navigation), `pwd` can show you where you are.
 
-This copies a.txt into a file called b.txt:
+### `ls`
 
-```bash
-cp a.txt b.txt
-```
+The `ls` command outputs the names of all of the folders and files in the working directory. `ls` is short for "list" (as in "list" the contents).
 
-This copies c.txt (which is in the parent folder) to a file called c.txt (which is in the grandparent folder):
+Folder names end with a `/`, file names do not. Some terminals also add colorized output to `ls` to denote different types of files. For instance, Mimir's terminal has folders in blue, and files in white.
 
-```bash
-cp ../c.txt ../../c.txt
-```
+### `cd`
 
-This copies the d.txt file in my Downloads folder to the current directory. If you specify a directory as a destination, it will create a file with the same name there.
+The `cd` command is short for "change directory". It allows you to change your working directory to a different folder.
+
+Lets say you run `pwd` and you get the output of:
 
 ```bash
-cp ~/Downloads/d.txt .
+/home/joshua/cse_232__summer_2017/lab01_new_horizons
 ```
 
-`cp` can also copy directories if you use the `-r` flag. The "r" stands for "recursive", meaning to copy the directory and all sub-directories of it, recursively. Example:
-
-This copies the directory, "other", into a directory called "other2":
+Your current working directory is named "lab01_new_horizons". If you run `ls`, you would get:
 
 ```bash
-cp -r other other2
+lab01/
 ```
 
-1. [Save this lab02.zip file to your My Documents folder.](../assets/downloads/lab02.zip)
-2. Right click the zipped file in My Documents and select "Extract Here". You should now have a folder called "lab02".
-3. Change directories to My Documents (`cd ~/My_Documents`).
-4. `cd` to the folder named "lab02", then to the subfolder named "b_folder", then to the folder named "start".
-5. If you run `ls`, you should see a folder named "other" and a file named "f.txt".
-6. Copy the file named "f.txt" to the file "f2.txt".
-7. Copy the folder named "a_folder" to the working directory. The "a_folder" is in the same folder as "b_folder".
-
-⭐ Please show your TA the output from `ls`. There should be four items in the folder named "start":
-
-- f.txt
-- f2.txt
-- other/
-- a_folder/
-
-### `mv`
-
-The `mv` command is short for "move" and is identical to `cp`, except the original source doesn't exist after it has been moved to the destination. `mv` does not need the `-r` flag to move folders, it is happy to move folders just like files. Example:
+This means that there is only one thing in this folder, a subfolder called "lab01". If you wanted to do things in that subfolder, you would use the `cd` command like so:
 
 ```bash
-mv other other2
+cd lab01
 ```
 
-Run the above command, and confirm the the "other" folder no longer exists, and that there's now an "other2" folder present. Be sure your working directory is the "start" folder.
+Now you are in the folder named "lab01", you can confirm such with `pwd` and `ls`.
 
-The `mv` command is often used to rename directories and folders.
+### Special Directory Names
 
-### `rm`
-
-The `rm` command is short for "remove". 
-
-**Warning**: files deleted with `rm` are gone forever. They don't go to the Recycle Bin. Please be careful with `rm`.
-
-The `rm` command takes one argument: the file or folder you wish to delete. Like `cp`, if you wish to delete a folder, you need to supply the `-r` flag. Example:
-
-Deletes the file, f.txt:
+There are a few "special" directory names that you need to know. The first is the home directory. This directory's name is usually the username of the account, and it contains all of the user's files and folders. Inside the home folder is the "Desktop" folder (for all the things on your desktop), the "Downloads" folder and other folders as well (like "Music", "Videos", "Applications", etc.). The home folder is often specified using the tilde symbol (`~`). So if you want to `cd` to your home folder, run:
 
 ```bash
-rm f.txt
+cd ~
 ```
 
-Deletes the a_folder, and everything within it:
+**Note**: on most systems, running `cd` with no arguments also takes you to the home folder.
+
+Sometimes you want to go the parent folder of your working directory. In the example above, we moved from the folder "lab01_new_horizons" to its subfolder "lab01". Trying to get back by running...
 
 ```bash
-rm -r a_folder
+cd lab01_new_horizons
 ```
+
+...would fail because there is no folder named "lab01_new_horizons" in "lab01".
+
+The way to go to the parent directory (in this case, "lab01_new_horizons"), you need to run:
+
+```bash
+cd ..
+```
+
+The `..` is a strange way to symbolize the parent directory. In fact, `.` denotes the working directory, a fact that will be useful to know in later labs.
+
+The last "special" directory is the root directory. The root directory is the directory that is the ultimate parent of all the other directories on the computer. It is denoted by a single `/` symbol. In fact, you can specify any folder on the computer by starting with the root directory and working your way to the directory you actually want. So the path `/home/joshua/cse_232__summer_2017/lab01_new_horizons` specifies that the folder I want is:
+
+- In the root folder (the starting `/`)
+- In the folder named "home"
+- In the folder named "joshua"
+- In the folder named "cse_232__summer_2017"
+- And it is named "lab01_new_horizons"
+
+**Video description**: https://www.youtube.com/watch?v=zx4kBG90uBg
+
+⭐ Please show your TA that you can use the commands: `pwd`, `ls` and `cd`.
+
+### Formatting your code
+
+The C++ compiler is extremely permissive as to the format of the code it accepts. However, our brains have a harder time parsing poorly formatted code. We will be covering how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html), but for this course, all that is needed is to log into chuck.egr.msu.edu to use the tool.
+
+Let's say you have a file named "project.cpp". To use `clang-format` to auto-format your code, run:
+
+`clang-format --style=Google -i project.cpp`
+
+The above line will format the project.cpp file according to the Google Style Guide (more on that later).
 
 ## Coding Assignment
 
 ### Background
 
-There are many properties of numbers that one can investigate. The ancient Greeks were fascinated by the properties of integers, even ascribing them mystical properties.
+The New Horizons spacecraft, launched January 19th 2006, is the first earth spacecraft to have made contact with the planet, Pluto. On January 1st, 2019 it was scheduled to make contact with the first Kuiper belt object, KBO-2014-KU69. The [NASA update page](http://pluto.jhuapl.edu/Mission/Where-is-New-Horizons/index.php) reported it at a distance of 37.33 Astronomical Units (AU) from the Sun, traveling away at 14.33 km/sec (8.90 mi/sec) on 12/30/2016.
 
-One such property is an integer's _additive persistence_, and its resulting _additive root_ ([see this page for more information](http://mathworld.wolfram.com/AdditivePersistence.html)). Additive persistence is a property of the sum of the digits of an integer. The sum of the digits is found, and then the summation of digits is performed, creating a new sum. This process repeats until a single integer digit is reached. Consider the following example:
-
-1.  The beginning integer is 1234
-2.  The sum of its digits is 1+2+3+4 = 10
-3.  The integer is now 10
-4.  The sum of its digits is 1+0 = 1
-5.  The integer is now 1. When the value reaches a single digit, we are finished. This final integer is the additive root.
-
-The number of cycles is the additive persistence. The integer, 1234, has an additive persistence of 2 (first sum was 10, then the second sum was 1). The final digit reached is called the integer's additive root. The integer, 1234, has an additive root of 1.
+For this lab, you will use the `cin` and `cout` streams, along with some simple mathematics for calculating New Horizon's distance from the Sun. The important part of the assignment is to learn the skills needed to access the class web site, access a project description, and create a new program in C++.
 
 ### Program Specifications
 
-Accept a series of integers from standard input (`cin`). The program ends under one of the following circumstances (meaning that we repeat this entire process -- use a loop):
-1.  If the next gathered integer is a negative number
-2.  If all the integers from the file have been processed (EOF encountered, i.e., `cin` returns `false`)
+Your program will prompt the user for an integer number (a number without decimal points) that indicates the number of days _after_ 12/30/2016, starting at a distance 37.33 AU from the Sun. You will calculate the distance of New Horizons from the Sun using the numbers from 12/30/2016 (assume velocity is constant) _plus_ the user provided number of days, and report:
 
-If the given integer is a single digit, report its additive persistence as 0, and its additive root as itself on a single line as two space-separated numbers
+- Distance in kilometers (1 AU = 149,598,000 km) on a line by itself
+- Distance in miles (1 AU = 92,955,800 mile) on a line by itself
+- Round trip time for radio communication in hours. Radio waves travel at the speed of light, listed at 299,792,458 meters/second, on a line by itself
+- Provide 2 decimal points of accuracy using `std::fixed` and `std::setprecision`. Both are contained within the `<iomanip>` header, and you can use them as follows:
 
-For each multi-digit, non-negative integer, output on a single line the two space-separated numbers:
-1.  The integer's additive persistence
-2.  The integer's additive root
+```c++
+std::cout << std::fixed;
+std::cout << std::setprecision(2);
+```
 
 ⭐ Please show the TA your working program.
 
 ### Assignment Notes
 
-How do you get started on a program like this?
+There is a Mimir assignment for this lab that you can use to test your program.
 
-1.  Break the problem down into parts. Here are some obvious ones:
-    - Gather input from the file, and check for negative numbers (the quit condition)
-    - Check if the input is between 0 and 9 (that's a special case, as indicated above)
-    - Otherwise, write a loop that calculates the persistence (track the count through this loop)
-    - Inside that loop, write another loop that can sum the digits of an integer until it reaches a single digit
-2.  How do you get the digits of an integer? Look at using a combination of the division (`/`) and modulus (`%`) operators.
-3.  I would add some "diagnostic output" so you can be sure things are working as they should. For each pass through the loop of the additive persistence, print each new integer created. You can always fix it to give the exact, required output later.
+There are some rounding issues here, so be careful! To make the kilometer/mile calculations, use the constants (speed and distance) provided. To make the round trip calculation, use your distance in km and the speed of light constant provided. You'll get slightly different answers if you try to convert the two distances or the two speeds.
 
-### Want to do more?
+You will need to work with the `cin` and `cout` streams and their operators `>>` (for `cin`) and `<<` (for `cout`). You will also need to declare the appropriate variables: `int` (a 64 bit integer) for values like days, and `double` for calculation values.
 
-There is also a multiplicative persistence. Put that in your loop and calculate it for each number.
+`cout` takes either variable values or strings (between `" "`) and outputs them to the console. You can use multiple `<<` operators on the same cout stream, usually ending with `endl`. 
 
-The _multiplicative persistence_ ([see this page for more information](http://mathworld.wolfram.com/MultiplicativePersistence.html)) and resulting _multiplicative root_ are determined the same way, only multiplying the digits of an integer instead of adding. For example:
+Assuming the variable, `int_var`, has the value 23...
 
-1.  The beginning integer is 1234
-2.  The product of its digits is 1\*2\*3\*4 = 24
-3.  The integer is now 24
-4.  The product of its digits is 2\*4 = 8
-5.  The integer is now 1. When the value reaches a single digit, we are finished. This final integer is the multiplicative root
+```c++
+std::cout << "This is a string: " << int_var << " the end"
+          << std::endl;
+```
 
-As before, the number of cycles is the multiplicative persistence. The final digit reached is called the integer's multiplicative root. The integer, 1234, has an multiplicative persistence of 2, and a multiplicative root of 8.
+...this small program would output:
+
+```
+This is a string: 23 the end
+```
+
+`cin` will take an input value from the command line into a variable of _a particular type_. It does so until it hits a space (space separated values) or an end of a line. For example:
+
+```c++
+std::cin >> int_var;
+```
+
+If you enter an integer value to the command line, it will be read into the variable with no conversion required.
+
+```c++
+int multiplier, number;
+
+std::cin >> number;
+std::cin >> multiplier;
+
+std::cout << "The number " << number << " times "<< multiplier
+          << " is " << number * multiplier << std::endl;
+```
+
+With inputs 10 and 2 respectively, we get:
+
+```
+The number 10 times 2 is 20
+```
+
+The operations on these numbers are: + (sum), - (difference), * (product), / (division) and % (modulus, integer only). The last two deserve special comment.
+
+If an integer is divided by another integer, the result is an integer. Thus the result of `6 / 4` is `1`. In contrast, `6.0 / 4` is `1.5`. That is, the `/` operator results in the **integer quotient if using integers, and floats if using floats**. The result of `6 % 4` is the integer remainder of the division, thus `2` (6 divided by 4 is 1, with a remainder of 2). There is no equivalent for `%` in floating point math.
 
 ### Things to Think About
 
-- What type should the numeric values be (`int`? `long`?) and why?
-- What is the largest `long` you can have?
-- What happens when you enter a number that is too large? For example, the smallest number with an additive persistence of 4 is 19999999999999999999999. Can you make your calculation with that number?
+- What happens when you try to divide by zero when you run your program?
+- What happens when `std::cin` obtains a letter instead of a number?

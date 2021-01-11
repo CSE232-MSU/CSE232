@@ -49,7 +49,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>00: 2021-01-10</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week00.html">Week 00</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab00.html">Lab 00</a></td>
+            <td>No Lab This Week</td>
             <td></td>
             <td></td>
             <td>No Assignments are due during Review Week (No Lab or Help Room).</td>
