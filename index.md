@@ -189,6 +189,7 @@ Please direct any and all written communication to Piazza (you can post anonymou
 
 If you would like a one-on-one meeting with an instructor, please make a private Piazza post detailing your request and availability.
 
+Help Room will begin on Tuesday, 2021-01-19. Regular hours will be posted here then.
 <!--
 | Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
 | :---:  | :---:  | :---:   | :---:     | :---:    | :---:  | :---:    |
