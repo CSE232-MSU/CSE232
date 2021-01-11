@@ -73,12 +73,12 @@ int main() {
 }
 ```
 
-Write or copy-paste this code into a file named "lab00.cpp" to follow along.
+Write or copy-paste this code into a file named "lab01.cpp" to follow along.
 
 To compile our Hello world program, type the following into terminal:
 
 ```cmd
-g++ lab00.cpp -std=c++17 -Wall
+g++ lab01.cpp -std=c++17 -Wall
 ```
 
 `g++` is the GNU C++ compiler. In the above line, we have added a `-std=c++17` flag to ensure that the code is compiled using the newer C++17 standard (by default, most C++ compilers use the C++98 standard, which does not include all of the features/extensions that we will be using in this class).
@@ -111,15 +111,13 @@ You repeat this process of edit-compile-run until you get the desired result.
 
 ## Mimir
 
-For some labs, and **all projects**, we will be using Mimir. Mimir provides a convienent way to write, test, and submit code. Most assignments will have an associated Mimir page like this one. Follow the directions below to submit your Lab 00 assignment for automatic grading.
+For some labs, and **all projects**, we will be using Mimir. Mimir provides a convienent way to write, test, and submit code. Most assignments will have an associated Mimir page like this one. Follow the directions below to submit your Lab 01 assignment for automatic grading.
 
 ### Accessing Mimir
 
 Joining Mimir is **required** for this course. You have to join since it is the only way you can turn in your work. In the long run, I think you will appreciate having the ability to test your code before turning it in.
 
-You should have already recieved an invitation to Mimir for this class. If you have not yet received it, **please inform your TA**.
-
-In the Live Coursework section, find and click the link to the Lab 00 assignment (obviously we aren't in Spring 2018, but you get the idea):
+In the Live Coursework section, find and click the link to this lab assignment (obviously we aren't in Spring 2018, but you get the idea):
 
 <div align="center">
     <img src="../assets/images/mimir_start.png">
@@ -146,15 +144,15 @@ The Mimir IDE can also be used to write C/C++ code. We'll be coding here today j
 
 ## Coding Assignment
 
-Lab 00 consists of two (hopefully simple) tasks. Correcting a typo in the file "hello_world.cpp" and creating a new file called "academic_dishonesty.cpp".
+Lab 01 consists of two (hopefully simple) tasks. Correcting a typo in the file "hello_world.cpp" and creating a new file called "academic_dishonesty.cpp".
 
 ### hello_world.cpp
 
-I tried to write a "hello_world.cpp" file to show you how easy it is, but I made a typo. Take a look at the "hello_world.cpp" file. It should already be open, but it is located in a folder with the class' name -> lab00__hello_world -> lab00.
+I tried to write a "hello_world.cpp" file to show you how easy it is, but I made a typo. Take a look at the "hello_world.cpp" file. It should already be open, but it is located in a folder with the class' name -> lab01__hello_world -> lab01.
 
 Please correct my spelling of "Hello", then save the file.
 
-Right-click on the **parent** of the folder named "lab00", and select "Submit folder contents". Be sure to select the correct assignment as well.
+Right-click on the **parent** of the folder named "lab01", and select "Submit folder contents". Be sure to select the correct assignment as well.
 
 Now you can go to your submissions page (the other Mimir tab), and confirm that you are passing the tests regarding hello_world.cpp.
 
@@ -162,7 +160,7 @@ Now you can go to your submissions page (the other Mimir tab), and confirm that 
 
 The next part of the assignment involves making a new file called "academic_dishonesty.cpp".
 
-Right-click on the folder named "lab00" and create a new file named "academic_dishonesty.cpp". Make sure the name is _exactly_ what is indicated.
+Right-click on the folder named "lab01" and create a new file named "academic_dishonesty.cpp". Make sure the name is _exactly_ what is indicated.
 
 **Note**: you may need to right-click on the folder tree and select "refresh" for your newly created file to exist.
 
