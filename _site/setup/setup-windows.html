@@ -7,6 +7,9 @@
     <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
     <link href="/CSE232/assets/css/syntax.css" rel="stylesheet">
     <style>
+        img {
+            box-shadow: 8px 8px 8px #888888;
+        }
         #course-calendar {
             text-align: center;
             width: 100%;
@@ -232,11 +235,13 @@
 <p>A second menu will appear at the top. Select “CMD” from that menu, then close and reopen VSCode to see your terminal open in command prompt.</p>
 
 <ol start="11">
-  <li>The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you’ll need to be comfortable with it for future classes. To compile our helloworld.cpp program, type the following command into the terminal:</li>
+  <li>The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you’ll need to be comfortable with it for future classes. Save your helloworld.cpp file if you haven’t already (CTRL + S), and in order to compile our lovely program, type the following command into the terminal:</li>
 </ol>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ helloworld.cpp <span class="nt">-Wall</span> <span class="nt">-std</span><span class="o">=</span>c++17
 </code></pre></div></div>
+
+<p><strong>Note</strong>: there has been one reported case on Piazza where compiling worked using Command Prompt, but not Windows Powershell. If you get an error message running this command, try doing the optional step shown above.</p>
 
 <ol start="12">
   <li>This produces a file named “a.exe” – you should see it appear in the file explorer. To run your compiled program, type into the terminal:</li>

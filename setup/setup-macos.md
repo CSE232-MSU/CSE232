@@ -109,7 +109,7 @@ int main() {
 </div>
 
 {:start="11"}
-11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. To compile our helloworld.cpp program, type the following command into the terminal:
+11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. Save your helloworld.cpp file if you haven't already (CMD + S), and in order to compile our lovely program, type the following command into the terminal:
 
 ```bash
 g++ helloworld.cpp -Wall -std=c++17

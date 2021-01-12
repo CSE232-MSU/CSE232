@@ -149,11 +149,13 @@ int main() {
 A second menu will appear at the top. Select "CMD" from that menu, then close and reopen VSCode to see your terminal open in command prompt. 
 
 {:start="11"}
-11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. To compile our helloworld.cpp program, type the following command into the terminal:
+11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. Save your helloworld.cpp file if you haven't already (CTRL + S), and in order to compile our lovely program, type the following command into the terminal:
 
 ```bash
 g++ helloworld.cpp -Wall -std=c++17
 ```
+
+**Note**: there has been one reported case on Piazza where compiling worked using Command Prompt, but not Windows Powershell. If you get an error message running this command, try doing the optional step shown above.
 
 {:start="12"}
 12. This produces a file named "a.exe" -- you should see it appear in the file explorer. To run your compiled program, type into the terminal:
@@ -165,7 +167,7 @@ g++ helloworld.cpp -Wall -std=c++17
 (If you're using command prompt as your shell, you can simply type `a.exe`, or even just `a` as an alternative)
 
 {:start="13"}
-13. You should now see "Hello world" displayed to the console!
+13. You should now see "Hello world" displayed to the console! 
 
 <img src="../assets/images/vscode-installation-windows/14.png">
 
