@@ -51,7 +51,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <th>Labs</th>
             <th>Due on Monday</th>
             <th>Due on Thursday</th>
-            <th>Other</th>
+            <th>Notes</th>
         </tr>
     </thead>
     <tbody>
@@ -61,7 +61,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>No Lab This Week</td>
             <td></td>
             <td></td>
-            <td>No Assignments are due during Review Week (No Lab or Help Room).</td>
+            <td>No Assignments are due during Review Week (no lab or help room).</td>
         </tr>
         <tr>
             <td>01: 2021-01-18</td>
@@ -117,7 +117,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab07.html">Lab 07</a></td>
             <td>Homework 11</td>
             <td>No Thursday Homework</td>
-            <td>2020-03-02 and 2020-03-03 are Wellness Days (No Lab or Help Room)</td>
+            <td>2020-03-02 and 2020-03-03 are Wellness Days (no labs or help room)</td>
         </tr>
         <tr>
             <td>08: 2021-03-08</td>
@@ -125,7 +125,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab08.html">Lab 08</a></td>
             <td>Homework 12</td>
             <td>Homework 13</td>
-            <td>The midterm exam on Monday and Tuesday. Details will be provided as date approaches. <sup>+</sup></td>
+            <td>Midterm exam on Monday and Tuesday. Details will be provided as date approaches.<sup>+</sup></td>
         </tr>
         <tr>
             <td>09: 2021-03-15</td>
@@ -173,7 +173,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab14.html">Lab 14</a></td>
             <td>Homework 22</td>
             <td></td>
-            <td>Wednesday is Last Day of Classes. No Labs or Help Room on Thursday or afterwards.</td>
+            <td>Wednesday is the last day of classes. No labs or Help Room on Thursday or afterwards.</td>
         </tr>
         <tr>
             <td>15: 2021-04-26</td>
@@ -181,7 +181,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
             <td></td>
             <td></td>
-            <td>Final Exam on Wednesday and Thursday with a review session on Monday. <sup>+</sup></td>
+            <td>Final Exam on Wednesday and Thursday, with a review session on Monday.<sup>+</sup></td>
         </tr>
     </tbody>
 </table>
