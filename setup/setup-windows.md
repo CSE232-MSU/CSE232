@@ -312,4 +312,4 @@ After defining the `msg` variable by stepping through (with **Step Over**), you 
 
 The `vector` type is C++'s version of arrays/lists. You'll learn more about them during Week 06 😉
 
-If you've done everything here without a hitch, head on back to [Lab 00](../labs/lab00.html) for the rest of the CSE232 setup. You're almost done!
+If you've done everything here without a hitch, head on back to [Lab 01](../labs/lab01.html) for the rest of the CSE232 setup. You're almost done!
