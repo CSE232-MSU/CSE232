@@ -7,19 +7,12 @@
     <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
     <link href="/CSE232/assets/css/syntax.css" rel="stylesheet">
     <style>
-        body {
-            overflow: -moz-scrollbars-none;
-            -ms-overflow-style: none;
-        }
-        body::-webkit-scrollbar {
-            width: 0!important;
-        }
         #course-calendar {
             text-align: center;
             width: 100%;
         }
         #course-calendar td {
-            width: calc(100% / 7);
+            width: calc(100% / 6);
             height: 60px;
         }
         #course-calendar td:first-child {
@@ -59,130 +52,108 @@
 </nav>
     <div class="markdown-body mx-auto" style="max-width: 1000px;">
         <div class="border rounded-2 px-5 py-2 anim-fade-in">
-            <h1>Week 13</h1>
-<p><a href="https://docs.google.com/presentation/d/1DUX7NRBCf-v0mcifc9Ej-AcGngIAZrxppAlf8vjSYbk/edit?usp=sharing" target="_blank">Lecture Slides (Classes Part 3)</a></p>
-<h3>Rule of Three Review</h3>
+            <h1 id="week-13">Week 13</h1>
+
+<p><a href="https://docs.google.com/presentation/d/1DUX7NRBCf-v0mcifc9Ej-AcGngIAZrxppAlf8vjSYbk/edit?usp=sharing">Lecture slides (Classes Part 3)</a></p>
+
+<h3 id="rule-of-three-review">Rule of Three Review</h3>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/mWIe_2NMiVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mWIe_2NMiVE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-<h3>Composite Class</h3>
+
+<h3 id="composite-class">Composite Class</h3>
+
+<p><a href="week13/19.1-main.cpp">19.1-main.cpp</a></p>
+
+<p><a href="week13/19.1-stack.cpp">19.1-stack.cpp</a></p>
+
+<p><a href="week13/19.1-stack.h">19.1-stack.h</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/Q8YuAeyVA2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week13/19.1-main.cpp" target="_blank">19.1-main.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/19.1-stack.cpp" target="_blank">19.1-stack.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/19.1-stack.h" target="_blank">19.1-stack.h</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Q8YuAeyVA2w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Bad Dynamic Memory Class</h3>
+
+<h3 id="bad-dynamic-memory-class">Bad Dynamic Memory Class</h3>
+
+<p><a href="week13/19.2-badStack.cpp">19.2-badStack.cpp</a></p>
+
+<p><a href="week13/19.2-badStack.h">19.2-badStack.h</a></p>
+
+<p><a href="week13/19.2-main.cpp">19.2-main.cpp</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/rYSHgP3tgdE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week13/19.2-badStack.cpp" target="_blank">19.2-badStack.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/19.2-badStack.h" target="_blank">19.2-badStack.h</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/19.2-main.cpp" target="_blank">19.2-main.cpp</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rYSHgP3tgdE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Fixing the Bad Dynamic Memory Class</h3>
+
+<h3 id="fixing-the-bad-dynamic-memory-class">Fixing the Bad Dynamic Memory Class</h3>
+
+<p><a href="week13/19.3-main.cpp">19.3-main.cpp</a></p>
+
+<p><a href="week13/19.3-stack.cpp">19.3-stack.cpp</a></p>
+
+<p><a href="week13/19.3-stack.cpp">19.3-stack.h</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/ceoNhThBQr0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week13/19.3-main.cpp" target="_blank">19.3-main.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/19.3-stack.cpp" target="_blank">19.3-stack.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/19.3-stack.h" target="_blank">19.3-stack.h</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ceoNhThBQr0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Copy and Swap Idiom</h3>
+
+<h3 id="copy-and-swap-idiom">Copy and Swap Idiom</h3>
+
+<p><a href="week13/19.4-main.cpp">19.4-main.cpp</a></p>
+
+<p><a href="week13/19.4-stack.cpp">19.4-stack.cpp</a></p>
+
+<p><a href="week13/19.4-stack.h">19.4-stack.h</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/VvJh_avtqdU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week13/19.4-main.cpp" target="_blank">19.4-main.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/19.4-stack.cpp" target="_blank">19.4-stack.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/19.4-stack.h" target="_blank">19.4-stack.h</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VvJh_avtqdU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Growing the Stack</h3>
+
+<h3 id="growing-the-stack">Growing the Stack</h3>
+
+<p><a href="week13/main.cpp">main.cpp</a></p>
+
+<p><a href="week13/stack.cpp">stack.cpp</a></p>
+
+<p><a href="week13/stack.h">stack.h</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/W1nHH9eUkXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week13/main.cpp" target="_blank">main.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/stack.cpp" target="_blank">stack.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/stack.h" target="_blank">stack.h</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/W1nHH9eUkXg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Templates and Classes</h3>
+
+<h3 id="templates-and-classes">Templates and Classes</h3>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/mukWc8O-bQw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mukWc8O-bQw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-<h3>Templated Friends</h3>
+
+<h3 id="templated-friends">Templated Friends</h3>
+
+<p><a href="week13/main_composite.cpp">main (composite).cpp</a></p>
+
+<p><a href="week13/stack_composite.h">stack (composite).h</a></p>
+
+<p><a href="week13/main_dynamic.cpp">main (dynamic).cpp</a></p>
+
+<p><a href="week13/stack_dynamic.h">stack (dynamic).h</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/J5uY-Zkq6LU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week13/main_composite.cpp" target="_blank">main_composite.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/stack_composite.h" target="_blank">stack_composite.h</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/main_dynamic.cpp" target="_blank">main_dynamic.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/stack_dynamic.h" target="_blank">stack_dynamic.h</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J5uY-Zkq6LU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Stack Using a Linked List</h3>
+
+<h3 id="stack-using-a-linked-list">Stack Using a Linked List</h3>
+
+<p><a href="week13/main_linked.cpp">main (linked).cpp</a></p>
+
+<p><a href="week13/stack_linked.h">stack (linked).h</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/l5gGgkCChGg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week13/main_linked.cpp" target="_blank">main_linked.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week13/stack_linked.h" target="_blank">stack_linked.h</a>
-</div>
-</div>
-</div>
-</details>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/l5gGgkCChGg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
 
         </div>
     </div>
+    <script src="/CSE232/assets/js/progressbar.js" type="text/javascript"></script>
 </body>
 </html>

@@ -34,6 +34,15 @@ Links to lecture videos, projects, and other materials will be made available as
 
 [Add to Google Calendar](https://calendar.google.com/calendar/u/0?cid=anFtcGxzdGcwczFqa2FnZDV1dWZldmxqMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
 
+<div align="center">
+    <p style="font-weight: 600;" id="course-progress-header"></p>
+    <span class="Progress" style="width: 75%">
+        <span class="Progress-item bg-green" id="course-progress"></span>
+    </span>
+</div>
+
+&nbsp;
+
 <table id="course-calendar">
     <thead>
         <tr>

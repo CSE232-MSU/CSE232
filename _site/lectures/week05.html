@@ -7,19 +7,12 @@
     <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
     <link href="/CSE232/assets/css/syntax.css" rel="stylesheet">
     <style>
-        body {
-            overflow: -moz-scrollbars-none;
-            -ms-overflow-style: none;
-        }
-        body::-webkit-scrollbar {
-            width: 0!important;
-        }
         #course-calendar {
             text-align: center;
             width: 100%;
         }
         #course-calendar td {
-            width: calc(100% / 7);
+            width: calc(100% / 6);
             height: 60px;
         }
         #course-calendar td:first-child {
@@ -59,91 +52,74 @@
 </nav>
     <div class="markdown-body mx-auto" style="max-width: 1000px;">
         <div class="border rounded-2 px-5 py-2 anim-fade-in">
-            <h1>Week 05</h1>
-<p><a href="https://docs.google.com/presentation/d/1NVbci9QSjah_Io-BV6gu222Mu_HX6EqxzVJ-7aDJH7k/edit?usp=sharing" target="_blank">Lecture Slides (Functions Part 2)</a></p>
-<p><a href="https://docs.google.com/presentation/d/1AALs-yZUZSb8R0i1ybaO5yf8qawj2-RSwbn2CpDMBiE/edit?usp=sharing" target="_blank">Lecture Slides (Multiple File Compilation)</a></p>
-<h3>Functions with References and Pointers (Oh My!)</h3>
+            <h1 id="week-05">Week 05</h1>
+
+<p><a href="https://docs.google.com/presentation/d/1NVbci9QSjah_Io-BV6gu222Mu_HX6EqxzVJ-7aDJH7k/edit?usp=sharing">Lecture slides (Functions Part 2)</a></p>
+
+<p><a href="https://docs.google.com/presentation/d/1AALs-yZUZSb8R0i1ybaO5yf8qawj2-RSwbn2CpDMBiE/edit?usp=sharing">Lecture slides (Multiple File Compilation)</a></p>
+
+<h3 id="functions-with-references-and-pointers-oh-my">Functions with References and Pointers (Oh My!)</h3>
+
+<p><a href="week05/07.1-swapRef.cpp">07.1-swapRef.cpp</a></p>
+
+<p><a href="week05/07.2-swapPointer.cpp">07.2-swapPointer.cpp</a></p>
+
+<p><a href="week05/07.3-constRefParamCircleArea.cpp">07.3-constRefParamCircleArea.cpp</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/p50Wun08CDA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week05/07.1-swapRef.cpp" target="_blank">07.1-swapRef.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/07.2-swapPointer.cpp" target="_blank">07.2-swapPointer.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/07.3-constRefParamCircleArea.cpp" target="_blank">07.3-constRefParamCircleArea.cpp</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/p50Wun08CDA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Overloaded Functions</h3>
+
+<h3 id="overloaded-functions">Overloaded Functions</h3>
+
+<p><a href="week05/07.4-defaults.cpp">07.4-defaults.cpp</a></p>
+
+<p><a href="week05/07.5-func_sigs.cpp">07.5-func_sigs.cpp</a></p>
+
+<p><a href="week05/07.6-matching.cpp">07.6-matching.cpp</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/J5zjWBBMwQU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week05/07.4-defaults.cpp" target="_blank">07.4-defaults.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/07.5-func_sigs.cpp" target="_blank">07.5-func_sigs.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/07.6-matching.cpp" target="_blank">07.6-matching.cpp</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/J5zjWBBMwQU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<p>The return type of a function is not part of a function's signature. If two functions only differ by return type, it is ambiguous which function should be invoked, and hence raises a compile-time error. Apologies for the confusion.</p>
-<h3>Templates</h3>
+
+<p><strong>Note</strong>: the return type of a function is not part of a function’s signature. If two functions only differ by return type, it is ambiguous which function should be invoked, and hence raises a compile-time error. Apologies for the confusion.</p>
+
+<h3 id="templates">Templates</h3>
+
+<p><a href="week05/07.7-templateFunction.cpp">07.7-templateFunction.cpp</a></p>
+
+<p><a href="week05/07.8-forceTemplate.cpp">07.8-forceTemplate.cpp</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/r6UpNU5ik20" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week05/07.7-templateFunction.cpp" target="_blank">07.7-templateFunction.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/07.8-forceTemplate.cpp" target="_blank">07.8-forceTemplate.cpp</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/r6UpNU5ik20" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Multiple File Compilation</h3>
+
+<h3 id="multiple-file-compilation">Multiple File Compilation</h3>
+
+<p><a href="week05/09.1-main.cpp">09.1-main.cpp</a></p>
+
+<p><a href="week05/09.1-support.cpp">09.1-support.cpp</a></p>
+
+<p><a href="week05/09.1-support.h">09.1-support.h</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/jn8bNPNWfgk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week05/09.1-main.cpp" target="_blank">09.1-main.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/09.1-support.cpp" target="_blank">09.1-support.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/09.1-support.h" target="_blank">09.1-support.h</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jn8bNPNWfgk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
-</div>
-</div>
-</details>
-</div>
-<h3>Multiple File Compilation Continued</h3>
+
+<h3 id="multiple-file-compilation-continued">Multiple File Compilation Continued</h3>
+
+<p><a href="week05/09.2-main.cpp">09.2-main.cpp</a></p>
+
+<p><a href="week05/09.2-functions.cpp">09.2-functions.cpp</a></p>
+
+<p><a href="week05/09.2-functions.h">09.2-functions.h</a></p>
+
 <div align="center">
-<iframe class="border" width="640" height="360" src="https://www.youtube.com/embed/5Oz5a99VhZk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
-<details class="details-reset details-overlay">
-<summary class="btn" aria-haspopup="true" style="width: 640px; text-align: center;">Example Code<div class="dropdown-caret"></div></summary>
-<div class="SelectMenu" style="left: calc(50vw - 320px);">
-<div class="SelectMenu-modal" style="width: 640px;">
-<div class="SelectMenu-list">
-<a class="SelectMenu-item" role="menuitem" href="week05/09.2-main.cpp" target="_blank">09.2-main.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/09.2-functions.cpp" target="_blank">09.2-functions.cpp</a>
-<a class="SelectMenu-item" role="menuitem" href="week05/09.2-functions.h" target="_blank">09.2-functions.h</a>
-</div>
-</div>
-</div>
-</details>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5Oz5a99VhZk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </div>
 
         </div>
     </div>
+    <script src="/CSE232/assets/js/progressbar.js" type="text/javascript"></script>
 </body>
 </html>
