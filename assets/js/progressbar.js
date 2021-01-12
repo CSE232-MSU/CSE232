@@ -2,10 +2,10 @@ const CONV = 24 * 60 * 60 * 1000;
 
 var today = new Date();
 var classes_begin = new Date(year=2021, month=0, date=11);
-var class_end = new Date(year=2021, month=3, date=21);
+var classes_end = new Date(year=2021, month=3, date=21);
 
-var num_days_semester = Math.round((class_end - classes_begin) / CONV);
-var num_days_now = Math.round((class_end - today) / CONV);
+var num_days_semester = Math.round((classes_end - classes_begin) / CONV);
+var num_days_now = Math.round((classes_end - today) / CONV);
 
 var p = (1 - (num_days_now / num_days_semester)) * 100;
 
