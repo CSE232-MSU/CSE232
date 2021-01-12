@@ -27,6 +27,8 @@ We have thoroughly-documented tutorials on how to setup a C++ VSCode environment
 - [MacOS Tutorial](../setup/setup-macos.html)
 - [Linux Tutorial](../setup/setup-linux.html)
 
+**Windows users**: if you encounter an avalanche of trouble with the above tutorial, try installing the [Windows Subsystem for Linux (WSL)](https://code.visualstudio.com/docs/remote/wsl) instead. This also gives you access to local Unix commands, which will be taught in future labs (you can otherwise use the Mimir IDE).
+
 Please come back to this page when you have VSCode ready to go.
 
 ### Code Editors
