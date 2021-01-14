@@ -3,23 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 09</title>
+    <title>Lab - Structs</title>
     <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
     <link href="/CSE232/assets/css/syntax.css" rel="stylesheet">
     <style>
-        body {
-            overflow: -moz-scrollbars-none;
-            -ms-overflow-style: none;
-        }
-        body::-webkit-scrollbar {
-            width: 0!important;
+        img {
+            box-shadow: 8px 8px 8px #888888;
         }
         #course-calendar {
             text-align: center;
             width: 100%;
         }
         #course-calendar td {
-            width: calc(100% / 7);
+            width: calc(100% / 6);
             height: 60px;
         }
         #course-calendar td:first-child {
@@ -59,148 +55,75 @@
 </nav>
     <div class="markdown-body mx-auto" style="max-width: 1000px;">
         <div class="border rounded-2 px-5 py-2 anim-fade-in">
-            <h1 id="lab-09---classes">Lab 09 - Classes</h1>
+            <h1 id="lab---structs">Lab - Structs</h1>
 
-<h2 id="remote-access">Remote Access</h2>
+<h2 id="wildcards">Wildcards</h2>
 
-<p>Often, you’ll want to be able to connect to, and run programs on computers that you don’t have a keyboard attached to. You <em>already</em> do this when connecting to a network over the internet. The primary means that you use to connect to computers at the command line is a tool called “SSH”. SSH allows you to authenticate (usually via your username and password) to a remote computer so you can access its command line.</p>
+<p>When compiling multiple C++ files, it’s pretty annoying to have to specify each .cpp file to the compiler.</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">scp</code> command allows you to copy files to and from your local computer with a remote one.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-std</span><span class="o">=</span>c++17 <span class="nt">-Wall</span> <span class="nt">-g</span> main.cpp stack.cpp disk.cpp io.cpp
+</code></pre></div></div>
 
-<p>The remote computer that you all have access to is called “chuck.egr.msu.edu”, and your authentication credentials are your MSU NetID, and EGR password (<em>not</em> your CSE password). Note that, because this class has transitioned away from using DECS servers to Mimir, you may be unable to access the Chuck server. Certain countries are firewalled as well, unfortunately.</p>
+<p>Recall our discussion in Lab 06 – bash gives an alternative method to select files that match a particular pattern. Notice that the above files were all the files in the folder that ended with ‘.cpp’. You can use a <em>wildcard</em> (the asterisk, <code class="language-plaintext highlighter-rouge">*</code>) to denote all of those files at once. Example:</p>
 
-<p><a href="https://thenewstack.io/linux-lesson-copy-files-over-your-network-with-scp/">Read this tutorial from The New Stack</a>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>g++ <span class="nt">-std</span><span class="o">=</span>c++17 <span class="nt">-Wall</span> <span class="nt">-g</span> <span class="k">*</span>.cpp
+</code></pre></div></div>
 
-<p>⭐ Show your TA the hypothetical command you would run to copy a file, named ‘test.png’, on your laptop’s Downloads folder to your CSE account’s Desktop.</p>
+<p>The <code class="language-plaintext highlighter-rouge">*</code> symbol roughly translates to “all”, where, when combined with the ‘.cpp’ extension, it becomes “all files that end in ‘.cpp’”.</p>
+
+<p>This can be used in other contexts beyond compilation. Let’s say you have a folder named “headers”, where you want to move all of your ‘.h’ files to. You can do so with:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv</span> <span class="k">*</span>.h headers/
+</code></pre></div></div>
+
+<p>⭐ Show your TA what happens when you use wildcards to open multiple ‘.cpp’ files with the <code class="language-plaintext highlighter-rouge">gedit</code> command.</p>
 
 <h2 id="coding-assignment">Coding Assignment</h2>
 
-<p>We are going to work on making our own data structures using a C++ <code class="language-plaintext highlighter-rouge">struct</code>. More specifically, we are going to create some sample member functions for a two-dimensional, euclidean vector, represented as a <code class="language-plaintext highlighter-rouge">struct</code> named <code class="language-plaintext highlighter-rouge">MathVector</code>.</p>
-
-<h3 id="background">Background</h3>
-
-<p>A vector can be thought of as an arrow that has some varying magnitude and direction. It is usually represented by an <img src="https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28x%2C+y%29" alt="(x, y)" /> pair (referred to as the <em>components</em>), where the starting point of the vector is assumed to be at <img src="https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%280%2C+0%29" alt="(0, 0)" />, with the head of the vector meeting at coordinates <img src="https://render.githubusercontent.com/render/math?math=%5Ctextstyle+%28x%2C+y%29" alt="(x, y)" />.</p>
-
-<div align="center">
-    <img src="../assets/images/vectors.png" width="100%" />
-</div>
-
-<p>Below are some of the operations that can be performed on a vector, all of which you’ll ultimately implement for your <code class="language-plaintext highlighter-rouge">MathVector</code> <code class="language-plaintext highlighter-rouge">struct</code>.</p>
-
-<p>For the following examples, let:</p>
-
-<div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%3D+%28x_1%2C+y_1%29" alt="\vec{v} = (x_1, y_1)" />
-</div>
-
-<div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bw%7D+%3D+%28x_2%2C+y_2%29" alt="\vec{w} = (x_2, y_2)" />
-</div>
-
-<h4 id="vector-addition">Vector Addition</h4>
-
-<p>The addition of two vectors returns a new vector whose components are the sums of the operand vectors’ components applied parallely.</p>
-
-<div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%2B+%5Cvec%7Bw%7D+%3D+%28x_1+%2B+x_2%2C+y_1+%2B+y_2%29" alt="\vec{v} + \vec{w} = (x_1 + x_2, y_1 + y_2)" />
-</div>
-
-<p> </p>
-
-<h4 id="vector-multiplication">Vector Multiplication</h4>
-
-<p>Vector multiplication can be done in <em>many</em> ways depending on the second operand. We’ll focus on, and implement two of these.</p>
-
-<p>When a vector is multiplied by a scalar (i.e., any number), it becomes <em>scalar multiplication</em>, where the scalar is simply multiplied against every component of the vector to compose a new vector.</p>
-
-<div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Clambda+%5Cvec%7Bv%7D+%3D+%28%5Clambda+x_1%2C+%5Clambda+y_1%29" alt="\lambda \vec{v} = (\lambda x_1, \lambda y_1)" />
-</div>
-
-<p> </p>
-
-<p>When two vectors are multiplied together, the components are multiplied parallely and summed to return a scalar value (<em>not</em> a new vector). This is called the <em>dot product</em> (there is also a <em>cross product</em>, but we won’t be doing that for today).</p>
-
-<div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cvec%7Bv%7D+%5Ccdot+%5Cvec%7Bw%7D+%3D+x_1+x_2+%2B+y_1+y_2" alt="\vec{v} \cdot \vec{w} = x_1 x_2 + y_1 y_2" />
-</div>
-
-<p> </p>
-
-<h4 id="vector-magnitude">Vector Magnitude</h4>
-
-<p>A vector’s <em>magnitude</em> (AKA its length) can be calculated using a simplified version of the euclidean distance formula. This, again, does not return a new vector – it returns a scalar value.</p>
-
-<div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctext%7Bmagnitude%7D%28%5Cvec%7Bv%7D%29+%3D+%5Csqrt%7Bx_1%5E2+%2B+y_1%5E2%7D" alt="\text{magnitude}(\vec{v}) = \sqrt{x_1^2 + y_1^2}" />
-</div>
-
-<p> </p>
+<p>This lab will have you apply generic algorithms to various programming problems.</p>
 
 <h3 id="program-specifications">Program Specifications</h3>
 
-<p><a href="../assets/downloads/lab09.zip">Download the starter code provided here</a>.</p>
+<p><a href="../assets/downloads/lab_structs.zip">Download the starter code provided here</a>.</p>
 
-<p>Your task is to create an implementation file (named “math_vector.cpp”) that provides the algorithm for all of the member functions shown below (and inside the header file).</p>
-
-<p>Note that some of the work has been done for you. Here is what has been completed so far:</p>
-
-<p><code class="language-plaintext highlighter-rouge">MathVector</code> has two data members:</p>
-<ul>
-  <li><code class="language-plaintext highlighter-rouge">long x</code>, represents the x component of the vector</li>
-  <li><code class="language-plaintext highlighter-rouge">long y</code>, represents the y component of the vector</li>
-</ul>
-
-<p>The <code class="language-plaintext highlighter-rouge">MathVector</code> constructor has two declarations:</p>
-<ul>
-  <li>A <code class="language-plaintext highlighter-rouge">default</code> constructor that initializes the data members, <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code>, to 0.</li>
-  <li>A two-parameter constructor that takes an input x and y component and assigns them to the <code class="language-plaintext highlighter-rouge">x</code> and <code class="language-plaintext highlighter-rouge">y</code> data members, respectively.</li>
-</ul>
-
-<p>You are to <em>implement</em> the following functions in your math_vector.cpp file:</p>
+<p>Write definitions for the four functions described below. You are to not use any loops (for-loops or while-loops). Instead, you must use generic algorithms from the <code class="language-plaintext highlighter-rouge">&lt;algorithm&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;numeric&gt;</code> headers.</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">vec_to_str</span><span class="p">(</span><span class="k">const</span> <span class="n">MathVector</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">ShiftRange</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">,</span> <span class="kt">int</span> <span class="n">left</span><span class="p">,</span> <span class="kt">int</span> <span class="n">right</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Takes a <code class="language-plaintext highlighter-rouge">MathVector</code> instance and returns a <code class="language-plaintext highlighter-rouge">string</code> representation of the <code class="language-plaintext highlighter-rouge">MathVector</code> in the format “<code class="language-plaintext highlighter-rouge">x:y</code>”.</p>
-
-<p><em>This is not a member function, it is a generic function</em>.</p>
+<p>Given a vector of ints, <code class="language-plaintext highlighter-rouge">v</code>, sorts the vector and moves all elements within the range [<code class="language-plaintext highlighter-rouge">left</code>, <code class="language-plaintext highlighter-rouge">right</code>] to the end of the vector.</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MathVector</span> <span class="n">add</span><span class="p">(</span><span class="k">const</span> <span class="n">MathVector</span> <span class="o">&amp;</span><span class="n">other</span><span class="p">)</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">void</span> <span class="n">PassOrFail</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">pair</span><span class="o">&lt;</span><span class="n">string</span><span class="p">,</span> <span class="kt">int</span><span class="o">&gt;&gt;</span> <span class="o">&amp;</span><span class="n">v</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Takes a second operand <code class="language-plaintext highlighter-rouge">MathVector</code> instance, <code class="language-plaintext highlighter-rouge">other</code>, and adds them to produce a new <code class="language-plaintext highlighter-rouge">MathVector</code> instance.</p>
+<p>Given a vector, <code class="language-plaintext highlighter-rouge">v</code>, where each element of the vector is a (name, grade) pair, sorts the vector by name and partitions the first half of the vector as pairs who passed, and the second half of the vector as pairs who failed.</p>
 
-<p>⭐ Show the TA your functioning <code class="language-plaintext highlighter-rouge">add()</code> method before moving on.</p>
+<p>A pair “passes” if the grade is greater than or equal to 600 points.</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">MathVector</span> <span class="n">mult</span><span class="p">(</span><span class="kt">long</span> <span class="n">a</span><span class="p">)</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">Fibonacci</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Multiplies the <code class="language-plaintext highlighter-rouge">MathVector</code> instance by a scalar, <code class="language-plaintext highlighter-rouge">a</code>. Returns the resultant <code class="language-plaintext highlighter-rouge">MathVector</code> instance.</p>
+<p>Generates the first <code class="language-plaintext highlighter-rouge">n</code> Fibonacci numbers.</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">long</span> <span class="n">mult</span><span class="p">(</span><span class="k">const</span> <span class="n">MathVector</span> <span class="o">&amp;</span><span class="n">other</span><span class="p">)</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">BinaryToInt</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="o">&amp;</span><span class="n">binary_str</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Takes the dot product between the two <code class="language-plaintext highlighter-rouge">MathVector</code> instances. Returns the resultant <code class="language-plaintext highlighter-rouge">long</code>.</p>
+<p>Converts a binary string (base 2) to an <code class="language-plaintext highlighter-rouge">int</code> (base 10).</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">magnitude</span><span class="p">()</span>
-</code></pre></div></div>
-
-<p>Takes the magnitude of the <code class="language-plaintext highlighter-rouge">MathVector</code> instance. Returns <code class="language-plaintext highlighter-rouge">double</code>.</p>
-
-<p>⭐ Show the TA your completed <code class="language-plaintext highlighter-rouge">MathVector</code> class.</p>
+<p>⭐ Show the TA your completed set of functions.</p>
 
         </div>
     </div>
+    <script src="/CSE232/assets/js/progressbar.js" type="text/javascript"></script>
 </body>
 </html>

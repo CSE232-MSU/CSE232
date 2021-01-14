@@ -109,7 +109,7 @@ int main() {
 </div>
 
 {:start="11"}
-11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. To compile our helloworld.cpp program, type the following command into the terminal:
+11. The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. Save your helloworld.cpp file if you haven't already (CMD + S), and in order to compile our lovely program, type the following command into the terminal:
 
 ```bash
 g++ helloworld.cpp -Wall -std=c++17
@@ -137,7 +137,7 @@ You will be typing those two commands hundreds, if not _thousands_ of times in t
 
 ## Debugging C++ in VSCode
 
-You should be familiar with an IDE debugger from your previous programming class (CSE231 or an equivalent prerequisite). [If you aren't, please read through this tutorial](../DEBUGGING_GUIDE.md) (it's in Python, but the same core principles apply).
+You should be familiar with an IDE debugger from your previous programming class (CSE231 or an equivalent prerequisite). [If you aren't, please read through this tutorial](../debugging_guide.html) (it's in Python, but the same core principles apply).
 
 1. In the CSE232 folder, create a subfolder named ".vscode", and create two files within it: "tasks.json", and "launch.json", as shown in the file explorer on the left-side here:
 
@@ -265,4 +265,4 @@ After defining the `msg` variable by stepping through, you can click its dropdow
 
 The `vector` type is C++'s version of arrays/lists. You'll learn more about them during Week 06 😉
 
-If you've done everything here without a hitch, head on back to [Lab 00](../labs/lab00.html) for the rest of the CSE232 setup. You're almost done!
+If you've done everything here without a hitch, head on back to [Lab 01](../labs/lab01.html) for the rest of the CSE232 setup. You're almost done!

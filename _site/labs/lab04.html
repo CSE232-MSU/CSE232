@@ -3,23 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 04</title>
+    <title>Lab - Functions</title>
     <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
     <link href="/CSE232/assets/css/syntax.css" rel="stylesheet">
     <style>
-        body {
-            overflow: -moz-scrollbars-none;
-            -ms-overflow-style: none;
-        }
-        body::-webkit-scrollbar {
-            width: 0!important;
+        img {
+            box-shadow: 8px 8px 8px #888888;
         }
         #course-calendar {
             text-align: center;
             width: 100%;
         }
         #course-calendar td {
-            width: calc(100% / 7);
+            width: calc(100% / 6);
             height: 60px;
         }
         #course-calendar td:first-child {
@@ -59,178 +55,217 @@
 </nav>
     <div class="markdown-body mx-auto" style="max-width: 1000px;">
         <div class="border rounded-2 px-5 py-2 anim-fade-in">
-            <h1 id="lab-04---strings">Lab 04 - Strings</h1>
+            <h1 id="lab---functions">Lab - Functions</h1>
 
-<h2 id="standard-input-output-and-pipes">Standard Input, Output and Pipes</h2>
+<h2 id="pagers-and-help">Pagers and Help</h2>
 
-<h3 id="io-redirection">I/O Redirection</h3>
+<p>Often, you want to be able to view files in the terminal (instead of opening them in a text editor like Atom or gedit). There are a few ways to view files from the terminal – these commands are referred to as <em>pagers</em>.</p>
 
-<p>Please read through this page: <a href="http://linuxcommand.org/lc3_lts0070.php">http://linuxcommand.org/lc3_lts0070.php</a></p>
+<h3 id="cat"><code class="language-plaintext highlighter-rouge">cat</code></h3>
 
-<p>⭐ Please show the TA your sorted filenames (using <code class="language-plaintext highlighter-rouge">ls</code>, <code class="language-plaintext highlighter-rouge">sort</code> and I/O redirection).</p>
+<p>The command, <code class="language-plaintext highlighter-rouge">cat</code>, is short for “concatenate”, which means to link things together. The <code class="language-plaintext highlighter-rouge">cat</code> program is often used to link the output from one program to the input of another. But, another useful trait of <code class="language-plaintext highlighter-rouge">cat</code> is to output the contents of a file to the terminal. Invoking the <code class="language-plaintext highlighter-rouge">cat</code> program is quite simple:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat </span>some_file_name.txt
+</code></pre></div></div>
+
+<p>The above command will print the contents of the file to the terminal. However, for large files, <code class="language-plaintext highlighter-rouge">cat</code> is not very user-friendly. You should use a pager instead…</p>
+
+<h3 id="less"><code class="language-plaintext highlighter-rouge">less</code></h3>
+
+<p>Pagers are programs that show you content one <em>page</em> at a time. They are useful for viewing large files. The most popular pager is called <code class="language-plaintext highlighter-rouge">less</code> because it was derived from a program called <code class="language-plaintext highlighter-rouge">more</code>, computer science history is a little silly. You can invoke the <code class="language-plaintext highlighter-rouge">less</code> program like so:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>less some_file_name.txt
+</code></pre></div></div>
+
+<p>To go the the next page, push the F key (forward) on your keyboard. To go back a page, push the B key (backwards). To quit the pager and return to the command line, push Q (use your imagination for why it is the Q key).</p>
+
+<p>There are a few programs intended to provide documentation. However, they are often difficult to understand for a beginner. You invoke them by typing the <code class="language-plaintext highlighter-rouge">help</code> command, and the name of the program you want information about. They can open up a pager if the entry is long.</p>
+
+<h3 id="help"><code class="language-plaintext highlighter-rouge">help</code></h3>
+
+<p>This command is used to provide information about <code class="language-plaintext highlighter-rouge">bash</code>, which is the language the terminal is running. Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">help cd</span>
+</code></pre></div></div>
+
+<h3 id="man"><code class="language-plaintext highlighter-rouge">man</code></h3>
+
+<p>This command (short for “manual”) is used to retrieve the documentation about the programs installed on the computer. Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>man python
+</code></pre></div></div>
+
+<h3 id="info"><code class="language-plaintext highlighter-rouge">info</code></h3>
+
+<p>This command is an alternative to <code class="language-plaintext highlighter-rouge">man</code>, often used by Unix distributions. Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>info <span class="nb">ls</span>
+</code></pre></div></div>
+
+<h3 id="-h"><code class="language-plaintext highlighter-rouge">-h</code></h3>
+
+<p>Many programs will give you a bit of documentation about themselves (like what arguments they accept) if you invoke the program with the <code class="language-plaintext highlighter-rouge">-h</code> flag. Example:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>python <span class="nt">-h</span>
+</code></pre></div></div>
+
+<p>⭐ Please show your TA the <code class="language-plaintext highlighter-rouge">man</code> entry for the program, <code class="language-plaintext highlighter-rouge">git</code>, then demonstrate paging forward and backward in the entry.</p>
 
 <h2 id="coding-assignment">Coding Assignment</h2>
 
 <h3 id="background">Background</h3>
 
-<p>John Napier was a Scottish mathematician who lived in the late 16th and early 17th centuries. He is known for a number of mathematical inventions, one of which is termed <em>location arithmetic</em>.</p>
+<p>You remember calculus, don’t you? The basic concept of an integral is the area under a curve, with the curve represented by some function. If you can integrate a function, you can calculate that area directly. But, for some functions, it is easier to approximate that area using discrete, iterative methods. We are going to investigate one of those methods, the <a href="http://en.wikipedia.org/wiki/Trapezoidal_rule">Trapezoidal Rule</a>.</p>
 
-<p>Location arithmetic is a way to represent numbers as binary values, using a notation that is not positional, but representational. <a href="http://en.wikipedia.org/wiki/Location_arithmetic">You can read a detailed description here</a>, but these are the basics:</p>
+<p>The basic idea is to draw a series of trapezoids that approximate the area under a curve, where the more trapezoids we draw, the better the approximation.</p>
 
-<p>Napier used letters to represent powers of two. The position of these letters is unimportant, allowing for multiple representations of the same number. For example, in location arithmetic:</p>
-
-<div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+a+%3D+1%2C+b+%3D+2%2C+c+%3D+4%2C+d+%3D+8%2C+e+%3D+16%2C+f+%3D+32%2C+..." alt="a = 1, b = 2, c = 4, d = 8, e = 16, f = 32, ..." />
-</div>
-
-<p>And thus:</p>
+<p>First, remember how to calculate the area of a trapezoid?</p>
 
 <div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+acf+%3D+1+%2B+4+%2B+32+%3D+37" alt="acf = 1 + 4 + 32 = 37" />
+    <img src="../assets/images/trapezoid.svg" width="40%" />
 </div>
 
 <div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+caf+%3D+4+%2B+1+%2B+32+%3D+37" alt="caf = 4 + 1 + 32 = 37" />
+    <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+A_%7B%5Ctext%7Btrapezoid%7D%7D%3D+%5Cfrac%7Ba+%2B+b%7D%7B2%7Dh" alt="A_{\text{trapezoid}}= \frac{a + b}{2}h" />
 </div>
 
 <p> </p>
 
-<p>For easier reading, the letters are typically sorted. Napier allowed for redundant occurrences of letters, though he acknowledged that there is a normal form that has no repeats. He described this as the <em>extended</em> (repeated) vs. <em>abbreviated</em> (no repeats) form. To create the abbreviated form, any pair of letters can be reduced to a single occurrence of the next “higher letter”. For example:</p>
+<p>We measure the length of the parallel sides, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+a" alt="a" /> and <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+b" alt="b" />, then the distance between those parallel sides, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+h" alt="h" />, add the parallel distances, divide by 2, and multiply everything by <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+h" alt="h" />.</p>
+
+<p>Now, if we were to place some trapezoid underneath a given curve by rotating it 90 degrees, such that the parallel sides are now bounded between the x-axis and the curve…</p>
 
 <div align="center">
-<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+abbccd+%5Crightarrow+acccd+%5Crightarrow+acdd+%5Crightarrow+ace+%3D+1+%2B+4+%2B+16+%3D+21" alt="abbccd \rightarrow acccd \rightarrow acdd \rightarrow ace = 1 + 4 + 16 = 21" />
+    <img src="../assets/images/trapezoidal_rule_init.png" />
+</div>
+
+<p>We find that the parallel sides now become the distance from the x-axis to the curve (those black points at the top of the trapezoid, which we’ll call <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+y_1" alt="y_1" /> and <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+y_2" alt="y_2" />), and the height now becomes the distance between the two parallel sides (which we’ll rename to <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x+%3D+h" alt="\Delta x = h" />).</p>
+
+<div align="center">
+    <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+A_%7B%5Ctext%7Btrapezoid%7D%7D+%3D+%5Cfrac%7By_1+%2B+y_2%7D%7B2%7D+%5CDelta+x" alt="A_{\text{trapezoid}} = \frac{y_1 + y_2}{2} \Delta x" />
 </div>
 
 <p> </p>
 
-<p>(extended form) → (reduce 2b’s to c) → (reduce 2d’s to e) → (abbreviated form) → 1 + 4 + 16 = 21</p>
+<p>If we keep adding trapezoids, we can eventually get an approximation for the entire region beneath the curve by summing the areas. And, if we <em>minimize</em> the distance between the two parallel sides, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x" alt="\Delta x" />, for each trapezoid, we can end up with a pretty accurate approximation for the <em>integral</em> of the function this curve is modeling.</p>
+
+<div align="center">
+    <img src="../assets/images/trapezoidal_rule.gif" />
+</div>
+
+<p>Thus, for a definite integral of a function, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+f" alt="f" />, bounded between two points on the x-axis, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+a" alt="a" /> and <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+b" alt="b" />:</p>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%5Capprox+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28%5Cfrac%7By_i+%2B+y_%7Bi+%2B+1%7D%7D%7B2%7D+%5CDelta+x%29" alt="\int_{a}^{b} f(x) \approx \sum_{i=1}^{n} (\frac{y_i + y_{i + 1}}{2} \Delta x)" />
+</div>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_i%29+%2B+f%28x_%7Bi+%2B+1%7D%29%29" alt="= \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_{i + 1}))" />
+</div>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D+%5Cfrac%7B%5CDelta+x%7D%7B2%7D%5B%28f%28x_1%29+%2B+f%28x_2%29%29+%2B+%28f%28x_2%29+%2B+f%28x_3%29%29+%2B+...+%2B+%28f%28x_%7Bn-1%7D%29+%2B+f%28x_%7Bn%7D%29%29%5D" alt="= \frac{\Delta x}{2}[(f(x_1) + f(x_2)) + (f(x_2) + f(x_3)) + ... + (f(x_{n-1}) + f(x_{n}))]" />
+</div>
+
+<p> </p>
+
+<p>Where <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" alt="n" /> is the number of trapezoids, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x+%3D+%5Cfrac%7Bb+-+a%7D%7Bn%7D" alt="\Delta x = \frac{b - a}{n}" />, and <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_1+%3D+a" alt="x_1 = a" />, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_2+%3D+a+%2B+%5CDelta+x" alt="x_2 = a + \Delta x" />, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_3+%3D+a+%2B+2%5CDelta+x" alt="x_3 = a + 2\Delta x" />, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_4+%3D+a+%2B+3%5CDelta+x" alt="x_4 = a + 3\Delta x" />, …</p>
+
+<p>The formula here is an equivalence to the one shown in the animation – put into terms that make it easier to program. Can you see how it’s equivalent to the one in the animation? 🤔</p>
 
 <h3 id="program-specifications">Program Specifications</h3>
 
-<p>Your job is to write functions that can convert back and forth between location and decimal representations, as well as some support functions for the process.</p>
+<p>There is a Mimir assignment associated with this lab for testing purposes.</p>
+
+<p>You are to write three functions:</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">long</span> <span class="n">loc_to_dec</span><span class="p">(</span><span class="n">string</span> <span class="n">loc</span><span class="p">)</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">fn</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Converts a location arithmetic string to an integer.</p>
+<p>Takes an input, <code class="language-plaintext highlighter-rouge">x</code>, and returns the substitution into the equation <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+-6x%5E2+%2B+5x+%2B+3" alt="-6x^2 + 5x + 3" />. We’ll be using this as our function to integrate over.</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">abbreviate</span><span class="p">(</span><span class="n">string</span> <span class="n">loc</span><span class="p">)</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">integral</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Takes a location string and reduces it to its abbreviated form. We want you to experiment with string manipulation so <em>you may not convert it to an integer first</em>. You must do the abbreviation directly.</p>
+<p>Takes an input, <code class="language-plaintext highlighter-rouge">x</code>, and returns the substitution into the equation <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+-2x%5E3+%2B+%5Cfrac%7B5%7D%7B2%7D+x%5E2+%2B+3x" alt="-2x^3 + \frac{5}{2} x^2 + 3x" />. This is the symbolically-manipulated, “actual” integral function of <code class="language-plaintext highlighter-rouge">fn()</code>. We’ll be using the returns of this function to compare with our approximations.</p>
 
-<p>⭐ Please show the TA your working <code class="language-plaintext highlighter-rouge">abbreviate()</code> function before moving on.</p>
+<p>⭐ Please show the TA your <code class="language-plaintext highlighter-rouge">fn()</code> and <code class="language-plaintext highlighter-rouge">integral()</code> functions before moving on.</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">dec_to_loc</span><span class="p">(</span><span class="kt">long</span> <span class="n">dec</span><span class="p">)</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">double</span> <span class="n">trapezoid</span><span class="p">(</span><span class="kt">double</span> <span class="n">a</span><span class="p">,</span> <span class="kt">double</span> <span class="n">b</span><span class="p">,</span> <span class="kt">long</span> <span class="n">n</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Converts an integer to an <em>abbreviated</em> location string.</p>
+<p>Takes three parameters: the two definite points of the integral, <code class="language-plaintext highlighter-rouge">a</code> and <code class="language-plaintext highlighter-rouge">b</code>, and the number of trapezoids, <code class="language-plaintext highlighter-rouge">n</code>. This function calculates the area under the curve (represented by <code class="language-plaintext highlighter-rouge">fn()</code>) given the provided number of trapezoids over the interval from <code class="language-plaintext highlighter-rouge">a</code> to <code class="language-plaintext highlighter-rouge">b</code>. It then returns the sum of the area of trapezoids, i.e., our integral approximation.</p>
 
 <p> </p>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">long</span> <span class="n">add_loc</span><span class="p">(</span><span class="n">string</span> <span class="n">loc1</span><span class="p">,</span> <span class="n">string</span> <span class="n">loc2</span><span class="p">)</span>
-</code></pre></div></div>
-
-<p>Takes two location strings, adds them, and provides the integer result. For this function, think about following these steps:</p>
+<p>The <code class="language-plaintext highlighter-rouge">main()</code> function should take four values from the user of the program in this exact order (using <code class="language-plaintext highlighter-rouge">std::cin</code>):</p>
 <ol>
-  <li>Combine the strings</li>
-  <li>Reduce the combination string using your <code class="language-plaintext highlighter-rouge">abbreviate()</code> function</li>
-  <li>Convert the result using your <code class="language-plaintext highlighter-rouge">loc_to_dec()</code> function</li>
+  <li>The lower boundary of the definite integral, <code class="language-plaintext highlighter-rouge">a</code></li>
+  <li>The upper boundary of the definite integral, <code class="language-plaintext highlighter-rouge">b</code></li>
+  <li>A floating point <code class="language-plaintext highlighter-rouge">tolerance</code> value</li>
+  <li>The number of trapezoids to initially use in the approximation, <code class="language-plaintext highlighter-rouge">n</code></li>
 </ol>
 
-<p> </p>
+<p>You’ll want to run a loop that measures the difference between the actual value of the integration (using <code class="language-plaintext highlighter-rouge">integral()</code>) and the estimated value (from <code class="language-plaintext highlighter-rouge">trapezoid()</code>).</p>
 
-<p>Write a <code class="language-plaintext highlighter-rouge">main()</code> function that shows off your work.</p>
+<p>If the difference is within <code class="language-plaintext highlighter-rouge">tolerance</code>, report to the user:</p>
 <ol>
-  <li>Prompt for two elements: a location string, and an integer.</li>
-  <li>Using <code class="language-plaintext highlighter-rouge">loc_to_dec()</code>, print the location string and the resulting integer.</li>
-  <li>Using <code class="language-plaintext highlighter-rouge">abbreviate()</code>, print the location string and its reduced form.</li>
-  <li>Using <code class="language-plaintext highlighter-rouge">dec_to_loc()</code>, print the integer and its location string.</li>
-  <li>Prompt for two more location strings.</li>
-  <li>Using <code class="language-plaintext highlighter-rouge">add_loc()</code>, add the two location strings and print the result.</li>
+  <li><code class="language-plaintext highlighter-rouge">n</code></li>
+  <li>The estimate value</li>
+  <li>The exact value</li>
+  <li>The <code class="language-plaintext highlighter-rouge">tolerance</code></li>
 </ol>
 
-<p>Example interation with the final program:</p>
+<p>If the difference is <em>not</em> within <code class="language-plaintext highlighter-rouge">tolerance</code>, <em>double</em> the value of <code class="language-plaintext highlighter-rouge">n</code> and re-run. Continue the doubling and re-running until the estimate of the <code class="language-plaintext highlighter-rouge">trapezoid()</code> function is within <code class="language-plaintext highlighter-rouge">tolerance</code> of the actual value from <code class="language-plaintext highlighter-rouge">integral()</code>.</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Give me a location string:
-abbccd
-Give me an integer:
-37
-abbccd to dec: 21
-abbccd abbreviated: ace
-37 to loc: acf
-Give me two more location strings:
-abc
-bcd
-Sum of abc and bcd is: 21
+<p>All floating point values should have 4 decimal places of precision when displayed.</p>
+
+<p><strong>Hint</strong>: You might want to consider a do-while statement and the <code class="language-plaintext highlighter-rouge">std::abs()</code> function (from the <code class="language-plaintext highlighter-rouge">&lt;cmath&gt;</code> header) in your <code class="language-plaintext highlighter-rouge">main()</code>.</p>
+
+<p>Example output from the <code class="language-plaintext highlighter-rouge">main()</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Lower Range: 0
+Upper Range: 1
+Tolerance: 0.01
+Initial trapezoid count: 1
+Intermediate Result:2.5000, traps:1, diff:1.0000
+Intermediate Result:3.2500, traps:2, diff:0.2500
+Intermediate Result:3.4375, traps:4, diff:0.0625
+Intermediate Result:3.4844, traps:8, diff:0.0156
+Trap count:16, estimate:3.4961, exact:3.5000, tolerance:0.0100
 </code></pre></div></div>
 
-<p>⭐ Please show the TA your completed program.</p>
-
-<p> </p>
+<p>⭐ Please show the TA your working program.</p>
 
 <h3 id="assignment-notes">Assignment Notes</h3>
 
-<p>We haven’t covered sorting just yet, but C++ makes it pretty easy. Here is an example:</p>
+<ol>
+  <li>Summations in mathematics are inclusively bounded, meaning that the formula we derived earlier is iterating from 1 to <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" alt="n" /> with the 1 <em>and</em> <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+n" alt="n" /> being an eventual substitution for the subscript, <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+i" alt="i" />. Be careful with how you’re modeling the summation – make sure you’re iterating <em>exactly</em> <code class="language-plaintext highlighter-rouge">n</code> times (it’s really easy to accidentally iterate <code class="language-plaintext highlighter-rouge">n - 1</code> or <code class="language-plaintext highlighter-rouge">n + 1</code> times).</li>
+</ol>
 
-<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
-</span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="p">;</span> <span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-<span class="cp">#include &lt;string&gt;
-</span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">;</span>
-<span class="cp">#include &lt;algorithm&gt;
-</span><span class="k">using</span> <span class="n">std</span><span class="o">::</span><span class="n">sort</span><span class="p">;</span>
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D+%5Cfrac%7B%5CDelta+x%7D%7B2%7D+%5Csum_%7Bi%3D1%7D%5E%7Bn%7D+%28f%28x_i%29+%2B+f%28x_%7Bi+%2B+1%7D%29%29" alt="= \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_{i + 1}))" />
+</div>
 
-<span class="c1">// make sure to include &lt;algorithm&gt;!</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
-    <span class="n">string</span> <span class="n">my_str</span> <span class="o">=</span> <span class="s">"aebcd"</span><span class="p">;</span>
-
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"my_str before sorting: "</span> <span class="o">&lt;&lt;</span> <span class="n">my_str</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-
-    <span class="n">sort</span><span class="p">(</span><span class="n">my_str</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">my_str</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
-
-    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"my_str after sorting: "</span> <span class="o">&lt;&lt;</span> <span class="n">my_str</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>Output:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>my_str before sorting: aebcd
-my_str after sorting: abcde
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">std::sort()</code> sorts the individual elements (instances of type <code class="language-plaintext highlighter-rouge">char</code>, in this case) of a collection given two points, <code class="language-plaintext highlighter-rouge">my_str.begin()</code>, and <code class="language-plaintext highlighter-rouge">my_str.end()</code>. We’ll be talking more about what these methods do later on in the course. <strong>Note that <code class="language-plaintext highlighter-rouge">std::sort()</code> changes the string in-place!</strong></p>
-
-<p>Hints on approaching these functions:</p>
+<p> </p>
 
 <ol>
-  <li>You could define a constant for each letter of the alphabet, but that’d be a pain. The smallest character of a location string is <code class="language-plaintext highlighter-rouge">'a'</code>, which represents 2^0 power (i.e., 1). The difference between any letter and <code class="language-plaintext highlighter-rouge">'a'</code> is the power of 2 that letter represents. For example:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">'a'-'a'</code> = 0, which in location arithmetic is 2^0 = 1</li>
-      <li><code class="language-plaintext highlighter-rouge">'c'-'a'</code> = 2, which in location arithmetic is 2^2 = 4</li>
-      <li><code class="language-plaintext highlighter-rouge">'h'-'a'</code> = 7, which in location arithmetic is 2^7 = 128</li>
-    </ul>
-  </li>
-  <li>The function, <code class="language-plaintext highlighter-rouge">dec_to_loc()</code>, is really nothing more than creating a “long string” and using <code class="language-plaintext highlighter-rouge">abbreviate()</code> to clean it up.</li>
-  <li>The function, <code class="language-plaintext highlighter-rouge">add_loc()</code>, is nothing more than a concatenation of the two strings, a call to <code class="language-plaintext highlighter-rouge">abbreviate()</code>, followed by a call to <code class="language-plaintext highlighter-rouge">loc_to_dec()</code>.</li>
-  <li>Your functions might make use of:
-    <ul>
-      <li><code class="language-plaintext highlighter-rouge">.substr()</code> - The <code class="language-plaintext highlighter-rouge">.substr()</code> method takes two parameters: a position, and a length. It returns the substring specified within that range. The length defaults to the end of the string (or, if the value is beyond the length of the string, it defaults to the end).</li>
-      <li><code class="language-plaintext highlighter-rouge">.erase()</code> - The <code class="language-plaintext highlighter-rouge">.erase()</code> method takes two parameters: a position, and a length (just like <code class="language-plaintext highlighter-rouge">.substr()</code>). It removes all characters within the specified range.</li>
-      <li><code class="language-plaintext highlighter-rouge">.push_back()</code> - The <code class="language-plaintext highlighter-rouge">.push_back()</code> method appends a given <code class="language-plaintext highlighter-rouge">char</code> to the end of the string.</li>
-      <li><code class="language-plaintext highlighter-rouge">static_cast&lt;char&gt;</code> - If you do addition/subtraction on a character, you need to cast it to a <code class="language-plaintext highlighter-rouge">char</code> for the “printable” version.</li>
-      <li>Indexing via the <code class="language-plaintext highlighter-rouge">[]</code> operator.</li>
-    </ul>
-  </li>
+  <li>Calculate <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x" alt="\Delta x" /> at the beginning of <code class="language-plaintext highlighter-rouge">trapezoid()</code> to act as a constant. Then, sum together the series, and multiply that sum by <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Cfrac%7B%5CDelta+x%7D%7B2%7D" alt="\frac{\Delta x}{2}" /> afterwards. It’ll be helpful to have <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5CDelta+x" alt="\Delta x" /> sitting around to obtain each <img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+x_i" alt="x_i" />.</li>
+  <li>How do you obtain the exact area again? Remember that:</li>
 </ol>
+
+<div align="center">
+<img src="https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%3D+F%28b%29+-+F%28a%29" alt="\int_{a}^{b} f(x) = F(b) - F(a)" />
+</div>
 
         </div>
     </div>
+    <script src="/CSE232/assets/js/progressbar.js" type="text/javascript"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ The focus of the course will be twofold:
 
 - Recommended (but not required) textbook:
     - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
-- You must have a desktop or labptop device capable of running Zoom and screensharing.
+- You must have a desktop or laptop capable of running Zoom and screen-sharing.
 - You must have a phone or tablet capable of running Zoom with a camera that can show your workspace while taking exams.
 - You must have a consistent internet connection for streaming video through Zoom, and watching lecture videos.
 
@@ -36,7 +36,7 @@ Synchronous lab sessions will be conducted through Zoom (Zoom links will be prov
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistant to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
 
-If your lab falls on a day when the university isn't holding classes, you will be given credit for the lab. However, you are responsible for reading the lab and being confortable with the content covered even if you aren't required to complete it (lab content will appear on homework assignments and exams).  
+If your lab falls on a day when the university isn't holding classes, you will be given credit for the lab. However, you are responsible for reading the lab and being comfortable with the content covered even if you aren't required to complete it (lab content will appear on homework assignments and exams).
 
 __Section 730__: students in the online section will need to be assigned a synchronous Zoom lab section to attend. If no lab section is suitable, please contact the instructor ASAP. 
 
@@ -120,7 +120,7 @@ A homework assignment will be due every Monday and Thursday at 10 PM. Each homew
 
 Submitting an assignment to Mimir merely saves it. At the deadline for an assignment, your work is automatically saved and graded. So be sure you aren't in the middle of typing something when the assignment closes.
 
-All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation, the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
+All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
 
 ### Re-Grades
 

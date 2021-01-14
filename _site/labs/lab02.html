@@ -3,23 +3,19 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab 02</title>
+    <title>Lab - Input and Output</title>
     <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
     <link href="/CSE232/assets/css/syntax.css" rel="stylesheet">
     <style>
-        body {
-            overflow: -moz-scrollbars-none;
-            -ms-overflow-style: none;
-        }
-        body::-webkit-scrollbar {
-            width: 0!important;
+        img {
+            box-shadow: 8px 8px 8px #888888;
         }
         #course-calendar {
             text-align: center;
             width: 100%;
         }
         #course-calendar td {
-            width: calc(100% / 7);
+            width: calc(100% / 6);
             height: 60px;
         }
         #course-calendar td:first-child {
@@ -59,171 +55,174 @@
 </nav>
     <div class="markdown-body mx-auto" style="max-width: 1000px;">
         <div class="border rounded-2 px-5 py-2 anim-fade-in">
-            <h1 id="lab-02---types-and-math">Lab 02 - Types and Math</h1>
+            <h1 id="lab---input-and-output">Lab - Input and Output</h1>
 
-<h2 id="copying-moving-and-deleting-files-in-the-terminal">Copying, Moving and Deleting Files in the Terminal</h2>
+<h2 id="directory-navigation-in-the-terminal">Directory Navigation in the Terminal</h2>
 
-<p><strong>Disclaimer</strong>: the terminal is a very powerful tool. And with great power, comes great responsibility (Uncle Ben). Be aware that mistakes at the terminal can break computers and delete important files without warning, so be sure your work is always backed up.</p>
+<p>At the beginning of most labs, there will be a section on new skills to make you more proficent at the command line. Many tasks can only be performed at the terminal (or are easier to perform at the terminal), so becoming comfortable there is important. Many of the classes after this one will expect at least a basic familiarity of the command line, so pay special attention to these sections.</p>
 
-<h3 id="cp"><code class="language-plaintext highlighter-rouge">cp</code></h3>
+<p>Log into Mimir and open the IDE. Use the terminal in Mimir’s IDE to follow along.</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">cp</code> command “copies” files from one location to another. It’s used with two arguments:</p>
+<h3 id="pwd"><code class="language-plaintext highlighter-rouge">pwd</code></h3>
 
-<ol>
-  <li>The source file, the file you want to copy</li>
-  <li>The destination file, where you want your copy to be placed</li>
-</ol>
+<p>The first command you need to learn is one of the simplest, <code class="language-plaintext highlighter-rouge">pwd</code>. At the terminal, type the command <code class="language-plaintext highlighter-rouge">pwd</code> and hit enter.</p>
 
-<p>You can copy files that are in your working directory or in another directory by specifying a path. Examples:</p>
+<p><code class="language-plaintext highlighter-rouge">pwd</code> is short for “print working directory”. It outputs the path of the working directory i.e., the directory your terminal currently has open. If you get lost, (and it is easy to do with only the text-based terminal for navigation), <code class="language-plaintext highlighter-rouge">pwd</code> can show you where you are.</p>
 
-<p>This copies a.txt into a file called b.txt:</p>
+<h3 id="ls"><code class="language-plaintext highlighter-rouge">ls</code></h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp </span>a.txt b.txt
+<p>The <code class="language-plaintext highlighter-rouge">ls</code> command outputs the names of all of the folders and files in the working directory. <code class="language-plaintext highlighter-rouge">ls</code> is short for “list” (as in “list” the contents).</p>
+
+<p>Folder names end with a <code class="language-plaintext highlighter-rouge">/</code>, file names do not. Some terminals also add colorized output to <code class="language-plaintext highlighter-rouge">ls</code> to denote different types of files. For instance, Mimir’s terminal has folders in blue, and files in white.</p>
+
+<h3 id="cd"><code class="language-plaintext highlighter-rouge">cd</code></h3>
+
+<p>The <code class="language-plaintext highlighter-rouge">cd</code> command is short for “change directory”. It allows you to change your working directory to a different folder.</p>
+
+<p>Lets say you run <code class="language-plaintext highlighter-rouge">pwd</code> and you get the output of:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/home/joshua/cse_232__summer_2017/lab01_new_horizons
 </code></pre></div></div>
 
-<p>This copies c.txt (which is in the parent folder) to a file called c.txt (which is in the grandparent folder):</p>
+<p>Your current working directory is named “lab01_new_horizons”. If you run <code class="language-plaintext highlighter-rouge">ls</code>, you would get:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ../c.txt ../../c.txt
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>lab01/
 </code></pre></div></div>
 
-<p>This copies the d.txt file in my Downloads folder to the current directory. If you specify a directory as a destination, it will create a file with the same name there.</p>
+<p>This means that there is only one thing in this folder, a subfolder called “lab01”. If you wanted to do things in that subfolder, you would use the <code class="language-plaintext highlighter-rouge">cd</code> command like so:</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> ~/Downloads/d.txt <span class="nb">.</span>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>lab01
 </code></pre></div></div>
 
-<p><code class="language-plaintext highlighter-rouge">cp</code> can also copy directories if you use the <code class="language-plaintext highlighter-rouge">-r</code> flag. The “r” stands for “recursive”, meaning to copy the directory and all sub-directories of it, recursively. Example:</p>
+<p>Now you are in the folder named “lab01”, you can confirm such with <code class="language-plaintext highlighter-rouge">pwd</code> and <code class="language-plaintext highlighter-rouge">ls</code>.</p>
 
-<p>This copies the directory, “other”, into a directory called “other2”:</p>
+<h3 id="special-directory-names">Special Directory Names</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cp</span> <span class="nt">-r</span> other other2
+<p>There are a few “special” directory names that you need to know. The first is the home directory. This directory’s name is usually the username of the account, and it contains all of the user’s files and folders. Inside the home folder is the “Desktop” folder (for all the things on your desktop), the “Downloads” folder and other folders as well (like “Music”, “Videos”, “Applications”, etc.). The home folder is often specified using the tilde symbol (<code class="language-plaintext highlighter-rouge">~</code>). So if you want to <code class="language-plaintext highlighter-rouge">cd</code> to your home folder, run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ~
 </code></pre></div></div>
 
-<ol>
-  <li><a href="../assets/downloads/lab02.zip">Save this lab02.zip file to your My Documents folder.</a></li>
-  <li>Right click the zipped file in My Documents and select “Extract Here”. You should now have a folder called “lab02”.</li>
-  <li>Change directories to My Documents (<code class="language-plaintext highlighter-rouge">cd ~/My_Documents</code>).</li>
-  <li><code class="language-plaintext highlighter-rouge">cd</code> to the folder named “lab02”, then to the subfolder named “b_folder”, then to the folder named “start”.</li>
-  <li>If you run <code class="language-plaintext highlighter-rouge">ls</code>, you should see a folder named “other” and a file named “f.txt”.</li>
-  <li>Copy the file named “f.txt” to the file “f2.txt”.</li>
-  <li>Copy the folder named “a_folder” to the working directory. The “a_folder” is in the same folder as “b_folder”.</li>
-</ol>
+<p><strong>Note</strong>: on most systems, running <code class="language-plaintext highlighter-rouge">cd</code> with no arguments also takes you to the home folder.</p>
 
-<p>⭐ Please show your TA the output from <code class="language-plaintext highlighter-rouge">ls</code>. There should be four items in the folder named “start”:</p>
+<p>Sometimes you want to go the parent folder of your working directory. In the example above, we moved from the folder “lab01_new_horizons” to its subfolder “lab01”. Trying to get back by running…</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>lab01_new_horizons
+</code></pre></div></div>
+
+<p>…would fail because there is no folder named “lab01_new_horizons” in “lab01”.</p>
+
+<p>The way to go to the parent directory (in this case, “lab01_new_horizons”), you need to run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd</span> ..
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">..</code> is a strange way to symbolize the parent directory. In fact, <code class="language-plaintext highlighter-rouge">.</code> denotes the working directory, a fact that will be useful to know in later labs.</p>
+
+<p>The last “special” directory is the root directory. The root directory is the directory that is the ultimate parent of all the other directories on the computer. It is denoted by a single <code class="language-plaintext highlighter-rouge">/</code> symbol. In fact, you can specify any folder on the computer by starting with the root directory and working your way to the directory you actually want. So the path <code class="language-plaintext highlighter-rouge">/home/joshua/cse_232__summer_2017/lab01_new_horizons</code> specifies that the folder I want is:</p>
 
 <ul>
-  <li>f.txt</li>
-  <li>f2.txt</li>
-  <li>other/</li>
-  <li>a_folder/</li>
+  <li>In the root folder (the starting <code class="language-plaintext highlighter-rouge">/</code>)</li>
+  <li>In the folder named “home”</li>
+  <li>In the folder named “joshua”</li>
+  <li>In the folder named “cse_232__summer_2017”</li>
+  <li>And it is named “lab01_new_horizons”</li>
 </ul>
 
-<h3 id="mv"><code class="language-plaintext highlighter-rouge">mv</code></h3>
+<p><strong>Video description</strong>: https://www.youtube.com/watch?v=zx4kBG90uBg</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">mv</code> command is short for “move” and is identical to <code class="language-plaintext highlighter-rouge">cp</code>, except the original source doesn’t exist after it has been moved to the destination. <code class="language-plaintext highlighter-rouge">mv</code> does not need the <code class="language-plaintext highlighter-rouge">-r</code> flag to move folders, it is happy to move folders just like files. Example:</p>
+<p>⭐ Please show your TA that you can use the commands: <code class="language-plaintext highlighter-rouge">pwd</code>, <code class="language-plaintext highlighter-rouge">ls</code> and <code class="language-plaintext highlighter-rouge">cd</code>.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">mv </span>other other2
-</code></pre></div></div>
+<h3 id="formatting-your-code">Formatting your code</h3>
 
-<p>Run the above command, and confirm the the “other” folder no longer exists, and that there’s now an “other2” folder present. Be sure your working directory is the “start” folder.</p>
+<p>The C++ compiler is extremely permissive as to the format of the code it accepts. However, our brains have a harder time parsing poorly formatted code. We will be covering how to format your code manually, but there is a nice tool to format your code automatically: <code class="language-plaintext highlighter-rouge">clang-format</code>. The details for how the tool can be configured <a href="https://clang.llvm.org/docs/ClangFormat.html">can be found here</a>, but for this course, all that is needed is to log into chuck.egr.msu.edu to use the tool.</p>
 
-<p>The <code class="language-plaintext highlighter-rouge">mv</code> command is often used to rename directories and folders.</p>
+<p>Let’s say you have a file named “project.cpp”. To use <code class="language-plaintext highlighter-rouge">clang-format</code> to auto-format your code, run:</p>
 
-<h3 id="rm"><code class="language-plaintext highlighter-rouge">rm</code></h3>
+<p><code class="language-plaintext highlighter-rouge">clang-format --style=Google -i project.cpp</code></p>
 
-<p>The <code class="language-plaintext highlighter-rouge">rm</code> command is short for “remove”.</p>
-
-<p><strong>Warning</strong>: files deleted with <code class="language-plaintext highlighter-rouge">rm</code> are gone forever. They don’t go to the Recycle Bin. Please be careful with <code class="language-plaintext highlighter-rouge">rm</code>.</p>
-
-<p>The <code class="language-plaintext highlighter-rouge">rm</code> command takes one argument: the file or folder you wish to delete. Like <code class="language-plaintext highlighter-rouge">cp</code>, if you wish to delete a folder, you need to supply the <code class="language-plaintext highlighter-rouge">-r</code> flag. Example:</p>
-
-<p>Deletes the file, f.txt:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm </span>f.txt
-</code></pre></div></div>
-
-<p>Deletes the a_folder, and everything within it:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-r</span> a_folder
-</code></pre></div></div>
+<p>The above line will format the project.cpp file according to the Google Style Guide (more on that later).</p>
 
 <h2 id="coding-assignment">Coding Assignment</h2>
 
 <h3 id="background">Background</h3>
 
-<p>There are many properties of numbers that one can investigate. The ancient Greeks were fascinated by the properties of integers, even ascribing them mystical properties.</p>
+<p>The New Horizons spacecraft, launched January 19th 2006, is the first earth spacecraft to have made contact with the planet, Pluto. On January 1st, 2019 it was scheduled to make contact with the first Kuiper belt object, KBO-2014-KU69. The <a href="http://pluto.jhuapl.edu/Mission/Where-is-New-Horizons/index.php">NASA update page</a> reported it at a distance of 37.33 Astronomical Units (AU) from the Sun, traveling away at 14.33 km/sec (8.90 mi/sec) on 12/30/2016.</p>
 
-<p>One such property is an integer’s <em>additive persistence</em>, and its resulting <em>additive root</em> (<a href="http://mathworld.wolfram.com/AdditivePersistence.html">see this page for more information</a>). Additive persistence is a property of the sum of the digits of an integer. The sum of the digits is found, and then the summation of digits is performed, creating a new sum. This process repeats until a single integer digit is reached. Consider the following example:</p>
-
-<ol>
-  <li>The beginning integer is 1234</li>
-  <li>The sum of its digits is 1+2+3+4 = 10</li>
-  <li>The integer is now 10</li>
-  <li>The sum of its digits is 1+0 = 1</li>
-  <li>The integer is now 1. When the value reaches a single digit, we are finished. This final integer is the additive root.</li>
-</ol>
-
-<p>The number of cycles is the additive persistence. The integer, 1234, has an additive persistence of 2 (first sum was 10, then the second sum was 1). The final digit reached is called the integer’s additive root. The integer, 1234, has an additive root of 1.</p>
+<p>For this lab, you will use the <code class="language-plaintext highlighter-rouge">cin</code> and <code class="language-plaintext highlighter-rouge">cout</code> streams, along with some simple mathematics for calculating New Horizon’s distance from the Sun. The important part of the assignment is to learn the skills needed to access the class web site, access a project description, and create a new program in C++.</p>
 
 <h3 id="program-specifications">Program Specifications</h3>
 
-<p>Accept a series of integers from standard input (<code class="language-plaintext highlighter-rouge">cin</code>). The program ends under one of the following circumstances (meaning that we repeat this entire process – use a loop):</p>
-<ol>
-  <li>If the next gathered integer is a negative number</li>
-  <li>If all the integers from the file have been processed (EOF encountered, i.e., <code class="language-plaintext highlighter-rouge">cin</code> returns <code class="language-plaintext highlighter-rouge">false</code>)</li>
-</ol>
+<p>Your program will prompt the user for an integer number (a number without decimal points) that indicates the number of days <em>after</em> 12/30/2016, starting at a distance 37.33 AU from the Sun. You will calculate the distance of New Horizons from the Sun using the numbers from 12/30/2016 (assume velocity is constant) <em>plus</em> the user provided number of days, and report:</p>
 
-<p>If the given integer is a single digit, report its additive persistence as 0, and its additive root as itself on a single line as two space-separated numbers</p>
+<ul>
+  <li>Distance in kilometers (1 AU = 149,598,000 km) on a line by itself</li>
+  <li>Distance in miles (1 AU = 92,955,800 mile) on a line by itself</li>
+  <li>Round trip time for radio communication in hours. Radio waves travel at the speed of light, listed at 299,792,458 meters/second, on a line by itself</li>
+  <li>Provide 2 decimal points of accuracy using <code class="language-plaintext highlighter-rouge">std::fixed</code> and <code class="language-plaintext highlighter-rouge">std::setprecision</code>. Both are contained within the <code class="language-plaintext highlighter-rouge">&lt;iomanip&gt;</code> header, and you can use them as follows:</li>
+</ul>
 
-<p>For each multi-digit, non-negative integer, output on a single line the two space-separated numbers:</p>
-<ol>
-  <li>The integer’s additive persistence</li>
-  <li>The integer’s additive root</li>
-</ol>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">fixed</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">setprecision</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</code></pre></div></div>
 
 <p>⭐ Please show the TA your working program.</p>
 
 <h3 id="assignment-notes">Assignment Notes</h3>
 
-<p>How do you get started on a program like this?</p>
+<p>There is a Mimir assignment for this lab that you can use to test your program.</p>
 
-<ol>
-  <li>Break the problem down into parts. Here are some obvious ones:
-    <ul>
-      <li>Gather input from the file, and check for negative numbers (the quit condition)</li>
-      <li>Check if the input is between 0 and 9 (that’s a special case, as indicated above)</li>
-      <li>Otherwise, write a loop that calculates the persistence (track the count through this loop)</li>
-      <li>Inside that loop, write another loop that can sum the digits of an integer until it reaches a single digit</li>
-    </ul>
-  </li>
-  <li>How do you get the digits of an integer? Look at using a combination of the division (<code class="language-plaintext highlighter-rouge">/</code>) and modulus (<code class="language-plaintext highlighter-rouge">%</code>) operators.</li>
-  <li>I would add some “diagnostic output” so you can be sure things are working as they should. For each pass through the loop of the additive persistence, print each new integer created. You can always fix it to give the exact, required output later.</li>
-</ol>
+<p>There are some rounding issues here, so be careful! To make the kilometer/mile calculations, use the constants (speed and distance) provided. To make the round trip calculation, use your distance in km and the speed of light constant provided. You’ll get slightly different answers if you try to convert the two distances or the two speeds.</p>
 
-<h3 id="want-to-do-more">Want to do more?</h3>
+<p>You will need to work with the <code class="language-plaintext highlighter-rouge">cin</code> and <code class="language-plaintext highlighter-rouge">cout</code> streams and their operators <code class="language-plaintext highlighter-rouge">&gt;&gt;</code> (for <code class="language-plaintext highlighter-rouge">cin</code>) and <code class="language-plaintext highlighter-rouge">&lt;&lt;</code> (for <code class="language-plaintext highlighter-rouge">cout</code>). You will also need to declare the appropriate variables: <code class="language-plaintext highlighter-rouge">int</code> (a 64 bit integer) for values like days, and <code class="language-plaintext highlighter-rouge">double</code> for calculation values.</p>
 
-<p>There is also a multiplicative persistence. Put that in your loop and calculate it for each number.</p>
+<p><code class="language-plaintext highlighter-rouge">cout</code> takes either variable values or strings (between <code class="language-plaintext highlighter-rouge">" "</code>) and outputs them to the console. You can use multiple <code class="language-plaintext highlighter-rouge">&lt;&lt;</code> operators on the same cout stream, usually ending with <code class="language-plaintext highlighter-rouge">endl</code>.</p>
 
-<p>The <em>multiplicative persistence</em> (<a href="http://mathworld.wolfram.com/MultiplicativePersistence.html">see this page for more information</a>) and resulting <em>multiplicative root</em> are determined the same way, only multiplying the digits of an integer instead of adding. For example:</p>
+<p>Assuming the variable, <code class="language-plaintext highlighter-rouge">int_var</code>, has the value 23…</p>
 
-<ol>
-  <li>The beginning integer is 1234</li>
-  <li>The product of its digits is 1*2*3*4 = 24</li>
-  <li>The integer is now 24</li>
-  <li>The product of its digits is 2*4 = 8</li>
-  <li>The integer is now 1. When the value reaches a single digit, we are finished. This final integer is the multiplicative root</li>
-</ol>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"This is a string: "</span> <span class="o">&lt;&lt;</span> <span class="n">int_var</span> <span class="o">&lt;&lt;</span> <span class="s">" the end"</span>
+          <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div></div>
 
-<p>As before, the number of cycles is the multiplicative persistence. The final digit reached is called the integer’s multiplicative root. The integer, 1234, has an multiplicative persistence of 2, and a multiplicative root of 8.</p>
+<p>…this small program would output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>This is a string: 23 the end
+</code></pre></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">cin</code> will take an input value from the command line into a variable of <em>a particular type</em>. It does so until it hits a space (space separated values) or an end of a line. For example:</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">int_var</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>If you enter an integer value to the command line, it will be read into the variable with no conversion required.</p>
+
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">multiplier</span><span class="p">,</span> <span class="n">number</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">number</span><span class="p">;</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">multiplier</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"The number "</span> <span class="o">&lt;&lt;</span> <span class="n">number</span> <span class="o">&lt;&lt;</span> <span class="s">" times "</span><span class="o">&lt;&lt;</span> <span class="n">multiplier</span>
+          <span class="o">&lt;&lt;</span> <span class="s">" is "</span> <span class="o">&lt;&lt;</span> <span class="n">number</span> <span class="o">*</span> <span class="n">multiplier</span> <span class="o">&lt;&lt;</span> <span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>With inputs 10 and 2 respectively, we get:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The number 10 times 2 is 20
+</code></pre></div></div>
+
+<p>The operations on these numbers are: + (sum), - (difference), * (product), / (division) and % (modulus, integer only). The last two deserve special comment.</p>
+
+<p>If an integer is divided by another integer, the result is an integer. Thus the result of <code class="language-plaintext highlighter-rouge">6 / 4</code> is <code class="language-plaintext highlighter-rouge">1</code>. In contrast, <code class="language-plaintext highlighter-rouge">6.0 / 4</code> is <code class="language-plaintext highlighter-rouge">1.5</code>. That is, the <code class="language-plaintext highlighter-rouge">/</code> operator results in the <strong>integer quotient if using integers, and floats if using floats</strong>. The result of <code class="language-plaintext highlighter-rouge">6 % 4</code> is the integer remainder of the division, thus <code class="language-plaintext highlighter-rouge">2</code> (6 divided by 4 is 1, with a remainder of 2). There is no equivalent for <code class="language-plaintext highlighter-rouge">%</code> in floating point math.</p>
 
 <h3 id="things-to-think-about">Things to Think About</h3>
 
 <ul>
-  <li>What type should the numeric values be (<code class="language-plaintext highlighter-rouge">int</code>? <code class="language-plaintext highlighter-rouge">long</code>?) and why?</li>
-  <li>What is the largest <code class="language-plaintext highlighter-rouge">long</code> you can have?</li>
-  <li>What happens when you enter a number that is too large? For example, the smallest number with an additive persistence of 4 is 19999999999999999999999. Can you make your calculation with that number?</li>
+  <li>What happens when you try to divide by zero when you run your program?</li>
+  <li>What happens when <code class="language-plaintext highlighter-rouge">std::cin</code> obtains a letter instead of a number?</li>
 </ul>
 
         </div>
     </div>
+    <script src="/CSE232/assets/js/progressbar.js" type="text/javascript"></script>
 </body>
 </html>
