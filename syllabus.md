@@ -181,8 +181,9 @@ A goal of this course is to teach professionalism. Any instance of academic dish
 The following stories are real cases of academic dishonesty that I've encountered in my classes. I'm describing them here so that it is clear to each of my students what is allowed in my classes. In all cases of academic dishonesty, I will file an Academic Dishonesty Report and usually fail or severly reduce the student's grade.
 
 - A student found a solution written by another student (who took the class in a previous year). That student modified the solution (changed variable names, restructured code) and submitted the assignment.
-- A student worked closely with another student on an assignment and they showed each other their code in the computer labs. Although no files were exchanged, nor was there any copy/pasting, their solutions converged enough to be detected by my plagiarism detection software.
+- A student worked closely with another student on an assignment and they showed each other their code in the computer lab. Although no files were exchanged, nor was there any copy/pasting, their solutions converged enough to be detected by my plagiarism detection software.
 - A student found a solution to a similar problem in the class written by a third-party (someone not associated with the class). The student submitted a solution based on the found solution, without attribution to the original source.
+- A student was posting homework questions to StackOverflow and soliciting for other's to solve their assignments for them, instead of just asking the instructors privately for assistance.
 
 ### How To Provide Attribution
 
