@@ -205,7 +205,7 @@ def convert_bin_str_to_int(bin_str):
 
 
 # In discussion with Grant King, we found that the map function
-# would be useful in convert both numbers
+# would be useful in converting both numbers
 ints = map(convert_bin_str_to_int, bin_strs)
 
 # This source helped me determine how to print binary numbers with padding:
