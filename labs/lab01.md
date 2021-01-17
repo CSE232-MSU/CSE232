@@ -4,7 +4,7 @@ title: Lab - Getting Started
 
 # Lab - Getting Started
 
-This lab is designed to get you acquainted with the class resources and recommended code editor. It's important that you complete this lab before your first in-class meeting. If you have any questions about this lab, please ask the instructors on Piazza. 
+This lab is designed to get you acquainted with the class resources and recommended code editor.
 
 ## Class Resources
 
