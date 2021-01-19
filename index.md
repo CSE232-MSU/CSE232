@@ -192,17 +192,18 @@ Links to lecture videos, projects, and other materials will be made available as
 
 ## Help Room Schedule
 
-Help Room is conducted through Zoom. You can find the session details and instructions on how to join on Piazza.
+Help Room is conducted through Zoom. You can find the link to the meeting on Piazza.
+
+| Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
+| :---:  | :---:  | :---:   | :---:     | :---:    | :---:  | :---:    |
+||9-11am|9-11am|9-11am|9-11am||
+|5-7pm|5-9pm|5-7pm|5-7pm|5-9pm|5-7pm|5-7pm|
+
+Please be aware that you may not receive the attention you desire if you attend help room very near an assignment deadline. So please consider attending help room prior to the day an assignment is due as there will be less demand. 
 
 Please direct any and all written communication to Piazza (you can post anonymously if that's something you'd prefer). Emails may not be responded to.
 
 If you would like a one-on-one meeting with an instructor, please make a private Piazza post detailing your request and availability.
 
-Help Room will begin on Tuesday, 2021-01-19. Regular hours will be posted here then.
-<!--
-| Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
-| :---:  | :---:  | :---:   | :---:     | :---:    | :---:  | :---:    |
-||09:00-11:00AM|09:00-11:00AM|09:00-11:00AM|09:00-11:00AM|09:00-11:00AM|
-||03:00-05:00PM|03:00-05:00PM|03:00-05:00PM|03:00-05:00PM|||
-|07:00-09:00PM|07:00-09:00PM|07:00-09:00PM|07:00-09:00PM|07:00-09:00PM|07:00-09:00PM|07:00-09:00PM|
--->
+
+
