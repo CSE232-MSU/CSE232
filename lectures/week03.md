@@ -12,9 +12,9 @@ title: Week 03
 
 [04.1-temperatureFns.cpp](week03/04.1-temperatureFns.cpp)
 
-[04.2-my_sqrt.cpp](week03/04.1-temperatureFns.cpp)
+[04.2-my_sqrt.cpp](week03/04.2-my_sqrt.cpp)
 
-[04.3-reverseIntFns.cpp](week03/04.1-temperatureFns.cpp)
+[04.3-reverseIntFns.cpp](week03/04.2-my_sqrt.cpp)
 
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Jmwday62wJc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
