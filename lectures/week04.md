@@ -68,7 +68,7 @@ int string_size = static_cast<int>(s.size());
 
 [06.5-range.cpp](week04/06.5-range.cpp)
 
-[06.6-more_strings.cpp](week04/06.6-more_string.cpp)
+[06.6-more_strings.cpp](week04/06.6-more_strings.cpp)
 
 [06.7-finds.cpp](week04/06.7-finds.cpp)
 
