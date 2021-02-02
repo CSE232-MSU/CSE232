@@ -25,6 +25,7 @@ Resources:
 - [STL Algorithms Cheatsheet](https://medium.com/logicalbee/c-stl-algorithms-cheat-sheet-d92f986abe14)
 - [Unix Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 - [C++ Formatter](http://format.krzaq.cc/) (Use the Google Style)
+- [Google Style Guide](https://google.github.io/styleguide/cppguide.html)
 
 ## Course Schedule
 
