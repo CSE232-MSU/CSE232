@@ -36,8 +36,8 @@ Links to lecture videos, projects, and other materials will be made available as
 [Add to Google Calendar](https://calendar.google.com/calendar/u/0?cid=anFtcGxzdGcwczFqa2FnZDV1dWZldmxqMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
 
 <div align="center">
-    <p style="font-weight: 600;" id="course-progress-header"></p>
-    <span class="Progress" style="width: 75%">
+    <p id="course-progress-header"></p>
+    <span class="Progress" id="course-progress-container">
         <span class="Progress-item bg-green" id="course-progress"></span>
     </span>
 </div>
@@ -85,14 +85,14 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week03.html">Week 03</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab03.html">Lab 03</a></td>
             <td>Homework 04</td>
-            <td>Homework 05</td>
+            <td>No Thursday Homework</td>
             <td></td>
         </tr>
         <tr>
             <td>04: 2021-02-08</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week04.html">Week 04</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab04.html">Lab 04</a></td>
-            <td>Homework 06</td>
+            <td>Homework 05/06</td>
             <td>Homework 07</td>
             <td></td>
         </tr>
@@ -195,16 +195,42 @@ Links to lecture videos, projects, and other materials will be made available as
 
 Help Room is conducted through Zoom. You can find the link to the meeting on Piazza.
 
-| Sunday | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday |
-| :---:  | :---:  | :---:   | :---:     | :---:    | :---:  | :---:    |
-||9-11am|9-11am|9-11am|9-11am||
-|5-7pm|5-9pm|5-7pm|5-7pm|5-9pm|5-7pm|5-7pm|
+<table id="hr-schedule">
+    <thead>
+        <tr>
+            <th>Sunday</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td></td>
+            <td>9-11am</td>
+            <td>9-11am</td>
+            <td>9-11am</td>
+            <td>9-11am</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5-7pm</td>
+            <td>5-9pm</td>
+            <td>5-7pm</td>
+            <td>5-7pm</td>
+            <td>5-9pm</td>
+            <td>5-7pm</td>
+            <td>5-7pm</td>
+        </tr>
+    </tbody>
+</table>
 
 Please be aware that you may not receive the attention you desire if you attend help room very near an assignment deadline. So please consider attending help room prior to the day an assignment is due as there will be less demand. 
 
 Please direct any and all written communication to Piazza (you can post anonymously if that's something you'd prefer). Emails may not be responded to.
 
 If you would like a one-on-one meeting with an instructor, please make a private Piazza post detailing your request and availability.
-
-
-

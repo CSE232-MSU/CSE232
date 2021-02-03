@@ -4,29 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }}</title>
-    <link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet">
-    <link href="{{ "/assets/css/syntax.css" | prepend:site.baseurl }}" rel="stylesheet">
-    <style>
-        #course-calendar {
-            text-align: center;
-            width: 100%;
-        }
-        #course-calendar td {
-            width: calc(100% / 6);
-            height: 60px;
-        }
-        #course-calendar td:first-child {
-            font-weight: 600;
-        }
-    </style>
+    <link rel="stylesheet" href="https://unpkg.com/@primer/css/dist/primer.css">
+    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend:site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/assets/css/style.css" | prepend:site.baseurl }}">
 </head>
 <body class="py-2">
     {% include navigation.html %}
-    <div class="markdown-body mx-auto" style="max-width: 1000px;">
+    <div class="markdown-body mx-auto" id="main-content">
         <div class="border rounded-2 px-5 py-2 anim-fade-in">
             {{ content }}
         </div>
     </div>
-    <script src="{{ "/assets/js/progressbar.js" | prepend:site.baseurl }}" type="text/javascript"></script>
+    {% if page.title == "Home" %}
+        <script src="{{ "/assets/js/progressbar.js" | prepend:site.baseurl }}" type="text/javascript"></script>
+    {% endif %}
 </body>
 </html>
