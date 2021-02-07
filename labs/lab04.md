@@ -148,14 +148,14 @@ alt="= \frac{\Delta x}{2} \sum_{i=1}^{n} (f(x_i) + f(x_{i + 1}))">
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D+%5Cfrac%7B%5CDelta+x%7D%7B2%7D%5B%28f%28x_1%29+%2B+f%28x_2%29%29+%2B+%28f%28x_2%29+%2B+f%28x_3%29%29+%2B+...+%2B+%28f%28x_%7Bn-1%7D%29+%2B+f%28x_%7Bn%7D%29%29%5D" 
-alt="= \frac{\Delta x}{2}[(f(x_1) + f(x_2)) + (f(x_2) + f(x_3)) + ... + (f(x_{n-1}) + f(x_{n}))]">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D%5Cfrac%7B%5CDelta+x%7D%7B2%7D%5B%28f%28x_1%29+%2B+f%28x_2%29%29+%2B+%28f%28x_2%29+%2B+f%28x_3%29%29+%2B+...+%2B+%28f%28x_n%29+%2B+f%28x_%7Bn%2B1%7D%29%5D" 
+alt="=\frac{\Delta x}{2}[(f(x_1) + f(x_2)) + (f(x_2) + f(x_3)) + ... + (f(x_n) + f(x_{n+1})]">
 </div>
 
 <div align="center">
 <img src=
-"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D%5Cfrac%7B%5CDelta+x%7D%7B2%7D%5Bf%28x_1%29+%2B+2f%28x_2%29+%2B+2f%28x_3%29+%2B+...+%2B+2f%28x_%7Bn-1%7D%29+%2B+f%28x_n%29%5D" 
-alt="=\frac{\Delta x}{2}[f(x_1) + 2f(x_2) + 2f(x_3) + ... + 2f(x_{n-1}) + f(x_n)]">
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%3D%5Cfrac%7B%5CDelta+x%7D%7B2%7D%5Bf%28x_1%29+%2B+2f%28x_2%29+%2B+2f%28x_3%29+%2B+...+%2B+2f%28x_%7Bn%7D%29+%2B+f%28x_%7Bn%2B1%7D%29%5D" 
+alt="=\frac{\Delta x}{2}[f(x_1) + 2f(x_2) + 2f(x_3) + ... + 2f(x_{n}) + f(x_{n+1})]">
 </div>
 
 &nbsp;
