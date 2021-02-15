@@ -1,0 +1,38 @@
+/* main content markdown body */
+#main-content {
+    max-width: 1000px;
+}
+
+/* navbar include */
+#navbar {
+    max-width: 1000px; 
+    z-index: 999;
+}
+
+/* course schedule on homepage */
+#course-calendar {
+    text-align: center;
+    width: 100%;
+}
+#course-calendar td {
+    width: calc(100% / 6);
+    height: 60px;
+}
+#course-calendar td:first-child {
+    font-weight: 600;
+}
+
+/* help room schedule on homepage */
+#hr-schedule {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* progress bar on homepage */
+#course-progress-header {
+    font-weight: 600;
+}
+#course-progress-container {
+    width: 80%;
+}

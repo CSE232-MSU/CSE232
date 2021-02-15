@@ -191,7 +191,7 @@ You must provide attribution if you make use of sources beyond the material give
 
 Example solution with attribution:
 
-```
+```python
 # The assignment is to read in a string that looks like "010 001 0101"
 # and print out sum of the binary numbers with zero padding.
 
