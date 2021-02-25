@@ -8,6 +8,7 @@ Continuation of object-centered design and implementation in C++. Building progr
 
 General:
 - [Course Schedule](#course-schedule)
+- [Exam Policies](exam_policies.html)
 - [Help Room Schedule](#help-room-schedule)
 - [Past Exams](https://cse.msu.edu/~cse232/Exam_Content/)
 - [Syllabus](syllabus.html)
