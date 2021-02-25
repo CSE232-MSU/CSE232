@@ -24,7 +24,7 @@ As just stated, for students that have conflicts with both exam times, please re
 
 If you cannot make the original nor the alternative exam times, please contact us via Piazza to make accommodations ASAP. Additionally, if you have university-approved accommodations (VISA), please inform us of them on that Piazza announcement.
 
-During Lab 06, you will be given instructions on how the exam will operate. You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a Mimir assignment.
+During Lab 07, you will be given instructions on how the exam will operate. You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a Mimir assignment.
 
 Please ensure that your screen, workspace and profile are visible by the Zoom device throughout the exam. Example:
 
