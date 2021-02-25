@@ -11,8 +11,8 @@ In the Exam Zoom Meeting on 2021-03-05 at 5pm, Dr. Nahum will host a midterm rev
 
 ## Dates and Times
 
-- Lab Sections 1-10 will have the Monday evening exam: 2021-03-08 8pm-10pm
-- Lab Sections 10-14 will have the Tuesday morning exam: 2021-03-09 10am-noon
+- Lab Sections 1-8 will have the Monday evening exam: 2021-03-08 8pm-10pm
+- Lab Sections 9-14 will have the Tuesday morning exam: 2021-03-09 10am-noon
 
 Both exams will be 90 minutes in duration (from timer start to timer end), but everyone needs to be present in the Zoom meeting at the start of the scheduled exam time to ensure that everything is setup properly and for ID checks.
 
