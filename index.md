@@ -119,7 +119,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab07.html">Lab 07</a></td>
             <td>Homework 11</td>
             <td>No Thursday Homework</td>
-            <td>2020-03-02 and 2020-03-03 are Wellness Days (no labs or help room)</td>
+            <td>2020-03-02 and 2020-03-03 are Wellness Days (no labs or help room). Midterm review session on Friday at 5pm.</td>
         </tr>
         <tr>
             <td>08: 2021-03-08</td>
@@ -127,7 +127,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab08.html">Lab 08</a></td>
             <td>Homework 12</td>
             <td>Homework 13</td>
-            <td>Midterm exam on Monday and Tuesday. Details will be provided as date approaches.<sup>+</sup></td>
+            <td>Midterm exam on Monday and Tuesday, see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
         </tr>
         <tr>
             <td>09: 2021-03-15</td>
