@@ -105,15 +105,15 @@ Providing this information is the job of a **header file**. Header files are typ
 
 ### Example
 
-Make a new folder somewhere, and call it "lab6" (either with your File Explorer or the command line).
+Make a new folder somewhere, and call it "lab_vector" (either with your File Explorer or the command line).
 
 If you don't remember, you can make an empty folder by using the `mkdir` command (on Unix):
 
 ```bash
-mkdir lab6
+mkdir lab_vector
 ```
 
-[Download, and extract the files in this .zip folder linked here](../assets/downloads/lab_vactors.zip). Copy these files into your lab6 folder.
+[Download, and extract the files in this .zip folder linked here](../assets/downloads/lab_vectors.zip). Copy these files into your lab folder.
 
 Navigate your terminal to the folder, then, compile your three files with the following command:
 
@@ -170,11 +170,11 @@ This means: "if the pre-processor variable we indicate (`SOME_VARIABLE_NAME`) is
 
 Thus, whichever file pulls in the header file first, defines the pre-processor variable and declares the function for the entire compilation. If some other file also includes the header file later in the compilation, the pre-processor variable is already defined, so the declarations are not included.
 
-Of course, the simpler solution is to make use of the (not-yet-standardized) `#pragma once`. It is your call.
+Of course, the simpler solution is to make use of the (not-yet-standardized) `#pragma once`. Your call.
 
 ## Coding Assignment
 
-Make a new folder in your lab 6 directory called "splitter", and add three new files to it: main.cpp, functions.cpp and functions.hpp.
+Make a new folder in your lab directory called "splitter", and add three new files to it: main.cpp, functions.cpp and functions.hpp.
 
 &nbsp;
 
@@ -200,7 +200,6 @@ You can compile functions.cpp (not build, at least not yet) to see if functions.
 
 ⭐ Show your TA the object file generated after compiling the functions.cpp file.
 
-&nbsp;
 
 ```c++
 void print_vector(ostream &out, const vector<string> &v)
@@ -213,8 +212,6 @@ Store the function in functions.cpp, and put its declaration in functions.hpp li
 Compile the function (not build, compile) to make sure it follows the rules.
 
 **Note**: `ostream` is a category of all possible output streams (streams like `cout` and `ostringstream`). This function should be invoked with a specific `ostream` (either `cout` or `ostringstream`).
-
-&nbsp;
 
 Your `main()` function should go in main.cpp.
 
@@ -229,9 +226,6 @@ Write a `main()` function that:
 Compile (not build) main.cpp to see that it follows the rules. If you've successfully compiled it, build the project with the output executable name as "main" to test everything.
 
 ⭐ Demonstrate a working "main" executable to your TA.
-
-&nbsp;
-
 ### Assignment Notes
 
 1. Consider using the `getline()` function for your implementation of `split()`.
