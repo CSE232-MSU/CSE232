@@ -22,7 +22,7 @@ title: Week 06
 <iframe width="560" height="315" src="https://www.youtube.com/embed/VzZFKoL_qxk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-**Note**: minor correction; calling the `vector` constructor with one `int` argument (n) will create a vector of size n with each element default initialized (0 for numbers, empty for strings, etc.). So `std::vector<int> vec(5);` will result in a vector of 5 ones.
+**Note**: minor correction; calling the `vector` constructor with one `int` argument (n) will create a vector of size n with each element default initialized (0 for numbers, empty for strings, etc.). So `std::vector<int> vec(5);` will result in a vector of 5 zeros.
 
 Secondly, the capacity of a vector is only guarenteed to be equal or greater than the size. Its exact value (at constructor or later) is determined by the memory allocation used in a particular C++ implementation.
 
