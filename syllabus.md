@@ -124,7 +124,7 @@ All assignments (projects and homework) are to be done individually. Discussing 
 
 ### Re-Grades
 
-We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.
+We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. The entire assignment will be regraded, not just a specific part. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.
 
 ### Honors
 
