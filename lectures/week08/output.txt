@@ -1,0 +1,3 @@
+Average grade for Josh is 40.6667
+Average grade for Zach is 67
+Average grade for Linh is 62.6667

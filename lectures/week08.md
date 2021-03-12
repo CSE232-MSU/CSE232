@@ -22,6 +22,12 @@ title: Week 08
 
 ### Streams Live Code
 
+[stream_ex.cpp](week08/stream_ex.cpp)
+
+[grades.txt](week08/grades.txt)
+
+[output.txt](week08/output.txt)
+
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/FCn-kVEjcHg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
