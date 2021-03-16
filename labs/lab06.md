@@ -1,5 +1,5 @@
 ---
-title: Lab- Styling and Debugging
+title: Lab - Styling and Debugging
 ---
 
 # Lab- Styling and Debugging
