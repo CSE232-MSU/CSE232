@@ -24,7 +24,7 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 #### [Lab 09 - Structs](labs/lab09.html)
 
-#### [Lab 10 - Classes](labs/lab10.html)
+#### [Lab 10 - Generic Algorithms](labs/lab10.html)
 
 #### [Lab 11 - More on Classes](labs/lab11.html)
 
