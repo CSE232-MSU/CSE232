@@ -28,6 +28,18 @@ mv *.h headers/
 
 ⭐ Show your TA what happens when you use wildcards to open multiple '.cpp' files with the `gedit` command.
 
+## Debugging with Visual Studio Code
+
+There used to be a tutorial associated with this lab that demonstrated use of an IDE debugger. This tutorial was moved to be at the start of the course. The necessary setup is at the bottom of the [setup tutorials](https://cse232-msu.github.io/CSE232/setup.html) you (hopefully) went through during the first week.
+
+A similar IDE debugging tutorial [can be found here](https://cse232-msu.github.io/CSE232/debugging_guide.html) if you're unfamiliar with one. This used to be a Visual Studio tutorial, but it was recently changed to be a Visual Studio Code tutorial (yes, [Visual Studio](https://visualstudio.microsoft.com/) and [Visual Studio Code](https://code.visualstudio.com/) are two different IDEs) since this course now recommends VSCode as opposed to letting students choose any IDE. 
+
+(You can still choose your own IDE, but you'll be on your own if you need help with it)
+
+If you have come this far without VSCode and its debugger, we _highly_ recommend that you become acquainted with these tools, now, before the proceeding weeks. 
+
+Please feel free to ask questions about debugging if you don't fully understand it.
+
 ## Coding Assignment
 
 This lab will have you apply generic algorithms to various programming problems.
