@@ -107,8 +107,8 @@ Your task is to create an implementation file (named "math_vector.cpp") that pro
 Note that some of the work has been done for you. Here is what has been completed so far:
 
 `MathVector` has two data members:
-- `long x`, represents the x component of the vector
-- `long y`, represents the y component of the vector
+- `int x`, represents the x component of the vector
+- `int y`, represents the y component of the vector
 
 The `MathVector` constructor has two declarations:
 - A `default` constructor that initializes the data members, `x` and `y`, to 0.
@@ -124,7 +124,7 @@ string vec_to_str(const MathVector &v)
 
 Takes a `MathVector` instance and returns a `string` representation of the `MathVector` in the format "`x:y`".
 
-_This is not a member function, it is a generic function_.
+_This is a free function, not a member function_.
 
 &nbsp;
 
@@ -139,7 +139,7 @@ Takes a second operand `MathVector` instance, `other`, and adds them to produce 
 &nbsp;
 
 ```c++
-MathVector mult(long a)
+MathVector mult(int a)
 ```
 
 Multiplies the `MathVector` instance by a scalar, `a`. Returns the resultant `MathVector` instance.
@@ -147,10 +147,10 @@ Multiplies the `MathVector` instance by a scalar, `a`. Returns the resultant `Ma
 &nbsp;
 
 ```c++
-long mult(const MathVector &other)
+int mult(const MathVector &other)
 ```
 
-Takes the dot product between the two `MathVector` instances. Returns the resultant `long`.
+Takes the dot product between the two `MathVector` instances. Returns the resultant `int`.
 
 &nbsp;
 
