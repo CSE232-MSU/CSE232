@@ -26,6 +26,8 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 #### [Lab 10 - Structs](labs/lab10.html)
 
-#### [Lab 11 - More on Classes](labs/lab11.html)
+#### [Lab 11 - Code Review](labs/lab11.html)
 
-#### [Lab 12 - Pointer Manipulation](labs/lab12.html)
+#### [Lab 12 - More on Classes](labs/lab12.html)
+
+#### [Lab 13 - Pointer Manipulation](labs/lab13.html)
