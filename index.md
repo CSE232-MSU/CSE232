@@ -183,7 +183,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
             <td></td>
             <td></td>
-            <td>Final Exam on Wednesday and Thursday, with a review session on Monday.<sup>+</sup></td>
+            <td>Final Exam on Wednesday and Thursday, with a review session on Monday. See <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
         </tr>
     </tbody>
 </table>
