@@ -5,14 +5,14 @@ title: Exam Policies
 # Exam Policies
 
 
-## Midterm Review Session
+## Final Review Session
 
-In the Exam Zoom Meeting on 2021-03-05 at 5pm, Dr. Nahum will host a midterm review session to go over the sample midterm exam and answer any questions about the exam or other aspects of the class. It will be recorded and is entirely optional to attend. The solutions to the sample midterm will only be given to the students that "submit" their solution prior to the review session, so please ensure that you do so if you care to get answers.
+In the Exam Zoom Meeting on 2021-04-26 at 5pm, Dr. Nahum will host a midterm review session to go over the sample final exam and answer any questions about the exam or other aspects of the class. It will be recorded and is entirely optional to attend. The solutions to the sample final will only be given to the students that "submit" their solution prior to the review session, so please ensure that you do so if you care to get answers.
 
 ## Dates and Times
 
-- Lab Sections 1-8 will have the Monday evening exam: 2021-03-08 8pm-10pm
-- Lab Sections 9-14 will have the Tuesday morning exam: 2021-03-09 10am-noon
+- Lab Sections 1-7 will have the Wednesday evening exam: 2021-04-28 8pm-10pm
+- Lab Sections 8-14 will have the Thursday morning exam: 2021-04-29 10am-noon
 
 Both exams will be 90 minutes in duration (from timer start to timer end), but everyone needs to be present in the Zoom meeting at the start of the scheduled exam time to ensure that everything is setup properly and for ID checks.
 

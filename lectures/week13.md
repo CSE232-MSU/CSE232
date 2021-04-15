@@ -42,7 +42,7 @@ title: Week 13
 
 [19.3-stack.cpp](week13/19.3-stack.cpp)
 
-[19.3-stack.h](week13/19.3-stack.cpp)
+[19.3-stack.h](week13/19.3-stack.h)
 
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ceoNhThBQr0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
