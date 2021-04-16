@@ -31,3 +31,5 @@ The lab sessions are designed to be learning tools that complement the lectures,
 #### [Lab 12 - More on Classes](labs/lab12.html)
 
 #### [Lab 13 - Pointer Manipulation](labs/lab13.html)
+
+#### [Lab 14 - Last Lab](labs/lab14.html)
