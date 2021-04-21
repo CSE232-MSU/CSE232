@@ -7,7 +7,7 @@ title: Exam Policies
 
 ## Final Review Session
 
-In the Exam Zoom Meeting on 2021-04-26 at 5pm, Dr. Nahum will host a midterm review session to go over the sample final exam and answer any questions about the exam or other aspects of the class. It will be recorded and is entirely optional to attend. The solutions to the sample final will only be given to the students that "submit" their solution prior to the review session, so please ensure that you do so if you care to get answers.
+In the Exam Zoom Meeting on 2021-04-23 at 4pm, Dr. Nahum will host a final review session to go over the sample final exam and answer any questions about the exam or other aspects of the class. It will be recorded and is entirely optional to attend. The solutions to the sample final will only be given to the students that "submit" their solution prior to the review session, so please ensure that you do so if you care to get answers.
 
 ## Dates and Times
 
