@@ -35,7 +35,7 @@ Please ensure that your screen, workspace and profile are visible by the Zoom de
 ## Rules
 
 - During the exam, you are only permitted to communicate with instructors. Only communicate to them via private Zoom messages. Please ensure that all other messaging platforms are disabled during the exam.
-- The exam's Mimir page is the only page you're allowed to have open. The Zoom device can only have the Zoom app open to display your workspace and message instructors.
+- The exam's Mimir page is the only application that you're allowed to have open. The Zoom device can only have the Zoom app open to display your workspace and message instructors.
 - You are welcome to use any non-electronic resource during the exam. This includes textbooks, printed lecture slides, notes, example solutions to homework (including instructor solutions), and birthday cards. You may **not** use any online reference material or any other electronic resource.
 
 ## Preparation
