@@ -19,7 +19,7 @@ template <typename ElementType>
 class Stack;
 
 template <typename ElementType>
-ostream &operator<<(ostream &out, const Stack<ElementType> &s);
+ostream &operator<<(ostream &out, Stack<ElementType> const &s);
 
 template <typename ElementType>
 class Stack {
@@ -34,7 +34,7 @@ class Stack {
   // Stack(size_t sz);
   Stack(initializer_list<ElementType>);
 
-  Stack(const Stack &s);  // copy
+  Stack(Stack const &s);  // copy
   ~Stack();               // destructor
   Stack &operator=(Stack);
 
@@ -44,7 +44,7 @@ class Stack {
   bool empty();
   // bool full();
   void clear();
-  friend ostream &operator<<<ElementType>(ostream &, const Stack &);
+  friend ostream &operator<<<ElementType>(ostream &, Stack const &);
 };
 
 template <typename ElementType>
@@ -78,7 +78,7 @@ Stack<ElementType>::Stack(initializer_list<ElementType> lst) {
 }
 
 template <typename ElementType>
-Stack<ElementType>::Stack(const Stack<ElementType> &s) {
+Stack<ElementType>::Stack(Stack<ElementType> const &s) {
   sz_ = s.sz_;
   top_ = s.top_;
   ary_ = new ElementType[s.sz_];
@@ -132,7 +132,7 @@ void Stack<ElementType>::clear() {
 }
 
 template <typename ElementType>
-ostream &operator<<(ostream &out, const Stack<ElementType> &s) {
+ostream &operator<<(ostream &out, Stack<ElementType> const &s) {
   out << "(bottom)";
   copy(s.ary_, (s.ary_ + s.top_ + 1), ostream_iterator<ElementType>(out, ","));
   cout << "(top)" << endl;

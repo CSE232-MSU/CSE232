@@ -5,14 +5,14 @@ using std::endl;
 #include <cmath>
 using std::lround;
 
-long celsius_to_fahr(long celsius_t) {
+int celsius_to_fahr(int celsius_t) {
   double tmp;
   tmp = (9.0 / 5.0 * celsius_t) + 32;
   return lround(tmp);
 }
 
 int main() {
-  long celsius_temp, result;
+  int celsius_temp, result;
   cout << "Enter a temp in celsius:";
   cin >> celsius_temp;
   result = celsius_to_fahr(celsius_temp);

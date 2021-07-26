@@ -30,10 +30,10 @@ class Clock {
 
   // members
   void add_minutes(int);
-  friend string clk_to_string(const Clock &);
+  friend string clk_to_string(Clock const &);
 };
 
-string clk_to_string(const Clock &);
-void split(const string &, vector<string> &, char);
+string clk_to_string(Clock const &);
+void split(string const &, vector<string> &, char);
 
 #endif

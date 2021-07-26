@@ -21,8 +21,8 @@ class BadStack {
   explicit BadStack(size_t sz);
   BadStack(initializer_list<char> c);
 
-  BadStack(const BadStack &) = default;
-  BadStack &operator=(const BadStack &) = default;
+  BadStack(BadStack const &) = default;
+  BadStack &operator=(BadStack const &) = default;
   ~BadStack() = default;
 
   char top();
@@ -32,8 +32,8 @@ class BadStack {
   bool full();
   void clear();
 
-  friend ostream &operator<<(ostream &, const BadStack &);
+  friend ostream &operator<<(ostream &, BadStack const &);
 };
-ostream &operator<<(ostream &out, const BadStack &s);
+ostream &operator<<(ostream &out, BadStack const &s);
 
 #endif

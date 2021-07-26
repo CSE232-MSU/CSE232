@@ -12,7 +12,7 @@ using std::vector;
 using std::ostringstream;
 
 template <typename T>
-string vector_to_string(const vector<T>& v) {
+string vector_to_string(vector<T> const& v) {
   T max_val = T();
   ostringstream oss;
 

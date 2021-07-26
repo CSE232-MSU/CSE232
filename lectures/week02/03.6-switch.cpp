@@ -8,7 +8,7 @@ using std::setw;
 
 int main() {
   char C;               // Input character
-  long char_count = 0,  // Number of characters in input stream
+  int char_count = 0,   // Number of characters in input stream
       line_count = 0,   // Number of newlines
       white_count = 0,  // Number of whitespace characters
       digit_count = 0,  // Number of digits

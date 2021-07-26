@@ -32,13 +32,13 @@ int main() {
 
   try {
     stk.pop();
-  } catch (const underflow_error &e) {
+  } catch (underflow_error const &e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 
   try {
     stk.top();
-  } catch (const underflow_error &e) {
+  } catch (underflow_error const &e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 

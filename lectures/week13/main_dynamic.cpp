@@ -26,13 +26,13 @@ int main() {
 
   try {
     stk_chr.pop();
-  } catch (const underflow_error &e) {
+  } catch (underflow_error const& e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 
   try {
     stk_chr.top();
-  } catch (const underflow_error &e) {
+  } catch (underflow_error const& e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 
@@ -54,13 +54,13 @@ int main() {
 
   try {
     stk_lng.pop();
-  } catch (const underflow_error &e) {
+  } catch (underflow_error const& e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 
   try {
     stk_lng.top();
-  } catch (const underflow_error &e) {
+  } catch (underflow_error const& e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 

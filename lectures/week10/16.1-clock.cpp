@@ -30,7 +30,7 @@ void Clock::add_minutes(int min) {
 }
 
 // convert clock to string
-string clk_to_string(const Clock &c) {
+string clk_to_string(Clock const &c) {
   ostringstream oss;
   oss << "Hours:" << c.hours << ", Minutes:" << c.minutes
       << ", Period:" << c.period;

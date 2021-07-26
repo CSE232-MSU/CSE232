@@ -3,9 +3,9 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-int reverse_int(long number) {
+int reverse_int(int number) {
   // reverse an integer using modulo math. Assumes base 10
-  long result = 0;
+  int result = 0;
 
   while (number >= 1) {
     int remainder = number % 10;
@@ -16,9 +16,9 @@ int reverse_int(long number) {
 }
 
 int main() {
-  long number, result;
+  int number;
   cout << "Reverse what integer:";
   cin >> number;
-  result = reverse_int(number);
+  int result = reverse_int(number);
   cout << "The reverse of " << number << " is " << result << endl;
 }

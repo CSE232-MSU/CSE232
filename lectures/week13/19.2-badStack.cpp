@@ -48,7 +48,7 @@ bool BadStack::full() { return top_ >= (sz_ - 1); }
 
 void BadStack::clear() { top_ = -1; }
 
-ostream &operator<<(ostream &out, const BadStack &s) {
+ostream &operator<<(ostream &out, BadStack const &s) {
   out << "(bottom) ";
   copy(s.ary_, s.ary_ + s.top_ + 1, ostream_iterator<char>(out, ","));
   out << " (top)";

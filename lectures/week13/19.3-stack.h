@@ -18,9 +18,9 @@ class Stack {
   Stack(size_t sz);
   Stack(initializer_list<char>);
 
-  Stack(const Stack &);  // copy
+  Stack(Stack const &);  // copy
   ~Stack();              // destructor
-  Stack &operator=(const Stack &);
+  Stack &operator=(Stack const &);
 
   char top();
   void pop();
@@ -28,8 +28,8 @@ class Stack {
   bool empty();
   bool full();
   void clear();
-  friend ostream &operator<<(ostream &, const Stack &);
+  friend ostream &operator<<(ostream &, Stack const &);
 };
 
-ostream &operator<<(ostream &, const Stack &);
+ostream &operator<<(ostream &, Stack const &);
 #endif

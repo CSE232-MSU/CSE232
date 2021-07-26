@@ -32,8 +32,8 @@ int main() {
   cout << diff << endl;
 
   // unicode string literal
-  const char* phi = u8"\u03C6";        // lower case greek phi
-  const char* smile = u8"\U0001F607";  // smiley with halo
+  char const* phi = u8"\u03C6";        // lower case greek phi
+  char const* smile = u8"\U0001F607";  // smiley with halo
   cout << phi << endl;
   cout << smile << endl;
 }

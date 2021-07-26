@@ -27,7 +27,7 @@ bool Stack::empty() { return vec_.empty(); }
 
 void Stack::clear() { vec_.clear(); }
 
-ostream &operator<<(ostream &out, const Stack &s) {
+ostream &operator<<(ostream &out, Stack const &s) {
   out << "(bottom) ";
   copy(s.vec_.begin(), s.vec_.end(), ostream_iterator<char>(out, ","));
   out << " (top)";

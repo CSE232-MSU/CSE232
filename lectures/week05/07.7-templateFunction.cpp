@@ -32,7 +32,7 @@ int main() {
   // force the type deduction, but no casts!
   /*
   cout << "Preswap i1:" << i1 << ", i2:" << i2 << endl;
-  swap<long>(i1, i2);
+  swap<int>(i1, i2);
   cout << "Postswap i1:" << i1 << ", i2:" << i2 << endl << endl;
   */
 

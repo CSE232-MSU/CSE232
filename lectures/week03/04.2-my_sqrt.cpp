@@ -4,7 +4,7 @@
 double my_sqrt(double value, double epsilon) {
   double guess = value / 2.0;
   double under = value / guess;
-  long cnt = 0;
+  int cnt = 0;
   std::cout << std::fixed << std::setprecision(15);
 
   while (guess - under > epsilon) {

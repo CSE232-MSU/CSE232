@@ -1,6 +1,6 @@
 #ifndef DEFAULT_TEST
 #define DEFAULT_TEST
 
-long f1(long p1, long p2 = 2);
+int f1(int p1, int p2 = 2);
 
 #endif

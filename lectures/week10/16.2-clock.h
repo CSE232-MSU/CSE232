@@ -19,7 +19,7 @@ struct Clock {
   void add_minutes(int);
 };
 
-string clk_to_string(const Clock &);
-void split(const string &, vector<string> &, char);
+string clk_to_string(Clock const &);
+void split(string const &, vector<string> &, char);
 
 #endif

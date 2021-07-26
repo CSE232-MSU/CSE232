@@ -3,25 +3,25 @@ using std::cout;
 using std::endl;
 
 int main() {
-  long my_long = 27, a_long = 56;
+  int my_int = 27, a_int = 56;
 
-  long& ref_long = my_long;  // & assoc with decl, a ref
+  int& ref_int = my_int;  // & assoc with decl, a ref
 
-  // one ref, one long (& goes with var)
-  long &ref2_long = a_long, last_long = 123;
-  cout << ref2_long << ' ' << last_long << endl;
+  // one ref, one int (& goes with var)
+  int &ref2_int = a_int, last_int = 123;
+  cout << ref2_int << ' ' << last_int << endl;
 
-  // long &ref_long2 = 27;
+  // int &ref_int2 = 27;
   // ERROR, must be an lvalue, not a literal
 
-  cout << "Long:" << my_long << ", Ref:" << ref_long << endl;
+  cout << "int:" << my_int << ", Ref:" << ref_int << endl;
 
-  my_long = 123;  // ref is an alias, both change
-  cout << "Long:" << my_long << ", Ref:" << ref_long << endl;
+  my_int = 123;  // ref is an alias, both change
+  cout << "int:" << my_int << ", Ref:" << ref_int << endl;
 
-  ref_long = 456;  // ditto
-  cout << "Long:" << my_long << ", Ref:" << ref_long << endl;
+  ref_int = 456;  // ditto
+  cout << "int:" << my_int << ", Ref:" << ref_int << endl;
 
   // they are the same address
-  cout << &my_long << ";" << &ref_long << endl;
+  cout << &my_int << ";" << &ref_int << endl;
 }

@@ -12,6 +12,6 @@ struct Clock {
   void add_minutes(int);
 };
 
-string clk_to_string(const Clock &);
+string clk_to_string(Clock const&);
 
 #endif

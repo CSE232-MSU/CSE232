@@ -10,6 +10,6 @@ struct Clock {
   string period;
 };
 
-string print_clk(const Clock &c);
+string print_clk(Clock const& c);
 
 #endif

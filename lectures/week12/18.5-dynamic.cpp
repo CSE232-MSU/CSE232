@@ -17,10 +17,10 @@ class MyClass {
  public:
   MyClass() : long_(0), int_(0), str_("default ctor"){};
   MyClass(long l, int i, string s) : long_(l), int_(i), str_(s){};
-  friend ostream &operator<<(ostream &, const MyClass &);
+  friend ostream &operator<<(ostream &, MyClass const &);
 };
 
-ostream &operator<<(ostream &out, const MyClass &c) {
+ostream &operator<<(ostream &out, MyClass const &c) {
   out << "l:" << c.long_ << ", i:" << c.int_ << ", s:" << c.str_;
   return out;
 }

@@ -20,7 +20,7 @@ class Clock {
   Clock() = default;
   Clock(int, int, string);
   explicit Clock(string s);
-  Clock(const Clock &);  // copy constructor
+  Clock(Clock const &);  // copy constructor
   ~Clock(){};            // destructor. Does nothing yet
   Clock(int i) : minutes_(i), hours_(0), period_("AM"){};
 
@@ -38,21 +38,21 @@ class Clock {
   void add_minutes(int);
 
   // overloaded operator= method
-  Clock &operator=(const Clock &);
+  Clock &operator=(Clock const &);
 
   // overloaded operator+ method
-  // Clock operator+(const Clock&);
+  // Clock operator+(Clock const &);
 
   // friends
-  friend Clock operator+(const Clock &, const Clock &);
-  friend ostream &operator<<(ostream &, const Clock &);
+  friend Clock operator+(Clock const &, Clock const &);
+  friend ostream &operator<<(ostream &, Clock const &);
 };
 
 // overloaded operator+ function
-Clock operator+(const Clock &, const Clock &);
+Clock operator+(Clock const &, Clock const &);
 // overloaded operator<< function
-ostream &operator<<(ostream &, const Clock &);
+ostream &operator<<(ostream &, Clock const &);
 
-void split(const string &, vector<string> &, char);
+void split(string const &, vector<string> &, char);
 
 #endif

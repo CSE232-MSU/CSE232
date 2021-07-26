@@ -27,7 +27,7 @@ void Clock::add_minutes(int min) {
 }
 
 // convert clock to string
-string clk_to_string(const Clock &c) {
+string clk_to_string(Clock const &c) {
   ostringstream oss;
   oss << "Hours:" << c.hours << ", Minutes:" << c.minutes
       << ", Period:" << c.period;
@@ -35,7 +35,7 @@ string clk_to_string(const Clock &c) {
 }
 
 // split string based on sep, ref return of vector<string>
-void split(const string &s, vector<string> &elems, char sep) {
+void split(string const &s, vector<string> &elems, char sep) {
   istringstream iss(s);
   string item;
   while (getline(iss, item, sep)) elems.push_back(item);

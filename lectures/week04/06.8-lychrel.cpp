@@ -8,7 +8,7 @@ using std::stol;
 using std::string;
 using std::to_string;
 
-long rev_num(long num) {
+int rev_num(int num) {
   string rev = "";
   string str = to_string(num);
   for (int i = str.size() - 1; i >= 0; --i) {
@@ -17,14 +17,14 @@ long rev_num(long num) {
   return stol(rev);
 }
 
-bool is_palindrome(long n) {
-  long rnum = rev_num(n);
+bool is_palindrome(int n) {
+  int rnum = rev_num(n);
   return (n == rnum);
 }
 
-bool check_lychrel(long n, long limit) {
-  long cnt = 0;
-  long num = n, rnum = 0;
+bool check_lychrel(int n, int limit) {
+  int cnt = 0;
+  int num = n, rnum = 0;
   while (cnt < limit && (!is_palindrome(num))) {
     rnum = rev_num(num);
     num = num + rnum;
@@ -37,8 +37,8 @@ bool check_lychrel(long n, long limit) {
 
 int main() {
   cout << boolalpha;
-  long num;
-  long limit = 40;
+  int num;
+  int limit = 40;
   cin >> num;
   cout << "checking " << num << endl;
   bool result = check_lychrel(num, limit);

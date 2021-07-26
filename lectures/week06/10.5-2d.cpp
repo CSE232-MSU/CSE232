@@ -13,7 +13,7 @@ using std::string;
 using std::ostringstream;
 
 template <typename T>
-string print_2d(const vector<vector<T> >& v) {
+string print_2d(vector<vector<T>> const& v) {
   ostringstream oss;
   string result = "";
   string temp;
@@ -34,11 +34,11 @@ string print_2d(const vector<vector<T> >& v) {
 }
 
 int main() {
-  const vector<double>::size_type col_size = 4;
-  const size_t row_size = 3;
+  vector<double>::size_type const col_size = 4;
+  size_t const row_size = 3;
 
   vector<double> row(col_size, 0.0);
-  vector<vector<double> > board(row_size, row);
+  vector<vector<double>> board(row_size, row);
 
   cout << fixed << setprecision(1);
 

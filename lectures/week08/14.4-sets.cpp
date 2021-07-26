@@ -15,7 +15,7 @@ using std::ostringstream;
 using std::set;
 
 template <typename T>
-string set_to_string(const set<T>& s) {
+string set_to_string(set<T> const& s) {
   ostringstream oss;
   for (auto element : s) oss << element << ", ";
   string result = oss.str();
@@ -41,7 +41,7 @@ int main() {
   else
     cout << "Couldn't insert mommy" << endl;
 
-  for (const string& element : family) cout << element << ",";
+  for (string const& element : family) cout << element << ",";
   cout << endl;
 
   cout << set_to_string(family) << endl;

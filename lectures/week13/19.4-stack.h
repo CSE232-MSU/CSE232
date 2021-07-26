@@ -17,9 +17,9 @@ class Stack {
   Stack(size_t sz);
   Stack(initializer_list<char>);
 
-  Stack(const Stack& s);          // copy
+  Stack(Stack const& s);          // copy
   ~Stack();                       // destructor
-  Stack& operator=(const Stack);  // SUBTLE CHANGE!
+  Stack& operator=(Stack const);  // SUBTLE CHANGE!
 
   char top();
   void pop();
@@ -27,10 +27,10 @@ class Stack {
   bool empty();
   bool full();
   void clear();
-  friend ostream& operator<<(ostream&, const Stack&);
+  friend ostream& operator<<(ostream&, Stack const&);
   friend void swap(Stack&, Stack&);
 };
 
 void swap(Stack&, Stack&);
-ostream& operator<<(ostream&, const Stack&);
+ostream& operator<<(ostream&, Stack const&);
 #endif

@@ -48,8 +48,8 @@ int main() {
          << " at index:" << distance(v_i.begin(), mark) << endl;
 
   // find_if, lambda, evenly divisible by 10;
-  mark = find_if(v_i.begin(), v_i.end(),
-                 [](const long &l) { return l % 10 == 0; });
+  mark =
+      find_if(v_i.begin(), v_i.end(), [](int const& l) { return l % 10 == 0; });
   if (mark != v_i.end())
     cout << "Even by 10 at:" << distance(v_i.begin(), mark) << endl;
   else
@@ -66,7 +66,7 @@ int main() {
   string target = "this";
   auto pos = search(
       source.begin(), source.end(), target.begin(), target.end(),
-      [](const char c1, const char c2) { return tolower(c1) == tolower(c2); });
+      [](char constc1, char constc2) { return tolower(c1) == tolower(c2); });
   if (pos != source.end())
     cout << "target at :" << distance(source.begin(), pos) << endl;
   else

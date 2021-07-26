@@ -9,7 +9,7 @@ using std::string;
 using std::ostringstream;
 
 template <typename T>
-string vec_to_string(const vector<T> &v) {
+string vec_to_string(vector<T> const &v) {
   ostringstream oss;
   for (auto iter = v.cbegin(); iter != v.cend(); ++iter) {
     oss << *iter << ", ";
@@ -57,11 +57,11 @@ int main() {
   cout << "second version (done twice)\n" << vec_to_string(v) << endl;
 
   // const reference, can't modify
-  for (const auto &element : v)
+  for (auto const &element : v)
     // element += 1;
 
     for (auto pos = v.begin(), end = v.end(); pos != end; ++pos) {
-      const auto &element = *pos;
+      auto const &element = *pos;
       // element += 1;
     }
 }

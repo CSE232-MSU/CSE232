@@ -19,15 +19,15 @@ using std::istringstream;
 using std::ostringstream;
 
 template <typename T>
-void print_vector(const vector<T>& v, ostream& out) {
+void print_vector(vector<T> const& v, ostream& out) {
   out << endl;
-  for (const auto& element : v) {
+  for (auto const& element : v) {
     out << element << ", ";
   }
   out << endl;
 }
 
-void get_useable_ints(const string& str, vector<int>& v) {
+void get_useable_ints(string const& str, vector<int>& v) {
   istringstream iss(str);
   string file_element_str;
   int file_element_int;

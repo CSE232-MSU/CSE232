@@ -10,7 +10,7 @@ boolean operators
 
 int main() {
   bool bool_true = true, bool_false = false;
-  long first = 0, second = 0;
+  int first = 0, second = 0;
 
   cout << "bool_true:" << bool_true << ", bool_false:" << bool_false << endl;
   cout << "Turning on boolalpha" << boolalpha << endl;

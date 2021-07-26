@@ -31,7 +31,7 @@ int main() {
 
   try {
     stk.push('z');
-  } catch (const overflow_error &e) {
+  } catch (overflow_error const &e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 
@@ -39,13 +39,13 @@ int main() {
 
   try {
     stk.pop();
-  } catch (const underflow_error &e) {
+  } catch (underflow_error const &e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 
   try {
     stk.top();
-  } catch (const underflow_error &e) {
+  } catch (underflow_error const &e) {
     cout << e.what() << ": continuing after error" << endl;
   }
 

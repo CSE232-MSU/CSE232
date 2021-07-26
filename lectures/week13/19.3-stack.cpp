@@ -12,7 +12,7 @@ using std::underflow_error;
 
 #include "19.3-stack.h"
 
-Stack::Stack(const Stack &s) {
+Stack::Stack(Stack const &s) {
   sz_ = s.sz_;
   top_ = s.top_;
   ary_ = new char[s.sz_];
@@ -23,7 +23,7 @@ Stack::Stack(const Stack &s) {
 Stack::~Stack() { delete[] ary_; }
 
 // classic, but there's a better way!!!
-Stack &Stack::operator=(const Stack &s) {
+Stack &Stack::operator=(Stack const &s) {
   if (this != &s) {  // this and s are not the same pointer!
     delete[] ary_;
     sz_ = s.sz_;
@@ -73,7 +73,7 @@ bool Stack::full() { return top_ >= (sz_ - 1); }
 
 void Stack::clear() { top_ = -1; }
 
-ostream &operator<<(ostream &out, const Stack &s) {
+ostream &operator<<(ostream &out, Stack const &s) {
   out << "(bottom) ";
   copy(s.ary_, s.ary_ + s.top_ + 1, ostream_iterator<char>(out, ","));
   out << " (top)";

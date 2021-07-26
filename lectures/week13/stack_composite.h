@@ -27,8 +27,8 @@ class Stack {
 
   // take defaults for the following 4. Vector handles it already.
   Stack() = default;
-  Stack(const Stack &s) = default;
-  Stack &operator=(const Stack &s) = default;
+  Stack(Stack const &s) = default;
+  Stack &operator=(Stack const &s) = default;
   ~Stack() = default;
 
   // stack operations
@@ -40,7 +40,7 @@ class Stack {
   void clear();
 
   // friends inline, template matching works properly then.
-  friend ostream &operator<<(ostream &out, const Stack<ElementType> &s) {
+  friend ostream &operator<<(ostream &out, Stack<ElementType> const &s) {
     out << "(bottom),";
     copy(s.vec_.begin(), s.vec_.end(), ostream_iterator<ElementType>(out, ","));
     out << "(top)";

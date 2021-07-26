@@ -4,7 +4,7 @@ using std::endl;
 
 // let template deduce size, we don't have to say!!
 template <typename Type, size_t Size>
-int squares(const Type (&ary)[Size]) {
+int squares(Type const (&ary)[Size]) {
   Type result = 0;
   cout << "sizeof array (template size):" << sizeof(ary) << endl;
   for (auto element : ary) result = result + (element * element);
@@ -12,7 +12,7 @@ int squares(const Type (&ary)[Size]) {
 }
 
 int main() {
-  const size_t cnst_sz = 5;
+  size_t const cnst_sz = 5;
   int ary1[cnst_sz]{8, 5, 6, 7, 4};
   cout << squares(ary1) << endl;
 

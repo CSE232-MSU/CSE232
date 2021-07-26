@@ -40,7 +40,7 @@ int max_val(int *first, int *one_past_last) {
 }
 
 // pass as reference to an array, sizeof works here
-int prod(const int (&ary)[5]) {
+int prod(int const (&ary)[5]) {
   int result = 1;
   cout << "sizeof array (ref, fixed):" << sizeof(ary) << endl;
   // compiler knows size, can do range-based for
@@ -52,7 +52,7 @@ int prod(const int (&ary)[5]) {
 
 // let template deduce size, we don't have to say!!
 template <typename Type, size_t Size>
-int squares(const Type (&ary)[Size]) {
+int squares(Type const (&ary)[Size]) {
   Type result = 0;
   cout << "sizeof array (template size):" << sizeof(ary) << endl;
   for (auto element : ary) {
@@ -62,7 +62,7 @@ int squares(const Type (&ary)[Size]) {
 }
 
 int main() {
-  const size_t size = 5;
+  size_t const size = 5;
   int ary1[size]{8, 5, 6, 7, 4};
 
   int i = 27;

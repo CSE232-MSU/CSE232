@@ -45,7 +45,7 @@ int main() {
   }
   cout << endl;
 
-  // print using indexing, indx is of type vector<long>::size_type
+  // print using indexing, indx is of type vector<int>::size_type
   for (vector<int>::size_type indx = 0; indx < v_int.size(); ++indx) {
     cout << v_int[indx] << ", ";
   }

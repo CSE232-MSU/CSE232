@@ -3,11 +3,11 @@ using std::cout;
 using std::endl;
 
 int main() {
-  const size_t size = 5;
+  size_t const size = 5;
   int ary1[size]{8, 5, 6, 7, 4};
   char ary2[]{'a', 'b', 'c', 'd'};  // fixed size, 4 chars
-  long ary3[size]{};                // 0 initialized, each element initialized!
-  long ary4[size];                  // uninitialized, no work done.
+  int ary3[size]{};                 // 0 initialized, each element initialized!
+  int ary4[size];                   // uninitialized, no work done.
   cout << "Index 0 of ary1:" << ary1[0] << endl;
   cout << "Index 0 of ary2:" << ary2[0] << endl;
   cout << "Index 4 of ary3:" << ary3[4] << endl;

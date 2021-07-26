@@ -7,7 +7,7 @@ using std::string;
 #include <vector>
 using std::vector;
 
-void split(const string& s, vector<string>& v, char delim = ' ') {
+void split(string const& s, vector<string>& v, char delim = ' ') {
   string::size_type start = 0;
   v.clear();
   auto pos = s.find(delim, start);  // string::size_type
@@ -20,7 +20,7 @@ void split(const string& s, vector<string>& v, char delim = ' ') {
 }
 
 template <typename T>
-void print_vector(const vector<T>& v, ostream& out) {
+void print_vector(vector<T> const& v, ostream& out) {
   for (auto element : v) {
     out << element << ", ";
   }

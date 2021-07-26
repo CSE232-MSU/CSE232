@@ -3,7 +3,7 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-double my_fn(long num) {
+double my_fn(int num) {
   double pi = 3.1415926535;
   double pi_div = pi / static_cast<double>(num);
   cout << "pi over " << num << " is " << pi_div << endl;
@@ -13,7 +13,7 @@ double my_fn(long num) {
 }
 
 int main() {
-  long num;
+  int num;
   double result;
   cout << "What number:";
   cin >> num;

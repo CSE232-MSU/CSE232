@@ -8,14 +8,14 @@ using std::setprecision;
 using std::atan;
 using std::pow;
 
-double circ_area(const double& radius, const double& pi) {
+double circ_area(double const& radius, double const& pi) {
   // radius += 2;
   return pow(radius, 2) * pi;
 }
 
 int main() {
   double r;
-  const double pi = atan(1.0) * 4.0;  // no pi constant in cmath
+  double const pi = atan(1.0) * 4.0;  // no pi constant in cmath
   cout << "Give me a radius:";
   cin >> r;
   cout << setprecision(15);

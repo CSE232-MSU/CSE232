@@ -15,7 +15,7 @@ using std::string;
 using std::ostringstream;
 
 int main() {
-  const size_t size = 5;
+  size_t const size = 5;
   int ary1[size]{8, 5, 6, 7, 4};
   int ary2[size];  // not initialized.
 

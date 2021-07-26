@@ -5,9 +5,9 @@ using std::cout;
 using std::endl;
 
 int main() {
-  const bool bool_T = true, bool_F = false;
+  bool const bool_T = true, bool_F = false;
 
-  const int my_int = 3, an_int = 8;
+  int const my_int = 3, an_int = 8;
 
   cout << endl;
   cout << "bool bool_T: " << bool_T << endl;

@@ -24,7 +24,7 @@ string pair_to_string(pair<K, V> p) {
 }
 
 template <typename K, typename V>
-void print_map(const map<K, V>& m) {
+void print_map(map<K, V> const& m) {
   transform(m.cbegin(), m.cend(), ostream_iterator<string>(cout, ", "),
             pair_to_string<K, V>);
 }

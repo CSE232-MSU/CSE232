@@ -8,8 +8,8 @@ using std::setprecision;
 
 int main() {
   // sum up the numbers, end at 0
-  long sum = 0;
-  long num;
+  int sum = 0;
+  int num;
   cout << "Enter a number. Ends when 0 entered" << endl;
   cout << "Number:";
   cin >> num;

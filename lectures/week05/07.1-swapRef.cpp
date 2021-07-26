@@ -3,9 +3,9 @@ using std::cin;
 using std::cout;
 using std::endl;
 
-void swap(long &first, long &second) {
+void swap(int &first, int &second) {
   // a reference is an alias
-  long temp;
+  int temp;
   temp = first;
   first = second;
   second = temp;
@@ -13,7 +13,7 @@ void swap(long &first, long &second) {
 }
 
 int main() {
-  long one = 100, two = 200;
+  int one = 100, two = 200;
   cout << "Pre swap, one has value:" << one << ", two has value:" << two
        << endl;
   swap(one, two);

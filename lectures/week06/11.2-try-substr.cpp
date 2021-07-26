@@ -12,19 +12,19 @@ using std::runtime_error;
 int main() {
   string my_str;
   size_t indx;
-  long char_long;
+  int char_int;
   char C;
 
   cin >> my_str;
   cin >> indx;
 
   try {
-    C = my_str.at(indx);             // thows out_of_range
-    char_long = stol(string(1, C));  // throws invalid_argument
-    if (char_long == 0) {
+    C = my_str.at(indx);            // thows out_of_range
+    char_int = stoi(string(1, C));  // throws invalid_argument
+    if (char_int == 0) {
       throw runtime_error("division by zero");
     }
-    cout << my_str.size() / char_long << endl;
+    cout << my_str.size() / char_int << endl;
   } catch (out_of_range& e) {
     cout << "In the out of range catcher" << endl;
     cout << e.what() << endl;

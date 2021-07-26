@@ -39,7 +39,7 @@ int main() {
   cout << endl;
 
   // lambda, compare on string length
-  sort(v_s.begin(), v_s.end(), [](const string& s1, const string& s2) {
+  sort(v_s.begin(), v_s.end(), [](string const& s1, string const& s2) {
     return s1.size() < s2.size();
   });
   copy(v_s.begin(), v_s.end(), ostream_iterator<string>(cout, ", "));

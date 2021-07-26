@@ -26,9 +26,9 @@ class Stack {
   // bool full();  // not a problem with vectors
   void clear();
 
-  friend ostream& operator<<(ostream& out, const Stack& s);
+  friend ostream& operator<<(ostream& out, Stack const& s);
 };
 
-ostream& operator<<(ostream& out, const Stack& s);
+ostream& operator<<(ostream& out, Stack const& s);
 
 #endif

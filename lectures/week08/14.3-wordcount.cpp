@@ -56,7 +56,7 @@ int main() {
   copy(word_map.begin(), word_map.end(), back_inserter(v));
   // sort it on second using >
   sort(v.begin(), v.end(),
-       [](const pair<string, int> &p1, const pair<string, int> &p2) {
+       [](pair<string, int> const& p1, pair<string, int> const& p2) {
          return p1.second > p2.second;
        });
   // print new order

@@ -17,7 +17,7 @@ void double_size(int*(&array), size_t& size) {
 }
 
 int main() {
-  const size_t size = 2;
+  size_t const size = 2;
   int* array = new int[size];
   array[0] = 9;
   array[1] = 7;

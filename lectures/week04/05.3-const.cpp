@@ -3,28 +3,27 @@ using std::cout;
 using std::endl;
 
 int main() {
-  long my_long = 10, a_long = 20;
-  const long c_long = 123;  // constant long must be inited, cannot change
-  // const long x;              // ERROR, must init
-  // c_long = 456;          // ERROR, can't change a const
+  int my_int = 10, a_int = 20;
+  int const c_int = 123;  // constant int must be inited, cannot change
+  // int const x; // ERROR, must init
+  // c_int = 456; // ERROR, can't change a const
 
-  my_long = c_long;  // assign is copy, orig not changed. So OK
+  my_int = c_int;  // assign is copy, orig not changed. So OK
 
   // references
-  const long &ref1_long = c_long;  // ref cannot change referenced value
-  const long &ref2_long =
-      my_long;  // can ref a non-const, ref still can't change
-  const double &ref_pi = 3.14159;  // can even const ref a literal
-  // ref2_long = 100;               // ERROR, cannot change since ref is const
+  int const &ref1_int = c_int;   // ref cannot change referenced value
+  int const &ref2_int = my_int;  // can ref a non-const, ref still can't change
+  double const &ref_pi = 3.14159;  // can even const ref a literal
+  // ref2_int = 100;               // ERROR, cannot change since ref is const
   // even though what it refs is non-const
-  a_long = ref1_long;  // assign is copy, orig not changed. So OK
+  a_int = ref1_int;  // assign is copy, orig not changed. So OK
 
   // pointers
-  const long *ptr_c_long = &c_long;  // low level, ptr to const long
-  ptr_c_long = &a_long;              // can point to a non-const
-  // *ptr_c_long = 27;                // ERROR, can't change through const ptr
-  long *const const_ptr_my_long = &my_long;  // top level, constant ptr
-  // const_ptr_my_long = &a_long;         // ERROR, cannot change what is
+  int const *ptr_c_int = &c_int;  // low level, ptr to const int
+  ptr_c_int = &a_int;             // can point to a non-const
+  // *ptr_c_int = 27;                // ERROR, can't change through const ptr
+  int *const const_ptr_my_int = &my_int;  // top level, constant ptr
+  // const_ptr_my_int = &a_int;         // ERROR, cannot change what is
   // pointed to
-  const long *const c_c_p_long = &c_long;
+  int const *const c_c_p_int = &c_int;
 }

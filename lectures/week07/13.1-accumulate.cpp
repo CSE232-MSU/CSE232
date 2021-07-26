@@ -13,7 +13,7 @@ using std::plus;
 using std::accumulate;
 
 template <typename T>
-T sum_of_squares(const T& total, const T& element) {
+T sum_of_squares(T const& total, T const& element) {
   return total + element * element;
 }
 
@@ -47,7 +47,7 @@ int main() {
   // a lambda
   cout << "sum of x+2 is:"
        << accumulate(v_l.begin(), v_l.end(), 0,
-                     [](const int& total, const int& element) {
+                     [](int const& total, int const& element) {
                        return total + element + 2;
                      })
        << endl;

@@ -5,7 +5,7 @@ using std::endl;
 using std::vector;
 
 // Returns the minimum element in vec from the start_index to the end
-int recursive_min(const vector<int>& vec, int start_index) {
+int recursive_min(vector<int> const& vec, int start_index) {
   if (start_index == static_cast<int>(vec.size()) - 1) {
     return vec[start_index];
   }

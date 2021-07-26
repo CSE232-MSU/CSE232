@@ -12,7 +12,7 @@ using std::ostringstream;
 
 /*
 // overloaded operator+ as a method
-Clock Clock::operator+(const Clock &c2){
+Clock Clock::operator+(Clock const &c2){
     Clock new_c;
     new_c.minutes_ = minutes_ + c2.minutes_;
     new_c.hours_ = hours_ + c2.hours_;
@@ -24,7 +24,7 @@ Clock Clock::operator+(const Clock &c2){
 
 // overload operator+ as a *function*
 // declared a friend in the header
-Clock operator+(const Clock &c1, const Clock &c2) {
+Clock operator+(Clock const &c1, Clock const &c2) {
   Clock new_c;
   new_c.minutes_ = c1.minutes_ + c2.minutes_;
   new_c.hours_ = c1.hours_ + c2.hours_;
@@ -35,14 +35,14 @@ Clock operator+(const Clock &c1, const Clock &c2) {
 
 // overload operator<< as a *function*
 // declared a friend in the header
-ostream &operator<<(ostream &out, const Clock &c) {
+ostream &operator<<(ostream &out, Clock const &c) {
   out << "Hours:" << c.hours_ << ", Minutes:" << c.minutes_
       << ", Period:" << c.period_;
   return out;
 }
 
 // copy constructor
-Clock::Clock(const Clock &c) {
+Clock::Clock(Clock const &c) {
   // this->minutes_ = c.minutes_;
   minutes_ = c.minutes_;
   hours_ = c.hours_;
@@ -52,7 +52,7 @@ Clock::Clock(const Clock &c) {
 // overload assignment method
 // should return a ref to lhs
 // param must be const
-Clock &Clock::operator=(const Clock &c) {
+Clock &Clock::operator=(Clock const &c) {
   // this->minutes_ = c.minutes_
   minutes_ = c.minutes_;
   hours_ = c.hours_;
@@ -122,7 +122,7 @@ void Clock::add_minutes(int min) {
 }
 
 // split string based on sep, ref return of vector<string>
-void split(const string &s, vector<string> &elems, char sep) {
+void split(string const &s, vector<string> &elems, char sep) {
   istringstream iss(s);
   string item;
   while (getline(iss, item, sep)) elems.push_back(item);

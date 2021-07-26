@@ -9,8 +9,8 @@ using std::setw;
 
 int main() {
   char C;
-  long punc_cnt = 0, letter_cnt = 0, upper_cnt = 0, lower_cnt = 0,
-       digit_cnt = 0, other_cnt = 0;
+  int punc_cnt = 0, letter_cnt = 0, upper_cnt = 0, lower_cnt = 0, digit_cnt = 0,
+      other_cnt = 0;
 
   int shift = -10;
   cin >> noskipws;    // get everything, no separators
