@@ -28,8 +28,8 @@ string vector_to_string(const vector<T>& v) {
   oss.clear();
   oss.str("");
 
-  long number_of_columns = 80 / width;
-  long col_count = 0;
+  int number_of_columns = 80 / width;
+  int col_count = 0;
   for (auto val : v) {
     oss << setw(width) << val;
     if (col_count < number_of_columns) {

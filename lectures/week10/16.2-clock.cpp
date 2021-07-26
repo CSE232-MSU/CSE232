@@ -1,12 +1,13 @@
-#include<string>
+#include <string>
 using std::string;
-#include<sstream>
-using std::ostringstream; using std::istringstream;
+#include <sstream>
+using std::istringstream;
+using std::ostringstream;
 
 #include "16.2-clock.h"
 
 // string constructor
-Clock::Clock(string s){
+Clock::Clock(string s) {
   // format is hr:min:period
   vector<string> fields;
   split(s, fields, ':');
@@ -16,28 +17,26 @@ Clock::Clock(string s){
 }
 
 // add to minutes, correct hours if overflow
-void Clock::add_minutes(int min){
+void Clock::add_minutes(int min) {
   auto temp = minutes + min;
-  if (temp >=60){
+  if (temp >= 60) {
     minutes = temp % 60;
     hours = temp / 60 + hours;
-  }
-  else
+  } else
     minutes = temp;
 }
 
 // convert clock to string
-string clk_to_string(const Clock &c){
+string clk_to_string(const Clock &c) {
   ostringstream oss;
-  oss << "Hours:"<<c.hours<<", Minutes:"
-      <<c.minutes<<", Period:"<<c.period;
+  oss << "Hours:" << c.hours << ", Minutes:" << c.minutes
+      << ", Period:" << c.period;
   return oss.str();
 }
 
 // split string based on sep, ref return of vector<string>
 void split(const string &s, vector<string> &elems, char sep) {
-    istringstream iss(s);
-    string item;
-    while(getline(iss, item, sep))
-      elems.push_back(item);
+  istringstream iss(s);
+  string item;
+  while (getline(iss, item, sep)) elems.push_back(item);
 }

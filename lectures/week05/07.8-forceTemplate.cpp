@@ -1,18 +1,20 @@
-#include<iostream>
-using std::cout; using std::endl; using std::cin; using std::fixed;
-#include<iomanip>
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::fixed;
+#include <iomanip>
 using std::setprecision;
 
-template <typename fn_type> 
+template <typename fn_type>
 fn_type my_function(fn_type first, fn_type second) {
   fn_type result;
   result = first * second;
   return result;
 }
-    
 
-int main () {
-  cout << setprecision(4) << fixed;  
+int main() {
+  cout << setprecision(4) << fixed;
   int int_result;
   double dbl_result;
 

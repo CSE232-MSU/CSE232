@@ -1,54 +1,53 @@
-#include<iostream>
-using std::cout; using std::endl;
-#include<string>
+#include <iostream>
+using std::cout;
+using std::endl;
+#include <string>
 using std::string;
-#include<utility>
+#include <utility>
 using std::pair;
-#include<algorithm>
+#include <algorithm>
 using std::copy;
-#include<iterator>
+#include <iterator>
 using std::ostream_iterator;
-#include<sstream>
+#include <sstream>
 using std::ostringstream;
-#include<set>
+#include <set>
 using std::set;
 
-template<typename T>
-string set_to_string(const set<T>& s){
+template <typename T>
+string set_to_string(const set<T>& s) {
   ostringstream oss;
-  for (auto element : s)
-    oss << element << ", ";
+  for (auto element : s) oss << element << ", ";
   string result = oss.str();
-  result = result.substr(0, result.size() - 2 );
+  result = result.substr(0, result.size() - 2);
   return result;
 }
 
-int main (){
+int main() {
   set<string> family{"brother", "father", "sister"};
-  pair<set<string>::iterator,bool> result;
+  pair<set<string>::iterator, bool> result;
   set<string>::iterator iter;
-  
+
   // same return as map, again could have used auto
   result = family.insert("mommy");
-  if(result.second)
-    cout << "Successfully inserted mommy"<<endl;
+  if (result.second)
+    cout << "Successfully inserted mommy" << endl;
   else
-    cout << "Couldn't insert mommy"<<endl;
+    cout << "Couldn't insert mommy" << endl;
 
   result = family.insert("mommy");
-  if(result.second)
-    cout << "Successfully inserted mommy"<<endl;
+  if (result.second)
+    cout << "Successfully inserted mommy" << endl;
   else
-    cout << "Couldn't insert mommy"<<endl;
+    cout << "Couldn't insert mommy" << endl;
 
-  for(const string& element : family)
-    cout << element << ",";
+  for (const string& element : family) cout << element << ",";
   cout << endl;
 
   cout << set_to_string(family) << endl;
-       
+
   iter = family.find("sister");
-  if (iter != family.end()){
+  if (iter != family.end()) {
     cout << *iter << endl;
     // *iter = "fred";
   }
@@ -58,8 +57,8 @@ int main (){
   family.insert("mama");
   cout << set_to_string(family) << endl;
 
-  for(iter = family.begin(); iter != family.end(); ){
-    if ( (*iter)[0] == 'm')
+  for (iter = family.begin(); iter != family.end();) {
+    if ((*iter)[0] == 'm')
       iter = family.erase(iter);
     else
       ++iter;

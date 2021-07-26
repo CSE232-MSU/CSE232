@@ -1,7 +1,9 @@
-#include<iostream>
-using std::cout; using std::endl; using std::cin;
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
 
-void swap (long &first, long &second){
+void swap(long &first, long &second) {
   // a reference is an alias
   long temp;
   temp = first;
@@ -10,12 +12,12 @@ void swap (long &first, long &second){
   // return true; // void, no return
 }
 
-int main (){
-  long one=100, two=200;
-  cout << "Pre swap, one has value:" << one 
-       << ", two has value:" << two << endl;
+int main() {
+  long one = 100, two = 200;
+  cout << "Pre swap, one has value:" << one << ", two has value:" << two
+       << endl;
   swap(one, two);
-  cout << "Post swap, one has value:" << one
-       << ", two has value:" << two << endl;
+  cout << "Post swap, one has value:" << one << ", two has value:" << two
+       << endl;
   // cout << temp << endl; // can't, not in scope
 }

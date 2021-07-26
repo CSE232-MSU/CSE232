@@ -1,20 +1,14 @@
-#include<iostream>
+#include <iostream>
+using std::cin;
 using std::cout;
 using std::endl;
-using std::cin;
 
-/*
-  wfp, 8/23/13
-  wfp, updated 1/19/15
-  updated 1/13/17
-  games with for
-*/
-
-int main () {
+int main() {
   // basic for loop
   int i, j;
-  for (i = 0; i < 5; ++i)
-    cout << i << ", ";
+
+  for (i = 0; i < 5; ++i) cout << i << ", ";
+
   cout << endl;
 
   // equivalent while loop
@@ -31,20 +25,18 @@ int main () {
     cout << i << ", ";
     ++cnt;
   }
-  cout << endl << cnt <<endl;
+  cout << endl << cnt << endl;
 
   // var declared in the for loop only has scope
   // *inside* the for loop
   i = 100;
-  for (int i = 5; i > 0; i--)
-    cout << i <<","; 
+  for (int i = 5; i > 0; i--) cout << i << ",";
   cout << endl << "Outside i:" << i << endl;
-
 
   // comma separated fields. Only one type in the init field
   // i and j are int, two increments in expression
   for (i = 10, j = 20; i * j < 500; i += 5, j += 5)
-    cout << "i:"<<i<<", j:"<<j<<endl;
+    cout << "i:" << i << ", j:" << j << endl;
   cout << "Final i:" << i << ", j:" << j << endl;
 
   // // won't compile, only one type in init
@@ -52,8 +44,6 @@ int main () {
   //   cout << "Values are i:"<<i<<", "<<j<<endl;
 
   // no expression, cond ends with EOF
-  for (int i; cin >> i ;)
-    cout << "Input Value was:" << i<< endl;
+  for (int i; cin >> i;) cout << "Input Value was:" << i << endl;
   cout << "Saw the EOF character" << endl;
-
 }

@@ -1,6 +1,6 @@
-#include<string>
+#include <string>
 using std::string;
-#include<sstream>
+#include <sstream>
 using std::ostringstream;
 
 #include "15.2-clock.h"
@@ -8,7 +8,7 @@ using std::ostringstream;
 /* add to minutes member,
 correct hours if overflow
 */
-void Clock::add_minutes(int min){
+void Clock::add_minutes(int min) {
   auto temp = minutes + min;
   if (temp >= 60) {
     minutes = temp % 60;
@@ -19,10 +19,9 @@ void Clock::add_minutes(int min){
 }
 
 // convert clock to string
-string clk_to_string(const Clock &c){
+string clk_to_string(const Clock &c) {
   ostringstream oss;
-  oss << "Hours:"<<c.hours
-      <<", Minutes:"<<c.minutes
-      <<", Period:"<<c.period;
+  oss << "Hours:" << c.hours << ", Minutes:" << c.minutes
+      << ", Period:" << c.period;
   return oss.str();
 }

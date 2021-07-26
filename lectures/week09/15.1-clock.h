@@ -1,7 +1,7 @@
 #ifndef CLOCK_H
 #define CLOCK_H
 
-#include<string>
+#include <string>
 using std::string;
 
 struct Clock {

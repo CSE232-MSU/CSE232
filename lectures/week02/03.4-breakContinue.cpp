@@ -1,30 +1,24 @@
-#include<iostream>
-using std::cout; using std::cin; using std::endl;
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
 using std::fixed;
-#include<iomanip>
+#include <iomanip>
 using std::setprecision;
-/*
-  wfp, 7/23/13
-  wfp, updated 1/19/15
-  update 1/13/17
-  basic break, continue
-*/
 
-int main () {
-
+int main() {
   // sum up the numbers, end at 0
   long sum = 0;
   long num;
   cout << "Enter a number. Ends when 0 entered" << endl;
   cout << "Number:";
   cin >> num;
-  for (;;) {     //infinite for
+  for (;;) {  // infinite for
     sum += num;
-    if (num == 0)
-      break;
+    if (num == 0) break;
     cout << "Number:";
     cin >> num;
-  } // of for
+  }  // of for
   cout << "Sum is:" << sum << endl;
 
   // check the divisors of a number
@@ -32,21 +26,20 @@ int main () {
   cout << fixed << setprecision(3);
   cout << "Give me a double to check:";
   cin >> dbl;
-  for (int i=0; i<=5; i++){
-    if (i==0) {
-      cout << "Can't divide by 0"<<endl;
+  for (int i = 0; i <= 5; i++) {
+    if (i == 0) {
+      cout << "Can't divide by 0" << endl;
       continue;
-    } // of if
+    }  // of if
     result = dbl / i;
     // result = dbl / static_cast<double>(i);
-    cout << dbl << " divided by "<< i <<" equals "<<result<<endl;
-  } // of for
+    cout << dbl << " divided by " << i << " equals " << result << endl;
+  }  // of for
   cout << endl;
 
   // nested for
-  for (int i=0; i<=3; ++i) {
-    for (int j=0; j<=3; ++j)
-      cout << i << ":" << j << ", ";
+  for (int i = 0; i <= 3; ++i) {
+    for (int j = 0; j <= 3; ++j) cout << i << ":" << j << ", ";
     cout << endl;
   }
   cout << endl;
@@ -56,14 +49,13 @@ int main () {
     for (int j = 0; j <= 3; ++j) {
       cout << i << ":" << j << endl;
       if (i == j) {
-	      cout << "breaking on i:" << i << "," << j <<endl;
-	      break;
+        cout << "breaking on i:" << i << "," << j << endl;
+        break;
       }
-      if (j == 0){
-	      cout << "continuing on i:"<<i<<","<<j<<endl;
-	      continue;
+      if (j == 0) {
+        cout << "continuing on i:" << i << "," << j << endl;
+        continue;
       } else
-	      cout << "i/j="<<i/j<<", ";
-    }// of j loop
+        cout << "i/j=" << i / j << ", ";
+    }  // of j loop
 }  // of main
-      

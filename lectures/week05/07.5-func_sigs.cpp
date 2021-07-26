@@ -1,11 +1,14 @@
-#include<iostream>
-using std::cout; using std::endl; using std::cin; using std::fixed;
-#include<cmath>
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::fixed;
+#include <cmath>
 using std::round;
-#include<iomanip>
+#include <iomanip>
 using std::setprecision;
 
-void swap (double& d1, double& d2){
+void swap(double& d1, double& d2) {
   cout << "This must be the double swap" << endl;
   double temp;
   temp = d1;
@@ -13,15 +16,15 @@ void swap (double& d1, double& d2){
   d2 = temp;
 }
 
-void swap (int& i1, int& i2){
+void swap(int& i1, int& i2) {
   cout << "This must be the int swap" << endl;
   int temp;
   temp = i1;
   i1 = i2;
   i2 = temp;
-}  
+}
 
-void swap (int& i1, double& d1){
+void swap(int& i1, double& d1) {
   cout << "This must be the mixed swap" << endl;
   double temp;
   temp = static_cast<double>(i1);
@@ -29,9 +32,9 @@ void swap (int& i1, double& d1){
   d1 = temp;
 }
 
-int main(){
-  int i1=10, i2=100;
-  double d1=3.14, d2=123.456;
+int main() {
+  int i1 = 10, i2 = 100;
+  double d1 = 3.14, d2 = 123.456;
 
   cout << fixed << setprecision(3);
 
@@ -47,9 +50,7 @@ int main(){
   swap(i1, d1);
   cout << "Postswap i1:" << i1 << ", d1:" << d1 << endl;
 
-
   cout << "Preswap i1:" << i1 << ", d1:" << d1 << endl;
   swap(d1, i1);
-  cout << "Postswap i1:" << i1 << ", d1:" << d1 << endl;  
-
+  cout << "Postswap i1:" << i1 << ", d1:" << d1 << endl;
 }
