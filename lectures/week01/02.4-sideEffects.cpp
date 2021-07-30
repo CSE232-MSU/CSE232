@@ -2,9 +2,6 @@
 #include <iostream>
 using std::cout;
 using std::endl;
-/*
-assignment ops
-*/
 
 int main() {
   int my_int, an_int;
