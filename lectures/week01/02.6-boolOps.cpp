@@ -4,10 +4,6 @@ using std::boolalpha;
 using std::cout;
 using std::endl;
 
-/*
-boolean operators
-*/
-
 int main() {
   bool bool_true = true, bool_false = false;
   int first = 0, second = 0;

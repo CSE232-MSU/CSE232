@@ -5,7 +5,7 @@ using std::endl;
 #include <limits>
 using std::numeric_limits;
 
-int main(int argc, char* argv[]) {
+int main() {
   cout << "Size of bool:" << sizeof(bool) << endl << endl;
 
   cout << "Size of char:" << sizeof(char) << endl << endl;

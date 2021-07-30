@@ -1,3 +1,4 @@
+// Example 2.8
 #include <iostream>
 using std::boolalpha;
 using std::cout;

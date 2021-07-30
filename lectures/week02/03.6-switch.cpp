@@ -1,3 +1,4 @@
+// Example 3.6
 #include <iostream>
 using std::cin;
 using std::cout;

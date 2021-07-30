@@ -1,3 +1,4 @@
+// Example 2.5
 #include <iostream>
 int main() {
   int x = 4;

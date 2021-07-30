@@ -25,6 +25,7 @@ title: Week 02
 ### Non-Local Exits
 
 [03.4-breakContinue.cpp](week02/03.4-breakContinue.cpp)
+[03.5-elseif.cpp](week02/03.5-elseif.cpp)
 
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/5LyHds1ULjA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

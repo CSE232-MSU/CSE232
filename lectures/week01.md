@@ -8,6 +8,7 @@ title: Week 01
 
 ### Names and Types
 
+[01.1-hello.cpp](week01/01.1-hello.cpp)
 [01.2-IO.cpp](week01/01.2-IO.cpp)
 
 <div align="center">
@@ -26,7 +27,7 @@ title: Week 01
 
 ### Expressions
 
-[02.3-integerOps.cpp](week01/02.3-integerOps.cpp)
+[02.3-numericOps.cpp](week01/02.3-numericOps.cpp)
 
 [02.4-sideEffects.cpp](week01/02.4-sideEffects.cpp)
 

@@ -6,9 +6,6 @@ using std::endl;
 using std::fixed;
 #include <iomanip>
 using std::setprecision;
-/*
-initializer vs assign, auto converts basic types
-*/
 
 int main() {
   // 4 different initializers. Part of the declaration! Type on left.
