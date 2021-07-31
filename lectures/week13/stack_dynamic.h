@@ -15,16 +15,16 @@ using std::copy;
 #include <initializer_list>
 using std::initializer_list;
 
-template <typename ElementType>
+template <typename T>
 class Stack;
 
-template <typename ElementType>
-ostream &operator<<(ostream &out, Stack<ElementType> const &s);
+template <typename T>
+ostream &operator<<(ostream &out, Stack<T> const &s);
 
-template <typename ElementType>
+template <typename T>
 class Stack {
  private:
-  ElementType *ary_ = nullptr;
+  T *ary_ = nullptr;
   int sz_ = 0;
   int top_ = -1;
   void grow();
@@ -32,33 +32,33 @@ class Stack {
  public:
   Stack() = default;
   // Stack(size_t sz);
-  Stack(initializer_list<ElementType>);
+  Stack(initializer_list<T>);
 
   Stack(Stack const &s);  // copy
   ~Stack();               // destructor
   Stack &operator=(Stack);
 
-  ElementType top();
+  T top();
   void pop();
-  void push(ElementType);
+  void push(T);
   bool empty();
   // bool full();
   void clear();
-  friend ostream &operator<<<ElementType>(ostream &, Stack const &);
+  friend ostream &operator<<<T>(ostream &, Stack const &);
 };
 
-template <typename ElementType>
-void Stack<ElementType>::grow() {
-  ElementType *new_ary;
+template <typename T>
+void Stack<T>::grow() {
+  T *new_ary;
 
   if (sz_ == 0) {
-    new_ary = new ElementType[1]{};
+    new_ary = new T[1]{};
     sz_ = 1;
     // ary_ empty, just assign
     ary_ = new_ary;
   } else {
     // use {} to init to default
-    new_ary = new ElementType[sz_ * 2]{};
+    new_ary = new T[sz_ * 2]{};
     copy(ary_, ary_ + sz_, new_ary);
     sz_ *= 2;
     // stl swap, not Stack swap
@@ -67,26 +67,26 @@ void Stack<ElementType>::grow() {
   }
 }
 
-template <typename ElementType>
-Stack<ElementType>::Stack(initializer_list<ElementType> lst) {
+template <typename T>
+Stack<T>::Stack(initializer_list<T> lst) {
   sz_ = lst.size();
-  ary_ = new ElementType[sz_];
+  ary_ = new T[sz_];
   size_t indx = 0;
   top_ = sz_ - 1;
 
   for (auto e : lst) ary_[indx++] = e;
 }
 
-template <typename ElementType>
-Stack<ElementType>::Stack(Stack<ElementType> const &s) {
+template <typename T>
+Stack<T>::Stack(Stack<T> const &s) {
   sz_ = s.sz_;
   top_ = s.top_;
-  ary_ = new ElementType[s.sz_];
+  ary_ = new T[s.sz_];
   copy(s.ary_, s.ary_ + s.sz_, ary_);
 }
 
-template <typename ElementType>
-Stack<ElementType> &Stack<ElementType>::operator=(Stack<ElementType> s) {
+template <typename T>
+Stack<T> &Stack<T>::operator=(Stack<T> s) {
   // just did the swap here
   swap(this->sz_, s.sz_);
   swap(this->top_, s.top_);
@@ -94,19 +94,19 @@ Stack<ElementType> &Stack<ElementType>::operator=(Stack<ElementType> s) {
   return *this;
 }
 
-template <typename ElementType>
-Stack<ElementType>::~Stack() {
+template <typename T>
+Stack<T>::~Stack() {
   delete[] ary_;
 }
 
-template <typename ElementType>
-ElementType Stack<ElementType>::top() {
+template <typename T>
+T Stack<T>::top() {
   if (top_ < 0) throw underflow_error("top, empty stack");
   return ary_[top_];
 }
 
-template <typename ElementType>
-void Stack<ElementType>::push(ElementType element) {
+template <typename T>
+void Stack<T>::push(T element) {
   if (top_ >= (sz_ - 1)) {
     // never throws, grows!
     grow();
@@ -115,26 +115,26 @@ void Stack<ElementType>::push(ElementType element) {
   ary_[++top_] = element;
 }
 
-template <typename ElementType>
-void Stack<ElementType>::pop() {
+template <typename T>
+void Stack<T>::pop() {
   if (top_ < 0) throw underflow_error("pop, empty stack");
   --top_;
 }
 
-template <typename ElementType>
-bool Stack<ElementType>::empty() {
+template <typename T>
+bool Stack<T>::empty() {
   return top_ == -1;
 }
 
-template <typename ElementType>
-void Stack<ElementType>::clear() {
+template <typename T>
+void Stack<T>::clear() {
   top_ = -1;
 }
 
-template <typename ElementType>
-ostream &operator<<(ostream &out, Stack<ElementType> const &s) {
+template <typename T>
+ostream &operator<<(ostream &out, Stack<T> const &s) {
   out << "(bottom)";
-  copy(s.ary_, (s.ary_ + s.top_ + 1), ostream_iterator<ElementType>(out, ","));
+  copy(s.ary_, (s.ary_ + s.top_ + 1), ostream_iterator<T>(out, ","));
   cout << "(top)" << endl;
   return out;
 }

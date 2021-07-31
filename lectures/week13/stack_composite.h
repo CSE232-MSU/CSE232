@@ -16,14 +16,14 @@ using std::initializer_list;
 #include <stdexcept>
 using std::underflow_error;
 
-template <typename ElementType>
+template <typename T>
 class Stack {
  private:
-  vector<ElementType> vec_;
+  vector<T> vec_;
 
  public:
   Stack() = default;
-  Stack(initializer_list<ElementType> lst) : vec_(lst){};
+  Stack(initializer_list<T> lst) : vec_(lst){};
 
   // take defaults for the following 4. Vector handles it already.
   Stack() = default;
@@ -32,46 +32,46 @@ class Stack {
   ~Stack() = default;
 
   // stack operations
-  ElementType top();
+  T top();
   void pop();
-  void push(ElementType);
+  void push(T);
   bool empty();
   // bool full; // not a problem with vectors
   void clear();
 
   // friends inline, template matching works properly then.
-  friend ostream &operator<<(ostream &out, Stack<ElementType> const &s) {
+  friend ostream &operator<<(ostream &out, Stack<T> const &s) {
     out << "(bottom),";
-    copy(s.vec_.begin(), s.vec_.end(), ostream_iterator<ElementType>(out, ","));
+    copy(s.vec_.begin(), s.vec_.end(), ostream_iterator<T>(out, ","));
     out << "(top)";
     return out;
   }
 };
 
-template <typename ElementType>
-ElementType Stack<ElementType>::top() {
+template <typename T>
+T Stack<T>::top() {
   if (vec_.size() == 0) throw underflow_error("top, empty stack");
   return vec_.back();
 }
 
-template <typename ElementType>
-void Stack<ElementType>::pop() {
+template <typename T>
+void Stack<T>::pop() {
   if (vec_.size() == 0) throw underflow_error("pop, empty stack");
   vec_.pop_back();
 }
 
-template <typename ElementType>
-void Stack<ElementType>::push(ElementType s) {
+template <typename T>
+void Stack<T>::push(T s) {
   vec_.push_back(s);
 }
 
-template <typename ElementType>
-bool Stack<ElementType>::empty() {
+template <typename T>
+bool Stack<T>::empty() {
   return vec_.empty();
 }
 
-template <typename ElementType>
-void Stack<ElementType>::clear() {
+template <typename T>
+void Stack<T>::clear() {
   vec_.clear();
 }
 

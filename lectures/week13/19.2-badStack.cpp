@@ -43,9 +43,7 @@ void BadStack::push(char element) {
 }
 
 bool BadStack::empty() { return top_ < 0; }
-
 bool BadStack::full() { return top_ >= (sz_ - 1); }
-
 void BadStack::clear() { top_ = -1; }
 
 ostream &operator<<(ostream &out, BadStack const &s) {
