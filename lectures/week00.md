@@ -4,7 +4,7 @@ title: Week 00
 
 # Week 00
 
-[Lecture slides (Syllabus)](https://drive.google.com/open?id=1TxIzdBWI-PfHslm-aSjG5WM26XRsaQLxBKPipR32q28)
+[Lecture slides (Syllabus)](https://docs.google.com/presentation/d/1BDP2LtNkFF8bpdGfWmmFVkQSU2J6KCNC479NLT86ESs/edit?usp=sharing)
 
 [Lecture slides (What is C++)](https://docs.google.com/presentation/d/14i-szTXnHrrhaLuLGY-tgqvEJfX_qJLh5lq5haCaQUI/edit?usp=sharing)
 
