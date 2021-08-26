@@ -4,7 +4,7 @@ title: Syllabus
 
 # Syllabus
 
-Spring Semester, 2021
+Fall Semester, 2021
 
 ## General Information
 
@@ -18,6 +18,18 @@ The focus of the course will be twofold:
 - Learn the C++ language, with a focus on using the available functionality in the STL.
 - Learn how these tools work under the hood, so you can design your own data structures and algorithms.
 
+### Pandemic Specific Information
+
+## In-Person Labs
+Lab sections 1-8 are meeting in-person in the STEM building. According to University policy (as well as health expert recommendations), proper mask wearing is required while in the building. Masks are not to be removed for any reason, which unfortunately means no eating or drinking while in the lab. Students who fail to properly wear a mask will be given one warning before being removed from the lab and disciplinary actions being filed. 
+
+## Alternate Lab Options
+All students (regardless of section) are allowed to attend a synchronous Zoom lab section, if they would prefer without prior permission. Details on Piazza. All students can also earn lab credit by completing the Mimir assignment associated with the lab by Friday, 10pm. 
+
+## Attending In-Person
+If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
+
+
 ### Course Materials
 
 - Recommended (but not required) textbook:
@@ -26,19 +38,21 @@ The focus of the course will be twofold:
 - You must have a phone or tablet capable of running Zoom with a camera that can show your workspace while taking exams.
 - You must have a consistent internet connection for streaming video through Zoom, and watching lecture videos.
 
+
+
 ### Lectures
 
 All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, assignments, and exams in this course.
 
 ### Laboratory Sessions
 
-Synchronous lab sessions will be conducted through Zoom (Zoom links will be provided on Piazza). Attendance at scheduled laboratory sessions is *mandatory*. Repeatedly missing laboratory sessions will reduce your final grade (see below).
+Lab section 1-8 will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online.
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistant to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
 
 If your lab falls on a day when the university isn't holding classes, you will be given credit for the lab. However, you are responsible for reading the lab and being comfortable with the content covered even if you aren't required to complete it (lab content will appear on homework assignments and exams).
 
-__Section 730__: students in the online section will need to be assigned a synchronous Zoom lab section to attend. If no lab section is suitable, please contact the instructor ASAP. 
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Mimir assignment by Friday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision.
 
 ### Communication
 
