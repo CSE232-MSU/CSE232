@@ -15,7 +15,7 @@ General:
 Essential Sites:
 - [D2L](https://d2l.msu.edu/d2l/loginh/)
 - [Mimir](https://class.mimir.io/)
-- [Piazza](https://piazza.com/class/kjkc4swnt8e184)
+- [Piazza](https://piazza.com/class/kst3lbwi2ay3so)
 
 Resources:
 - [cppreference](https://en.cppreference.com/w/)
