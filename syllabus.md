@@ -235,7 +235,10 @@ Sources which don't require attribution:
 
 Everything else, including conceptual discussions with other students should be attibuted.
 
-## Extenuating Circumstances
+### Department Policy Concerning The Use Of Chegg and Similar Sites
+> This course has adopted the [Chegg and Similar Sites policy](https://www.cse.msu.edu/Students/Current_Undergrad/Chegg/). Submission of student work (e.g. assignments and/or exam solutions) based on those found on Chegg, Brainly, Quizlet, and other similar websites will result in an Academic Dishonesty Report (ADR) and an automatic failing grade of zero (0.0) for the course. The ADR for students personally posting questions from assignments or exams to these sites will request additional sanctions.
+
+### Extenuating Circumstances
 
 The goal of this class is for you to learn. If you find that anything is coming in your way of that goal, please talk with us about it. We plan to keep the class flexible to the learning styles that seem to work best for the students, so feedback is always appreciated. In particular, due to the ongoing global pandemic, we understand that you might need additional support. Please don't hesitate in reaching out to us for anything that might affect your learning.
 
