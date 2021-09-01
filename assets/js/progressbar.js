@@ -1,8 +1,8 @@
 const CONV = 24 * 60 * 60 * 1000;
 
 var today = new Date();
-var classes_begin = new Date(year=2021, month=0, date=11);
-var classes_end = new Date(year=2021, month=3, date=21);
+var classes_begin = new Date(year=2021, month=8, date=01);
+var classes_end = new Date(year=2021, month=11, date=18);
 
 var num_days_semester = Math.round((classes_end - classes_begin) / CONV);
 var num_days_now = Math.round((classes_end - today) / CONV);
