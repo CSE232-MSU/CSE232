@@ -63,7 +63,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>No Lab This Week</td>
             <td></td>
             <td></td>
-            <td>No Assignments are due during Review Week (no lab or help room).</td>
+            <td>No Assignments are due this week (no lab or help room either).</td>
         </tr>
         <tr>
             <td>01: 2021-09-06</td>
