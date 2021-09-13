@@ -29,22 +29,24 @@ The `cd` command is short for "change directory". It allows you to change your w
 Lets say you run `pwd` and you get the output of:
 
 ```bash
-/home/joshua/cse_232__summer_2017/lab01_new_horizons
+/home/joshua/cse_232__summer_2023/lab02_new_horizons
 ```
 
-Your current working directory is named "lab01_new_horizons". If you run `ls`, you would get:
+Your current working directory is named "lab02_new_horizons". If you run `ls`, you would get:
 
 ```bash
-lab01/
+new_horizons.cpp
 ```
 
-This means that there is only one thing in this folder, a subfolder called "lab01". If you wanted to do things in that subfolder, you would use the `cd` command like so:
+This means that there is only one thing in this folder, a file called "new_horizons.cpp". 
+
+However, if there was a subfolder in your working directory named "my_folder", you would see it listed by `ls`. If you wanted to do things in that subfolder, you would use the `cd` command like so:
 
 ```bash
-cd lab01
+cd my_folder
 ```
 
-Now you are in the folder named "lab01", you can confirm such with `pwd` and `ls`.
+Then you would be in the folder named "my_folder", you can confirm such with `pwd` and `ls`.
 
 ### Special Directory Names
 
@@ -56,13 +58,13 @@ cd ~
 
 **Note**: on most systems, running `cd` with no arguments also takes you to the home folder.
 
-Sometimes you want to go the parent folder of your working directory. In the example above, we moved from the folder "lab01_new_horizons" to its subfolder "lab01". Trying to get back by running...
+Sometimes you want to go the parent folder of your working directory. In the example above, we moved from the folder "lab02_new_horizons" to its imaginary subfolder "my_folder". Trying to get back by running...
 
 ```bash
-cd lab01_new_horizons
+cd lab02_new_horizons
 ```
 
-...would fail because there is no folder named "lab01_new_horizons" in "lab01".
+...would fail because there is no folder named "lab02_new_horizons" in "my_folder".
 
 The way to go to the parent directory (in this case, "lab01_new_horizons"), you need to run:
 
@@ -72,13 +74,13 @@ cd ..
 
 The `..` is a strange way to symbolize the parent directory. In fact, `.` denotes the working directory, a fact that will be useful to know in later labs.
 
-The last "special" directory is the root directory. The root directory is the directory that is the ultimate parent of all the other directories on the computer. It is denoted by a single `/` symbol. In fact, you can specify any folder on the computer by starting with the root directory and working your way to the directory you actually want. So the path `/home/joshua/cse_232__summer_2017/lab01_new_horizons` specifies that the folder I want is:
+The last "special" directory is the root directory. The root directory is the directory that is the ultimate parent of all the other directories on the computer. It is denoted by a single `/` symbol. In fact, you can specify any folder on the computer by starting with the root directory and working your way to the directory you actually want. So the path `/home/joshua/cse_232__summer_2023/lab02_new_horizons` specifies that the folder I want is:
 
 - In the root folder (the starting `/`)
 - In the folder named "home"
 - In the folder named "joshua"
-- In the folder named "cse_232__summer_2017"
-- And it is named "lab01_new_horizons"
+- In the folder named "cse_232__summer_2023"
+- And it is named "lab02_new_horizons"
 
 **Video description**: https://www.youtube.com/watch?v=zx4kBG90uBg
 
