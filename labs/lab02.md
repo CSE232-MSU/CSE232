@@ -82,7 +82,7 @@ The last "special" directory is the root directory. The root directory is the di
 - In the folder named "cse_232__summer_2023"
 - And it is named "lab02_new_horizons"
 
-**Video description**: https://www.youtube.com/watch?v=zx4kBG90uBg
+**Video description**: [https://www.youtube.com/watch?v=zx4kBG90uBg](https://www.youtube.com/watch?v=zx4kBG90uBg)
 
 ⭐ Please show your TA that you can use the commands: `pwd`, `ls` and `cd`.
 
