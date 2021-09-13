@@ -10,7 +10,7 @@ This lab is designed to get you acquainted with the class resources and recommen
 
 Course Website: [https://cse232-msu.github.io/CSE232/](https://cse232-msu.github.io/CSE232/)
 
-Piazza: [https://piazza.com/class/kjkc4swnt8e184](https://piazza.com/class/kjkc4swnt8e184)
+Piazza: [https://piazza.com/class/kst3lbwi2ay3so](https://piazza.com/class/kst3lbwi2ay3so)
 
 Mimir: [https://class.mimir.io/](https://class.mimir.io/)
 

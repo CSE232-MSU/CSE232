@@ -10,13 +10,12 @@ General:
 - [Course Schedule](#course-schedule)
 - [Exam Policies](exam_policies.html)
 - [Help Room Schedule](#help-room-schedule)
-- [Past Exams](https://cse.msu.edu/~cse232/Exam_Content/)
 - [Syllabus](syllabus.html)
 
 Essential Sites:
 - [D2L](https://d2l.msu.edu/d2l/loginh/)
 - [Mimir](https://class.mimir.io/)
-- [Piazza](https://piazza.com/class/kjkc4swnt8e184)
+- [Piazza](https://piazza.com/class/kst3lbwi2ay3so)
 
 Resources:
 - [cppreference](https://en.cppreference.com/w/)
@@ -34,7 +33,8 @@ It should be assumed that all assignments are due by 10:00 PM EST on their respe
 
 Links to lecture videos, projects, and other materials will be made available as relevant dates approach. Content that is written for future weeks may change without notice until the date arrives.
 
-[Add to Google Calendar](https://calendar.google.com/calendar/u/0?cid=anFtcGxzdGcwczFqa2FnZDV1dWZldmxqMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
+
+<!-- [Add to Google Calendar](https://calendar.google.com/calendar/u/0?cid=anFtcGxzdGcwczFqa2FnZDV1dWZldmxqMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) -->
 
 <div align="center">
     <p id="course-progress-header"></p>
@@ -63,7 +63,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>No Lab This Week</td>
             <td></td>
             <td></td>
-            <td>No Assignments are due during Review Week (no lab or help room).</td>
+            <td>No Assignments are due this week (no lab or help room either).</td>
         </tr>
         <tr>
             <td>01: 2021-09-06</td>
@@ -185,7 +185,7 @@ Links to lecture videos, projects, and other materials will be made available as
 
 Help Room is conducted through Zoom. You can find the link to the meeting on Piazza.
 
-<table id="hr-schedule">
+<!-- <table id="hr-schedule">
     <thead>
         <tr>
             <th>Sunday</th>
@@ -217,7 +217,7 @@ Help Room is conducted through Zoom. You can find the link to the meeting on Pia
             <td>5-7pm</td>
         </tr>
     </tbody>
-</table>
+</table> -->
 
 Please be aware that you may not receive the attention you desire if you attend help room very near an assignment deadline. So please consider attending help room prior to the day an assignment is due as there will be less demand. 
 
