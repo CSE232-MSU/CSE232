@@ -8,7 +8,7 @@ Synchronous labs begin next week (the second week of the semester). Please check
 
 Each week will have videos, example code, and relevant notes. 
 
-You are expected to be caught up with the material and to have read (but not solved) each lab before attending your Zoom session. To help faciliate this, certain homeworks may have labeled questions that require reading the next week's lab content.
+You are expected to be caught up with the material and to have read (but not start) each lab before attending a synchronous lab session. To help faciliate this, certain homeworks may have labeled questions that require reading the next week's lab content.
 
 ### Syllabus
 * [Lecture slides (Syllabus)](https://docs.google.com/presentation/d/1BDP2LtNkFF8bpdGfWmmFVkQSU2J6KCNC479NLT86ESs/edit?usp=sharing)
