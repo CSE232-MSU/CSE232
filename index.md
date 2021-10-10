@@ -39,7 +39,7 @@ Links to lecture videos, projects, and other materials will be made available as
 <div align="center">
     <p id="course-progress-header"></p>
     <span class="Progress" id="course-progress-container">
-        <span class="Progress-item color-bg-success-inverse" id="course-progress"></span>
+        <span class="Progress-item color-bg-success-emphasis" id="course-progress"></span>
     </span>
 </div>
 
