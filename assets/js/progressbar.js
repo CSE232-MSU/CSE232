@@ -1,14 +1,24 @@
-const CONV = 24 * 60 * 60 * 1000;
+// Conversion factor to go from milliseconds to days (difference between
+// Date objects returns a number in milliseconds... for some reason)
+const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
 
-var today = new Date();
-var classes_begin = new Date(year=2021, month=8, date=01);
-var classes_end = new Date(year=2021, month=11, date=18);
+// Date of execution time
+let today = new Date();
 
-var num_days_semester = Math.round((classes_end - classes_begin) / CONV);
-var num_days_now = Math.round((classes_end - today) / CONV);
+// I usually set these two dates to be the begin/end dates listed on the
+// academic calendar: https://reg.msu.edu/roinfo/calendar/academic.aspx
+// NOTE: Month is 0 indexed, i.e., 0 = January, 1 = February, ...
+let classes_begin = new Date(2021, 8, 1);
+let classes_end = new Date(2021, 11, 18);
 
-var p = (1 - (num_days_now / num_days_semester)) * 100;
+//
+// Progress calculation below this point, nothing to worry about here
+//
 
+let num_days_semester = Math.round((classes_end - classes_begin) / MILLISECONDS_PER_DAY);
+let num_days_now = Math.round((classes_end - today) / MILLISECONDS_PER_DAY);
+
+let p = (1 - (num_days_now / num_days_semester)) * 100;
 if (p > 100) {
     p = 100;
 }
