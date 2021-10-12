@@ -20,8 +20,6 @@ Although there are a few different conventions for what exactly defines well-for
 
 **Warning**: much of the code we have shown in videos and examples may not conform to Google's standards.
 
-Exchange your most recent homework assignment's first problem's solution with your partner. You will be editing their solution to either make it conform to the following rules, or to add comments noting violations of the rules. Not all of the style guide will make sense given your incomplete mastery of C++, but we'll be focusing on the content you can apply.
-
 ### Rules
 
 #### Naming
