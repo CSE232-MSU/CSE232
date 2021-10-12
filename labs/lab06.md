@@ -231,7 +231,7 @@ Breakpoint 1, main () at badString.cpp:35   # hit breakpoint at line 35
 (gdb) next                                  # execute the next instruction
 36	  cout << fn1(my_string) << endl;
 
-(gdb)                                       # hitting Enter executes the previous command
+(gdb) next                                  
 Breakpoint 2, fn2 (str="abcdefg") at badString.cpp:11
 11	  char ch = str[0];
 
@@ -303,7 +303,7 @@ $7 = -128 '\200'                            # there are no negative chars, so th
 $8 = 18446744073709547431                   # ok, that is REALLY bad
 ```
 
-⭐ So, what's the problem, again? Describe what happened to your TA.
+⭐ So, what's the problem now? Describe what happened to your TA.
 
 Read the `fn2()` code and fix it to run as it should. Make a new version called `fn2_fixed()`.
 
@@ -402,6 +402,8 @@ $1 = 0
 ```
 
 ⭐ What went wrong here? Can you fix it? Show your TA.
+
+
 
 ## Keyboard Shortcuts
 
