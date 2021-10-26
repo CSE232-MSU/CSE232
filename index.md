@@ -135,7 +135,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab09.html">Lab 09</a></td>
             <td>Homework 14</td>
             <td>Homework 15</td>
-            <td>Midterm exam either Tuesday evening or Wednesday morning, see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
+            <td>Midterm exam sessions on Wednesday morning and evening, see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
         </tr>
         <tr>
             <td>10: 2021-11-08</td>
