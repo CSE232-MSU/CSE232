@@ -10,9 +10,11 @@ title: Exam Policies
 In the Exam Zoom Meeting on 2021-04-23 at 4pm, Dr. Nahum will host a final review session to go over the sample final exam and answer any questions about the exam or other aspects of the class. It will be recorded and is entirely optional to attend. The solutions to the sample final will only be given to the students that "submit" their solution prior to the review session, so please ensure that you do so if you care to get answers.
 -->
 
-## Dates and Times
-
-- To Be Determined
+## Midterm Details
+- Zoom Link ([https://msu.zoom.us/j/94955751228](https://msu.zoom.us/j/94955751228))
+- 2021-11-03 10am-noon for those that attend Lab Sections 1-3
+- 2021-11-03 7pm-9pm for thise that attend Lab Sections 3-8 and 730
+- If you can't attend your assigned exam, please follow the instructions on Piazza
 
 Both exams will be 90 minutes in duration (from timer start to timer end), but everyone needs to be present in the Zoom meeting at the start of the scheduled exam time to ensure that everything is setup properly and for ID checks.
 
@@ -24,7 +26,7 @@ As just stated, for students that have conflicts with both exam times, please re
 
 If you cannot make the original nor the alternative exam times, please contact us via Piazza to make accommodations ASAP. Additionally, if you have university-approved accommodations (VISA), please inform us of them on that Piazza announcement.
 
-During Lab 07, you will be given instructions on how the exam will operate. You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a Mimir assignment.
+You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a Mimir assignment.
 
 Please ensure that your screen, workspace and profile are visible by the Zoom device throughout the exam. Example:
 
