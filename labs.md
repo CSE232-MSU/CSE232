@@ -20,15 +20,15 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 #### [Lab 07 - Vectors and Multi-File Compilation](labs/lab07.html)
 
-#### [Lab 08 - Templates and 2D Vectors](labs/lab08.html)
+#### [Lab 08 - Generic Algorithms](labs/lab08.html)
 
-#### [Lab 09 - Generic Algorithms](labs/lab09.html)
+#### [Lab 09 - Structs](labs/lab09.html)
 
-#### [Lab 10 - Structs](labs/lab10.html)
+#### [Lab 10 - Code Review](labs/lab10.html)
 
-#### [Lab 11 - Code Review](labs/lab11.html)
+#### [Lab 11 - More on Classes](labs/lab11.html)
 
-#### [Lab 12 - More on Classes](labs/lab12.html)
+#### [Lab 12 - Templates and 2D Vectors](labs/lab12.html)
 
 #### [Lab 13 - Pointer Manipulation](labs/lab13.html)
 
