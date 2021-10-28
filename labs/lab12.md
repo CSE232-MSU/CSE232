@@ -1,138 +1,145 @@
 ---
-title: Lab - More on Classes
+title: Lab - Templates and 2D Vectors
 ---
 
-# Lab - More on Classes
+# Lab - Templates and 2D Vectors
 
-## Compiler Options
-
-`g++` is a very complicated (but powerful) program. Technically, it is just an alias (alternate name) for `gcc`, which is the GNU C Compiler. `g++` (and `gcc`) have many options for determining how it should compile your program.
-
-[The full list of options can be found here](https://gcc.gnu.org/onlinedocs/gcc-7.1.0/gcc/Invoking-GCC.html#Invoking-GCC), but I'll be pointing out the most important ones.
-
-Here are the flags you should already be comfortable with:
-
-*   `-c` - This flag instructs the compiler to compile all your .cpp files, but not link them together (see Week 01).
-*   `-o filename` - This flag instructs the compiler to make a file named `filename` with the executable compiled program (instead of the default `a.out`).
-*   `-Wall` - This flag instructs the compiler to warn about as many potential erroneous code elements as possible (useful for beginners).
-*   `-std=c++17` - This instructs the compiler to use a particular version of the C++ language (you can use 11, 14, etc. in the place of 17).
-*   `-g` - This flag instructs your compiler to include debugging information in the compiled program for use by `gdb`.
-
-And here are some new ones:
-
-*   `-O1` - This flag enables various code optimizations that allow your program to run faster, without a large increase in time to compile.
-*   `-O2` - This flag enables various code optimizations that allow your program to run faster, but may increase the time needed to compile.
-*   `-O3` - This flag is similar to `-O2`, but with even more extreme optimizations and possibly very long compilations.
-*   `-Ofast` - This flag is allows optimizations that aren't necessarily allowed by the standards set forth by the C++ language committee. This is where experimental optimizations are used by those who want speed at all costs.
-*   `-Os` - This flag instructs the compiler to optimize for size instead of speed. It is often useful if you need to run your program on embedded computers with limited memory.
-*   `-Wextra` - This flag instructs the compiler to add additional warnings for bad code (even more than `-Wall`).
-*   `-Wpedantic` - This flag instructs the compiler to add additional warnings for code that doesn't comply with the strict C++ language definition (useful if you want your code to be compiled by other compilers).
-
-⭐ Copy-and-paste the following code into a file, and show your TA the output when you compile it with more warnings than what `-Wall` checks for.
-
-```c++
-#include <iostream>
-using std::cout; using std::endl;
-
-int add(int a, int b, int c) {
-    return a + b;
-}
-
-int main() {
-    cout << add(1, 2, 4) << endl;
-}
-```
+There is no Unix tutorial this week
 
 ## Coding Assignment
 
-Today, we're going to work on making our own classes with private data members and accessors. More specifically, we'll be building a `Table` class, which will act as an abstraction of two-dimensional vectors (i.e., matrices).
+We are going to get practice with two concepts:
+1.  Templated code
+2.  Two-dimensional vectors
+
+### Background
+
+You remember matrices, don't you? We are going to do some simple manipulation of a matrix, namely: adding two matrices, and multiplying a matrix by a scalar.
+
+#### Matrix
+
+A _matrix_ is a two-dimensional data structure. It has a _shape_ indicated by the number of rows, and the number of columns. It's important to note that the number of columns *might not always equal* the number of rows. When the number of rows *does* match the number of columns, it's referred to as a _square matrix_.
+
+<div align="center">
+<img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Ctextbf%7BA%7D+%3D+%5Cbegin%7Bpmatrix%7D1+%26+2+%26+3%5C%5C4+%26+5+%26+6%5C%5C7+%26+8+%26+9%5Cend%7Bpmatrix%7D" 
+alt="\textbf{A} = \begin{pmatrix}1 & 2 & 3\\4 & 5 & 6\\7 & 8 & 9\end{pmatrix}">
+</div>
+
+&nbsp;
+
+This matrix, <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Ctextbf%7BA%7D" 
+alt="\textbf{A}">, has three rows and three columns -- making it a square matrix.
+
+#### Matrix Operations
+
+We will perform two operations on our matrices, both of which yield a new matrix as a result.
+
+The first is _scalar multiplication_. Regardless of the size or shape, if the matrix is not empty, we multiply the scalar value by every entry in the matrix, yielding a new matrix.
+
+<div align="center">
+<img src="../assets/images/matrix_mul.svg">
+</div>
+
+&nbsp;
+
+Where <img src=
+"https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+%5Ctextbf%7B%5Clambda%7D" 
+alt="\textbf{\lambda}"> is some scalar (i.e., any number).
+
+The second is _matrix addition_. The shape of two matrices _must be the same_ for addition to go forward. If the shapes are the same, and they are both not empty, we add each row/column value of one matrix to each row/column value of the second matrix in each respective location, yielding a new matrix. We do this for every value between the two matrices.
+
+<div align="center">
+<img src="../assets/images/matrix_add.svg">
+</div>
+
+&nbsp;
+
+In these depictions, you'll notice that they begin enumerating the row/column indices from 1. Remember that we, programmers, always start indices from 0.
 
 ### Program Specifications
 
-[Download the starter code provided here.](../assets/downloads/lab_more_classes.zip)
+[Download the starter code provided here.](../assets/downloads/lab_matrices.zip)
 
-The header for the Table class has the following private elements:
+We will use a `vector<vector<T>>` type as the underlying representation of our matrix, meaning that the type of the elements of the matrix will be templated. Thus, all of our functions must be templated, as well.
+
+In the starter code, we provide two definitions to make things a little easier:
 
 ```c++
-private:
-    vector<vector<long>> t_;    // 2D vector of long
-    long width_;                // how wide is t_ (how many columns)
-    long height_;               // how high is t_ (how many rows)
+template<typename T>
+using matrix_row = vector<T>;
+
+template<typename T>
+using matrix = vector<matrix_row<T>>;
 ```
 
-You are to implement the following methods:
+With these definitions, you can declare a new matrix with the `matrix` type, and declare matrix rows as the `matrix_row` type.
+
+Implement the following functions:
 
 &nbsp;
 
 ```c++
-Table(long width, long height, long val=0)
+template<typename T>
+string matrix_to_str(const matrix<T> &m1, size_t width=3)
 ```
 
-Constructs a `Table` instance that is of shape `width` by `height`, where each element is filled by `val` (which is defaulted to 0). 
-
-Remember that `t_` is a `vector<vector<long>>`. You can only `push_back()` instances of `vector<long>` onto `t_`, and only instances of `long` onto `vector<long>`.
+Converts the matrix, `m1`, to a `string` representation. The `width` argument should be used to set the width between elements within the rows of the matrix (use `std::setw()`), defaulted to 3.
 
 &nbsp;
 
 ```c++
-void fill_random(long lo, long hi, unsigned int seed=0)
+template<typename T>
+bool same_size(const matrix<T> &m1, const matrix<T> &m2)
 ```
 
-Sets every element of `t_` to a random number of type `long` bounded between `lo` and `hi` inclusively. `seed` sets the random number seed, which defaults to 0. [Use the technique described here](https://diego.assencio.com/?index=6890b8c50169ef45b74db135063c227c) with a uniform distribution drawn from the MT19937 random number generator.
-
-⭐ Show the TA when your `Table` class can execute the `fill_random()` method.
+Tests if two matrices, `m1` and `m2`, are of the same size/shape.
 
 &nbsp;
 
 ```c++
-bool set_value(unsigned int row_num, unsigned int col_num, long val)
+template<typename T>
+matrix<T> add(const matrix<T> &m1, const matrix<T> &m2)
 ```
 
-Sets a particular element at location (`row_num`, `col_num`) to `val`. If `row_num` or `col_num` are out-of-range of the available `t_` indices, `set_value()` should return `false`. Otherwise, return `true` to signify a successful value set.
+Adds matrices, `m1` and `m2`, to compose a new matrix. `m1` and `m2` must be identically shaped for addition to occur. If they are _not_ the same shape, return an empty matrix.
+
+⭐ Show your TA when you can successfully handle case 1 (which tests the three functions above).
 
 &nbsp;
 
 ```c++
-long get_value(unsigned int row_num, unsigned int col_num) const
+template<typename T>
+matrix<T> scalar_multiply(const matrix<T> &m, const T &val)
 ```
 
-Returns the value at location (`row_num`, `col_num`) of `t_` if those two indices exist. If the indices are out-of-range of the available `t_` indices, throw an `out_of_range` error.
+Multiplies a matrix, `m`, by the scalar value, `val`, to return a new matrix. If `m` is an empty matrix, return an empty matrix.
+
+⭐ Show your TA when you can successfully handle all of the cases.
 
 &nbsp;
 
-```c++
-void print_table(ostream &out)
-```
+### Assignment Notes
 
-Prints the contents of `t_` in a "nice way" (as a square with rows and columns) to the `ostream` reference provided.
-
-&nbsp;
-
-The output of the main file should ultimately look like:
+1.  Start out by solving case 1 and commenting out the rest of the `main()` code. When you've solved it, bring back case 2, solve case 2, and so on.
+2.  You can make a temporary row (of type `matrix_row`) and `push_back()` values on to that. You can then `push_back()` the row onto a matrix (of type `matrix`). You can reuse the row in your loop, but remember to `clear()` it first.
+3.  Make sure the printing of the matrix is nicely aligned, as shown in the output below:
 
 ```
-0,0,0,0,0,
-0,0,0,0,0,
-0,0,0,0,0,
-0,0,0,0,0,
-0,0,0,0,0,
+Case 1
+ 0  2  4
+ 6  8 10
+12 14 16
 
-2,10,1,6,6,
-1,7,5,9,10,
-5,7,10,4,3,
-5,8,7,6,3,
-2,6,6,2,2,
+Case 2
+could not add
 
-Result:false
+Case 3
+1.14    4.56
+ 7.6   12.92
+15.2     -19
 
-6
-Correct!
-
-100,10,1,6,6,
-1,100,5,9,10,
-5,7,100,4,3,
-5,8,7,100,3,
-2,6,6,2,100,
+Case 4
+could not multiply
 ```
-
-⭐ Show the TA your completed `Table` class.
