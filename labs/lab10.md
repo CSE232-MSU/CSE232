@@ -335,18 +335,3 @@ cb = another_buf + cb   # another_buf contents first, cb second</pre>
 
 -->
 
-            </div>
-            <!--/span-->
-        </div>
-        <!--/row-->
-
-        <div id="footer"> </div>
-        <script>
-            $("#footer").load("footer.html");
-        </script>
-
-    </div>
-
-</body>
-
-</html>
