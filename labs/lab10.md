@@ -37,8 +37,8 @@ Then click on the green "Clone or Download" button and select the "HTTPS" option
 This next part of the lab will be done in the Mimir IDE terminal (or any other terminal that has git installed).
 
 1. `cd` to the directory where you want a local copy of the repository to be placed.
-2. Run `git clone https...` where the link is the url you copied from the GitHub Classroom Assignment.
-3. You should be prompted to enter your GitHub password as you are cloning (copying) a private repository from your account.
+2. Run `git clone https...` where the link is the url you copied from your GitHub repository.
+3. You should be prompted for your GitHub username and a personal access token (_not_ your GitHub password). [Follow these instructions to obtain a personal access token with "repo" permissions.](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 
 Next we need to give git some information about yourself.
 
