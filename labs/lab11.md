@@ -54,10 +54,10 @@ Today, we're going to work on making our own classes with private data members a
 The header for the Table class has the following private elements:
 
 ```c++
-private:
-    vector<vector<long>> t_;    // 2D vector of long
-    long width_;                // how wide is t_ (how many columns)
-    long height_;               // how high is t_ (how many rows)
+ private:
+  std::vector<std::vector<int>> t_;  // 2D vector of long
+  int width_;                        // how wide is t_ (how many columns)
+  int height_;                       // how high is t_ (how many rows)
 ```
 
 You are to implement the following methods:
@@ -65,46 +65,48 @@ You are to implement the following methods:
 &nbsp;
 
 ```c++
-Table(long width, long height, long val=0)
+Table(int width, int height, int val = 0);
 ```
 
 Constructs a `Table` instance that is of shape `width` by `height`, where each element is filled by `val` (which is defaulted to 0). 
 
-Remember that `t_` is a `vector<vector<long>>`. You can only `push_back()` instances of `vector<long>` onto `t_`, and only instances of `long` onto `vector<long>`.
+Remember that `t_` is a `vector<vector<int>>`. You can only `push_back()` instances of `vector<int>` onto `t_`, and only instances of `int` onto `vector<int>`.
 
 &nbsp;
 
 ```c++
-void fill_random(long lo, long hi, unsigned int seed=0)
-```
-
-Sets every element of `t_` to a random number of type `long` bounded between `lo` and `hi` inclusively. `seed` sets the random number seed, which defaults to 0. [Use the technique described here](https://diego.assencio.com/?index=6890b8c50169ef45b74db135063c227c) with a uniform distribution drawn from the MT19937 random number generator.
-
-⭐ Show the TA when your `Table` class can execute the `fill_random()` method.
-
-&nbsp;
-
-```c++
-bool set_value(unsigned int row_num, unsigned int col_num, long val)
-```
-
-Sets a particular element at location (`row_num`, `col_num`) to `val`. If `row_num` or `col_num` are out-of-range of the available `t_` indices, `set_value()` should return `false`. Otherwise, return `true` to signify a successful value set.
-
-&nbsp;
-
-```c++
-long get_value(unsigned int row_num, unsigned int col_num) const
-```
-
-Returns the value at location (`row_num`, `col_num`) of `t_` if those two indices exist. If the indices are out-of-range of the available `t_` indices, throw an `out_of_range` error.
-
-&nbsp;
-
-```c++
-void print_table(ostream &out)
+void PrintTable(std::ostream&) const;
 ```
 
 Prints the contents of `t_` in a "nice way" (as a square with rows and columns) to the `ostream` reference provided.
+
+&nbsp;
+
+```c++
+void FillRandom(int low, int high, int seed = 0);
+```
+
+Sets every element of `t_` to a random number of type `int` bounded between `low` and `high` inclusively. `seed` sets the random number seed, which defaults to 0. [Use the technique described here](https://diego.assencio.com/?index=6890b8c50169ef45b74db135063c227c) with a uniform distribution drawn from the MT19937 random number generator.
+
+Be sure to fill the vector in the same order that you print it.
+
+⭐ Show the TA when your `Table` class can execute the `FillRandom()` method.
+
+&nbsp;
+
+```c++
+bool SetValue(int x, int y, int val);
+```
+
+Sets a particular element at location (`x`, `y`) to `val`. If `x` or `y` are out-of-range of the available `t_` indices, `SetValue` should return `false`. Otherwise, return `true` to signify a successful value set. (0,0) should be printed in the top left. (0,1) is the first element on the second row/line.
+
+&nbsp;
+
+```c++
+int GetValue(int x, int y) const;
+```
+
+Returns the value at location (`x`, `y`) of `t_` if those two indices exist. If the indices are out-of-range of the available `t_` indices, throw an `out_of_range` error.
 
 &nbsp;
 
@@ -117,22 +119,25 @@ The output of the main file should ultimately look like:
 0,0,0,0,0,
 0,0,0,0,0,
 
-2,10,1,6,6,
-1,7,5,9,10,
-5,7,10,4,3,
-5,8,7,6,3,
-2,6,6,2,2,
+6,6,8,9,7,
+9,6,9,5,7,
+7,4,5,3,9,
+1,10,3,4,5,
+8,9,6,5,6,
 
 Result:false
 
-6
+3
 Correct!
 
-100,10,1,6,6,
-1,100,5,9,10,
-5,7,100,4,3,
-5,8,7,100,3,
-2,6,6,2,100,
+6,6,8,9,7,
+0,6,9,5,7,
+7,1,5,3,9,
+1,10,4,4,5,
+8,9,6,9,6,
+
 ```
+
+Although, your random values may be different, if you are compiling locally.
 
 ⭐ Show the TA your completed `Table` class.
