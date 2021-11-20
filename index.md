@@ -177,6 +177,14 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Homework 22</td>
             <td>Final Exam either Tuesday evening or Wednesday morning. See <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
         </tr>
+        <tr>
+            <td>15: 2021-12-13</td>
+            <td>Week 15 (Finals Week)</a></td>
+            <td>No Lab</a></td>
+            <td>No Homework</td>
+            <td>No Homework</td>
+            <td>Final Exam either Wednesday evening or Thursday morning. See <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
+        </tr>
     </tbody>
 </table>
 
