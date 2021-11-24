@@ -19,9 +19,12 @@ int main() {
   int ary2[]{80, 50, 60, 70, 40};
   cout << squares(ary2) << endl;
 
+  // If array is not created with a const variable,
+  // template deduction will fail
   size_t sz = 4;
   sz += 1;
   int ary3[sz];
   ary3[sz] = {0};
-  cout << squares(ary3) << endl;
+  // The following line will not compile.
+  // cout << squares(ary3) << endl;
 }
