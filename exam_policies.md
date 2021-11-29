@@ -13,18 +13,18 @@ In the Exam Zoom Meeting on 2021-04-23 at 4pm, Dr. Nahum will host a final revie
 ## Midterm Exam Details
 - Zoom Link ([https://msu.zoom.us/j/94955751228](https://msu.zoom.us/j/94955751228))
 - 2021-11-03 10am-noon for those that attend Lab Sections 1-3
-- 2021-11-03 7pm-9pm for thise that attend Lab Sections 4-8 and 730
+- 2021-11-03 7pm-9pm for those that attend Lab Sections 4-8 and 730
 - If you can't attend your assigned exam, please follow the instructions on Piazza
 
 ## Final Details
 - Zoom Link ([https://msu.zoom.us/j/94955751228](https://msu.zoom.us/j/94955751228))
 - 2021-12-15 8pm-10pm for those that attend Lab Sections 1-5
-- 2021-12-16 10am-noon for thise that attend Lab Sections 6-8 and 730
+- 2021-12-16 10am-noon for those that attend Lab Sections 6-8 and 730
 - If you can't attend your assigned exam, please follow the instructions on Piazza
 
 Both exams will be 90 minutes in duration (from timer start to timer end), but everyone needs to be present in the Zoom meeting at the start of the scheduled exam time to ensure that everything is setup properly and for ID checks.
 
-If you can't make the exam time, please respond to the Piazza post announcing this exam indicating that you need to attend the other exam offering.
+If you can't make an exam time, please respond to the Piazza post announcing the exam indicating that you need to attend the alternative exam offering.
 
 ## Exam Logistics
 
@@ -48,13 +48,13 @@ Please ensure that your screen, workspace and profile are visible by the Zoom de
 
 ## Preparation
 
-Prior to the exam, a sample version will be released with questions broadly similar to the actual exam. A key will also be provided (within a few days). The best way to prepare is to solve the sample exam, on your own, with the material you intend to bring to the actual exam. If you can't solve a question, come to help room, or ask on Piazza. We recommend that only after solving the exam should you look at the solutions.
+Prior to the exam, a sample version will be released with questions broadly similar to the actual exam. A key will also be provided (within a few days). The best way to prepare is to solve the sample exam, on your own, with the material you intend to bring to the actual exam. If you can't solve a question, come to help room, or ask on Piazza. We recommend that only after solving the exam, should you look at the solutions.
 
 ## Cheatsheets and Exam Aids
 
 The exam is open book, meaning that you can bring whatever material you want, so long as it's not electronic. Printouts of reference material, textbooks, notes, the sample exam and key, etc. are all fine to bring.
 
-I recommend bringing reference material on the topics that are hard to remember. Like the useful functions in the STL algorithm library and the many data structures (vector, string, map, set, etc.).
+I recommend bringing reference material on the topics that are hard to remember. Like the useful functions in the STL algorithm library and the many data structures (`std::vector`, `std::string`, `std::map`, `std::set`, etc.).
 
 ## Content
 
@@ -64,4 +64,4 @@ Both the midterm and final exam are comprehensive. This includes material from l
 
 [All of the past in-person exams can be found here](https://cse.msu.edu/~cse232/Exam_Content/). Though, content on old exams won't necessarily be relevant to this semester's exams, as the course has evolved over time.
 
-These old exams were also given as traditional paper exams. Since this semester is entirely remote, the style will differ greatly.
+These old exams were also given as traditional paper exams. Since exams are now taken on Mimir, do note that question styles will differ.
