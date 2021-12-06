@@ -14,4 +14,4 @@ Additionally, we ask that you complete this anonymous TA evaluation form. The co
 
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd3iDzu8jDq4yrMi3YrNcJ-u7jXtUzu2X3w9b4FnWxV3Yk2XQ/viewform?embedded=true" width="640" height="1524" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
-Although we recommend attending a synchronous lab to get the best opprotunity for exam preparation, if you open and answer at least one question in the sample final exam assignment before the final exam review session on Friday, we will give you credit for the lab.
+Although we recommend attending a synchronous lab to get the best opprotunity for exam preparation, if you open and answer at least one question in the sample final exam assignment before the final exam review session on Friday, we will give you credit for the lab. Please note that the sample final exam closes at 7pm, so be sure to start well before then.
