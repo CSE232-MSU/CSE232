@@ -61,9 +61,9 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>2022-01-10</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week00.html">Week 00</a></td>
             <td>No Lab This Week</td>
+            <td>No Monday Homework</td>
+            <td>No Thursday Homework</td>
             <td></td>
-            <td></td>
-            <td>No Assignments are due this week (no lab or help room either).</td>
         </tr>
         <tr>
             <td>2022-01-17</td>
@@ -71,7 +71,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab01.html">Lab 01</a></td>
             <td>Homework 00 (not worth any points)</td>
             <td>Homework 01</td>
-            <td>University Holiday on Monday.</td>
+            <td></td>
         </tr>
         <tr>
             <td>2022-01-24</td>
@@ -135,7 +135,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab08.html">Lab 08</a></td>
             <td>No Monday Homework</td>
             <td>Homework 13</td>
-            <td>Monday and Tuesday are Break Days. No Tuesday Labs.</td>
+            <td></td>
         </tr>
         <tr>
             <td>2022-03-21</td>
@@ -143,7 +143,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab09.html">Lab 09</a></td>
             <td>Homework 14</td>
             <td>Homework 15</td>
-            <td>Midterm exam sessions on Wednesday morning and evening, see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
+            <td>Midterm Exam: see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
         </tr>
         <tr>
             <td>2022-03-28</td>
@@ -167,7 +167,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab12.html">Lab 12</a></td>
             <td>Homework 19</td>
             <td>No Homework Due</td>
-            <td>University Holiday on Thursday and Friday. No Thursday or Friday Labs.</td>  
+            <td></td>  
         </tr>
         <tr>
             <td>2022-04-18</td>
@@ -191,7 +191,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>No Lab</td>
             <td>No Homework</td>
             <td>No Homework</td>
-            <td>Final Exam either Wednesday evening or Thursday morning. See <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
+            <td>Final Exam: see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
         </tr>
     </tbody>
 </table>

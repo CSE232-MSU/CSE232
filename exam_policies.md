@@ -11,16 +11,10 @@ In the Exam Zoom Meeting on 2021-04-23 at 4pm, Dr. Nahum will host a final revie
 -->
 
 ## Midterm Exam Details
-- Zoom Link ([https://msu.zoom.us/j/94955751228](https://msu.zoom.us/j/94955751228))
-- 2021-11-03 10am-noon for those that attend Lab Sections 1-3
-- 2021-11-03 7pm-9pm for those that attend Lab Sections 4-8 and 730
-- If you can't attend your assigned exam, please follow the instructions on Piazza
+- TBA
 
 ## Final Details
-- Zoom Link ([https://msu.zoom.us/j/94955751228](https://msu.zoom.us/j/94955751228))
-- 2021-12-15 8pm-10pm for those that attend Lab Sections 1-5
-- 2021-12-16 10am-noon for those that attend Lab Sections 6-8 and 730
-- If you can't attend your assigned exam, please follow the instructions on Piazza
+- TBA
 
 Both exams will be 90 minutes in duration (from timer start to timer end), but everyone needs to be present in the Zoom meeting at the start of the scheduled exam time to ensure that everything is setup properly and for ID checks.
 
