@@ -8,8 +8,8 @@ let today = new Date();
 // I usually set these two dates to be the begin/end dates listed on the
 // academic calendar: https://reg.msu.edu/roinfo/calendar/academic.aspx
 // NOTE: Month is 0 indexed, i.e., 0 = January, 1 = February, ...
-let classes_begin = new Date(2021, 8, 1);
-let classes_end = new Date(2021, 11, 18);
+let classes_begin = new Date(2022, 0, 10);
+let classes_end = new Date(2022, 05, 04);
 
 //
 // Progress calculation below this point, nothing to worry about here
