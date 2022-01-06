@@ -246,7 +246,7 @@ The yellow-highlighted line shows the next line to be ran, as you could probably
 At the top is the Debugger Control Panel:
 
 <div align="center">
-    <img src="../assets/images/vscode-installation-macos/control-panel.png">
+<img src="../assets/images/debugger_controls.png">
 </div>
 
 It includes your standard debugging options. In order from left to right:

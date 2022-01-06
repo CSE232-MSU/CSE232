@@ -22,7 +22,7 @@ It's possible to compile and run C++ programs without a Unix-like system through
 
 There is a browser-based IDE called [Replit](https://replit.com/~) that I recommend if you cannot get WSL working on your machine. The reason we don't recommend using it for the course outright is due to speed; we'll be creating larger and larger programs as the semester goes on, and eventually you'll notice how slow Replit gets as the size of your programs increases. WSL is not bound to a browser, and thus has access to more of your computer's hardware. 
 
-Other than that, Replit is an easy-to-use and quickly accessible way to start writing, compiling, and testing code. You get access to Linux command-line tools, a simple debugger, and Google Doc-like collaboration features.
+Other than that, Replit is an easy-to-use and quickly accessible way to start writing, compiling, and testing code. You get access to Linux command-line tools, a simple debugger, and Google Doc-like collaboration features. We do not provide a Replit setup tutorial, since it's fairly straight-forward to use.
 
 ### Uninstalling WSL
 
@@ -114,7 +114,7 @@ I recommend keeping this instance of your Linux terminal open for the next serie
 
 **Important**: when prompted to "Select Additional Tasks" during this first installation, be sure that the "**Add to PATH**" option is checked **on** (it should already be checked on):
 
-[Download and install the Stable version of Visual Studio Code (VSCode) here.](https://code.visualstudio.com/)
+[Download and install the Stable version of Visual Studio Code here.](https://code.visualstudio.com/)
 
 Open VSCode and click on the icon of four squares to the left sidebar. This will open the VSCode Extensions Marketplace. Search for "remote development", and the first result should be an extension of the same name, made by Microsoft.
 
@@ -124,7 +124,7 @@ Open VSCode and click on the icon of four squares to the left sidebar. This will
 
 Go ahead and hit the top **Install** button.
 
-Close out of the VSCode instance you were just using to install the Remote Development extension, and bring up your Linux terminal. Stay or navigate to the home directory (execute `cd ~` if you're not there).
+Close out of the VSCode instance you were just using to install the Remote Development extension, and bring up your Linux terminal. Stay at, or navigate to the home directory (execute `cd ~` if you're not there).
 
 Run the command: `code .` (note the space-separated period following the word "code"), and you should see the terminal unpack some items and launch a new VSCode instance. This unpacking is a one-time thing; it will normally open a VSCode window instantaneously.
 
@@ -157,12 +157,13 @@ Create a new file called "helloworld.cpp", and type/copy-paste the following cod
 ```c++
 #include <iostream>
 
-int main() {
+int main()
+{
     std::cout << "Hello world" << std::endl;
 }
 ```
 
-The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for future classes. Save your helloworld.cpp file if you haven't already (CTRL + S), and in order to compile our lovely program, type the following command into the terminal:
+The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for general navigation and future coursework. Save your helloworld.cpp file if you haven't already (CTRL + S), and in order to compile our lovely program, type the following command into the terminal:
 
 ```bash
 g++ helloworld.cpp -Wall -std=c++17
@@ -186,13 +187,110 @@ And you should then see "Hello world" displayed to the console!
 
 It's important to note that **you must compile your program and run a.out every time you want to test your code**. You will be typing those two commands hundreds of times in this course. Keep them in your notes or memorize them (you'll likely have them memorized within a few days of practice).
 
+If you setup the debugger (the section below), you can compile and run in a single mouse-click. We'll be talking more about the compilation command and what you can do with it, though, so it's best to be familiar with both.
+
 ## Debugging C++ in VSCode
 
 You should be familiar with an IDE debugger from your previous programming class (CSE 231 or an equivalent prerequisite). [If you aren't, please read through this tutorial](../debugging_guide.html) (it's in Python, but the same core principles apply).
 
-Like we did to install our compiler, `g++`, we need to install a debugger. Type the following command into the terminal (the one in VSCode or a separate Linux terminal window, both are the same):
+Like we did to install our compiler, `g++`, we need to install a debugger. Type the following command into the terminal (I would use the integrated one in VSCode, just a lot easier to keep everything together there):
 
 ```bash
 sudo apt install gdb
 ```
 
+Approve the installation as necessary.
+
+In order to use `gdb` with VSCode (using `gdb` by itself will be something you learn later in this course), we need to grab some configuration files.
+
+Execute the following command to install a special GDB configuration file:
+
+```bash
+curl -o ~/.gdbinit https://raw.githubusercontent.com/CSE232-MSU/CSE232-VSCCONF/main/gdbinit
+```
+
+(This is also something you'll learn about later in this course)
+
+Then, execute the following commands one-by-one to install the VSCode configuration files that allow VSCode to latch onto `gdb`:
+
+```bash
+mkdir .vscode
+cd .vscode
+curl --remote-name-all https://raw.githubusercontent.com/CSE232-MSU/CSE232-VSCCONF/main/windows/{launch.json,tasks.json}
+cd ..
+```
+
+This will create a folder named ".vscode", containing some .json files. You'll also have a file named ".gdbinit".
+
+<div align="center">
+<img src="../assets/images/vscode_installation_windows/11.png">
+</div>
+
+The .vscode folder is a special folder that VSCode will search for when performing certain tasks. The .vscode folder you just created by doing this process **is unique to the directory you're currently in, which is your home directory at the moment**. Moving VSCode to a new directory means that you will no longer have the same configurations. [You can reference the process we just ran through to install these configuration files here](https://github.com/CSE232-MSU/CSE232-VSCCONF), if you want to move your workspace to a different folder (this is also on the Setup home page). You can also just copy the .vscode folder around with:
+
+```bash
+cp -r ~/.vscode .
+```
+
+This will copy the .vscode folder from your home directory to your terminal's current working directory (moving around with the terminal will be talked about in the first lab).
+
+Replace the contents of the helloworld.cpp file for this more complex version:
+
+```c++
+#include <iostream>
+#include <vector>
+#include <string>
+
+int main()
+{
+    std::vector<std::string> msg{"Hello", "C++", "World", "from", "VS Code", "and the C++ extension!"};
+
+    for (std::string const &word : msg)
+    {
+        std::cout << word << " ";
+    }
+    std::cout << std::endl;
+}
+```
+
+You should see an icon on the left sidebar that looks like a play button with a bug on it – this is the debugger menu, go ahead and open it. Like most IDE debuggers, it has a menu showing your currently active variables, watched variables, call stack, and currently active breakpoints.
+
+<div align="center">
+<img src="../assets/images/vscode_installation_windows/12.png">
+</div>
+
+Set a breakpoint on the first line of the `main()` function by clicking slightly to the left of its line number; you should see a red dot appear. Then, execute the debugger by hitting the green play button at the top-left.
+
+<div align="center">
+<img src="../assets/images/vscode_installation_windows/13.png">
+</div>
+
+Your terminal should populate with commands that were automatically executed by the .vscode configuration I had you install. If your VSCode interface looks like mine in the screenshot above, then everything is working properly. Congrats!
+
+The yellow-highlighted line shows the next line to be ran, as you could probably imagine.
+
+At the top is the Debugger Control Panel:
+
+<div align="center">
+<img src="../assets/images/debugger_controls.png">
+</div>
+
+It includes your standard debugging options. In order from left to right:
+- **Continue** - Run the program until next breakpoint
+- **Step Over** - Run the highlighted line without stepping into the function call (if present)
+- **Step Into** - Run the highlighted line and step into the function call (if present)
+- **Step Out** - Step out of a function call (if inside a function body)
+- **Restart** - Re-execute the program with the debugger active
+- **Stop** - Exit the debugger
+
+The rectangle of dots on the left-side of the panel is a drag-point, where you can click and hold to drag the panel elsewhere in the window.
+
+After defining the `msg` variable by stepping, you can click its dropdown inside the debugger menu to see its contents denoted by index.
+
+<div align="center">
+<img src="../assets/images/vscode_installation_windows/14.png">
+</div>
+
+The `std::vector` and `std::string` classes are things you'll learn at a later date.
+
+Your debugger is now ready-to-go! Included with the .vscode folder are two debugging configurations: single file, and multi file. You can choose the configuration by hitting the dropdown menu next to the green play button. You won't need to worry about multi-file compilation for a few weeks, yet.
