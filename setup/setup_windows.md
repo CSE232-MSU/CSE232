@@ -56,17 +56,17 @@ wsl --install
 
 This command will make some configurations and install the latest version of the Linux distribution, Ubuntu, for you (version 20.04 at the time of writing; if you're familiar with, and want another distribution, [you can find a list of available ones here](https://docs.microsoft.com/en-us/windows/wsl/install#change-the-default-linux-distribution-installed)).
 
-After running this command, restart your computer if the command didn't already restart it for you.
+After running this command, restart your computer as the prompt says.
 
-After restarting, a new console may appear asking for you to set up a username and password for the Linux distribution. If this new console didn't appear, you can open your Linux distribution console like any other app (you can search "Ubuntu" in the Windows search bar and it should appear; use the name of the distribution you installed if you changed it from the default).
+After restarting, a new console should appear asking for you to set up a username and password for the Linux distribution.
 
 <div align="center">
 <img src="../assets/images/vscode_installation_windows/1.png">
 </div>
 
-Go ahead and make a username and password. _Note that, when typing out your password, the characters you're typing will be hidden from you. Type carefully!_ Most command-line tools that ask for passwords will do this.
+Go ahead and make a username and password. _Note that, when typing out your password, the characters you're typing will be hidden from you. Type carefully!_ Most command-line tools that ask for passwords will do this. This is a password you'll be using a lot, so I recommend making it somewhat short and memorable. 
 
-You should now have your Linux distribution ready-to-go! Here is what my console looks like after setting a username and password:
+After setting a username and password, you should now have your Linux distribution ready-to-go! Here is what my console looks like after setting a username and password:
 
 <div align="center">
 <img src="../assets/images/vscode_installation_windows/2.png">
@@ -124,7 +124,9 @@ Open VSCode and click on the icon of four squares to the left sidebar. This will
 
 Go ahead and hit the top **Install** button.
 
-Close out of the VSCode instance you were just using to install the Remote Development extension, and bring up your Linux terminal. Stay at, or navigate to the home directory (execute `cd ~` if you're not there).
+Close out of the VSCode instance you were just using to install the Remote Development extension, and bring up your Linux terminal (if not open, it's like any other application on your computer; simply do a Windows search for "Ubuntu" and it should appear in the results, you can make a desktop shortcut for it if you'd like).
+
+In your terminal: stay at, or navigate to the home directory (execute `cd ~` if you're not there).
 
 Run the command: `code .` (note the space-separated period following the word "code"), and you should see the terminal unpack some items and launch a new VSCode instance. This unpacking is a one-time thing; it will normally open a VSCode window instantaneously.
 
@@ -210,8 +212,6 @@ Execute the following command to install a special GDB configuration file:
 ```bash
 curl -o ~/.gdbinit https://raw.githubusercontent.com/CSE232-MSU/CSE232-VSCCONF/main/gdbinit
 ```
-
-(This is also something you'll learn about later in this course)
 
 Then, execute the following commands one-by-one to install the VSCode configuration files that allow VSCode to latch onto `gdb`:
 
