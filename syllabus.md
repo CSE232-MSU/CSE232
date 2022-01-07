@@ -4,7 +4,7 @@ title: Syllabus
 
 # Syllabus
 
-Fall Semester, 2021
+Spring Semester, 2022
 
 ## General Information
 
@@ -21,17 +21,16 @@ The focus of the course will be twofold:
 ### Pandemic Specific Information
 
 ## In-Person Labs
-Lab sections 1-8 are meeting in-person in the STEM building. According to University policy (as well as health expert recommendations), proper mask wearing is required while in the building. Masks are not to be removed for any reason, which unfortunately means no eating or drinking while in the lab. Students who fail to properly wear a mask will be given one warning before being removed from the lab and disciplinary actions being filed. 
+Lab sections 1-8 are meeting in-person in the STEM building once MSU allows in-person classes to resume. According to University policy (as well as health expert recommendations), proper mask wearing is required while in the building. Students who fail to properly wear a mask will be given one warning before being removed from the lab and disciplinary actions being filed. 
 
 ## Alternate Lab Options
-All students (regardless of section) are allowed to attend a synchronous Zoom lab section, if they would prefer without prior permission. Details on Piazza. All students can also earn lab credit by completing the Mimir assignment associated with the lab by Friday, 10pm. 
+All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without prior permission. All students can also earn lab credit by completing the Mimir assignment associated with the lab by Friday, 10pm. 
 
 ## Attending In-Person
-If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
-
+If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom synchronous lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
 
 ### Course Materials
-
+- $15 Payment to Coding Rooms (see: <coding_rooms_setup.html>)
 - Recommended (but not required) textbook:
     - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
 - You must have a desktop or laptop capable of running Zoom and screen-sharing.
@@ -52,7 +51,7 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 If your lab falls on a day when the university isn't holding classes, you will be given credit for the lab. However, you are responsible for reading the lab and being comfortable with the content covered even if you aren't required to complete it (lab content will appear on homework assignments and exams).
 
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Mimir assignment by Friday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision.
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Mimir assignment by Friday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
 ### Communication
 
@@ -64,8 +63,6 @@ All class announcements will be made through Piazza, as well as direct messages 
 
 
 A total of 1000 points can be accrued over the course of the semester. There will be no extra credit.
-
-__To be eligible for a non-zero course grade, you must earn at least 50% (150 points) of the summed points available on both exams.__
 
 <div align="center">
     <table>
@@ -114,7 +111,7 @@ __To be eligible for a non-zero course grade, you must earn at least 50% (150 po
 
 ### Exams
 
-There will be a midterm and a final exam. The midterm is worth 100 points, and the final is worth 200 points.
+There will be a midterm and a final exam. The midterm is worth 100 points, and the final is worth 150 points.
 
 ### Projects
 
@@ -130,9 +127,7 @@ For example, if a student was previously earning a 4.0, but missed 4 labs, then 
 
 ### Homework
 
-A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 20 points. There will be 22 assignments given, but only the top 20 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 400 points from the homework assignments.
-
-Submitting an assignment to Mimir merely saves it. At the deadline for an assignment, your work is automatically saved and graded. So be sure you aren't in the middle of typing something when the assignment closes.
+A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 30 points. There will be 17 assignments given, but only the top 15 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 450 points from the homework assignments.
 
 All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
 

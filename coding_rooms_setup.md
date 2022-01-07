@@ -3,7 +3,7 @@ title: Coding Rooms Course Payment Instructions
 ---
 
 ## What is Coding Rooms?
-Coding rooms is the grading platform that we use in CSE 232 to submit work, grade your assignments and show examples. It is a required part of the class. And although I wish it was free, it costs $15. Please note that if your payment isn't processed (which can take up to 5 days) by the Add/Drop deadline, you will not be able to view or submit assignments. 
+Coding Rooms is the grading platform that we use in CSE 232 to submit work, grade your assignments and show examples. It is a required part of the class. And although I wish it was free, it costs $15. Please note that if your payment isn't processed (which can take up to 5 days) by the Add/Drop deadline, you will not be able to view or submit assignments. This will likely result in you failing those assignments, so please don't delay.  
 
 ## Coding Rooms Course Payment Instructions
 1.	Depending on which Lab Section you are registered for click on your section's sign up link:
@@ -33,7 +33,7 @@ Unblocking process may take up to 5 business days and it is highly recommended f
  
     iii.	Any payments made by an unregistered email will not be properly linked to your Coding Rooms email, resulting in access restriction.
 
-If you have any questions, please contact Coding Rooms support at <hello@codingrooms.com>
+If you have any questions, please contact Coding Rooms support at <hello@codingrooms.com>.
 
 ## Coding Rooms' Refund Policy
 Student payment refund will only be granted to students who have paid, but decide to unenroll from the course. Any payment refund requests can be submitted to hello@codingrooms by students with below details:
