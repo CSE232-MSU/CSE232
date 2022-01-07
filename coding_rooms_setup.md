@@ -2,7 +2,8 @@
 title: Coding Rooms Setup
 ---
 
-## What is Coding Rooms?
+# Coding Rooms Setup
+
 Coding Rooms is the grading platform that we use in CSE 232 to submit work, grade your assignments and show examples. It is a required part of the class. And although I wish it was free, it costs $15. Please note that if your payment isn't processed (which can take up to 5 days) by the Add/Drop deadline, you will not be able to view or submit assignments. This will likely result in you failing those assignments, so please don't delay.  
 
 ## Coding Rooms Course Payment Instructions
@@ -26,9 +27,11 @@ Unblocking process may take up to 5 business days and it is highly recommended f
 
 3.	Payment instructions:
     i.	Access the payment portal with the QR code or go to <https://buy.stripe.com/00gdTRf0I1ad6bK8wF>.
- 
+    
+    <div align="center">
     <img src="assets/images/coding-rooms-setup/QR_2022Spring_MSU_CSE232_JoshuaNahum.png">
-
+    </div>
+   
     ii.	It is important to input your @msu.edu email here as your payment record will be linked by email.
  
     iii.	Any payments made by an unregistered email will not be properly linked to your Coding Rooms email, resulting in access restriction.
