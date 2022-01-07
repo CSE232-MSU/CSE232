@@ -136,7 +136,7 @@ Run the command: `code .` (note the space-separated period following the word "c
 <img src="../assets/images/vscode_installation_windows/7.png">
 </div>
 
-You should now see these files when opening the integrated explorer, with the integrated terminal showing your Linux distribution prompt (for Ubuntu, the shell that is being ran is called "bash"). If the integrated terminal didn't appear, use the key combination CTRL + ` (this is the backtick character, left of the **1** key on most keyboards) to toggle the terminal.
+You should now see these files when opening the integrated explorer, with the integrated terminal showing your Linux distribution prompt (for Ubuntu, the shell that is being ran is called "bash"). If the integrated terminal didn't appear, use the key combination CTRL + ` (this is the backtick character, left of the 1 key on most keyboards) to toggle the terminal.
 
 Once again navigate to the Extensions Marketplace, and now search for "C/C++". You should, again, find an extension of the same name developed by Microsoft.
 
@@ -189,6 +189,8 @@ It's important to note that **you must compile your program and run a.out every 
 
 If you setup the debugger (the section below), you can compile and run in a single mouse-click. We'll be talking more about the compilation command and what you can do with it, though, so it's best to be familiar with both.
 
+**Note**: I _strongly_ recommend you setup the debugger now, and use it to your advantage throughout this course. It is incredibly helpful once you get the hang of it.
+
 ## Debugging C++ in VSCode
 
 You should be familiar with an IDE debugger from your previous programming class (CSE 231 or an equivalent prerequisite). [If you aren't, please read through this tutorial](../debugging_guide.html) (it's in Python, but the same core principles apply).
@@ -226,13 +228,7 @@ This will create a folder named ".vscode", containing some .json files. You'll a
 <img src="../assets/images/vscode_installation_windows/11.png">
 </div>
 
-The .vscode folder is a special folder that VSCode will search for when performing certain tasks. The .vscode folder you just created by doing this process **is unique to the directory you're currently in, which is your home directory at the moment**. Moving VSCode to a new directory means that you will no longer have the same configurations. [You can reference the process we just ran through to install these configuration files here](https://github.com/CSE232-MSU/CSE232-VSCCONF), if you want to move your workspace to a different folder (this is also on the Setup home page). You can also just copy the .vscode folder around with:
-
-```bash
-cp -r ~/.vscode .
-```
-
-This will copy the .vscode folder from your home directory to your terminal's current working directory (moving around with the terminal will be talked about in the first lab).
+The .vscode folder is a special folder that VSCode will search for when performing certain tasks. The .vscode folder you just created by doing this process **is unique to the directory you're currently in, which is your home directory at the moment**. Moving VSCode to a new directory means that you will no longer have the same configurations. [You can reference the process we just ran through to install these configuration files here](https://github.com/CSE232-MSU/CSE232-VSCCONF), if you want to move your workspace to a different folder (this is also on the Setup home page). You can also just copy this .vscode folder around with you, if you move your workspace elsewhere.
 
 Replace the contents of the helloworld.cpp file for this more complex version:
 
@@ -294,3 +290,13 @@ After defining the `msg` variable by stepping, you can click its dropdown inside
 The `std::vector` and `std::string` classes are things you'll learn at a later date.
 
 Your debugger is now ready-to-go! Included with the .vscode folder are two debugging configurations: single file, and multi file. You can choose the configuration by hitting the dropdown menu next to the green play button. You won't need to worry about multi-file compilation for a few weeks, yet.
+
+## Closing Notices
+
+Throughout this tutorial, we've been doing everything in your Linux distribution's _home directory_ (the directory represented by the `~` symbol). This folder has some significance that we'll be talking about in later labs. The folders and files that were present at the opening of VSCode **should not be deleted**. Most of them are configuration files for your shell.
+
+The reason we did everything in here is for sake of simplicity. It's likely that you have little or no knowledge of how to navigate folders with the terminal, and so everything was kept at the home directory to avoid needing to teach you about terminal navigation (which will be the first lab's lesson).
+
+You now have Visual Studio Code, however, which _does_ provide a somewhat graphical view of the surrounding filesystem, if you want to play around and move your workspace (I, personally, have a CSE 232 folder in my home directory that I work from). You can move workspaces by going to the **File** tab at the top, and hitting **Open Folder**. A listing of folder contents will be provided with a sub-menu that appears. The **..** syntax that you'll see represents the parent folder.
+
+If you log-off from your computer and want to come back to VSCode at this folder, always remember that you have to boot-up the Ubuntu app (or whatever Linux distribution app you have), then use the command `code .`. The `.` tells the command to open VSCode at the terminal's current location.
