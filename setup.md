@@ -1,8 +1,8 @@
 ---
-title: Setup
+title: VSCode Setup
 ---
 
-# Setup
+# VSCode Setup
 
 We recommend Visual Studio Code (VSCode) as a text editor for this course. We offer setup tutorials and CSE 232-specific configuration files for debugging. You are free to install and work with other text editors, but are responsible for knowing how to use it.
 

@@ -6,5 +6,7 @@
   link: /lectures.html
 - name: Labs
   link: /labs.html
-- name: Setup
+- name: VSCode Setup
   link: /setup.html
+- name: Coding Rooms Setup
+  link: /coding_rooms_setup.html

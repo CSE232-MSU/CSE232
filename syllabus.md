@@ -4,7 +4,7 @@ title: Syllabus
 
 # Syllabus
 
-Fall Semester, 2021
+Spring Semester, 2022
 
 ## General Information
 
@@ -18,20 +18,19 @@ The focus of the course will be twofold:
 - Learn the C++ language, with a focus on using the available functionality in the STL.
 - Learn how these tools work under the hood, so you can design your own data structures and algorithms.
 
-### Pandemic Specific Information
+## Pandemic Specific Information
 
-## In-Person Labs
-Lab sections 1-8 are meeting in-person in the STEM building. According to University policy (as well as health expert recommendations), proper mask wearing is required while in the building. Masks are not to be removed for any reason, which unfortunately means no eating or drinking while in the lab. Students who fail to properly wear a mask will be given one warning before being removed from the lab and disciplinary actions being filed. 
+### In-Person Labs
+Lab sections 1-8 are meeting in-person in the STEM building once MSU allows in-person classes to resume. According to University policy (as well as health expert recommendations), proper mask wearing is required while in the building. Students who fail to properly wear a mask will be given one warning before being removed from the lab and disciplinary actions being filed. 
 
-## Alternate Lab Options
-All students (regardless of section) are allowed to attend a synchronous Zoom lab section, if they would prefer without prior permission. Details on Piazza. All students can also earn lab credit by completing the Mimir assignment associated with the lab by Friday, 10pm. 
+### Alternate Lab Options
+All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without prior permission. All students can also earn lab credit by completing the Coding Rooms assignment associated with the lab by Friday, 10pm. 
 
-## Attending In-Person
-If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
+### Attending In-Person
+If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom synchronous lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
 
-
-### Course Materials
-
+## Course Materials
+- $15 Payment to Coding Rooms (see: [coding_rooms_setup.html](coding_rooms_setup.html))
 - Recommended (but not required) textbook:
     - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
 - You must have a desktop or laptop capable of running Zoom and screen-sharing.
@@ -40,11 +39,11 @@ If there is any reason you should not be attending the in-person lab (symptoms, 
 
 
 
-### Lectures
+## Lectures
 
 All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, assignments, and exams in this course.
 
-### Laboratory Sessions
+## Laboratory Sessions
 
 Lab section 1-8 will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online.
 
@@ -52,9 +51,9 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 If your lab falls on a day when the university isn't holding classes, you will be given credit for the lab. However, you are responsible for reading the lab and being comfortable with the content covered even if you aren't required to complete it (lab content will appear on homework assignments and exams).
 
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Mimir assignment by Friday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision.
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Coding Rooms assignment by Friday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
-### Communication
+## Communication
 
 In-person communication can be done at help room. For all other circumstances, communication with the instructors should be done through Piazza (with a public or private post). Emails *will not* be responded to.
 
@@ -64,8 +63,6 @@ All class announcements will be made through Piazza, as well as direct messages 
 
 
 A total of 1000 points can be accrued over the course of the semester. There will be no extra credit.
-
-__To be eligible for a non-zero course grade, you must earn at least 50% (150 points) of the summed points available on both exams.__
 
 <div align="center">
     <table>
@@ -114,7 +111,7 @@ __To be eligible for a non-zero course grade, you must earn at least 50% (150 po
 
 ### Exams
 
-There will be a midterm and a final exam. The midterm is worth 100 points, and the final is worth 200 points.
+There will be a midterm and a final exam. The midterm is worth 100 points, and the final is worth 150 points.
 
 ### Projects
 
@@ -130,9 +127,7 @@ For example, if a student was previously earning a 4.0, but missed 4 labs, then 
 
 ### Homework
 
-A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 20 points. There will be 22 assignments given, but only the top 20 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 400 points from the homework assignments.
-
-Submitting an assignment to Mimir merely saves it. At the deadline for an assignment, your work is automatically saved and graded. So be sure you aren't in the middle of typing something when the assignment closes.
+A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 30 points. There will be 17 assignments given, but only the top 15 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 450 points from the homework assignments.
 
 All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
 
@@ -140,7 +135,7 @@ All assignments (projects and homework) are to be done individually. Discussing 
 
 We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. The entire assignment will be regraded, not just a specific part. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.
 
-### Honors
+## Honors
 
 An Honors Project will be released midway through the course for those that are enrolled in the Honors College and wish to receieve Honors credit. You'll need to:
 - Fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
@@ -150,7 +145,7 @@ An Honors Project will be released midway through the course for those that are 
 
 The Honors Project is not worth any points, nor is it extra credit. We will not provide assistance in completing it, as the Honors Project is meant to be solved independently of additional instruction.
 
-### Extensions
+## Extensions
 
 Make-ups for examinations may be arranged if your absence is caused by a documented illness or personal emergency. A written explanation (including supporting documentation) must be submitted to your lecture instructor; if the explanation is acceptable, an alternative to the examination will be arranged. When possible, make-up arrangements should be completed in advance.
 
@@ -238,24 +233,22 @@ Everything else, including conceptual discussions with other students should be 
 ### Department Policy Concerning The Use Of Chegg and Similar Sites
 > This course has adopted the [Chegg and Similar Sites policy](https://www.cse.msu.edu/Students/Current_Undergrad/Chegg/). Submission of student work (e.g. assignments and/or exam solutions) based on those found on Chegg, Brainly, Quizlet, and other similar websites will result in an Academic Dishonesty Report (ADR) and an automatic failing grade of zero (0.0) for the course. The ADR for students personally posting questions from assignments or exams to these sites will request additional sanctions.
 
-### Extenuating Circumstances
+## Extenuating Circumstances
 
 The goal of this class is for you to learn. If you find that anything is coming in your way of that goal, please talk with us about it. We plan to keep the class flexible to the learning styles that seem to work best for the students, so feedback is always appreciated. In particular, due to the ongoing global pandemic, we understand that you might need additional support. Please don't hesitate in reaching out to us for anything that might affect your learning.
 
-### Grief Absence Policy
+## Grief Absence Policy
 
 If there are unfortunate circumstances that would lead you to have unexpected absences, MSU has a [Grief Absence Policy](https://reg.msu.edu/ROInfo/Notices/GriefAbsence.aspx). Please contact the Associate Dean, and we will make every effort to aid you in continuing the class after we recieve confirmation from the administration.
 
-### Resource Center for Persons with Disabilities
+## Resource Center for Persons with Disabilities
 
 Michigan State University is committed to providing equal opprotunity for participation in all programs, services and activities. Requests for acommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued a verified individual services accommodation ("VISA") form. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible.
 
-### Religious Observances
+## Religious Observances
 
 Accommodations will be made for religious observances if requests are made well in advance. Since religious observances are usually known at the beginning of class and assignment due dates are in the schedule, we expect students to request accommodation at the beginning of the semester. See MSU's [Religious Observance Policy](https://reg.msu.edu/ROInfo/Notices/ReligiousPolicy.aspx) for more details.
 
-## Miscellaneous
-
-### Acceptable Use Policy
+## Acceptable Use Policy
 
 All students are expected to be responsible users of the computer system and laboratory classrooms provided for this course. Account usage guidelines published by the Department of Computer Science and Engineering are posted under the [CSE AUP](https://www.cse.msu.edu/Resources/Facilities/Policies/AUP.php).
