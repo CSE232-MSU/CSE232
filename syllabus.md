@@ -30,7 +30,7 @@ All students (regardless of section) are allowed to attend a synchronous Zoom la
 If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom synchronous lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
 
 ## Course Materials
-- $15 Payment to Coding Rooms (see: <https://cse232-msu.github.io/CSE232/coding_rooms_setup.html>)
+- $15 Payment to Coding Rooms (see: [coding_rooms_setup.html](coding_rooms_setup.html))
 - Recommended (but not required) textbook:
     - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
 - You must have a desktop or laptop capable of running Zoom and screen-sharing.
