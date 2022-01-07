@@ -52,7 +52,7 @@ I recommend bringing reference material on the topics that are hard to remember.
 
 ## Content
 
-Both the midterm and final exam are comprehensive. This includes material from lectures, labs, and homework. The midterm exam will cover content up to and including Week 06. The final exam will cover everything.
+Both the midterm and final exam are comprehensive. This includes material from lectures, labs, and homework. The midterm exam will cover content up to and including Week 07. The final exam will cover everything.
 
 ## Past Exams
 

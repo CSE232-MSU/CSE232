@@ -4,7 +4,7 @@ title: Week 00
 
 # Week 00
 
-Synchronous labs begin next week (the second week of the semester). Please check your schedule and show up for your scheduled lab. All Section 730 students will be assigned a synchronous lab to attend, see details on Piazza.
+Labs begin next week (the second week of the semester). Please check your schedule and show up for your scheduled lab.
 
 Each week will have videos, example code, and relevant notes. 
 
