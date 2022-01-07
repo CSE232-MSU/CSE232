@@ -117,7 +117,7 @@ Joining Mimir is **required** for this course. You have to join since it is the 
 In the Live Coursework section, find and click the link to this lab assignment (obviously we aren't in Spring 2018, but you get the idea):
 
 <div align="center">
-    <img src="../assets/images/mimir_start.png">
+    <img src="../assets/images/labs/mimir_start.png">
 </div>
 
 Once you've clicked the assignment, you'll be brought to the assignment's Submission page. On that page, you'll have the project's description, and a link to upload your assignment.
@@ -130,7 +130,7 @@ At the top-right are three important buttons:
 Click the "Open IDE" button to go to Mimir's IDE. It should open a separate tab that looks like this:
 
 <div align="center">
-    <img src="../assets/images/mimir_ide_start.png">
+    <img src="../assets/images/labs/mimir_ide_start.png">
 </div>
 
 ### The Unix Terminal

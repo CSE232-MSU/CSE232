@@ -75,7 +75,7 @@ The basic idea is to draw a series of trapezoids that approximate the area under
 First, remember how to calculate the area of a trapezoid?
 
 <div align="center">
-    <img src="../assets/images/trapezoid.svg" width="40%">
+    <img src="../assets/images/labs/trapezoid.svg" width="40%">
 </div>
 
 <div align="center">
@@ -99,7 +99,7 @@ alt="h">.
 Now, if we were to place some trapezoid underneath a given curve by rotating it 90 degrees, such that the parallel sides are now bounded between the x-axis and the curve...
 
 <div align="center">
-    <img src="../assets/images/trapezoidal_rule_init.png">
+    <img src="../assets/images/labs/trapezoidal_rule_init.png">
 </div>
 
 We find that the parallel sides now become the distance from the x-axis to the curve (those black points at the top of the trapezoid, which we'll call <img src=
@@ -123,7 +123,7 @@ If we keep adding trapezoids, we can eventually get an approximation for the ent
 alt="\Delta x">, for each trapezoid, we can end up with a pretty accurate approximation for the _integral_ of the function this curve is modeling.
 
 <div align="center">
-    <img src="../assets/images/trapezoidal_rule.gif">
+    <img src="../assets/images/labs/trapezoidal_rule.gif">
 </div>
 
 Thus, for a definite integral of a function, <img src=

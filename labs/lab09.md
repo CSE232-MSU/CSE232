@@ -31,7 +31,7 @@ alt="(0, 0)">, with the head of the vector meeting at coordinates <img src=
 alt="(x, y)">.
 
 <div align="center">
-    <img src="../assets/images/vectors.png" width="100%">
+    <img src="../assets/images/labs/vectors.png" width="100%">
 </div>
 
 Below are some of the operations that can be performed on a vector, all of which you'll ultimately implement for your `MathVector` `struct`.

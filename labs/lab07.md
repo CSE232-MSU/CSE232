@@ -85,7 +85,7 @@ Imagine that you've written a really useful function. You would like to package 
 Remember this picture?
 
 <div align="center">
-<img src="../assets/images/compiler_parts.png">
+<img src="../assets/images/labs/compiler_parts.png">
 </div>
 
 `g++` (the underlying compiler) does all of these steps rather invisibly. To take advantage of it, we'll need multiple files.
