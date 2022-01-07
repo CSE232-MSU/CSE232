@@ -1,6 +1,8 @@
-# hidden files/folders
-.*
-!/.gitignore
-
-# local server data
+# Local server data
 _site/
+
+# Jekyll cache
+.jekyll-cache/
+
+# VSCode settings
+.vscode/
