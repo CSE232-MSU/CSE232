@@ -1,8 +1,8 @@
 ---
-title: Setup
+title: VSCode Setup
 ---
 
-# Setup
+# VSCode Setup
 
 Installation tutorials for Visual Studio Code will appear here closer to the beginning of the semester.
 

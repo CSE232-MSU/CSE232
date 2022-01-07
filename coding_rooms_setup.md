@@ -1,5 +1,5 @@
 ---
-title: Coding Rooms Course Payment Instructions
+title: Coding Rooms Setup
 ---
 
 ## What is Coding Rooms?
