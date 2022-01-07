@@ -6,7 +6,7 @@ title: Labs
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistant to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
 
-**Important**: Lab 01 will tell you to go through the Visual Studio Code installation tutorials under the Setup tab at the top. These tutorials will not be available until we are closer to the beginning of the semester. There are some other things that will change about Lab 01 besides this; we recommend that you wait until the semester has officially started.
+**Important**: Lab 01 still references a platform we were using last semester, called "Mimir". This lab is still under development; please wait until the week of 2022-01-17 to begin this lab. Installing VSCode can be done in the meantime.
 
 #### [Lab 01 - Getting Started](labs/lab01.html)
 

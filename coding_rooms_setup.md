@@ -29,7 +29,7 @@ Unblocking process may take up to 5 business days and it is highly recommended f
     i.	Access the payment portal with the QR code or go to <https://buy.stripe.com/00gdTRf0I1ad6bK8wF>.
     
     <div align="center">
-    <img src="assets/images/coding-rooms-setup/QR_2022Spring_MSU_CSE232_JoshuaNahum.png">
+    <img src="assets/images/coding_rooms_setup/QR_2022Spring_MSU_CSE232_JoshuaNahum.png">
     </div>
    
     ii.	It is important to input your @msu.edu email here as your payment record will be linked by email.
