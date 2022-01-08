@@ -124,6 +124,8 @@ If you setup the debugger (the section below), you can compile and run in a sing
 
 You should be familiar with an IDE debugger from your previous programming class (CSE 231 or an equivalent prerequisite). [If you aren't, please read through this tutorial](../debugging_guide.html) (it's in Python, but the same core principles apply).
 
+Go back to the Extensions Marketplace to find and install the "CodeLLDB" extension made by Vadim Chugunov. It should be the only extension that appears.
+
 In order to debug C++ code, we need to give VSCode some extra information about _how_ we want to debug. We provide some debugging configurations for you that can be installed through terminal.
 
 Execute the following commands one-by-one to install our recommended configuration files:
