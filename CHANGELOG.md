@@ -17,5 +17,6 @@ This changelog only concerns the most significant changes up to a particular dat
 - Added a favicon
 - Added a keyboard shortcut to quickly access this repository from the website
   - Press G on any page to open the repository in a new window
+- Removed Mimir button from the navigation bar
 - General reformatting and re-wording to many pages
 - Fixed some bugs with the navigation bar
