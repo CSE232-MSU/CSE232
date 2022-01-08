@@ -1,30 +1,32 @@
-// Conversion factor to go from milliseconds to days (difference between
-// Date objects returns a number in milliseconds... for some reason)
-const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
-
-// Date of execution time
-let today = new Date();
-
 // I usually set these two dates to be the begin/end dates listed on the
 // academic calendar: https://reg.msu.edu/roinfo/calendar/academic.aspx
 // NOTE: Month is 0 indexed, i.e., 0 = January, 1 = February, ...
-let classes_begin = new Date(2022, 0, 10);
-let classes_end = new Date(2022, 05, 04);
+const CLASSES_BEGIN = new Date(year=2022, month=0, date=10);
+const CLASSES_END = new Date(year=2022, month=05, date=04);
 
 //
 // Progress calculation below this point, nothing to worry about here
 //
 
-let num_days_semester = Math.round((classes_end - classes_begin) / MILLISECONDS_PER_DAY);
-let num_days_now = Math.round((classes_end - today) / MILLISECONDS_PER_DAY);
-
-let p = (1 - (num_days_now / num_days_semester)) * 100;
-if (p > 100) {
-    p = 100;
+/**
+ * Return n if n ∈ [min, max], otherwise return min if n < min, or max if n > max
+ * @param {Number} n Value to clamp
+ * @param {Number} min Minimum value 
+ * @param {Number} max Maximum value
+ * @returns {Number} A value in the range [min, max]
+ */
+function clamp(n, min, max) {
+    return Math.max(min, Math.min(n, max));
 }
-else if (p < 0) {
-    p = 0;
-}
 
-document.getElementById("course-progress").style.width = `${p}%`;
-document.getElementById("course-progress-header").textContent = `Semester Progress (${Math.round(p)}%)`
+const TODAY = new Date();
+
+const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
+const NUM_DAYS_SEM = Math.round((CLASSES_END - CLASSES_BEGIN) / MILLISECONDS_PER_DAY);
+const NUM_DAYS_NOW = Math.round((CLASSES_END - TODAY) / MILLISECONDS_PER_DAY);
+
+let percent = (1 - (NUM_DAYS_NOW / NUM_DAYS_SEM)) * 100;
+percent = clamp(percent, 0, 100);
+
+document.getElementById("course-progress").style.width = `${percent}%`;
+document.getElementById("course-progress-header").textContent = `Semester Progress (${Math.round(percent)}%)`
