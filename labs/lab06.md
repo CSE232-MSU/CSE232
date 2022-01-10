@@ -2,7 +2,7 @@
 title: Lab - Styling and Debugging
 ---
 
-# Lab- Styling and Debugging
+# Lab - Styling and Debugging
 
 The aim of this lab is to:
 

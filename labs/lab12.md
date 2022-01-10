@@ -39,7 +39,7 @@ We will perform two operations on our matrices, both of which yield a new matrix
 The first is _scalar multiplication_. Regardless of the size or shape, if the matrix is not empty, we multiply the scalar value by every entry in the matrix, yielding a new matrix.
 
 <div align="center">
-<img src="../assets/images/matrix_mul.svg">
+<img src="../assets/images/labs/matrix_mul.svg">
 </div>
 
 &nbsp;
@@ -51,7 +51,7 @@ alt="\textbf{\lambda}"> is some scalar (i.e., any number).
 The second is _matrix addition_. The shape of two matrices _must be the same_ for addition to go forward. If the shapes are the same, and they are both not empty, we add each row/column value of one matrix to each row/column value of the second matrix in each respective location, yielding a new matrix. We do this for every value between the two matrices.
 
 <div align="center">
-<img src="../assets/images/matrix_add.svg">
+<img src="../assets/images/labs/matrix_add.svg">
 </div>
 
 &nbsp;

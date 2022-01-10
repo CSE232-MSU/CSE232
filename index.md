@@ -2,7 +2,7 @@
 title: Home
 ---
 
-# CSE232 - Introduction to Programming II
+# CSE 232 - Introduction to Programming II
 
 Continuation of object-centered design and implementation in C++. Building programs from modules. Data abstractions and classes to implement abstract data types. Static and dynamic memory allocation. Data structure implementation and algorithm efficiency. Lists, tables, stacks, and queues. Templates and generic programming.
 
@@ -29,7 +29,7 @@ Resources:
 
 ## Course Schedule
 
-It should be assumed that all assignments are due by 10:00 PM EST on their respective due dates. Due dates are subject to change, but if a change is made, an announcement will be made on Piazza.
+It should be assumed that all assignments are due by 10:00 PM ET on their respective due dates. Due dates are subject to change, but if a change is made, an announcement will be posted to Piazza.
 
 Links to lecture videos, projects, and other materials will be made available as relevant dates approach. Content that is written for future weeks may change without notice until the date arrives.
 

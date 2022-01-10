@@ -110,9 +110,11 @@ You repeat this process of edit-compile-run until you get the desired result.
 
 For some labs, and **all projects**, we will be using Coding Rooms. Coding Rooms provides a convienent way to write, test, and submit code. Most assignments will have an associated Coding Rooms page like this one. Follow the directions below to submit your Lab 01 assignment for automatic grading.
 
+
 ### Accessing Coding Rooms
 
 If you haven't already follow the instructions [here](../coding_rooms_setup.html) to get access to Coding Rooms.
+
 
 ### The Unix Terminal
 
