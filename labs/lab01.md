@@ -8,15 +8,15 @@ This lab is designed to get you acquainted with the class resources and recommen
 
 ## Class Resources
 
-Course Website: [https://cse232-msu.github.io/CSE232/](https://cse232-msu.github.io/CSE232/)
+Course Website: <https://cse232-msu.github.io/CSE232/>
 
-Piazza: [https://piazza.com/class/kst3lbwi2ay3so](https://piazza.com/class/kst3lbwi2ay3so)
+Piazza: <https://piazza.com>
 
-Mimir: [https://class.mimir.io/](https://class.mimir.io/)
+Coding Rooms: <https://app.codingrooms.com/app/>
+
 
 Please ensure that you can access all of the CSE232 resources listed here.
 
-**Note**: You will have to access our Mimir classroom via the link on the CSE232 D2L page to join this course on Mimir. This is the only time you'll be using D2L as all grades and assignments are on Mimir.
 
 ## Writing in C++
 
@@ -54,7 +54,7 @@ One of the problems with C++ is that parts of the syntax have grown cryptic. The
 
 The VSCode installation tutorials above are split by operating system for one fundamental reason: MacOS users will be compiling their code with Clang, and Windows users will be compiling their code with GCC. C++ compilers are just like any other program -- depending on versions and vendors, compilers can have differing behavior. Thus, we have a "Rule of Compiling" for this class...
 
-**The Rule of Compiling**: no matter how you develop your code, the only compiler that matters is the one on Mimir, i.e., the one that will be testing your code. If it compiles and runs there, great. If not, then it is up to you to get it to compile there.
+**The Rule of Compiling**: no matter how you develop your code, the only compiler that matters is the one on Coding Rooms, i.e., the one that will be testing your code. If it compiles and runs there, great. If not, then it is up to you to get it to compile there.
 
 ## Editing and Compiling C++
 
@@ -70,12 +70,12 @@ int main() {
 }
 ```
 
-Write or copy-paste this code into a file named "lab01.cpp" to follow along.
+Write or copy-paste this code into a file named "main.cpp" to follow along.
 
-To compile our Hello world program, type the following into terminal:
+To compile our Hello world program, type the following into terminal (Console/Shell):
 
 ```cmd
-g++ lab01.cpp -std=c++17 -Wall
+g++ -std=c++17 -Wall main.cpp 
 ```
 
 `g++` is the GNU C++ compiler. In the above line, we have added a `-std=c++17` flag to ensure that the code is compiled using the newer C++17 standard (by default, most C++ compilers use the C++98 standard, which does not include all of the features/extensions that we will be using in this class).
@@ -100,72 +100,33 @@ If all has gone according to plan, running the program should result in "Hello w
 The typical workflow is something like:
 
 - Edit your code using your favorite editor, then save it (ensuring that the file has a ".cpp" suffix).
-- In your terminal, enter `g++ {your file's name}.cpp -std=c++17 -Wall`.
+- In your terminal, enter `g++ -std=c++17 -Wall {your file's name}.cpp`.
 - If there are errors (and there *will* be errors), read the messages and edit your code. Repeat until it compiles.
 - Once your code compiles, run the `a.out`/`a.exe` executable, and observe the (hopefully correct) output for testing.
 
 You repeat this process of edit-compile-run until you get the desired result.
 
-## Mimir
+## Coding Rooms
 
-For some labs, and **all projects**, we will be using Mimir. Mimir provides a convienent way to write, test, and submit code. Most assignments will have an associated Mimir page like this one. Follow the directions below to submit your Lab 01 assignment for automatic grading.
+For some labs, and **all projects**, we will be using Coding Rooms. Coding Rooms provides a convienent way to write, test, and submit code. Most assignments will have an associated Coding Rooms page like this one. Follow the directions below to submit your Lab 01 assignment for automatic grading.
 
-### Accessing Mimir
+### Accessing Coding Rooms
 
-Joining Mimir is **required** for this course. You have to join since it is the only way you can turn in your work. In the long run, I think you will appreciate having the ability to test your code before turning it in.
-
-In the Live Coursework section, find and click the link to this lab assignment (obviously we aren't in Spring 2018, but you get the idea):
-
-<div align="center">
-    <img src="../assets/images/mimir_start.png">
-</div>
-
-Once you've clicked the assignment, you'll be brought to the assignment's Submission page. On that page, you'll have the project's description, and a link to upload your assignment.
-
-At the top-right are three important buttons:
-- **Submit** - this is the button you'll want to use to upload your code
-- **Download Starter Code** - this gives you a .zip file of the code we want you to edit
-- **Open IDE** - this opens Mimir's terminal and editor
-
-Click the "Open IDE" button to go to Mimir's IDE. It should open a separate tab that looks like this:
-
-<div align="center">
-    <img src="../assets/images/mimir_ide_start.png">
-</div>
+If you haven't already follow the instructions [here](../coding_rooms_setup.html) to get access to Coding Rooms.
 
 ### The Unix Terminal
 
-In future labs, there will be short sections dedicated to learning more about the terminal. Windows users pretty much *have* to follow with the Mimir IDE in this circumstance, where MacOS/Linux users can follow along using their local terminal if they so choose.
+In future labs, there will be short sections dedicated to learning more about the terminal. Windows users are strongly recommended to install the Windows Subsystem for Linus (WSL), where MacOS/Linux users can follow along using their local terminal if they so choose.
 
-The Mimir IDE can also be used to write C/C++ code. We'll be coding here today just so there's a bit of exposure to the Mimir IDE interface, and in case some students were unable to get a local code editor running on their machines.
+The Coding Rooms IDE can also be used to write C/C++ code. We'll be coding here today just so there's a bit of exposure to the Coding Rooms IDE interface, and in case some students were unable to get a local code editor running on their machines.
 
 ## Coding Assignment
 
-Lab 01 consists of two (hopefully simple) tasks. Correcting a typo in the file "hello_world.cpp" and creating a new file called "academic_dishonesty.cpp".
+Lab 01 consists of one (hopefully simple) tasks. Changing the program's output in the main.cpp file.
 
-### hello_world.cpp
+### main.cpp
 
-I tried to write a "hello_world.cpp" file to show you how easy it is, but I made a typo. Take a look at the "hello_world.cpp" file. It should already be open, but it is located in a folder with the class' name -> lab01__hello_world -> lab01.
-
-Please correct my spelling of "Hello", then save the file.
-
-Right-click on the **parent** of the folder named "lab01", and select "Submit folder contents". Be sure to select the correct assignment as well.
-
-Now you can go to your submissions page (the other Mimir tab), and confirm that you are passing the tests regarding hello_world.cpp.
-
-### academic_dishonesty.cpp
-
-The next part of the assignment involves making a new file called "academic_dishonesty.cpp".
-
-Right-click on the folder named "lab01" and create a new file named "academic_dishonesty.cpp". Make sure the name is _exactly_ what is indicated.
-
-**Note**: you may need to right-click on the folder tree and select "refresh" for your newly created file to exist.
-
-Copy the contents of hello_world.cpp into this new file.
-
-Submit the assignment again like we did before. You should pass all but the last test -- we'll need to fix that.
-
-Modify academic_dishonesty.cpp to print out the following message _exactly_ (instead of `"Hello world"`):
+Modify main.cpp to print out the following message _exactly_ (instead of `"Hello world"`):
 
 ```
 "My name is Josh Nahum. I read the syllabus and I understand the consequences of academic dishonesty."
@@ -189,4 +150,4 @@ Depending on how your TA is managing the lab, these roles will often be swapped 
 
 There are many ways to collaborate even if you are working together virtually. The simplest is to have the Driver share their screen and have the other roles watch and comment verbally as needed. When a different driver is needed, the current code can be shared in the Zoom chat (via file upload) with the new driver. Alternatively, if you are using VSCode as your editor, the [Live Share extension](https://visualstudio.microsoft.com/services/live-share/) allows you to invite others to join your editor session (like Google Docs).
 
-In future labs, you will be compelled to work with a partner. So, I recommend figuring out who you are comfortable with right now.
+In future labs, you will be compelled to work with a partner. So, I recommend figuring out who you are comfortable working with right now.
