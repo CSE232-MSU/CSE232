@@ -31,8 +31,9 @@ Please come back to this page when you have VSCode ready to go.
 - [Visual Studio Code](https://code.visualstudio.com/) is a modern programmer's editor. It is very flexible, has many options, and can be used cross-platform. If you want to be a programmer, this is a good one to learn.
 - [Xcode](https://developer.apple.com/xcode/) is another, very modern code editor that's exclusive to MacOS. I've not used it myself, but I've heard great things about it.
 - [Emacs](https://www.gnu.org/software/emacs/) is a very old, very configurable, editor. The joke is that emacs is an operating system disguised as an editor.
-- [gedit](https://gedit.en.softonic.com/) is a straightforward editor. It is not very configurable but does a good job at just being an editor. If all else fails, I would pick gedit.
 - [Vim](https://www.vim.org/download.php) is also very old, but comes as standard in many Linux operating systems as a default editor. I wouldn't start here, but learning the basics of Vim is something every programmer should do.
+- [Notepad++](https://notepad-plus-plus.org/) is a Windows file editor. It is not very configurable but does a good job at just being an editor. If all else fails, I would turn to Notepad++ on a Windows machine.
+
 
 ## Working with C++
 
