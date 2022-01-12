@@ -10,7 +10,7 @@ To begin, we'll first talk about what WSL is, and why we recommend it. I'll talk
 
 ### What is WSL?
 
-The Windows Subsystem for Linux creates a fully-functional Linux filesystem directly onto your Windows machine. It gives you complete access to Linux command-line tools, which you'll be learning about in this class' labs.
+The Windows Subsystem for Linux creates a fully-functional Linux filesystem directly onto your Windows machine. It gives you complete access to Linux command-line tools, which you'll be learning about in this class' labs. Please note that WSL is only avalible to Windows 10 and later versions.
 
 ### Why WSL?
 
