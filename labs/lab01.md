@@ -22,7 +22,7 @@ Please ensure that you can access all of the CSE232 resources listed here.
 
 For this class, we recommend using Visual Studio Code (or VSCode). **You are free to use other code editors, but, you are responsible for knowing how to work with it**. 
 
-[We have thoroughly-documented tutorials on how to setup a C++ VSCode environment, with an active debugger as well.](../setup.html)
+[We have thoroughly-documented tutorials on how to setup a C++ VSCode environment, with an active debugger as well.](../vscode_setup.html)
 
 Please come back to this page when you have VSCode ready to go.
 
