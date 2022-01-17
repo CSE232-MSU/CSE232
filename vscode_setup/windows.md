@@ -130,6 +130,8 @@ In your terminal: stay at, or navigate to the home directory (execute `cd ~` if 
 
 Run the command: `code .` (note the space-separated period following the word "code"), and you should see the terminal unpack some items and launch a new VSCode instance. This unpacking is a one-time thing; it will normally open a VSCode window instantaneously.
 
+If you get a "command not found" error, close and re-open the Ubuntu app.
+
 <div align="center">
 <img src="../assets/images/vscode_installation_windows/6.png">
 </div>
