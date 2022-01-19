@@ -119,7 +119,7 @@ If you haven't already follow the instructions [here](../coding_rooms_setup.html
 
 ### The Unix Terminal
 
-In future labs, there will be short sections dedicated to learning more about the terminal. Windows users are strongly recommended to install the Windows Subsystem for Linus (WSL), where MacOS/Linux users can follow along using their local terminal if they so choose.
+In future labs, there will be short sections dedicated to learning more about the terminal. Windows users are strongly recommended to install the Windows Subsystem for Linux (WSL), where MacOS/Linux users can follow along using their local terminal if they so choose.
 
 The Coding Rooms IDE can also be used to write C/C++ code. We'll be coding here today just so there's a bit of exposure to the Coding Rooms IDE interface, and in case some students were unable to get a local code editor running on their machines.
 
