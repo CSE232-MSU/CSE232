@@ -58,7 +58,7 @@ This command will make some configurations and install the latest version of the
 
 After running this command, restart your computer as the prompt says.
 
-After restarting, a new console should appear asking for you to set up a username and password for the Linux distribution.
+After restarting, a new console should appear asking for you to set up a username and password for the Linux distribution. If this new console did not appear, search "Ubuntu" in the Windows search bar and you should be able to find it; it's like any other app on your computer.
 
 <div align="center">
 <img src="../assets/images/vscode_installation_windows/1.png">
@@ -100,6 +100,8 @@ Your terminal will populate with _a lot_ of junk after this. You'll be asked if 
 <img src="../assets/images/vscode_installation_windows/3.png">
 </div>
 
+**Note**: if you get a bunch of "failed to fetch" errors, run the command: `sudo apt-get update`, then try running the installation command for `g++` again.
+
 Your terminal will look something like this by the end of the installation:
 
 <div align="center">
@@ -124,7 +126,7 @@ Open VSCode and click on the icon of four squares to the left sidebar. This will
 
 Go ahead and hit the top **Install** button.
 
-Close out of the VSCode instance you were just using to install the Remote Development extension, and bring up your Linux terminal (if not open, it's like any other application on your computer; simply do a Windows search for "Ubuntu" and it should appear in the results, you can make a desktop shortcut for it if you'd like).
+Close out of the VSCode instance you were just using to install the Remote Development extension, and bring up your Linux terminal.
 
 In your terminal: stay at, or navigate to the home directory (execute `cd ~` if you're not there).
 
