@@ -8,7 +8,7 @@ title: Lab - Input and Output
 
 At the beginning of most labs, there will be a section on new skills to make you more proficent at the command line. Many tasks can only be performed at the terminal (or are easier to perform at the terminal), so becoming comfortable there is important. Many of the classes after this one will expect at least a basic familiarity of the command line, so pay special attention to these sections.
 
-Log into Mimir and open the IDE. Use the terminal in Mimir's IDE to follow along.
+Log into the Coding Rooms Assignment and open the IDE. Use the terminal in Coding Room's IDE to follow along.
 
 ### `pwd`
 
@@ -20,7 +20,7 @@ The first command you need to learn is one of the simplest, `pwd`. At the termin
 
 The `ls` command outputs the names of all of the folders and files in the working directory. `ls` is short for "list" (as in "list" the contents).
 
-Folder names end with a `/`, file names do not. Some terminals also add colorized output to `ls` to denote different types of files. For instance, Mimir's terminal has folders in blue, and files in white.
+Depending on your terminal's configuration, folder names may end with a `/`, or be denoted in some other form. Some terminals also add colorized output to `ls` to denote different types of files. For instance, Coding Rooms' terminal has folders in blue, and files in white.
 
 ### `cd`
 
@@ -29,7 +29,7 @@ The `cd` command is short for "change directory". It allows you to change your w
 Lets say you run `pwd` and you get the output of:
 
 ```bash
-/home/joshua/cse_232__summer_2023/lab02_new_horizons
+/home/joshua/cse_232__summer_202X/lab02_new_horizons
 ```
 
 Your current working directory is named "lab02_new_horizons". If you run `ls`, you would get:
@@ -82,8 +82,6 @@ The last "special" directory is the root directory. The root directory is the di
 - In the folder named "cse_232__summer_2023"
 - And it is named "lab02_new_horizons"
 
-**Video description**: [https://www.youtube.com/watch?v=zx4kBG90uBg](https://www.youtube.com/watch?v=zx4kBG90uBg)
-
 ⭐ Please show your TA that you can use the commands: `pwd`, `ls` and `cd`.
 
 ### Formatting your code
@@ -96,13 +94,19 @@ Let's say you have a file named "project.cpp". To use `clang-format` to auto-for
 
 The above line will format the project.cpp file according to the Google Style Guide (more on that later).
 
+To install `clang-format` on Coding Rooms, run:
+
+`sudo apt install clang-format`
+
+and specify `Y` at the confirmation step.
+
 ## Coding Assignment
 
 ### Background
 
 The New Horizons spacecraft, launched January 19th 2006, is the first earth spacecraft to have made contact with the planet, Pluto. On January 1st, 2019 it was scheduled to make contact with the first Kuiper belt object, KBO-2014-KU69. The [NASA update page](http://pluto.jhuapl.edu/Mission/Where-is-New-Horizons/index.php) reported it at a distance of 37.33 Astronomical Units (AU) from the Sun, traveling away at 14.33 km/sec (8.90 mi/sec) on 12/30/2016.
 
-For this lab, you will use the `cin` and `cout` streams, along with some simple mathematics for calculating New Horizon's distance from the Sun. The important part of the assignment is to learn the skills needed to access the class web site, access a project description, and create a new program in C++.
+For this lab, you will use the `cin` and `cout` streams, along with some simple mathematics for calculating New Horizon's distance from the Sun. The important part of the assignment is to learn the skills needed to access the class website, access a project description, and create a new program in C++.
 
 ### Program Specifications
 
@@ -122,7 +126,7 @@ std::cout << std::setprecision(2);
 
 ### Assignment Notes
 
-There is a Mimir assignment for this lab that you can use to test your program.
+There is a Coding Rooms assignment for this lab that you can use to test your program.
 
 There are some rounding issues here, so be careful! To make the kilometer/mile calculations, use the constants (speed and distance) provided. To make the round trip calculation, use your distance in km and the speed of light constant provided. You'll get slightly different answers if you try to convert the two distances or the two speeds.
 
