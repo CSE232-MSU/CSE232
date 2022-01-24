@@ -88,11 +88,11 @@ The last "special" directory is the root directory. The root directory is the di
 
 The C++ compiler is extremely permissive as to the format of the code it accepts. However, our brains have a harder time parsing poorly formatted code. We will be covering how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html), but for this course, all that is needed is to log into chuck.egr.msu.edu to use the tool.
 
-Let's say you have a file named "project.cpp". To use `clang-format` to auto-format your code, run:
+Let's say you have a file named "main.cpp". To use `clang-format` to auto-format your code, run:
 
-`clang-format --style=Google -i project.cpp`
+`clang-format --style=Google -i main.cpp`
 
-The above line will format the project.cpp file according to the Google Style Guide (more on that later).
+The above line will format the main.cpp file according to the Google Style Guide (more on that later).
 
 To install `clang-format` on Coding Rooms, run:
 
