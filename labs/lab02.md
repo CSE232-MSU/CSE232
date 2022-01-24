@@ -118,8 +118,7 @@ Your program will prompt the user for an integer number (a number without decima
 - Provide 2 decimal points of accuracy using `std::fixed` and `std::setprecision`. Both are contained within the `<iomanip>` header, and you can use them as follows:
 
 ```c++
-std::cout << std::fixed;
-std::cout << std::setprecision(2);
+std::cout << std::fixed << std::setprecision(2);
 ```
 
 ⭐ Please show the TA your working program.
@@ -156,9 +155,9 @@ std::cin >> int_var;
 If you enter an integer value to the command line, it will be read into the variable with no conversion required.
 
 ```c++
-int multiplier, number;
-
+int multiplier
 std::cin >> number;
+int number;
 std::cin >> multiplier;
 
 std::cout << "The number " << number << " times "<< multiplier
