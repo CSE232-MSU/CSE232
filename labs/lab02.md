@@ -8,7 +8,7 @@ title: Lab - Input and Output
 
 At the beginning of most labs, there will be a section on new skills to make you more proficent at the command line. Many tasks can only be performed at the terminal (or are easier to perform at the terminal), so becoming comfortable there is important. Many of the classes after this one will expect at least a basic familiarity of the command line, so pay special attention to these sections.
 
-Log into the Coding Rooms Assignment and open the IDE. Use the terminal in Coding Room's IDE to follow along.
+Log into the Coding Rooms Assignment and open the IDE. Use the shell in Coding Room's IDE to follow along.
 
 ### `pwd`
 
@@ -20,7 +20,7 @@ The first command you need to learn is one of the simplest, `pwd`. At the termin
 
 The `ls` command outputs the names of all of the folders and files in the working directory. `ls` is short for "list" (as in "list" the contents).
 
-Depending on your terminal's configuration, folder names may end with a `/`, or be denoted in some other form. Some terminals also add colorized output to `ls` to denote different types of files. For instance, Coding Rooms' terminal has folders in blue, and files in white.
+Depending on your terminal's configuration, folder names may end with a `/`, or be denoted in some other form. Some terminals also add colorized output to `ls` to denote different types of files. For instance, Coding Rooms' shell has folders in blue, and files in white.
 
 ### `cd`
 
