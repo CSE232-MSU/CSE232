@@ -198,17 +198,17 @@ double Integral(double x)
 
 Takes an input, `x`, and returns the substitution into the equation <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+-2x%5E3+%2B+%5Cfrac%7B5%7D%7B2%7D+x%5E2+%2B+3x" 
-alt="-2x^3 + \frac{5}{2} x^2 + 3x">. This is the symbolically-manipulated, "actual" integral function of `fn()`. We'll be using the returns of this function to compare with our approximations.
+alt="-2x^3 + \frac{5}{2} x^2 + 3x">. This is the symbolically-manipulated, "actual" integral function of `Fn()`. We'll be using the returns of this function to compare with our approximations.
 
-⭐ Please show the TA your `fn()` and `integral()` functions before moving on.
+⭐ Please show the TA your `Fn()` and `Integral()` functions before moving on.
 
 &nbsp;
 
 ```c++
-double EstimateWithTraps(double a, double b, int N)
+double EstimateWithTraps(double a, double b, int n)
 ```
 
-Takes three parameters: the two definite points of the integral, `a` and `b`, and the number of trapezoids, `n`. This function calculates the area under the curve (represented by `fn()`) given the provided number of trapezoids over the interval from `a` to `b`. It then returns the sum of the area of trapezoids, i.e., our integral approximation.
+Takes three parameters: the two definite points of the integral, `a` and `b`, and the number of trapezoids, `n`. This function calculates the area under the curve (represented by `Fn()`) given the provided number of trapezoids over the interval from `a` to `b`. It then returns the sum of the area of trapezoids, i.e., our integral approximation.
 
 &nbsp;
 
@@ -218,14 +218,14 @@ The `main()` function should take four values from the user of the program in th
 3.  A floating point `tolerance` value
 4.  The number of trapezoids to initially use in the approximation, `n`
 
-You'll want to run a loop that measures the difference between the actual value of the integration (using `integral()`) and the estimated value (from `trapezoid()`).
+You'll want to run a loop that measures the difference between the actual value of the integration (using `Integral()`) and the estimated value (from `EstimateWithTraps()`).
 
 If the difference is within `tolerance`, report to the user:
 1.  The estimate value
 2.  `n` (the number of traps)
 3.  The difference between the estimate and the actual area under the curve
 
-If the difference is _not_ within `tolerance`, _double_ the value of `n` and re-run. Continue the doubling and re-running until the estimate of the `trapezoid()` function is within `tolerance` of the actual value from `integral()`.
+If the difference is _not_ within `tolerance`, _double_ the value of `n` and re-run. Continue the doubling and re-running until the estimate of the `EstimateWithTraps()` function is within `tolerance` of the actual value from `Integral()`.
 
 All floating point values should have 4 decimal places of precision when displayed.
 
