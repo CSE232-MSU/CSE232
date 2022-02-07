@@ -181,7 +181,7 @@ You are to write three functions:
 &nbsp;
 
 ```c++
-double fn(double x)
+double Fn(double x)
 ```
 
 Takes an input, `x`, and returns the substitution into the equation <img src=
@@ -191,22 +191,22 @@ alt="-6x^2 + 5x + 3">. We'll be using this as our function to integrate over.
 &nbsp;
 
 ```c++
-double integral(double x)
+double Integral(double x)
 ```
 
 Takes an input, `x`, and returns the substitution into the equation <img src=
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Ctextstyle+-2x%5E3+%2B+%5Cfrac%7B5%7D%7B2%7D+x%5E2+%2B+3x" 
-alt="-2x^3 + \frac{5}{2} x^2 + 3x">. This is the symbolically-manipulated, "actual" integral function of `fn()`. We'll be using the returns of this function to compare with our approximations.
+alt="-2x^3 + \frac{5}{2} x^2 + 3x">. This is the symbolically-manipulated, "actual" integral function of `Fn()`. We'll be using the returns of this function to compare with our approximations.
 
-⭐ Please show the TA your `fn()` and `integral()` functions before moving on.
+⭐ Please show the TA your `Fn()` and `Integral()` functions before moving on.
 
 &nbsp;
 
 ```c++
-double trapezoid(double a, double b, long n)
+double EstimateWithTraps(double a, double b, int n)
 ```
 
-Takes three parameters: the two definite points of the integral, `a` and `b`, and the number of trapezoids, `n`. This function calculates the area under the curve (represented by `fn()`) given the provided number of trapezoids over the interval from `a` to `b`. It then returns the sum of the area of trapezoids, i.e., our integral approximation.
+Takes three parameters: the two definite points of the integral, `a` and `b`, and the number of trapezoids, `n`. This function calculates the area under the curve (represented by `Fn()`) given the provided number of trapezoids over the interval from `a` to `b`. It then returns the sum of the area of trapezoids, i.e., our integral approximation.
 
 &nbsp;
 
@@ -216,32 +216,40 @@ The `main()` function should take four values from the user of the program in th
 3.  A floating point `tolerance` value
 4.  The number of trapezoids to initially use in the approximation, `n`
 
-You'll want to run a loop that measures the difference between the actual value of the integration (using `integral()`) and the estimated value (from `trapezoid()`).
+You'll want to run a loop that measures the difference between the actual value of the integration (using `Integral()`) and the estimated value (from `EstimateWithTraps()`).
 
 If the difference is within `tolerance`, report to the user:
-1.  `n`
-2.  The estimate value
-3.  The exact value
-4.  The `tolerance`
+1.  The estimate value
+2.  `n` (the number of traps)
+3.  The difference between the estimate and the actual area under the curve
 
-If the difference is _not_ within `tolerance`, _double_ the value of `n` and re-run. Continue the doubling and re-running until the estimate of the `trapezoid()` function is within `tolerance` of the actual value from `integral()`.
+If the difference is _not_ within `tolerance`, _double_ the value of `n` and re-run. Continue the doubling and re-running until the estimate of the `EstimateWithTraps()` function is within `tolerance` of the actual value from `Integral()`.
 
 All floating point values should have 4 decimal places of precision when displayed.
 
 **Hint**: You might want to consider a do-while statement and the `std::abs()` function (from the `<cmath>` header) in your `main()`.
 
-Example output from the `main()`:
+Example input:
+```
+0
+1
+0.01
+1
+```
+
+
+Example output from the `main()` (note that the first 4 lines are prompting input from the user):
 
 ```
-Lower Range: 0
-Upper Range: 1
-Tolerance: 0.01
-Initial trapezoid count: 1
-Intermediate Result:2.5000, traps:1, diff:1.0000
-Intermediate Result:3.2500, traps:2, diff:0.2500
-Intermediate Result:3.4375, traps:4, diff:0.0625
-Intermediate Result:3.4844, traps:8, diff:0.0156
-Trap count:16, estimate:3.4961, exact:3.5000, tolerance:0.0100
+Lower Range:
+Upper Range:
+Tolerance:
+Initial trapezoid count:
+Estimate:2.5000, Number of Traps:1, Diff:1.0000
+Estimate:3.2500, Number of Traps:2, Diff:0.2500
+Estimate:3.4375, Number of Traps:4, Diff:0.0625
+Estimate:3.4844, Number of Traps:8, Diff:0.0156
+Estimate:3.4961, Number of Traps:16, Diff:0.0039
 ```
 
 ⭐ Please show the TA your working program.

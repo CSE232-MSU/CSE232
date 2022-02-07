@@ -118,8 +118,6 @@ For each multi-digit, non-negative integer, output on a single line the two spac
 1.  The integer's additive persistence
 2.  The integer's additive root
 
-The file you submit to Mimir should be named "persistence.cpp".
-
 ⭐ Please show the TA your working program.
 
 ### Assignment Notes
