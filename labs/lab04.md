@@ -176,8 +176,6 @@ alt="x_4 = a + 3\Delta x">, ...
 
 ### Program Specifications
 
-There is a Mimir assignment associated with this lab for testing purposes. It expects a file named "calculus.cpp".
-
 You are to write three functions:
     
 &nbsp;
