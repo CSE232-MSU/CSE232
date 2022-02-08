@@ -63,7 +63,7 @@ Your job is to write functions that can convert back and forth between location 
 &nbsp;
 
 ```c++
-int64_t LocToDec(string loc)
+std::int64_t LocToDec(std::string const & loc)
 ```
 
 Converts a location arithmetic string to an integer.
@@ -71,7 +71,7 @@ Converts a location arithmetic string to an integer.
 &nbsp;
 
 ```c++
-string Abbreviate(string loc)
+std::string Abbreviate(std::string const &loc)
 ```
 
 Takes a location string and reduces it to its abbreviated form. We want you to experiment with string manipulation so _you may not convert it to an integer first_. You must do the abbreviation directly.
@@ -81,7 +81,7 @@ Takes a location string and reduces it to its abbreviated form. We want you to e
 &nbsp;
 
 ```c++
-string DecToLoc(int64_t dec)
+std::string DecToLoc(std::int64_t dec)
 ```
 
 Converts an integer to an _abbreviated_ location string.
@@ -89,7 +89,7 @@ Converts an integer to an _abbreviated_ location string.
 &nbsp;
 
 ```c++
-int64_t AddLoc(string loc1, string loc2)
+std::int64_t AddLoc(std::string const & loc1, std::string const & loc2)
 ```
 
 Takes two location strings, adds them, and provides the integer result. For this function, think about following these steps:
