@@ -63,7 +63,7 @@ Your job is to write functions that can convert back and forth between location 
 &nbsp;
 
 ```c++
-long loc_to_dec(string loc)
+int64_t LocToDec(string loc)
 ```
 
 Converts a location arithmetic string to an integer.
@@ -71,17 +71,17 @@ Converts a location arithmetic string to an integer.
 &nbsp;
 
 ```c++
-string abbreviate(string loc)
+string Abbreviate(string loc)
 ```
 
 Takes a location string and reduces it to its abbreviated form. We want you to experiment with string manipulation so _you may not convert it to an integer first_. You must do the abbreviation directly.
 
-⭐ Please show the TA your working `abbreviate()` function before moving on.
+⭐ Please show the TA your working `Abbreviate()` function before moving on.
 
 &nbsp;
 
 ```c++
-string dec_to_loc(long dec)
+string DecToLoc(int64_t dec)
 ```
 
 Converts an integer to an _abbreviated_ location string.
@@ -89,23 +89,23 @@ Converts an integer to an _abbreviated_ location string.
 &nbsp;
 
 ```c++
-long add_loc(string loc1, string loc2)
+int64_t AddLoc(string loc1, string loc2)
 ```
 
 Takes two location strings, adds them, and provides the integer result. For this function, think about following these steps:
 1.  Combine the strings
-2.  Reduce the combination string using your `abbreviate()` function
-3.  Convert the result using your `loc_to_dec()` function
+2.  Reduce the combination string using your `Abbreviate()` function
+3.  Convert the result using your `LocToDec()` function
 
 &nbsp;
 
 Write a `main()` function that shows off your work.
 1.  Prompt for two elements: a location string, and an integer.
-2.  Using `loc_to_dec()`, print the location string and the resulting integer.
-3.  Using `abbreviate()`, print the location string and its reduced form.
-4.  Using `dec_to_loc()`, print the integer and its location string.
+2.  Using `LocToDec()`, print the location string and the resulting integer.
+3.  Using `Abbreviate()`, print the location string and its reduced form.
+4.  Using `DecToLoc()`, print the integer and its location string.
 5.  Prompt for two more location strings.
-6.  Using `add_loc()`, add the two location strings and print the result.
+6.  Using `AddLoc()`, add the two location strings and print the result.
 
 Example interation with the final program:
 
@@ -167,8 +167,8 @@ Hints on approaching these functions:
     - `'a'-'a'` = 0, which in location arithmetic is 2^0 = 1
     - `'c'-'a'` = 2, which in location arithmetic is 2^2 = 4
     - `'h'-'a'` = 7, which in location arithmetic is 2^7 = 128
-2.  The function, `dec_to_loc()`, is really nothing more than creating a "long string" and using `abbreviate()` to clean it up.
-3.  The function, `add_loc()`, is nothing more than a concatenation of the two strings, a call to `abbreviate()`, followed by a call to `loc_to_dec()`.
+2.  The function, `DecToLoc()`, is really nothing more than creating a "long string" and using `Abbreviate()` to clean it up.
+3.  The function, `AddLoc()`, is nothing more than a concatenation of the two strings, a call to `Abbreviate()`, followed by a call to `LocToDec()`.
 4.  Your functions might make use of:
     - `.substr()` - The `.substr()` method takes two parameters: a position, and a length. It returns the substring specified within that range. The length defaults to the end of the string (or, if the value is beyond the length of the string, it defaults to the end).
     - `.erase()` - The `.erase()` method takes two parameters: a position, and a length (just like `.substr()`). It removes all characters within the specified range.
