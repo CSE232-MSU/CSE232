@@ -115,7 +115,7 @@ There will be a midterm and a final exam. The midterm is worth 100 points, and t
 
 ### Projects
 
-There will be 3 projects over the course of the semester, contributing a total of 300 points to your final grade. Each project will be due at 10 PM on a Thursday. The projects will include the design and implementation of solutions using C++. Project submission and grading will be done via Mimir.
+There will be 3 projects over the course of the semester, contributing a total of 300 points to your final grade. Each project will be due at 10 PM on a Thursday. The projects will include the design and implementation of solutions using C++. Project submission and grading will be done via Coding Rooms.
 
 All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
 
