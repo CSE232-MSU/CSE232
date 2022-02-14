@@ -44,7 +44,7 @@ alt="caf = 4 + 1 + 32 = 37">
 
 &nbsp;
 
-For easier reading, the letters are typically sorted. Napier allowed for redundant occurrences of letters, though he acknowledged that there is a normal form that has no repeats. He described this as the _extended_ (repeated) vs. _abbreviated_ (no repeats) form. To create the abbreviated form, any pair of letters can be reduced to a single occurrence of the next "higher letter". For example:
+For easier reading, the letters are typically sorted. Napier allowed for redundant occurrences of letters, though he acknowledged that there is a normal form that has no repeats. He described this as the _extended_ (repeated) vs. _abbreviated_ (no repeats and sorted) form. To create the abbreviated form, any pair of letters can be reduced to a single occurrence of the next "higher letter". For example:
 
 <div align="center">
 <img src=
@@ -71,7 +71,7 @@ Converts a location arithmetic string to an integer.
 &nbsp;
 
 ```c++
-std::string Abbreviate(std::string const &loc)
+std::string Abbreviate(std::string const & loc)
 ```
 
 Takes a location string and reduces it to its abbreviated form. We want you to experiment with string manipulation so _you may not convert it to an integer first_. You must do the abbreviation directly.
