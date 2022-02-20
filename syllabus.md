@@ -24,7 +24,7 @@ The focus of the course will be twofold:
 Lab sections 1-8 are meeting in-person in the STEM building once MSU allows in-person classes to resume. According to University policy (as well as health expert recommendations), proper mask wearing is required while in the building. Students who fail to properly wear a mask will be given one warning before being removed from the lab and disciplinary actions being filed. 
 
 ### Alternate Lab Options
-All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without prior permission. All students can also earn lab credit by completing the Coding Rooms assignment associated with the lab by Friday, 10pm. 
+All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without prior permission. All students can also earn lab credit by earning all the points on the Coding Rooms assignment associated with the lab by Friday, 10pm. 
 
 ### Attending In-Person
 If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom synchronous lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
