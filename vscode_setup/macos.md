@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-On your keyboard, use the key-combination: CMD + \` (this is the backtick character, it should be to the left of the 1 key on most keyboards). This toggles VSCode's integrated terminal:
+On your keyboard, use the key-combination: CTRL + \` (this is the backtick character, it should be to the left of the 1 key on most keyboards). This toggles VSCode's integrated terminal:
 
 <img src="../assets/images/vscode_installation_macos/4.png">
 
