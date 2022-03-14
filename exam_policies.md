@@ -11,20 +11,27 @@ In the Exam Zoom Meeting on 2021-04-23 at 4pm, Dr. Nahum will host a final revie
 -->
 
 ## Midterm Exam Details
-- TBA
+
+Time:
+- Lab Sections 1-3: Wednesday, 2022-03-23 @ 9-11am
+- Lab Sections 4-8 and 730: Tuesday, 2022-03-22 8-10pm
+Location: https://msu.zoom.us/j/94955751228
+
 
 ## Final Details
 - TBA
 
-Both exams will be 90 minutes in duration (from timer start to timer end), but everyone needs to be present in the Zoom meeting at the start of the scheduled exam time to ensure that everything is setup properly and for ID checks.
+
+## Logistics
+The exams are password protected and can only be accessed during the allotted time. 
+
+Both exams will be 90 minutes in duration (from timer start to timer end), but everyone needs to be present in the Zoom meeting at the start of the scheduled exam time to ensure that everything is setup properly, ID checks and to deliver the password.
 
 If you can't make an exam time, please respond to the Piazza post announcing the exam indicating that you need to attend the alternative exam offering.
 
-## Exam Logistics
-
 As just stated, for students that have conflicts with both exam times, please respond to the Piazza post announcing this exam. We will provide an alternative exam time later in the week for those whom the original date doesn't work. Do note that you need to announce a valid time conflict with both exam times ASAP to be eligible for the alternative exam.
 
-If you cannot make the original nor the alternative exam times, please contact us via Piazza to make accommodations ASAP. Additionally, if you have university-approved accommodations (VISA), please inform us of them on that Piazza announcement.
+If you cannot make the assigned nor the alternative exam times, please contact us via Piazza to make accommodations ASAP. Additionally, if you have university-approved accommodations (VISA), please inform us of them on that Piazza announcement.
 
 You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a Mimir assignment.
 
@@ -37,7 +44,7 @@ Please ensure that your screen, workspace and profile are visible by the Zoom de
 ## Rules
 
 - During the exam, you are only permitted to communicate with instructors. Only communicate to them via private Zoom messages. Please ensure that all other messaging platforms are disabled during the exam.
-- The exam's Mimir page is the only application that you're allowed to have open. The Zoom device can only have the Zoom app open to display your workspace and message instructors.
+- The exam's Coding Rooms page is the only application that you're allowed to have open. The Zoom device can only have the Zoom app open to display your workspace and message instructors.
 - You are welcome to use any non-electronic resource during the exam. This includes textbooks, printed lecture slides, notes, example solutions to homework (including instructor solutions), and birthday cards. You may **not** use any online reference material or any other electronic resource.
 
 ## Preparation
