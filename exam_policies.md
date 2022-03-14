@@ -15,7 +15,8 @@ In the Exam Zoom Meeting on 2021-04-23 at 4pm, Dr. Nahum will host a final revie
 Time:
 - Lab Sections 1-3: Wednesday, 2022-03-23 @ 9-11am
 - Lab Sections 4-8 and 730: Tuesday, 2022-03-22 8-10pm
-Location: https://msu.zoom.us/j/94955751228
+
+Location: <https://msu.zoom.us/j/94955751228>
 
 
 ## Final Details
