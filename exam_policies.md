@@ -34,7 +34,7 @@ As just stated, for students that have conflicts with both exam times, please re
 
 If you cannot make the assigned nor the alternative exam times, please contact us via Piazza to make accommodations ASAP. Additionally, if you have university-approved accommodations (VISA), please inform us of them on that Piazza announcement.
 
-You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a Mimir assignment.
+You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a Coding Rooms assignment.
 
 Please ensure that your screen, workspace and profile are visible by the Zoom device throughout the exam. Example:
 
@@ -66,4 +66,4 @@ Both the midterm and final exam are comprehensive. This includes material from l
 
 [All of the past in-person exams can be found here](https://cse.msu.edu/~cse232/Exam_Content/). Though, content on old exams won't necessarily be relevant to this semester's exams, as the course has evolved over time.
 
-These old exams were also given as traditional paper exams. Since exams are now taken on Mimir, do note that question styles will differ.
+These old exams were also given as traditional paper exams. Since exams are now taken on Coding Rooms, do note that question styles will differ.
