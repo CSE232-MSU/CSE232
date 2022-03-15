@@ -179,7 +179,7 @@ Make a new folder in your lab directory called "splitter", and add three new fil
 &nbsp;
 
 ```c++
-vector<string> split(const string &s, char sep=' ')
+vector<string> split(string const &s, char sep=' ')
 ```
 
 The `split()` function should take in a `string` and return a `vector<string>` of the individual elements in the string that are separated by a given separator character (default of `' '`). Examples: 
@@ -202,7 +202,7 @@ You can compile functions.cpp (not build, at least not yet) to see if functions.
 
 
 ```c++
-void print_vector(ostream &out, const vector<string> &v)
+void print_vector(ostream &out, vector<string> const &v)
 ```
 
 This function prints all the elements of `v` to the output stream, `out`. Note that `out` and `v` are passed by reference.
