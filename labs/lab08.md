@@ -30,7 +30,7 @@ mv *.h headers/
 
 ## Debugging with Visual Studio Code
 
-There used to be a tutorial associated with this lab that demonstrated use of an IDE debugger. This tutorial was moved to be at the start of the course. The necessary setup is at the bottom of the [setup tutorials](https://cse232-msu.github.io/CSE232/setup.html) you (hopefully) went through during the first week.
+There used to be a tutorial associated with this lab that demonstrated use of an IDE debugger. This tutorial was moved to be at the start of the course. The necessary setup is at the bottom of the [setup tutorials](https://cse232-msu.github.io/CSE232/vscode_setup.html) you (hopefully) went through during the first week.
 
 A similar IDE debugging tutorial [can be found here](https://cse232-msu.github.io/CSE232/debugging_guide.html) if you're unfamiliar with one. This used to be a Visual Studio tutorial, but it was recently changed to be a Visual Studio Code tutorial (yes, [Visual Studio](https://visualstudio.microsoft.com/) and [Visual Studio Code](https://code.visualstudio.com/) are two different IDEs) since this course now recommends VSCode as opposed to letting students choose any IDE. 
 
