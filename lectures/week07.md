@@ -49,3 +49,12 @@ title: Week 07
 <div align="center">
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Cu0LU9l7OaE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+
+### Survey Of All The Algorithms
+
+I know it is long, but it is absolutely worth your time.
+
+<div align="center">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2olsGf6JIkU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
