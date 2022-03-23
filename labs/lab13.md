@@ -73,7 +73,7 @@ Pretty much everything. But, this is an opportunity to get more practice with po
 
 ### Program Specifications
 
-Download and extract the starter code's .zip file into your working directory (see top of Background). Next, create a 'singlelink.cpp' implementation file. You are _only_ going to be modifying the implementation file and main.cpp. If you submit to Mimir, only the implementation file is needed for submission.
+Download and extract the starter code's .zip file into your working directory (see top of Background). Next, create a 'singlelink.cpp' implementation file. You are _only_ going to be modifying the implementation file and main.cpp. If you submit to Coding Rooms, only the implementation file is needed for submission.
 
 None of the Rule of Three functions have been implemented. If you have the time, it would be good if you implemented those.
 

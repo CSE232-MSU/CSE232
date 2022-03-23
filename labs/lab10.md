@@ -34,7 +34,7 @@ In this tutorial, you will make a public repository. You can give it a fun name 
 GitHub is a useful website for sharing git repositories with the wider world, but most or your work with version control will be on your local computer.
 For this part of the lab, you need to create a new private repository.
 Then click on the green "Clone or Download" button and select the "HTTPS" option. Copy the HTTPS URL to the clipboard (to be used later).
-This next part of the lab will be done in the Mimir IDE terminal (or any other terminal that has git installed).
+This next part of the lab will be done in the Coding Rooms IDE terminal (or any other terminal that has git installed).
 
 1. `cd` to the directory where you want a local copy of the repository to be placed.
 2. Run `git clone https...` where the link is the url you copied from your GitHub repository.

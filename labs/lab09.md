@@ -10,7 +10,7 @@ Often, you'll want to be able to connect to, and run programs on computers that 
 
 The `scp` command allows you to copy files to and from your local computer with a remote one.
 
-The remote computer that you all have access to is called "chuck.egr.msu.edu", and your authentication credentials are your MSU NetID, and EGR password (_not_ your CSE password). Note that, because this class has transitioned away from using DECS servers to Mimir, you may be unable to access the Chuck server. Certain countries are firewalled as well, unfortunately.
+The remote computer that you all have access to is called "chuck.egr.msu.edu", and your authentication credentials are your MSU NetID, and EGR password (_not_ your CSE password). Note that, because this class has transitioned away from using DECS servers to Coding Rooms, you may be unable to access the Chuck server. Certain countries are firewalled as well, unfortunately.
 
 [Read this tutorial from The New Stack](https://thenewstack.io/linux-lesson-copy-files-over-your-network-with-scp/).
 
