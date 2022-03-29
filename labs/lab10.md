@@ -61,6 +61,7 @@ Next we will make changes to the repository. Note: most git commands require you
 6. Run `git commit -m "Changed the README"` to have git save the changes to the history. You can replace the commit message with anything you like.
 7. Run `git push` to have git share the commits (history) with the repo it was cloned from (the private repo on GitHub.)
 8. If you refresh the repo page on GitHub, you should now see the changes you made to the README file.
+8. Run `git fetch` to have git sync (download) any commits that have been made on the remote (Github) repository.
 
 
 ### Adding Code to the Repo
@@ -70,14 +71,14 @@ This next part of the lab will involve you editing code in your repository.
 2. Run `git status`to confirm that git notices the presence of the project.cpp file.
 3. Run `git add example.cpp` (be sure to use the actual name for the file) and then `git commit -m "example added"` to add and commit your example file.
 
-Next you need to modify your to demonstrate a new commit.
+Next you need to modify your  to demonstrate a new commit.
 
 1. Ensure your solution doesn't have redundant or repeated code.
 2. Ensure that the variable and function names are clear and correctly spelled.
 3. Ensure that you are using const and references everywhere possible to avoid unneeded work.
 4. Ensure that you have adequate comments for each function and explain complicated functionality.
 
-Once you have improved your solution (note, you may not receive credit if your pushed code is not well styled), you can add, commit, and push those changes to GitHub. 
+Once you have improved your solution, you can add, commit, and push those changes to GitHub. 
 
 ⭐ Show your TA the code and the git log in your local repository.
 
