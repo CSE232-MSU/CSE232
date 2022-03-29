@@ -4,6 +4,11 @@ title: Lab - Git Version Control
 
 # Lab - Git Version Control
 
+## Ask Me Anything - TA Edition
+
+Before you get assigned to work in your pairs, please use the beginning of this lab to ask your TA about concepts that you have been having a hard time grasping. You can ask about recent topics (like converting constructors) or older concepts like what it means to put `cin >> str` in a while loop's conditional clause. And, I'm sure some of you are still uncomfortable with pointers, references, and const.
+
+Now is the time to ask questions and hear from your TA. You are also welcome to ask about your TAs background and interests. Many of them have even taken this course some time ago. They all have useful insights on future CSE courses you may be considering.
 
 ## Lab Assignment
 
@@ -63,7 +68,7 @@ This next part of the lab will involve you editing code in your repository.
 
 1. Find some code you wrote for a previous lab and add that to your repository (copy the example.cpp file into the repository folder).
 2. Run `git status`to confirm that git notices the presence of the project.cpp file.
-3. Run `git add example.cpp` (be sure to use the actual name for the file) and then `git commit -m "Project 2 added"` to add and commit your project 2 file.
+3. Run `git add example.cpp` (be sure to use the actual name for the file) and then `git commit -m "example added"` to add and commit your example file.
 
 Next you need to modify your to demonstrate a new commit.
 
