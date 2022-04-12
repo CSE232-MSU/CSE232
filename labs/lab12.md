@@ -71,7 +71,7 @@ template<typename T>
 using MatrixRow = vector<T>;
 
 template<typename T>
-using Matrix = vector<matrix_row<T>>;
+using Matrix = vector<MatrixRow<T>>;
 ```
 
 With these definitions, you can declare a new matrix with the `matrix` type, and declare matrix rows as the `MatrixRow` type.
