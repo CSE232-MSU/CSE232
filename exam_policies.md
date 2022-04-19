@@ -4,12 +4,13 @@ title: Exam Policies
 
 # Exam Policies
 
-<!---
+
 ## Final Review Session
 
 In the Exam Zoom Meeting on 2021-04-23 at 4pm, Dr. Nahum will host a final review session to go over the sample final exam and answer any questions about the exam or other aspects of the class. It will be recorded and is entirely optional to attend. The solutions to the sample final will only be given to the students that "submit" their solution prior to the review session, so please ensure that you do so if you care to get answers.
--->
 
+
+<!---
 ## Midterm Exam Details
 
 Time:
@@ -17,11 +18,13 @@ Time:
 - Lab Sections 4-8 and 730: Tuesday, 2022-03-22 8-10pm
 
 Location: <https://msu.zoom.us/j/94955751228>
+-->
 
+## Final Exam Details
+- Lab Sections 1-5: Wednesday, 2022-05-04 @ 7-9pm
+- Lab Sections 6-8 and 730: Thursday, 2022-05-05 @ 10am-noon 
 
-## Final Details
-- TBA
-
+Location: <https://msu.zoom.us/j/94955751228>
 
 ## Logistics
 The exams are password protected and can only be accessed during the allotted time. 
