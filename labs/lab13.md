@@ -130,3 +130,8 @@ This method is an override for the `[]` operator. On a call, such as `sl[3]`, th
 You'll have to search the list (starting from the `head_` pointer) for the `index`-th `Node`. Then, return a reference to that `Node`, or throw an `out_of_range` exception if you've traversed to the end of the list.
 
 ⭐ Show the TA your completed `SingleLink` class. Include example functionality for *all* of the methods.  
+
+
+### What if I didn't finish?
+
+This lab is designed to prepare you for later CSE courses, especially CSE 331, Algorithms and Data Structures. If you didn't finish the lab (asynchronously or synchronously), we strongly recommend completing it own your own. As incentive, there will be at least one final exam question on the material from this lab specifically. 
