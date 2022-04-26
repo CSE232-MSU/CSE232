@@ -182,7 +182,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week14.html">Week 14</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab14.html">Lab 14</a></td>
             <td>Homework 17</td>
-            <td></td>
+            <td>Homework 18</td>
             <td></td>
         </tr>
         <tr>
