@@ -58,7 +58,7 @@ Links to lecture videos, projects, and other materials will be made available as
     </thead>
     <tbody>
         <tr>
-            <td>2022-01-10</td>
+            <td>2022-08-29</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week00.html">Week 00</a></td>
             <td>No Lab This Week</td>
             <td>No Monday Homework</td>
@@ -66,7 +66,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>2022-01-17</td>
+            <td>2022-09-05</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week01.html">Week 01</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab01.html">Lab 01</a></td>
             <td>Homework 00 (not worth any points)</td>
@@ -74,7 +74,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>2022-01-24</td>
+            <td>2022-09-12</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week02.html">Week 02</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab02.html">Lab 02</a></td>
             <td>Homework 01</td>
@@ -82,7 +82,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>2022-01-31</td>
+            <td>2022-09-19</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week03.html">Week 03</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab03.html">Lab 03</a></td>
             <td>Homework 03</td>
@@ -90,7 +90,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>2022-02-07</td>
+            <td>2022-09-26</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week04.html">Week 04</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab04.html">Lab 04</a></td>
             <td>Homework 05</td>
@@ -98,7 +98,7 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>2022-02-14</td>
+            <td>2022-10-03</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week05.html">Week 05</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab05.html">Lab 05</a></td>
             <td>Homework 07</td>
@@ -106,15 +106,15 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>2022-02-21</td>
+            <td>2022-10-10</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week06.html">Week 06</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab06.html">Lab 06</a></td>
             <td></td>
-            <td>Project 01</td>
+            <td>Project 01 Due</td>
             <td></td>
         </tr>
         <tr>
-            <td>2022-02-28</td>
+            <td>2022-10-17</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week07.html">Week 07</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab07.html">Lab 07</a></td>
             <td>Homework 09</td>
@@ -122,23 +122,15 @@ Links to lecture videos, projects, and other materials will be made available as
             <td></td>
         </tr>
         <tr>
-            <td>2022-03-07</td>
-            <td>Spring Break (No Lectures)</td>
-            <td>No Labs This Week</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2022-03-14</td>
+            <td>2022-10-24</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab08.html">Lab 08</a></td>
-            <td></td>
+            <td>No Homework (Break Days)</td>
             <td>Homework 11</td>
-            <td></td>
+            <td>Due to the Break Days, Tuesday Labs will complete this lab during the week of Thanksgiving. No Tuesday Labs this week.</td>
         </tr>
         <tr>
-            <td>2022-03-21</td>
+            <td>2022-10-31</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week09.html">Week 09</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab09.html">Lab 09</a></td>
             <td>Homework 12</td>
@@ -146,49 +138,49 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>Midterm Exam: see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
         </tr>
         <tr>
-            <td>2022-03-28</td>
+            <td>2022-11-07</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week10.html">Week 10</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab10.html">Lab 10</a></td>
             <td></td>
-            <td>Project 02</td>
+            <td>Project 02 Due</td>
             <td></td>
         </tr>
         <tr>
-            <td>2022-04-04</td>
+            <td>2022-11-14</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week11.html">Week 11</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab11.html">Lab 11</a></td>
             <td>Homework 13</td>
             <td>Homework 14</td>
-            <td></td>      
+            <td></td>
         </tr>
         <tr>
-            <td>2022-04-11</td>
+            <td>2022-11-21</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week12.html">Week 12</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab12.html">Lab 12</a></td>
+            <td>See Lab 08</td>
             <td>Homework 15</td>
+            <td>No Homework (Thanksgiving Break)</td>
+            <td>Tuesday Labs will complete Lab 08 this week. Asynchronous Lab 08s are also due this week. No Thursday or Friday Labs.</td>      
+        </tr>
+        <tr>
+            <td>2022-11-28</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week13.html">Week 13</a></td>
+            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab12.html">Lab 12</a></td>
             <td>Homework 16</td>
+            <td>Homework 17</td>
             <td></td>  
         </tr>
         <tr>
-            <td>2022-04-18</td>
-            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week13.html">Week 13</a></td>
+            <td>2022-12-05</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week14.html">Week 14</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab13.html">Lab 13</a></td>
             <td></td>
-            <td>Project 03</td>
+            <td>Project 03 Due</td>
             <td></td>
         </tr>
         <tr>
-            <td>2022-04-25</td>
+            <td>2022-12-12 Finals Week</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week14.html">Week 14</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab14.html">Lab 14</a></td>
-            <td>Homework 17</td>
-            <td>Homework 18</td>
             <td></td>
-        </tr>
-        <tr>
-            <td>2022-05-02</td>
-            <td>Week 15 (Finals Week)</td>
-            <td>No Lab</td>
             <td></td>
             <td></td>
             <td>Final Exam: see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
