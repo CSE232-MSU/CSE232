@@ -4,7 +4,7 @@ title: Syllabus
 
 # Syllabus
 
-Spring Semester, 2022
+Fall Semester, 2022
 
 ## General Information
 
@@ -21,10 +21,10 @@ The focus of the course will be twofold:
 ## Pandemic Specific Information
 
 ### In-Person Labs
-Lab sections 1-8 are meeting in-person in the STEM building once MSU allows in-person classes to resume. According to University policy (as well as health expert recommendations), proper mask wearing is required while in the building. Students who fail to properly wear a mask will be given one warning before being removed from the lab and disciplinary actions being filed. 
+Lab sections 1-9 are meeting in-person in the STEM 2201. Although not required, we recommend wearing a high-quality mask (e.g. N95 or KN94) while attending lab.
 
 ### Alternate Lab Options
-All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without prior permission. All students can also earn lab credit by earning all the points on the Coding Rooms assignment associated with the lab by Friday, 10pm. 
+All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by earning all the points on the Coding Rooms assignment associated with the lab by Friday, 10pm. 
 
 ### Attending In-Person
 If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom synchronous lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
@@ -45,11 +45,11 @@ All lectures are distributed via pre-recorded videos available each week on the 
 
 ## Laboratory Sessions
 
-Lab section 1-8 will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online.
+Lab section 1-9 will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online. 
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistant to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
 
-If your lab falls on a day when the university isn't holding classes, you will be given credit for the lab. However, you are responsible for reading the lab and being comfortable with the content covered even if you aren't required to complete it (lab content will appear on homework assignments and exams).
+You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
 
 __Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Coding Rooms assignment by Friday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
@@ -127,9 +127,7 @@ For example, if a student was previously earning a 4.0, but missed 4 labs, then 
 
 ### Homework
 
-A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 30 points. There will be 17 assignments given, but only the top 15 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 450 points from the homework assignments.
-
-All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
+A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 30 points. There will be 18 assignments given, but only the top 15 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 450 points from the homework assignments.
 
 ### Re-Grades
 
@@ -137,13 +135,12 @@ We are often generous when we first grade something, so please be sure that we d
 
 ## Honors
 
-An Honors Project will be released midway through the course for those that are enrolled in the Honors College and wish to receieve Honors credit. You'll need to:
+To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you can attend Section 9 (Honors Lab Section) if you are enrolled in that section and earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Coding Rooms. You can fail to earn honors lab credit up to two times and still be awarded an H-option. Additionally you will need to:
 - Fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
-    - You shouldn't fill out the form until the Honors Project has been released, as you need to provide a detailed description of the work to be performed.
-- Complete the Honors Project with full points by the given due date.
+    - In the description of the work you will do, state: "I will be completeing a series of advanced lessons on C++ and related topics that expand on the regular material taught in CSE 232."
 - Earn a 3.5 or 4.0 in the course.
 
-The Honors Project is not worth any points, nor is it extra credit. We will not provide assistance in completing it, as the Honors Project is meant to be solved independently of additional instruction.
+The Honors Lab Assignments are not worth any points, nor are they extra credit. The only benefit they can provide is the opprotunity to earn an H-option for students enrolled in the Honors College.
 
 ## Extensions
 
