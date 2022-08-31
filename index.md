@@ -204,7 +204,7 @@ Links to lecture videos, projects, and other materials will be made available as
 
 ## Help Room Schedule
 
-Help Room is conducted through Zoom. You can find the link to the meeting on Piazza.
+Help Room is conducted through Zoom. You can find the link to the meeting on Piazza. Help Room will begin on 2022-09-06 (Tuesday).
 
 Please be aware that you may not receive the attention you desire if you attend help room very near an assignment deadline. So please consider attending help room prior to the day an assignment is due as there will be less demand. 
 
