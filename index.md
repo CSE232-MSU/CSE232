@@ -206,40 +206,6 @@ Links to lecture videos, projects, and other materials will be made available as
 
 Help Room is conducted through Zoom. You can find the link to the meeting on Piazza.
 
-<!-- <table id="hr-schedule">
-    <thead>
-        <tr>
-            <th>Sunday</th>
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td></td>
-            <td>9-11am</td>
-            <td>9-11am</td>
-            <td>9-11am</td>
-            <td>9-11am</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>5-7pm</td>
-            <td>5-9pm</td>
-            <td>5-7pm</td>
-            <td>5-7pm</td>
-            <td>5-9pm</td>
-            <td>5-7pm</td>
-            <td>5-7pm</td>
-        </tr>
-    </tbody>
-</table> -->
-
 Please be aware that you may not receive the attention you desire if you attend help room very near an assignment deadline. So please consider attending help room prior to the day an assignment is due as there will be less demand. 
 
 Please direct any and all written communication to Piazza (you can post anonymously if that's something you'd prefer). Emails may not be responded to.
