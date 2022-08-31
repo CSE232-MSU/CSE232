@@ -1,8 +1,8 @@
 // I usually set these two dates to be the begin/end dates listed on the
 // academic calendar: https://reg.msu.edu/roinfo/calendar/academic.aspx
 // NOTE: Month is 0 indexed, i.e., 0 = January, 1 = February, ...
-const CLASSES_BEGIN = new Date("1/10/2022");
-const CLASSES_END = new Date("5/4/2022");
+const CLASSES_BEGIN = new Date("7/31/2022");
+const CLASSES_END = new Date("11/12/2022");
 
 //
 // Progress calculation below this point, nothing to worry about here
