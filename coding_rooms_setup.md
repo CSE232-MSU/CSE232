@@ -14,6 +14,7 @@ Coding Rooms reserves the right to restrict any unpaid access until full payment
 Unblocking process may take up to 5 business days and it is highly recommended for you to process payments before the deadline to avoid any interruption.
 
 3.	Payment instructions:
+
     i.	Access the payment portal with the QR code or go to <https://buy.stripe.com/bIY6rpdWE8CFbw4eVm>.
     
     <div align="center">
@@ -22,7 +23,7 @@ Unblocking process may take up to 5 business days and it is highly recommended f
    
     ii.	It is important to input your @msu.edu email here as your payment record will be linked by email.
  
-    iii.	Any payments made by an unregistered email will not be properly linked to your Coding Rooms email, resulting in access restriction.
+    iii. Any payments made by an unregistered email will not be properly linked to your Coding Rooms email, resulting in access restriction.
    
     iv. Please pay for your course by September 23rd, 2022 at the latest.
 
