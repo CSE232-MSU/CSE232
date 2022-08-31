@@ -15,7 +15,7 @@ General:
 Essential Sites:
 - [D2L](https://d2l.msu.edu/d2l/loginh/)
 - [Coding Rooms](coding_rooms_setup.html)
-- [Piazza](https://piazza.com/msu/spring2022/cse232)
+- [Piazza](https://piazza.com/msu/fall2022/cse232/home)
 
 Resources:
 - [cppreference](https://en.cppreference.com/w/)
