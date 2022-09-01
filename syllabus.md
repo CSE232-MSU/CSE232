@@ -136,7 +136,8 @@ We are often generous when we first grade something, so please be sure that we d
 ## Honors
 
 To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you can attend Section 9 (Honors Lab Section) if you are enrolled in that section and earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Coding Rooms. You can fail to earn honors lab credit up to two times and still be awarded an H-option. Additionally you will need to:
-- Fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
+- Be enrolled in the Honors Lab Section (09).
+- Or, fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
     - In the description of the work you will do, state: "I will be completeing a series of advanced lessons on C++ and related topics that expand on the regular material taught in CSE 232."
 - Earn a 3.5 or 4.0 in the course.
 
