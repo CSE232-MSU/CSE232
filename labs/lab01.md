@@ -179,7 +179,7 @@ As you are learning the nuances of C++, you will often find yourself having ques
 
 - [CPPReference.com](https://en.cppreference.com/w/) is effectively an online textbook for C++ that is continually updated and covers all versions of the language with clear examples.
 
-- [StackOverflow.com[(https://stackoverflow.com/) is a website for asking and answering questions across many different programming languages.  Unlike many other such sites, answers are peer reviewed and tend to be of higher quality than what can be found elsewhere.  As always, use your own judgement when evaluating answers and do not copy over code directly without proper citation.
+- [StackOverflow.com](https://stackoverflow.com/) is a website for asking and answering questions across many different programming languages.  Unlike many other such sites, answers are peer reviewed and tend to be of higher quality than what can be found elsewhere.  As always, use your own judgement when evaluating answers and do not copy over code directly without proper citation.
 
 - [begin(C++)](https://gist.github.com/johnmcfarlane/1b2d9c83e4d3f700ba61e2df4077c613) is an actively maintained list of other C++ resources, many of which will be most useful after you are comfortable with the basics of C++, but will help you refine your coding practices to be quicker, easier to read, and less error prone.
 
