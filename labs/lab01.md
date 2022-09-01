@@ -187,4 +187,4 @@ Some of these resources will go into far more depth than you are likely ready fo
 
 ## Honors Lab Questions
 
-Go to [Coding Rooms](https://app.codingrooms.com/app/) and click on "Honors Lab 01" (under the Week 01 material) to find a series of questions to answer associated with this lab.
+Go to Coding Rooms via the link in D2L and click on "Honors Lab 01" (under the Week 01 material) to find a series of questions to answer associated with this lab.
