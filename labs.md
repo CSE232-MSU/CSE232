@@ -8,10 +8,10 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 The lab assignments (on Coding Rooms) are released at 10am on Tuesdays and due at 10pm on Fridays. Only students wishing to earn lab credit by earning all available points on the assigment need complete the assignment, it isn't otherwise worth any points.
 
-<!-- 
+
 
 #### [Lab 01 - Getting Started](labs/lab01.html)
-
+<!-- 
 #### [Lab 02 - Input and Output](labs/lab02.html)
 
 #### [Lab 03 - Types and Math](labs/lab03.html)
