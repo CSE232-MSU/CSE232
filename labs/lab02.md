@@ -211,3 +211,72 @@ The result of `6 % 4` is the integer remainder of the division, thus `2` (6 divi
 - What happens when you try to divide by zero when you run your program?
 - What happens when `std::cin` obtains a letter instead of a number?
 
+
+## Honors Material - Writing Programs for the Command Line
+
+In the lab above you learned how to use a command line and how to write simple C++ programs.  Here, you will learn how to combine the two and write your own program that accepts arguments from the command-line.
+
+### Background
+
+All C++ programs must begin with a `main()` function, but it turns out that your main function can also take specific "arguments", which will be generated on the command line.  (you will learn more about functions and arguments in lab 4)
+
+Try out this program:
+
+```c++
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+  std::cout << "The name of this program is: " << argv[0] << std::endl;
+
+  if (argc > 1) {
+    std::cout << "A total of " << argc << " words were typed to run this command" << std::endl;
+    std::cout << "The first argument is: " << argv[1] << std::endl;
+  } else {
+    std::cout << "No arguments provided." << std::endl;
+  }
+}
+```
+
+Compile it and run it.  Now try running it again with some arguments; for example:
+
+```bash
+  ./a.out one two three
+```
+
+You should see as output:
+
+```
+The name of this program is: ./a.out
+A total of 4 words were typed to run this command
+The first argument is: one
+```
+
+Looking back at the program, here are some key ideas to understand.
+
+The variable `argc` will automatically be set to the count of "words" that were used on the command line (where words can be filenames, numbers, paths or anything separated by spaces).  You can use this value to know how many arguments were provided by the user.  Note that this DOES count the name of the executable itself, so it will never be less than one.
+
+The variable `argv` holds the set of all of arguments that were passed in as strings.  You use `[` and `]` around a number to indicate which argument you are interested in.  The name of the program being run will always be argv[0].  The rest may or may not exist depending on what else the user typed on the command line.  You need to make sure that you check to make sure argc is large enough -- if you try to access a command-line argument that doesn't exist, your program won't work correctly.
+
+### Assignment
+
+There is a Coding Rooms honors assignment for this lab that you can use to test your program.
+
+You are going to write a simple command-line adder.  To do so, use the main function with `argc` and `argv` exactly as in the sample program above.  You will also need to be able to convert the command-line inputs to numbers, find the sum of those numbers, and output the results.
+
+How do you convert an command-line argument into a number?  You need to use the function `atoi()`.  This function can be found in the header `cstdlib`, which you can access by putting a `#include <cstdlib>` at the top of your program.
+
+In order to use `atoi()` simply send it the argument that you want converted and it will return the corresponding integer value.  For example:
+
+```c++
+  int first_argument = std::atoi(argv[1]);
+```
+
+For this implementation, you must look at the number of inputs (`argc`) and add up one, two, or three command line values, outputting the results.  If no command-line arguments are provided, you should print "No inputs."  If more than three arguments are provided, print "Too many inputs."  Otherwise print a single number representing the sum of the values included.
+
+### Naming trivia
+
+If you are curious about where the above names come from, this section will fill in those details. (If you don't care, feel free to skip, but often understanding context will help you figure out other details about the language that you encounter in the future.)
+
+The include file `cstdlib` is short for the "C Standard Library".  As you know, the C++ language is a extension of the much older C language, with many additional features.  The C++ standard library has many different files that you can include with useful functionality.  The original C library was much smaller, with many of the most useful functions now rolled into this single header file.  You'll find other functionality in there, such as exit() for terminating a program early, or rand() for generating a pseudo-random number.  Most of these have better versions in the more modern C++ library.
+
+The specific function that you used above, `atoi()` stands for "ASCII to Integer".  ASCII is the name for the default encoding of characters used to make strings in C and C++.  In ASCII, the values zero through 127 each have a special meaning, covering the alphabet (upper- and lowercase letters), digits, punctuation symbols, and a number of special characters (newlines, tabs, etc.).  This function will read in the digits encoded at the beginning of a string and convert them to their numerical (integer) value in C++.
