@@ -157,11 +157,11 @@ There are many ways to collaborate even if you are working together virtually. T
 
 In future labs, you will be compelled to work with a partner. So, we recommend starting to figure out who you are comfortable working with now.
 
-## Honors Material
+# Honors Material
 
 Students who are doing the honors option in CSE 232 are expected to do some extra work that allows them to go a further in depth into the material.  Each lab will have this additional honors material in the final section; students in the honors option must complete this additional work for the lab to count toward your grade.  If you are not planning to get honors credit for this course you are still welcome to complete this section, but it will not affect your course grade in any way.
 
-### C++ compilers
+## C++ compilers
 
 In the laboratory above, you compiled your Hello World program using C++17, the specification for the language that was formalized in 2017 and incorporated into all major compilers over the subsequent year or two.  The newest C++ standard is C++20 (from 2020), which has only recently been fully incorporated into compilers.  For some of the honors labs you will need to be able to use C++20, so please make sure that you can compile your Hello World program using it.
 
@@ -173,7 +173,7 @@ If your compiler gives you an error, you may need to upgrade to a more modern co
 
 The C++ standard committees are currently meeting trying to finalize the C++23 standard over the next year's time.  At various points in this course we may give you a previews of some of the exciting new features coming to C++.
 
-### Additional Resources
+## Additional Resources
 
 As you are learning the nuances of C++, you will often find yourself having questions about the details of the language or why a particular section of your code is not working as you would expect.  While asking questions on Piazza will help you overcome these hurdles, if you want a faster solution (and one that will remain useful after this course) you should take a look at these resources:
 
@@ -185,6 +185,6 @@ As you are learning the nuances of C++, you will often find yourself having ques
 
 Some of these resources will go into far more depth than you are likely ready for, but you will find them to be more and more useful as you get comfortable with them and with the C++ language.
 
-### Honors Lab Questions
+## Honors Lab Questions
 
-Go to [Coding Rooms](https://app.codingrooms.com/app/) and click on "Honors Lab 01" (under the Week 01 material) to find a series of questions to answer associate with this lab.
+Go to Coding Rooms via the link in D2L and click on "Honors Lab 01" (under the Week 01 material) to find a series of questions to answer associated with this lab.
