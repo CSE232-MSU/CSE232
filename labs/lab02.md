@@ -6,7 +6,7 @@ title: Lab - Input and Output
 
 ## Directory Navigation in the Terminal
 
-At the beginning of most labs, there will be a section on new skills to make you more proficent at the command line. Many tasks can only be performed at the terminal (or are easier to perform at the terminal), so becoming comfortable there is important. Many of the classes after this one will expect at least a basic familiarity of the command line, so pay special attention to these sections.
+At the beginning of most labs, there will be a section on new skills to make you more proficient at the command line. Many tasks are easiest to perform at the terminal, so becoming comfortable there is important. Many of the labs after this one will expect a basic familiarity of the command line, so pay special attention to these sections.
 
 Log into the Coding Rooms Assignment and open the IDE. Use the shell in Coding Room's IDE to follow along.
 
@@ -14,13 +14,25 @@ Log into the Coding Rooms Assignment and open the IDE. Use the shell in Coding R
 
 The first command you need to learn is one of the simplest, `pwd`. At the terminal, type the command `pwd` and hit enter.
 
-`pwd` is short for "print working directory". It outputs the path of the working directory i.e., the directory your terminal currently has open. If you get lost, (and it is easy to do with only the text-based terminal for navigation), `pwd` can show you where you are.
+`pwd` is short for "print working directory". It outputs the path of the working directory i.e., the series of nested folders that your terminal currently has open. If you get lost, (and it is easy to do with only the text-based terminal for navigation), `pwd` will show you where you are.
 
 ### `ls`
 
 The `ls` command outputs the names of all of the folders and files in the working directory. `ls` is short for "list" (as in "list" the contents).
 
 Depending on your terminal's configuration, folder names may end with a `/`, or be denoted in some other form. Some terminals also add colorized output to `ls` to denote different types of files. For instance, Coding Rooms' shell has folders in blue, and files in white.
+
+### `mkdir`
+
+The `mkdir` command is short for "make directory" and allows you to create a new folder in the current working directory.
+
+Try:
+
+```bash
+mkdir my_folder
+```
+
+This will create a new sub-folder called "my_folder".
 
 ### `cd`
 
@@ -35,12 +47,11 @@ Lets say you run `pwd` and you get the output of:
 Your current working directory is named "lab02_new_horizons". If you run `ls`, you would get:
 
 ```bash
+my_folder
 new_horizons.cpp
 ```
 
-This means that there is only one thing in this folder, a file called "new_horizons.cpp". 
-
-However, if there was a subfolder in your working directory named "my_folder", you would see it listed by `ls`. If you wanted to do things in that subfolder, you would use the `cd` command like so:
+This means that there are two items in this folder, a file called "new_horizons.cpp" ad a subfolder named "my_folder".  If you wanted to do things in your subfolder, use the `cd` command:
 
 ```bash
 cd my_folder
@@ -72,7 +83,7 @@ The way to go to the parent directory (in this case, "lab01_new_horizons"), you 
 cd ..
 ```
 
-The `..` is a strange way to symbolize the parent directory. In fact, `.` denotes the working directory, a fact that will be useful to know in later labs.
+The `..` is a strange way to symbolize the parent directory. In fact, `.` denotes the current working directory, a fact that will be useful to know in later labs.
 
 The last "special" directory is the root directory. The root directory is the directory that is the ultimate parent of all the other directories on the computer. It is denoted by a single `/` symbol. In fact, you can specify any folder on the computer by starting with the root directory and working your way to the directory you actually want. So the path `/home/joshua/cse_232__summer_2023/lab02_new_horizons` specifies that the folder I want is:
 
@@ -82,11 +93,30 @@ The last "special" directory is the root directory. The root directory is the di
 - In the folder named "cse_232__summer_2023"
 - And it is named "lab02_new_horizons"
 
-⭐ Please show your TA that you can use the commands: `pwd`, `ls` and `cd`.
+⭐ Please show your TA that you can use the commands: `pwd`, `ls`, `mkdir`, and `cd`.
 
 ### Formatting your code
 
-The C++ compiler is extremely permissive as to the format of the code it accepts. However, our brains have a harder time parsing poorly formatted code. We will be covering how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html), but for this course, all that is needed is to log into chuck.egr.msu.edu to use the tool.
+The C++ compiler is extremely permissive as to the format of the code it accepts.  All whitespace (spaces, tabs, newlines) is treated the same and in most cases isn't even needed.
+
+For example, consider the code snippet (don't worry about understanding it yet):
+
+```c++
+if (last_name == "Nahum") {
+  std::cout << "Hello Dr. Josh!" << std::endl;
+}
+```
+
+It will function identically if we change all of the spacing:
+
+```c++
+if(
+last_name ==
+"Nahum" ){std::cout<<
+    "Hello Dr. Josh!"      <<std::endl;}
+```
+
+However, our brains have a harder time parsing poorly formatted code. We will cover how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html), but for this course, all that is needed is to log into chuck.egr.msu.edu to use the tool.
 
 Let's say you have a file named "main.cpp". To use `clang-format` to auto-format your code, run:
 
@@ -110,7 +140,7 @@ For this lab, you will use the `cin` and `cout` streams, along with some simple 
 
 ### Program Specifications
 
-Your program will prompt the user for an integer number (a number without decimal points) that indicates the number of days _after_ 12/30/2016, starting at a distance 37.33 AU from the Sun. You will calculate the distance of New Horizons from the Sun using the numbers from 12/30/2016 (assume velocity is constant) _plus_ the user provided number of days, and report:
+Your program will prompt the user for an integer number (a number without decimal points) that indicates the number of days _after_ 12/30/2016, starting at a distance 37.33 AU from the Sun. You will calculate the distance of New Horizons from the Sun using the above numbers from 12/30/2016 (assume velocity is constant) _plus_ the user provided number of days, and report:
 
 - Distance in kilometers (1 AU = 149,598,000 km) on a line by itself
 - Distance in miles (1 AU = 92,955,800 mile) on a line by itself
@@ -152,7 +182,7 @@ This is a string: 23 the end
 std::cin >> int_var;
 ```
 
-If you enter an integer value to the command line, it will be read into the variable with no conversion required.
+If you run the program and then enter an integer value to the command line, it will be read into the variable with no conversion required.
 
 ```c++
 int multiplier
@@ -172,9 +202,12 @@ The number 10 times 2 is 20
 
 The operations on these numbers are: + (sum), - (difference), * (product), / (division) and % (modulus, integer only). The last two deserve special comment.
 
-If an integer is divided by another integer, the result is an integer. Thus the result of `6 / 4` is `1`. In contrast, `6.0 / 4` is `1.5`. That is, the `/` operator results in the **integer quotient if using integers, and floats if using floats**. The result of `6 % 4` is the integer remainder of the division, thus `2` (6 divided by 4 is 1, with a remainder of 2). There is no equivalent for `%` in floating point math.
+If an integer is divided by another integer, the result is an integer, with any would-be decimal always rounded down. Thus the result of `6 / 4` is `1`. In contrast, `6.0 / 4` is `1.5`. That is, the decimal point in the first values indicates that we are using a floating point value, and the `/` operator results in the **integer quotient if using integers, and floats if using floats**.
+
+The result of `6 % 4` is the integer remainder of the division, thus `2` (6 divided by 4 is 1, with a remainder of 2). There is no symbol equivalent for `%` in floating point math.
 
 ### Things to Think About
 
 - What happens when you try to divide by zero when you run your program?
 - What happens when `std::cin` obtains a letter instead of a number?
+
