@@ -76,8 +76,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2022-09-12</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week02.html">Week 02</a></td>
-<!--             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab02.html">Lab 02</a></td> -->
-            <td>Lab 02</td> 
+            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab02.html">Lab 02</a></td>
             <td>Homework 01</td>
             <td>Homework 02</td>
             <td></td>
