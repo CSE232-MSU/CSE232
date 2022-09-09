@@ -163,10 +163,16 @@ Students who are doing the honors option in CSE 232 are expected to do some extr
 
 ## C++ compilers
 
-In the laboratory above, you compiled your Hello World program using C++17, the specification for the language that was formalized in 2017 and incorporated into all major compilers over the subsequent year or two.  The newest C++ standard is C++20 (from 2020), which has only recently been fully incorporated into compilers.  For some of the honors labs you will need to be able to use C++20, so please make sure that you can compile your Hello World program using it.
+In the laboratory above, you compiled your Hello World program using C++17, the specification for the language that was formalized in 2017 and incorporated into all major compilers over the subsequent year or two.  The newest C++ standard is C++20 (from 2020), which has only recently been fully incorporated into compilers.  For some of the honors labs you will need to be able to use C++20, so please make sure that you can compile your Hello World program using it on your own machine (Coding rooms will use the correct compiler settings for testing).
 
 ```cmd
 g++ -std=c++20 -Wall main.cpp 
+```
+
+Or, if you have a slightly older compiler you may need to use "2a" instead of "20":
+
+```cmd
+g++ -std=c++2a -Wall main.cpp 
 ```
 
 If your compiler gives you an error, you may need to upgrade to a more modern compiler.  That said, one of the improvements in C++20 is improved warnings and errors, so once you have it we do recommend that you use it for all of your projects.
