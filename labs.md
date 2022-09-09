@@ -11,9 +11,9 @@ The lab assignments (on Coding Rooms) are released at 10am on Tuesdays and due a
 
 
 #### [Lab 01 - Getting Started](labs/lab01.html)
-<!-- 
-#### [Lab 02 - Input and Output](labs/lab02.html)
 
+#### [Lab 02 - Input and Output](labs/lab02.html)
+<!-- 
 #### [Lab 03 - Types and Math](labs/lab03.html)
 
 #### [Lab 04 - Functions](labs/lab04.html)
