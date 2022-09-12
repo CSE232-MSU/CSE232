@@ -172,3 +172,96 @@ As before, the number of cycles is the multiplicative persistence. The final dig
 - What type should the numeric values be (`int`? `long`?) and why?
 - What is the largest `long` you can have?
 - What happens when you enter a number that is too large? For example, the smallest number with an additive persistence of 4 is 19999999999999999999999. Can you make your calculation with that number?
+
+
+## Honors Material - Accessing individual bits in numbers
+
+In the lab above, you explored working with individual values in C++.  Those values (and all other data in C++) are stored as a series of bits.  Those bits are accessible individually and can sometimes be informative about the underlying numbers.
+
+### Background
+
+A regular `int` in C++ uses one bit to indicate the sign of the value and another 31 bits to indicate the value in a coding called [twos-complement notation](https://en.wikipedia.org/wiki/Two%27s_complement). An `unsigned int` is a simpler binary number, since all values are positive.
+
+In the base ten number system that we are used to using in everyday life, the right-most digit tells us how many 1's there are in the number, the next says how many tens, the next how many hundreds, and so on -- each time we move left a digit we multiply by 10.  Thus the number 154 has a four 1s plus five 10s plus a single 100.  All very intuitive to us.
+
+When we encode numbers in binary it's a similar system.  The right-most bit tells us how many ones there are in the value, and then each bit as your move left tells you how many 2s, 4s, 8s, etc, multiplying by two each time instead of ten.
+
+Consider the binary value 10011010.  Working from left to right, there are no 1s, one 2, no 4s, one 8, one 16, no 32s, no 64, and one 128.  To figure out what value this number represents we would add up all of those positions with ones and get 2+8+16+128 = 154.  If we wanted to directly represent a binary value as a literal in C++ we just need to put `0b` at the beginning.  So typing `0b10011010` would create the same value as typing `154`.
+
+Counting in binary also follows the same rule as in decimal.  Increment the left-most position if you can.  If you're already at the maximum digit (9 in decimal or 1 in binary) loop back around to zero and increment the next position to the left.  In all cases you can have leading zeros without changing the value.
+
+| Binary | Decimal |
+| ------ | ------- |
+|  0000  |   00    |
+|  0001  |   01    |
+|  0010  |   02    |
+|  0011  |   03    |
+|  0100  |   04    |
+|   ...  |   ...   |
+|  1001  |   09    |
+|  1010  |   10    |
+|  1011  |   11    |
+|  1100  |   12    |
+|   ...  |   ...   |
+
+The computer represents these values in binary.  Only when we ask C++ to print a value does it convert it to decimal in order to make it easier for us to understand.
+
+There are six operators in C++ that allow us to directly interact with the binary representation of a value.  If you use them with `unsigned` values, they will operate on each bit individually, and thus they are called "bitwise" operations.  Let's assume that we have two 8-bit unsigned variables, defined as follows:
+
+```c++
+uint8_t a = 0b00001111;
+uint8_t b = 0b01010101;
+```
+
+| Operator    | Symbol | Example | Result       | Explanation |
+| ----------- | ------ | ------- | ------------ | ----------- |
+| bitwise not |  `~`   | `~a`    | `0b11110000` | Toggle every bit in the binary representation of the value `a`. |
+| shift left  |  `<<`  | `a << 1`| `0b00011110` | Move all of the bits in `a` to the left based on the second number. Use zeros for all new bits. |
+| shift right  |  `>>` | `a >> 2`| `0b00000011` | Move all of the bits in `a` to the right based on the second number. Use zeros for all new bits. |
+| bitwise and |  `&`   | `a & b` | `0b00000101` | Pair up bits in `a` and `b`.  If both are 1, put a 1 at that position in the result. |
+| bitwise or  |  `|`   | `a | b` | `0b01011111` | Pair up bits in `a` and `b`.  If either is 1, put a 1 at that position in the result. |
+| bitwise xor |  `^`   | `a ^ b` | `0b01011010` | Pair up bits in `a` and `b`.  If they are different, put a 1 at that position in the result. |
+
+These operators make it possible to read or manipulate individual bits.  For example if I use `x & 1` the result will be the same as the last bit in `x`.
+
+If I wanted to print the count the number of ones in the binary representation of the variable `x`, I could do something like:
+
+```c++
+uint32_t x = 2113;
+size_t count = 0;                   // Track the count of ones here.
+for (size_t i = 0; i < 32; ++i) {   // Go through each bit position in x.
+  if (x & (1 << i))) { count++; }   // Shift the a 1 to the position we want; use "and" to read it.
+}
+std::cout << "The variable x has " << count << " ones in its binary encoding." << std::endl;
+```
+
+In the above example, the final count would be 3 (1 + 64 + 2048).
+
+### Assignment
+
+There is a Coding Rooms honors assignment for this lab that you can use to test your program.
+
+You are going to write a program that reads in unsigned integers (with `std::cin`) and outputs how each integer would be converted from binary (from least significant value to most).
+
+For example, if you read in the value 2113 (as in the example above) you would output: `1+64+2048`.  Conveniently the conversion from decimal (the input number) to binary happens automatically.  So you just need to step through the bits of the value, track what number each bit should be associated with, and printing them when needed.
+
+Make sure to also answer the short-answer questions that follow the coding assignment.
+
+### Trivia
+
+As always, this section is not part of your coursework, but open to all who want to learn still a bit more.
+
+The number of digits used in a number system is called its [radix](https://en.wikipedia.org/wiki/Radix) or base.  Decimal has a radix of 10; there are ten possible digits in each position and we multiply by 10 as we move from left to right. Binary has a radix of 2; there are two possible bits (0 or 1) and we multiply by two as we go.  In other numbering systems, the same rules apply -- in octal there are eight possible symbols at each position (0-7) and we multiply by 8; in hexadecimal there are 16 possible symbols (0-9 and A-F) and we multiply by 16.  These are all number systems that turn out to be important in computer science.
+
+There is an entire set of algorithms that take advantage of the binary encodings of values on computers.  They are referred to as "Bit Magic", with a good library of them [here](http://graphics.stanford.edu/~seander/bithacks.html). Beware though - these can be incredibly tricky and far beyond the scope of this class.  To give one example, a faster version of the bit-counting algorithm above looks like this:
+
+```c++
+uint32_t x = 2113;
+size_t count = 0;       // Track the count of ones here.
+while (x) {             // Keep going while there are any ones left in x.
+  x = x & (x - 1);      // Remove the right-most 1 from x.
+}
+std::cout << "The variable x has " << count << " ones in its binary encoding." << std::endl;
+```
+
+This algorithm systematically removes ones from `x` counting them as it goes.  The real tricky part is `x = x & (x - 1)`.  If the right side were `x & x` it would always return `x` since any value bitwise-anded to itself is that same value again.  But subtracting one from one of the x's disrupts the right-most one, resulting in something close to the original `x` but with the right-most one removed.  This is the sort of trick that most people would never think of on their own, but can be useful for more efficient code if you need it.  While the first bit-counter always looped 32 times, this one loops once for each 1 that is counted.
