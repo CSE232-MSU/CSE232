@@ -6,46 +6,67 @@ title: Lab - Types and Math
 
 ## Copying, Moving and Deleting Files in the Terminal
 
-**Disclaimer**: the terminal is a very powerful tool. And with great power, comes great responsibility (Uncle Ben). Be aware that mistakes at the terminal can break computers and delete important files without warning, so be sure your work is always backed up.
+**Disclaimer**: The terminal is a very powerful tool. And with great power, there must also come great responsibility[^1]. Be aware that mistakes at the terminal can delete important files without warning, so be sure your work is always backed up.
+
+[^1] Uncle Ben
 
 ### `cp`
 
 The `cp` command "copies" files from one location to another. It's used with two arguments:
 
-1. The source file, the file you want to copy
-2. The destination file, where you want your copy to be placed
+1. source: the name of the file that you want to copy
+2. destination: the filename that you want to use for the new copy (or directory where you want it placed using the same name)
 
-You can copy files that are in your working directory or in another directory by specifying a path. Examples:
+Examples:
 
-This copies a.txt into a file called b.txt:
+To copy a.txt into a file called b.txt:
 
 ```bash
 cp a.txt b.txt
 ```
 
-This copies c.txt (which is in the parent folder) to a file called c.txt (which is in the grandparent folder):
+You can copy files from or to any other directory by specifying a path.  To copy the file c.txt from the parent folder to a file with the same name in the grandparent folder:
 
 ```bash
 cp ../c.txt ../../c.txt
 ```
 
-This copies the d.txt file in my Downloads folder to the current directory. If you specify a directory as a destination, it will create a file with the same name there.
+To copy the file d.txt in my Downloads folder to the current directory. If you specify a directory as a destination, it will create a file with the same name there.
 
 ```bash
 cp ~/Downloads/d.txt .
 ```
 
-`cp` can also copy directories if you use the `-r` flag. The "r" stands for "recursive", meaning to copy the directory and all sub-directories of it, recursively. Example:
+`cp` can also copy directories if you use the `-r` flag. The "r" stands for "recursive", meaning to copy the directory and all files and sub-directories in it, recursively. Example:
 
-This copies the directory, "other", into a directory called "other2":
+To copy the directory "other/" into a directory called "other2/":
 
 ```bash
 cp -r other other2
 ```
 
+Here's a summary of how the `cp` command behaves:
+
+| Source      | Destination        | What Happens |
+| ----------- | ------------------ | ------------ |
+| filename    | unused name        | A file is created at the destination with identical contents to the source |
+| filename    | existing filename  | The existing file at the destination is deleted and replaced with a copy of the source file. |
+| filename    | existing directory | File is copied inside the existing directory using the original filename. |
+| directory   | unused name        | Without -r option, error (nothing happens); with -r, recursively copies directory contents to a new directory created with the destination name. |
+| directory   | existing filename  | Command fails; the existing file at the destination remains unchanged.
+| directory   | existing directory | Without -r option, error (nothing happens); with -r, recursively copies directory contents to a new directory with the source name, but inside destination directory. |
+
+Finally, note that multiple files can be copied simultaneously as long as the destination is a directory to copy them all into, otherwise keeping the same filenames.  For example:
+
+```bash
+cp file1.txt file2.txt file3.txt target_dir/
+```
+
+Try copying some files:
+
 1. [Save this zip file to your My Documents folder.](../assets/downloads/lab_terminal.zip)
 2. Right click the zipped file in My Documents and select "Extract Here". You should now have a folder called "lab02".
-3. Change directories to My Documents (`cd ~/My_Documents`).
+3. `cd` into My Documents (`cd ~/My_Documents`).
 4. `cd` to the folder named "lab02", then to the subfolder named "b_folder", then to the folder named "start".
 5. If you run `ls`, you should see a folder named "other" and a file named "f.txt".
 6. Copy the file named "f.txt" to the file "f2.txt".
@@ -68,7 +89,7 @@ mv other other2
 
 Run the above command, and confirm the the "other" folder no longer exists, and that there's now an "other2" folder present. Be sure your working directory is the "start" folder.
 
-The `mv` command is often used to rename directories and folders.
+The `mv` command should be used when you want to rename directories.
 
 ### `rm`
 
@@ -76,15 +97,15 @@ The `rm` command is short for "remove".
 
 **Warning**: files deleted with `rm` are gone forever. They don't go to the Recycle Bin. Please be careful with `rm`.
 
-The `rm` command takes one argument: the file or folder you wish to delete. Like `cp`, if you wish to delete a folder, you need to supply the `-r` flag. Example:
+The `rm` command takes one argument: the file or folder you wish to delete. Like `cp`, if you wish to delete a folder, you need to supply the `-r` flag.
 
-Deletes the file, f.txt:
+For example, to deletes the file f.txt use:
 
 ```bash
 rm f.txt
 ```
 
-Deletes the a_folder, and everything within it:
+To deletes the directory a_folder/, and everything within it type:
 
 ```bash
 rm -r a_folder
@@ -96,7 +117,7 @@ rm -r a_folder
 
 There are many properties of numbers that one can investigate. The ancient Greeks were fascinated by the properties of integers, even ascribing them mystical properties.
 
-One such property is an integer's _additive persistence_, and its resulting _additive root_ ([see this page for more information](http://mathworld.wolfram.com/AdditivePersistence.html)). Additive persistence is a property of the sum of the digits of an integer. The sum of the digits is found, and then the summation of digits is performed, creating a new sum. This process repeats until a single integer digit is reached. Consider the following example:
+One such property is an integer's _additive persistence_, and its resulting _additive root_ ([more information](http://mathworld.wolfram.com/AdditivePersistence.html)). Additive persistence is a property of the sum of the digits of an integer. The sum of the digits is found, and then the summation of digits is performed, creating a new sum. This process repeats until a single integer digit is reached. Consider the following example:
 
 1.  The beginning integer is 1234
 2.  The sum of its digits is 1+2+3+4 = 10
@@ -130,7 +151,7 @@ How do you get started on a program like this?
     - Otherwise, write a loop that calculates the persistence (track the count through this loop)
     - Inside that loop, write another loop that can sum the digits of an integer until it reaches a single digit
 2.  How do you get the digits of an integer? Look at using a combination of the division (`/`) and modulus (`%`) operators.
-3.  I would add some "diagnostic output" so you can be sure things are working as they should. For each pass through the loop of the additive persistence, print each new integer created. You can always fix it to give the exact, required output later.
+3.  As you try to get this program working, add some "diagnostic output" so you can be sure that it is running like you expect it to. For each pass through the loop of the additive persistence, print each new integer created. You can always fix it to give the exact, required output later.
 
 ### Want to do more?
 
@@ -142,7 +163,7 @@ The _multiplicative persistence_ ([see this page for more information](http://ma
 2.  The product of its digits is 1\*2\*3\*4 = 24
 3.  The integer is now 24
 4.  The product of its digits is 2\*4 = 8
-5.  The integer is now 1. When the value reaches a single digit, we are finished. This final integer is the multiplicative root
+5.  The integer is now 8. When the value reaches a single digit, we are finished. This final integer is the multiplicative root
 
 As before, the number of cycles is the multiplicative persistence. The final digit reached is called the integer's multiplicative root. The integer, 1234, has an multiplicative persistence of 2, and a multiplicative root of 8.
 
