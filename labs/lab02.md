@@ -116,7 +116,7 @@ last_name ==
     "Hello Dr. Josh!"      <<std::endl;}
 ```
 
-However, our brains have a harder time parsing poorly formatted code. We will cover how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html), but for this course, all that is needed is to log into chuck.egr.msu.edu to use the tool.
+However, our brains have a harder time parsing poorly formatted code. We will cover how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html).
 
 Let's say you have a file named "main.cpp". To use `clang-format` to auto-format your code, run:
 
