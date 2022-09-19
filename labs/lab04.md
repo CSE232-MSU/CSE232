@@ -10,25 +10,25 @@ Often, you want to be able to view files in the terminal (instead of opening the
 
 ### `cat`
 
-The command, `cat`, is short for "concatenate", which means to link things together. The `cat` program is often used to link the output from one program to the input of another. But, another useful trait of `cat` is to output the contents of a file to the terminal. Invoking the `cat` program is quite simple:
+The command, `cat`, is short for "concatenate", which means to link things together. The `cat` command can be followed by any number of filenames and it will output the contents of all of those files concatenated together.  In practice, however, the fact that `cat` will output a files' contents to the terminal is often used to link the output from one program to the input of another or simply to view a file's contents. Invoking the `cat` program is simple:
 
 ```bash
 cat some_file_name.txt
 ```
 
-The above command will print the contents of the file to the terminal. However, for large files, `cat` is not very user-friendly. You should use a pager instead...
+The above command will print the contents of the file to the terminal. However, for large files, `cat` is not user-friendly since the contents will scroll by far faster than you can read them. In practice, if you want to view the contents of a file in the terminal you should use a "pager" instead.
 
 ### `less`
 
-Pagers are programs that show you content one _page_ at a time. They are useful for viewing large files. The most popular pager is called `less` because it was derived from a program called `more`, computer science history is a little silly. You can invoke the `less` program like so:
+Pagers are programs that show you content one _page_ at a time. They are useful for viewing large files. The most popular pager is called `less` because it was derived from an earlier program called `more` (computer science naming can be a little silly). You can invoke the `less` program like so:
 
 ```bash
 less some_file_name.txt
 ```
 
-To go the the next page, push the F key (forward) on your keyboard. To go back a page, push the B key (backwards). To quit the pager and return to the command line, push Q (use your imagination for why it is the Q key).
+To go to the next page, push the 'f' key (forward) or the space bar on your keyboard. To go back a page, push the 'b' key (backwards). To quit the pager and return to the command line, push 'q'.  You can also use the up and down arrow keys to move one line at a time through a file, or '<' and '>' to jump to the beginning or end of the file, respectively.  These key combinations barely scratch the surface of the capabilities of `less`; if you want way too much information about the command, press 'h' inside `less`.
 
-There are a few programs intended to provide documentation. However, they are often difficult to understand for a beginner. You invoke them by typing the `help` command, and the name of the program you want information about. They can open up a pager if the entry is long.
+There are a few programs intended to provide documentation. However, they are often difficult to understand for a beginner. On Ubuntu you invoke them by typing the `help` command, and the name of the program you want information about. They can open up a pager if the entry is long.
 
 ### `help`
 
@@ -56,7 +56,7 @@ info ls
 
 ### `-h`
 
-Many programs will give you a bit of documentation about themselves (like what arguments they accept) if you invoke the program with the `-h` flag. Example:
+Most command-line programs will give you a bit of documentation about themselves (like what arguments they accept) if you invoke the program with the `-h` flag. Example:
 
 ```bash
 python -h
@@ -68,7 +68,7 @@ python -h
 
 ### Background
 
-You remember calculus, don't you? The basic concept of an integral is the area under a curve, with the curve represented by some function. If you can integrate a function, you can calculate that area directly. But, for some functions, it is easier to approximate that area using discrete, iterative methods. We are going to investigate one of those methods, the [Trapezoidal Rule](http://en.wikipedia.org/wiki/Trapezoidal_rule).
+You remember calculus, right? The basic concept of an integral is the area under a curve, with the curve represented by some function. If you can integrate a function, you can calculate that area directly. But, for some functions, it is easier to approximate that area using discrete, iterative methods. We are going to investigate one of those methods, the [Trapezoidal Rule](http://en.wikipedia.org/wiki/Trapezoidal_rule).
 
 The basic idea is to draw a series of trapezoids that approximate the area under a curve, where the more trapezoids we draw, the better the approximation.
 
@@ -288,3 +288,110 @@ alt="x_i">.
 "https://render.githubusercontent.com/render/math?math=%5Clarge+%5Cdisplaystyle+%5Cint_%7Ba%7D%5E%7Bb%7D+f%28x%29+%3D+F%28b%29+-+F%28a%29" 
 alt="\int_{a}^{b} f(x) = F(b) - F(a)">
 </div>
+
+## Honors Material - Shifting Computation to Compile Time
+
+Thus far in this course we have focused on writing code that runs when the user executes that program.  If all of the values are known at compile time, however, a variety of techniques exist for a C++ programmer to indicate that they want a calculation to be pre-computed.
+
+### Background
+
+One of the major advantages of C++ over many other languages is the speed of the resulting programs.  For this reason, many computation-intensive programs tend to be written in C++ (or its precursor, C) such as operating systems, compilers, scientific software, web browsers, and even many video games.
+
+Much of the speed of C++ comes from the fact that the compiler works closely with the computer hardware so that a number you're working with is stored in a CPU register, allowing it to be used directly when performing mathematical operations.  But what's faster than all of the values being calculated in the CPU?  Already having the answer because we performed the calculation at compile time!
+
+### The `constexpr` keyword
+
+Obviously, we frequently need to use fixed numbers in C++.  For example, we might want to calculate the area of a circle, so we write a function like:
+
+```c++
+double CalcCircleArea(double radius) {
+  return 3.1415926535898 * radius * radius;
+}
+```
+
+Of course, we might have various other functions where we also need to specify π, so it's odd to write it out each time.  One option we have is to create a value that the compiler treats identical to PI, for example.
+
+```c++
+constexpr double PI = 3.1415926535898;
+```
+
+The `constexpr` keyword before the variable definition ensures that `PI` is always treated as if the value were written in its place.  The right-hand side can even be an equation in a `constexpr` declaration.  For example:
+
+```c++
+constexpr PI_SQR = PI * PI;
+```
+
+In this case, PI squared is calculated at compile time and whenever `PI_SQR` is used, it's identical to writing the number in its place.  Note that we were able to use the variable `PI` in definining `PI_SQR`.  This usage was only allowed because `PI` was also defined as constexpr.
+
+Such calculations get much more powerful when we use functions.  For example, the Fibonacci numbers start with 0 and 1, and then every subsequent number in the series is the sum of the previous two numbers.  The series starts with 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, ...
+
+We can write a C++ function to calculate it as:
+
+```c++
+constexpr int CalcFibonacci(int id) {
+  if (id <= 1) return id;
+  return CalcFibonacci(id-1) + CalcFibonacci(id-2);
+}
+```
+
+The fact that this function was marked as `constexpr` means that if the input is known at compile time, the output can also be produced at compile time.  So the following line would work:
+
+```c++
+constexpr int fib_10 = CalcFibonacci(10);
+```
+
+In this case fib_10 would be treated identical to the number 55, even though it required non-trivial calculation at compile time.
+
+Note that if the function inputs are not known at compile time, the function can still be used, but the associated computations will only be done at run time.  If the results are needed at compile time (for example, if the function is used as the right-hand side of a constexpr assignment), this will, of course, result in an error.
+
+
+### Compile-time Input
+
+Often we have numbers directly in the code that we want to use at compile time, but we can also provide new compile inputs without directly changing the code files.  Let us consider the following program that has the user try to guess a `TARGET_VALUE` that must be set a compile time.
+
+```c++
+#include <iostream>
+
+int main() {
+  int guess = -1;
+  while (guess != TARGET_VALUE) {
+    std::cout << "What is your guess? ";
+    std::cin >> guess;
+    if (guess < TARGET_VALUE) std::cout << "Too low!" << std::endl;
+    else if (guess > TARGET_VALUE) std::cout << "Too high!" << std::endl;
+  }
+  std::cout << "You did it!" << std::endl;
+}
+```
+
+Save this program as `guess.cpp` on your computer.  Now try compiling it normally:
+
+```bash
+g++ -std=c++17 guess.cpp
+```
+
+You'll see that the compiler gives an error because it doesn't know what TARGET_VALUE is.  Now try specifying it at the command line:
+
+```bash
+g++ -std=c++17 -DTARGET_VALUE=100 guess.cpp
+```
+
+The `-D` flag indicates that you are defining a value for the compiler to use anywhere in the program.
+
+Now run your program with `.a.out`.  If you used the compilation flags above you'll play a little high/low game to guess the number 100.  See the trivia section below if you are curious about the details of how -D works.
+
+### Assignment
+
+Go on to Coding Rooms and write a program to determine whether the compile-time input TEST_VALUE is a prime number of not.  How do you know if a number is prime?
+
+The brute force way is to try dividing it by all values from 2 through TEST_VALUE-1 and see if it divides evenly by any of them.  It turns out that we can do a bit better however: we actually only need to test from 2 to the square-root of TEST_VALUE.  We can also use the modulus operator (`%`) rather than proper division since if `X % Y` is equal to zero, that means that Y must evenly divide X.
+
+The output of your program should be `TRUE` if TEST_VALUE is prime or `FALSE` if it is not.
+
+Since TEST_VALUE will be provided, you should make sure that all of your computations occur at compile time.  We will be giving your program approximately 100x as much time at compile time, so if you try to do all of the computations at run time, Coding Rooms should reject your program for taking too long.
+
+### Trivia
+
+Macros
+
+Template meta programming
