@@ -116,7 +116,7 @@ last_name ==
     "Hello Dr. Josh!"      <<std::endl;}
 ```
 
-However, our brains have a harder time parsing poorly formatted code. We will cover how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html), but for this course, all that is needed is to log into chuck.egr.msu.edu to use the tool.
+However, our brains have a harder time parsing poorly formatted code. We will cover how to format your code manually, but there is a nice tool to format your code automatically: `clang-format`. The details for how the tool can be configured [can be found here](https://clang.llvm.org/docs/ClangFormat.html).
 
 Let's say you have a file named "main.cpp". To use `clang-format` to auto-format your code, run:
 
@@ -145,6 +145,7 @@ Your program will prompt the user for an integer number (a number without decima
 - Distance in kilometers (1 AU = 149,598,000 km) on a line by itself
 - Distance in miles (1 AU = 92,955,800 mile) on a line by itself
 - Round trip time for radio communication in hours. Radio waves travel at the speed of light, listed at 299,792,458 meters/second, on a line by itself
+  - In actuality, the orbital mechanics needed to actually model this are beyond the scope of this lab. But for simplicity, you can assume the radio station is on the sun. 
 - Provide 2 decimal points of accuracy using `std::fixed` and `std::setprecision`. Both are contained within the `<iomanip>` header, and you can use them as follows:
 
 ```c++
