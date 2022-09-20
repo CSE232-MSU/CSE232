@@ -367,13 +367,13 @@ int main() {
 Save this program as `guess.cpp` on your computer.  Now try compiling it normally:
 
 ```bash
-g++ -std=c++17 guess.cpp
+g++ -std=c++20 guess.cpp
 ```
 
-You'll see that the compiler gives an error because it doesn't know what TARGET_VALUE is.  Now try specifying it at the command line:
+(Remember to use `-std=c++2a` instead if your system requires it.)  You'll see that the compiler gives an error because it doesn't know what TARGET_VALUE is.  Now try specifying it at the command line:
 
 ```bash
-g++ -std=c++17 -DTARGET_VALUE=100 guess.cpp
+g++ -std=c++20 -DTARGET_VALUE=100 guess.cpp
 ```
 
 The `-D` flag indicates that you are defining a value for the compiler to use anywhere in the program.
@@ -382,16 +382,38 @@ Now run your program with `.a.out`.  If you used the compilation flags above you
 
 ### Assignment
 
-Go on to Coding Rooms and write a program to determine whether the compile-time input TEST_VALUE is a prime number of not.  How do you know if a number is prime?
+Go on to Coding Rooms and write a program to count how many [prime numbers](https://en.wikipedia.org/wiki/Prime_number) exist between the compile-time inputs of START_VALUE and END_VALUE (inclusive).  This calculation should be performed at compile time and not at run time.
 
-The brute force way is to try dividing it by all values from 2 through TEST_VALUE-1 and see if it divides evenly by any of them.  It turns out that we can do a bit better however: we actually only need to test from 2 to the square-root of TEST_VALUE.  We can also use the modulus operator (`%`) rather than proper division since if `X % Y` is equal to zero, that means that Y must evenly divide X.
+How do you know if a number is prime?
 
-The output of your program should be `TRUE` if TEST_VALUE is prime or `FALSE` if it is not.
+The brute force way is to try dividing it by all values from 2 through value-1 and see if it divides evenly by any of them.  It turns out that we can do a good bit better however: we actually only need to test from 2 to the square-root of the value.  We can also use the modulus operator (`%`) rather than proper division since if `X % Y` is equal to zero, that means that Y must evenly divide X.
 
-Since TEST_VALUE will be provided, you should make sure that all of your computations occur at compile time.  We will be giving your program approximately 100x as much time at compile time, so if you try to do all of the computations at run time, Coding Rooms should reject your program for taking too long.
+You should output a single value indicating the number of primes in the given range.
 
-### Trivia
+If we wanted your program to calculate the number of primes from 15 to 20 we would compile with:
 
-Macros
+```bash
+g++ -Wall -Wextra -Werror -std=c++20 -DSTART_VALUE=15 -DEND_VALUE=20 main.cpp
+```
 
-Template meta programming
+And you would output `2` since there are two primes in the given range (17 and 20).
+
+### Trivia: Other Compile-Time operations
+
+The -D compiler flag used above is actually an interface to the [C++ Preprocessor](https://en.cppreference.com/w/cpp/preprocessor).  The preprocessor directives all begin with the `#` sign; the one you are already familiar with is `#include` which will take an entire other file and insert it into the beginning of this one.  One other population command is `#define` which will allow you to define a particular string in the rest of the code.  For example, instead of `-DTEST_VALUE=15` on the command line, we could have accomplished the same effect by putting `#define TEST_VALUE 15` in our code file itself.
+
+The C++ preprocessor is both powerful and arcane; there's lots of black magic you can do in C++ if you learn how to use it, but you can also mess up your code in unexpected ways.  A defined value is dropped into place as is, and can be a number, a string, an expression, or almost any other series of characters.  You can even define macros.  For example:
+
+```c++
+#define SUM(X,Y) X+Y
+```
+
+This will create something that looks like a function, but is not; it just does a search-and-replace on the associated text before proper compilation begins.  There are many pitfalls; for example if you define this macro and then write `SUM(10,15)` in your code, it will replace that with `10+15`.  You might expect that to be treated the same as the number 25, but it is not.  For example, if you wrote `SUM(10,15)*2` what would you expect the result to be?  The answer isn't 50.  It becomes `10+15*2` which the C++ compile then translates to 40 (due to order of operations).
+
+In short, if you want to really know the power of C++, it's worth learning about the preprocessor, but with the modern capabilities of C++, there are fairly few circumstance where you should actually use it.
+
+The `constexpr` keyword can be used outside of the contexts above.  One of the most powerful is immediately after the `if` keyword.  Indeed, `if constexpr` is evaluate at compile time, and only appear in the executable if the resulting expression resolves to true.  As you will discover later in the course, you can have generic code that can work with many different types of variables.  You can use `if constexpr` to change exactly what the code does depending on the type of the variable passed in.
+
+There are also a couple of other keywords similar to `constexpr` since C++ 20.  These include [`constinit`](https://en.cppreference.com/w/cpp/language/constinit) which requires that the value that a variable is initialized to is known at compile time, but does not require the variable to be unchanging.  There is also [`consteval`](https://en.cppreference.com/w/cpp/language/consteval) which requires a function to be fully evaluated at compile time and prevents it from being called at run time.
+
+Finally, if you are interested in going into much more depth about compile time programming, there is a concept used in C++ called ["template metaprogramming"](https://en.wikipedia.org/wiki/Template_metaprogramming), wherein you can have your code adjust rather drastically depending on exactly what variables are used.  This topic, however, would only be explored in depth in a much more advanced C++ course.
