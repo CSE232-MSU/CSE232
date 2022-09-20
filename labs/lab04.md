@@ -378,7 +378,7 @@ g++ -std=c++20 -DTARGET_VALUE=100 guess.cpp
 
 The `-D` flag indicates that you are defining a value for the compiler to use anywhere in the program.
 
-Now run your program with `.a.out`.  If you used the compilation flags above you'll play a little high/low game to guess the number 100.  See the trivia section below if you are curious about the details of how -D works.
+Now run your program with `.\a.out`.  If you used the compilation flags above you'll play a little high/low game to guess the number 100.  See the trivia section below if you are curious about the details of how -D works.
 
 ### Assignment
 
