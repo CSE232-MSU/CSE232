@@ -18,7 +18,7 @@ Although the compiler can often compile very ugly source code, the primary reade
 
 Although there are a few different conventions for what exactly defines well-formed code, the important thing is to be consistent. For this assignment, we will be evaluating your homework solution with respect to the [Google Style Guide](https://google.github.io/styleguide/cppguide.html). The point of this part of the lab is to evaluate (and improve) code by using a consistent style. 
 
-**Warning**: much of the code we have shown in videos and examples may not conform to Google's standards.
+**Warning**: The code we have shown in videos and examples may not always conform to Google's standards.
 
 ### Rules
 
@@ -414,3 +414,157 @@ Also, you can just give the unique prefix of a command and `gdb` will execute it
 The up and down arrow keys can be used to scroll through previous command lines, so you do not need to re-type them each time.
 
 If you hit RETURN at the `gdb` prompt, `gdb` will execute the most recent command again. This is particularly useful if you are stepping through the execution -- you don't have to type `next` each time you want to execute the `next` instruction -- you can type it one time, and then hit RETURN for as long as you'd like.
+
+
+## Honors Material - More Advanced Debugging
+
+Debuggers are a critical component of producing clean, bug-free code.  But there are many other useful debugging (or bug-prevention) techniques as well.  These include [asserts](https://en.cppreference.com/w/cpp/error/assert) (to ensure that the data you are working with is the data that you think you are working with), [unit testing](https://en.wikipedia.org/wiki/Unit_testing) (to test individual functions or modules in your code), [integration testing](https://en.wikipedia.org/wiki/Integration_testing) (to make sure code modules work together), [regression testing](https://en.wikipedia.org/wiki/Regression_testing) (to make sure you don't unintentionally change how your code works), [memory sanitizers](https://developers.redhat.com/blog/2021/05/05/memory-error-checking-in-c-and-c-comparing-sanitizers-and-valgrind) (to double check if you are mis-using memory), verbose printing (to make sure code flows how you expect it to), and many others.
+
+In this lab, you will experiment with verbose printing and unit testing.
+
+### Background
+
+Unit testing is a simple, yet powerful debugging technique.  In fact, unit tests are how we auto-grade code that students turn in on Coding Rooms -- we try to cover as many situations as possible to ensure that you turn in fully functional code.  But unit tests are for more than just classrooms.  You should be using them in all of your own coding projects, especially ones that get large or where you're working with other people.  They will initially identify problems as you first build the code, and then alert you if any later changes break functionality.
+
+The key idea of a unit test is that you take a function (or other module) intended to perform a task on generic input.  You then run that function with a wide range of inputs (including any edge cases you can think of) to make sure that it always returns the expected result.  For example, if you were writing a `sort()` function that takes a collection of integers and puts them in order, your first unit test would probably be a jumbled set of integer values.  But then you would perform a whole series of other tests: Does it still work with negative numbers?  Does it work if a number is repeated?  Does it work if the input values are already sorted?  And so on.
+
+A good set of unit tests will cover many different possibilities.
+
+How do you write one?  If you wanted to perform tests on doubles, you might write:
+
+```c++
+bool TestResult(double result, double expected, const std::string error_message) {
+  if (result != expected) {
+    std::cerr << error_message << std::endl
+              << "Result: " << result << std::endl
+              << "Expected: " << expected << std::endl;
+    return false;
+  }
+  return true;
+}
+```
+
+Once you learn more about templated functions, you'll be able to make this unit test much more generic.
+
+Now let's build a function.
+
+```c++
+bool IsPrime(size_t value) {
+  return value % 2 == 1;  // Meh, close enough.
+}
+```
+
+And then let's build some tests!
+
+```c++
+// Test a nice, simple prime number.
+TestResult(IsPrime(7), true, "Failed to identify 7 as prime.");
+// Test a nice, simple composite number.
+TestResult(IsPrime(10), false, "Failed to identify 10 as NOT prime.");
+```
+
+If we compile and run these tests, our function will pass!  Are we done?  No.  We need to try some edge cases.  Let's start with the lowest positive values.
+
+
+```c++
+// Test the only positive integer that is neither prime nor composite.
+TestResult(IsPrime(1), false, "Failed to identify 1 as NOT prime.");
+// Test the only even prime number.
+TestResult(IsPrime(2), true, "Failed to identify 2 as prime.");
+```
+
+Now we'll get some actual results!  If we run out unit tests we'll see:
+
+```
+Failed to identify 1 as NOT prime.
+Result: 1
+Expected: 0
+Failed to identify 2 as prime.
+Result: 0
+Expected: 1
+```
+
+Okay... let's fix the function, but if we're still being lazy and think maybe it's just small values that are different, we might write:
+
+```c++
+bool IsPrime(size_t value) {
+  if (value <= 2) return value % 2 == 0; // Fix for low values?
+  return value % 2 == 1;  // Meh, close enough.
+}
+```
+
+Obviously this function is still wrong.  To discover that, we need to write many more unit tests, covering lots of options.
+
+```
+// Test a perfect square that's odd... they're tricky.
+TestResult(IsPrime(9), false, "Failed to identify 9 as NOT prime.");
+// Lets test a bigger number.
+TestResult(IsPrime(10101), false, "Failed to identify 10,101 as NOT prime.");
+// And test a big prime.
+TestResult(IsPrime(17377), true, "Failed to identify 17,377 as prime.");
+// And so on...
+```
+
+Ideally we want to have a wide range of tests in order to catch any likely problems in our code.  And if we do later discover a problem?  Add a test for it so that it never happens again!
+
+The testing system described above is fairly simple.  A more sophisticated one would tally the number of errors, give us more information about them, and run automatically when we made changes to our code.  Later in the semester we'll talk more about building your on testing systems.
+
+### Assignment
+
+I am going to write a function with the signature:
+```c++
+int IsSecurePassword(const std::string password);
+```
+
+This function should take in the password you give it and score it based on the number of security criteria that it passes:
+* It is at least 10 characters long
+* It has at least one lowercase English letter
+* It has at least one uppercase English letter
+* It has at least one digit
+* It has at least one special character from the set `!@#$%^&*()`
+* It meats ALL of the previous four criteria in at least two different ways (i.e, two different lower letters AND two different upper letters AND two different digits AND two different special characters)
+
+The score starts at zero and each bullet point it hits gives a +1, for a maximum score of 6.
+
+I'll probably mess up a few times in trying to write this function, so for this assignment you will go and write the unit tests for me.
+
+Create a version of the `TestResult()` function given above, but that takes an integer value for `result` and `expected`.  Then create a series of tests to make sure my `IsSecurePassword()` function works correctly.
+
+In your code you should `#include "password.hpp"` which will have my version of `IsSecurePassword()` in it.  In your main function, you should run a series of tests.  If my function passes all of the tests, you should return 0 from `main()` (which means that there were no errors).  If my function fails any of your tests, you should return 1 from `main()` to indicate that there were errors.  Your program may have any outputs you like -- the grading system will only look at the value returned from main.
+
+You need to put together a set of tests that find problems in all of my bad implementations of `IsSecurePassword()`, but also successfully identifies the one good version.
+
+### Trivia
+
+Today's triva will just tell you about a nice, simple debugging technique that you might want to try.
+
+Verbose printing is just what it sounds like -- putting print statements all over your code so that you can track what's going on.  The problem, however, is that you don't want to have all of the random statements print when you are trying to run your code for real, but you do want them to print again when if you discover another problem and need to debug some more.
+
+A simple trick is to put at the top of your code:
+```c++
+static constexpr bool verbose = true;
+```
+
+And then if you wanted to print the value of a variable `my_var`, you would write:
+
+```c++
+if constexpr (verbose) {
+  std::cout << "my_var = " << my_var << std::endl;
+}
+```
+
+The `if constexpr` statement means that what follows should be ignored (as if it weren't even in the code) if it evaluates to false.  It's quite handy, and allows for debugging code that completely goes away when you're not using it.
+
+This techniques will work in most circumstances, but we can do even better.  Often we'll want to be able to control verbosity at compile time.  To do this, we can play with defines, like we did for Lab 04 (remember START_VALUE and END_VALUE?)
+
+To do this, instead of simply declaring the `verbose` variable in your code, you can have:
+
+```c++
+#ifdef VERBOSE
+static constexpr bool verbose = true;
+#else
+static constexpr bool verbose = false;
+#endif
+```
+
+Then if we add `-DVERBOSE` to our compilation options, the verbose flag will be set, otherwise it will be turned off.
