@@ -19,9 +19,9 @@ The lab assignments (on Coding Rooms) are released at 10am on Tuesdays and due a
 #### [Lab 04 - Functions](labs/lab04.html)
 
 #### [Lab 05 - Strings](labs/lab05.html)
-<!-- 
-#### [Lab 06 - Styling and Debugging](labs/lab06.html)
 
+#### [Lab 06 - Styling and Debugging](labs/lab06.html)
+<!-- 
 #### [Lab 07 - Vectors and Multi-File Compilation](labs/lab07.html)
 
 #### [Lab 08 - Generic Algorithms](labs/lab08.html)
