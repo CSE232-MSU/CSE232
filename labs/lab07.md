@@ -44,7 +44,7 @@ You can also use the `!!` command to re-execute the latest command.
 
 Sometimes, there are bash commands you always want to run before you get to work. Perhaps, you want your terminal to configure some settings, or tell you how much disk space is left on the computer. To make this easier, there are two config files that bash looks for (in your home directory).
 
-.bashrc is a bash script that runs everytime you invoke the `bash` command (example: `bash my_script.sh`) and when you login. .bash_profile is a script that runs when you login to your user account. Both of these are used to execute bash commands that set up your environment.
+You `.bashrc` file is a bash script that runs every time you invoke the `bash` command (example: `bash my_script.sh`) and when you login. Your `.bash_profile` file is a script that runs when you login to your user account. Both of these are used to execute bash commands that set up your environment.
 
 Your PATH is a list of directories that bash (or tcsh, which is the default on the lab computers) looks in when trying to run a command. Bash looks through every folder in the list (in order), trying to find a program named identically to your command input.
 
@@ -95,13 +95,13 @@ Remember this picture?
 If we are going to define a function in one file, and use that function in a separate main file, we are going to have to find a way to inform the main file about the _types_ of that function. That is, we have to tell the main file:
 - The function's name,
 - The type it returns,
-- And the types of the parameters
+- And the types of each parameter
 
 The _name_ of each parameter is unimportant. It can be given, changed in the main file, or left-out. All that matters is each parameter's _type_.
 
 If we tell the main file this information, that is enough for the C++ compiler to check that the function is being used correctly, and by "correctly", I mean that the main file is using all of the _types_ correctly in calling the function, even though it does not yet have the actual function _code_.
 
-Providing this information is the job of a **header file**. Header files are typically written with a ".hpp" or ".h" extension, and are used to indicate the type information for C++ elements (functions, classes, or some other C++ thing). This header file is used by the compiler to ensure that, whoever is using this function, they are at least using the types correctly. Thus, without the function itself, we can know that we followed the compiler rules and used the correct types.
+Providing this information is the job of a **header file**. Header files are typically written with a ".hpp" or ".h" extension, and are used to indicate the type information for C++ elements (functions, classes, or some other C++ thing). This header file is used by the compiler to ensure that, now matter who is using this function, they are at least using the types correctly. Thus, without the full function definition, we can know that we followed the compiler rules and used the correct types and thus we know that this function call can later be plugged into (or "linked to") the function body.
 
 ### Example
 
@@ -118,42 +118,44 @@ mkdir lab_vector
 Navigate your terminal to the folder, then, compile your three files with the following command:
 
 ```bash
-g++ -std=c++17 -Wall  *.cpp
+g++ -std=c++17 -Wall *.cpp
 ```
 
-This command will compile all (`*` means all, `*.cpp` means all files ending in .cpp) the .cpp files and build an executable.
+This command will compile all of the .cpp file (`*` means all, `*.cpp` means all files ending in .cpp) and build an executable.
 
 ### Some Warnings
 
-It's nice that the previous command compiles all of the files, but if you have too many files (like from different projects, or from things you were working on temporarily, etc.) it won't work. Instead, you can do it with a list of files. You can even name your executable using the `-o` flag, to be something other than the standard "a.out".
+It's nice that the previous command compiles all of the files, but if you have other .cpp files (like from different projects, or from things you were working on temporarily, etc.) it won't work. Instead, you must specify the list of files to use. You can even name your executable using the `-o` flag, to be something other than the default "a.out".
 
 ```bash
 g++ -std=c++17 -Wall file1.cpp file2.cpp file3.cpp -o namedExecutable.exe
 ```
 
-Something important to note, is that __we never compile header files__. All a header file provides is a list of declarations to be used by other files.
+Something important to note, is that __we never compile header files__ directly. Header files should only be used when they are included in .cpp files.
 
 ⭐ Show the TA that you downloaded the three files, compiled them, and successfully ran the executable.
 
 ### The Files
 
-extra.cpp defines the function, `extra()`, which will be used in the main.cpp program.
+The file extra.cpp defines the function, `extra()`, which will be used in the main.cpp program.
 
 extra.hpp is the header file. Notice that it only provides the declaration of the function. In the declaration, the names of the parameters are not required, only their types. **Note that the function declaration ends in a semicolon, don't forget!** There are some weird `#` statements, as you probably noticed. We'll get to those in a bit.
 
-main.cpp is the main program. Notice that it has the following statement in it:
+The main.cpp file sets up the main program. Notice that it has the following statement in it:
 
 ```c++
 #include "extra.hpp"
 ```
 
-This means that the main program is _including_ the declaration of the function so that the compiler may check the type use of `extra()` by main.cpp. Notice the quotes; when the `#include` expression uses quotes, it is assumed that the .hpp file is in the same directory as the other files. Include statements with angled-brackets (`<>`) denote the "standard include place" to the compiler. Since it is our own include file, we need to use quotes for it.
+This means that the main program is _including_ the declaration of the function so that the compiler may check the type use of `extra()` by main.cpp. Pay attention to the quotes; when the `#include` expression uses quotes, it is assumed that the .hpp file is in the same directory as the other files. Include statements with angled-brackets (`<>`) denote the "standard include place" to the compiler. Since it is our own include file, we need to use quotes for it.
 
 ### The `#` Symbol
 
-Anything beginning with `#` is part of the pre-processor. This controls aspects of how the compilation goes. In this case, we are trying to prevent a multiple definition error. What if we wanted to use `extra()` in more than one file? Your expectation is that every file that wants to use `extra()` should include the extra.hpp file for compilation to work, and you would be correct... sort of. Remember that you cannot declare a variable more than once, and the same goes for a function -- you should only declare it once. In making one executable from many files, it is possible that, by including extra.hpp in multiple files, we would declare the `extra()` function multiple times for this single executable, and C++ would complain. However, it would be weird to have to do this in some kind of order where only one file included extra.hpp, and the rest would have to assume it is available.
+Anything beginning with `#` is part of the C++ pre-processor. The pre-processor sets up the files before the regular compilation starts, often adding additional information.  The `#include` command, for example, takes the target file and places it into this file and then starts processing it, possibly including other files or following other pre-processor directives.
 
-The way around this involves the pre-processor. Basically, there are three statements we care about:
+The top of extra.hpp file starts with a comment and then has some pre-processor directives to prevent a multiple definition error. What do these do? Well, what if we wanted to use `extra()` in more than one file? Every file that uses `extra()` should include the extra.hpp file. However, you cannot declare a variable more than once, and the same is true for a function. If we have multiple includes in a file, and those files have includes, it is possible that we will including extra.hpp multiple times. But if the `extra()` function is declared multiple times in this single executable, C++ would complain.  Fortunately, there is a better solution than having to carefully craft our programs to ensure that each file is included only one.
+
+The way around this problem involves three pre-processor statements:
 
 ```c++
 #ifndef SOME_VARIABLE_NAME
@@ -170,7 +172,9 @@ This means: "if the pre-processor variable we indicate (`SOME_VARIABLE_NAME`) is
 
 Thus, whichever file pulls in the header file first, defines the pre-processor variable and declares the function for the entire compilation. If some other file also includes the header file later in the compilation, the pre-processor variable is already defined, so the declarations are not included.
 
-Of course, the simpler solution is to make use of the (not-yet-standardized) `#pragma once`. Your call.
+Of course, the simpler solution is to make use of `#pragma once`. Unfortunately this directive is not technically part of the C++ standard, so compilers are not guaranteed to know how to use it.  That said, all major modern C++ compilers do have it implemented properly.
+
+If you use the `SOME_VARIABLE_NAME` approach, you should make sure to use a consistent style for your project.  It is typically an all caps variable, the indicated the project or directory name and the filename that it is protecting.  This for extra.hpp we could have used something like `LAB_VECTORS_EXTRA_HPP`.
 
 ## Coding Assignment
 
@@ -207,7 +211,7 @@ void print_vector(ostream &out, vector<string> const &v)
 
 This function prints all the elements of `v` to the output stream, `out`. Note that `out` and `v` are passed by reference.
 
-Store the function in functions.cpp, and put its declaration in functions.hpp like you did for `split()`. **Don't forget the semicolon!**
+Store the function in functions.cpp, and put its declaration in functions.hpp like you did for `split()`. **Don't forget the semicolon!** at the end.
 
 Compile the function (not build, compile) to make sure it follows the rules.
 
@@ -233,3 +237,28 @@ Compile (not build) main.cpp to see that it follows the rules. If you've success
     - Example: a call to `getline(stream, line, delim)` gets the string from `stream` (could be an `istream`, `ifstream`, `istringstream`, etc.) up to the end of `line`, or the `delim` character.
 
 2. Default parameter values needs to be set at **declaration time**, which means that the default value for a function parameter should be in the header file (where the declaration is). If it is in the declaration, it should not be in the definition.
+
+## Honors Material - CSV Redux!
+
+In lab 05 we build a reader that could load a CSV file and print out a specific column.  For this lab, we're going to expand on that idea and write a program that will rotate a CSV file, swapping rows and columns.
+
+### Background
+
+In the previous section of this laboratory you worked with vectors that held a collection of strings. For this portion you are going to need to load in a whole table to data and output an inverted table.
+
+For example, if you loaded in a table of CSE 232 helproom hours, it might look like this:
+
+```csv
+Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
+"9-11am,5-9pm","9-11am,5-7pm","9-11am,5-7pm","9-11am,5-9pm","9-11am,5-7pm",5-7pm,5-7pm
+```
+
+As a proper table this would appear as:
+
+| Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
+| 9-11am,5-9pm | 9-11am,5-7pm | 9-11am,5-7pm | 9-11am,5-9pm | 9-11am,5-7pm | 5-7pm | 5-7pm |
+
+
+### Assignment
+
+### Trivia
