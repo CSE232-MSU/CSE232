@@ -244,7 +244,7 @@ In lab 05 we build a reader that could load a CSV file and print out a specific 
 
 ### Background
 
-In the previous section of this laboratory you worked with vectors that held a collection of strings. For this portion you are going to need to load in a whole table to data and output an inverted table.
+In the previous section of this laboratory you worked with vectors that held a collection of strings. For this portion you are going to need to load in a whole table to data and output an flipped table.
 
 For example, if you loaded in a table of CSE 232 helproom hours, it might look like this:
 
@@ -253,12 +253,50 @@ Monday,Tuesday,Wednesday,Thursday,Friday,Saturday,Sunday
 "9-11am,5-9pm","9-11am,5-7pm","9-11am,5-7pm","9-11am,5-9pm","9-11am,5-7pm",5-7pm,5-7pm
 ```
 
-As a proper table this would appear as:
+When converted to a proper table this would appear as:
 
 | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 | 9-11am,5-9pm | 9-11am,5-7pm | 9-11am,5-7pm | 9-11am,5-9pm | 9-11am,5-7pm | 5-7pm | 5-7pm |
 
+But wouldn't it look nicer if the days were in one column and the times were in a second?  To do that, we would need to flip the contents of the CSV file.
+
+Our goal would be to have the file look like this:
+
+```csv
+Monday,"9-11am,5-9pm"
+Tuesday,"9-11am,5-7pm"
+Wednesday,"9-11am,5-7pm"
+Thursday,"9-11am,5-9pm"
+Friday,"9-11am,5-7pm"
+Saturday,5-7pm
+Sunday,5-7pm
+```
+
+Or as a table:
+
+| Monday | 9-11am,5-9pm |
+| Tuesday | 9-11am,5-7pm |
+| Wednesday | 9-11am,5-7pm |
+| Thursday | 9-11am,5-9pm |
+| Friday | 9-11am,5-7pm |
+| Saturday | 5-7pm |
+| Sunday | 5-7pm |
+
+When considering how to implement a table flip, we first need to consider how to store a table in memory in C++  As it turns out, an `std::vector` can hold any type in it, including another `std::vector`.  So the type that you want to use for your tables is `std::vector<std::vector<std::string>>`.  Each entry is an std::string.  Each row is a vector of strings.  And then the table as a whole is a vector of vectors of string.
+
+Don't want to type that much?  In C++ you can use the `using` command to create a type alias.  For example, we can have:
+
+```c++
+using table_row_t = std::vector<std::string>;
+using table_t = std::vector<table_row_t>;
+```
+
+And thereafter, we can use the types on the left side (`table_row_t` and `table_t`) to represent the types on the right side.  And these new type names are even more informative for what we're trying to do with them.
 
 ### Assignment
+
+You will write three helper functions and a program that will flip a CSV file.
+
+The first helper function is 
 
 ### Trivia
