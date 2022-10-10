@@ -295,8 +295,107 @@ And thereafter, we can use the types on the left side (`table_row_t` and `table_
 
 ### Assignment
 
-You will write three helper functions and a program that will flip a CSV file.
+You will write three short functions that will help you load, flip, and print a CSV file.
 
-The first helper function is 
+First, I recommned (but don't require) a helper function like:
+
+```c++
+std::vector< std::string > AsRow(const std::string & line_str);
+```
+
+Note that if you have the `using` statements above, you could equivalently write this function as:
+
+```c++
+table_row_t AsRow(const std::string & line_str);
+```
+
+The AsRow() function would have one parameter: a line from the input file.  It would return a vector of strings, one for each entry in the provided table row.  As with lab 5, you should ignore commas inside of quotes when determining an entry.  To be fair to those of you who didn't complete the honors portion of lab 5, here is a function that takes as parameters a string (representing a line from a CSV file) and a position in that string where an entry starts.  It returns the position of the end of that entry.
+
+```c++
+size_t FindEntryEnd(const std::string & line_str, size_t test_pos) {
+  // Scan characters until we hit end-of-line or a comma, indicating end.
+  while (test_pos < line_str.size() && line_str[test_pos] != ',') {
+    if (line_str[test_pos] == '"') {  // Skip over quotes.
+      test_pos = line_str.find("\"", test_pos+1);
+      if (test_pos == std::string::npos) return line_str.size();
+    }
+    test_pos++;
+  }
+  return test_pos;
+}
+```
+
+You are welcome to use this function, but not required to.
+
+The first required function to write in this lab is:
+
+```c++
+std::vector<std::vector<std::string>> ReadTable();
+```
+
+or more simply:
+
+```c++
+table_t ReadTable();
+```
+
+This function should read in a CSV file from `std::cin` and output it as a vector of table rows (where each table row is a vector of stings)
+
+Next, you should write:
+
+```c++
+std::vector<std::vector<std::string>> FlipTable(const std::vector<std::vector<std::string>> & table);
+```
+
+Which has the substantial simplification to:
+
+```c++
+table_t FlipTable(const table_t & table);
+```
+
+This function should read in a table as its parameter, flip the rows and columns of the table, and output the result.
+
+Finally you should write a function to print out the resulting table:
+
+```c++
+void PrintTable(const std::vector<std::vector<std::string>> & table);
+```
+
+or simply
+
+```c++
+void PrintTable(const table_t & table);
+```
+
+As expected, this function should output the resulting table (with properly placed commas!) to `std::cout`.
+
+You should also have a main file that reads in the table from `std::cin` and outputs it to `std::cout`.  Something like this would work fine:
+
+```c++
+int main() {
+  auto flipped_table = FlipTable(ReadTable());
+  PrintTable(flipped_table);
+}
+```
 
 ### Trivia
+
+The `using` keyword in C++ is quite versatile.  It allows us to not just more easily use type names from other files, but also to shorten type names that can sometimes become very long.  These uses of `using` were new with the 2011 C++ standard.  Before that, a slightly more limited form of this same power was available with the keyword `typedef`.  You may still see `typedef` in older code (or newer code written by older coders).  It looked lot more like you were declaring a variable.  For example, we might have:
+
+```c++
+typedef std::vector<std::string> table_row_t;
+```
+
+One feature that the `using` command has that isn't available with `typedef` is the ability to have template parameters (you'll learn more about those soon), allowing for more types of simplifications.
+
+Imagine that we wanted to create a matrix types, which was like a vector, but two dimensional.  A simple way of doing this is to say that a matrix is simply a vector of vector or a given type.  How could we create this with a `using` command?
+
+```c++
+temlplate<typename T>
+using matrix = std::vector<std::vector<T>>;
+```
+
+Now, whenever we type `matrix<std::string>`, that would be the same as typing out `std::vector<std::vector<std::string>>`.  But if we want a more traditional matrix of floating-point values, we could just as easily create `matrix<double>`.
+
+
+templated using
