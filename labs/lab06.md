@@ -522,7 +522,7 @@ This function should take in the password you give it and score it based on the 
 * It has at least one uppercase English letter
 * It has at least one digit
 * It has at least one special character from the set `!@#$%^&*()`
-* It meats ALL of the previous four criteria in at least two different ways (i.e, two different lower letters AND two different upper letters AND two different digits AND two different special characters)
+* It meets ALL of the previous four criteria in at least two different ways (i.e, two different lower letters AND two different upper letters AND two different digits AND two different special characters)
 
 The score starts at zero and each bullet point it hits gives a +1, for a maximum score of 6.
 
