@@ -240,7 +240,7 @@ Compile (not build) main.cpp to see that it follows the rules. If you've success
 
 ## Honors Material - CSV Redux!
 
-In lab 05 we build a reader that could load a CSV file and print out a specific column.  For this lab, we're going to expand on that idea and write a program that will rotate a CSV file, swapping rows and columns.
+In lab 05 we build a reader that could load a CSV file and print out a specific column.  For this lab, we're going to expand on that idea and write a program that will rotate a CSV file, swapping rows and columns.  To do so, we are going to need to learn a bit more about vectors.
 
 ### Background
 
@@ -297,7 +297,7 @@ And thereafter, we can use the types on the left side (`table_row_t` and `table_
 
 You will write three short functions that will help you load, flip, and print a CSV file.
 
-First, I recommned (but don't require) a helper function like:
+First, I recommend (but don't require) a helper function like:
 
 ```c++
 std::vector< std::string > AsRow(const std::string & line_str);
@@ -373,8 +373,10 @@ You should also have a main file that reads in the table from `std::cin` and out
 
 ```c++
 int main() {
-  auto flipped_table = FlipTable(ReadTable());
+  table_t input_table = ReadTable();
+  table_t flipped_table = FlipTable(input_table);
   PrintTable(flipped_table);
+  return 0;
 }
 ```
 
