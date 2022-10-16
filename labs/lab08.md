@@ -26,6 +26,14 @@ This can be used in other contexts beyond compilation. Let's say you have a fold
 mv *.h headers/
 ```
 
+Another wildcard is `?`, which you can use to represent exactly one character.  For example, in the directory above you could type
+
+```bash
+ls ????.cpp
+```
+
+And it would list any file with exactly four characters before the '.cpp'.  In this case, it would show you "main.cpp" and "disk.cpp", but leave out both "io.cpp" (because it is too short) and "stack.cpp" (because it is too long.)
+
 ⭐ Show your TA what happens when you use wildcards to open multiple '.cpp' files with the `gedit` command.
 
 ## Debugging with Visual Studio Code
@@ -46,7 +54,7 @@ This lab will have you apply generic algorithms to various programming problems.
 
 ### Program Specifications
 
-Write definitions for the four functions described below. You are to not use any loops (for-loops or while-loops). Instead, you must use generic algorithms from the `<algorithm>` and `<numeric>` headers.
+Write definitions for the four functions described below. You are to not use any loops (for-loops or while-loops). Instead, you must use generic algorithms from the `<algorithm>` and `<numeric>` headers.  We will automatically reject code with "for" or "while" in it, so make sure not to include these words even in comments. (You can just add a space or some other character, so "// Search f_or multiples of two" would be fine.)
 
 &nbsp;
 
@@ -64,20 +72,20 @@ A pair "passes" if the grade is greater than or equal to 600 points.
 // alphabetic order within partition
 // Note: the grades are the number of points earned (600 points earns a passing grade)
 std::vector<std::pair<std::string, int>> v2 {
-    {"josh", 851},
+    {"imen", 851},
     {"mark", 600},
     {"charles", 412},
     {"sebnem", 1000},
     {"abdol", 905},
-    {"imen", 300}
+    {"josh", 300}
 };
 std::vector<std::pair<std::string, int>> w2 { 
     {"abdol", 905}, 
-    {"josh", 851}, 
+    {"imen", 851}, 
     {"mark", 600}, 
     {"sebnem", 1000},  // Everyone after this point failed
     {"charles", 412}, 
-    {"imen", 300}
+    {"josh", 300}
 };
 
 PassOrFail(v2);
@@ -94,8 +102,8 @@ void ShiftRange(vector<int> &v, int left, int right)
 Given a vector of ints, `v`, sorts the vector and moves all elements within the range [`left`, `right`] to the end of the vector.
 
 ```c++
-// given (a vector of ints, and ints "left", and "right"), sort the vector, rotate all numbers in the range
-// [left,right] to end of vector
+// given (a vector of ints, and int values "left", and "right"), sort the vector, rotate all numbers in the
+// range [left,right] to end of vector
 std::vector<int> v1 = {13, 22, 4, 5, 3, 11, 16, 25, 7};
 std::vector<int> w1 = {3, 4, 5, 7, 22, 25, 11, 13, 16};
 // Notice that 11, 13, 15 (the values between 10 and 20 are moved to the end)
@@ -139,3 +147,11 @@ assert(result == 22);
 &nbsp;
 
 ⭐ Show the TA your completed set of functions. 
+
+## Honors Material - Build your own Generic Algorithm
+
+### Background
+
+### Assignment
+
+### Trivia
