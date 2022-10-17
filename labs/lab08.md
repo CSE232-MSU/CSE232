@@ -150,8 +150,94 @@ assert(result == 22);
 
 ## Honors Material - Build your own Generic Algorithm
 
+The functions that you have written so far this semester have parameter types that involve inputting regular data, be it numbers, strings, vectors, or the like.  As it turns out, you can also pass one function as an argument into another.  You've explored calling such generic functions in the non-honors portion of this lab.  Here you will write such a function.
+
 ### Background
+
+If you `#include <functional>` in your code, you will have access to `std::function` which allows you to save functions as variables (along with a host of other cool function helpers).  For consider the following program:
+
+```c++
+#include <functional>
+#include <iostream>
+
+int Add(int x, int y) { return x + y; }
+int Sub(int x, int y) { return x - y; }
+
+int main() {
+  // Create a function variable and set it to the function Add()
+  std::function<int(int,int)> my_fun = Add;
+
+  // Run our function variable an output the result
+  std::cout << my_fun(10,7) << std::endl;
+
+  // Change our function variable to the Sub() function.
+  my_fun = Sub;
+
+  // Exact same line of code as a above, but outputs new result!
+  std::cout << my_fun(10,7) << std::endl;
+}
+```
+
+The `std::function` template takes the function signature as a return type.  In the example above, we were looking for a function that had two ints as parameters and returned an int, so its type is `int(int,int)`.  You can setup a function signature however you like, but it must be specified in the template parameter for any function variable.
+
+Notice that the first output line above runs Add() on 10 and 7, thus it outputs the sum of those numbers, a `17`.
+However, once we changed the `my_fun` variable to be equal to Sub(), running it again output `3` (10 minus 7 instead of 10 plus 7).
+
+Just like other variable types, you can use std::function as a parameter on another function.  Let's imagine you have a program where you are working with collections of words that you store as `std::vector<std::string>`.  You might want to have a function that applied a function to every character in a string.  It might look like:
+
+```c++
+std::string Convert(const std::string & str, std::function<char(char)> fun) {
+  std::string out_str;
+  for (char x : str) out_str.push_back(fun(x));
+  return out_str;
+}
+```
+
+We can then easily use Convert() to write our own functions that transform every letter in a string.  For example:
+
+```c++
+std::string ToLower(const std::string & str) {
+  return Convert(str, [](char x){ return std::tolower(x); });
+}
+```
+
 
 ### Assignment
 
+You will write a "PlayNim" function that will determine which of two players wins the Subtraction version of the game [https://en.wikipedia.org/wiki/Nim#The_subtraction_game](Nim).  The way this game works is that two players start with a pile of N coins.  On a player's turn, they must take at least 1 coin from the pile and may take up to K coins.  The player who is forced to take the last coin loses.
+
+Your function should have four parameters.
+
+1. The function to control player 0
+2. The function to control player 1
+3. An `int` indicating N, the number of coins in the starting pile
+4. An `int` indicating K, the maximum number of coins a player can take on their turn.
+
+The player control functions should each have type `int(int,int)`.  The two parameters indicate the number of coins remaining in the pile and the largest move allowed.  The returned int should indicate the number of coins remaining after their move.
+
+Your function should play out the game and return either a 0 or a 1 to indicate the winning player.  A player wins if they force their opponent to take the last coin OR if their opponent makes an illegal move (for example, taking too many coins).
+
 ### Trivia
+
+Templates interact well with generic functions, especially if you don't know all of the types ahead of time.  For example, the `std::for_each()` algorithm steps through a container applying a function to it.  If we had a string called `in_str` and we wanted to transform every character in that string to lowercase, we could use the existing C++ Standard Library algorithm:
+
+```c++
+  std::for_each(
+    in_str.begin(),
+    in_str.end(),
+    [](char & x){ return x = std::tolower(x); }
+  );
+```
+
+The one thing that some people don't like about `std::for_each` (or various other standard algorithms, for that matter) is that you always need to provide begin and end iterators -- you can't just pass in the entire container that you want to work with.
+
+What if we wanted to have our own version -- let's call it `ForEach()` -- and we wanted it to take a container for the first argument, not iterators.  We could write it like this as:
+
+```c++
+template <typename CONTAINER_T, typename FUNCTION_T>
+auto ForEach(CONTAINER_T & c, FUNCTION_T fun) {
+  for (auto & x : c) fun(x);
+}
+```
+
+We don't need to know the container type or anything about the function type -- we let the template figure those out.  We let the for-loop step through the container and trust that the function that was passed in can take the container elements as arguments.
