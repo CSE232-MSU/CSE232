@@ -125,7 +125,6 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>2022-10-24</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab08.html">Lab 08</a></td>
-            <td>Lab 08</td> 
             <td>No Homework (Break Days)</td>
             <td>Homework 11</td>
             <td>Due to the Break Days, Tuesday Labs will complete this lab during the week of Thanksgiving. No Tuesday Labs this week. The asynchronous lab will be due the week of Thanksgiving.</td>

@@ -4,6 +4,14 @@ title: Exam Policies
 
 # Exam Policies
 
+## Midterm Exam Details
+
+Time:
+- Lab Sections 1-5: Tuesday, 2022-11-01 @ 7-9pm
+- Lab Sections 6-9 and 730: Wednesday, 2022-11-02 @ 10am-noon
+
+Location: <https://msu.zoom.us/j/94955751228>
+
 
 <!-- ## Final Review Session
 
