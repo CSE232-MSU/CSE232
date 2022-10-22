@@ -398,6 +398,3 @@ using matrix = std::vector<std::vector<T>>;
 ```
 
 Now, whenever we type `matrix<std::string>`, that would be the same as typing out `std::vector<std::vector<std::string>>`.  But if we want a more traditional matrix of floating-point values, we could just as easily create `matrix<double>`.
-
-
-templated using
