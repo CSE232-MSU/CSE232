@@ -161,3 +161,118 @@ double magnitude()
 Takes the magnitude of the `MathVector` instance. Returns `double`.
 
 ⭐ Show the TA your completed `MathVector` class.
+
+## Honors Material - Building a Custom Command-Line Parser
+
+C++ objects should be designed to be intuitive to use.  They might do complex work inside of them, but the interface should look simple.  In this lab, we are going to build a C++ struct that will take care of processing command line arguments for us.
+
+### Background
+
+In multiple previous labs, we have written command-line applications where our main function began with:
+
+```c++
+int main(int argc, char * argv[]) { ... }
+```
+
+While this provides us with a way to access the command line arguments, it is not always intuitive to use.  In fact, this interface was first defined for the C language in the 1960's.  We can't change it directly, but what we can do is build our own arg manager on top of it to make command-line arguments easier to work with. Specifically, we would like our main functions to look like:
+
+```c++
+int main(int argc, char * argv[]) {
+  ArgManager args(argc, argv);
+  ...
+}
+```
+
+Afterward we should be able to just use `args` for all of our needs, and it should have a more intuitive interface.
+
+### Assignment
+
+Write the `ArgManager` struct.  It should have a constructor that takes in `argc` and `argv` as well as a series of other member functions.  These should include:
+
+* `const std::string & GetExeName()` should return the name of the executable being run, which is normally found at `argv[0]`.
+
+* `int GetNumArgs()` should return the number of arguments provided to the executable.  The value returned should NOT count the executable name.
+
+* `bool Has(const std::string & arg_name)` should return `true` if `arg_name` was one of the arguments passed in on the command line, false otherwise.
+
+* `std::vector<std::string> GetArgs()` should return a vector of all of the arguments passed in (not including the name of the executable).
+
+* `std::vector<std::string> GetFlagArgs()` should return a vector of all of the arguments passed in that begin with a dash (i.e., the character '-').
+
+* `std::vector<std::string> GetNonFlagArgs()` should return a vector of all of the arguments passed in that do not begin with a dash.
+
+
+Now use this new struct to build a program that takes in arguments from the command line and prints back out all of the non-flag arguments, one per line.  By default, it should print the arguments in the same order that they appeared on the command line.
+
+For example, if we call the executable `echo_args`, we would expect:
+```bash
+./echo_args these are my args
+```
+to output
+```
+these
+are
+my
+args
+```
+
+You should also implement two flags.  The `-s` flag should make your program sort the arguments before printing.  So,
+```bash
+./echo_args -s these are my args
+```
+would give us
+```
+are
+args
+my
+these
+```
+
+Next, the `-l` flag should make your program print the length of each arg after it.  So,
+```bash
+./echo_args -l these are my args
+```
+would give us
+```
+these 5
+are 3
+my 2
+args 4
+```
+
+The flags are allowed to come anywhere in the argument list and can be combined, so
+```
+./echo_args here are another -l set of possible -s arguments
+```
+would give us
+```
+another 7
+are 3
+arguments 9
+here 4
+of 2
+possible 8
+set 3
+```
+
+Note that it is both sorted and annotated with length since both flags were present.
+
+
+### Trivia
+
+In the first part of this lab you built a two-value MathVector struct along with a series of member functions that you can use for mathematical operations.  As it turns out, C++ gives you the ability to override the built-in mathematical operators when you build a new class.  So if you had MathVectors `vec1` and `vec2`, rather than running `vec1.add(vec2)` you could be able to simply write the much more intuitive `vec1 + vec2`.
+
+Mathematical operations are overloaded simply by creating a member function with a special name.  For example, if you wanted to overload the operators for the functions you have already written in MathVector class, you could add to the class definition:
+
+```c++
+MathVector operator+(const MathVector & other) { return add(other); }
+int operator*(const MathVector & other) { return mult(other); }
+MathVector operator*(int other) { return mult(other); }
+```
+In fact, you can even set up an automatic conversion to strings.
+
+```c++
+operator std::string() { return vec_to_str(*this); }
+```
+
+Now you would be able to pass a MathVector into any function that required an `std::string` as its parameter and the MathVector would be automatically converted.  Note, in regards to this implementation, that you can always use the keyword `this` in a member function to get a pointer to the object that the function is being run on.  Dereferencing that points (i.e., `*this`) will give you the object itself.
