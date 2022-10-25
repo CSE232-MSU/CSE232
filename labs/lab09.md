@@ -183,7 +183,7 @@ int main(int argc, char * argv[]) {
 }
 ```
 
-Afterward we should be able to just use `args` for all of our needs, and it should have a more intuitive interface.
+Afterward we should be able to just use `args` for all of our needs, and it should have a more useful and intuitive interface.
 
 ### Assignment
 
@@ -191,20 +191,26 @@ Write the `ArgManager` struct.  It should have a constructor that takes in `argc
 
 * `const std::string & GetExeName()` should return the name of the executable being run, which is normally found at `argv[0]`.
 
-* `int GetNumArgs()` should return the number of arguments provided to the executable.  The value returned should NOT count the executable name.
+* `bool Has(const std::string & arg_name)` should return `true` if `arg_name` was one of the arguments passed in on the command line, false otherwise.  This function will often be used to determine if a flag is present.
 
-* `bool Has(const std::string & arg_name)` should return `true` if `arg_name` was one of the arguments passed in on the command line, false otherwise.
+* `std::vector<std::string> GetFlagArgs()` should return a vector of all of the arguments passed in that begin with a dash (i.e., the character '-'), in the original order.
 
-* `std::vector<std::string> GetArgs()` should return a vector of all of the arguments passed in (not including the name of the executable).
+* `std::vector<std::string> GetNonFlagArgs()` should return a vector of all of the arguments passed in that do not begin with a dash, in the original order.  Note that you should not include the executable name in the return vector.
 
-* `std::vector<std::string> GetFlagArgs()` should return a vector of all of the arguments passed in that begin with a dash (i.e., the character '-').
+If we name our ArgManager object `args`, we call our executable `echo_args` (you will see why below), and we run it with the line:
+```bash
+./echo_args -i abc def -L ghi
+```
 
-* `std::vector<std::string> GetNonFlagArgs()` should return a vector of all of the arguments passed in that do not begin with a dash.
+then:
+* `args.GetExeName()` should return the string "./echo_args"
+* `args.Has("-i")` should return true, while `args.Has("not_there")` should return false.
+* `args.GetFlagArgs()` should return a vector of strings with two values in it, "-i" and "-L".
+* `args.GetNonFlagArgs()` should return a vector of strings with three values in it, "abc", "def", and "ghi".
 
+Now use this new struct to build a program that takes in arguments from the command line and prints back out all of the non-flag arguments, one per line.  By default, it should print the non-flag arguments in the same order that they appeared on the command line.
 
-Now use this new struct to build a program that takes in arguments from the command line and prints back out all of the non-flag arguments, one per line.  By default, it should print the arguments in the same order that they appeared on the command line.
-
-For example, if we call the executable `echo_args`, we would expect:
+For example, we would expect:
 ```bash
 ./echo_args these are my args
 ```
@@ -255,8 +261,9 @@ possible 8
 set 3
 ```
 
-Note that it is both sorted and annotated with length since both flags were present.
+Note that this output is both sorted and annotated with length since both flags were present.
 
+Your program should silently ignore any other flags that it doesn't know how to deal with.
 
 ### Trivia
 
