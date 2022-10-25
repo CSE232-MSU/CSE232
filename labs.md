@@ -26,9 +26,9 @@ The lab assignments (on Coding Rooms) are released at 10am on Tuesdays and due a
 
 #### [Lab 08 - Generic Algorithms](labs/lab08.html)
 
-<!-- 
 #### [Lab 09 - Structs](labs/lab09.html)
 
+<!-- 
 #### [Lab 10 - Git Version Control](labs/lab10.html)
 
 #### [Lab 11 - More on Classes](labs/lab11.html)
