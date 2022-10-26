@@ -133,7 +133,6 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>2022-10-31</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week09.html">Week 09</a></td>
 	    <td><a href="https://cse232-msu.github.io/CSE232/labs/lab09.html">Lab 09</a></td>
-            <td>Lab 09</td> 
             <td>Homework 12</td>
             <td></td>
             <td>Midterm Exam: see <a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Exam Policies</a> for details.</td>
