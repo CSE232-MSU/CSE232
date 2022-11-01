@@ -15,7 +15,7 @@ Now is the time to ask questions and hear from your TA. You are also welcome to 
 ### Introduction to Version Control with git and GitHub
 One of the most important tools every software developer uses on a daily basis is version control.
 Version control is software that can track and share changes to a code base (repository) with others.
-"git" is the most popular of the version control systems and GitHub the most popular online host for git repositories.  
+"git" is the most popular of the version control systems and GitHub is the most popular online hosting site for git repositories.  
 
 For this part of the lab, both partners will do all the tasks.
 
@@ -87,6 +87,183 @@ Once you have improved your solution, you can add, commit, and push those change
 Without teaching you quite a bit more about how it works, it can be difficult to know how to fix certain problems.
 But if your local repo is giving you trouble, one easy fix is to clone a new copy of the repo from GitHub and work with that one (make sure to copy and commit any changed files from the old repo before deleting it).
 
+## Honors Material - Understanding the Preprocessor
+
+We frequently make use of the C++ preprocessor, such as using `#include` in every program.  In the past we've also talked about `#define` (to set values at compile time) and `#ifdef` (for include guards).  In this lab we will get a deeper understanding of the preprocessor and build our own function-like macro.
+
+### Background
+
+Macros are often considered the black magic of C++.  You can do amazing things with them that would otherwise not be possible in the language, but if you mess up you will get errors that are nearly indecipherable.  For that reason it is good to know how they work and what you can do with them (especially if you see them in other people's code), but you want to use them only when you don't have another good option.  You have been warned!
+
+The preprocessor follows an entirely different set of rules from regular C++.  It actively ignores the C++ code as it processes the file, and only the output from the preprocessor is compiled as C++ code.  This means that you can choose to include or exclude code based on the preprocessor (as we've seen) as well as build or change code.
+
+A simple macro in the preprocessor says that every time you see a specified label, replace it with the code that follows.  For example, if I have code like
+
+```c++
+#define INSTRUCTOR Charles Ofria
+```
+
+Any time it sees the label "INSTRUCTOR" anywhere in the file, it will pluck it out and replace it with "Charles Ofria".  Normally, choosing different labels is best done using proper C++, but there are a handful of time when these replacements come in handy.  For example, when I want to load your C++ main.cpp file to test functions in it, but don't want to have two copies of the `main()` function, I might do something like this at the beginning of my code:
+
+```c++
+#define main student_main_function
+#include "main.cpp"
+#undef main
+```
+
+This code says: every time you see the label `main` in the code, replace it with `student_main_function` instead.  Then (on the second line) load the student's main file.  Finally (on the third line) remove this macro so that I can create my own main function.
+
+A more interesting form of macro is called the "function-like macro".  In these cases, the macro can actually take arguments that it uses throughout the code.
+
+For a _bad_ example of what is possible, you can have a macro like this:
+
+```c++
+#define SUM(X,Y) X+Y
+```
+
+Every time it sees the label "SUM" in your code it will expect it to be followed by parentheses with two arguments.  It will replace that entire section with the first argument, a plus sign, and the second argument (again, without knowing what this code actually does.)  So, if you have `SUM(10,15)` in your code, it would change this code to `10+15` instead.  That part will work perfectly.  Then why did I call this a bad example above?
+
+Two reasons:
+
+1. It will look like `SUM(10,15)` is a single operation, but in fact it's just a text replacement, and one that can go wrong.  For example, if you had in your code `5 * SUM(10,15)` you would expect it to evaluate to 5*(10+15) or 125.  But, in fact, the pre-processor doesn't know any math - it just does text replacement.  So this statement would become `5 * 10+15`.  The order-of-operations in C++ would dictate that multiplication comes first, and this would evaluate to the unintuitive result of `65`.  Of course, this problem could be fixed by adding parentheses around the result; that is, changing the macro to `#define SUM(X,Y) (X+Y)`.  But that still leaves...
+
+2. Any time it is possible to do the exact same thing using proper C++, that is going to be the better idea since C++ will be able to give you more meaningful errors and do proper type checking.  In this case, you could simply have written the function:
+
+```c++
+template<typename T>
+constexpr T SUM(T x, T y) { return x+y; }
+```
+
+Making this function a template ensures it can take any types and making it constexpr ensures that it can be run at compile time.  It will give you the same, correct result as the macro, PLUS more logical errors if you use it incorrectly.
+
+So when would we want to use macros?  Well, one important answer is *debugging*.
+
+The preprocessor has a few important options to know about.  First, there are a handful of reserved labels that it uses.  For example, __FILE__ is always set to be the name of the file it is in (as a string) and __LINE__ is always the line number that you are currently on.  (Note that you should never use two consecutive underscores in names you define; they are all reserved by the compiler.)
+
+Try putting this line inside the main() function of one of your programs to see it in action:
+
+```c++
+std::cout << "This command is in the file " << __FILE__ << " at line #" << __LINE__ << std::endl;
+```
+
+How could you use this in a macro in practice?  Let's imagine you want to write your own assert command to make sure that a statement is true.  It might look like this:
+
+```c++
+#define my_assert(X) if (!X) std::cerr << "Assert failed on line " << __LINE__ << " of " << __FILE__ << std::endl;
+```
+
+You might worry that the `__LINE__` and `__FILE__` are in the `#define` statement, but in fact they won't be filled in until the define is used and the text is put in its final place.  As such your assert will have the correct information.
+
+Try it; put the following code in your main after the #define above:
+
+```c++
+  my_assert(2+2 == 5);
+```
+
+This looks useful.  But for an assert to be valuable, we would want a handful of extra qualities:
+1. We want it to print the command that failed the assert.
+2. We don't want the `#define` line to get much too long.
+3. We want the assert to stop the program from executing if it's tripped.
+4. It might be nice if the assert gave a more meaningful error message.
+
+Fortunately, all of these issues are solvable in the preprocessor.
+
+For issue #1, it turns out that we can put an extra # sign in front of any macro variable (the for example, X in the macro above) in order to turn it into a string.  So if `2+2 == 5` were passed into the macro as X, then `#X` would be the literal string `"2+2 == 5"`.  That's easy to print.
+
+For issue #2, if we put a backslash ('\') as the last character on a #define line, it will merge the next line into it.  We can have as many lines as we want in our macro definition and they all get chained together in the code.
+
+For issue #3, we can use the `abort()` command (defined in `<cstdlib>`) to immediately halt execution if the assert fails.
+
+For issue #4, we simply need to add an extra argument to the macro that takes the message that we want to print.
+
+Taking into account all three of these issues, let's look at our new macro:
+
+```c++
+#include <cstdlib>
+
+#define my_assert(TEST, MESSAGE)                                \
+  if (!TEST) {                                                  \
+    std::cerr << "Error on line " << __LINE__ << " of "         \
+              << __FILE__ << ": " << MESSAGE << std::endl       \
+              << "  failed assertion: " << #TEST << std::endl;  \
+    abort();                                                    \
+  }
+```
+
+There's actually quite a bit more we could do to improve the functionality of an assert (in fact, see the Trivial section below!), but this definition should give you a good idea of the possibilities.
+
+If you want to see it working, consider the function `Reciprocal(double val)` that should return `1/val`, but should never be called with val equal to zero.
+
+```c++
+double Reciprocal(double val) {
+  my_assert(val != 0.0, "Reciprocal of 0.0 is not allowed.");
+  return 1.0/val;
+}
+```
+
+We can test it with:
+
+```c++
+int main() {
+  std::cout << Reciprocal(5.0) << std::endl;    // Output "0.2".
+  std::cout << Reciprocal(0.05) << std::endl;   // Output "20".
+  std::cout << Reciprocal(0.0) << std::endl;    // Abort with error!
+  std::cout << Reciprocal(0.001) << std::endl;  // Aborted on previous line.
+}
+```
+
+You should get output something like this:
+
+```
+0.2
+20
+Error on line 14 of example.cpp: Reciprocal of 0.0 is not allowed.
+  failed assertion: val != 0.0
+bash: abort      ./a.out
+```
+
+
+### Assignment
+
+There are many ways that macros can be useful for debugging.  In the example code above, we built a simple assert using a function-like macro.  For this assignment you will build a macro called DEBUG_VALUE().
+
+This macro should take as an input an expression.  It should then generate c++ code that will output the filename it is in, the line number, and expression itself (remember to convert it to a string), and its current value.  This should be done in the output format shown below.
+
+For example, if we had:
+
+```c++
+int main() {
+  int x = 13;
+  int y = 4;
+  int z = x*y;
+  DEBUG_VALUE(z);
+  DEBUG_VALUE(x*y+5);
+}
+```
+
+If main() occurs at line 10 of the file (after includes and macro definition), then your macro should generate code that will cause the program to output:
+
+```
+In main.cpp (line 14): 'z' evaluates to 52.
+In main.cpp (line 15): 'x*y+5' evaluates to 57.
+```
+
+Make sure that you can pass all of the test cases on coding rooms.
+
+
+### Trivia
+
+The assert function described above is very useful, but I mentioned that there is more we could do to improve the functionality.  What else might we want in an assert message?
+
+Here are a few specific features:
+
+1. A mechanism to deactivate all asserts. While asserts are useful to ensure that code is being used corrects (e.g., legal arguments are passed into functions, and legal results are being returned), they also do cost CPU cycles to evaluate.  We will often want our code to have both a "debug" mode and a "release" mode of some kind.  In the case of the standard `assert()` macro defined in `<assert.h>` for C++, it tests if NDEBUG ("no debug") has been defined; if so it does not actually test the provided condition.  (Note that asserts should be deactivated only once the code as a whole has been excessively well tested and performance is now more important than additional testing.)
+
+2. No new warnings when asserts are deactivated.  Some variables may be used only in an assert statement.  When NDEBUG is activated, the simplest implementation would be to simply not have the macro output any code at all.  But then any variables used exclusively in the assert would be labeled as "unused variables".  It would be nice if the compiler could be made to recognize that these variables should not, in fact, trigger such a warning.  A common way of implementing this features is if NDEBUG is set, assert tests are put inside of a `sizeof()` statement.  The `sizeof()` is supposed to return the number of bytes needed to hold the result of the statement, but doesn't actually calculate that result.
+
+3. More information about the variables used.  While it is very useful to know when an assert it tripped, we currently need to then go into a debugger in order to find out the specific values that were involved.  For example, if we had an assert fail that read `assert(angle >= 0.0 && angle < 360.0)`, we might look for a very different error if we knew that angle was equal to 360.0 (i.e., just above the range) as opposed to -1699387.1329 (a completely impossible number.)  While it is tricky to work with macros that take a variable number of arguments, it is possible, and those additional arguments can be printed along side their current values.
+
+All of these features are possible in more sophisticated assert implementations.
 
 <!--
 
