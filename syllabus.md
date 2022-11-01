@@ -127,7 +127,7 @@ For example, if a student was previously earning a 4.0, but missed 4 labs, then 
 
 ### Homework
 
-A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 30 points. There will be 18 assignments given, but only the top 15 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 450 points from the homework assignments.
+A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 30 points. There will be 18 assignments given, but only the top 15 assignments will count toward your point total (the three lowest-scoring assignments will be dropped). Thus, you can earn a total of 450 points from the homework assignments.
 
 ### Re-Grades
 

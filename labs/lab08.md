@@ -204,7 +204,7 @@ std::string ToLower(const std::string & str) {
 
 ### Assignment
 
-You will write a `PlayNim` function that will determine which of two players wins the Subtraction version of the game [https://en.wikipedia.org/wiki/Nim#The_subtraction_game](Nim).  The way this game works is that two players start with a pile of N coins.  On a player's turn, they must take at least 1 coin from the pile and may take up to K coins.  The player who is forced to take the last coin loses.
+You will write a `PlayNim` function that will determine which of two players wins the Subtraction version of the game [Nim](https://en.wikipedia.org/wiki/Nim#The_subtraction_game).  The way this game works is that two players start with a pile of N coins.  On a player's turn, they must take at least 1 coin from the pile and may take up to K coins.  The player who is forced to take the last coin loses.
 
 Your function should have four parameters.
 
