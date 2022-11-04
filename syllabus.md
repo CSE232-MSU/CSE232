@@ -6,6 +6,8 @@ title: Syllabus
 
 Fall Semester, 2022
 
+<!-- Be sure to add back in the language about 50% on exams. -->
+
 ## General Information
 
 ### Course Description
