@@ -1,4 +1,4 @@
-\0;95;0c---
+---
 title: Home
 ---
 
@@ -141,7 +141,6 @@ Links to lecture videos, projects, and other materials will be made available as
             <td>2022-11-07</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week10.html">Week 10</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/labs/lab10.html">Lab 10</a></td>
-            <td>Lab 10</td> 
             <td></td>
             <td>Project 02 Due</td>
             <td></td>
