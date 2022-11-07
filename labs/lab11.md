@@ -15,18 +15,18 @@ Here are the flags you should already be comfortable with:
 *   `-c` - This flag instructs the compiler to compile all your .cpp files, but not link them together (see Week 01).
 *   `-o filename` - This flag instructs the compiler to make a file named `filename` with the executable compiled program (instead of the default `a.out`).
 *   `-Wall` - This flag instructs the compiler to warn about as many potential erroneous code elements as possible (useful for beginners).
-*   `-std=c++17` - This instructs the compiler to use a particular version of the C++ language (you can use 11, 14, etc. in the place of 17).
-*   `-g` - This flag instructs your compiler to include debugging information in the compiled program for use by `gdb`.
+*   `-std=c++17` - This instructs the compiler to use a particular version of the C++ language (you can use 11, 14, 20, etc. in the place of 17).
+*   `-g` - This flag instructs your compiler to include debugging information in the compiled program for use by `gdb`.  This will slow your program down, but is critical for effective debugging of code.
 
 And here are some new ones:
 
-*   `-O1` - This flag enables various code optimizations that allow your program to run faster, without a large increase in time to compile.
-*   `-O2` - This flag enables various code optimizations that allow your program to run faster, but may increase the time needed to compile.
-*   `-O3` - This flag is similar to `-O2`, but with even more extreme optimizations and possibly very long compilations.
+*   `-O1` - This flag enables various code optimizations that allow your program to run faster, without a notable increase in time to compile.  (Note, this is the same as using just -O without a number)
+*   `-O2` - This flag enables more code optimizations that allow your program to run faster.  It may increase the time needed to compile you code, but will not notably increase the amount of memory required to run.
+*   `-O3` - This flag is similar to `-O2`, but with even more extreme optimizations and possibly long compilations and a larger memory footprint.
 *   `-Ofast` - This flag is allows optimizations that aren't necessarily allowed by the standards set forth by the C++ language committee. This is where experimental optimizations are used by those who want speed at all costs.
-*   `-Os` - This flag instructs the compiler to optimize for size instead of speed. It is often useful if you need to run your program on embedded computers with limited memory.
+*   `-Os` - This flag instructs the compiler to prioritize size over speed in optimizations. It is often useful if you need to run your program on embedded computers with limited memory.
 *   `-Wextra` - This flag instructs the compiler to add additional warnings for bad code (even more than `-Wall`).
-*   `-Wpedantic` - This flag instructs the compiler to add additional warnings for code that doesn't comply with the strict C++ language definition (useful if you want your code to be compiled by other compilers).
+*   `-Wpedantic` - This flag instructs the compiler to add additional warnings for code that doesn't comply with the strict C++ language definition, even if g++ knows how to compile it (useful if you want your code to be compiled by other compilers).
 
 ⭐ Copy-and-paste the following code into a file, and show your TA the output when you compile it with more warnings than what `-Wall` checks for.
 
@@ -55,7 +55,7 @@ The header for the Table class has the following private elements:
 
 ```c++
  private:
-  std::vector<std::vector<int>> t_;  // 2D vector of long
+  std::vector<std::vector<int>> t_;  // 2D vector of int
   int width_;                        // how wide is t_ (how many columns)
   int height_;                       // how high is t_ (how many rows)
 ```
@@ -106,7 +106,7 @@ Sets a particular element at location (`x`, `y`) to `val`. If `x` or `y` are out
 int GetValue(int x, int y) const;
 ```
 
-Returns the value at location (`x`, `y`) of `t_` if those two indices exist. If the indices are out-of-range of the available `t_` indices, throw an `out_of_range` error.
+Returns the value at location (`x`, `y`) of `t_` if those two indices exist. If the indices are out-of-range of the available `t_` indices, throw an `out_of_range` exception.
 
 &nbsp;
 
@@ -141,3 +141,152 @@ Correct!
 Although, your random values may be different, if you are compiling locally.
 
 ⭐ Show the TA your completed `Table` class.
+
+## Honors Material - Measuring Code Performance (and Sorting!)
+
+This week's lab you will learn how to compare the run speed for different possible implementations of code, and learn how to conduct these experiments.  In our examples we will use sorting algorithms, so let's start by talking a bit about sorting.
+
+
+### Background: Sorting
+
+When talking about code efficiency, the most common type of algorithmic problem to talk about (as you'll learn in CSE 331) is sorting.  The idea behind the sorting problem is simple and intuitive: If you have a container of elements (lets say a vector of ints for our example), how do you put those elements in order?  Typically we want the order to be from the smallest element to the largest.
+
+One of the simplest sorting algorithms is called "Selection Sort".  This repeatedly finds the smallest unsorted value remaining and puts it next in sorted order; when there are no values remaining, selection sort is done.  Here is an example of what selection sort looks like on a vector of int in C++:
+
+```c++
+void SelectionSort(std::vector<int> & vals) {
+  // Fill in positions one at a time.
+  for (auto next_it = vals.begin(); next_it < vals.end(); ++next_it) {
+    // Scan of the minimal value remaining and put it in place.
+    auto min_it = std::min_element(next_it, vals.end());
+    std::swap(*next_it, *min_it);
+  }
+}
+```
+
+Much more complex algorithms are also possible.  For example, a popular algorithm is called "Merge Sort".  It works off of the idea that sorting long lists of numbers takes MUCH longer than shorter lists, so it would be faster to just sort short lists and merge them together.  In fact, `<algorithm>` already gives us `std::inplace_merge()` which we can use to do the job.
+
+```c++
+void MergeSort(std::vector<int> & vals, size_t start, size_t end) {
+  size_t sort_size = end - start;
+  if (sort_size <= 1) return;          // 0 or 1 element is already sorted!
+  size_t midpoint = (start + end) / 2;
+  MergeSort(vals, start, midpoint);    // Sort first half
+  MergeSort(vals, midpoint, end);      // Sort second half
+  std::inplace_merge(vals.begin()+start, vals.begin()+midpoint, vals.begin()+end);
+}
+```
+
+If we want mergesort to be callable with just the vector as an argument, we can create an overloaded version of it.
+
+```c++
+void MergeSort(std::vector<int> & vals) { MergeSort(vals, 0, vals.size()); }
+```
+
+You should try both of these algorithms out and make sure you can sort some data.
+
+Great -- now we have two different sorting algorithms that work, how do we tell which one is faster?
+
+
+### Background: Measuring time in C++
+
+The C++ Standard Library provides a variety of techniques for examining the current time.  A simple way to measure how long a function takes to run is to record the time, run the function, and then record the time again.
+
+For example, if we have a function called `Octazooka()` and we want to time it, we can include `<chrono>` and then run:
+
+```c++
+    auto start_time = std::chrono::steady_clock::now();
+    Octazooka();
+    auto end_time = std::chrono::steady_clock::now();
+    std::chrono::duration<double> elapsed_seconds = end_time-start_time;
+    std::cout << "Run time: " << elapsed_seconds.count() << "s" << std::endl;
+```
+
+The code above shows you how to measure time in C++, but you still need to make sure to do the proper measurements.  For example, if a function takes a vector as an argument, how large should that vector be?  What data should it contain?  If you are sorting, what would happen if the input data is already sorted, versus randomized?
+
+
+### Assignment
+
+For this assignment you will write code to conduct measurements.  NOTE: Substantial starter code is available on Coding Rooms; in addition to the functions shown here, there are also the helper functions `PrintVector()` to print a vector (limiting it to the first *N* entries, since some of these vectors will be large) and `MakeRandomVector()` which will generate a `vector<int>` of a desired size, filled with random values between 0 and two billion.
+
+__Step 1__: Write a function called `TimeSort()` that takes two arguments: a sort function and a int _N_ that indicates how many values it should be tested on.  It should then return the time (in seconds) that the function took to run.  It's signature should be:
+
+```c++
+using sort_fun_t = std::function< void(std::vector<int> &) >;
+double TimeSort(sort_fun_t fun, int N);
+```
+
+Make sure that you time how long it takes for the sort to run, but do not include the time to generate the random vector.  Also, remember that you need to include `<functional>` to have access to `std::function`.
+
+__Step 2__: Compare the SelectionSort() and MergeSort() functions above using your new timing function.  Which one is faster?  Make sure to test it on a range of values, including 10 values, 1000 values, and 100,000.
+
+__Step 3__:  Write a second function called `AnalyzeSort()`.  This one should take as an argument a single sort function.  It should test that sort function first with one value, then 10, then 100, each time multiplying _N_ by 10 and recording the run time in a vector.  Stop as soon as sort takes more than 0.1 seconds and return the vector or run times.
+
+Use your new function to analyze SelectionSort() and print the results.  How far does it get?  Is each timing approximately 10x the previous, or is it much slower than that?  Now do the same analysis for MergeSort()?
+
+
+⭐ Show the TA your comparison times (or answer the associated questions in the Honors lab).
+
+
+### Trivia
+
+While selection sort and merge sort are two very popular sorting techniques, the two most common are insertion sort and quick sort.
+
+In the "Insertion Sort" algorithm, items in a container are considered one at a time and are sequentially placed into sorted order.
+
+```c++
+void InsertionSort(std::vector<int> & vals) {
+  // Make each value as 'key' and put it into sorted position.
+  for (int key_id = 1; key_id < vals.size(); ++key_id) {
+    const int key = vals[key_id];  // Grab current key value
+
+    // Shuffle elements down making room for the key.
+    int test_id = key_id - 1;      // Scan from element before key
+    while (key < vals[test_id] && test_id >= 0) {
+      vals[test_id + 1] = vals[test_id];
+      --test_id;
+    }
+    vals[test_id + 1] = key;       // Put the key in place.
+  }
+}
+```
+
+This algorithm is relatively quick to implement and a similar speed to selection sort on random inputs.  It's real advantage comes when inputs are almost sorted already -- it is one of the fastest algorithms for minor adjustments like that.  Try it out!
+
+The fastest of the standard algorithms is called "Quick Sort".  It works by picking an element to use as a pivot point for a partition.  All of other values less than the pivot are placed before it and all other values are placed after it, leaving the pivot in it's correct sorted position.  The Quicksort Algorithm is then run recursively on the values before the pivot and on the values after the pivot.
+
+To begin with, we need a partition algorithm that takes a vector of values, the start position, the end position, and the pivot value.  Everything less than the pivot is moved to the beginning of the partition, leaving everything else at the end.  The new pivot position is then returned.
+
+```c++
+size_t Partition(std::vector<int> & vals, size_t start, size_t end, int pivot) {
+  size_t divide_pos = start;
+  for (size_t id = start; id < end; ++id) {
+    if (vals[id] < pivot) {
+      std::swap(vals[divide_pos], vals[id]);
+      divide_pos++;
+    }
+  }
+  return divide_pos;
+}
+```
+
+We can then use Partition() as a key element of QuickSort:
+
+```c++
+void QuickSort(std::vector<int> & vals, size_t start, size_t end) {
+  size_t sort_size = end - start;
+  if (sort_size <= 1) return; // 0 or 1 elements means already sorted.
+  int pivot = vals.at(start);
+  size_t middle = Partition(vals, start, end, pivot);
+  QuickSort(vals, start, middle);
+  QuickSort(vals, middle+1, end);
+}
+```
+
+And, of course, we want to overload Quicksort() so that we can call it with just the vector that we want to sort.
+
+```c++
+void QuickSort(std::vector<int> & vals) { QuickSort(vals, 0, vals.size()); }
+```
+
+If you want to try out this one too, you may be impressed at how fast it is.
