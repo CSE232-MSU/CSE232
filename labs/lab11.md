@@ -252,7 +252,7 @@ void InsertionSort(std::vector<int> & vals) {
 
 This algorithm is relatively quick to implement and a similar speed to selection sort on random inputs.  It's real advantage comes when inputs are almost sorted already -- it is one of the fastest algorithms for minor adjustments like that.  Try it out!
 
-The fastest of the standard algorithms is called "Quick Sort".  It works by picking an element to use as a pivot point for a partition.  All of other values less than the pivot are placed before it and all other values are placed after it, leaving the pivot in it's correct sorted position.  The Quicksort Algorithm is then run recursively on the values before the pivot and on the values after the pivot.
+The fastest of the standard algorithms is called "Quick Sort".  It works by picking an element to use as a pivot point for a partition.  All of other values less than the pivot are placed before it and all other values are placed after it, leaving the pivot in it's correct sorted position.  The QuickSort Algorithm is then run recursively on the values before the pivot and on the values after the pivot.
 
 To begin with, we need a partition algorithm that takes a vector of values, the start position, the end position, and the pivot value.  Everything less than the pivot is moved to the beginning of the partition, leaving everything else at the end.  The new pivot position is then returned.
 
@@ -272,20 +272,20 @@ size_t Partition(std::vector<int> & vals, size_t start, size_t end, int pivot) {
 We can then use Partition() as a key element of QuickSort:
 
 ```c++
-void QuickSort(std::vector<int> & vals, size_t start, size_t end) {
+void QuickSort_Range(std::vector<int> & vals, size_t start, size_t end) {
   size_t sort_size = end - start;
   if (sort_size <= 1) return; // 0 or 1 elements means already sorted.
   int pivot = vals.at(start);
   size_t middle = Partition(vals, start, end, pivot);
-  QuickSort(vals, start, middle);
-  QuickSort(vals, middle+1, end);
+  QuickSort_Range(vals, start, middle);
+  QuickSort_Range(vals, middle+1, end);
 }
 ```
 
-And, of course, we want to overload Quicksort() so that we can call it with just the vector that we want to sort.
+And, of course, we want to setup QuickSort() so that we can call it with just the vector that we want to sort.
 
 ```c++
-void QuickSort(std::vector<int> & vals) { QuickSort(vals, 0, vals.size()); }
+void QuickSort(std::vector<int> & vals) { QuickSort_Range(vals, 0, vals.size()); }
 ```
 
 If you want to try out this one too, you may be impressed at how fast it is.
