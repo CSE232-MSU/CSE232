@@ -167,20 +167,19 @@ void SelectionSort(std::vector<int> & vals) {
 Much more complex algorithms are also possible.  For example, a popular algorithm is called "Merge Sort".  It works off of the idea that sorting long lists of numbers takes MUCH longer than shorter lists, so it would be faster to just sort short lists and merge them together.  In fact, `<algorithm>` already gives us `std::inplace_merge()` which we can use to do the job.
 
 ```c++
-void MergeSort(std::vector<int> & vals, size_t start, size_t end) {
-  size_t sort_size = end - start;
+void MergeSort_Range(std::vector<int> & vals, int start, int end) {
+  int sort_size = end - start;
   if (sort_size <= 1) return;          // 0 or 1 element is already sorted!
-  size_t midpoint = (start + end) / 2;
-  MergeSort(vals, start, midpoint);    // Sort first half
-  MergeSort(vals, midpoint, end);      // Sort second half
+  int midpoint = (start + end) / 2;
+  MergeSort_Range(vals, start, midpoint);    // Sort first half
+  MergeSort_Range(vals, midpoint, end);      // Sort second half
   std::inplace_merge(vals.begin()+start, vals.begin()+midpoint, vals.begin()+end);
 }
-```
 
-If we want mergesort to be callable with just the vector as an argument, we can create an overloaded version of it.
-
-```c++
-void MergeSort(std::vector<int> & vals) { MergeSort(vals, 0, vals.size()); }
+// Full merge sort starts with the entire vector as the range.
+void MergeSort(std::vector<int> & vals) {
+  MergeSort_Range(vals, 0, vals.size());
+}
 ```
 
 You should try both of these algorithms out and make sure you can sort some data.
@@ -209,18 +208,18 @@ The code above shows you how to measure time in C++, but you still need to make 
 
 For this assignment you will write code to conduct measurements.  NOTE: Substantial starter code is available on Coding Rooms; in addition to the functions shown here, there are also the helper functions `PrintVector()` to print a vector (limiting it to the first *N* entries, since some of these vectors will be large) and `MakeRandomVector()` which will generate a `vector<int>` of a desired size, filled with random values between 0 and two billion.
 
-__Step 1__: Write a function called `TimeSort()` that takes two arguments: a sort function and a int _N_ that indicates how many values it should be tested on.  It should then return the time (in seconds) that the function took to run.  It's signature should be:
+__Step 1__: Write a function called `TimeSortFunction()` that takes two arguments: a sort function and a int _N_ that indicates how many values it should be tested on.  It should then return the time (in seconds) that the function took to run.  It's signature should be:
 
 ```c++
 using sort_fun_t = std::function< void(std::vector<int> &) >;
-double TimeSort(sort_fun_t fun, int N);
+double TimeSortFunction(sort_fun_t fun, int N);
 ```
 
 Make sure that you time how long it takes for the sort to run, but do not include the time to generate the random vector.  Also, remember that you need to include `<functional>` to have access to `std::function`.
 
 __Step 2__: Compare the SelectionSort() and MergeSort() functions above using your new timing function.  Which one is faster?  Make sure to test it on a range of values, including 10 values, 1000 values, and 100,000.
 
-__Step 3__:  Write a second function called `AnalyzeSort()`.  This one should take as an argument a single sort function.  It should test that sort function first with one value, then 10, then 100, each time multiplying _N_ by 10 and recording the run time in a vector.  Stop as soon as sort takes more than 0.1 seconds and return the vector or run times.
+__Step 3__:  Write a second function called `AnalyzeSortFunction()`.  This one should take as an argument a single sort function.  It should test that sort function first with one value, then 10, then 100, each time multiplying _N_ by 10 and recording the run time in a vector.  Stop as soon as sort takes more than 0.1 seconds and return the vector or run times.
 
 Use your new function to analyze SelectionSort() and print the results.  How far does it get?  Is each timing approximately 10x the previous, or is it much slower than that?  Now do the same analysis for MergeSort()?
 
