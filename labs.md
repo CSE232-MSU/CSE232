@@ -32,9 +32,9 @@ The lab assignments (on Coding Rooms) are released at 10am on Tuesdays and due a
 
 #### [Lab 11 - More on Classes](labs/lab11.html)
 
-<!-- 
 #### [Lab 12 - Templates and 2D Vectors](labs/lab12.html)
 
+<!-- 
 #### [Lab 13 - Pointer Manipulation](labs/lab13.html)
 
 #### [Lab 14 - Last Lab](labs/lab14.html) -->
