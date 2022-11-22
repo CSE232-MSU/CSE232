@@ -170,7 +170,7 @@ Fortunately, all of these issues are solvable in the preprocessor.
 
 For issue #1, it turns out that we can put an extra # sign in front of any macro variable (the for example, X in the macro above) in order to turn it into a string.  So if `2+2 == 5` were passed into the macro as X, then `#X` would be the literal string `"2+2 == 5"`.  That's easy to print.
 
-For issue #2, if we put a backslash ('\') as the last character on a #define line, it will merge the next line into it.  We can have as many lines as we want in our macro definition and they all get chained together in the code.
+For issue #2, if we put a backslash ('\\') as the last character on a #define line, it will merge the next line into it.  We can have as many lines as we want in our macro definition and they all get chained together in the code.
 
 For issue #3, we can use the `abort()` command (defined in `<cstdlib>`) to immediately halt execution if the assert fails.
 
