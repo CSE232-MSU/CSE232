@@ -247,6 +247,7 @@ public:
   void AddWord(const std::string word) { words.push_back(word); }
   const std::vector<std::string> & GetWords() const { return words; }
   int GetVersion() const { return version; }
+  size_t size() const { return words.size(); }
 };
 ```
 
@@ -274,6 +275,7 @@ public:
   }
 
   const WordList & GetWordList() const { return *words_ptr; }
+  WordList * GetWordsPtr() { return words_ptr; }
 
   // Operator += can be used to add a word to the WordList
   Lexicon & operator+=(const std::string & word) {
