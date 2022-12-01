@@ -79,7 +79,7 @@ None of the Rule of Three functions have been implemented. If you have the time,
 
 Before jumping into the methods, I would make the default and one-parameter constructors.
 
-Listed below are the methods you'll want to implement. I recommend designing these methods in the order they appear down this list.
+Listed below are the methods you need to implement. I recommend designing these methods in the order they appear down this list.
 
 &nbsp;
 
@@ -105,7 +105,7 @@ I recommend modifying 'main.cpp' to show that your method works before moving on
 
 &nbsp;
 
-The next task on our list is the `del()` method (we can't call it `delete()`, since `delete` is a keyword ☹️). `del()` should remove a particular value from the list. Before you write any code, identify all of the cases your list might have to deal with. Type them as comments under the `del()` method.
+The next task on our list is the `del()` method (we can't call it `delete()`, since `delete` is a keyword in C++ ☹️). `del()` should remove a particular value from the list. Before you write any code, identify any edge cases your list might have to deal with. Type them as comments under the `del()` method.
 
 ⭐ Show the TA your working `append_back()` and `operator<<()` functions. And, show your TA all of the cases `del()` must account for before moving on.
 
@@ -135,3 +135,7 @@ You'll have to search the list (starting from the `head_` pointer) for the `inde
 ### What if I didn't finish?
 
 This lab is designed to prepare you for later CSE courses, especially CSE 331, Algorithms and Data Structures. If you didn't finish the lab (asynchronously or synchronously), we strongly recommend completing it own your own. As incentive, there will be at least one final exam question on the material from this lab specifically. 
+
+## Honors Material
+
+For this one lab, there will not be separate honor's material.  The baseline project is challenging and Honors students are expected to complete it.
