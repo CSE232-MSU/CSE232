@@ -302,4 +302,4 @@ But what if you know for sure that you will never use an lvalue again and you wa
 std::string new_string( std::move(old_string) );
 ```
 
-will move the contents of `old_string` into `new_string`, but you really need to be careful; if you try to use `new_string` again, you would be triggering undefined behavior.  None-the-less, for sizable classes these techniques can result in a substantial speed up.
+will move the contents of `old_string` into `new_string`, but you really need to be careful; if you try to use `old_string` again, you would be triggering undefined behavior.  None-the-less, for sizable classes these techniques can result in a substantial speed up.
