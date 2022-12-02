@@ -134,8 +134,10 @@ You'll have to search the list (starting from the `head_` pointer) for the `inde
 
 ### What if I didn't finish?
 
-This lab is designed to prepare you for later CSE courses, especially CSE 331, Algorithms and Data Structures. If you didn't finish the lab (asynchronously or synchronously), we strongly recommend completing it own your own. As incentive, there will be at least one final exam question on the material from this lab specifically. 
+This lab is designed to prepare you for later CSE courses, especially CSE 331, Algorithms and Data Structures. If you didn't finish the lab (asynchronously or synchronously), we strongly recommend completing it own your own. As incentive, there will be at least one final exam question on the material from this lab specifically.
+
+The lab has 120 points of tests on it, but for normal lab credit, you need to earn only 100 points.  This scoring system means that the final four test cases can be failed without penalty.
 
 ## Honors Material
 
-For this one lab, there will not be separate honor's material.  The baseline project is challenging and Honors students are expected to complete it.
+For this one lab, there will not be separate honor's material.  The baseline project is sufficiently challenging and Honors students are expected to complete the full project, earning all 120 points worth of test cases.
