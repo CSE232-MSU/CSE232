@@ -1,7 +1,7 @@
 ---
 title: Coding Rooms Setup
 ---
-
+<!-- 
 # Coding Rooms Setup
 
 Coding Rooms is the grading platform that we use in CSE 232 to submit work, grade your assignments and show examples. It is a required part of the class. And although I wish it was free, it costs $15. Please note that if your payment isn't processed (which can take up to 5 days) by the Add/Drop deadline, you will not be able to view or submit assignments. This will likely result in you failing those assignments, so please don't delay.  
@@ -38,3 +38,4 @@ Student payment refund will only be granted to students who have paid, but decid
 *   Course Name: Michigan State University - CSE 232
 
 Request for refund will result in immediate course access restrictions.
+ -->
