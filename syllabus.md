@@ -4,9 +4,7 @@ title: Syllabus
 
 # Syllabus
 
-Fall Semester, 2022
-
-<!-- Be sure to add back in the language about 50% on exams. -->
+Spring Semester, 2023 (WIP)
 
 ## General Information
 
@@ -32,7 +30,7 @@ All students (regardless of section) are allowed to attend a synchronous Zoom la
 If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom synchronous lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
 
 ## Course Materials
-- $15 Payment to Coding Rooms ([see here](coding_rooms_setup.html))
+<!-- - $15 Payment to Coding Rooms ([see here](coding_rooms_setup.html)) -->
 - Recommended (but not required) textbook:
     - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
 - You must have a desktop or laptop capable of running Zoom and screen-sharing.
@@ -53,7 +51,7 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
 
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Coding Rooms assignment by Friday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Saturday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
 ## Communication
 
@@ -111,6 +109,8 @@ A total of 1000 points can be accrued over the course of the semester. There wil
     </table>
 </div>
 
+* In order to recieve a passing grade (greater than a 0.0), you will need to earn at least 50% of the cumulative points associated with exams. Please ensure you prepare for exams accordingly.
+
 ### Exams
 
 There will be a midterm and a final exam. The midterm is worth 100 points, and the final is worth 150 points.
@@ -140,7 +140,7 @@ We are often generous when we first grade something, so please be sure that we d
 To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you can attend Section 9 (Honors Lab Section) if you are enrolled in that section and earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Coding Rooms. You can fail to earn honors lab credit up to two times and still be awarded an H-option. Additionally you will need to:
 - Be enrolled in the Honors Lab Section (09).
 - Or, fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
-    - In the description of the work you will do, state: "I will complete at least 12 additional honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
+    - In the description of the work you will do, state: "I will complete at least 11 honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
 - Earn a 3.5 or 4.0 in the course.
 
 The Honors Lab Assignments are not worth any points, nor are they extra credit. The only benefit they can provide is the opprotunity to earn an H-option for students enrolled in the Honors College.
@@ -173,13 +173,13 @@ There is one exception to the above policy: labs. The lab assignments are intend
 
 A goal of this course is to teach professionalism. Any instance of academic dishonesty will be viewed as evidence that this goal has not been achieved, and will be grounds for receiving a final grade of 0.0. Examples of academic dishonesty include (but are not limited to):
 
-- Copying another student's code or exam answers.
+- Copying another person's code or exam answers.
 - Using code implemented by someone else intended to solve this class' assignments (i.e., don't get someone else to do the assignment for you).
 - Using code independently implemented by someone else without attributing credit (i.e., you can use tools, libraries, or code snippets from the web, but only with proper citation).
 - Writing code that deceptively passes the test cases, but doesn't solve the problem given. In other words, abusing automatic grader mechanisms to gain unearned points (hard-coding).
 - Using sources whose purpose is to provide assignment solutions (e.g. Chegg, YahooAnswers).
 - Distributing course content without instructor permission.
-- Having another person that isn't an instructor or TA aid you in implementing a solution to an assignment.
+- Having another person that isn't an instructor or TA aid you in implementing a solution to an assignment. Tutors are not allowed to assist you on graded material.
 - Submitting a solution that you don't understand / can't explain to an instructor.
 - Using assignment solutions provided to a previous iteration of this course.
 - Providing false information to the instructor about matters related to the course.
