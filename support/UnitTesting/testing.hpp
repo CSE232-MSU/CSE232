@@ -9,6 +9,7 @@
 #ifndef CSE232_UNIT_TESTING
 #define CSE232_UNIT_TESTING
 
+#include <fstream>
 #include <sstream>
 #include <string>
 #include <vector>
@@ -83,9 +84,18 @@ namespace cse232 {
     struct CaseInfo {
       std::string name;            // Unique name for this test case.
       double points = 0.0;         // Number of points this test case is worth.
+      std::string filename;        // What file is this test case in?
+      size_t line_num;             // What line number is this test case at?
       bool hidden = false;         // Should this test case be seen by students?
 
       std::vector<CheckInfo> checks;
+
+      bool Passed() const {
+        for (const auto & check : checks) {
+          if (!check.passed) return false;
+        }
+        return true;
+      }
     };
 
     // The set of all test cases being conducted.
@@ -102,8 +112,15 @@ namespace cse232 {
     Detail hidden_detail = Detail::SUMMARY;
     Detail public_detail = Detail::NORMAL;
 
+    std::string student_filename = "";
+    std::string grade_filename = "";
+    std::ofstream student_file;
+
     // Destructor will indicate that the unit testing is done an any summary data need to be printed.
     ~UnitTester() {
+      // Close the final test case.
+      CloseTestCase(100000);
+
       // Loop through test cases.
       double total_points = 0.0;
       double earned_points = 0.0;
@@ -134,6 +151,13 @@ namespace cse232 {
       }
 
       std::cout << "\nFinal Score: " << earned_points << " / " << total_points << std::endl;
+
+      // If a grade_filename is specified, write just the final grade to it.
+      if (grade_filename != "") {
+        std::ofstream of(grade_filename);
+        of << earned_points << std::endl;
+        of.close();
+      }
     }
 
     // Get the current open test case; create a default case if none exist.
@@ -199,9 +223,52 @@ namespace cse232 {
       template <typename T2> bool operator>=(const T2 & rhs_v) { return Resolve(lhs_v >= rhs_v, rhs_v); }
     };
 
+    // When a new test case is started (or the unit tester is closing down) signal that the most recent
+    // test case needs to be closed so that it can be wrapped up.
+    void CloseTestCase(size_t end_line) {
+      // Skip if there are no test cases yet, we're not printing student info.
+      if (test_cases.size() == 0 || !student_file) return;
+
+      CaseInfo & case_info = test_cases.back();
+      // Notify if the test passed.
+      if (case_info.Passed()) {
+        student_file << "Test case <span style=\"color: green\"><b>Passed!</b></span><br><br>\n\n";
+      }
+
+      // Otherwise failed cases will already have an error noted unless hidden.
+      else if (case_info.hidden) {
+        student_file << "Test case <span style=\"color: red\"><b>Failed.</b></span><br><br>\n";
+      }
+
+      // If the test case failed and is not hidden, print it.
+      if (case_info.Passed() == false && !test_cases.back().hidden) {
+        student_file << "Source (starting from line " << case_info.line_num
+                     << "):<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
+        std::ifstream source(case_info.filename);
+        std::string line;
+        size_t line_num = 0;
+
+        // Skip beginning of file.
+        while (++line_num < case_info.line_num) std::getline(source, line);
+        while (++line_num < end_line && std::getline(source, line) && line[0] != '}') {
+          student_file << line << "\n";
+        }
+        student_file << "</pre></tr></table>\n";
+      }
+    }
     
-    CaseInfo & AddTestCase(const std::string & name, double points) {
-      test_cases.push_back(CaseInfo{name, points});
+    CaseInfo & AddTestCase(
+      const std::string & name,
+      double points,
+      const std::string & filename,
+      size_t line_num)
+    {
+      CloseTestCase(line_num-1);  // End the previous test case here.
+      if (student_file) {
+        student_file << "<h3>" << name << " (" << points << " points)</h3>\n";
+      }
+
+      test_cases.push_back(CaseInfo{name, points, filename, line_num});
       return test_cases.back();
     }
 
@@ -266,6 +333,31 @@ namespace cse232 {
     void PrintCheckResults() {
       CaseInfo & case_info = GetCase();
       CheckInfo & check = GetCheck();
+
+      // If we are working with a student file, print any failed test cases there.
+      if (!case_info.hidden && student_file && !check.passed) {
+        // Show the failed code.
+        student_file
+          << "<p>Check <span style=\"color: red\"><b>FAILED</b></span> (line " << check.line_num << "):<br>\n"
+          << "Test: <code>" << check.test << "</code><br><br>\n";
+
+        // If there was a comparison, show results on both sides of it.
+        if (check.rhs != "") {
+          student_file
+            << "<table><tr><td>Left side:<td><code>" << check.lhs << "</code><td>&nbsp;&nbsp;resolves to:<td><code>"
+            << check.lhs_value << "</code></tr>\n"
+            << "<tr><td>Right side:<td><code>" << check.rhs << "</code><td>&nbsp;&nbsp;resolves to:<td><code>"
+            << check.rhs_value << "</code></tr></table><br>\n";
+
+          // student_file
+          //   << "&nbsp;&nbsp;Left side: <code>" << check.lhs << "</code>&nbsp;&nbsp;&nbsp;resolves to: <code>"
+          //   << check.lhs_value << "</code><br>\n"
+          //   << "&nbsp;&nbsp;Right side: <code>" << check.rhs << "</code>&nbsp;&nbsp;&nbsp;resolves to: <code>"
+          //   << check.rhs_value << "</code><br><br>\n";
+
+        }
+      }
+
       Detail detail = case_info.hidden ? hidden_detail : public_detail;
       switch (detail) {
       case Detail::NORMAL:
@@ -319,15 +411,15 @@ namespace cse232 {
 
 
 /// Start a new test case with the given number of points.
-#define TEST_CASE(NAME, POINTS) {                    \
-    auto & unit_tester = cse232::GetUnitTester();    \
-    unit_tester.AddTestCase(NAME, POINTS);           \
+#define TEST_CASE(NAME, POINTS) {                              \
+    auto & unit_tester = cse232::GetUnitTester();              \
+    unit_tester.AddTestCase(NAME, POINTS, __FILE__, __LINE__); \
   }
 
 /// Start a new test case with the given number of points.
-#define HIDDEN_TEST_CASE(NAME, POINTS) {                 \
-    auto & unit_tester = cse232::GetUnitTester();	       \
-    unit_tester.AddTestCase(NAME, POINTS).hidden = true; \
+#define HIDDEN_TEST_CASE(NAME, POINTS) {                                     \
+    auto & unit_tester = cse232::GetUnitTester();	                           \
+    unit_tester.AddTestCase(NAME, POINTS, __FILE__, __LINE__).hidden = true; \
   }
 
 /// A single CHECK within a unit test.  If additional arguments are included
@@ -344,5 +436,11 @@ namespace cse232 {
   cse232::GetUnitTester().hidden_detail = cse232::UnitTester::Detail::LEVEL
 #define SET_PUBLIC_DETAIL(LEVEL) \
   cse232::GetUnitTester().public_detail = cse232::UnitTester::Detail::LEVEL
+
+#define SET_GRADE_FILE(FILENAME) cse232::GetUnitTester().grade_filename = FILENAME
+#define SET_STUDENT_FILE(FILENAME)                    \
+  auto & unit_tester = cse232::GetUnitTester();       \
+  unit_tester.student_filename = FILENAME;            \
+  unit_tester.student_file.open(FILENAME)
 
 #endif
