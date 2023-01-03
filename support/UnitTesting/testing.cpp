@@ -7,4 +7,10 @@
 int main()
 {
   std::cout << "Testing." << std::endl;
+
+  TEST_CASE("Simple Tests", 10.0);
+
+  size_t x = 5;
+  size_t y = 8;
+  CHECK(x + 2 < y+1);
 }
