@@ -47,7 +47,7 @@ All lectures are distributed via pre-recorded videos available each week on the 
 
 Lab section 1-9 will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online. 
 
-The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistant to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
+The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistants to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
 
 You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
 
@@ -113,13 +113,13 @@ A total of 1000 points can be accrued over the course of the semester. There wil
 
 ### Exams
 
-There will be a midterm and a final exam. The midterm is worth 100 points, and the final is worth 150 points.
+There will be a three synchronous exams, each worth 100 points. A midterm exam after the midpoint of the semester, a lab practical which will take place in lab the last week of instruction, and a final exam during finals week. Details regarding each will be announced as the dates approach.
 
 ### Projects
 
-There will be 3 projects over the course of the semester, contributing a total of 300 points to your final grade. Each project will be due at 10 PM on a Thursday. The projects will include the design and implementation of solutions using C++. Project submission and grading will be done via Coding Rooms.
+There will be 3 projects over the course of the semester, each worth 100 points. The projects will include the design and implementation of solutions using C++.
 
-All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
+All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance, specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
 
 ### Labs
 
@@ -129,7 +129,7 @@ For example, if a student was previously earning a 4.0, but missed 4 labs, then 
 
 ### Homework
 
-A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 30 points. There will be 18 assignments given, but only the top 15 assignments will count toward your point total (the three lowest-scoring assignments will be dropped). Thus, you can earn a total of 450 points from the homework assignments.
+A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 20 points. There will be 22 assignments given, but only the top 20 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 400 points from the homework assignments.
 
 ### Re-Grades
 
@@ -140,14 +140,14 @@ We are often generous when we first grade something, so please be sure that we d
 To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you can attend Section 9 (Honors Lab Section) if you are enrolled in that section and earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Coding Rooms. You can fail to earn honors lab credit up to two times and still be awarded an H-option. Additionally you will need to:
 - Be enrolled in the Honors Lab Section (09).
 - Or, fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
-    - In the description of the work you will do, state: "I will complete at least 11 honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
+    - In the description of the work you will do, state: "I will complete at least 12 honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
 - Earn a 3.5 or 4.0 in the course.
 
 The Honors Lab Assignments are not worth any points, nor are they extra credit. The only benefit they can provide is the opprotunity to earn an H-option for students enrolled in the Honors College.
 
 ## Extensions
 
-Make-ups for examinations may be arranged if your absence is caused by a documented illness or personal emergency. A written explanation (including supporting documentation) must be submitted to your lecture instructor; if the explanation is acceptable, an alternative to the examination will be arranged. When possible, make-up arrangements should be completed in advance.
+Make-ups for examinations may be arranged if your absence is caused by a documented illness or personal emergency. A written explanation (including supporting documentation) must be submitted to your lecture instructor via Piazza; if the explanation is acceptable, an alternative to the examination will be arranged. When possible, make-up arrangements should be completed in advance.
 
 A student who is unable to complete an assignment by the specified due date because of illness or a personal emergency should contact their lecture instructor. If the student's explanation is acceptable, the assignment due date will be extended (or their lecture instructor will make other appropriate arrangements).
 
@@ -167,7 +167,7 @@ __Under no circumstances should you share any part of an assignment solution wit
 
 Plagiarism (unsourced use of other's intellectual property) is not allowed. However, citing and using other's works is generally fine (please ask if uncertain) as long as the material wasn't made specifically for solving the assignments in this class. The use of material or code from a student that previously took the course is an explicit instance of academic dishonesty. Intellectual collaboration with other students in the class is allowed, but each student should write (and not share) their own code. If a student submits code that they don't understand, such is also an act of academic dishonesty.
 
-There is one exception to the above policy: labs. The lab assignments are intended to be solved collaboratively, and you are allowed to share your solutions with other students. However, you may only share with your partner to allow everyone the opportunity to solve the assignment. Please refrain from making public posts about lab solutions while the lab is currently active, so that other students have the opportunity to think through it.
+There is one exception to the above policy: labs. The lab assignments are intended to be solved collaboratively, and you are allowed to share your solutions with other students. However, you may only share with your partner to allow everyone the opportunity to solve the assignment.
 
 ### Examples Of Academic Misconduct
 
