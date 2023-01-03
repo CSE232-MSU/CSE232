@@ -17,8 +17,11 @@ int main()
   //  VERBOSE - output for all test cases (passed or failed) and summary info
   //  DEBUG - full internal detail to audit test cases and checks.
   SET_HIDDEN_DETAIL(SUMMARY);
-  // SET_HIDDEN_DETAIL(NORMAL);
   SET_PUBLIC_DETAIL(NORMAL);
+
+  // Setup filenames to output specific information to files.
+  SET_GRADE_FILE("grade.txt");       // A single number with the final numerical grade.
+  SET_STUDENT_FILE("results.html");  // An html-formatted file with student feedback.
 
   TEST_CASE("Simple Tests", 10.0);  // A 10-point test case.
 
@@ -46,5 +49,13 @@ int main()
   CHECK( 2+2 == 4);
   CHECK( true );
   CHECK( "abc" == "abc");
+
+
+  TEST_CASE("NOT-Hidden This time", 5.0);  // A 40-point hidden test case.
+
+  CHECK(SquareRoot(4.0) == 2.0);
+  CHECK(SquareRoot(16.0) == 4.0);
+  CHECK(SquareRoot(1000000.0) == 1000.0, "Fails when tested on large values.");
+  CHECK(SquareRoot(0.0) == 0.0, "Fails when tested on ZERO.");
 
 }
