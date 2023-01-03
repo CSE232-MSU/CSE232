@@ -8,14 +8,13 @@ Continuation of object-centered design and implementation in C++. Building progr
 
 General:
 - [Course Schedule](#course-schedule)
-- [Exam Policies](exam_policies.html)
+<!-- - [Exam Policies](exam_policies.html) -->
 - [Help Room Schedule](#help-room-schedule)
 - [Syllabus](syllabus.html)
 
 Essential Sites:
-<!-- - [D2L](https://d2l.msu.edu/d2l/loginh/)
-- [Coding Rooms](coding_rooms_setup.html)
-- [Piazza](https://piazza.com/msu/fall2022/cse232/home) -->
+- [D2L](https://d2l.msu.edu/d2l/loginh/)
+- [Piazza](https://piazza.com/msu/spring2023/cse232)
 
 Resources:
 - [cppreference](https://en.cppreference.com/w/)
