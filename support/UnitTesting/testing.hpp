@@ -36,12 +36,22 @@ namespace cse232 {
   struct UnitTester {
     size_t check_count = 0;
 
+    struct CheckInfo {
+      std::string lhs = "";
+      std::string rhs = "";
+      std::string comparator = "";
+      bool passed = false;
+      std::string message = "";  // Message on failure.
+    };
+
     struct CaseInfo {
       std::string name;
-      size_t points;
+      double points = 0.0;
       size_t checks_passed = 0;
       size_t checks_failed = 0;
       bool hidden = false;
+
+      std::vector<CheckInfo> checks;
     };
 
     std::vector<CaseInfo> test_cases;
@@ -55,7 +65,7 @@ namespace cse232 {
     }
 
     CaseInfo & AddTestCase(const std::string & name, double points) {
-      test_cases.emplace_back({name, points});
+      test_cases.push_back(CaseInfo{name, points});
       return test_cases.back();
     }
 
@@ -64,29 +74,46 @@ namespace cse232 {
     void SetupCheck(const std::string & test, size_t line_num, const std::string & filename) {
       // For the moment we are allowing only a single comparison and no && or ||
       if (find_any_of(test, 0, "&&", "||") != std::string::npos) {
-	std::cerr << "Internal error (line " << line_num << " of " << filename
-		  << "): Unit test checks do not allow \"&&\" or \"||\"." << std::endl;
-	exit(1);
+        std::cerr << "Internal error (line " << line_num << " of " << filename
+		              << "): Unit test checks do not allow \"&&\" or \"||\"." << std::endl;
+	      exit(1);
       }
 
-      // Make sure there is a single comparitor.
+      // Make sure there is a single comparator.
       auto comp_pos = find_any_of(test, 0, "==", "!=", "<", "<=", ">", ">=");
 
-      // Make sure we don't have a second comparitor.
+      // Make sure we don't have a second comparator.
       if (comp_pos != std::string::npos &&
-	  find_any_of(test, comp_pos+2, "==", "!=", "<", "<=", ">", ">=") != std::string::npos) {
-	std::cerr << "Internal error (line " << line_num << " of " << filename
-		  << "): Unit test checks cannot have more than one comparison." << std::endl;
-	exit(1);
+          find_any_of(test, comp_pos+2, "==", "!=", "<", "<=", ">", ">=") != std::string::npos) {
+        std::cerr << "Internal error (line " << line_num << " of " << filename
+	                << "): Unit test checks cannot have more than one comparison." << std::endl;
+        exit(1);
       }
 
-      // Determine which comparison operator we are working with (if any)
-      std::string comparitor = "";
+      // Determine which comparison operator we are working with (if any) and the terms being compared.
+      CheckInfo check_info;
       if (comp_pos != std::string::npos) {
-	comparitor += test[comp_pos];
-	if (test[comp_pos+1] == '=') comparitor += "=";
+        check_info.comparator += test[comp_pos];
+        if (test[comp_pos+1] == '=') check_info.comparator += "=";
+
+        // Identify the left and right hand sides
+        check_info.lhs = test.substr(0,comp_pos);
+        check_info.rhs = test.substr(comp_pos+comparator.size());
       }
+      else {
+        check_info.lhs = test;
+      }
+
+      // Make sure we have a test case to include this check in.
+      if (test_cases.size() == 0) {
+        std::cerr << "Added test case `DEFAULT`" << std::endl;
+        test_cases.push_back(CaseInfo{"DEFAULT"});
+      }
+
+      // Insert this check's information into the current test case.
+      test_cases.back().checks.push_back(check_info);
     }
+
   };
 
   /// Create a singleton unit tester.
@@ -99,23 +126,23 @@ namespace cse232 {
 
 
 /// Start a new test case with the given number of points.
-#define TEST_CASE(NAME, POINTS) {			\
-    auto & unit_tester = cse232::GetUnitTester();	\
-    unit_tester.AddTestCase(NAME, POINTS);		\
+#define TEST_CASE(NAME, POINTS) {                    \
+    auto & unit_tester = cse232::GetUnitTester();    \
+    unit_tester.AddTestCase(NAME, POINTS);           \
   }
 
 /// Start a new test case with the given number of points.
-#define HIDDEN_TEST_CASE(NAME, POINTS) {	         \
-    auto & unit_tester = cse232::GetUnitTester();	 \
+#define HIDDEN_TEST_CASE(NAME, POINTS) {                 \
+    auto & unit_tester = cse232::GetUnitTester();	       \
     unit_tester.AddTestCase(NAME, POINTS).hidden = true; \
   }
 
 /// A single CHECK within a unit test.  If additional arguments are included
 /// they are printed when if test fails.
-#define CHECK(TEST, ...) {				\
-    auto & unit_tester = cse232::GetUnitTester();	\
-    unit_tester.SetupCheck(#TEST, __LINE__, __FILE__);	\
-    unit_tester.IncCheckNumber();			\
+#define CHECK(TEST, ...) {		                          \
+    auto & unit_tester = cse232::GetUnitTester();       \
+    unit_tester.SetupCheck(#TEST, __LINE__, __FILE__);  \
+    unit_tester << TEST;                                \
   }
 
 
