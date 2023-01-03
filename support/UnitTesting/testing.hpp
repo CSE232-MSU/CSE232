@@ -38,6 +38,15 @@ namespace cse232 {
     }
   }
 
+  /// Remove leading and training whitespace from a string.
+  std::string TrimWhitespace(std::string str) {
+    size_t whitespace = 0;
+    while (whitespace < str.size() && str[whitespace] == ' ') ++whitespace;
+    if (whitespace) str.erase(0,whitespace);
+    while (str.back() == ' ') str.pop_back();
+    return str;
+  }
+
   //
   // ---------------------- Main Unit Testing Class ----------------------
   //
@@ -55,6 +64,8 @@ namespace cse232 {
       bool passed = false;         // Was this check successful?
       bool resolved = false;       // Are we done performing this check?
       std::string message = "";    // Extra message on failure (e.g., "Grade assessments do not align.")
+      std::string filename = "";   // What file is this check found in?
+      size_t line_num = 0;         // What line number is this check on?
     };
 
     // Information about an entire test case.
@@ -68,6 +79,17 @@ namespace cse232 {
 
     // The set of all test cases being conducted.
     std::vector<CaseInfo> test_cases;
+
+    // What output should we do?
+    enum class Detail {
+      SILENT = 0,   // No output, (internal use only).
+      SUMMARY,      // Output only a final summary of number of cases passed/failed.
+      NORMAL,       // Provide summary of passed cases and details on failed cases.
+      VERBOSE,      // Provide details all along, including passed cases.
+      DEBUG         // Full output of all details (including parsing), pass or fall.
+    };
+    Detail hidden_detail = Detail::SUMMARY;
+    Detail public_detail = Detail::NORMAL;
 
     // Get the current open test case; create a default case if none exist.
     CaseInfo & GetCase() {
@@ -97,7 +119,17 @@ namespace cse232 {
 
         // If the test does not have a RHS, convert LHS to a bool and stop here.
         if (check.rhs == "") {
-          check.passed = static_cast<bool>(lhs_v);
+          if constexpr (std::is_convertible_v<T, bool>) {
+            check.passed = static_cast<bool>(lhs_v);
+          }
+          else if constexpr (std::is_convertible_v<T, std::string>) {
+            check.passed = static_cast<std::string>(lhs_v).size();
+          }
+          else {
+            std::cerr << "Internal error (line " << check.line_num << " of " << check.filename
+		              << "): CHECK cannot be resolved to a bool." << std::endl;
+            check.passed = false;
+          }
           check.resolved = true;
         }
       }
@@ -128,6 +160,15 @@ namespace cse232 {
       return test_cases.back();
     }
 
+    template <typename... Ts>
+    void SetMessage(Ts &&... args) {
+      std::stringstream ss;
+      if constexpr (sizeof...(Ts)) {
+        (ss << ... << args);
+      }
+      GetCheck().message = ss.str();
+    }
+
     /// Scan the check that's about to happen to make sure the test is legal and
     /// to store the two sides.
     void SetupCheck(const std::string & test, size_t line_num, const std::string & filename) {
@@ -152,13 +193,15 @@ namespace cse232 {
       // Determine which comparison operator we are working with (if any) and the terms being compared.
       CheckInfo check_info;
       check_info.test = test; // Save the original test.
+      check_info.filename = filename;
+      check_info.line_num = line_num;
       if (comp_pos != std::string::npos) {
         check_info.comparator += test[comp_pos];
         if (test[comp_pos+1] == '=') check_info.comparator += "=";
 
         // Identify the left and right hand sides
-        check_info.lhs = test.substr(0,comp_pos);
-        check_info.rhs = test.substr(comp_pos+check_info.comparator.size());
+        check_info.lhs = TrimWhitespace(test.substr(0,comp_pos));
+        check_info.rhs = TrimWhitespace(test.substr(comp_pos+check_info.comparator.size()));
       }
       else {
         check_info.lhs = test;
@@ -186,6 +229,9 @@ namespace cse232 {
       std::cout << "passed    : " << check.passed << std::endl;
       std::cout << "resolved  : " << check.resolved << std::endl;
       std::cout << "message   : " << check.message << std::endl;
+      std::cout << "filename  : " << check.filename << std::endl;
+      std::cout << "line_num  : " << check.line_num << std::endl;
+      std::cout << std::endl;
     }
   };
 
@@ -220,6 +266,7 @@ namespace cse232 {
 #define CHECK(TEST, ...) {		                          \
     auto & unit_tester = cse232::GetUnitTester();       \
     unit_tester.SetupCheck(#TEST, __LINE__, __FILE__);  \
+    unit_tester.SetMessage(__VA_ARGS__);                \
     unit_tester < TEST;                                 \
     unit_tester.PrintCheckResults();                    \
   }
