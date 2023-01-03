@@ -102,6 +102,40 @@ namespace cse232 {
     Detail hidden_detail = Detail::SUMMARY;
     Detail public_detail = Detail::NORMAL;
 
+    // Destructor will indicate that the unit testing is done an any summary data need to be printed.
+    ~UnitTester() {
+      // Loop through test cases.
+      double total_points = 0.0;
+      double earned_points = 0.0;
+      for (auto & test_case : test_cases) {
+        // Scan through individual checks for this case.
+        size_t passed_count = 0;
+        size_t total_count = 0;
+        for (auto & check : test_case.checks) {
+          ++total_count;
+          if (check.passed) ++passed_count;
+        }
+
+        // Print the summary information:
+        total_points += test_case.points;
+        std::stringstream out;
+        out << test_case.name << " : passed " << passed_count << " of " << total_count << " checks; ";
+        if (passed_count == total_count) {
+          out << test_case.points << " points." << std::endl;
+          earned_points += test_case.points;
+        } else {
+          out << "0.0 points." << std::endl;
+        }
+        if ((test_case.hidden && hidden_detail >= Detail::SUMMARY) ||
+            (!test_case.hidden && public_detail >= Detail::SUMMARY))
+        {
+          std::cout << out.str();
+        }
+      }
+
+      std::cout << "\nFinal Score: " << earned_points << " / " << total_points << std::endl;
+    }
+
     // Get the current open test case; create a default case if none exist.
     CaseInfo & GetCase() {
       // If we do not have a case, added a default one (with a warning.)
@@ -243,6 +277,11 @@ namespace cse232 {
         if (!check.passed && check.rhs != "") {
           std::cout << check.lhs_value << " " << FlipComparator(check.comparator) << " "
                     << check.rhs_value << std::endl;
+          // If this failed check had a message with it, print the message.
+          if (check.message.size()) {
+            std::cout << check.message << std::endl;
+          }
+          std::cout << std::endl; // Skip a line.
         }
         break;
       case Detail::DEBUG:
