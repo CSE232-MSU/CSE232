@@ -47,6 +47,17 @@ namespace cse232 {
     return str;
   }
 
+  /// Flip the provided comparator to the opposite (so "<" becomes ">=").
+  std::string FlipComparator(std::string in) {
+    if (in == "==") return "!=";
+    if (in == "!=") return "==";
+    if (in == "<")  return ">=";
+    if (in == "<=") return ">";
+    if (in == ">")  return "<=";
+    if (in == ">=") return "<";
+    return "";
+  }
+
   //
   // ---------------------- Main Unit Testing Class ----------------------
   //
@@ -219,19 +230,38 @@ namespace cse232 {
 
     // Print the results for the latest check performed.
     void PrintCheckResults() {
+      CaseInfo & case_info = GetCase();
       CheckInfo & check = GetCheck();
-      std::cout << "ORIGINAL  : " << check.test << std::endl;
-      std::cout << "lhs       : " << check.lhs << std::endl;
-      std::cout << "rhs       : " << check.rhs << std::endl;
-      std::cout << "lhs_value : " << check.lhs_value << std::endl;
-      std::cout << "rhs_value : " << check.rhs_value << std::endl;
-      std::cout << "comparator: " << check.comparator << std::endl;
-      std::cout << "passed    : " << check.passed << std::endl;
-      std::cout << "resolved  : " << check.resolved << std::endl;
-      std::cout << "message   : " << check.message << std::endl;
-      std::cout << "filename  : " << check.filename << std::endl;
-      std::cout << "line_num  : " << check.line_num << std::endl;
-      std::cout << std::endl;
+      Detail detail = case_info.hidden ? hidden_detail : public_detail;
+      switch (detail) {
+      case Detail::NORMAL:
+        if (check.passed) break; // Only print extra information for failed cases.
+        [[fallthrough]];
+      case Detail::VERBOSE:
+        std::cout << "CHECK ('" << check.filename << ", line " << check.line_num << ") "
+                  << (check.passed ? "[PASSED]:" : "[FAILED!]: ") << check.test << std::endl;
+        if (!check.passed && check.rhs != "") {
+          std::cout << check.lhs_value << " " << FlipComparator(check.comparator) << " "
+                    << check.rhs_value << std::endl;
+        }
+        break;
+      case Detail::DEBUG:
+        std::cout << "ORIGINAL  : " << check.test << std::endl;
+        std::cout << "lhs       : " << check.lhs << std::endl;
+        std::cout << "rhs       : " << check.rhs << std::endl;
+        std::cout << "lhs_value : " << check.lhs_value << std::endl;
+        std::cout << "rhs_value : " << check.rhs_value << std::endl;
+        std::cout << "comparator: " << check.comparator << std::endl;
+        std::cout << "passed    : " << check.passed << std::endl;
+        std::cout << "resolved  : " << check.resolved << std::endl;
+        std::cout << "message   : " << check.message << std::endl;
+        std::cout << "filename  : " << check.filename << std::endl;
+        std::cout << "line_num  : " << check.line_num << std::endl;
+        std::cout << std::endl;
+        break;
+      default:
+        break;
+      }
     }
   };
 
@@ -271,5 +301,9 @@ namespace cse232 {
     unit_tester.PrintCheckResults();                    \
   }
 
+#define SET_HIDDEN_DETAIL(LEVEL) \
+  cse232::GetUnitTester().hidden_detail = cse232::UnitTester::Detail::LEVEL
+#define SET_PUBLIC_DETAIL(LEVEL) \
+  cse232::GetUnitTester().public_detail = cse232::UnitTester::Detail::LEVEL
 
 #endif
