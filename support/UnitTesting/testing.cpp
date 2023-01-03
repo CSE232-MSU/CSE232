@@ -4,9 +4,21 @@
 
 #include "testing.hpp"
 
+double SquareRoot(double x) { return x / 2.0; }
+
 int main()
 {
   std::cout << "Testing." << std::endl;
+
+  // Available detail levels:
+  //  SILENT - no automatic output
+  //  SUMMARY - output only at the end, indicating number of passed tests for each case.
+  //  NORMAL - output with failed test cases and summary info at end.
+  //  VERBOSE - output for all test cases (passed or failed) and summary info
+  //  DEBUG - full internal detail to audit test cases and checks.
+  SET_HIDDEN_DETAIL(SUMMARY);
+  // SET_HIDDEN_DETAIL(NORMAL);
+  SET_PUBLIC_DETAIL(NORMAL);
 
   TEST_CASE("Simple Tests", 10.0);  // A 10-point test case.
 
@@ -19,4 +31,20 @@ int main()
   CHECK(str == "Test string.", "This is an error message for a", error_middle, " string test.");
 
   CHECK(str == "Test string2.", "This is an error message for a string test that should fail.");
+
+
+  HIDDEN_TEST_CASE("Hidden Tests", 40.0);  // A 40-point hidden test case.
+
+  CHECK(SquareRoot(4.0) == 2.0);
+  CHECK(SquareRoot(16.0) == 4.0);
+  CHECK(SquareRoot(1000000.0) == 1000.0, "Fails when tested on large values.");
+  CHECK(SquareRoot(0.0) == 0.0, "Fails when tested on ZERO.");
+
+
+  TEST_CASE("Free Points", 50.0);
+
+  CHECK( 2+2 == 4);
+  CHECK( true );
+  CHECK( "abc" == "abc");
+
 }
