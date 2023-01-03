@@ -180,10 +180,10 @@ Links to lecture videos, projects, and other materials will be made available as
 	<tr>
             <td>2023-04-24</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week14.html">Week 14</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab15.html">Lab 15</a></td>
+            <td>Lab Practical Exam</td>
             <td>No Homework</td>
             <td>Project 03 Due</td>
-            <td>Synchronous Lab Practical: Details to be provided. </td>
+            <td>Synchronous Lab Practical Exam: Details to be provided. </td>
         </tr>
         <tr>
             <td>2022-05-01 Finals Week</td>
