@@ -121,6 +121,12 @@ namespace cse232 {
       // Close the final test case.
       CloseTestCase(100000);
 
+      if (student_file) {
+        student_file << "\n<hr>\n<h1>Summary</h1>\n\n"
+          << "<table style=\"background-color:#3fc0FF;\" cellpadding=\"5px\" border=\"1px solid black\" cellspacing=\"0\">"
+          << "<tr><th>Test Case<th>Checks<th>Passed<th>Failed<th>Score</tr>\n";
+      }
+
       // Loop through test cases.
       double total_points = 0.0;
       double earned_points = 0.0;
@@ -148,9 +154,24 @@ namespace cse232 {
         {
           std::cout << out.str();
         }
+
+        // Also print to the HTML file if needed.
+        if (student_file) {
+          student_file << "<tr><td>" << test_case.name
+            << "<td>" << total_count
+            << "<td>" << passed_count
+            << "<td>" << (total_count - passed_count)
+            << "<td>" << (passed_count == total_count ? test_case.points : 0.0) << " / " << test_case.points
+            << "</tr>\n";
+        }
       }
 
       std::cout << "\nFinal Score: " << earned_points << " / " << total_points << std::endl;
+
+      if (student_file) {
+        student_file << "</table>\n<h2>Final Score: <span style=\"color: blue\">"
+          << earned_points << " / " << total_points << "</span></h2>\n<br><br><br>\n" << std::endl;
+      }
 
       // If a grade_filename is specified, write just the final grade to it.
       if (grade_filename != "") {
@@ -265,7 +286,7 @@ namespace cse232 {
     {
       CloseTestCase(line_num-1);  // End the previous test case here.
       if (student_file) {
-        student_file << "<h3>" << name << " (" << points << " points)</h3>\n";
+        student_file << "<hr>\n<h3>" << name << " (" << points << " points)</h3>\n";
       }
 
       test_cases.push_back(CaseInfo{name, points, filename, line_num});
@@ -438,9 +459,10 @@ namespace cse232 {
   cse232::GetUnitTester().public_detail = cse232::UnitTester::Detail::LEVEL
 
 #define SET_GRADE_FILE(FILENAME) cse232::GetUnitTester().grade_filename = FILENAME
-#define SET_STUDENT_FILE(FILENAME)                    \
-  auto & unit_tester = cse232::GetUnitTester();       \
-  unit_tester.student_filename = FILENAME;            \
-  unit_tester.student_file.open(FILENAME)
+#define SET_STUDENT_FILE(FILENAME)                         \
+  auto & unit_tester = cse232::GetUnitTester();            \
+  unit_tester.student_filename = FILENAME;                 \
+  unit_tester.student_file.open(FILENAME);                 \
+  unit_tester.student_file << "<h1>Autograde Results</h1>\n"
 
 #endif
