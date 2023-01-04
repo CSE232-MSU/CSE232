@@ -263,8 +263,9 @@ namespace cse232 {
 
       // If the test case failed and is not hidden, print it.
       if (case_info.Passed() == false && !test_cases.back().hidden) {
-        student_file << "Source (starting from line " << case_info.line_num
-                     << "):<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
+        // student_file << "Source (starting from line " << case_info.line_num
+        //              << "):<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
+        student_file << "Source:<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
         std::ifstream source(case_info.filename);
         std::string line;
         size_t line_num = 0;
@@ -359,7 +360,8 @@ namespace cse232 {
       if (!case_info.hidden && student_file && !check.passed) {
         // Show the failed code.
         student_file
-          << "<p>Check <span style=\"color: red\"><b>FAILED</b></span> (line " << check.line_num << "):<br>\n"
+//        << "<p>Check <span style=\"color: red\"><b>FAILED</b></span> (line " << check.line_num << "):<br>\n"
+          << "<p>Check <span style=\"color: red\"><b>FAILED</b></span>:<br>\n"
           << "Test: <code>" << check.test << "</code><br><br>\n";
 
         // If there was a comparison, show results on both sides of it.
