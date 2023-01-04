@@ -96,6 +96,14 @@ namespace cse232 {
         }
         return true;
       }
+
+      // Test if a particular line number had a failed test.
+      bool FailedLine(size_t test_line) const {
+        for (const auto & check : checks) {
+          if (check.line_num == test_line && !check.passed) return true;
+        }
+        return false;
+      }
     };
 
     // The set of all test cases being conducted.
@@ -176,7 +184,8 @@ namespace cse232 {
       // If a grade_filename is specified, write just the final grade to it.
       if (grade_filename != "") {
         std::ofstream of(grade_filename);
-        of << earned_points << std::endl;
+        double percent = 100.0 * earned_points / total_points;
+        of << earned_points << " of " << total_points << " (" << percent << "%)" << std::endl;
         of.close();
       }
     }
@@ -273,7 +282,10 @@ namespace cse232 {
         // Skip beginning of file.
         while (++line_num < case_info.line_num) std::getline(source, line);
         while (++line_num < end_line && std::getline(source, line) && line[0] != '}') {
+          const bool highlight = case_info.FailedLine(line_num-1);
+          if (highlight) student_file << "<b>";
           student_file << line << "\n";
+          if (highlight) student_file << "</b>";
         }
         student_file << "</pre></tr></table>\n";
       }
