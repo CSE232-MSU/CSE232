@@ -13,11 +13,13 @@
 * At least one instructor should sit in on each lab session at least once during the semester.
 * We should provide the TAs with more written materials for how to run each lab.  Both material-based topics to talk about at the beginning and reminders/updates about the course itself.
 
-## C++ Labs
+## Labs
 
 * For lab 2, emphasize . being the current directory, and the use of ./run_this_file
 * For the honors portion of lab 4, we should require specific function names and use unit tests to ensure that the functions are correctly built as constexpr.
 * Lab 9 should have the students do operator overloading -- it's not especially complicated.
+* Talk about -i option for rm to limit accidental deletions?
+* Lab 07, teach about shell aliases?
 
 ## Projects
 
@@ -26,10 +28,6 @@
     * Guidance on comments
     * Explicit guidance on const (member functions that don't change state, unmodified reference parameters, etc)
 
-## Shell Contents
-
-* Talk about -i option for rm to limit accidental deletions?
-* Lab 07, teach about shell aliases?
 
 ## C++ Contents
 
