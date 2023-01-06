@@ -9,6 +9,7 @@
 #ifndef CSE232_UNIT_TESTING
 #define CSE232_UNIT_TESTING
 
+#include <cmath>
 #include <fstream>
 #include <sstream>
 #include <string>
@@ -176,15 +177,16 @@ namespace cse232 {
 
       std::cout << "\nFinal Score: " << earned_points << " / " << total_points << std::endl;
 
+      double percent = 100.0 * earned_points / total_points;
+
       if (student_file) {
         student_file << "</table>\n<h2>Final Score: <span style=\"color: blue\">"
-          << earned_points << " / " << total_points << "</span></h2>\n<br><br><br>\n" << std::endl;
+          << std::round(percent) << "%</span></h2>\n<br><br><br>\n" << std::endl;
       }
 
       // If a grade_filename is specified, write just the final grade to it.
       if (grade_filename != "") {
         std::ofstream of(grade_filename);
-        double percent = 100.0 * earned_points / total_points;
         of << earned_points << " of " << total_points << " (" << percent << "%)" << std::endl;
         of.close();
       }
