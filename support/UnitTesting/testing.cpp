@@ -22,6 +22,7 @@ int main()
   // Setup filenames to output specific information to files.
   SET_GRADE_FILE("grade.txt");       // A single number with the final numerical grade.
   SET_STUDENT_FILE("results.html");  // An html-formatted file with student feedback.
+  SET_TEACHER_FILE("teacher-only.html");  // An html-formatted file with student feedback.
 
   TEST_CASE("Simple Tests", 10.0);  // A 10-point test case.
 
