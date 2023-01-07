@@ -122,16 +122,20 @@ namespace cse232 {
     Detail public_detail = Detail::NORMAL;
 
     std::string student_filename = "";
+    std::string teacher_filename = "";
     std::string grade_filename = "";
-    std::ofstream student_file;
+    std::ofstream student_file;   // File for HTML output with student information.
+    std::ofstream teacher_file;   // File for HTML output with extra teacher information.
 
     // Destructor will indicate that the unit testing is done an any summary data need to be printed.
     ~UnitTester() {
       // Close the final test case.
       CloseTestCase(100000);
 
-      if (student_file) {
-        student_file << "\n<hr>\n<h1>Summary</h1>\n\n"
+      std::stringstream summary;
+
+      if (student_file || teacher_file) {
+        summary << "\n<hr>\n<h1>Summary</h1>\n\n"
           << "<table style=\"background-color:#3fc0FF;\" cellpadding=\"5px\" border=\"1px solid black\" cellspacing=\"0\">"
           << "<tr><th>Test Case<th>Checks<th>Passed<th>Failed<th>Score</tr>\n";
       }
@@ -165,24 +169,29 @@ namespace cse232 {
         }
 
         // Also print to the HTML file if needed.
-        if (student_file) {
-          student_file << "<tr><td>" << test_case.name
+        if (student_file || teacher_file) {
+          summary << "<tr><td>" << test_case.name
             << "<td>" << total_count
             << "<td>" << passed_count
             << "<td>" << (total_count - passed_count)
             << "<td>" << (passed_count == total_count ? test_case.points : 0.0) << " / " << test_case.points
             << "</tr>\n";
         }
-      }
 
-      std::cout << "\nFinal Score: " << earned_points << " / " << total_points << std::endl;
+      }
 
       double percent = 100.0 * earned_points / total_points;
 
-      if (student_file) {
-        student_file << "</table>\n<h2>Final Score: <span style=\"color: blue\">"
+      std::cout << "\nFinal Score: " << std::round(percent) << std::endl;
+
+      if (student_file || teacher_file) {
+        summary << "</table>\n<h2>Final Score: <span style=\"color: blue\">"
           << std::round(percent) << "%</span></h2>\n<br><br><br>\n" << std::endl;
       }
+
+      // Add the summary to the relevant files.
+      if (student_file) student_file << summary.str();
+      if (teacher_file) teacher_file << summary.str();
 
       // If a grade_filename is specified, write just the final grade to it.
       if (grade_filename != "") {
@@ -258,26 +267,36 @@ namespace cse232 {
     // When a new test case is started (or the unit tester is closing down) signal that the most recent
     // test case needs to be closed so that it can be wrapped up.
     void CloseTestCase(size_t end_line) {
-      // Skip if there are no test cases yet, we're not printing student info.
-      if (test_cases.size() == 0 || !student_file) return;
+      // Skip if there are no test cases yet, we're not printing student/teacher output.
+      if (test_cases.size() == 0 || (!student_file && !teacher_file)) return;
 
       CaseInfo & case_info = test_cases.back();
       // Notify if the test passed.
       if (case_info.Passed()) {
-        student_file << "Test case <span style=\"color: green\"><b>Passed!</b></span><br><br>\n\n";
+        if (student_file) {
+          student_file << "Test case <span style=\"color: green\"><b>Passed!</b></span><br><br>\n\n";
+        }
+        if (teacher_file) {
+          teacher_file << "Test case <span style=\"color: green\"><b>Passed!</b></span><br><br>\n\n";
+        }
       }
 
-      // Otherwise failed cases will already have an error noted unless hidden.
-      else if (case_info.hidden) {
+      // Failed cases will already have an error noted except for hidden cases in student file.
+      else if (case_info.hidden && student_file) {
         student_file << "Test case <span style=\"color: red\"><b>Failed.</b></span><br><br>\n";
       }
 
-      // If the test case failed and is not hidden, print it.
-      if (case_info.Passed() == false && !test_cases.back().hidden) {
-        // student_file << "Source (starting from line " << case_info.line_num
-        //              << "):<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
-        student_file << "Source:<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
+      // If the test case failed, print it if allowed to.
+      if (!case_info.Passed()) {
+        if (teacher_file) {
+          teacher_file << "Source (starting from line " << case_info.line_num
+                       << "):<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
+        }
+        if (student_file && !test_cases.back().hidden) {
+          student_file << "Source:<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
+        }
         std::ifstream source(case_info.filename);
+        std::stringstream testcase;
         std::string line;
         size_t line_num = 0;
 
@@ -285,11 +304,14 @@ namespace cse232 {
         while (++line_num < case_info.line_num) std::getline(source, line);
         while (++line_num < end_line && std::getline(source, line) && line[0] != '}') {
           const bool highlight = case_info.FailedLine(line_num-1);
-          if (highlight) student_file << "<b>";
-          student_file << line << "\n";
-          if (highlight) student_file << "</b>";
+          if (highlight) testcase << "<b>";
+          testcase << line << "\n";
+          if (highlight) testcase << "</b>";
         }
-        student_file << "</pre></tr></table>\n";
+        testcase << "</pre></tr></table>\n";
+
+        if (teacher_file) teacher_file << testcase.str();
+        if (student_file && !test_cases.back().hidden) student_file << testcase.str();
       }
     }
     
@@ -302,6 +324,9 @@ namespace cse232 {
       CloseTestCase(line_num-1);  // End the previous test case here.
       if (student_file) {
         student_file << "<hr>\n<h3>" << name << " (" << points << " points)</h3>\n";
+      }
+      if (teacher_file) {
+        teacher_file << "<hr>\n<h3>" << name << " (" << points << " points)</h3>\n";
       }
 
       test_cases.push_back(CaseInfo{name, points, filename, line_num});
@@ -370,29 +395,28 @@ namespace cse232 {
       CaseInfo & case_info = GetCase();
       CheckInfo & check = GetCheck();
 
-      // If we are working with a student file, print any failed test cases there.
-      if (!case_info.hidden && student_file && !check.passed) {
+      std::stringstream result_msg;
+
+      if (!check.passed) {
         // Show the failed code.
-        student_file
-//        << "<p>Check <span style=\"color: red\"><b>FAILED</b></span> (line " << check.line_num << "):<br>\n"
+        result_msg
+  //        << "<p>Check <span style=\"color: red\"><b>FAILED</b></span> (line " << check.line_num << "):<br>\n"
           << "<p>Check <span style=\"color: red\"><b>FAILED</b></span>:<br>\n"
           << "Test: <code>" << check.test << "</code><br><br>\n";
 
         // If there was a comparison, show results on both sides of it.
         if (check.rhs != "") {
-          student_file
+          result_msg
             << "<table><tr><td>Left side:<td><code>" << check.lhs << "</code><td>&nbsp;&nbsp;resolves to:<td><code>"
             << check.lhs_value << "</code></tr>\n"
             << "<tr><td>Right side:<td><code>" << check.rhs << "</code><td>&nbsp;&nbsp;resolves to:<td><code>"
             << check.rhs_value << "</code></tr></table><br>\n";
+        }        
 
-          // student_file
-          //   << "&nbsp;&nbsp;Left side: <code>" << check.lhs << "</code>&nbsp;&nbsp;&nbsp;resolves to: <code>"
-          //   << check.lhs_value << "</code><br>\n"
-          //   << "&nbsp;&nbsp;Right side: <code>" << check.rhs << "</code>&nbsp;&nbsp;&nbsp;resolves to: <code>"
-          //   << check.rhs_value << "</code><br><br>\n";
-
+        if (!case_info.hidden && student_file) {
+          student_file << result_msg.str();
         }
+        if (teacher_file) teacher_file << result_msg.str();
       }
 
       Detail detail = case_info.hidden ? hidden_detail : public_detail;
@@ -475,10 +499,18 @@ namespace cse232 {
   cse232::GetUnitTester().public_detail = cse232::UnitTester::Detail::LEVEL
 
 #define SET_GRADE_FILE(FILENAME) cse232::GetUnitTester().grade_filename = FILENAME
-#define SET_STUDENT_FILE(FILENAME)                         \
-  auto & unit_tester = cse232::GetUnitTester();            \
-  unit_tester.student_filename = FILENAME;                 \
-  unit_tester.student_file.open(FILENAME);                 \
-  unit_tester.student_file << "<h1>Autograde Results</h1>\n"
+#define SET_STUDENT_FILE(FILENAME) {                            \
+    auto & unit_tester = cse232::GetUnitTester();               \
+    unit_tester.student_filename = FILENAME;                    \
+    unit_tester.student_file.open(FILENAME);                    \
+    unit_tester.student_file << "<h1>Autograde Results</h1>\n"; \
+  }
+
+#define SET_TEACHER_FILE(FILENAME) {                                                   \
+    auto & unit_tester = cse232::GetUnitTester();                                      \
+    unit_tester.teacher_filename = FILENAME;                                           \
+    unit_tester.teacher_file.open(FILENAME);                                           \
+    unit_tester.teacher_file << "<h1>Autograde Results (Instructor Eyes Only)</h1>\n"; \
+  }
 
 #endif
