@@ -59,4 +59,5 @@ int main()
   CHECK(SquareRoot(1000000.0) == 1000.0, "Fails when tested on large values.");
   CHECK(SquareRoot(0.0) == 0.0, "Fails when tested on ZERO.");
 
+  END_TESTS();
 }
