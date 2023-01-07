@@ -9,6 +9,7 @@
 #ifndef CSE232_UNIT_TESTING
 #define CSE232_UNIT_TESTING
 
+#include <algorithm>
 #include <cmath>
 #include <fstream>
 #include <sstream>
@@ -20,6 +21,14 @@ namespace cse232 {
   //
   // ---------------------- Helper functions ----------------------
   //
+
+  /// A helper function to identify errors, print a message, and end the program.
+  void TestError(bool test, std::string message, int error_code=1) {
+    if (test) {
+      std::cout << "Error: " << message << std::endl;
+      exit(error_code);
+    }
+  }
 
   /// Return the first position found for any of a set of substring tests
   /// (or std::string::npos if none are found).
@@ -86,24 +95,70 @@ namespace cse232 {
       std::string name;            // Unique name for this test case.
       double points = 0.0;         // Number of points this test case is worth.
       std::string filename;        // What file is this test case in?
-      size_t line_num;             // What line number is this test case at?
+      size_t start_line = 0;       // At which line number is this test case start?
+      size_t end_line = 0;         // At which line does this test case end?
       bool hidden = false;         // Should this test case be seen by students?
 
       std::vector<CheckInfo> checks;
 
-      bool Passed() const {
-        for (const auto & check : checks) {
-          if (!check.passed) return false;
-        }
-        return true;
+      size_t GetNumChecks() const { return checks.size(); }
+      size_t CountPassed() const {
+        return std::count_if(checks.begin(), checks.end(),
+                             [](const auto & check){ return check.passed; });
+      }
+      size_t CountFailed() const {
+        return std::count_if(checks.begin(), checks.end(),
+                             [](const auto & check){ return !check.passed; });
       }
 
-      // Test if a particular line number had a failed test.
-      bool FailedLine(size_t test_line) const {
+      bool Passed() const { return CountPassed() == checks.size(); }
+
+      // Test if a check at particular line number passed.
+      bool Passed(size_t test_line) const {
         for (const auto & check : checks) {
-          if (check.line_num == test_line && !check.passed) return true;
+          if (check.line_num == test_line) return check.passed;
         }
-        return false;
+        return true;  // No check on line == passed.
+      }
+
+      double EarnedPoints() const { return Passed() ? points : 0.0; }
+
+      void PrintCode_HTML(std::ostream & out) const {
+        out << "<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
+        std::ifstream source(filename);
+        std::string code;
+        size_t line = 0;
+
+        // Skip beginning of file.
+        while (++line < start_line) std::getline(source, code);
+        while (++line < end_line && std::getline(source, code)) {
+          const bool highlight = !Passed(line-1);
+          if (highlight) out << "<b>";
+          out << code << "\n";
+          if (highlight) out << "</b>";
+        }
+        out << "</pre></tr></table>\n";
+      }
+
+      void PrintResult_HTML(std::ostream & out, bool is_student=true) const {
+        // Notify if the test passed.
+        if (Passed()) {
+          out << "Test case <span style=\"color: green\"><b>Passed!</b></span><br><br>\n\n";
+        }
+        else {
+          // Failed cases will already have an error noted except for hidden cases in student file.
+          if (hidden && is_student) {
+            out << "Test case <span style=\"color: red\"><b>Failed.</b></span><br><br>\n";
+            return; // No more details.
+          }
+        
+          out << "Source";
+          if (!is_student) out << " (starting from line " << start_line << ")";
+          out << ":<br><br>\n";
+
+          PrintCode_HTML(out);
+        }
+
       }
     };
 
@@ -126,79 +181,11 @@ namespace cse232 {
     std::string grade_filename = "";
     std::ofstream student_file;   // File for HTML output with student information.
     std::ofstream teacher_file;   // File for HTML output with extra teacher information.
+    bool summary_printed = false; // Must print summary at end (but only at end).
 
     // Destructor will indicate that the unit testing is done an any summary data need to be printed.
     ~UnitTester() {
-      // Close the final test case.
-      CloseTestCase(100000);
-
-      std::stringstream summary;
-
-      if (student_file || teacher_file) {
-        summary << "\n<hr>\n<h1>Summary</h1>\n\n"
-          << "<table style=\"background-color:#3fc0FF;\" cellpadding=\"5px\" border=\"1px solid black\" cellspacing=\"0\">"
-          << "<tr><th>Test Case<th>Checks<th>Passed<th>Failed<th>Score</tr>\n";
-      }
-
-      // Loop through test cases.
-      double total_points = 0.0;
-      double earned_points = 0.0;
-      for (auto & test_case : test_cases) {
-        // Scan through individual checks for this case.
-        size_t passed_count = 0;
-        size_t total_count = 0;
-        for (auto & check : test_case.checks) {
-          ++total_count;
-          if (check.passed) ++passed_count;
-        }
-
-        // Print the summary information:
-        total_points += test_case.points;
-        std::stringstream out;
-        out << test_case.name << " : passed " << passed_count << " of " << total_count << " checks; ";
-        if (passed_count == total_count) {
-          out << test_case.points << " points." << std::endl;
-          earned_points += test_case.points;
-        } else {
-          out << "0.0 points." << std::endl;
-        }
-        if ((test_case.hidden && hidden_detail >= Detail::SUMMARY) ||
-            (!test_case.hidden && public_detail >= Detail::SUMMARY))
-        {
-          std::cout << out.str();
-        }
-
-        // Also print to the HTML file if needed.
-        if (student_file || teacher_file) {
-          summary << "<tr><td>" << test_case.name
-            << "<td>" << total_count
-            << "<td>" << passed_count
-            << "<td>" << (total_count - passed_count)
-            << "<td>" << (passed_count == total_count ? test_case.points : 0.0) << " / " << test_case.points
-            << "</tr>\n";
-        }
-
-      }
-
-      double percent = 100.0 * earned_points / total_points;
-
-      std::cout << "\nFinal Score: " << std::round(percent) << std::endl;
-
-      if (student_file || teacher_file) {
-        summary << "</table>\n<h2>Final Score: <span style=\"color: blue\">"
-          << std::round(percent) << "%</span></h2>\n<br><br><br>\n" << std::endl;
-      }
-
-      // Add the summary to the relevant files.
-      if (student_file) student_file << summary.str();
-      if (teacher_file) teacher_file << summary.str();
-
-      // If a grade_filename is specified, write just the final grade to it.
-      if (grade_filename != "") {
-        std::ofstream of(grade_filename);
-        of << earned_points << " of " << total_points << " (" << percent << "%)" << std::endl;
-        of.close();
-      }
+      TestError(!summary_printed, "Must put END_TESTS() at the end of all test cases.");
     }
 
     // Get the current open test case; create a default case if none exist.
@@ -213,6 +200,72 @@ namespace cse232 {
 
     // Get the current open check in the current case.
     CheckInfo & GetCheck() { return GetCase().checks.back(); }
+
+    double CountTotalPoints() const {
+      double total = 0.0;
+      for (const auto & test_case : test_cases) { total += test_case.points; }
+      return total;
+    }
+
+    double CountEarnedPoints() const {
+      double total = 0.0;
+      for (const auto & test_case : test_cases) { total += test_case.EarnedPoints(); }
+      return total;
+    }
+
+    double GetPercentEarned() const {
+      return std::round( 100.0 * CountEarnedPoints() / CountTotalPoints() );
+    }
+
+    void PrintSummary_Text(std::ostream & out, bool public_summary, bool hidden_summary) {
+      // Loop through test cases for printing to standard out.
+      for (auto & test_case : test_cases) {
+        if ((test_case.hidden && hidden_summary) || (!test_case.hidden && public_summary)) {
+          std::cout << test_case.name
+                    << " : passed " << test_case.CountPassed()
+                    << " of " << test_case.GetNumChecks() << " checks; "
+                    << test_case.EarnedPoints() << " points." << std::endl;
+        }
+      }
+      std::cout << "\nFinal Score: " << GetPercentEarned() << std::endl;
+    }
+
+    void PrintSummary_HTML(std::ostream & out) {
+      out << "\n<hr>\n<h1>Summary</h1>\n\n"
+          << "<table style=\"background-color:#3fc0FF;\" cellpadding=\"5px\" border=\"1px solid black\" cellspacing=\"0\">"
+          << "<tr><th>Test Case<th>Checks<th>Passed<th>Failed<th>Score</tr>\n";
+
+      for (auto & test_case : test_cases) {
+        out << "<tr><td>" << test_case.name
+            << "<td>" << test_case.CountPassed()
+            << "<td>" << test_case.GetNumChecks()
+            << "<td>" << test_case.CountFailed()
+            << "<td>" << test_case.EarnedPoints() << " / " << test_case.points
+            << "</tr>\n";
+      }
+
+      out << "</table>\n<h2>Final Score: <span style=\"color: blue\">"
+          << GetPercentEarned() << "%</span></h2>\n<br><br><br>\n" << std::endl;
+    }
+
+    void PrintSummary() {
+      TestError(summary_printed, "Do not run END_TESTS() more than once.");
+
+      if (student_file) PrintSummary_HTML(student_file);
+      if (teacher_file) PrintSummary_HTML(teacher_file);
+
+      PrintSummary_Text(std::cout, public_detail >= Detail::SUMMARY, hidden_detail >= Detail::SUMMARY);
+
+      // If a grade_filename is specified, write just the final grade to it.
+      if (grade_filename != "") {
+        std::ofstream of(grade_filename);
+        of << CountEarnedPoints() << " of " << CountTotalPoints()
+           << " (" << GetPercentEarned() << "%)" << std::endl;
+        of.close();
+      }
+
+      summary_printed = true;
+    }
 
     // A proxy class to store partial (LHS) data from a unit test, while preserving type.
     template <typename T>
@@ -264,55 +317,16 @@ namespace cse232 {
       template <typename T2> bool operator>=(const T2 & rhs_v) { return Resolve(lhs_v >= rhs_v, rhs_v); }
     };
 
-    // When a new test case is started (or the unit tester is closing down) signal that the most recent
+    // When a new test case is started (or testing is complete) signal that the most recent
     // test case needs to be closed so that it can be wrapped up.
     void CloseTestCase(size_t end_line) {
       // Skip if there are no test cases yet, we're not printing student/teacher output.
-      if (test_cases.size() == 0 || (!student_file && !teacher_file)) return;
+      if (test_cases.size() == 0) return;
 
       CaseInfo & case_info = test_cases.back();
-      // Notify if the test passed.
-      if (case_info.Passed()) {
-        if (student_file) {
-          student_file << "Test case <span style=\"color: green\"><b>Passed!</b></span><br><br>\n\n";
-        }
-        if (teacher_file) {
-          teacher_file << "Test case <span style=\"color: green\"><b>Passed!</b></span><br><br>\n\n";
-        }
-      }
-
-      // Failed cases will already have an error noted except for hidden cases in student file.
-      else if (case_info.hidden && student_file) {
-        student_file << "Test case <span style=\"color: red\"><b>Failed.</b></span><br><br>\n";
-      }
-
-      // If the test case failed, print it if allowed to.
-      if (!case_info.Passed()) {
-        if (teacher_file) {
-          teacher_file << "Source (starting from line " << case_info.line_num
-                       << "):<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
-        }
-        if (student_file && !test_cases.back().hidden) {
-          student_file << "Source:<br><br>\n<table style=\"background-color:#E3E0CF;\"><tr><td><pre>\n\n";
-        }
-        std::ifstream source(case_info.filename);
-        std::stringstream testcase;
-        std::string line;
-        size_t line_num = 0;
-
-        // Skip beginning of file.
-        while (++line_num < case_info.line_num) std::getline(source, line);
-        while (++line_num < end_line && std::getline(source, line) && line[0] != '}') {
-          const bool highlight = case_info.FailedLine(line_num-1);
-          if (highlight) testcase << "<b>";
-          testcase << line << "\n";
-          if (highlight) testcase << "</b>";
-        }
-        testcase << "</pre></tr></table>\n";
-
-        if (teacher_file) teacher_file << testcase.str();
-        if (student_file && !test_cases.back().hidden) student_file << testcase.str();
-      }
+      case_info.end_line = end_line;
+      if (student_file) case_info.PrintResult_HTML(student_file, true);
+      if (teacher_file) case_info.PrintResult_HTML(teacher_file, false);
     }
     
     CaseInfo & AddTestCase(
@@ -321,6 +335,8 @@ namespace cse232 {
       const std::string & filename,
       size_t line_num)
     {
+      TestError(summary_printed, "Cannot start a new test case after END_TESTS() is run.");
+
       CloseTestCase(line_num-1);  // End the previous test case here.
       if (student_file) {
         student_file << "<hr>\n<h3>" << name << " (" << points << " points)</h3>\n";
@@ -345,6 +361,8 @@ namespace cse232 {
     /// Scan the check that's about to happen to make sure the test is legal and
     /// to store the two sides.
     void SetupCheck(const std::string & test, size_t line_num, const std::string & filename) {
+      TestError(summary_printed, "Cannot add a new CHECK() after END_TESTS() is run.");
+
       // For the moment we are allowing only a single comparison and no && or ||
       if (find_any_of(test, 0, "&&", "||") != std::string::npos) {
         std::cerr << "Internal error (line " << line_num << " of " << filename
@@ -481,6 +499,13 @@ namespace cse232 {
 #define HIDDEN_TEST_CASE(NAME, POINTS) {                                     \
     auto & unit_tester = cse232::GetUnitTester();	                           \
     unit_tester.AddTestCase(NAME, POINTS, __FILE__, __LINE__).hidden = true; \
+  }
+
+/// Signal that testing is complete.
+#define END_TESTS() {                                \
+    auto & unit_tester = cse232::GetUnitTester();    \
+    unit_tester.CloseTestCase(__LINE__);             \
+    unit_tester.PrintSummary();                      \
   }
 
 /// A single CHECK within a unit test.  If additional arguments are included
