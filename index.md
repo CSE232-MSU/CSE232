@@ -6,11 +6,11 @@ title: Home
 
 Continuation of object-centered design and implementation in C++. Building programs from modules. Data abstractions and classes to implement abstract data types. Static and dynamic memory allocation. Data structure implementation and algorithm efficiency. Lists, tables, stacks, and queues. Templates and generic programming.
 
-General:
-- [Course Schedule](#course-schedule)
+<!-- General: -->
+<!-- - [Course Schedule](#course-schedule) -->
 <!-- - [Exam Policies](exam_policies.html) -->
-- [Help Room Schedule](#help-room-schedule)
-- [Syllabus](syllabus.html)
+<!-- - [Help Room Schedule](#help-room-schedule) -->
+<!-- - [Syllabus](syllabus.html) -->
 
 Essential Sites:
 - [D2L](https://d2l.msu.edu/d2l/loginh/)
@@ -59,7 +59,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-01-09</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week00.html">Week 00</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab01.html">Lab 01</a></td>
+            <td>Lab 01</td>
             <td>No Homework</td>
             <td>No Homework</td>
             <td></td>
@@ -67,7 +67,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-01-16</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week01.html">Week 01</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab02.html">Lab 02</a></td>
+            <td>Lab 02</td>
             <td>Homework 00 (not worth any points)</td>
             <td>Homework 01</td>
             <td></td>
@@ -75,7 +75,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-01-23</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week02.html">Week 02</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab03.html">Lab 03</a></td>
+            <td>Lab 03</td>
             <td>Homework 02</td>
             <td>Homework 03</td>
             <td></td>
@@ -83,7 +83,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-01-30</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week03.html">Week 03</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab04.html">Lab 04</a></td>
+            <td>Lab 04</td>
             <td>Homework 04</td>
             <td>Homework 05</td>
             <td></td>
@@ -91,7 +91,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-02-06</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week04.html">Week 04</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab05.html">Lab 05</a></td>
+            <td>Lab 05</td>
             <td>Homework 06</td>
             <td>Homework 07</td>
             <td></td>
@@ -99,7 +99,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-02-13</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week05.html">Week 05</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab06.html">Lab 06</a></td>
+            <td>Lab 06</td>
             <td>Homework 08</td>
             <td>Homework 09</td>
             <td></td>
@@ -107,7 +107,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-02-20</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week06.html">Week 06</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab07.html">Lab 07</a></td>
+            <td>Lab 07</td>
             <td>Homework 10</td>
             <td>Project 01 Due</td>
             <td></td>
@@ -115,7 +115,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-02-27</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week07.html">Week 07</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab08.html">Lab 08</a></td>
+            <td>Lab 08</td>
             <td>Homework 11</td>
             <td>Homework 12</td>
             <td></td>
@@ -131,7 +131,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-03-13</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
-	    <td><a href="https://cse232-msu.github.io/CSE232/labs/lab09.html">Lab 09</a></td>
+	    <td>Lab 09</td>
             <td>Homework 13</td>
             <td>No Homework</td>
             <td>Midterm Exam: Details to be provided</td>
@@ -139,7 +139,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-03-20</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week09.html">Week 09</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab10.html">Lab 10</a></td>
+            <td>Lab 10</td>
             <td>Homework 14</td>
             <td>Homework 15</td>
             <td></td>
@@ -147,7 +147,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-03-27</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week10.html">Week 10</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab11.html">Lab 11</a></td>
+            <td>Lab 11</td>
             <td>Homework 16</td>
             <td>Project 02 Due</td>
             <td></td>
@@ -155,7 +155,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-04-03</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week11.html">Week 11</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab12.html">Lab 12</a></td>
+            <td>Lab 12</td>
             <td>Homework 17</td>
             <td>Homework 18</td>
             <td></td>      
@@ -163,7 +163,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-04-10</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week12.html">Week 12</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab13.html">Lab 13</a></td>
+            <td>Lab 13</td>
             <td>Homework 19</td>
             <td>Homework 20</td>
             <td></td>  
@@ -171,7 +171,7 @@ Links to lecture videos, projects, and other materials will be made available as
         <tr>
             <td>2023-04-17</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week13.html">Week 13</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/labs/lab14.html">Lab 14</a></td>
+            <td>Lab 14</td>
             <td>No Homework</td>
             <td>Homework 21</td>
             <td></td>
