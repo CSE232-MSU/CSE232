@@ -15,10 +15,10 @@ defaults:
         path: ""
       values:
         layout: "default"
-    - scope:
-        path: "labs/"
-      values:
-        layout: "default"
+#     - scope:
+#         path: "labs/"
+#       values:
+#         layout: "default"
     - scope:
         path: "setup/"
       values:
