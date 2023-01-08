@@ -2,6 +2,8 @@
 title: Labs
 ---
 
+All Lab content is hosted on Codio.
+<!-- 
 # Labs
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistant to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
@@ -38,3 +40,4 @@ The lab assignments (on Coding Rooms) are released at 10am on Tuesdays and due a
 
 <!-- 
 #### [Lab 14 - Last Lab](labs/lab14.html) -->
+ -->
