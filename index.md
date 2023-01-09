@@ -28,19 +28,19 @@ Resources:
 
 ## Course Schedule
 
-It should be assumed that all assignments are due by 10:00 PM ET on their respective due dates. Due dates are subject to change, but if a change is made, an announcement will be posted to Piazza.
+It should be assumed that all assignments are due by 11:59 PM (MSU time) on their respective due dates. Asynchronous lab assignments are due at 11:59 PM on Sundays. Due dates are subject to change, but if a change is made, an announcement will be posted to Piazza.
 
 Links to lecture videos, projects, and other materials will be made available as relevant dates approach. Content that is written for future weeks may change without notice until the date arrives.
 
 
 <!-- [Add to Google Calendar](https://calendar.google.com/calendar/u/0?cid=anFtcGxzdGcwczFqa2FnZDV1dWZldmxqMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) -->
 
-<div align="center">
+<!-- <div align="center">
     <p id="course-progress-header"></p>
     <span class="Progress" id="course-progress-container">
         <span class="Progress-item color-bg-success-emphasis" id="course-progress"></span>
     </span>
-</div>
+</div> -->
 
 &nbsp;
 
