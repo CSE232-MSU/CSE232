@@ -4,8 +4,8 @@
   link: /syllabus.html
 - name: Lectures
   link: /lectures.html
-- name: Labs
-  link: /labs.html
+# - name: Labs
+#   link: /labs.html
 - name: VSCode Setup
   link: /vscode_setup.html
 - name: Coding Rooms Setup
