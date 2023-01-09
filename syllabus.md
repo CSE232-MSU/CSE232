@@ -4,7 +4,7 @@ title: Syllabus
 
 # Syllabus
 
-Spring Semester, 2023 (WIP)
+Spring Semester, 2023 
 
 ## General Information
 
@@ -24,13 +24,13 @@ The focus of the course will be twofold:
 Lab sections 1-9 are meeting in-person in the STEM 2201. Although not required, we recommend wearing a high-quality mask (e.g. N95 or KN94) while attending lab.
 
 ### Alternate Lab Options
-All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by earning all the points on the Coding Rooms assignment associated with the lab by Friday, 10pm. 
+All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by earning all the points on the Codio assignment associated with the lab by Sunday. 
 
 ### Attending In-Person
-If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend the Zoom synchronous lab, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
+If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend one of the Zoom synchronous labs, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
 
 ## Course Materials
-<!-- - $15 Payment to Coding Rooms ([see here](coding_rooms_setup.html)) -->
+- $40 Payment to Codio
 - Recommended (but not required) textbook:
     - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
 - You must have a desktop or laptop capable of running Zoom and screen-sharing.
@@ -51,7 +51,7 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
 
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Saturday at 10pm for lab credit. There will also be an optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Saturday at 10pm for lab credit. There will also be two optional, weekly, synchronous, Zoom lab sessions offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
 ## Communication
 
@@ -141,7 +141,7 @@ To earn honors credit for this course you need to earn honors lab credit. There 
 - Be enrolled in the Honors Lab Section (09).
 - Or, fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
     - In the description of the work you will do, state: "I will complete at least 12 honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
-- Earn a 3.5 or 4.0 in the course.
+- And, earn a 3.5 or 4.0 in the course.
 
 The Honors Lab Assignments are not worth any points, nor are they extra credit. The only benefit they can provide is the opprotunity to earn an H-option for students enrolled in the Honors College.
 
