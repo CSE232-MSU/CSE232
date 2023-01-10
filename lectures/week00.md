@@ -4,7 +4,7 @@ title: Week 00
 
 # Week 00
 
-Labs begin next week (the second week of the semester). Please check your schedule and show up for your scheduled lab.
+Labs begin this week (the first week of the semester). Please check your schedule and show up for your scheduled lab.
 
 Each week will have videos, example code, and relevant notes. 
 
