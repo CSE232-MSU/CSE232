@@ -18,6 +18,7 @@ Essential Sites:
 
 Resources:
 - [cppreference](https://en.cppreference.com/w/)
+- [begin(c++)](https://gist.github.com/johnmcfarlane/1b2d9c83e4d3f700ba61e2df4077c613)
 - [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=2olsGf6JIkU)
 - [Debugging Guide](debugging_guide.html)
 - [OnlineGDB](https://www.onlinegdb.com/)
@@ -198,7 +199,7 @@ Below are links to the lectures for that week. All other material will be provid
 
 ## Help Room Schedule
 
-Help Room is conducted through Zoom. You can find the link to the meeting and the times on Piazza. Help Room will begin on 2022-01-16 (Monday).
+Help Room is conducted through Zoom. You can find the link to the meeting and the times on Piazza. Help Room will begin on 2022-01-17 (Tuesday).
 
 Please be aware that you may not receive the attention you desire if you attend help room very near an assignment deadline. So please consider attending help room prior to the day an assignment is due as there will be less demand. 
 
