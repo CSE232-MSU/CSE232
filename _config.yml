@@ -3,8 +3,8 @@ url: "https://cse232-msu.github.io"
 permalink: /:title
 
 collections:
-    labs:
-        output: true
+#     labs:
+#         output: true
     setup:
         output: true
     lectures:
@@ -15,10 +15,10 @@ defaults:
         path: ""
       values:
         layout: "default"
-    - scope:
-        path: "labs/"
-      values:
-        layout: "default"
+#     - scope:
+#         path: "labs/"
+#       values:
+#         layout: "default"
     - scope:
         path: "setup/"
       values:
