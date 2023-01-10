@@ -54,6 +54,13 @@ Search "Windows Powershell" in the Windows search bar, find the Windows Powershe
 wsl --install
 ```
 
+Or try this
+
+```bash
+wsl --install -d Ubuntu
+```
+
+
 This command will make some configurations and install the latest version of the Linux distribution, Ubuntu, for you (version 20.04 at the time of writing; if you're familiar with, and want another distribution, [you can find a list of available ones here](https://docs.microsoft.com/en-us/windows/wsl/install#change-the-default-linux-distribution-installed)).
 
 After running this command, restart your computer as the prompt says.
