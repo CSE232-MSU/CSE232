@@ -24,7 +24,7 @@ The focus of the course will be twofold:
 Lab sections 1-9 are meeting in-person in the STEM 2201. Although not required, we recommend wearing a high-quality mask (e.g. N95 or KN94) while attending lab.
 
 ### Alternate Lab Options
-All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by earning all the points on the Codio assignment associated with the lab by Sunday. 
+All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by completing the requirements stated in the Codio assignment associated with the lab by Sunday. 
 
 ### Attending In-Person
 If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend one of the Zoom synchronous labs, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
