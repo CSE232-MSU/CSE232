@@ -175,7 +175,7 @@ A goal of this course is to teach professionalism. Any instance of academic dish
 
 - Copying another person's code or exam answers.
 - Using code implemented by someone else intended to solve this class' assignments (i.e., don't get someone else to do the assignment for you).
-- Using code independently implemented by someone else without attributing credit (i.e., you can use tools, libraries, or code snippets from the web, but only with proper citation).
+- Using code independently implemented by someone else without attributing credit (i.e., you can use tools, libraries, or code snippets from the web, but only with proper citation). Please note that code generating tools like Github Copilot and ChatGPT are not allowed on graded assessements.
 - Writing code that deceptively passes the test cases, but doesn't solve the problem given. In other words, abusing automatic grader mechanisms to gain unearned points (hard-coding).
 - Using sources whose purpose is to provide assignment solutions (e.g. Chegg, YahooAnswers).
 - Distributing course content without instructor permission.
