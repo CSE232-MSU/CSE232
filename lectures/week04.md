@@ -38,7 +38,7 @@ title: Week 04
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pAVDso7_Das" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
-In this course, you should never be using any unsigned types! We are only covering them because they are a part of the C++ language (and some less modern code may use them). Any time you encounter an unsigned type, you should immediately cast it to a signed type.
+The most common situation that you will encounter unsigned types is returned from the `.size()` member functions of containers in the STL. Any time you encounter such an unsigned type, you should immediately cast it to a signed type.
 
 ```c++
 int string_size = static_cast<int>(s.size());
