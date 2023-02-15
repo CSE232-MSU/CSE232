@@ -109,10 +109,8 @@ Below are links to the lectures for that week. All other material will be provid
             <td>2023-02-20</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week05.html">Week 05 (Revised Offering)</a></td>
             <td>Lab 06 (Revised Due Date)</td>
-            <td>Homework 10</td>
-            <td>Project 01 Due</td>
-	    <td>Homework 8 (Revised Due Date)</td>
-            <td>Homework 9 (Revised Due Date)</td>
+	    <td>Homework 08 (Revised Due Date)</td>
+            <td>Homework 09 (Revised Due Date)</td>
             <td></td>
         </tr>
         <tr>
