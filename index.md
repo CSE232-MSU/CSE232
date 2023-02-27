@@ -29,7 +29,7 @@ Resources:
 
 ## Course Schedule
 
-It should be assumed that all assignments are due by 11:59 PM (MSU time) on their respective due dates. Asynchronous lab assignments are due at 11:59 PM on Sundays. Due dates are subject to change, but if a change is made, an announcement will be posted to Piazza.
+It should be assumed that all assignments are due by 10 PM (MSU time) on their respective due dates. Asynchronous lab assignments are due at 10 PM on Sundays. Due dates are subject to change, but if a change is made, an announcement will be posted to Piazza.
 
 Below are links to the lectures for that week. All other material will be provided via D2L (homework, projects, labs, etc.). Please be sure to read the lab (but not start it) prior to attending a synchronous lab section.
 
