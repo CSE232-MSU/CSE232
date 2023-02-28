@@ -7,8 +7,8 @@ title: Exam Policies
 ## Midterm Exam Details
 
 Offerings:
-- Wednesday Morning: 2023-03-25 10am-noon
-- Wednesday Evening: 2023-03-25 7pm-9pm
+- Wednesday Morning: 2023-03-15 10am-noon
+- Wednesday Evening: 2023-03-15 7pm-9pm
 
 Location: <https://msu.zoom.us/j/94955751228>
 
