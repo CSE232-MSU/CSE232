@@ -7,8 +7,8 @@ title: Exam Policies
 ## Midterm Exam Details
 
 Time:
-- Lab Sections 1-5: Tuesday, 2022-11-01 @ 7-9pm
-- Lab Sections 6-9 and 730: Wednesday, 2022-11-02 @ 10am-noon
+- Lab Sections 1-5: 
+- Lab Sections 6-9 and 730: 
 
 Location: <https://msu.zoom.us/j/94955751228>
 
@@ -54,7 +54,7 @@ Please ensure that your screen, workspace and profile are visible by the Zoom de
 ## Rules
 
 - During the exam, you are only permitted to communicate with instructors. Only communicate to them via private Zoom messages. Please ensure that all other messaging platforms are disabled during the exam.
-- The exam's Coding Rooms page is the only application that you're allowed to have open. The Zoom device can only have the Zoom app open to display your workspace and message instructors.
+- The exam's D2L page is the only application that you're allowed to have open. The Zoom device can only have the Zoom app open to display your workspace and message instructors.
 - You are welcome to use any non-electronic resource during the exam. This includes textbooks, printed lecture slides, notes, example solutions to homework (including instructor solutions), and birthday cards. You may **not** use any online reference material or any other electronic resource.
 
 ## Preparation
@@ -65,11 +65,11 @@ Prior to the exam, a sample version will be released with questions broadly simi
 
 The exam is open book, meaning that you can bring whatever material you want, so long as it's not electronic. Printouts of reference material, textbooks, notes, the sample exam and key, etc. are all fine to bring.
 
-I recommend bringing reference material on the topics that are hard to remember. Like the useful functions in the STL algorithm library and the many data structures (`std::vector`, `std::string`, `std::map`, `std::set`, etc.).
+I recommend bringing reference material on the topics that are hard to remember. For the final, you might consider the useful functions in the STL algorithm library and the many data structures (`std::vector`, `std::string`, `std::map`, `std::set`, etc.).
 
 ## Content
 
-Both the midterm and final exam are comprehensive. This includes material from lectures, labs, and homework. The midterm exam will cover content up to and including Week 07. The final exam will cover everything.
+Both the midterm and final exam are comprehensive. This includes material from lectures, labs, and homework. The midterm exam will cover content up to and including Week 05. The final exam will cover everything.
 
 ## Past Exams
 
