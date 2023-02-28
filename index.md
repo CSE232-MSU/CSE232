@@ -135,7 +135,7 @@ Below are links to the lectures for that week. All other material will be provid
 	    <td>Lab 08</td>
             <td>Homework 11</td>
             <td>No Homework</td>
-            <td>Midterm Exam: Details to be provided</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Midterm Exam</a></td>
         </tr>
         <tr>
             <td>2023-03-20</td>
