@@ -6,9 +6,9 @@ title: Exam Policies
 
 ## Midterm Exam Details
 
-Time:
-- Lab Sections 1-5: 
-- Lab Sections 6-9 and 730: 
+Offerings:
+- Wednesday Morning: 2023-03-25 10am-noon
+- Wednesday Evening: 2023-03-25 7pm-9pm
 
 Location: <https://msu.zoom.us/j/94955751228>
 
@@ -39,11 +39,9 @@ Both exams will be 90 minutes in duration (from timer start to timer end), but e
 
 If you can't make an exam time, please respond to the Piazza post announcing the exam indicating that you need to attend the alternative exam offering.
 
-As just stated, for students that have conflicts with both exam times, please respond to the Piazza post announcing this exam. We will provide an alternative exam time later in the week for those whom the original date doesn't work. Do note that you need to announce a valid time conflict with both exam times ASAP to be eligible for the alternative exam.
+As just stated, for students that have conflicts with both exam times, please respond to the Piazza post announcing this exam. We will need to schedule a 60 minute one-on-one oral exam as an alternative during the week of the exam. Do note that you need to announce a valid time conflict with both exam times ASAP to be eligible for the alternative exam. If you have university-approved accommodations (VISA), please inform us of them on that Piazza announcement.
 
-If you cannot make the assigned nor the alternative exam times, please contact us via Piazza to make accommodations ASAP. Additionally, if you have university-approved accommodations (VISA), please inform us of them on that Piazza announcement.
-
-You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a Coding Rooms assignment.
+You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. You will obviously need a computer from which to take the exam, which will be a D2L Quiz.
 
 Please ensure that your screen, workspace and profile are visible by the Zoom device throughout the exam. Example:
 
