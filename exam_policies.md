@@ -73,4 +73,4 @@ Both the midterm and final exam are comprehensive. This includes material from l
 
 [All of the past in-person exams can be found here](https://cse.msu.edu/~cse232/Exam_Content/). Though, content on old exams won't necessarily be relevant to this semester's exams, as the course has evolved over time.
 
-These old exams were also given as traditional paper exams. Since exams are now taken on Coding Rooms, do note that question styles will differ.
+These old exams were also given as traditional paper exams.
