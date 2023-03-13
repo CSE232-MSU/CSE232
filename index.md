@@ -150,15 +150,15 @@ Below are links to the lectures for that week. All other material will be provid
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week09.html">Week 09</a></td>
             <td>Lab 10</td>
             <td>Homework 14</td>
-            <td>Project 02 Due</td>
+            <td>Homework 15</td>
             <td></td>
         </tr>
         <tr>
             <td>2023-04-03</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week10.html">Week 10</a></td>
             <td>Lab 11</td>
-            <td>Homework 15</td>
             <td>Homework 16</td>
+            <td>Project 02 Due</td>
             <td></td>      
         </tr>
         <tr>
