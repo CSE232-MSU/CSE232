@@ -51,7 +51,7 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
 
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Saturday at 10pm for lab credit. There will also be two optional, weekly, synchronous, Zoom lab sessions offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Sunday at 10pm for lab credit. There will also be two optional, weekly, synchronous, Zoom lab sessions offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
 ## Communication
 
