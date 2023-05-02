@@ -3,7 +3,7 @@ title: Exam Policies
 ---
 
 # Exam Policies
-
+<!--
 ## Midterm Exam Details
 
 Offerings:
@@ -13,7 +13,7 @@ Offerings:
 Location: <https://msu.zoom.us/j/94955751228>
 
 
-<!-- ## Final Review Session
+ ## Final Review Session
 
 In the Exam Zoom Meeting on 2021-04-23 at 4pm, Dr. Nahum will host a final review session to go over the sample final exam and answer any questions about the exam or other aspects of the class. It will be recorded and is entirely optional to attend. The solutions to the sample final will only be given to the students that "submit" their solution prior to the review session, so please ensure that you do so if you care to get answers. 
 ## Midterm Exam Details
@@ -67,10 +67,13 @@ I recommend bringing reference material on the topics that are hard to remember.
 
 ## Content
 
-Both the midterm and final exam are comprehensive. This includes material from lectures, labs, and homework. The midterm exam will cover content up to and including Week 05. The final exam will cover everything.
+Both the midterm and final exam are comprehensive. This includes material from lectures, labs, and homework. The midterm exam will cover content up to and including the week previous to the exam. The final exam will cover everything.
+
 
 ## Past Exams
 
 [All of the past in-person exams can be found here](https://cse.msu.edu/~cse232/Exam_Content/). Though, content on old exams won't necessarily be relevant to this semester's exams, as the course has evolved over time.
 
 These old exams were also given as traditional paper exams.
+
+
