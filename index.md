@@ -29,9 +29,12 @@ Resources:
 
 ## Course Schedule
 
-It should be assumed that all assignments are due by 10 PM (MSU time) on their respective due dates. Asynchronous lab assignments are due at 10 PM on Sundays. Due dates are subject to change, but if a change is made, an announcement will be posted to Piazza.
+It should be assumed that all assignments are due by 10 PM (MSU time) on their respective due dates. 
+<!-- Asynchronous lab assignments are due at 10 PM on Sundays.  -->
+Due dates are subject to change, but if a change is made, an announcement will be posted to Piazza.
 
-Below are links to the lectures for that week. All other material will be provided via D2L (homework, projects, labs, etc.). Please be sure to read the lab (but not start it) prior to attending a synchronous lab section.
+Below are links to the lectures for that week. All other material will be provided via D2L. 
+<!-- Please be sure to read the lab (but not start it) prior to attending a synchronous lab section. -->
 
 
 <!-- [Add to Google Calendar](https://calendar.google.com/calendar/u/0?cid=anFtcGxzdGcwczFqa2FnZDV1dWZldmxqMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) -->
@@ -45,6 +48,118 @@ Below are links to the lectures for that week. All other material will be provid
 
 &nbsp;
 
+<table id="course-calendar">
+    <thead>
+        <tr>
+            <th>Date</th>
+            <th>Day of Week</th>
+            <th>Lectures</th>
+            <th>Assignments Due</th>
+            <th>Notes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>2023-05-15</td>
+            <td>Monday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week00.html">Week 00</a></td>
+            <td>Nothing</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-05-18</td>
+            <td>Thursday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week01.html">Week 01</a></td>
+            <td>HW 01</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-05-22</td>
+            <td>Monday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week02.html">Week 02</a></td>
+            <td>HW 02</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-05-25</td>
+            <td>Thursday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week03.html">Week 03</a></td>
+            <td>HW 03</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-05-29</td>
+            <td>Monday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week04.html">Week 04</a></td>
+            <td>HW 04</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-01</td>
+            <td>Thursday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week05.html">Week 05</a></td>
+            <td>HW 05</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-05</td>
+            <td>Monday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week06.html">Week 06</a></td>
+            <td>HW 06</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-08</td>
+            <td>Thursday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week07.html">Week 07</a></td>
+            <td>Midterm</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-12</td>
+            <td>Monday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
+            <td>HW 07</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-15</td>
+            <td>Thursday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week09.html">Week 09</a></td>
+            <td>HW 08</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-19</td>
+            <td>Monday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week10.html">Week 10</a></td>
+            <td>HW 09</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-22</td>
+            <td>Thursday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week11.html">Week 11</a></td>
+            <td>HW 10</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-26</td>
+            <td>Monday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week12.html">Week 12</a></td>
+            <td>HW 11</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-06-29</td>
+            <td>Thursday</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week13.html">Week 13</a></td>
+            <td>HW 13 and Final</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+<!-- From Spring
 <table id="course-calendar">
     <thead>
         <tr>
@@ -196,10 +311,11 @@ Below are links to the lectures for that week. All other material will be provid
     </tbody>
 </table>
 
+-->
 
 ## Help Room Schedule
 
-Help Room is conducted through Zoom. You can find the link to the meeting and the times on Piazza. Help Room will begin on 2022-01-17 (Tuesday).
+Help Room is conducted through Zoom. You can find the link to the meeting and the times on Piazza. Help Room will begin on 2025-05-16 (Tuesday).
 
 Please be aware that you may not receive the attention you desire if you attend help room very near an assignment deadline. So please consider attending help room prior to the day an assignment is due as there will be less demand. 
 
