@@ -4,7 +4,7 @@ title: Syllabus
 
 # Syllabus
 
-Summer Semester, 2023 
+Spring Semester, 2023 
 
 ## General Information
 
@@ -18,7 +18,7 @@ The focus of the course will be twofold:
 - Learn the C++ language, with a focus on using the available functionality in the STL.
 - Learn how these tools work under the hood, so you can design your own data structures and algorithms.
 
-<!-- ## Pandemic Specific Information
+## Pandemic Specific Information
 
 ### In-Person Labs
 Lab sections 1-9 are meeting in-person in the STEM 2201. Although not required, we recommend wearing a high-quality mask (e.g. N95 or KN94) while attending lab.
@@ -27,7 +27,7 @@ Lab sections 1-9 are meeting in-person in the STEM 2201. Although not required, 
 All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by completing the requirements stated in the Codio assignment associated with the lab by Sunday. 
 
 ### Attending In-Person
-If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend one of the Zoom synchronous labs, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week. -->
+If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend one of the Zoom synchronous labs, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
 
 ## Course Materials
 - $40 Payment to Codio
@@ -42,7 +42,7 @@ If there is any reason you should not be attending the in-person lab (symptoms, 
 ## Lectures
 
 All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, assignments, and exams in this course.
-<!-- 
+
 ## Laboratory Sessions
 
 Lab section 1-9 will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online. 
@@ -51,7 +51,7 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
 
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Sunday at 10pm for lab credit. There will also be two optional, weekly, synchronous, Zoom lab sessions offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously. -->
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Sunday at 10pm for lab credit. There will also be two optional, weekly, synchronous, Zoom lab sessions offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
 ## Communication
 
@@ -109,33 +109,33 @@ A total of 1000 points can be accrued over the course of the semester. There wil
     </table>
 </div>
 
-* In order to receive a passing grade (greater than a 0.0), you will need to earn at least 50% of the cumulative points associated with exams. Please ensure you prepare for exams accordingly.
+* In order to recieve a passing grade (greater than a 0.0), you will need to earn at least 50% of the cumulative points associated with exams. Please ensure you prepare for exams accordingly.
 
 ### Exams
 
-There will be a two synchronous exams, each worth 200 points. A midterm exam after the midpoint of the semester and a final exam during the last week. Details regarding each will be announced as the dates approach.
+There will be a three synchronous exams, each worth 100 points. A midterm exam after the midpoint of the semester, a lab practical which will take place in lab the last week of instruction, and a final exam during finals week. Details regarding each will be announced as the dates approach.
 
-<!-- ### Projects
+### Projects
 
 There will be 3 projects over the course of the semester, each worth 100 points. The projects will include the design and implementation of solutions using C++.
 
-All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance, specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below. -->
+All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance, specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
 
-<!-- ### Labs
+### Labs
 
 You can fail to earn credit for a lab twice without penalty. For each lab missed beyond two, you will receive a 0.5 GPA reduction.
 
-For example, if a student was previously earning a 4.0, but missed 4 labs, then their overall course grade would be reduced to a 3.0 (`4.0 - (2 * 0.5) = 3.0`). -->
+For example, if a student was previously earning a 4.0, but missed 4 labs, then their overall course grade would be reduced to a 3.0 (`4.0 - (2 * 0.5) = 3.0`).
 
 ### Homework
 
-A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 60 points. There will be 12 assignments given, but only the top 10 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 600 points from the homework assignments.
+A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 20 points. There will be 22 assignments given, but only the top 20 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 400 points from the homework assignments.
 
 ### Re-Grades
 
 We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. The entire assignment will be regraded, not just a specific part. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.
 
-<!-- ## Honors
+## Honors
 
 To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you can attend Section 9 (Honors Lab Section) if you are enrolled in that section and earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Coding Rooms. You can fail to earn honors lab credit up to two times and still be awarded an H-option. Additionally you will need to:
 - Be enrolled in the Honors Lab Section (09).
@@ -143,26 +143,21 @@ To earn honors credit for this course you need to earn honors lab credit. There 
     - In the description of the work you will do, state: "I will complete at least 12 honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
 - And, earn a 3.5 or 4.0 in the course.
 
-The Honors Lab Assignments are not worth any points, nor are they extra credit. The only benefit they can provide is the opportunity to earn an H-option for students enrolled in the Honors College. -->
+The Honors Lab Assignments are not worth any points, nor are they extra credit. The only benefit they can provide is the opprotunity to earn an H-option for students enrolled in the Honors College.
 
 ## Extensions
 
 Make-ups for examinations may be arranged if your absence is caused by a documented illness or personal emergency. A written explanation (including supporting documentation) must be submitted to your lecture instructor via Piazza; if the explanation is acceptable, an alternative to the examination will be arranged. When possible, make-up arrangements should be completed in advance.
 
 A student who is unable to complete an assignment by the specified due date because of illness or a personal emergency should contact their lecture instructor. If the student's explanation is acceptable, the assignment due date will be extended (or their lecture instructor will make other appropriate arrangements).
-<!-- 
-A student is allowed to miss up to two laboratory sessions without penalty, so illness or personal emergency can be accommodated without needing to notify us. If a long-term illness or personal emergency consumes more than two, the student needs to contact their lecture instructor. -->
+
+A student is allowed to miss up to two laboratory sessions without penalty, so illness or personal emergency can be accommodated without needing to notify us. If a long-term illness or personal emergency consumes more than two, the student needs to contact their lecture instructor.
 
 ## Academic Honesty
 
 ### Spartan Code of Honor
 
 > As a Spartan, I will strive to uphold values of the highest ethical standard. I will practice honesty in my work, foster honesty in my peers, and take pride in knowing that honor in ownership is worth more than grades. I will carry these values beyond my time as a student at Michigan State University, continuing the endeavor to build personal integrity in all that I do.
-
-### Short Policy Description
-
-The work on graded assignments and exams must be solely your own work, not that of others. You should not be collaborating, tutored, or guided on any graded work. You are welcome to practice with others on exercises from the textbook, or on other materials, but the work you submit must be solely your own work. The use of tutors, friends, AI, solution sharing websites, etc. is grounds for course failure.
-
 
 ### Collaboration
 
@@ -172,7 +167,7 @@ __Under no circumstances should you share any part of an assignment solution wit
 
 Plagiarism (unsourced use of other's intellectual property) is not allowed. However, citing and using other's works is generally fine (please ask if uncertain) as long as the material wasn't made specifically for solving the assignments in this class. The use of material or code from a student that previously took the course is an explicit instance of academic dishonesty. Intellectual collaboration with other students in the class is allowed, but each student should write (and not share) their own code. If a student submits code that they don't understand, such is also an act of academic dishonesty.
 
-<!-- There is one exception to the above policy: labs. The lab assignments are intended to be solved collaboratively, and you are allowed to share your solutions with other students. However, you may only share with your partner to allow everyone the opportunity to solve the assignment. -->
+There is one exception to the above policy: labs. The lab assignments are intended to be solved collaboratively, and you are allowed to share your solutions with other students. However, you may only share with your partner to allow everyone the opportunity to solve the assignment.
 
 ### Examples Of Academic Misconduct
 
@@ -182,7 +177,7 @@ A goal of this course is to teach professionalism. Any instance of academic dish
 - Using code implemented by someone else intended to solve this class' assignments (i.e., don't get someone else to do the assignment for you).
 - Using code independently implemented by someone else without attributing credit (i.e., you can use tools, libraries, or code snippets from the web, but only with proper citation). Please note that code generating tools like Github Copilot and ChatGPT are not allowed on graded assessements.
 - Writing code that deceptively passes the test cases, but doesn't solve the problem given. In other words, abusing automatic grader mechanisms to gain unearned points (hard-coding).
-- Using sources whose purpose is to provide assignment solutions (e.g. Chegg, YahooAnswers, ChatGPT and other large language models).
+- Using sources whose purpose is to provide assignment solutions (e.g. Chegg, YahooAnswers).
 - Distributing course content without instructor permission.
 - Having another person that isn't an instructor or TA aid you in implementing a solution to an assignment. Tutors are not allowed to assist you on graded material.
 - Submitting a solution that you don't understand / can't explain to an instructor.
@@ -192,7 +187,7 @@ A goal of this course is to teach professionalism. Any instance of academic dish
 
 ### Real Instances Of Academic Misconduct From This Course 
 
-The following stories are real cases of academic dishonesty that I've encountered in my classes. I'm describing them here so that it is clear to each of my students what is allowed in my classes. In all cases of academic dishonesty, I will file an Academic Dishonesty Report and usually fail or severely reduce the student's grade.
+The following stories are real cases of academic dishonesty that I've encountered in my classes. I'm describing them here so that it is clear to each of my students what is allowed in my classes. In all cases of academic dishonesty, I will file an Academic Dishonesty Report and usually fail or severly reduce the student's grade.
 
 - A student found a solution written by another student (who took the class in a previous year). That student modified the solution (changed variable names, restructured code) and submitted the assignment.
 - A student worked closely with another student on an assignment and they showed each other their code in the computer lab. Although no files were exchanged, nor was there any copy/pasting, their solutions converged enough to be detected by my plagiarism detection software.
@@ -233,7 +228,7 @@ Sources which don't require attribution:
 - Class-related materials (lectures, example code).
 - Documentation from the linked reference websites (python.org, cppreference.com, cplusplus.com).
 
-Everything else, including conceptual discussions with other students should be attributed.
+Everything else, including conceptual discussions with other students should be attibuted.
 
 ### Department Policy Concerning The Use Of Chegg and Similar Sites
 > This course has adopted the [Chegg and Similar Sites policy](https://www.cse.msu.edu/Students/Current_Undergrad/Chegg/). Submission of student work (e.g. assignments and/or exam solutions) based on those found on Chegg, Brainly, Quizlet, and other similar websites will result in an Academic Dishonesty Report (ADR) and an automatic failing grade of zero (0.0) for the course. The ADR for students personally posting questions from assignments or exams to these sites will request additional sanctions.
@@ -244,15 +239,15 @@ The goal of this class is for you to learn. If you find that anything is coming 
 
 ## Grief Absence Policy
 
-If there are unfortunate circumstances that would lead you to have unexpected absences, MSU has a [Grief Absence Policy](https://reg.msu.edu/ROInfo/Notices/GriefAbsence.aspx). Please contact the Associate Dean, and we will make every effort to aid you in continuing the class after we receive confirmation from the administration.
+If there are unfortunate circumstances that would lead you to have unexpected absences, MSU has a [Grief Absence Policy](https://reg.msu.edu/ROInfo/Notices/GriefAbsence.aspx). Please contact the Associate Dean, and we will make every effort to aid you in continuing the class after we recieve confirmation from the administration.
 
 ## Resource Center for Persons with Disabilities
 
-Michigan State University is committed to providing equal opportunity for participation in all programs, services and activities. Requests for accommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued a verified individual services accommodation ("VISA") form. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible.
+Michigan State University is committed to providing equal opprotunity for participation in all programs, services and activities. Requests for acommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued a verified individual services accommodation ("VISA") form. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible.
 
 ## Religious Observances
 
-Accommodations will be made for religious observances if requests are made well in advance. Since religious observances are usually known at the beginning of class and assignment due dates are in the schedule, we expect students to request accommodation at the beginning of the semester, but we require that accommodations be requested at least 2 weeks before the observance. See MSU's [Religious Observance Policy](https://reg.msu.edu/ROInfo/Notices/ReligiousPolicy.aspx) for more details.
+Accommodations will be made for religious observances if requests are made well in advance. Since religious observances are usually known at the beginning of class and assignment due dates are in the schedule, we expect students to request accommodation at the beginning of the semester, but we require that accomadations be requested at least 2 weeks before the observance. See MSU's [Religious Observance Policy](https://reg.msu.edu/ROInfo/Notices/ReligiousPolicy.aspx) for more details.
 
 ## Acceptable Use Policy
 
