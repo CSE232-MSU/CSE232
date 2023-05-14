@@ -14,7 +14,7 @@ Continuation of object-centered design and implementation in C++. Building progr
 
 Essential Sites:
 - [D2L](https://d2l.msu.edu/d2l/loginh/)
-- [Piazza](https://piazza.com/msu/spring2023/cse232)
+- [Piazza](https://piazza.com/msu/summer2023/cse232/home)
 
 Resources:
 - [cppreference](https://en.cppreference.com/w/)
