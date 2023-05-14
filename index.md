@@ -92,7 +92,7 @@ Below are links to the lectures for that week. All other material will be provid
             <td>Tuesday</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week04.html">Week 04</a></td>
             <td>HW 04</td>
-            <td>Nte: Monday is a holiday</td>
+            <td>Note: Monday is a holiday</td>
         </tr>
         <tr>
             <td>2023-06-01</td>
