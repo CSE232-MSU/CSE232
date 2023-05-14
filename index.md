@@ -154,7 +154,7 @@ Below are links to the lectures for that week. All other material will be provid
             <td>2023-06-29</td>
             <td>Thursday</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week13.html">Week 13</a></td>
-            <td>HW 13 and Final</td>
+            <td>HW 12 and Final</td>
             <td></td>
         </tr>
     </tbody>
