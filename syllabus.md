@@ -42,6 +42,7 @@ If there is any reason you should not be attending the in-person lab (symptoms, 
 ## Lectures
 
 All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, assignments, and exams in this course.
+
 <!-- 
 ## Laboratory Sessions
 
@@ -51,7 +52,8 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
 
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Sunday at 10pm for lab credit. There will also be two optional, weekly, synchronous, Zoom lab sessions offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously. -->
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Sunday at 10pm for lab credit. There will also be two optional, weekly, synchronous, Zoom lab sessions offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously. 
+-->
 
 ## Communication
 
