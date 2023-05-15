@@ -250,7 +250,7 @@ If there are unfortunate circumstances that would lead you to have unexpected ab
 
 ## Resource Center for Persons with Disabilities
 
-Michigan State University is committed to providing equal opportunity for participation in all programs, services and activities. Requests for accommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued a verified individual services accommodation ("VISA") form. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible.
+Michigan State University is committed to providing equal opportunity for participation in all programs, services and activities. Requests for accommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued a verified individual services accommodation ("VISA") form. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible, via a private Piazza post with the uploaded VISA.
 
 ## Religious Observances
 
