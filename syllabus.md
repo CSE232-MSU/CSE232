@@ -41,7 +41,7 @@ If there is any reason you should not be attending the in-person lab (symptoms, 
 
 ## Lectures
 
-All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, assignments, and exams in this course.
+All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the assignments and exams in this course.
 
 <!-- 
 ## Laboratory Sessions
