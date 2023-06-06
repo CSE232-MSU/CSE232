@@ -33,7 +33,7 @@ Location: <https://msu.zoom.us/j/94955751228>
 -->
 
 ## Logistics
-The exams are password protected and can only be accessed during the allotted time. 
+<!-- The exams are password protected and can only be accessed during the allotted time.  -->
 
 Both exams will be 90 minutes in duration (from timer start to timer end), but everyone needs to be present in the Zoom meeting at the start of the scheduled exam time to ensure that everything is setup properly, ID checks and to deliver the password.
 
@@ -52,12 +52,12 @@ Please ensure that your screen, workspace and profile are visible by the Zoom de
 ## Rules
 
 - During the exam, you are only permitted to communicate with instructors. Only communicate to them via private Zoom messages. Please ensure that all other messaging platforms are disabled during the exam.
-- The exam's D2L page is the only application that you're allowed to have open. The Zoom device can only have the Zoom app open to display your workspace and message instructors.
+- The exam's Codio page is the only application that you're allowed to have open. The Zoom device can only have the Zoom app open to display your workspace and message instructors.
 - You are welcome to use any non-electronic resource during the exam. This includes textbooks, printed lecture slides, notes, example solutions to homework (including instructor solutions), and birthday cards. You may **not** use any online reference material or any other electronic resource.
 
 ## Preparation
 
-Prior to the exam, a sample version will be released with questions broadly similar to the actual exam. A key will also be provided (within a few days). The best way to prepare is to solve the sample exam, on your own, with the material you intend to bring to the actual exam. If you can't solve a question, come to help room, or ask on Piazza. We recommend that only after solving the exam, should you look at the solutions.
+Prior to the exam, a sample version will be released with questions broadly similar to the actual exam. The best way to prepare is to solve the sample exam, on your own, with the material you intend to bring to the actual exam. If you can't solve a question, come to help room, or ask on Piazza. We recommend that only after solving the exam, should you look at the solutions.
 
 ## Cheatsheets and Exam Aids
 
@@ -69,11 +69,11 @@ I recommend bringing reference material on the topics that are hard to remember.
 
 Both the midterm and final exam are comprehensive. This includes material from lectures, labs, and homework. The midterm exam will cover content up to and including the week previous to the exam. The final exam will cover everything.
 
-
+<!-- 
 ## Past Exams
 
 [All of the past in-person exams can be found here](https://cse.msu.edu/~cse232/Exam_Content/). Though, content on old exams won't necessarily be relevant to this semester's exams, as the course has evolved over time.
 
-These old exams were also given as traditional paper exams.
+These old exams were also given as traditional paper exams. -->
 
 
