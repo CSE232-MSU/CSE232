@@ -113,19 +113,15 @@ A total of 1000 points can be accrued over the course of the semester. There wil
 
 ### Exams
 
-There will be a three synchronous exams, each worth 100 points. A midterm exam after the midpoint of the semester, a lab practical which will take place in lab the last week of instruction, and a final exam during finals week. Details regarding each will be announced as the dates approach.
-
-### Projects
-
-There will be 3 projects over the course of the semester, each worth 100 points. The projects will include the design and implementation of solutions using C++.
-
-All assignments (projects and homework) are to be done individually. Discussing problem-solving strategies with other students is encouraged, __but as soon as the discussion turns to a particular implementation (for instance, specific code), the work must be your own__. You can make private posts on Piazza asking for help. See the [Academic Honesty](#academic-honesty) section below.
+There will be a three synchronous multiple choice exams, each worth 100, 100, and 200 points respectively. Additionally, there will be a lab practical coding exam which will take place in lab the last week of instruction worth 400 points. Details regarding each will be announced as the dates approach.
 
 ### Labs
 
 You can fail to earn credit for a lab twice without penalty. For each lab missed beyond two, you will receive a 0.5 GPA reduction.
 
 For example, if a student was previously earning a 4.0, but missed 4 labs, then their overall course grade would be reduced to a 3.0 (`4.0 - (2 * 0.5) = 3.0`).
+
+The schedule currently has 14 labs, meaning you need to earn credit on at least 12 of them.
 
 ### Homework
 
@@ -151,7 +147,7 @@ Make-ups for examinations may be arranged if your absence is caused by a documen
 
 A student who is unable to complete an assignment by the specified due date because of illness or a personal emergency should contact their lecture instructor. If the student's explanation is acceptable, the assignment due date will be extended (or their lecture instructor will make other appropriate arrangements).
 
-A student is allowed to miss up to two laboratory sessions without penalty, so illness or personal emergency can be accommodated without needing to notify us. If a long-term illness or personal emergency consumes more than two, the student needs to contact their lecture instructor.
+A student is allowed to miss up to two laboratory sessions without penalty, so illness or personal emergency can be accommodated without needing to notify us. If a long-term illness or personal emergency consumes more than two, the student needs to contact their lecture instructor. Similarily, homework assignments have 2 drops, so unless an illness lasts longer than a week, the drop policy should cover you.
 
 ## Academic Honesty
 
