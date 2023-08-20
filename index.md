@@ -177,7 +177,7 @@ Below are links to the lectures for that week. All other material will be provid
         <tr>
             <td>2023-08-28</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week00.html">Week 00</a></td>
-            <td>Lab 00</td>
+            <td>Lab 00 (not worth lab credit)</td>
             <td></td>
             <td></td>
             <td></td>
