@@ -240,7 +240,7 @@ Below are links to the lectures for that week. All other material will be provid
         </tr>
         <tr>
             <td>2023-10-23</td>
-            <td>><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
             <td>Lab 08 (except for Tuesday in-person labs)</td>
             <td>Break Day</td>
             <td>Homework 13</td>
