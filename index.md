@@ -48,6 +48,7 @@ Below are links to the lectures for that week. All other material will be provid
 
 &nbsp;
 
+<!-- From Summer
 <table id="course-calendar">
     <thead>
         <tr>
@@ -159,7 +160,8 @@ Below are links to the lectures for that week. All other material will be provid
         </tr>
     </tbody>
 </table>
-<!-- From Spring
+-->
+
 <table id="course-calendar">
     <thead>
         <tr>
@@ -173,149 +175,141 @@ Below are links to the lectures for that week. All other material will be provid
     </thead>
     <tbody>
         <tr>
-            <td>2023-01-09</td>
+            <td>2023-08-28</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week00.html">Week 00</a></td>
-            <td>Lab 01</td>
-            <td>No Homework</td>
-            <td>No Homework</td>
+            <td>Lab 00</td>
+            <td></td>
+            <td></td>
             <td></td>
         </tr>
         <tr>
-            <td>2023-01-16</td>
+            <td>2023-09-04</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week01.html">Week 01</a></td>
-            <td>Lab 02</td>
+            <td>Lab 01</td>
             <td>Homework 00 (not worth any points)</td>
             <td>Homework 01</td>
-            <td></td>
+            <td>Monday is Labor Day (no help room)</td>
         </tr>
         <tr>
-            <td>2023-01-23</td>
+            <td>2023-09-11</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week02.html">Week 02</a></td>
-            <td>Lab 03</td>
+            <td>Lab 02</td>
             <td>Homework 02</td>
             <td>Homework 03</td>
             <td></td>
         </tr>
         <tr>
-            <td>2023-01-30</td>
+            <td>2023-09-18</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week03.html">Week 03</a></td>
-            <td>Lab 04</td>
+            <td>Lab 03</td>
             <td>Homework 04</td>
             <td>Homework 05</td>
             <td></td>
         </tr>
         <tr>
-            <td>2023-02-06</td>
+            <td>2023-09-25</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week04.html">Week 04</a></td>
-            <td>Lab 05</td>
+            <td>Lab 04</td>
             <td>Homework 06</td>
             <td>Homework 07</td>
             <td></td>
         </tr>
         <tr>
-            <td>2023-02-13</td>
-            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week05.html">Week 05 (Postponed)</a></td>
-            <td>Lab 06 (Postponed)</td>
-            <td>Homework 08 (Postponed)</td>
-            <td>Homework 09 (Postponed)</td>
+            <td>2023-10-02</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week05.html">Week 05</a></td>
+            <td>Lab 05</td>
+            <td>Homework 08</td>
+            <td>MCQ Exam 1 (Details to be provided)</td>
             <td></td>
         </tr>
         <tr>
-            <td>2023-02-20</td>
-            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week05.html">Week 05 (Revised Offering)</a></td>
-            <td>Lab 06 (Revised Due Date)</td>
-	    <td>Homework 08 (Revised Due Date)</td>
-            <td>Homework 09 (Revised Due Date)</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>2023-02-27</td>
+            <td>2023-10-09</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week06.html">Week 06</a></td>
-            <td>Lab 07</td>
-	    <td>Homework 10</td>
-            <td>Project 1 (Revised Due Date)</td>
+            <td>Lab 06</td>
+	    <td>Homework 09</td>
+            <td>Homework 10</td>
             <td></td>
         </tr>
         <tr>
-            <td>2023-03-06</td>
-            <td>No Lectures</td>
-            <td>No Labs</td>
-            <td>No Homework</td>
-            <td>No Homework</td>
-            <td>Spring Break</td>
-        </tr>
-        <tr>
-            <td>2023-03-13</td>
+            <td>2023-10-16</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week07.html">Week 07</a></td>
-	    <td>Lab 08</td>
-            <td>Homework 11</td>
-            <td>No Homework</td>
-            <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Midterm Exam</a></td>
-        </tr>
-        <tr>
-            <td>2023-03-20</td>
-            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
-            <td>Lab 09</td>
+            <td>Lab 07</td>
+	    <td>Homework 11</td>
             <td>Homework 12</td>
-            <td>Homework 13</td>
-            <td></td>
+            <td>Monday is last drop date</td>
         </tr>
         <tr>
-            <td>2023-03-27</td>
+            <td>2023-10-23</td>
+            <td>><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
+            <td>Lab 08 (except for Tuesday in-person labs)</td>
+            <td>Break Day</td>
+            <td>Homework 13</td>
+            <td>Monday and Tuesday are Break Days (no help room)</td>
+        </tr>
+        <tr>
+            <td>2023-10-30</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week09.html">Week 09</a></td>
-            <td>Lab 10</td>
+	    <td>Lab 09</td>
             <td>Homework 14</td>
             <td>Homework 15</td>
             <td></td>
         </tr>
         <tr>
-            <td>2023-04-03</td>
+            <td>2023-11-06</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week10.html">Week 10</a></td>
-            <td>Lab 11</td>
+            <td>Lab 10</td>
             <td>Homework 16</td>
-            <td>Project 02 Due</td>
-            <td></td>      
+            <td>MCQ Exam 2 (details to be provided)</td>
+            <td></td>
         </tr>
         <tr>
-            <td>2023-04-10</td>
+            <td>2023-11-13</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week11.html">Week 11</a></td>
-            <td>Lab 12</td>
+            <td>Lab 11</td>
             <td>Homework 17</td>
             <td>Homework 18</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2023-11-20</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week12.html">Week 12</a></td>
+            <td>Lab 08 (only for in-person Tuesday labs)</td>
+            <td>Homework 19</td>
+            <td>Thanksgiving</td>
+            <td>Thursday and Friday are Thanksgiving (no help room)</td>      
+        </tr>
+        <tr>
+            <td>2023-11-27</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week13.html">Week 13</a></td>
+            <td>Lab 12</td>
+            <td>Homework 20</td>
+            <td>Homework 21</td>
             <td></td>  
         </tr>
         <tr>
-            <td>2023-04-17</td>
-            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week12.html">Week 12</a></td>
-            <td>Lab 13</td>
-            <td>Homework 19</td>
-            <td>Homework 20</td>
+            <td>2023-12-04</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week14.html">Week 14</a></td>
+            <td>Lab Practical Exam (details to be provided)</td>
+            <td>Homework 22</td>
+            <td></td>
             <td></td>
         </tr>
 	<tr>
-            <td>2023-04-24</td>
-            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week13.html">Week 13</a></td>
-            <td>Lab Practical Exam</td>
-            <td>Homework 21</td>
-            <td>Project 03 Due</td>
-            <td>Synchronous Lab Practical Exam: Details to be provided. </td>
-        </tr>
-        <tr>
-            <td>2022-05-01 Finals Week</td>
-            <td><a href="https://cse232-msu.github.io/CSE232/lectures/week14.html">Week 14 (optional content)</a></td>
+            <td>2023-12-11</td>
+            <td>No Lecture</td>
+            <td>No Lab</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td>Final Exam: Details to be provided.</td>
+            <td>MCQ Exam 3 (details to be provided)</td>
+            <td>Finals Week</td>
         </tr>
     </tbody>
 </table>
 
--->
+
 
 ## Help Room Schedule
 
-Help Room is conducted through Zoom. You can find the link to the meeting and the times on Piazza. Help Room will begin on 2025-05-16 (Tuesday).
+Help Room is conducted through Zoom. You can find the link to the meeting and the times on Piazza. Help Room will begin on 2023-09-05 (Tuesday).
 
 Please be aware that you may not receive the attention you desire if you attend help room very near an assignment deadline. So please consider attending help room prior to the day an assignment is due as there will be less demand. 
 
