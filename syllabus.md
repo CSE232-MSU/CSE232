@@ -4,7 +4,7 @@ title: Syllabus
 
 # Syllabus
 
-Spring Semester, 2023 
+Fall Semester, 2023 
 
 ## General Information
 
