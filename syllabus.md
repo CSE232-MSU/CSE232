@@ -121,7 +121,7 @@ You can fail to earn credit for a lab twice without penalty. For each lab missed
 
 For example, if a student was previously earning a 4.0, but missed 4 labs, then their overall course grade would be reduced to a 3.0 (`4.0 - (2 * 0.5) = 3.0`).
 
-The schedule currently has 14 labs, meaning you need to earn credit on at least 12 of them.
+The schedule currently has 12 labs, meaning you need to earn credit on at least 10 of them.
 
 ### Homework
 
