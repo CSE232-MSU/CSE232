@@ -113,7 +113,7 @@ A total of 1000 points can be accrued over the course of the semester. There wil
 
 ### Exams
 
-There will be a three synchronous multiple choice exams, each worth 100, 100, and 200 points respectively. Additionally, there will be a lab practical coding exam which will take place in lab the last week of instruction worth 400 points. Details regarding each will be announced as the dates approach.
+There will be a three synchronous multiple choice exams, each worth 100, 100, and 200 points respectively. Additionally, there will be a lab practical coding exam which will take place in lab the last week of instruction worth 200 points. Details regarding each will be announced as the dates approach.
 
 ### Labs
 
