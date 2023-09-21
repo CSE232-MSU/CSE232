@@ -18,6 +18,7 @@ Essential Sites:
 
 Resources:
 - [cppreference](https://en.cppreference.com/w/)
+- [LearnC++](https://www.learncpp.com/)
 - [begin(c++)](https://gist.github.com/johnmcfarlane/1b2d9c83e4d3f700ba61e2df4077c613)
 - [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=2olsGf6JIkU)
 - [Debugging Guide](debugging_guide.html)
