@@ -220,7 +220,7 @@ Below are links to the lectures for that week. All other material will be provid
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week05.html">Week 05</a></td>
             <td>Lab 05</td>
             <td>Homework 08</td>
-            <td>MCQ Exam 1 (Details to be provided)</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">MCQ Exam 1</a></td>
             <td></td>
         </tr>
         <tr>
@@ -260,7 +260,7 @@ Below are links to the lectures for that week. All other material will be provid
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week10.html">Week 10</a></td>
             <td>Lab 10</td>
             <td>Homework 16</td>
-            <td>MCQ Exam 2 (details to be provided)</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">MCQ Exam 2</a></td>
             <td></td>
         </tr>
         <tr>
@@ -290,7 +290,7 @@ Below are links to the lectures for that week. All other material will be provid
         <tr>
             <td>2023-12-04</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week14.html">Week 14</a></td>
-            <td>Lab Practical Exam (details to be provided)</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Lab Practical Exam</a></td>
             <td>Homework 22</td>
             <td></td>
             <td></td>
@@ -300,7 +300,7 @@ Below are links to the lectures for that week. All other material will be provid
             <td>No Lecture</td>
             <td>No Lab</td>
             <td></td>
-            <td>MCQ Exam 3 (details to be provided)</td>
+            <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">MCQ Exam 3</a></td>
             <td>Finals Week</td>
         </tr>
     </tbody>
