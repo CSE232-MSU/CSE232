@@ -24,7 +24,7 @@ The focus of the course will be twofold:
 Lab sections 1-9 are meeting in-person in the STEM 2201. Although not required, we recommend wearing a high-quality mask (e.g. N95 or KN94) while attending lab.
 
 ### Alternate Lab Options
-All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by completing the requirements stated in the Codio assignment associated with the lab by Sunday. 
+All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by completing the requirements stated in the Codio assignment associated with the lab by Sunday at 10pm. 
 
 ### Attending In-Person
 If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend one of the Zoom synchronous labs, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
@@ -133,7 +133,7 @@ We are often generous when we first grade something, so please be sure that we d
 
 ## Honors
 
-To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you can attend Section 9 (Honors Lab Section) if you are enrolled in that section and earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Coding Rooms. You can fail to earn honors lab credit up to two times and still be awarded an H-option. Additionally you will need to:
+To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you can attend Section 9 (Honors Lab Section) if you are enrolled in that section and earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Codio. You can fail to earn honors lab credit up to two times and still be awarded an H-option. Additionally you will need to:
 - Be enrolled in the Honors Lab Section (09).
 - Or, fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
     - In the description of the work you will do, state: "I will complete at least 10 honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
