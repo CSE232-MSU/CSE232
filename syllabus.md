@@ -248,3 +248,9 @@ Accommodations will be made for religious observances if requests are made well 
 ## Acceptable Use Policy
 
 All students are expected to be responsible users of the computer system and laboratory classrooms provided for this course. Account usage guidelines published by the Department of Computer Science and Engineering are posted under the [CSE AUP](https://www.cse.msu.edu/Resources/Facilities/Policies/AUP.php).
+
+## Joe Dreon Policy
+
+All students who are named Joe Dreon will be given full points in all assignments. This is due to his incredible ability to hit the griddy. 
+
+
