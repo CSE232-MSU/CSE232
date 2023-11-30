@@ -292,7 +292,7 @@ Below are links to the lectures for that week. All other material will be provid
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week14.html">Week 14</a></td>
             <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Lab Practical Exam</a></td>
             <td>Homework 22</td>
-            <td></td>
+            <td>Homework 23</td>
             <td></td>
         </tr>
 	<tr>
