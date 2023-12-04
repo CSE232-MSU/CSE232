@@ -21,7 +21,7 @@ The focus of the course will be twofold:
 ## Pandemic Specific Information
 
 ### In-Person Labs
-Lab sections 1-9 are meeting in-person in the STEM 2201. Although not required, we recommend wearing a high-quality mask (e.g. N95 or KN94) while attending lab.
+Weekly lab sections are meeting in-person in the STEM 2201. Although not required, we recommend wearing a high-quality mask (e.g. N95 or KN94) while attending lab.
 
 ### Alternate Lab Options
 All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by completing the requirements stated in the Codio assignment associated with the lab by Sunday at 10pm. 
@@ -45,7 +45,7 @@ All lectures are distributed via pre-recorded videos available each week on the 
 
 ## Laboratory Sessions
 
-Lab section 1-9 will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online. 
+Lab section will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online. 
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistants to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
 
@@ -133,13 +133,15 @@ We are often generous when we first grade something, so please be sure that we d
 
 ## Honors
 
-To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you can attend Section 9 (Honors Lab Section) if you are enrolled in that section and earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Codio. You can fail to earn honors lab credit up to two times and still be awarded an H-option. Additionally you will need to:
-- Be enrolled in the Honors Lab Section (09).
+To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you canbe enrolled in an Honors Lab Section, or complete an H-Option. If you are enrolled in an honors section you must earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Codio. 
+
+If you aren't enrolled in an honors section you can earn an H-option. To do so you will need to:
+- NOT enrolled in the Honors Lab Section.
 - Or, fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
     - In the description of the work you will do, state: "I will complete at least 10 honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
 - And, earn a 3.5 or 4.0 in the course.
 
-The Honors Lab Assignments are not worth any points, nor are they extra credit. The only benefit they can provide is the opprotunity to earn an H-option for students enrolled in the Honors College.
+The Honors Lab Assignments are not worth any points, nor are they extra credit.
 
 ## Extensions
 
