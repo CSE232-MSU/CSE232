@@ -93,6 +93,18 @@ By default, opening the distribution console will place you in your "home direct
 
 Which you can see by using the command `pwd`.
 
+Next lets update the installed software on the linux box. Run this command:
+
+```bash
+sudo apt update
+```
+Then run:
+```bash
+sudo apt upgrade
+```
+
+
+
 Let's now install our compiler. This can be done simply by executing the command:
 
 ```bash
