@@ -2,9 +2,11 @@
 title: Syllabus
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Syllabus
 
-Fall Semester, 2023 
+Spring Semester, 2024
 
 ## General Information
 
@@ -18,20 +20,13 @@ The focus of the course will be twofold:
 - Learn the C++ language, with a focus on using the available functionality in the STL.
 - Learn how these tools work under the hood, so you can design your own data structures and algorithms.
 
-## Pandemic Specific Information
 
-### In-Person Labs
-Weekly lab sections are meeting in-person in the STEM 2201. Although not required, we recommend wearing a high-quality mask (e.g. N95 or KN94) while attending lab.
-
-### Alternate Lab Options
-All students (regardless of section) are allowed to attend a synchronous Zoom lab section (see Piazza for details) if they would prefer without any prior permission. All students can also earn lab credit by completing the requirements stated in the Codio assignment associated with the lab by Sunday at 10pm. 
-
-### Attending In-Person
-If there is any reason you should not be attending the in-person lab (symptoms, exposure, quarantining, anxiety, etc.), either attend one of the Zoom synchronous labs, or complete the lab independently. There is no need to inform course staff of which option you are choosing each week.
 
 ## Course Materials
-- $40 Payment to Codio
-- Recommended (but not required) textbook:
+- $40 Payment to Codio, details presented in first lab.
+- Required Textbook (purchase a physical copy)
+    - [Tour of C++, 3rd Ed. by Bjarne Stroustrup](https://www.informit.com/store/tour-of-c-plus-plus-9780136816485?utm_source=referral&utm_medium=author&utm_campaign=cpptour3e)
+- Recommended (but not required) supplemental textbook:
     - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
 - You must have a desktop or laptop capable of running Zoom and screen-sharing.
 - You must have a phone or tablet capable of running Zoom with a camera that can show your workspace while taking exams.
@@ -51,7 +46,7 @@ The lab sessions are designed to be learning tools that complement the lectures,
 
 You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
 
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Sunday at 10pm for lab credit. There will also be two optional, weekly, synchronous, Zoom lab sessions offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
+__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Sunday at 10pm for lab credit. There will also be one optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
 ## Communication
 
@@ -108,8 +103,6 @@ A total of 1000 points can be accrued over the course of the semester. There wil
         </tbody>
     </table>
 </div>
-
-* In order to recieve a passing grade (greater than a 0.0), you will need to earn at least 50% of the cumulative points associated with exams. Please ensure you prepare for exams accordingly.
 
 ### Exams
 
