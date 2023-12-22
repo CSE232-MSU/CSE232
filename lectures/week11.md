@@ -2,6 +2,8 @@
 title: Week 11
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 11
 
 [Lecture slides (Encapsulation)](https://docs.google.com/presentation/d/1Fg8bUFT7YV5mFzVTG3i6y2Mf7kjg-b2BXmGMUUK6jdY/edit?usp=sharing)

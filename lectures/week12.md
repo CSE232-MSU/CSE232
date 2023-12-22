@@ -2,6 +2,8 @@
 title: Week 12
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 12
 
 [Lecture slides (Arrays)](https://docs.google.com/presentation/d/1tW-3ualuhvgOg-Arkr0eFkMaB9PTdeVTWEHVGem96M0/edit?usp=sharing)

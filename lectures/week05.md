@@ -2,6 +2,8 @@
 title: Week 05
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 05
 
 [Lecture slides (Functions Part 2)](https://docs.google.com/presentation/d/1NVbci9QSjah_Io-BV6gu222Mu_HX6EqxzVJ-7aDJH7k/edit?usp=sharing)

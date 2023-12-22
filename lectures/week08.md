@@ -2,6 +2,8 @@
 title: Week 08
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 08
 
 [Lecture slides (Streams)](https://docs.google.com/presentation/d/1DT9IzE5wPVPgoMBGoaz6pZGjzmb3KGh7MVwqf1cgIeQ/edit?usp=sharing)

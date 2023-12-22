@@ -2,6 +2,8 @@
 title: Week 01
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 01
 
 [Lecture slides (Types)](https://docs.google.com/presentation/d/1Re4t95lPLtviMKWBjjV7VSWe13lNZ0UyWxy92ZU4W58/edit?usp=sharing)

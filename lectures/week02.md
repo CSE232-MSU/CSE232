@@ -2,6 +2,8 @@
 title: Week 02
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 02
 
 [Lecture slides (Control Conditionals)](https://docs.google.com/presentation/d/1kM_bXpzac7l1jiXedfSXEFp8KNmiXzKuk1KCu7HZbug/edit?usp=sharing)

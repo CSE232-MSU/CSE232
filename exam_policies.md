@@ -15,10 +15,10 @@ Coding exams (lab practicals) are conducted in your assigned in-person lab.
 - Morning Exam, 2024-02-15 8:00 am, Wells Hall B115
 
 ### Midterm Exam 2
-Waiting on room booking
+Waiting on room reservation
 
 ### Final Exam
-Waiting on scheduling
+Waiting on room reservation
 
 
 # Exam Policies
@@ -54,7 +54,7 @@ Two of the lab sessions will be dedicated to lab practicals. You will be given a
 
 ## RCPD Accommodations Letters
 
-If you have a letter for accommodations from RCPD, please make a private Piazza post with the letter attached. On the Piazza post announcing details for the exam, details will be given for how to recieve your alloted accommodations.
+If you have a letter for accommodations from RCPD, please make a private Piazza post with the letter attached. On the Piazza post announcing details for the exam, details will be given for how to receive your requested accommodations.
 
 ## Makeup Exams
 

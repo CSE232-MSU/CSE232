@@ -4,6 +4,8 @@ title: Lectures
 
 # Lectures
 
+<span style="color:red">This document is currently being updated!</span>.
+
 All lectures are distributed via pre-recorded videos available each week. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, assignments, and exams in this course.
 
 #### [Week 00 - Syllabus, H-Option, What is C++?](lectures/week00.html)

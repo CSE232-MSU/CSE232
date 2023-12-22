@@ -2,6 +2,8 @@
 title: Week 04
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 04
 
 [Lecture slides (Type Modifiers Part 2)](https://drive.google.com/open?id=1tzVVgcN35-OSPjuDmzsBnJfjwJ3YCQoXcfBMHWCiAXY)

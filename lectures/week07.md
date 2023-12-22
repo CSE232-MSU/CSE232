@@ -2,6 +2,8 @@
 title: Week 07
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 07
 
 [Lecture slides (Iterators)](https://docs.google.com/presentation/d/1AoQTeXVQ-oDCksrPnTZXvmz868Xeig6Qs5IVF956Y6w/edit?usp=sharing)

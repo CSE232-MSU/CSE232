@@ -2,6 +2,8 @@
 title: Week 03
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 03
 
 [Lecture slides (Functions)](https://docs.google.com/presentation/d/10-YMPjlYbySELzAdXo4VsovOgu1ze1IYBMVF-5KwEk0/edit?usp=sharing)

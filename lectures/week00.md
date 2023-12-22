@@ -2,6 +2,8 @@
 title: Week 00
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 00
 Labs begin this week (the first week of the semester). Please check your schedule and show up for your scheduled lab.
 

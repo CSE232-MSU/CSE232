@@ -2,6 +2,8 @@
 title: Week 06
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 06
 
 [Lecture slides (Vectors)](https://docs.google.com/presentation/d/1N1ajnLs6HaTrm4-4HN2-XCEtO8mszlv-xau0Fyqo8YM/edit?usp=sharing)

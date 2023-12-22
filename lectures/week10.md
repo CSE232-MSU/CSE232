@@ -2,6 +2,8 @@
 title: Week 10
 ---
 
+<span style="color:red">This document is currently being updated!</span>.
+
 # Week 10
 
 [Lecture slides (Classes Part 2)](https://docs.google.com/presentation/d/1PfZqsP_MKAbGhYNzW_awN_9YSy7i7ZO-D_Za3e3FbNE/edit?usp=sharing)
