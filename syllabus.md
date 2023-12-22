@@ -24,35 +24,33 @@ The focus of the course will be twofold:
 
 ## Course Materials
 - $40 Payment to Codio, details presented in first lab.
-- Required Textbook (purchase a physical copy)
-    - [Tour of C++, 3rd Ed. by Bjarne Stroustrup](https://www.informit.com/store/tour-of-c-plus-plus-9780136816485?utm_source=referral&utm_medium=author&utm_campaign=cpptour3e)
-- Recommended (but not required) supplemental textbook:
-    - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.amazon.com/C-Primer-Stanley-B-Lippman-ebook/dp/B0091I7FEQ/ref=sr_1_1?dchild=1&keywords=C%2B%2B+Primer%2C+5th+Ed.+by+Lippman%2C+Lajoie%2C+Moo&qid=1606009208&sr=8-1) ISBN-13: 978-0321714114
-- You must have a desktop or laptop capable of running Zoom and screen-sharing.
+- Required Textbook (only purchase the physical copy)
+    - [Tour of C++, 3rd Ed. by Bjarne Stroustrup](https://www.informit.com/store/tour-of-c-plus-plus-9780136816485)
+- You must have a desktop or laptop computer capable of running Zoom and screen-sharing.
 - You must have a phone or tablet capable of running Zoom with a camera that can show your workspace while taking exams.
 - You must have a consistent internet connection for streaming video through Zoom, and watching lecture videos.
+- Recommended (but not required) supplemental textbooks:
+    - [C++ Primer, 5th Ed. by Lippman, Lajoie, Moo.](https://www.pearson.com/en-us/subject-catalog/p/c-primer/P200000000436) ISBN-13: 978-0321714114
+    - [Introduction to C++, 1st Ed. by George S. Tselikis](https://www.routledge.com/Introduction-to-C/Tselikis/p/book/9781032136080)
 
 
 
 ## Lectures
 
-All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, assignments, and exams in this course.
+All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, homework assignments, and exams in this course.
 
 ## Laboratory Sessions
 
-Lab section will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*. Repeatedly failing to earn credit for your laboratory section will reduce your final grade (see below). Lab section 730 is by default asynchronous online. 
+Lab section will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*.
 
 The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistants to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
 
-You are responsible for reading the lab and being comfortable with the content covered even if you choose to drop it (lab content will appear on homework assignments and exams).
-
-__Section 730__: Students that are assigned to this section, or those who wish to not attend their in-person section, can complete the Codio assignment by Sunday at 10pm for lab credit. There will also be one optional, weekly, synchronous, Zoom lab session offered for those who would like to complete the lab with a parter and with TA supervision as mentioned previously.
 
 ## Communication
 
 In-person communication can be done at help room. For all other circumstances, communication with the instructors should be done through Piazza (with a public or private post). Emails *will not* be responded to.
 
-All class announcements will be made through Piazza, as well as direct messages from the instructors. The instructor reserves the right to modify course policies, scheduling, and assignment specifications as necessary.
+All class announcements will be made through Piazza, as well as direct messages from the instructors. The instructor reserves the right to modify course policies, scheduling, and assignment specifications as necessary for unanticipated events.
 
 ## Grading
 
@@ -106,35 +104,46 @@ A total of 1000 points can be accrued over the course of the semester. There wil
 
 ### Exams
 
-There will be a three synchronous multiple choice exams, each worth 100, 100, and 200 points respectively. Additionally, there will be a lab practical coding exam which will take place in lab the last week of instruction worth 200 points. Details regarding each will be announced as the dates approach.
+#### Multiple Choice Exams
+There will be a three synchronous multiple choice exams, named "Midterm Exam 1", "Midterm Exam 2", and "Final Exam". Each is worth 150 points. The Final Exam score will replace the score of the lowest scoring midterm if the Final Exam is higher. 
+
+
+#### Coding Exams
+Additionally, there will be two lab practical coding exams ("Midterm Coding Exam" and "Final Coding Exam") which will take place in lab each worth 150 points. 
 
 ### Labs
 
-You can fail to earn credit for a lab twice without penalty. For each lab missed beyond two, you will receive a 0.5 GPA reduction.
+There are 11 graded labs throughout the semester, each lab is worth 10 points. There are two ways to earn these points:
 
-For example, if a student was previously earning a 4.0, but missed 4 labs, then their overall course grade would be reduced to a 3.0 (`4.0 - (2 * 0.5) = 3.0`).
+#### Prefered Option:
+If you attend your in-person lab section, come prepared (having watched the previous week's lectures), follow directions, and participate, you will be awarded full credit by your lab's TAs, regardless of the actual progress made on the lab assignment.
 
-The schedule currently has 12 labs, meaning you need to earn credit on at least 10 of them.
+#### Alternative Option
+You can alternatively complete the lab assignment by 10pm of Monday the following week and earn the points associated with that lab.
 
 ### Homework
 
-A homework assignment will be due every Monday and Thursday at 10 PM. Each homework assignment is worth 20 points. There will be 22 assignments given, but only the top 20 assignments will count toward your point total (the two lowest-scoring assignments will be dropped). Thus, you can earn a total of 400 points from the homework assignments.
+A homework assignment will be due every Thursday at 10 PM. Each homework assignment is worth 10 points. There will be 14 graded assignments given. Homework assignments will cover content from the week they are due as well as material covered earlier in the course.
 
 ### Re-Grades
 
-We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. The entire assignment will be regraded, not just a specific part. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.
+We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. The entire assessment will be regraded, not just a specific part. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.
 
-## Honors
+## Honors Section
 
-To earn honors credit for this course you need to earn honors lab credit. There are two ways to do so, you canbe enrolled in an Honors Lab Section, or complete an H-Option. If you are enrolled in an honors section you must earn credit by completing the necessary in-person work, or you can complete the Honors Lab Assignments on Codio. 
+To earn honors credit for this course, you need to be enrolled in an Honors Lab Section. The honors lab sections and non-honors lab sections have the labs will cover different material. Instead of practicing on programming assignments covering recently taught material, they will teach new, advanced programming techniques in C++. 
 
-If you aren't enrolled in an honors section you can earn an H-option. To do so you will need to:
-- NOT enrolled in the Honors Lab Section.
-- Or, fill out an [Honors Option Agreement Form](https://honorscollege.msu.edu/academics/honors-option.html).
-    - In the description of the work you will do, state: "I will complete at least 10 honors lab assignments which involve learning and applying supplemental content that is not required as part of the course. These assignments will extend my understanding and provide context for elements of the C++ programming language above and beyond the regular course content."
-- And, earn a 3.5 or 4.0 in the course.
+Additionally, students enrolled in an honors lab section must earn at least 90 points on honors lab assignments to recieve a passing grade. The in-lab coding exams for the honors lab sections will have content specific to material covered in the honors lab sections.
 
-The Honors Lab Assignments are not worth any points, nor are they extra credit.
+We encourage honors lab sections students to also complete the non-honors lab assignments for practice, but it isn't required, nor worth points.
+
+
+## Late Period
+
+Lab and homework assignments are due on Mondays and Thursdays at 10pm. We strongly recommend completing the assignments by this time to ensure that you are keeping up with the material. Codio will automatically "Mark as Complete" assignments shortly after this deadline so that the assignments can be graded. 
+
+You are welcome to "Unmark as Complete" an assignment if you wish to continue working. Please note that two days after the due date the assignments will be locked as read only so ensure that your assignment "Marked as Complete" before then.
+
 
 ## Extensions
 
@@ -142,7 +151,6 @@ Make-ups for examinations may be arranged if your absence is caused by a documen
 
 A student who is unable to complete an assignment by the specified due date because of illness or a personal emergency should contact their lecture instructor. If the student's explanation is acceptable, the assignment due date will be extended (or their lecture instructor will make other appropriate arrangements).
 
-A student is allowed to miss up to two laboratory sessions without penalty, so illness or personal emergency can be accommodated without needing to notify us. If a long-term illness or personal emergency consumes more than two, the student needs to contact their lecture instructor. Similarily, homework assignments have 2 drops, so unless an illness lasts longer than a week, the drop policy should cover you.
 
 ## Academic Honesty
 
@@ -150,40 +158,20 @@ A student is allowed to miss up to two laboratory sessions without penalty, so i
 
 > As a Spartan, I will strive to uphold values of the highest ethical standard. I will practice honesty in my work, foster honesty in my peers, and take pride in knowing that honor in ownership is worth more than grades. I will carry these values beyond my time as a student at Michigan State University, continuing the endeavor to build personal integrity in all that I do.
 
-### Collaboration
+### Plagiarism
 
-Each assignment submission is electronically and manually compared to all other solutions (in this course and previous offerings) to identify similar solutions.
-
-__Under no circumstances should you share any part of an assignment solution with another student. Simply showing your solution to another student almost guarantees detection by the plagiarism software. Past experience shows that a student who asks to "look at" your solution will copy parts of it or pass it along to someone else who copies it.__
-
-Plagiarism (unsourced use of other's intellectual property) is not allowed. However, citing and using other's works is generally fine (please ask if uncertain) as long as the material wasn't made specifically for solving the assignments in this class. The use of material or code from a student that previously took the course is an explicit instance of academic dishonesty. Intellectual collaboration with other students in the class is allowed, but each student should write (and not share) their own code. If a student submits code that they don't understand, such is also an act of academic dishonesty.
-
-There is one exception to the above policy: labs. The lab assignments are intended to be solved collaboratively, and you are allowed to share your solutions with other students. However, you may only share with your partner to allow everyone the opportunity to solve the assignment.
+Plagiarism (unsourced use of others' intellectual property) is not allowed. However, if you cite your sources as show below, you are permitted to use/apply material created by your peers, strangers, and AI tools on assignments.
 
 ### Examples Of Academic Misconduct
 
 A goal of this course is to teach professionalism. Any instance of academic dishonesty will be viewed as evidence that this goal has not been achieved, and will be grounds for receiving a final grade of 0.0. Examples of academic dishonesty include (but are not limited to):
 
-- Copying another person's code or exam answers.
-- Using code implemented by someone else intended to solve this class' assignments (i.e., don't get someone else to do the assignment for you).
-- Using code independently implemented by someone else without attributing credit (i.e., you can use tools, libraries, or code snippets from the web, but only with proper citation). Please note that code generating tools like Github Copilot and ChatGPT are not allowed on graded assessements.
+- Using code implemented by someone else without attributing credit (i.e., you can use tools, libraries, or code snippets from the web, but only with proper citation).
+- Violating exam policies (e.g. communicating during the multiple choice exam, or using AI during a coding exam)
 - Writing code that deceptively passes the test cases, but doesn't solve the problem given. In other words, abusing automatic grader mechanisms to gain unearned points (hard-coding).
-- Using sources whose purpose is to provide assignment solutions (e.g. Chegg, YahooAnswers).
 - Distributing course content without instructor permission.
-- Having another person that isn't an instructor or TA aid you in implementing a solution to an assignment. Tutors are not allowed to assist you on graded material.
-- Submitting a solution that you don't understand / can't explain to an instructor.
-- Using assignment solutions provided to a previous iteration of this course.
 - Providing false information to the instructor about matters related to the course.
 - Facilitating another student in any of these activities.
-
-### Real Instances Of Academic Misconduct From This Course 
-
-The following stories are real cases of academic dishonesty that I've encountered in my classes. I'm describing them here so that it is clear to each of my students what is allowed in my classes. In all cases of academic dishonesty, I will file an Academic Dishonesty Report and usually fail or severly reduce the student's grade.
-
-- A student found a solution written by another student (who took the class in a previous year). That student modified the solution (changed variable names, restructured code) and submitted the assignment.
-- A student worked closely with another student on an assignment and they showed each other their code in the computer lab. Although no files were exchanged, nor was there any copy/pasting, their solutions converged enough to be detected by my plagiarism detection software.
-- A student found a solution to a similar problem in the class written by a third-party (someone not associated with the class). The student submitted a solution based on the found solution, without attribution to the original source.
-- A student was posting homework questions to StackOverflow and soliciting for other's to solve their assignments for them, instead of just asking the instructors privately for assistance.
 
 ### How To Provide Attribution
 
@@ -209,8 +197,8 @@ def convert_bin_str_to_int(bin_str):
 # would be useful in converting both numbers
 ints = map(convert_bin_str_to_int, bin_strs)
 
-# This source helped me determine how to print binary numbers with padding:
-# http://stackoverflow.com/questions/13599638/how-to-return-a-number-as-a-binary-string-with-a-set-number-of-bits-in-python
+# This Piazza post helped me determine how to print binary numbers with padding:
+# https://piazza.com/class/lldas7863631i176d/post/7
 print("{0:06b}".format(sum(ints)))
 ```
 
@@ -221,8 +209,18 @@ Sources which don't require attribution:
 
 Everything else, including conceptual discussions with other students should be attibuted.
 
-### Department Policy Concerning The Use Of Chegg and Similar Sites
-> This course has adopted the [Chegg and Similar Sites policy](https://www.cse.msu.edu/Students/Current_Undergrad/Chegg/). Submission of student work (e.g. assignments and/or exam solutions) based on those found on Chegg, Brainly, Quizlet, and other similar websites will result in an Academic Dishonesty Report (ADR) and an automatic failing grade of zero (0.0) for the course. The ADR for students personally posting questions from assignments or exams to these sites will request additional sanctions.
+### Generative AI
+
+The use of generative AI (e.g. ChatGPT, GitHub Copilot, Bard) is permitted on take-home homework and lab assignments with attribution. However, we strongly recommend not becoming overly reliant on such tools as they aren't permitted on exams. Additionally, the assigned take-home work is given primarily to provide the opprotunity to practice the application of the material taught, and merely asking AI to generate a solution without learning how to solve the problems yourself robs you of that practice.
+
+So we recommend against the use of generative AI as a "solve me" button, but if you feel that it allows you to better learn the material, you are welcome to use it.
+
+### Collaboration
+
+On homework and especially labs, we strongly encourage you to collaborate on the assignments. Learning how to write code on your own is an important task, but equally important is learning how to read other's code and collaborate together. As such, we encourage the open discussion of homework and lab assignments on Piazza and more directly between your peers. You are welcome to share solutions, discuss potential implementations, and collectively debug each other's code. If you are inspired by other's work in your own solution (or if you just like how they solved a problem), please remember to cite your sources as described above.
+
+Please note that just copying others work, without putting in the time to learn the assignments, will result in you not benefiting from the practice that the homework and labs provide. Although you could just copy all the homework solutions from your peers, you will not be learning how to write and read code yourself.
+
 
 ## Extenuating Circumstances
 
