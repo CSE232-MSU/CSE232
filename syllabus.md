@@ -37,13 +37,13 @@ The focus of the course will be twofold:
 
 ## Lectures
 
-All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, homework assignments, and exams in this course.
+All lectures are distributed via pre-recorded videos available each week on the course website. You are welcome to work ahead of the schedule, however, some videos will be updated as the semester progresses. Watching the videos closely (I recommend taking notes) is essential to being able to complete the labs, homework assignments, and exams in this course. Each week's lectures will have assigned readings from the required textbook.
 
 ## Laboratory Sessions
 
 Lab section will be conducted in STEM 2201. Performing the work assigned in your laboratory section is *mandatory*.
 
-The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistants to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise.
+The lab sessions are designed to be learning tools that complement the lectures, as well as collaborative experiences where students work with each other and the Teaching Assistants to complete the exercise. Students who are late to lab might not receive credit for that session. Attendance is based on a good faith effort, i.e., the TAs will decide if you have put in a sincere effort to participate actively, collaborate with others, and attempt to complete the exercise. Each lab tends to cover content up to and including the week prior.
 
 
 ## Communication
