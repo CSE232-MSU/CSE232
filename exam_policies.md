@@ -2,6 +2,25 @@
 title: Exam Policies
 ---
 
+# Exam Offerings
+Please see Piazza for details.
+
+## Coding Exams
+Coding exams (lab practicals) are conducted in your assigned in-person lab.
+
+## Multiple Choice Exams
+
+### Midterm Exam 1
+- Evening Exam, 2024-02-14 6:30 pm, Wells Hall B115
+- Morning Exam, 2024-02-15 8:00 am, Wells Hall B115
+
+### Midterm Exam 2
+Waiting on room booking
+
+### Final Exam
+Waiting on scheduling
+
+
 # Exam Policies
 
 This course has 5 exams (3 multiple choice exams and 2 coding lab practical exams). Each exam is 90 minutes in duration (from timer start to timer end). ID checks will be performed, so please bring your student ID (or some other form of photo ID).
@@ -39,7 +58,7 @@ If you have a letter for accommodations from RCPD, please make a private Piazza 
 
 ## Makeup Exams
 
-Make up for missed exams won't be offered for Midterm Exam 1 or Midterm Exam 2 as the Final Exam will replace such a missed exam (see the syllabus). Generally, makeup exams will consist of an hour-long oral exam conducted via Zoom. These will be one-on-one and involve the student demonstrating their mastery of the material covered in the missed exam by verbally answering questions and writing code that meets the specifications provided by the proctor. Students are permitted the same notes as that which they could bring to the regular exam. We recommend taking the regularly assigned exam instead of these oral exams as students often report that the oral exams are more stressful, despite not being more challenging. If you would like to request such an exam, please make a private Piazza post as soon as possible detailing the circumstances around why you didn't attend the scheduled exam and your avalibility/schedule for taking the oral exam. 
+Make up for missed exams won't be offered for Midterm Exam 1 or Midterm Exam 2 as the Final Exam will replace such a missed exam (see the syllabus). Generally, makeup exams will consist of an hour-long oral exam conducted via Zoom. These will be one-on-one and involve the student demonstrating their mastery of the material covered in the missed exam by verbally answering questions and writing code that meets the specifications provided by the proctor. Students are permitted the same notes as that which they could bring to the regular exam. We recommend taking the regularly assigned exam instead of these oral exams as students often report that the oral exams are more stressful, despite not being more challenging. If you would like to request such a makeup exam, please make a private Piazza post as soon as possible detailing the circumstances around why you didn't attend the scheduled exam and your avalibility/schedule for taking the oral exam. 
 
 Please note: a grade penalty may be applied to the makeup exam depending on circumstances and promptness.
 
@@ -54,12 +73,5 @@ Please ensure that your screen, workspace and profile are visible by the Zoom de
     <img src="assets/images/exam_view.jpg">
 </div>
  -->
-
-<!-- 
-## Past Exams
-
-[All of the past in-person exams can be found here](https://cse.msu.edu/~cse232/Exam_Content/). Though, content on old exams won't necessarily be relevant to this semester's exams, as the course has evolved over time.
-
-These old exams were also given as traditional paper exams. -->
 
 
