@@ -7,7 +7,29 @@ title: Week 00
 # Week 00
 Labs begin this week (the first week of the semester). Please check your schedule and show up for your scheduled lab.
 
-Each week will have videos, example code, and relevant notes. 
+Each week will have readings from the required textbook, videos, example code, and relevant notes. 
+
+
+## Syllabus
+* Readins: <https://cse232-msu.github.io/CSE232/syllabus.html>
+* [Lecture slides (Syllabus)](https://docs.google.com/presentation/d/1YtptYTG3HxzzZS8MjkThvPvlD6jZtb4HJUE2q3z1CrE/edit?usp=sharing)
+
+## Honors Content
+This is only relevant to members of the Honors College.
+
+* [Lecture slides (H-Option)](https://docs.google.com/presentation/d/1wU9k1VWuV4rs7UvQIX63CDVZPGq2D5FTJgTXLX6OOrg/edit?usp=sharing)
+
+
+## Programs
+* Reading: Section 1.1 and 1.2
+
+## Functions
+* Reading: Section 1.3
+
+<span style="color:red">Old Content!</span>.
+
+
+
 
 ### Syllabus
 * [Lecture slides (Syllabus)](https://docs.google.com/presentation/d/1BDP2LtNkFF8bpdGfWmmFVkQSU2J6KCNC479NLT86ESs/edit?usp=sharing)
