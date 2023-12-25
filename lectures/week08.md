@@ -3,6 +3,7 @@ title: Week 08
 ---
 
 <span style="color:red">This document is currently being updated!</span>.
+<span style="color:red">Old Content Below!</span>.
 
 # Week 08
 

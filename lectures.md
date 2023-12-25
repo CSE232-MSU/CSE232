@@ -10,7 +10,7 @@ All lectures are distributed via pre-recorded videos available each week. You ar
 
 
 #### [Week 00 - Syllabus; Honors; Programs; Functions](lectures/week00.html)
-#### [Week 01 - Types, Variables, and Arithmetic; Scope and Lifetime; Constants](lectures/week01.html)
+#### [Week 01 - Types, Variables, and Arithmetic; Scope and Const](lectures/week01.html)
 #### [Week 02 - Pointers, Arrays, and References; Tests; Mapping to Hardware](lectures/week02.html)
 #### [Week 03 - Strings; Output; Input; I/O State ](lectures/week03.html)
 #### [Week 04 - Structures; Classes](lectures/week04.html)
