@@ -202,10 +202,11 @@ ints = map(convert_bin_str_to_int, bin_strs)
 print("{0:06b}".format(sum(ints)))
 ```
 
-Sources which don't require attribution: 
+Exception, here are sources which don't require attribution (so that you don't have to cite every line of code): 
 
-- Class-related materials (lectures, example code).
-- Documentation from the linked reference websites (python.org, cppreference.com, cplusplus.com).
+- Class-related materials (lectures, example code)
+- Documentation from the linked reference websites (python.org, cppreference.com, cplusplus.com)
+- Required or supplemental textbooks
 
 Everything else, including conceptual discussions with other students should be attibuted.
 
@@ -232,7 +233,7 @@ If there are unfortunate circumstances that would lead you to have unexpected ab
 
 ## Resource Center for Persons with Disabilities
 
-Michigan State University is committed to providing equal opprotunity for participation in all programs, services and activities. Requests for acommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued a verified individual services accommodation ("VISA") form. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible.
+Michigan State University is committed to providing equal opprotunity for participation in all programs, services and activities. Requests for acommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued an accommodation letter. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible, in a private Piazza post.
 
 ## Religious Observances
 
