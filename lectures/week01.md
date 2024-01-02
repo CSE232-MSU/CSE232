@@ -9,13 +9,13 @@ title: Week 01
 * Reading: Section 1.4
 * [Lecture slides (Types, Variables, and Arithmetic)](https://docs.google.com/presentation/d/1GUzTE3YP35jYUirrGBE2bmiA8SWEZsVtgjKaA0-BC-k/edit?usp=sharing)
 
-## Programs
+## Scope and Const
 * Reading: Section 1.5 and Section 1.6
 * [Lecture slides (Scope and Const)](https://docs.google.com/presentation/d/1i0GHJin-5A6qbgiGL58XDTjTuW2Ci5rCF83AAYTUXGI/edit?usp=sharing)
 * [scope.cpp](week01/scope.cpp)
 
 
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">Old Content Below!</span>
 
 
 # Week 01
