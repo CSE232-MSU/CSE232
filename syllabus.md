@@ -1,9 +1,6 @@
 ---
 title: Syllabus
 ---
-
-<span style="color:red">This document is currently being updated!</span>.
-
 # Syllabus
 
 Spring Semester, 2024
