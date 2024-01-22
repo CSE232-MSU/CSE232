@@ -9,13 +9,13 @@ title: Lab - Generic Algorithms
 When compiling multiple C++ files, it's pretty annoying to have to specify each .cpp file to the compiler.
 
 ```bash
-g++ -std=c++17 -Wall -g main.cpp stack.cpp disk.cpp io.cpp
+g++ -std=c++20 -Wall -g main.cpp stack.cpp disk.cpp io.cpp
 ```
 
 Recall our discussion in Lab 06 -- bash gives an alternative method to select files that match a particular pattern. Notice that the above files were all the files in the folder that ended with '.cpp'. You can use a _wildcard_ (the asterisk, `*`) to denote all of those files at once. Example:
 
 ```bash
-g++ -std=c++17 -Wall -g *.cpp
+g++ -std=c++20 -Wall -g *.cpp
 ```
 
 The `*` symbol roughly translates to "all", where, when combined with the '.cpp' extension, it becomes "all files that end in '.cpp'".

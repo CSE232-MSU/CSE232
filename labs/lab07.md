@@ -118,7 +118,7 @@ mkdir lab_vector
 Navigate your terminal to the folder, then, compile your three files with the following command:
 
 ```bash
-g++ -std=c++17 -Wall *.cpp
+g++ -std=c++20 -Wall *.cpp
 ```
 
 This command will compile all of the .cpp file (`*` means all, `*.cpp` means all files ending in .cpp) and build an executable.
@@ -128,7 +128,7 @@ This command will compile all of the .cpp file (`*` means all, `*.cpp` means all
 It's nice that the previous command compiles all of the files, but if you have other .cpp files (like from different projects, or from things you were working on temporarily, etc.) it won't work. Instead, you must specify the list of files to use. You can even name your executable using the `-o` flag, to be something other than the default "a.out".
 
 ```bash
-g++ -std=c++17 -Wall file1.cpp file2.cpp file3.cpp -o namedExecutable.exe
+g++ -std=c++20 -Wall file1.cpp file2.cpp file3.cpp -o namedExecutable.exe
 ```
 
 Something important to note, is that __we never compile header files__ directly. Header files should only be used when they are included in .cpp files.
