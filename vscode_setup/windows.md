@@ -191,7 +191,7 @@ int main()
 The terminal is where you compile your C++ source code. Most labs will have short sections dedicated to learning more about the terminal, as you'll need to be comfortable with it for general navigation and future coursework. Save your helloworld.cpp file if you haven't already (CTRL + S), and in order to compile our lovely program, type the following command into the terminal:
 
 ```bash
-g++ helloworld.cpp -Wall -std=c++17
+g++ helloworld.cpp -Wall -std=c++20
 ```
 
 This produces a file named "a.out" – you should see it appear in the file explorer. To run your compiled program, type into the terminal:
