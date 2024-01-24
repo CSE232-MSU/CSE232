@@ -2,7 +2,6 @@
 title: Week 02
 ---
 
-<span style="color:red">This document is currently being updated!</span>
 
 # Week 02
 
