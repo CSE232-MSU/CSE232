@@ -1,4 +1,3 @@
-// Example 3.6
 #include <iostream>
 using std::cin;
 using std::cout;
@@ -22,6 +21,7 @@ int main() {
     switch (C) {   // Classify each character
       case '\n':   // Newline
         ++line_count;
+        [[fallthrough]];  // Added to indicate that fallthrough is expected
       case ' ':  // White space (newline, blank or tab)
       case '\t':
         ++white_count;

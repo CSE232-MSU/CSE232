@@ -15,7 +15,7 @@ Here are the flags you should already be comfortable with:
 *   `-c` - This flag instructs the compiler to compile all your .cpp files, but not link them together (see Week 01).
 *   `-o filename` - This flag instructs the compiler to make a file named `filename` with the executable compiled program (instead of the default `a.out`).
 *   `-Wall` - This flag instructs the compiler to warn about as many potential erroneous code elements as possible (useful for beginners).
-*   `-std=c++17` - This instructs the compiler to use a particular version of the C++ language (you can use 11, 14, 20, etc. in the place of 17).
+*   `-std=c++20` - This instructs the compiler to use a particular version of the C++ language (you can use 11, 14, 20, etc. in the place of 17).
 *   `-g` - This flag instructs your compiler to include debugging information in the compiled program for use by `gdb`.  This will slow your program down, but is critical for effective debugging of code.
 
 And here are some new ones:

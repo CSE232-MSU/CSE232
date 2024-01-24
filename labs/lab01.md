@@ -78,11 +78,11 @@ Write or copy-paste this code into a file named "main.cpp" to follow along.
 To compile our Hello world program, type the following into terminal (Console/Shell):
 
 ```cmd
-g++ -std=c++17 -Wall main.cpp 
+g++ -std=c++20 -Wall main.cpp 
 ```
 
-`g++` is the GNU C++ compiler. In the above line, we have added a `-std=c++17` flag to ensure that the code is compiled using the C++17 standard.
-Although our Hello world program does not contain any C++17 extensions, it is a good idea to get into the habit of including this flag as different compilers default to different standards (to get the newest standard, try `-std=c++20` instead; all newer compilers will allow C++ 20, but not ones more than a couple of years old). The `-Wall` flag is useful for finding errors, it's an abbreviation for "warnings, all".
+`g++` is the GNU C++ compiler. In the above line, we have added a `-std=c++20` flag to ensure that the code is compiled using the c++20 standard.
+Although our Hello world program does not contain any c++20 extensions, it is a good idea to get into the habit of including this flag as different compilers default to different standards (to get the newest standard, try `-std=c++20` instead; all newer compilers will allow C++ 20, but not ones more than a couple of years old). The `-Wall` flag is useful for finding errors, it's an abbreviation for "warnings, all".
 
 By default, `g++` will create an executable named **a.out** (or **a.exe**, depending on the compiler). If your compilation was successful, you should see this newly created file in your current directory.
 
@@ -103,7 +103,7 @@ If all has gone according to plan, running the program should result in "Hello w
 The typical workflow is something like:
 
 - Edit your code using your favorite editor, then save it (ensuring that the file has a ".cpp" suffix).
-- In your terminal, enter `g++ -std=c++17 -Wall {your file's name}.cpp`.
+- In your terminal, enter `g++ -std=c++20 -Wall {your file's name}.cpp`.
 - If there are errors (and there *will* be errors), read the messages and edit your code. Repeat until it compiles.
 - Once your code compiles, run the `a.out`/`a.exe` executable, and observe the (hopefully correct) output for testing.
 
@@ -163,7 +163,7 @@ Students who are doing the honors option in CSE 232 are expected to do some extr
 
 ## C++ compilers
 
-In the laboratory above, you compiled your Hello World program using C++17, the specification for the language that was formalized in 2017 and incorporated into all major compilers over the subsequent year or two.  The newest C++ standard is C++20 (from 2020), which has only recently been fully incorporated into compilers.  For some of the honors labs you will need to be able to use C++20, so please make sure that you can compile your Hello World program using it on your own machine (Coding rooms will use the correct compiler settings for testing).
+In the laboratory above, you compiled your Hello World program using c++20, the specification for the language that was formalized in 2017 and incorporated into all major compilers over the subsequent year or two.  The newest C++ standard is C++20 (from 2020), which has only recently been fully incorporated into compilers.  For some of the honors labs you will need to be able to use C++20, so please make sure that you can compile your Hello World program using it on your own machine (Coding rooms will use the correct compiler settings for testing).
 
 ```cmd
 g++ -std=c++20 -Wall main.cpp 
