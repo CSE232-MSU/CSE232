@@ -4,8 +4,8 @@ title: Week 02
 
 # Week 02
 
-* [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
-* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf)
+* [Week 02 Sample Exam Questions](week02/Week02_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week02/Week02_Sample_Key.pdf)
 
 ## Pointers, Arrays, and References
 * Reading: Section 1.7

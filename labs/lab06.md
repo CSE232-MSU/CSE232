@@ -83,7 +83,7 @@ C/C++ programs compiled with the GNU compiler and the `-g` flag can be debugged 
 First, you'll want to compile your code using this flag:
 
 ```bash
-g++ -std=c++17 -g -Wall myprog.cpp
+g++ -std=c++20 -g -Wall myprog.cpp
 ```
 
 Then, to start `gdb`, invoke it on the executable file:
@@ -165,7 +165,7 @@ Before debugging, run the a.out executable to see what happens.
 (Comments are denoted by a `#` symbol, and are not part of the actual execution)
 
 ```
-$ g++ -std=c++17 -g -Wall badString.cpp     # compile program with -g flag
+$ g++ -std=c++20 -g -Wall badString.cpp     # compile program with -g flag
 
 $ gdb a.out                                 # invoke gdb with the executable
 
