@@ -2,8 +2,6 @@
 title: Week 02
 ---
 
-<span style="color:red">This document is currently being updated!</span>
-
 # Week 02
 
 * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)

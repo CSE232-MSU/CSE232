@@ -2,8 +2,38 @@
 title: Week 04
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
+
+
+# Week 04
+
+<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
+## Structures
+* Reading: Sections 2.1 and 2.2
+* [Lecture slides (Structures)]()
+
+<div align="center">
+
+</div>
+
+## Classes
+* Reading: Sections 2.3
+* [Lecture slides (Classes)]()
+
+<div align="center">
+
+</div>
+
+## Dynamically Allocated Memory
+* [Lecture slides (Dynamically Allocated Memory)]()
+
+<div align="center">
+
+</div>
+
+<span style="color:red">Old Content Below!</span>
 
 # Week 04
 

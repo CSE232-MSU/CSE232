@@ -2,8 +2,52 @@
 title: Week 12
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
+
+
+# Week 12
+
+<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
+## Mathematical Functions
+* Reading: Sections 17.1 and 17.2
+* [Lecture slides (Mathematical Functions)]()
+
+<div align="center">
+
+</div>
+
+## Numerical Algorithms
+* Reading: Section 17.3
+* [Lecture slides (Numerical Algorithms)]()
+
+<div align="center">
+
+</div>
+
+
+## Random Numbers
+* Reading: Section 17.5
+* [Lecture slides (Random Numbers)]()
+
+<div align="center">
+
+</div>
+
+
+## Use of Predicates and Algorithm Overview
+* Reading: Sections 13.4 and 13.5
+* [Lecture slides (Lambda Expressions)]()
+
+<div align="center">
+
+</div>
+
+
+
+
+<span style="color:red">Old Content Below!</span>
 
 # Week 12
 

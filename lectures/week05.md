@@ -2,9 +2,32 @@
 title: Week 05
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
 
+
+# Week 05
+
+<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
+## Separate Compilation
+* Reading: Sections 3.1 and 3.2
+* [Lecture slides (Separate Compilation)]()
+
+<div align="center">
+
+</div>
+
+## Function Arguments and Return Values
+* Reading: Sections 3.4
+* [Lecture slides (Function Arguments and Return Values)]()
+
+<div align="center">
+
+</div>
+
+
+<span style="color:red">Old Content Below!</span>
 # Week 05
 
 [Lecture slides (Functions Part 2)](https://docs.google.com/presentation/d/1NVbci9QSjah_Io-BV6gu222Mu_HX6EqxzVJ-7aDJH7k/edit?usp=sharing)

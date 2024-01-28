@@ -2,8 +2,48 @@
 title: Week 08
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
+
+
+# Week 08
+
+<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
+## Essential Operations
+* Reading: Section 6.1
+* [Lecture slides (Essential Operations)]()
+
+<div align="center">
+
+</div>
+
+## Copy and Move
+* Reading: Section 6.2
+* [Lecture slides (Copy and Move)]()
+
+<div align="center">
+
+</div>
+
+## Operator Overloading
+* Reading: Sections 6.4, and 6.5 through 6.5.1
+* [Lecture slides (Operator Overloading)]()
+
+<div align="center">
+
+</div>
+
+
+## I/O of User-Defined Types
+* Reading: Section 11.5
+* [Lecture slides (I/O of User-Defined Types)]()
+
+<div align="center">
+
+</div>
+
+<span style="color:red">Old Content Below!</span>
 
 # Week 08
 

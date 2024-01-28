@@ -2,8 +2,42 @@
 title: Week 10
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
+
+
+# Week 10
+
+<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
+## Vector Details
+* Reading: Sections 12.1 and 12.2
+* [Lecture slides (Vector Details)]()
+
+<div align="center">
+
+</div>
+
+## Lists and Maps
+* Reading: Sections 12.3, 12.4, 12.5, 12.6, and 12.8
+* [Lecture slides (Lists and Maps)]()
+
+<div align="center">
+
+</div>
+
+
+## Lambda Expressions
+* Reading: Section 7.3.3 through 7.3.3.1
+* [Lecture slides (Copy and Move)]()
+
+<div align="center">
+
+</div>
+
+
+
+<span style="color:red">Old Content Below!</span>
 
 # Week 10
 

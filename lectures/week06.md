@@ -2,8 +2,32 @@
 title: Week 06
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
+
+
+# Week 06
+
+<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
+## Exceptions and Invariants
+* Reading: Sections 4.1, 4.2, and 4.3
+* [Lecture slides (Exceptions and Invariants)]()
+
+<div align="center">
+
+</div>
+
+## Error-Handling Alternatives and Assertions
+* Reading: Sections 4.4 and 4.4.1
+* [Lecture slides (Error-Handling Alternatives and Assertions)]()
+
+<div align="center">
+
+</div>
+
+
+<span style="color:red">Old Content Below!</span>
 
 # Week 06
 

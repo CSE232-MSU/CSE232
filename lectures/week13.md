@@ -2,8 +2,8 @@
 title: Week 13
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
+<span style="color:red">Old Content Below!</span>
 
 # Week 13
 

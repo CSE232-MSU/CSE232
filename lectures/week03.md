@@ -2,8 +2,41 @@
 title: Week 03
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
+
+
+# Week 03
+
+<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
+
+
+## Strings
+* Reading: Section 10.2
+* [Lecture slides (Strings)]()
+
+<div align="center">
+
+</div>
+
+## Output
+* Reading: Sections 11.1 and 11.2
+* [Lecture slides (Output)]()
+
+<div align="center">
+
+</div>
+
+## Input and I/O State
+* Reading: Sections 11.3 and 11.4
+* [Lecture slides (Input and I/O State)]()
+
+<div align="center">
+
+</div>
+
+<span style="color:red">Old Content Below!</span>
 
 # Week 03
 

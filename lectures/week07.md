@@ -2,8 +2,39 @@
 title: Week 07
 ---
 
-<span style="color:red">This document is currently being updated!</span>.
-<span style="color:red">Old Content Below!</span>.
+<span style="color:red">This document is currently being updated!</span>
+
+
+# Week 07
+
+<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
+* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
+## Classes and Concrete Types
+* Reading: Section 5.1 through 5.2.1
+* [Lecture slides (Classes and Concrete Types)]()
+
+<div align="center">
+
+</div>
+
+## Destructors
+* Reading: Sections 5.2.2
+* [Lecture slides (Destructors)]()
+
+<div align="center">
+
+</div>
+
+## Initializer Lists
+* Reading: Sections 5.2.3
+* [Lecture slides (Destructors)]()
+
+<div align="center">
+
+</div>
+
+<span style="color:red">Old Content Below!</span>
 
 # Week 07
 
