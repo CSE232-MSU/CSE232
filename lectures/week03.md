@@ -2,9 +2,6 @@
 title: Week 03
 ---
 
-<span style="color:red">This document is currently being updated!</span>
-
-
 # Week 03
 
 Not uploaded yet.
