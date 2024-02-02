@@ -4,8 +4,6 @@ title: Week 03
 
 # Week 03
 
-Not uploaded yet.
-
 * [Week 03 Sample Exam Questions](week03/Week03_Sample_Questions.pdf)
 * [Week 03 Sample Exam Key](week03/Week03_Sample_Key.pdf)
 
