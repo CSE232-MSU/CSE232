@@ -1,0 +1,16 @@
+05.3-const.cpp
+05.4-auto.cpp
+05.5-unsigned.cpp
+06.1-chars.cpp
+06.2-charOps.cpp
+06.3-basic_strings.cpp
+06.4-input.cpp
+06.5-range.cpp
+06.6-more_strings.cpp
+06.7-finds.cpp
+06.8-lychrel.cpp
+a.out
+dynamic_memory.cpp
+filenames.txt
+first_digit.cpp
+redirection.cpp
