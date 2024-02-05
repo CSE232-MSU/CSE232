@@ -11,7 +11,10 @@ Coding exams (lab practicals) are conducted in your assigned in-person lab.
 ## Multiple Choice Exams
 
 ### Midterm Exam 1
-Waiting on room reservation
+There are two offerings of the midterm 1 (both in Wells Hall B115):
+
+* 2024-02-16, Friday @ 6:30pm
+* 2024-02-17, Saturday @ Noon
 
 ### Midterm Exam 2
 Waiting on room reservation
