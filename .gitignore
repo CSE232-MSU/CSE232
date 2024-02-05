@@ -6,3 +6,6 @@ _site/
 
 # VSCode settings
 .vscode/
+
+# Compiled Examples
+a.out
