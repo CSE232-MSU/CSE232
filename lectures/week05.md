@@ -26,6 +26,20 @@ title: Week 05
 
 </div>
 
+## Arrays, Functions, and Memory Optimizations
+* [Lecture slides (Arrays and Functions)]()
+
+<div align="center">
+
+</div>
+
+## Debugging
+* [Lecture slides (Arrays and Functions)]()
+
+<div align="center">
+
+</div>
+
 
 <span style="color:red">Old Content Below!</span>
 # Week 05
