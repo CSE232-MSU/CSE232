@@ -112,7 +112,7 @@ Additionally, there will be two lab practical coding exams ("Midterm Coding Exam
 
 There are 11 graded labs throughout the semester, each lab is worth 10 points. There are two ways to earn these points:
 
-#### Prefered Option:
+#### Preferred Option:
 If you attend your in-person lab section, come prepared (having watched the previous week's lectures), follow directions, and participate, you will be awarded full credit by your lab's TAs, regardless of the actual progress made on the lab assignment.
 
 #### Alternative Option
@@ -120,27 +120,15 @@ You can alternatively complete the lab assignment by 10pm of Monday the followin
 
 ### Homework
 
-A homework assignment will be due every Thursday at 10 PM. Each homework assignment is worth 10 points. There will be 14 graded assignments given. Homework assignments will cover content from the week they are due as well as material covered earlier in the course.
-
-### Re-Grades
-
-We are often generous when we first grade something, so please be sure that we did, indeed, make a mistake before you submit your request. The entire assessment will be regraded, not just a specific part. All requests for re-grades must come within one week from the return of the graded item. No requests will be considered thereafter, so please be sure to review your returned assignments promptly.
+A homework assignment will be due every Thursday at 10 PM. Each homework assignment is worth 10 points. There will be 14 graded assignments given. Homework assignments will cover content from the week they are due as well as material covered earlier in the course. At the due date, solutions will be released to aid students that have yet to complete the assignment. Homework assignments will be accepted up to two days after the original due date.
 
 ## Honors Section
 
 To earn honors credit for this course, you need to be enrolled in an Honors Lab Section. The honors lab sections and non-honors lab sections have the labs will cover different material. Instead of practicing on programming assignments covering recently taught material, they will teach new, advanced programming techniques in C++. 
 
-Additionally, students enrolled in an honors lab section must earn at least 90 points on honors lab assignments to recieve a passing grade. The in-lab coding exams for the honors lab sections will have content specific to material covered in the honors lab sections.
+Additionally, students enrolled in an honors lab section must earn at least 90 points on honors lab assignments to receive a passing grade. The in-lab coding exams for the honors lab sections will have content specific to material covered in the honors lab sections.
 
 We encourage honors lab sections students to also complete the non-honors lab assignments for practice, but it isn't required, nor worth points.
-
-
-## Late Period
-
-Lab and homework assignments are due on Mondays and Thursdays at 10pm. We strongly recommend completing the assignments by this time to ensure that you are keeping up with the material. Codio will automatically "Mark as Complete" assignments shortly after this deadline so that the assignments can be graded. 
-
-You are welcome to "Unmark as Complete" an assignment if you wish to continue working. Please note that two days after the due date the assignments will be locked as read only so ensure that your assignment "Marked as Complete" before then.
-
 
 ## Extensions
 
