@@ -7,8 +7,7 @@ title: Week 09
 
 # Week 09
 Sample exam questions to be provided later.
-<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
-* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
 
 ## Templates and Parameterized Types
 * Reading: Section 7.1 and 7.2 (stopping just before Section 7.2.1)

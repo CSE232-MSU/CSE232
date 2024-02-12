@@ -7,8 +7,7 @@ title: Week 06
 
 # Week 06
 Sample exam questions to be provided later.
-<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
-* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
 
 ## Exceptions and Invariants
 * Reading: Sections 4.1, 4.2, and 4.3

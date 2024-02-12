@@ -7,8 +7,7 @@ title: Week 07
 
 # Week 07
 Sample exam questions to be provided later.
-<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
-* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
+
 
 ## Classes and Concrete Types
 * Reading: Section 5.1 through 5.2.1

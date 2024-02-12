@@ -5,8 +5,6 @@ title: Week 05
 # Week 05
 
 Sample exam questions to be provided later.
-<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
-* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
 
 ## Separate Compilation
 * Reading: Sections 3.1, 3.2 and 3.3
