@@ -29,7 +29,7 @@ This course has 5 exams (3 multiple choice exams and 2 coding lab practical exam
 
 ## Content
 
-All exams are comprehensive. This includes material from lectures, labs, and homework. Each exam will cover material up to and including the week prior (e.g. Exam 1 will cover Weeks 00-04). It is also especially important to note that the homework assignment due the week prior to each multiple choice exam will have multiple questions concerning it.
+All exams are comprehensive. This includes material from lectures, labs, and homework. Each exam will cover material up to and including the week prior (e.g. Exam 1 will cover Weeks 00-04).
 
 ### Required Textbook
 
