@@ -4,8 +4,8 @@ title: Week 01
 
 # Week 01
 
-* [Week 01 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
-* [Week 01 Sample Exam Key](week01/Week01_Sample_Key.pdf)
+* [Week 01 Sample Exam Questions](SampleExams/Week01_Sample_Questions.pdf)
+* [Week 01 Sample Exam Key](SampleExams/Week01_Sample_Key.pdf)
 
 
 

@@ -4,8 +4,8 @@ title: Week 03
 
 # Week 03
 
-* [Week 03 Sample Exam Questions](week03/Week03_Sample_Questions.pdf)
-* [Week 03 Sample Exam Key](week03/Week03_Sample_Key.pdf)
+* [Week 03 Sample Exam Questions](SampleExams/Week03_Sample_Questions.pdf)
+* [Week 03 Sample Exam Key](SampleExams/Week03_Sample_Key.pdf)
 
 
 ## Introduction to Vectors and Functions

@@ -8,8 +8,8 @@ Labs begin this week (the first week of the semester). Please check your schedul
 
 Each week will have readings from the required textbook, slides, lecture videos, example code, and other relevant notes. Each week will also have a sample exam focusing on the current week's topics. Consider reading the sample exam questions before doing the readings and watching the lectures and answering it as you do.
 
-* [Week 00 Sample Exam Questions](week00/Week00_Sample_Questions.pdf)
-* [Week 00 Sample Exam Key](week00/Week00_Sample_Key.pdf)
+* [Week 00 Sample Exam Questions](SampleExams/Week00_Sample_Questions.pdf)
+* [Week 00 Sample Exam Key](SampleExams/Week00_Sample_Key.pdf)
 
 
 

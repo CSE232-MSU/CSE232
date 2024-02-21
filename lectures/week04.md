@@ -7,8 +7,8 @@ title: Week 04
 
 # Week 04
 
-* [Week 04 Sample Exam Questions](week04/Week04_Sample_Questions.pdf)
-* [Week 04 Sample Exam Key](week04/Week04_Sample_Key.pdf)
+* [Week 04 Sample Exam Questions](SampleExams/Week04_Sample_Questions.pdf)
+* [Week 04 Sample Exam Key](SampleExams/Week04_Sample_Key.pdf)
 
 ## Structures
 * Reading: Sections 2.1 and 2.2
