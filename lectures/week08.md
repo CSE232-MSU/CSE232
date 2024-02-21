@@ -6,9 +6,8 @@ title: Week 08
 
 
 # Week 08
+Sample exam questions to be provided later.
 
-<!-- * [Week 02 Sample Exam Questions](week01/Week01_Sample_Questions.pdf)
-* [Week 02 Sample Exam Key](week01/Week01_Sample_Key.pdf) -->
 
 ## Essential Operations
 * Reading: Section 6.1
