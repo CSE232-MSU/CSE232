@@ -2,9 +2,6 @@
 title: Week 06
 ---
 
-<span style="color:red">This document is currently being updated!</span>
-
-
 # Week 06
 
 * [Week 06 Sample Exam Questions](SampleExams/Week06_Sample_Questions.pdf)

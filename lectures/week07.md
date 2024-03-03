@@ -2,9 +2,6 @@
 title: Week 07
 ---
 
-<span style="color:red">This document is currently being updated!</span>
-
-
 # Week 07
 Sample exam questions to be provided later.
 
