@@ -6,10 +6,9 @@ title: Week 06
 
 
 # Week 06
-Sample exam questions to be provided later.
 
 * [Week 06 Sample Exam Questions](SampleExams/Week06_Sample_Questions.pdf)
-* [Week 06 Sample Exam Key](SampleExams/Week06_Sample_Key.pdf) -->
+* [Week 06 Sample Exam Key](SampleExams/Week06_Sample_Key.pdf) 
 
 ## Exceptions and Invariants
 * Reading: Sections 4.1, 4.2, and 4.3
