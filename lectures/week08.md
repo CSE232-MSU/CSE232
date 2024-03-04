@@ -42,6 +42,15 @@ Sample exam questions to be provided later.
 
 </div>
 
+
+## Streams
+* Reading: Section 11.7 though Section 11.7.3
+* [Lecture slides (Streams)]()
+
+<div align="center">
+
+</div>
+
 <span style="color:red">Old Content Below!</span>
 
 # Week 08
