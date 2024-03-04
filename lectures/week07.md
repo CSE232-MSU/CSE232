@@ -3,7 +3,9 @@ title: Week 07
 ---
 
 # Week 07
-Sample exam questions to be provided later.
+
+* [Week 07 Sample Exam Questions](SampleExams/Week07_Sample_Questions.pdf)
+* [Week 07 Sample Exam Key](SampleExams/Week07_Sample_Key.pdf) 
 
 
 ## Classes and Concrete Types
