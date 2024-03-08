@@ -2,9 +2,6 @@
 title: Week 08
 ---
 
-<span style="color:red">This document is currently being updated!</span>
-
-
 # Week 08
 Sample exam questions to be provided later.
 
