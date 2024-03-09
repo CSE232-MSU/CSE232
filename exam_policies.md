@@ -17,7 +17,10 @@ There are two offerings of the midterm 1 (both in Wells Hall B115):
 * 2024-02-17, Saturday @ Noon
 
 ### Midterm Exam 2
-Waiting on room reservation
+There are two offerings of the midterm 2 (both in Wells Hall B115):
+
+* 2024-03-19, Tuesday @ 8am
+* 2024-03-19, Tuesday @ 6:30pm
 
 ### Final Exam
 Waiting on room reservation
@@ -60,20 +63,6 @@ If you have a letter for accommodations from RCPD, please make a private Piazza 
 
 ## Makeup Exams
 
-Make up for missed exams won't be offered for Midterm Exam 1 or Midterm Exam 2 as the Final Exam will replace such a missed exam (see the syllabus). Generally, makeup exams will consist of an hour-long oral exam conducted via Zoom. These will be one-on-one and involve the student demonstrating their mastery of the material covered in the missed exam by verbally answering questions and writing code that meets the specifications provided by the proctor. Students are permitted the same notes as that which they could bring to the regular exam. We recommend taking the regularly assigned exam instead of these oral exams as students often report that the oral exams are more stressful, despite not being more challenging. If you would like to request such a makeup exam, please make a private Piazza post as soon as possible detailing the circumstances around why you didn't attend the scheduled exam and your avalibility/schedule for taking the oral exam. 
+Make up for missed exams won't be offered for Midterm Exam 1 or Midterm Exam 2 as the Final Exam will replace such a missed exam (see the syllabus). Generally, makeup exams will consist of an hour-long oral exam conducted via Zoom. These will be one-on-one and involve the student demonstrating their mastery of the material covered in the missed exam by verbally answering questions and writing code that meets the specifications provided by the proctor. Students are permitted the same notes as that which they could bring to the regular exam. We recommend taking the regularly assigned exam instead of these oral exams as students often report that the oral exams are more stressful, despite not being more challenging. If you would like to request such a makeup exam, please make a private Piazza post as soon as possible detailing the circumstances around why you didn't attend the scheduled exam and your availability/schedule for taking the oral exam. 
 
 Please note: a grade penalty may be applied to the makeup exam depending on circumstances and promptness.
-
-<!-- ### Section 730 Lab Practical
-
-Those of you in Section 730 don't have an in-person lab to attend. Instead, you must attend one of the Zoom synchronous labs. 
-You'll need to use the Zoom app on a separate device with a camera (likely a phone or tablet) that can show your workspace and computer screen. We strongly recommend plugging the device in as a disconnect caused by low battery may void your exam. You will obviously need a computer from which to take the exam, which will be a Codio assignment.
-
-Please ensure that your screen, workspace and profile are visible by the Zoom device throughout the exam. Example:
-
-<div align="center">
-    <img src="assets/images/exam_view.jpg">
-</div>
- -->
-
-
