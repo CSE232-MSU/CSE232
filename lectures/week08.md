@@ -3,7 +3,10 @@ title: Week 08
 ---
 
 # Week 08
-Sample exam questions to be provided later.
+
+* [Week 08 Sample Exam Questions](SampleExams/Week08_Sample_Questions.pdf)
+* [Week 08 Sample Exam Key](SampleExams/Week08_Sample_Key.pdf) 
+
 
 
 ## Essential Operations
