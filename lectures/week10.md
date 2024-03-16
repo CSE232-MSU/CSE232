@@ -26,12 +26,4 @@ Sample exam questions to be provided later.
 </div>
 
 
-## Lambda Expressions
-* Reading: Section 7.3.3 through 7.3.3.1
-* [Lecture slides (Copy and Move)]()
-
-<div align="center">
-
-</div>
-
 
