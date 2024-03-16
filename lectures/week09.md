@@ -3,7 +3,8 @@ title: Week 09
 ---
 
 # Week 09
-Sample exam questions to be provided later.
+* [Week 09 Sample Exam Questions](SampleExams/Week09_Sample_Questions.pdf)
+* [Week 09 Sample Exam Key](SampleExams/Week09_Sample_Key.pdf) 
 
 
 ## Friends
