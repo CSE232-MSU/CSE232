@@ -23,7 +23,9 @@ There are two offerings of the midterm 2 (both in Wells Hall B115):
 * 2024-03-19, Tuesday @ 6:30pm
 
 ### Final Exam
-Waiting on room reservation
+There are two offerings of the final exam (both in Wells Hall B115):
+* 2024-04-25, Thursday @ 3pm
+* 2024-04-26, Friday @ 12:30pm
 
 
 # Exam Policies
