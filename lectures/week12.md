@@ -35,12 +35,5 @@ Sample exam questions to be provided later.
 </div>
 
 
-## Use of Predicates and Algorithm Overview
-* Reading: Sections 13.4 and 13.5
-* [Lecture slides (Lambda Expressions)]()
-
-<div align="center">
-
-</div>
 
 
