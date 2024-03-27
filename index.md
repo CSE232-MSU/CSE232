@@ -24,7 +24,7 @@ Resources:
 - [105 STL Algorithms in Less Than an Hour](https://www.youtube.com/watch?v=2olsGf6JIkU)
 - [Debugging Guide](debugging_guide.html)
 - [OnlineGDB](https://www.onlinegdb.com/)
-- [STL Algorithms (and Rest of C++) Cheatsheet](https://hackingcpp.com/cpp/cheat_sheets.html)
+- [Standard Algorithms (and Rest of C++) Cheatsheets](https://hackingcpp.com/cpp/cheat_sheets.html)
 - [Unix Tutorial](https://www.tutorialspoint.com/unix/index.htm)
 - [C++ Formatter](http://format.krzaq.cc/) (Use the Google Style)
 - [Google Style Guide](https://google.github.io/styleguide/cppguide.html)
