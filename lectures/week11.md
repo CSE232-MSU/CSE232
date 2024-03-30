@@ -2,9 +2,6 @@
 title: Week 11
 ---
 
-<span style="color:red">This document is currently being updated!</span>
-
-
 # Week 11
 * [Week 11 Sample Exam Questions](SampleExams/Week11_Sample_Questions.pdf)
 * [Week 11 Sample Exam Key](SampleExams/Week11_Sample_Key.pdf) 
