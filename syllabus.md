@@ -110,7 +110,7 @@ Additionally, there will be two lab practical coding exams ("Midterm Coding Exam
 
 ### Labs
 
-There are 12 graded labs throughout the semester, each lab is worth 10 points. There are two ways to earn these points:
+There are 11 graded labs throughout the semester, each lab is worth 10 points. There are two ways to earn these points:
 
 #### Preferred Option:
 If you attend your in-person lab section, come prepared (having watched the previous week's lectures), follow directions, and participate, you will be awarded full credit by your lab's TAs, regardless of the actual progress made on the lab assignment.
@@ -120,7 +120,7 @@ You can alternatively complete the lab assignment by 10pm of Monday the followin
 
 ### Homework
 
-A homework assignment will be due every Thursday at 10 PM. Each homework assignment is worth 10 points. There will be 13 graded assignments given. Homework assignments will cover content from the week they are due as well as material covered earlier in the course. At the due date, solutions will be released to aid students that have yet to complete the assignment. Homework assignments will be accepted up to two days after the original due date.
+A homework assignment will be due every Thursday at 10 PM. Each homework assignment is worth 10 points. There will be 14 graded assignments given. Homework assignments will cover content from the week they are due as well as material covered earlier in the course. At the due date, solutions will be released to aid students that have yet to complete the assignment. Homework assignments will be accepted up to two days after the original due date.
 
 ## Honors Section
 
