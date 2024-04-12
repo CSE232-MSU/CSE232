@@ -3,7 +3,8 @@ title: Week 12
 ---
 
 # Week 12
-Sample exam questions to be provided later.
+* [Week 12 Sample Exam Questions](SampleExams/Week12_Sample_Questions.pdf)
+* [Week 12 Sample Exam Key](SampleExams/Week12_Sample_Key.pdf) 
 
 ## Numerical Algorithms
 * Reading: Section 17.1 - 17.4
