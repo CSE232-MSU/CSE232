@@ -3,7 +3,8 @@ title: Week 13
 ---
 
 # Week 13
-Sample exam questions to be provided later.
+* [Week 13 Sample Exam Questions](SampleExams/Week13_Sample_Questions.pdf)
+* [Week 13 Sample Exam Key](SampleExams/Week13_Sample_Key.pdf) 
 
 
 ## Recursion
