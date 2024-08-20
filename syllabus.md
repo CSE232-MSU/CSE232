@@ -224,6 +224,5 @@ Michigan State University is committed to providing equal opportunity for partic
 
 Accommodations will be made for religious observances if requests are made well in advance. Since religious observances are usually known at the beginning of class and assignment due dates are in the schedule, we expect students to request accommodation at the beginning of the semester, but we require that accommodations be requested at least 2 weeks before the observance. See MSU's [Religious Observance Policy](https://reg.msu.edu/ROInfo/Notices/ReligiousPolicy.aspx) for more details.
 
-## Acceptable Use Policy
-
-All students are expected to be responsible users of the computer system and laboratory classrooms provided for this course. Account usage guidelines published by the Department of Computer Science and Engineering are posted under the [CSE AUP](https://www.cse.msu.edu/Resources/Facilities/Policies/AUP.php).
+## Attendance
+Attendance at all regularly scheduled class meetings is a requirement of this course. Students with unexcused absences for more than three consecutive class meetings prior to the middle of the term may be dropped from the course for non-attendance. 
