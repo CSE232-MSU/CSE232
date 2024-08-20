@@ -1,9 +1,9 @@
 ---
 title: Syllabus
 ---
-# Syllabus
+# Syllabus (Work in progress)
 
-Spring Semester, 2024
+Fall Semester, 2024 (Work in progress)
 
 ## General Information
 
@@ -20,7 +20,7 @@ The focus of the course will be twofold:
 
 
 ## Course Materials
-- $40 Payment to Codio, details presented in first lab.
+- $44 Payment to Codio, details presented in first lab.
 - Required Textbook (only purchase the physical copy)
     - [Tour of C++, 3rd Ed. by Bjarne Stroustrup](https://www.informit.com/store/tour-of-c-plus-plus-9780136816485)
 - You must have a desktop or laptop computer capable of running Zoom and screen-sharing.
@@ -52,7 +52,7 @@ All class announcements will be made through Piazza, as well as direct messages 
 ## Grading
 
 
-A total of 1000 points can be accrued over the course of the semester. There will be no extra credit.
+A total of 1000 points can be accrued over the course of the semester.
 
 <div align="center">
     <table>
@@ -101,32 +101,32 @@ A total of 1000 points can be accrued over the course of the semester. There wil
 
 ### Exams
 
-#### Multiple Choice Exams
-There will be a three synchronous multiple choice exams, named "Midterm Exam 1", "Midterm Exam 2", and "Final Exam". Each is worth 150 points. The Final Exam score will replace the score of the lowest scoring midterm if the Final Exam is higher. 
+There will be a three synchronous multiple choice exams, MCQ Exam 1-3. 
+Additionally, there will be three coding exams, Coding Exam 1-3, which will take place in your assigned lab. 
+The lower score of the first two exams from each set will be dropped.
+Each exam is worth 200 points. Thus, there are 800 points in total given by exams.
 
-
-#### Coding Exams
-Additionally, there will be two lab practical coding exams ("Midterm Coding Exam" and "Final Coding Exam") which will take place in lab each worth 150 points. 
+The required textbook will be required for each exam as the exam will refer to sections of the book. Please ensure you possess a non-electronic version of the textbook prior to the first exam. 
 
 ### Labs
 
-There are 11 graded labs throughout the semester, each lab is worth 10 points. There are two ways to earn these points:
-
-#### Preferred Option:
-If you attend your in-person lab section, come prepared (having watched the previous week's lectures), follow directions, and participate, you will be awarded full credit by your lab's TAs, regardless of the actual progress made on the lab assignment.
-
-#### Alternative Option
-You can alternatively complete the lab assignment by 10pm of Monday the following week and earn the points associated with that lab.
+There are 12 in-person labs throughout the semester, each lab is worth 8 points. 
 
 ### Homework
 
-A homework assignment will be due every Thursday at 10 PM. Each homework assignment is worth 10 points. There will be 14 graded assignments given. Homework assignments will cover content from the week they are due as well as material covered earlier in the course. At the due date, solutions will be released to aid students that have yet to complete the assignment. Homework assignments will be accepted up to two days after the original due date.
+A homework assignment will be due most Thursdays at 11:59 PM. Each of the 13 homework assignments are worth 8 points. Homework assignments will cover content from the week they are due as well as material covered earlier in the course. At the due date, solutions will be released to aid students that have yet to complete the assignment. Homework assignments will be accepted up to two days after the original due date with a 50% late penalty.
+
+
+### Bonus Project
+
+The previous grading categories (exams, labs, and homework) sum to 1000 points. However, there will be one source of "extra credit" points in the form of a bonus final project worth 20 points. This project will be due during finals week.
+
 
 ## Honors Section
 
-To earn honors credit for this course, you need to be enrolled in an Honors Lab Section. The honors lab sections and non-honors lab sections have the labs will cover different material. Instead of practicing on programming assignments covering recently taught material, they will teach new, advanced programming techniques in C++. 
+To earn honors credit for this course, you need to be enrolled in an honors lab section. The honors lab sections and non-honors lab sections have the labs will cover different material. Instead of practicing on programming assignments covering recently taught material, they will teach new, advanced programming techniques in C++. 
 
-Additionally, students enrolled in an honors lab section must earn at least 90 points on honors lab assignments to receive a passing grade. The in-lab coding exams for the honors lab sections will have content specific to material covered in the honors lab sections.
+Additionally, students enrolled in an honors lab section must earn at least 80 points on honors lab to receive a passing grade. The coding exams for the honors lab sections may have content specific to material covered in the honors lab sections.
 
 We encourage honors lab sections students to also complete the non-honors lab assignments for practice, but it isn't required, nor worth points.
 
@@ -145,7 +145,7 @@ A student who is unable to complete an assignment by the specified due date beca
 
 ### Plagiarism
 
-Plagiarism (unsourced use of others' intellectual property) is not allowed. However, if you cite your sources as show below, you are permitted to use/apply material created by your peers, strangers, and AI tools on assignments.
+Plagiarism (unsourced use of others' intellectual property) is not allowed. However, if you cite your sources as show below, you are permitted to use/apply material created by your peers, strangers, and AI tools on homework assignments.
 
 ### Examples Of Academic Misconduct
 
@@ -197,7 +197,7 @@ Everything else, including conceptual discussions with other students should be 
 
 ### Generative AI
 
-The use of generative AI (e.g. ChatGPT, GitHub Copilot, Bard) is permitted on take-home homework and lab assignments with attribution. However, we strongly recommend not becoming overly reliant on such tools as they aren't permitted on exams. Additionally, the assigned take-home work is given primarily to provide the opprotunity to practice the application of the material taught, and merely asking AI to generate a solution without learning how to solve the problems yourself robs you of that practice.
+The use of generative AI (e.g. ChatGPT, GitHub Copilot, Bard) is permitted on take-home homework assignments with attribution. However, we strongly recommend not becoming overly reliant on such tools as they aren't permitted on exams. Additionally, the assigned take-home work is given primarily to provide the opportunity to practice the application of the material taught, and merely asking AI to generate a solution without learning how to solve the problems yourself robs you of that practice.
 
 So we recommend against the use of generative AI as a "solve me" button, but if you feel that it allows you to better learn the material, you are welcome to use it.
 
@@ -214,15 +214,15 @@ The goal of this class is for you to learn. If you find that anything is coming 
 
 ## Grief Absence Policy
 
-If there are unfortunate circumstances that would lead you to have unexpected absences, MSU has a [Grief Absence Policy](https://reg.msu.edu/ROInfo/Notices/GriefAbsence.aspx). Please contact the Associate Dean, and we will make every effort to aid you in continuing the class after we recieve confirmation from the administration.
+If there are unfortunate circumstances that would lead you to have unexpected absences, MSU has a [Grief Absence Policy](https://reg.msu.edu/ROInfo/Notices/GriefAbsence.aspx). Please contact the Associate Dean, and we will make every effort to aid you in continuing the class after we receive confirmation from the administration.
 
 ## Resource Center for Persons with Disabilities
 
-Michigan State University is committed to providing equal opprotunity for participation in all programs, services and activities. Requests for acommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued an accommodation letter. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible, in a private Piazza post.
+Michigan State University is committed to providing equal opportunity for participation in all programs, services and activities. Requests for accommodations by persons with disabilities may be made by contacting the [Resource Center for Persons with Disabilities](https://www.rcpd.msu.edu/) at 517-884-RCPD. Once your eligibility for an accommodation has been determined, you will be issued an accommodation letter. Please present this form to me (Dr. Nahum) at the start of the term, or as early as possible, in a private Piazza post.
 
 ## Religious Observances
 
-Accommodations will be made for religious observances if requests are made well in advance. Since religious observances are usually known at the beginning of class and assignment due dates are in the schedule, we expect students to request accommodation at the beginning of the semester, but we require that accomadations be requested at least 2 weeks before the observance. See MSU's [Religious Observance Policy](https://reg.msu.edu/ROInfo/Notices/ReligiousPolicy.aspx) for more details.
+Accommodations will be made for religious observances if requests are made well in advance. Since religious observances are usually known at the beginning of class and assignment due dates are in the schedule, we expect students to request accommodation at the beginning of the semester, but we require that accommodations be requested at least 2 weeks before the observance. See MSU's [Religious Observance Policy](https://reg.msu.edu/ROInfo/Notices/ReligiousPolicy.aspx) for more details.
 
 ## Acceptable Use Policy
 

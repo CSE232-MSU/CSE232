@@ -23,7 +23,7 @@ All lectures are distributed via pre-recorded videos available each week. You ar
 #### [Week 13 - Recursion; C++ After CSE 232](lectures/week13.html)
 
 
-## Old Lectures (not maintained)
+## Old Lectures (pre 2023, not maintained)
 #### [Week 00 - Syllabus, H-Option, What is C++?](lectures/week00.html)
 
 #### [Week 01 - Names and Types, Fundamental Types, Expressions, Boolean and IO Ops](lectures/week01.html)
