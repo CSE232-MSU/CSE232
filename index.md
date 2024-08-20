@@ -32,21 +32,15 @@ Resources:
 ## Course Schedule
 
 Homework assignments are due on Thursdays at 11:59pm. 
-
 Due dates are subject to change, but if a change is made, an announcement will be posted to Piazza.
-
 Below are links to the lectures for that week. All other material will be provided via D2L. 
 
 
+## Help Room Schedule
 
-<!-- [Add to Google Calendar](https://calendar.google.com/calendar/u/0?cid=anFtcGxzdGcwczFqa2FnZDV1dWZldmxqMmNAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) -->
-
-<!-- <div align="center">
-    <p id="course-progress-header"></p>
-    <span class="Progress" id="course-progress-container">
-        <span class="Progress-item color-bg-success-emphasis" id="course-progress"></span>
-    </span>
-</div> -->
+Help Room is conducted through Zoom. You can find the link to the meeting and the times on Piazza. Help Room will begin the evening of 2024-08-28.
+Please direct any and all written communication to Piazza (you can post anonymously if that's something you'd prefer). Emails may not be responded to.
+If you would like a one-on-one meeting with the lead instructor, please make a private Piazza post detailing your request and availability.
 
 &nbsp;
 
@@ -176,12 +170,3 @@ Below are links to the lectures for that week. All other material will be provid
     </tbody>
 </table>
 
-
-
-## Help Room Schedule
-
-Help Room is conducted through Zoom. You can find the link to the meeting and the times on Piazza. Help Room will begin the evening of 2024-08-28.
-
-Please direct any and all written communication to Piazza (you can post anonymously if that's something you'd prefer). Emails may not be responded to.
-
-If you would like a one-on-one meeting with the lead instructor, please make a private Piazza post detailing your request and availability.
