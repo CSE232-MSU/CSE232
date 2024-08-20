@@ -44,6 +44,7 @@ If you would like a one-on-one meeting with the lead instructor, please make a p
 
 &nbsp;
 
+<div align="center">
 <table id="course-calendar">
     <thead>
         <tr>
@@ -169,4 +170,4 @@ If you would like a one-on-one meeting with the lead instructor, please make a p
         </tr>
     </tbody>
 </table>
-
+</div>
