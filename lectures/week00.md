@@ -17,7 +17,8 @@ Each week will have readings from the required textbook, slides, lecture videos,
 * Reading: <https://cse232-msu.github.io/CSE232/syllabus.html>
 * [Lecture slides (Syllabus, Spring 2024)](https://docs.google.com/presentation/d/1YtptYTG3HxzzZS8MjkThvPvlD6jZtb4HJUE2q3z1CrE/edit?usp=sharing)
 
-
+## Passing CSE 232
+* [Lecture slides (Passing CSE 232)](https://docs.google.com/presentation/d/1h_D9FDajrzBfdN2dPcjvtmHH7MGgITle3lFEovoAH5s/edit?usp=sharing)
 
 
 ## Honors Content
