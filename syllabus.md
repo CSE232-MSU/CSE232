@@ -126,7 +126,7 @@ The previous grading categories (exams, labs, and homework) sum to 1000 points. 
 
 To earn honors credit for this course, you need to be enrolled in an honors lab section. The honors lab sections and non-honors lab sections have the labs will cover different material. Instead of practicing on programming assignments covering recently taught material, they will teach new, advanced programming techniques in C++. 
 
-Additionally, students enrolled in an honors lab section must earn at least 80 points on honors lab to receive a passing grade. The coding exams for the honors lab sections may have content specific to material covered in the honors lab sections.
+Additionally, students enrolled in an honors lab section must earn at least 90 points on honors labs to receive a passing grade. The coding exams for the honors lab sections may have content specific to material covered in the honors lab sections.
 
 We encourage honors lab sections students to also complete the non-honors lab assignments for practice, but it isn't required, nor worth points.
 
