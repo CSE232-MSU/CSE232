@@ -114,7 +114,7 @@ There are 12 in-person labs throughout the semester, each lab is worth 8 points.
 
 ### Homework
 
-A homework assignment will be due most Thursdays at 11:59 PM. Each of the 13 homework assignments are worth 8 points. Homework assignments will cover content from the week they are due as well as material covered earlier in the course. At the due date, solutions will be released to aid students that have yet to complete the assignment. Homework assignments will be accepted up to two days after the original due date with a 50% late penalty.
+A homework assignment will be due most Thursdays at 11:59 PM. Each of the 13 homework assignments are worth 8 points. Homework assignments will cover content from the week they are due as well as material covered earlier in the course. At the due date, solutions will be released to aid students that have yet to complete the assignment. Homework assignments will be accepted up to two days after the original due date with a 25% late penalty per day.
 
 
 ### Bonus Project
