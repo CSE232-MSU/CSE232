@@ -1,9 +1,9 @@
 ---
 title: Syllabus
 ---
-# Syllabus (Work in progress)
+# Syllabus
 
-Fall Semester, 2024 (Work in progress)
+Fall Semester, 2024
 
 ## General Information
 
