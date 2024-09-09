@@ -122,7 +122,7 @@ If you would like a one-on-one meeting with the lead instructor, please make a p
         <tr>
             <td>2024-10-28</td>
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week08.html">Week 08</a></td>
-            <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Coding Exam 2</a>/td>
+            <td><a href="https://cse232-msu.github.io/CSE232/exam_policies.html">Coding Exam 2</a></td>
             <td>HW 08</td>
             <td></td>
         </tr>
