@@ -106,6 +106,8 @@ Additionally, there will be three coding exams, Coding Exam 1-3, which will take
 The lower score of the first two exams from each set will be dropped.
 Each exam is worth 200 points. Thus, there are 800 points in total given by exams.
 
+October Edit: There is a additional exam, "MCQ Exam 1 Makeup". The lower two of that exam, "MCQ Exam 1", and "MCQ Exam 2" will be dropped.
+
 The required textbook will be required for each exam as the exam will refer to sections of the book. Please ensure you possess a non-electronic version of the textbook prior to the first exam. 
 
 ### Labs
