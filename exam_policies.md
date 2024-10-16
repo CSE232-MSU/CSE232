@@ -6,32 +6,23 @@ title: Exam Policies
 Please see Piazza for details.
 
 ## Coding Exams
-Coding exams (lab practicals) are conducted in your assigned in-person lab.
+Coding exams are conducted in your assigned in-person lab.
 
 ## Multiple Choice Exams
-Rooms are in the process of being reserved.
 
-<!-- ### Midterm Exam 1
-There are two offerings of the midterm 1 (both in Wells Hall B115):
+### MCQ Exam 1
+The MCQ Exam 1 takes place in Wells Hall B115 on Thursday, 2024-09-26. There are two offerings of this exam, one at 7am (morning) and one at 7pm (evening). Attend whichever one is most convenient.
 
-* 2024-02-16, Friday @ 6:30pm
-* 2024-02-17, Saturday @ Noon
 
-### Midterm Exam 2
-There are two offerings of the midterm 2 (both in Wells Hall B115):
+### MCQ Exam 2
+The MCQ Exam 2 takes place in Wells Hall B115 on Thursday, 2024-11-07. There are two offerings of this exam, one at 7am (morning) and one at 7pm (evening). Attend whichever one is most convenient.
 
-* 2024-03-19, Tuesday @ 8am
-* 2024-03-19, Tuesday @ 6:30pm
-
-### Final Exam
-There are two offerings of the final exam (both in Wells Hall B115):
-* 2024-04-25, Thursday @ 3pm
-* 2024-04-26, Friday @ 12:30pm -->
-
+### MCQ Exam 3
+The room/offering of the last MCQ exam hasn't been determined yet. The time schedule lists is at Thursday, 2024-12-12, at 5:45PM. But, this hasn't been confirmed and likely wont be until a few weeks before the exam. 
 
 # Exam Policies
 
-This course has 9 exams (3 multiple choice exams and 3 coding in-lab exams). Each exam is 90 minutes in duration (from timer start to timer end). ID checks will be performed, so please bring your student ID (or some other form of photo ID).
+This course has 6 exams (3 multiple choice exams and 3 coding in-lab exams). Each exam is 90 minutes in duration (from timer start to timer end). ID checks will be performed, so please bring your student ID (or some other form of photo ID).
 
 ## Content
 
@@ -54,11 +45,11 @@ I recommend bringing reference material on the topics that are hard to remember.
 
 ## Multiple Choice Exam Details
 
-The exam location and time(s) will be announced on Piazza. The exams are conducted with bubble sheets, so be sure to bring a pencil and eraser. No electronics are allowed, so please leave smart watches, headphones, and similar wearables in your bag. The time remaining will be announced verbally and written on the board.
+The exams are conducted with bubble sheets, so be sure to bring a pencil and eraser. No electronics are allowed, so please leave smart watches, headphones, and similar wearables in your bag. The time remaining will be announced verbally and written on the board.
 
 ## Coding Exam Details
 
-Three of the lab sessions will be dedicated to lab practicals. You will be given an in-class Codio assignment in lieu of the regular lab assignment. Please bring your computer (recommended fully charged as there are limited outlets) to the lab you are enrolled in. D2L's Respondus Lockdown browsers will be used, so we recommend ensuring that it is installed in advance. The exam's Codio page is the only application that you're allowed to have open (no IDEs). You are welcome to use any non-electronic resource during the exam. This includes textbooks, printed lecture slides, notes, example solutions to homework (including instructor solutions), and birthday cards. You may **not** use any online reference material or any other electronic resource.
+Three of the lab sessions will be dedicated to conducting coding exams. You will be given an in-class Codio assignment in lieu of the regular lab assignment. Please bring your computer (recommended fully charged as there are limited outlets) to the lab you are enrolled in. D2L's Respondus Lockdown browsers will be used, so we recommend ensuring that it is installed in advance. The exam's Codio page is the only application that you're allowed to have open (no IDEs). You are welcome to use any non-electronic resource during the exam. This includes textbooks, printed lecture slides, notes, example solutions to homework (including instructor solutions), and birthday cards. You may **not** use any online reference material or any other electronic resource.
 
 ## RCPD Accommodations Letters
 
@@ -66,6 +57,6 @@ If you have a letter for accommodations from RCPD, please make a private Piazza 
 
 ## Makeup Exams
 
-Make up for unexcused absences from assigned exams won't be offered for Exam 1 or 2 as the lower score will be automatically dropped (see the syllabus). Generally, makeup exams will consist of an hour-long oral exam conducted via Zoom. These will be one-on-one and involve the student demonstrating their mastery of the material covered in the missed exam by verbally answering questions and writing/running code in an editor requested by the proctor. Students are permitted the same non-electronic notes as that which they could bring to the regular exam. We recommend taking the regularly assigned exam instead of these oral exams as students often report that the oral exams are more stressful, despite not being more challenging. If you would like to request such a makeup exam, please make a private Piazza post as soon as possible detailing the circumstances around why you didn't attend the scheduled exam and your availability/schedule for taking the oral exam. 
+Make up for unexcused absences from assigned exams won't be offered for MCQ Exam 1/2 or Coding Exam 1/2 as the lower score will be automatically dropped (see the syllabus). Generally, makeup exams will consist of an hour-long oral exam conducted via Zoom. These will be one-on-one and involve the student demonstrating their mastery of the material covered in the missed exam by verbally answering questions and writing/running code in an editor requested by the proctor. Students are permitted the same non-electronic notes as that which they could bring to the regular exam. We recommend taking the regularly assigned exam instead of these oral exams as students often report that the oral exams are more stressful, despite not being more challenging. If you would like to request such a makeup exam, please make a private Piazza post as soon as possible detailing the circumstances around why you didn't attend the scheduled exam and your availability/schedule for taking the oral exam. 
 
 Please note: a grade penalty may be applied to the makeup exam depending on circumstances and promptness.
