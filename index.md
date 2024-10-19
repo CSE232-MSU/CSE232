@@ -117,7 +117,7 @@ If you would like a one-on-one meeting with the lead instructor, please make a p
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week07.html">Week 07</a></td>
             <td>Lab 07</td>
             <td>HW 07</td>
-            <td>Due to Fall Break, no Tuesday labs. They will conduct Lab 07 in Week 12.</td>
+            <td>Due to Fall Break, no Tuesday labs. They will conduct Lab 07 in Week 12. MCQ Exam 1 Makeup (<a href="https://piazza.com/class/m02kjb045hr2sv/post/400">Details</a>).</td>
         </tr>
         <tr>
             <td>2024-10-28</td>
@@ -152,7 +152,7 @@ If you would like a one-on-one meeting with the lead instructor, please make a p
             <td><a href="https://cse232-msu.github.io/CSE232/lectures/week12.html">Week 12</a></td>
             <td>Lab 7 (continued)</td>
             <td>HW 12</td>
-            <td>Due to Holiday Break: Tuesday labs will conduct Lab 07, No Thursday/Friday labs, and HW 12 extended to 2024-12-02. MCQ Exam 1 Makeup (<a href="https://piazza.com/class/m02kjb045hr2sv/post/400">Details</a>).</td>
+            <td>Due to Holiday Break: Tuesday labs will conduct Lab 07, No Thursday/Friday labs, and HW 12 extended to 2024-12-02.</td>
         </tr>
         <tr>
             <td>2024-12-02</td>
