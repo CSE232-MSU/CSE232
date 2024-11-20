@@ -11,14 +11,17 @@ Coding exams are conducted in your assigned in-person lab.
 ## Multiple Choice Exams
 
 ### MCQ Exam 1
+
 The MCQ Exam 1 takes place in Wells Hall B115 on Thursday, 2024-09-26. There are two offerings of this exam, one at 7am (morning) and one at 7pm (evening). Attend whichever one is most convenient.
 
 
 ### MCQ Exam 2
+
 The MCQ Exam 2 takes place in Wells Hall B115 on Thursday, 2024-11-07. There are two offerings of this exam, one at 7am (morning) and one at 7pm (evening). Attend whichever one is most convenient.
 
 ### MCQ Exam 3
-The room/offering of the last MCQ exam hasn't been determined yet. The time schedule lists is at Thursday, 2024-12-12, at 5:45PM. But, this hasn't been confirmed and likely wont be until a few weeks before the exam. 
+
+The MCQ Exam 3 takes place in Wells Hall B115 during finals week on Thursday and Friday. There are two offerings of this exam, one at 5:45pm (Thursday) and one at 10am (Friday). Attend whichever one is most convenient. 
 
 # Exam Policies
 
