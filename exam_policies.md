@@ -60,6 +60,14 @@ If you have a letter for accommodations from RCPD, please make a private Piazza 
 
 ## Makeup Exams
 
-Make up for unexcused absences from assigned exams won't be offered for MCQ Exam 1/2 or Coding Exam 1/2 as the lower score will be automatically dropped (see the syllabus). Generally, makeup exams will consist of an hour-long oral exam conducted via Zoom. These will be one-on-one and involve the student demonstrating their mastery of the material covered in the missed exam by verbally answering questions and writing/running code in an editor requested by the proctor. Students are permitted the same non-electronic notes as that which they could bring to the regular exam. We recommend taking the regularly assigned exam instead of these oral exams as students often report that the oral exams are more stressful, despite not being more challenging. If you would like to request such a makeup exam, please make a private Piazza post as soon as possible detailing the circumstances around why you didn't attend the scheduled exam and your availability/schedule for taking the oral exam. 
+Make up for unexcused absences from assigned exams won't be offered for MCQ Exam 1/2 or Coding Exam 1/2 as the lower score will be automatically dropped (see the syllabus). 
+Generally, makeup exams will consist of an hour-long oral exams. 
+These will be one-on-one and involve the student demonstrating their mastery of the material 
+covered in the missed exam by verbally answering questions and writing/running code in an editor 
+requested by the proctor. Students are permitted the same non-electronic notes as that which 
+they could bring to the regular exam. We recommend taking the regularly assigned exam instead of 
+these oral exams as students often report that the oral exams are more stressful, despite not being more 
+challenging. If you would like to request such a makeup exam, please make a private Piazza post as soon as possible 
+detailing the circumstances around why you didn't attend the scheduled exam and your availability/schedule for taking the oral exam. 
 
 Please note: a grade penalty may be applied to the makeup exam depending on circumstances and promptness.
