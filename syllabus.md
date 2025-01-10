@@ -1,6 +1,8 @@
 ---
 title: Syllabus
 ---
+<span style="color:red">⚠️The material found here is not the content for the current semester of CSE 232⚠️</span>
+
 # Syllabus
 
 Fall Semester, 2024
